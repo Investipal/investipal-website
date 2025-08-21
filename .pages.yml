@@ -3,6 +3,7 @@ media:
   output: /images
 
 content:
+  # Blog Posts
   - name: blog
     label: Blog Posts
     type: collection
@@ -77,3 +78,251 @@ content:
         label: Content
         type: rich-text
         required: true
+
+  # Company Data
+  - name: company-data
+    label: Company Data
+    type: file
+    path: src/data/companyData.ts
+    format: code
+    fields:
+      - name: body
+        label: Company Data (TypeScript)
+        type: code
+        options:
+          language: typescript
+
+  # Features Data
+  - name: features-data
+    label: Features Data
+    type: file
+    path: src/data/featuresData.ts
+    format: code
+    fields:
+      - name: body
+        label: Features Data (TypeScript)
+        type: code
+        options:
+          language: typescript
+
+  # Integrations Data
+  - name: integrations-data
+    label: Integrations Data
+    type: file
+    path: src/data/integrationsData.ts
+    format: code
+    fields:
+      - name: body
+        label: Integrations Data (TypeScript)
+        type: code
+        options:
+          language: typescript
+
+  # Navigation Data
+  - name: navigation-data
+    label: Navigation Data
+    type: file
+    path: src/data/navigationData.ts
+    format: code
+    fields:
+      - name: body
+        label: Navigation Data (TypeScript)
+        type: code
+        options:
+          language: typescript
+
+  # Footer Data
+  - name: footer-data
+    label: Footer Data
+    type: file
+    path: src/data/footerData.ts
+    format: code
+    fields:
+      - name: body
+        label: Footer Data (TypeScript)
+        type: code
+        options:
+          language: typescript
+
+  # Design System
+  - name: design-system
+    label: Design System
+    type: file
+    path: src/data/designSystem.ts
+    format: code
+    fields:
+      - name: body
+        label: Design System (TypeScript)
+        type: code
+        options:
+          language: typescript
+
+  # Podcast Data
+  - name: podcast-data
+    label: Podcast Data
+    type: file
+    path: src/data/podcastData.ts
+    format: code
+    fields:
+      - name: body
+        label: Podcast Data (TypeScript)
+        type: code
+        options:
+          language: typescript
+
+  # Page-specific Data Files
+  - name: feature-pages-data
+    label: Feature Pages Data
+    type: file
+    path: src/data/featurePagesData.ts
+    format: code
+    fields:
+      - name: body
+        label: Feature Pages Data (TypeScript)
+        type: code
+        options:
+          language: typescript
+
+  - name: segment-pages-data
+    label: Segment Pages Data
+    type: file
+    path: src/data/segmentPagesData.ts
+    format: code
+    fields:
+      - name: body
+        label: Segment Pages Data (TypeScript)
+        type: code
+        options:
+          language: typescript
+
+  - name: workflow-data
+    label: Workflow Data
+    type: file
+    path: src/data/workflowData.ts
+    format: code
+    fields:
+      - name: body
+        label: Workflow Data (TypeScript)
+        type: code
+        options:
+          language: typescript
+
+  - name: problems-data
+    label: Problems Data
+    type: file
+    path: src/data/problemsData.ts
+    format: code
+    fields:
+      - name: body
+        label: Problems Data (TypeScript)
+        type: code
+        options:
+          language: typescript
+
+  # Main Pages
+  - name: main-pages
+    label: Main Pages
+    type: collection
+    path: src/pages
+    exclude: 
+      - index.astro
+      - rss.xml.ts
+      - podcast-rss.xml.ts
+    fields:
+      - name: body
+        label: Page Content (Astro)
+        type: code
+        options:
+          language: astro
+
+  # Homepage
+  - name: homepage
+    label: Homepage
+    type: file
+    path: src/pages/index.astro
+    format: code
+    fields:
+      - name: body
+        label: Homepage Content (Astro)
+        type: code
+        options:
+          language: astro
+
+  # About Us Page
+  - name: about-page
+    label: About Us Page
+    type: file
+    path: src/pages/about-us.astro
+    format: code
+    fields:
+      - name: body
+        label: About Page Content (Astro)
+        type: code
+        options:
+          language: astro
+
+  # Contact Page
+  - name: contact-page
+    label: Contact Us Page
+    type: file
+    path: src/pages/contact-us.astro
+    format: code
+    fields:
+      - name: body
+        label: Contact Page Content (Astro)
+        type: code
+        options:
+          language: astro
+
+  # Features Pages
+  - name: feature-pages
+    label: Feature Pages
+    type: collection
+    path: src/pages/features
+    fields:
+      - name: body
+        label: Feature Page Content (Astro)
+        type: code
+        options:
+          language: astro
+
+  # Integration Pages
+  - name: integration-pages
+    label: Integration Pages
+    type: collection
+    path: src/pages/integrations
+    fields:
+      - name: body
+        label: Integration Page Content (Astro)
+        type: code
+        options:
+          language: astro
+
+  # Segment Pages
+  - name: segment-pages
+    label: Segment Pages
+    type: collection
+    path: src/pages/segments
+    fields:
+      - name: body
+        label: Segment Page Content (Astro)
+        type: code
+        options:
+          language: astro
+
+  # Legal Pages
+  - name: legal-pages
+    label: Legal Pages
+    type: collection
+    path: src/pages
+    filename: "{name}"
+    include:
+      - privacy-policy.astro
+      - terms-conditions.astro
+      - cookies.astro
+    fields:
+      - name: body
+        label: Legal Page Content (Astro)
+        type: code
+        options:
+          language: astro
