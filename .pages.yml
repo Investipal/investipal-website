@@ -36,13 +36,20 @@ content:
         type: select
         required: true
         options:
-          - AI & Technology
-          - Portfolio Management
-          - Client Communication
-          - Compliance
-          - Industry Trends
-          - Best Practices
-          - Process Improvement
+          - label: "AI & Technology"
+            value: "AI & Technology"
+          - label: "Portfolio Management"
+            value: "Portfolio Management"
+          - label: "Client Communication"
+            value: "Client Communication"
+          - label: "Compliance"
+            value: "Compliance"
+          - label: "Industry Trends"
+            value: "Industry Trends"
+          - label: "Best Practices"
+            value: "Best Practices"
+          - label: "Process Improvement"
+            value: "Process Improvement"
       - name: tags
         label: Tags
         type: string
