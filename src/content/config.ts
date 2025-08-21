@@ -38,10 +38,47 @@ const blog = defineCollection({
   }),
 });
 
-// Export the collections object to register the blog collection
+// Define the pages collection schema
+const pages = defineCollection({
+  type: 'content',
+  
+  // Define the schema for page frontmatter
+  schema: z.object({
+    // Required fields
+    title: z.string(),
+    description: z.string(),
+    
+    // Optional fields that vary by page
+    keywords: z.string().optional(),
+    heroTitle: z.string().optional(),
+    heroSubtitle: z.string().optional(),
+    heroCtaText: z.string().optional(),
+    heroCtaUrl: z.string().optional(),
+    aboutTitle: z.string().optional(),
+    aboutDescription: z.string().optional(),
+    featuresTitle: z.string().optional(),
+    featuresDescription: z.string().optional(),
+    ctaTitle: z.string().optional(),
+    ctaDescription: z.string().optional(),
+    ctaButtonText: z.string().optional(),
+    storyTitle: z.string().optional(),
+    storyContent: z.string().optional(),
+    missionTitle: z.string().optional(),
+    missionContent: z.string().optional(),
+    teamTitle: z.string().optional(),
+    teamDescription: z.string().optional(),
+    contactInfo: z.string().optional(),
+    officeHours: z.string().optional(),
+    supportInfo: z.string().optional(),
+  }),
+});
+
+// Export the collections object to register all collections
 export const collections = {
   blog,
+  pages,
 };
 
 // Export types for use in components
 export type BlogPost = z.infer<typeof blog.schema>;
+export type PageContent = z.infer<typeof pages.schema>;
