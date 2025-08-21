@@ -2,6 +2,9 @@ media:
   input: public/images
   output: /images
 
+# Default to staging branch for all CMS edits
+branch: staging
+
 content:
   # Blog Posts - User-Friendly Visual Editor
   - name: blog
