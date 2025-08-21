@@ -1,0 +1,103 @@
+---
+// Reusable Page Hero Section Component
+// Used by Feature pages, Segment pages, and other content pages
+import StandardBadge from '../ui/StandardBadge.astro';
+import StandardButton from '../ui/StandardButton.astro';
+
+export interface Props {
+  // Badge/Audience
+  audienceText?: string;
+  featureName?: string;
+  
+  // Main content
+  title: string;
+  subtitle: string;
+  
+  // Hero image
+  heroImage?: string;
+  heroImageAlt?: string;
+  
+  // CTA
+  ctaText?: string;
+  ctaHref?: string;
+  
+  // Styling
+  className?: string;
+}
+
+const { 
+  audienceText,
+  featureName,
+  title, 
+  subtitle, 
+  heroImage,
+  heroImageAlt,
+  ctaText = "Schedule a Demo",
+  ctaHref = "/book-a-demo",
+  className = ''
+} = Astro.props;
+---
+
+<!-- 
+  REUSABLE PAGE HERO SECTION
+  
+  Standardized hero section for feature pages, segment pages, and content pages.
+  Includes optional audience badge, title, subtitle, CTA, and hero image.
+  
+  Usage:
+  <PageHeroSection 
+    audienceText="For Wealth Managers"
+    featureName="Investment Platform"
+    title="Transform Your Investment Process"
+    subtitle="Streamline portfolio management with AI-powered insights"
+    heroImage="/hero-image.jpg"
+    heroImageAlt="Platform dashboard"
+  />
+-->
+<section class={`bg-gradient-to-b from-gray-50 to-white py-16 md:py-20 lg:py-24 ${className}`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-4xl mx-auto mb-12">
+      
+      <!-- Audience/Feature Badge -->
+      {(audienceText || featureName) && (
+        <div class="inline-flex items-center bg-investipal-50 rounded-full px-6 py-2 mb-6">
+          {audienceText && (
+            <div class="bg-investipal-600 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
+              {audienceText}
+            </div>
+          )}
+          {featureName && (
+            <span class="text-investipal-700 font-medium">{featureName}</span>
+          )}
+        </div>
+      )}
+      
+      <!-- Main Title -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-investipal-600 via-investipal-700 to-investipal-800 bg-clip-text text-transparent leading-tight pb-2 mb-6">
+        {title}
+      </h1>
+      
+      <!-- Subtitle -->
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+        {subtitle}
+      </p>
+      
+      <!-- CTA Button -->
+      <StandardButton href={ctaHref}>{ctaText}</StandardButton>
+    </div>
+    
+    <!-- Hero Image -->
+    {heroImage && (
+      <div class="text-center">
+        <img src={heroImage} alt={heroImageAlt || title} class="w-full max-w-6xl mx-auto" loading="eager">
+      </div>
+    )}
+  </div>
+</section>
+
+
+
+
+
+
+

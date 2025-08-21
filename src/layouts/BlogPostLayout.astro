@@ -1,0 +1,1477 @@
+---
+// Blog Post Layout Component
+// Provides consistent styling and structure for all blog posts
+
+import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTASection from '../components/sections/CTASection.astro';
+import CookieBanner from '../components/ui/CookieBanner.astro';
+import TableOfContents from '../components/blog/TableOfContents.astro';
+import MobileTableOfContents from '../components/blog/MobileTableOfContents.astro';
+import ReadingEnhancements from '../components/blog/ReadingEnhancements.astro';
+import RelatedPosts from '../components/blog/RelatedPosts.astro';
+import ProductCTA from '../components/blog/ProductCTA.astro';
+import StandardBadge from '../components/ui/StandardBadge.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+
+export interface Props {
+  frontmatter: {
+    title: string;
+    excerpt: string;
+    author: string;
+    authorImage?: string;
+    publishedDate: Date;
+    updatedDate?: Date;
+    category: string;
+    tags: string[];
+    featuredImage: string;
+    featuredImageAlt: string;
+    featured: boolean;
+    readingTime?: number;
+    seoDescription?: string;
+  };
+  slug: string;
+  headings?: Array<{
+    depth: number;
+    slug: string;
+    text: string;
+  }>;
+}
+
+const { frontmatter, slug, headings = [] } = Astro.props;
+
+// Get related posts (same category, exclude current post)
+const allPosts = await getCollection('blog');
+const relatedPosts = allPosts
+  .filter(post => 
+    post.data.category === frontmatter.category && 
+    post.id !== slug &&
+    !post.data.draft
+  )
+  .sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime())
+  .slice(0, 3);
+
+// Format dates
+const formatDate = (date: Date) => {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(date);
+};
+
+// Calculate reading time if not provided
+const calculateReadingTime = (content: string) => {
+  const wordsPerMinute = 200;
+  const words = content.split(/\s+/).length;
+  return Math.ceil(words / wordsPerMinute);
+};
+
+// Social sharing URLs
+const pageUrl = `${Astro.site?.toString()}blog/${slug}`;
+const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(frontmatter.title)}&url=${encodeURIComponent(pageUrl)}`;
+const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
+const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+
+// Generate breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Blog', href: '/blog' },
+  { name: frontmatter.title }
+];
+
+// Generate structured data for the blog post
+const articleStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": frontmatter.title,
+  "description": frontmatter.seoDescription || frontmatter.excerpt,
+  "image": frontmatter.featuredImage ? `${Astro.site?.toString()}${frontmatter.featuredImage}` : null,
+  "datePublished": frontmatter.publishedDate.toISOString(),
+  "dateModified": frontmatter.updatedDate ? frontmatter.updatedDate.toISOString() : frontmatter.publishedDate.toISOString(),
+  "author": {
+    "@type": "Person",
+    "name": frontmatter.author,
+    ...(frontmatter.authorImage && { "image": frontmatter.authorImage })
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Investipal",
+    "url": Astro.site?.toString(),
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${Astro.site?.toString()}images/logo.png`
+    }
+  },
+  "url": pageUrl,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": pageUrl
+  },
+  "keywords": frontmatter.tags.join(", "),
+  "articleSection": frontmatter.category,
+  "articleBody": frontmatter.excerpt,
+  "wordCount": frontmatter.readingTime ? frontmatter.readingTime * 200 : null,
+  "timeRequired": frontmatter.readingTime ? `PT${frontmatter.readingTime}M` : null,
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbItems.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      ...(item.href && { "item": new URL(item.href, Astro.site?.toString()).toString() })
+    }))
+  }
+};
+---
+
+<Layout 
+  title={`${frontmatter.title} | Investipal Blog`}
+  description={frontmatter.seoDescription || frontmatter.excerpt}
+>
+  <!-- Blog Post Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(articleStructuredData)} />
+  
+  <Header />
+  <Breadcrumb items={breadcrumbItems} />
+  
+  <main id="main">
+    <!-- Blog Post Hero Section -->
+    <section class="relative bg-gradient-to-b from-gray-50 to-white pb-12 md:pb-16 pt-16 md:pt-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Category Badge -->
+        <div class="mb-6">
+          <a 
+            href={`/blog/category/${frontmatter.category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
+            class="hover:bg-violet-200 transition-colors"
+          >
+            <StandardBadge text={frontmatter.category} variant="featured" />
+          </a>
+        </div>
+
+        <!-- Article Title -->
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+          {frontmatter.title}
+        </h1>
+
+        <!-- Article Excerpt -->
+        <p class="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl">
+          {frontmatter.excerpt}
+        </p>
+
+        <!-- Article Meta Information -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between border-t border-b border-gray-200 py-6 mb-8">
+          <div class="flex items-center space-x-4 mb-4 sm:mb-0">
+            <!-- Author Info -->
+            <div class="flex items-center space-x-3">
+              {frontmatter.authorImage && (
+                <img 
+                  src={frontmatter.authorImage} 
+                  alt={frontmatter.author}
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+              )}
+              <div>
+                <p class="font-semibold text-gray-900">{frontmatter.author}</p>
+                <p class="text-sm text-gray-500">Author</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article Details -->
+          <div class="flex items-center space-x-6 text-sm text-gray-500">
+            <div class="flex items-center space-x-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              <span>{formatDate(frontmatter.publishedDate)}</span>
+            </div>
+            
+            {frontmatter.readingTime && (
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>{frontmatter.readingTime} min read</span>
+              </div>
+            )}
+
+            {frontmatter.updatedDate && (
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                </svg>
+                <span>Updated {formatDate(frontmatter.updatedDate)}</span>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <!-- Social Sharing -->
+        <div class="flex items-center space-x-4 mb-8">
+          <span class="text-sm font-medium text-gray-500">Share:</span>
+          <div class="flex space-x-3">
+            <a 
+              href={twitterUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+              aria-label="Share on Twitter"
+            >
+              <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </a>
+            
+            <a 
+              href={linkedInUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+              aria-label="Share on LinkedIn"
+            >
+              <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            
+            <a 
+              href={facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+              aria-label="Share on Facebook"
+            >
+              <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Featured Image -->
+        {frontmatter.featuredImage && (
+          <div class="mb-8">
+            <img 
+              src={frontmatter.featuredImage} 
+              alt={frontmatter.featuredImageAlt}
+              class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg"
+              loading="eager"
+            />
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Article Content with TOC -->
+    <section class="blog-layout-section">
+      <!-- Table of Contents (Desktop Only) -->
+      <TableOfContents headings={headings} readingTime={frontmatter.readingTime} />
+      
+      <!-- Mobile Table of Contents -->
+      <MobileTableOfContents headings={headings} readingTime={frontmatter.readingTime} />
+      
+      <!-- Reading Enhancement Controls -->
+      <ReadingEnhancements />
+      
+      <!-- Main Article Content -->
+      <div class="blog-content-container">
+        <article class="blog-article-container">
+          <div class="prose prose-lg prose-enhanced">
+        <slot />
+      </div>
+    </article>
+      </div>
+    </section>
+
+    <!-- Product CTA -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+      <ProductCTA />
+    </section>
+
+    <!-- Article Tags -->
+    {frontmatter.tags.length > 0 && (
+      <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <div class="border-t border-gray-200 pt-8">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Tags</h3>
+          <div class="flex flex-wrap gap-2">
+            {frontmatter.tags.map((tag) => (
+              <a 
+                href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
+                class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-700 hover:bg-violet-100 hover:text-violet-700 transition-colors"
+              >
+                #{tag}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Author Bio Section -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+      <div class="bg-gray-50 rounded-xl p-8">
+        <div class="flex items-start space-x-4">
+          {frontmatter.authorImage && (
+            <img 
+              src={frontmatter.authorImage} 
+              alt={frontmatter.author}
+              class="w-16 h-16 rounded-full object-cover flex-shrink-0"
+            />
+          )}
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">About {frontmatter.author}</h3>
+            <p class="text-gray-600 leading-relaxed">
+              {frontmatter.author === 'Cameron Howe' 
+                ? 'Cameron Howe is an ex-quant and research analyst now turned fintech founder helping financial advisors grow their business by automating the delivery of highly personalized proposals and portfolios.'
+                : frontmatter.author === 'Investipal Team' 
+                ? 'The Investipal team consists of financial technology experts, compliance specialists, and industry veterans dedicated to helping financial advisors leverage AI and automation to better serve their clients.'
+                : `${frontmatter.author} is a contributor to the Investipal blog, sharing insights on financial planning, technology, and industry best practices.`
+              }
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Posts Section -->
+    <RelatedPosts 
+      currentSlug={slug}
+      currentCategory={frontmatter.category}
+      currentTags={frontmatter.tags}
+    />
+
+
+
+    <!-- Newsletter CTA -->
+    <section class="newsletter-section bg-gradient-to-r from-gray-50 to-white border-t border-b border-gray-200 py-16">
+      <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">
+          <svg class="w-8 h-8 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26c.36.2.8.2 1.16 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Stay Updated with Our Newsletter
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Get the latest insights, industry trends, and best practices delivered to your inbox
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors"
+          />
+          <button class="px-8 py-3 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700 transition-colors shadow-sm">
+            Subscribe
+          </button>
+        </div>
+        <p class="text-sm text-gray-500 mt-4">
+          No spam, unsubscribe at any time.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main CTA Section -->
+    <CTASection />
+  </main>
+
+  <Footer />
+  <CookieBanner />
+</Layout>
+
+
+<style>
+  /* Line clamp utilities for consistent text truncation */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Reading progress indicator */
+  .reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #7c3aed 0%, #a855f7 100%);
+    transform-origin: left;
+    z-index: 50;
+  }
+
+<style is:global>
+  /* Enhanced Blog Content Styling for Maximum Readability */
+  .blog-layout-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .blog-content-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
+
+  .blog-article-container {
+    max-width: 45rem !important; /* ~720px - optimal reading width */
+    width: 100%;
+    padding: 3rem 0 !important;
+    position: relative;
+  }
+
+  .prose-enhanced {
+    font-family: 'Georgia', 'Times New Roman', serif !important;
+    font-size: 1.125rem !important;
+    line-height: 1.8 !important;
+    color: #1f2937 !important;
+    letter-spacing: 0.01em !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Typography Enhancements */
+  .prose-enhanced h1 {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #111827;
+    margin: 3rem 0 2rem 0;
+    letter-spacing: -0.025em;
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .prose-enhanced h1:first-child {
+    margin-top: 0;
+  }
+
+  .prose-enhanced h2 {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f2937;
+    margin: 2.5rem 0 1.5rem 0;
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .prose-enhanced h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+    width: 4px;
+    height: 1.5rem;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    border-radius: 2px;
+  }
+
+  .prose-enhanced h3 {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #374151;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .prose-enhanced h4 {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #4b5563;
+    margin: 1.5rem 0 0.75rem 0;
+  }
+
+  /* Paragraph and Text Enhancements */
+  .prose-enhanced p {
+    margin: 1.5rem 0;
+    text-align: left;
+    hyphens: auto;
+    word-break: break-word;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .prose-enhanced p:first-of-type {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #374151;
+    line-height: 1.7;
+  }
+
+  /* List Improvements */
+  .prose-enhanced ul,
+  .prose-enhanced ol {
+    margin: 1.5rem 0;
+    padding-left: 0;
+  }
+
+  .prose-enhanced ul {
+    list-style: none;
+  }
+
+  .prose-enhanced ul li {
+    position: relative;
+    padding-left: 2rem;
+    margin: 0.75rem 0;
+    line-height: 1.7;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .prose-enhanced ul li::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0.7rem;
+    width: 6px;
+    height: 6px;
+    background: #7c3aed;
+    border-radius: 50%;
+  }
+
+  .prose-enhanced ol {
+    counter-reset: custom-counter;
+  }
+
+  .prose-enhanced ol li {
+    position: relative;
+    padding-left: 2.5rem;
+    margin: 0.75rem 0;
+    line-height: 1.7;
+    counter-increment: custom-counter;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .prose-enhanced ol li::before {
+    content: counter(custom-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Blog Content Only - Link Styling for markdown content */
+  .blog-article-container .prose-enhanced a,
+  .blog-article-container .prose-enhanced a:link,
+  .blog-content-container .prose-enhanced a,
+  .blog-content-container .prose-enhanced a:link {
+    color: #2563eb !important;
+    text-decoration: underline !important;
+    border-bottom: none !important;
+    transition: all 0.2s ease !important;
+    font-weight: 500 !important;
+    -webkit-text-fill-color: #2563eb !important;
+  }
+
+  .blog-article-container .prose-enhanced a:hover,
+  .blog-content-container .prose-enhanced a:hover {
+    color: #1d4ed8 !important;
+    text-decoration: none !important;
+    background: rgba(37, 99, 235, 0.1) !important;
+    padding: 0 2px !important;
+    margin: 0 -2px !important;
+    border-radius: 3px !important;
+    -webkit-text-fill-color: #1d4ed8 !important;
+  }
+
+  .blog-article-container .prose-enhanced a:visited,
+  .blog-content-container .prose-enhanced a:visited {
+    color: #7c3aed !important;
+    -webkit-text-fill-color: #7c3aed !important;
+  }
+
+  /* Strong and Emphasis */
+  .prose-enhanced strong {
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .prose-enhanced em {
+    font-style: italic;
+    color: #374151;
+  }
+
+  /* Blockquote Enhancements */
+  .prose-enhanced blockquote {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-left: 4px solid #7c3aed;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #475569;
+    position: relative;
+  }
+
+  .prose-enhanced blockquote::before {
+    content: '"';
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 3rem;
+    color: #7c3aed;
+    opacity: 0.3;
+    font-family: serif;
+    line-height: 1;
+  }
+
+  .prose-enhanced blockquote p {
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  /* Code Styling */
+  .prose-enhanced code {
+    background: #f1f5f9;
+    color: #7c2d12;
+    padding: 0.125rem 0.375rem;
+    border-radius: 4px;
+    font-size: 0.875em;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    border: 1px solid #e2e8f0;
+  }
+
+  .prose-enhanced pre {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 2rem 0;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .prose-enhanced pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    border: none;
+    font-size: 0.875rem;
+  }
+
+  /* Horizontal Rule */
+  .prose-enhanced hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, #d1d5db 20%, #9ca3af 50%, #d1d5db 80%, transparent 100%);
+    margin: 3rem 0;
+  }
+
+  /* Table Styling */
+  .prose-enhanced table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .prose-enhanced th {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .prose-enhanced td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .prose-enhanced tr:nth-child(even) {
+    background: #f9fafb;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .blog-content-container {
+      padding: 0 1rem;
+    }
+
+    .blog-article-container {
+      padding: 2rem 0;
+      max-width: 100%;
+    }
+
+    .prose-enhanced {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .prose-enhanced h2 {
+      padding-left: 0.75rem;
+    }
+
+    .prose-enhanced h2::before {
+      width: 3px;
+      height: 1.25rem;
+    }
+
+    .prose-enhanced blockquote {
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .prose-enhanced ul li,
+    .prose-enhanced ol li {
+      padding-left: 1.5rem;
+    }
+  }
+
+  /* Image Styling */
+  .prose-enhanced img {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin: 2rem auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .prose-enhanced figure {
+    margin: 2.5rem 0;
+    text-align: center;
+  }
+
+  .prose-enhanced figure img {
+    margin: 0 auto 1rem auto;
+  }
+
+  .prose-enhanced figcaption {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Image hover effects */
+  .prose-enhanced img:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
+
+  /* Full-width images */
+  .prose-enhanced .full-width img {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+  }
+
+  /* Embedded Media Styling (YouTube, Vimeo, etc.) - MAXIMUM WIDTH */
+  .prose-enhanced iframe,
+  .prose iframe,
+  .prose-lg iframe,
+  article iframe {
+    margin: 2rem auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    display: block !important;
+    min-width: 100% !important;
+  }
+
+  /* Responsive video container - MAXIMUM WIDTH */
+  .prose-enhanced .video-wrapper,
+  .prose .video-wrapper,
+  .prose-lg .video-wrapper,
+  article .video-wrapper {
+    position: relative !important;
+    padding-bottom: 56.25% !important; /* 16:9 aspect ratio */
+    height: 0 !important;
+    overflow: hidden !important;
+    margin: 2rem auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  .prose-enhanced .video-wrapper iframe,
+  .prose .video-wrapper iframe,
+  .prose-lg .video-wrapper iframe,
+  article .video-wrapper iframe {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    border-radius: 8px !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  /* YouTube specific styling - FULL WIDTH NUCLEAR OPTION */
+  .prose-enhanced iframe[src*="youtube.com"],
+  .prose-enhanced iframe[src*="youtu.be"],
+  .prose iframe[src*="youtube.com"],
+  .prose iframe[src*="youtu.be"],
+  .prose-lg iframe[src*="youtube.com"],
+  .prose-lg iframe[src*="youtu.be"] {
+    aspect-ratio: 16 / 9 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 450px !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+
+  /* Vimeo specific styling - FULL WIDTH NUCLEAR OPTION */
+  .prose-enhanced iframe[src*="vimeo.com"],
+  .prose iframe[src*="vimeo.com"],
+  .prose-lg iframe[src*="vimeo.com"] {
+    aspect-ratio: 16 / 9 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 450px !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+
+  /* Twitter embed styling */
+  .prose-enhanced blockquote.twitter-tweet {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 550px;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* CodePen embed styling */
+  .prose-enhanced iframe[src*="codepen.io"] {
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+  }
+
+  /* Generic embed container */
+  .prose-enhanced .embed-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .prose-enhanced .embed-container iframe {
+    margin: 0 auto;
+  }
+
+  /* Focus and Accessibility */
+  .prose-enhanced a:focus,
+  .prose-enhanced button:focus {
+    outline: 2px solid #7c3aed;
+    outline-offset: 2px;
+  }
+
+  /* Print Styles */
+  @media print {
+    .prose-enhanced {
+      font-size: 12pt;
+      line-height: 1.6;
+      color: #000;
+    }
+
+    .prose-enhanced h1,
+    .prose-enhanced h2,
+    .prose-enhanced h3 {
+      color: #000;
+      page-break-after: avoid;
+    }
+
+    .prose-enhanced blockquote {
+      page-break-inside: avoid;
+      background: #f5f5f5;
+    }
+  }
+
+  /* Font Size Controls */
+  body.font-size-small .prose-enhanced {
+    font-size: 1rem !important;
+  }
+
+  body.font-size-large .prose-enhanced {
+    font-size: 1.25rem !important;
+  }
+
+  body.font-size-xl .prose-enhanced {
+    font-size: 1.375rem !important;
+  }
+
+  /* Reading Mode - High Contrast Dark Theme */
+  body.reading-mode {
+    background: #111827 !important;
+    color: #f3f4f6 !important;
+  }
+
+  body.reading-mode .prose-enhanced {
+    background: #111827 !important;
+    color: #f3f4f6 !important;
+  }
+
+  /* Dark mode headings */
+  body.reading-mode .prose-enhanced h1,
+  body.reading-mode .prose-enhanced h2,
+  body.reading-mode .prose-enhanced h3,
+  body.reading-mode .prose-enhanced h4,
+  body.reading-mode .prose-enhanced h5,
+  body.reading-mode .prose-enhanced h6 {
+    color: #ffffff !important;
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* ALL headers everywhere should be white in dark mode */
+  body.reading-mode h1,
+  body.reading-mode h2,
+  body.reading-mode h3,
+  body.reading-mode h4,
+  body.reading-mode h5,
+  body.reading-mode h6 {
+    color: #ffffff !important;
+    background: none !important;
+    background-color: transparent !important;
+    text-shadow: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Specifically target gray text classes that become unreadable in dark mode */
+  body.reading-mode .text-gray-900,
+  body.reading-mode .text-gray-800,
+  body.reading-mode .text-gray-700 {
+    color: #ffffff !important;
+  }
+
+  body.reading-mode .text-gray-600,
+  body.reading-mode .text-gray-500 {
+    color: #e5e7eb !important;
+  }
+
+  /* NUCLEAR OPTION: Force ALL headers in prose content to be white */
+  body.reading-mode .prose h1,
+  body.reading-mode .prose h2,
+  body.reading-mode .prose h3,
+  body.reading-mode .prose h4,
+  body.reading-mode .prose h5,
+  body.reading-mode .prose h6,
+  body.reading-mode .prose-lg h1,
+  body.reading-mode .prose-lg h2,
+  body.reading-mode .prose-lg h3,
+  body.reading-mode .prose-lg h4,
+  body.reading-mode .prose-lg h5,
+  body.reading-mode .prose-lg h6 {
+    color: #ffffff !important;
+    background: none !important;
+    background-color: transparent !important;
+    text-shadow: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Override any Tailwind Typography plugin colors */
+  body.reading-mode article h1,
+  body.reading-mode article h2,
+  body.reading-mode article h3,
+  body.reading-mode article h4,
+  body.reading-mode article h5,
+  body.reading-mode article h6 {
+    color: #ffffff !important;
+    background: none !important;
+    background-color: transparent !important;
+    text-shadow: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Override Tailwind Typography CSS variables in dark mode */
+  body.reading-mode {
+    --tw-prose-headings: #ffffff !important;
+    --tw-prose-body: #f3f4f6 !important;
+    --tw-prose-links: #c084fc !important;
+  }
+
+  /* Force override with maximum specificity */
+  body.reading-mode .prose-enhanced *:is(h1, h2, h3, h4, h5, h6),
+  body.reading-mode .prose *:is(h1, h2, h3, h4, h5, h6),
+  body.reading-mode .prose-lg *:is(h1, h2, h3, h4, h5, h6) {
+    color: #ffffff !important;
+    background: transparent !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Alternative approach - use attribute selector and broader targeting */
+  body[class*="reading-mode"] h1,
+  body[class*="reading-mode"] h2,
+  body[class*="reading-mode"] h3,
+  body[class*="reading-mode"] h4,
+  body[class*="reading-mode"] h5,
+  body[class*="reading-mode"] h6,
+  .reading-mode h1,
+  .reading-mode h2,
+  .reading-mode h3,
+  .reading-mode h4,
+  .reading-mode h5,
+  .reading-mode h6 {
+    color: #ffffff !important;
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+
+
+  /* Dark mode body text */
+  body.reading-mode .prose-enhanced p,
+  body.reading-mode .prose-enhanced li,
+  body.reading-mode .prose-enhanced span {
+    color: #e5e7eb !important;
+  }
+
+  /* Dark mode links */
+  body.reading-mode .prose-enhanced a {
+    color: #c084fc !important;
+    border-bottom-color: rgba(192, 132, 252, 0.4) !important;
+  }
+
+  body.reading-mode .prose-enhanced a:hover {
+    color: #ddd6fe !important;
+    background: rgba(192, 132, 252, 0.1) !important;
+    border-bottom-color: #ddd6fe !important;
+  }
+
+  /* Dark mode image styling */
+  body.reading-mode .prose-enhanced img {
+    border: 1px solid #374151 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  body.reading-mode .prose-enhanced figcaption {
+    color: #9ca3af !important;
+  }
+
+  /* Dark mode styles for tags and category links */
+  body.reading-mode a[href^="/blog/tag/"] {
+    background: #374151 !important;
+    color: #e5e7eb !important;
+  }
+
+  body.reading-mode a[href^="/blog/tag/"]:hover {
+    background: #4b5563 !important;
+    color: #c084fc !important;
+  }
+
+  body.reading-mode a[href^="/blog/category/"] {
+    background: #374151 !important;
+    color: #e5e7eb !important;
+  }
+
+  body.reading-mode a[href^="/blog/category/"]:hover {
+    background: #4b5563 !important;
+    color: #c084fc !important;
+  }
+
+  /* Dark mode hyperlinks in blog content only */
+  body.reading-mode .blog-article-container .prose-enhanced a,
+  body.reading-mode .blog-content-container .prose-enhanced a {
+    color: #60a5fa !important;
+    text-decoration: underline !important;
+  }
+
+  body.reading-mode .blog-article-container .prose-enhanced a:hover,
+  body.reading-mode .blog-content-container .prose-enhanced a:hover {
+    color: #93c5fd !important;
+    background: rgba(96, 165, 250, 0.1) !important;
+  }
+
+  body.reading-mode .blog-article-container .prose-enhanced a:visited,
+  body.reading-mode .blog-content-container .prose-enhanced a:visited {
+    color: #c084fc !important;
+  }
+
+  /* Dark mode embedded media styling */
+  body.reading-mode .prose-enhanced iframe {
+    border: 1px solid #374151 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  body.reading-mode .prose-enhanced .video-wrapper {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid #374151 !important;
+  }
+
+  body.reading-mode .prose-enhanced blockquote.twitter-tweet {
+    background: #1f2937 !important;
+    border-color: #374151 !important;
+    color: #e5e7eb !important;
+  }
+
+  body.reading-mode .prose-enhanced iframe[src*="codepen.io"] {
+    border-color: #374151 !important;
+    background: #1f2937 !important;
+  }
+
+  /* Dark mode strong/bold text */
+  body.reading-mode .prose-enhanced strong {
+    color: #f9fafb !important;
+  }
+
+  /* Dark mode emphasis/italic text */
+  body.reading-mode .prose-enhanced em {
+    color: #d1d5db !important;
+  }
+
+  /* Dark mode blockquotes */
+  body.reading-mode .prose-enhanced blockquote {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%) !important;
+    color: #e5e7eb !important;
+    border-left-color: #c084fc !important;
+  }
+
+  body.reading-mode .prose-enhanced blockquote::before {
+    color: #c084fc !important;
+  }
+
+  /* Dark mode code */
+  body.reading-mode .prose-enhanced code {
+    background: #374151 !important;
+    color: #fbbf24 !important;
+    border-color: #4b5563 !important;
+  }
+
+  body.reading-mode .prose-enhanced pre {
+    background: #0f172a !important;
+    color: #f1f5f9 !important;
+  }
+
+  /* Dark mode lists */
+  body.reading-mode .prose-enhanced ul li::before {
+    background: #c084fc !important;
+  }
+
+  body.reading-mode .prose-enhanced ol li::before {
+    background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%) !important;
+  }
+
+  /* Dark mode horizontal rules */
+  body.reading-mode .prose-enhanced hr {
+    background: linear-gradient(90deg, transparent 0%, #4b5563 20%, #6b7280 50%, #4b5563 80%, transparent 100%) !important;
+  }
+
+  /* Dark mode tables */
+  body.reading-mode .prose-enhanced table {
+    background: #1f2937 !important;
+  }
+
+  body.reading-mode .prose-enhanced th {
+    background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%) !important;
+    color: #ffffff !important;
+  }
+
+  body.reading-mode .prose-enhanced td {
+    border-bottom-color: #374151 !important;
+    color: #e5e7eb !important;
+  }
+
+  body.reading-mode .prose-enhanced tr:nth-child(even) {
+    background: #374151 !important;
+  }
+
+  /* Dark mode containers */
+  body.reading-mode .blog-content-container {
+    background: #111827 !important;
+  }
+
+  body.reading-mode .blog-article-container {
+    background: #111827 !important;
+  }
+
+  /* Dark mode TOC sidebar */
+  body.reading-mode .toc-sidebar {
+    background: rgba(31, 41, 55, 0.95) !important;
+    border-color: #374151 !important;
+    color: #e5e7eb !important;
+  }
+
+  body.reading-mode .toc-title {
+    color: #ffffff !important;
+  }
+
+  body.reading-mode .reading-time-info {
+    color: #9ca3af !important;
+  }
+
+  body.reading-mode .toc-link {
+    color: #d1d5db !important;
+  }
+
+  body.reading-mode .toc-link:hover {
+    color: #c084fc !important;
+    background: #374151 !important;
+  }
+
+  body.reading-mode .toc-link.active {
+    color: #c084fc !important;
+    background: #1f2937 !important;
+    border-left-color: #c084fc !important;
+  }
+
+  body.reading-mode .toc-action-btn {
+    color: #d1d5db !important;
+  }
+
+  body.reading-mode .toc-action-btn:hover {
+    color: #c084fc !important;
+    background: #374151 !important;
+  }
+
+  /* Dark mode reading controls */
+  body.reading-mode .reading-control-btn {
+    background: rgba(31, 41, 55, 0.95) !important;
+    border-color: #374151 !important;
+    color: #d1d5db !important;
+  }
+
+  body.reading-mode .reading-control-btn:hover {
+    background: rgba(192, 132, 252, 0.1) !important;
+    color: #c084fc !important;
+    border-color: #c084fc !important;
+  }
+
+  body.reading-mode .reading-control-btn.active {
+    background: #c084fc !important;
+    color: #ffffff !important;
+    border-color: #c084fc !important;
+  }
+
+  /* Dark mode progress indicator */
+  body.reading-mode .progress-indicator {
+    background: rgba(31, 41, 55, 0.95) !important;
+    border-color: #374151 !important;
+  }
+
+  body.reading-mode .progress-text {
+    color: #e5e7eb !important;
+  }
+
+  /* AGGRESSIVE TOC dark mode styling - Override any conflicts */
+  body.reading-mode .toc-sidebar *,
+  body.reading-mode .toc-nav *,
+  body.reading-mode .toc-list *,
+  body.reading-mode .toc-item *,
+  body.reading-mode .toc-depth-1 *,
+  body.reading-mode .toc-depth-2 *,
+  body.reading-mode .toc-depth-3 *,
+  body.reading-mode .toc-depth-4 *,
+  body.reading-mode .toc-depth-5 *,
+  body.reading-mode .toc-depth-6 * {
+    color: #e5e7eb !important;
+  }
+
+  body.reading-mode .toc-title {
+    color: #ffffff !important;
+  }
+
+  body.reading-mode .toc-link:hover,
+  body.reading-mode .toc-link.active {
+    color: #c084fc !important;
+  }
+
+  /* Focus Mode - Dim surroundings */
+  body.focus-mode .blog-article-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Focus mode takes precedence over reading mode - BLACK TEXT */
+  body.reading-mode.focus-mode,
+  body.focus-mode.reading-mode {
+    color: #000000 !important;
+  }
+
+  body.reading-mode.focus-mode *,
+  body.focus-mode.reading-mode * {
+    color: #000000 !important;
+  }
+
+  body.reading-mode.focus-mode h1,
+  body.reading-mode.focus-mode h2,
+  body.reading-mode.focus-mode h3,
+  body.reading-mode.focus-mode h4,
+  body.reading-mode.focus-mode h5,
+  body.reading-mode.focus-mode h6 {
+    color: #000000 !important;
+  }
+
+  body.reading-mode.focus-mode .prose-enhanced,
+  body.reading-mode.focus-mode .prose,
+  body.focus-mode.reading-mode .prose-enhanced,
+  body.focus-mode.reading-mode .prose {
+    color: #000000 !important;
+  }
+
+  /* Ensure ALL headers turn black in dark + focus mode */
+  body.reading-mode.focus-mode .prose-enhanced h1,
+  body.reading-mode.focus-mode .prose-enhanced h2,
+  body.reading-mode.focus-mode .prose-enhanced h3,
+  body.reading-mode.focus-mode .prose-enhanced h4,
+  body.reading-mode.focus-mode .prose-enhanced h5,
+  body.reading-mode.focus-mode .prose-enhanced h6,
+  body.reading-mode.focus-mode .prose h1,
+  body.reading-mode.focus-mode .prose h2,
+  body.reading-mode.focus-mode .prose h3,
+  body.reading-mode.focus-mode .prose h4,
+  body.reading-mode.focus-mode .prose h5,
+  body.reading-mode.focus-mode .prose h6,
+  body.focus-mode.reading-mode .prose-enhanced h1,
+  body.focus-mode.reading-mode .prose-enhanced h2,
+  body.focus-mode.reading-mode .prose-enhanced h3,
+  body.focus-mode.reading-mode .prose-enhanced h4,
+  body.focus-mode.reading-mode .prose-enhanced h5,
+  body.focus-mode.reading-mode .prose-enhanced h6,
+  body.focus-mode.reading-mode .prose h1,
+  body.focus-mode.reading-mode .prose h2,
+  body.focus-mode.reading-mode .prose h3,
+  body.focus-mode.reading-mode .prose h4,
+  body.focus-mode.reading-mode .prose h5,
+  body.focus-mode.reading-mode .prose h6 {
+    color: #000000 !important;
+    background: none !important;
+    -webkit-text-fill-color: #000000 !important;
+  }
+
+  body.focus-mode .prose-enhanced {
+    position: relative;
+    z-index: 2;
+    background: white !important;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Newsletter section dark mode styles */
+  body.reading-mode .newsletter-section {
+    background: linear-gradient(to right, #1f2937, #111827) !important;
+    border-color: #374151 !important;
+  }
+
+  body.reading-mode .newsletter-section h2 {
+    color: #ffffff !important;
+  }
+
+  body.reading-mode .newsletter-section p {
+    color: #d1d5db !important;
+  }
+
+  body.reading-mode .newsletter-section .text-gray-500 {
+    color: #9ca3af !important;
+  }
+
+  body.reading-mode .newsletter-section input {
+    background: #374151 !important;
+    border-color: #4b5563 !important;
+    color: #ffffff !important;
+  }
+
+  body.reading-mode .newsletter-section input::placeholder {
+    color: #9ca3af !important;
+  }
+
+  body.reading-mode .newsletter-section input:focus {
+    border-color: #c084fc !important;
+    ring-color: #c084fc !important;
+  }
+
+  body.reading-mode .newsletter-section .bg-violet-100 {
+    background: #374151 !important;
+  }
+
+  body.reading-mode .newsletter-section .text-violet-600 {
+    color: #c084fc !important;
+  }
+
+
+</style>
+
+<script>
+  // Reading progress indicator
+  function updateReadingProgress() {
+    const article = document.querySelector('article');
+    if (!article) return;
+    
+    const articleTop = article.offsetTop;
+    const articleHeight = article.offsetHeight;
+    const windowHeight = window.innerHeight;
+    const scrollTop = window.pageYOffset;
+    
+    const progress = Math.min(
+      Math.max((scrollTop - articleTop + windowHeight) / articleHeight, 0),
+      1
+    );
+    
+    let progressBar = document.querySelector('.reading-progress');
+    if (!progressBar) {
+      progressBar = document.createElement('div');
+      progressBar.className = 'reading-progress';
+      document.body.appendChild(progressBar);
+    }
+    
+    progressBar.style.transform = `scaleX(${progress})`;
+  }
+  
+  // Update progress on scroll
+  window.addEventListener('scroll', updateReadingProgress);
+  window.addEventListener('resize', updateReadingProgress);
+  
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', updateReadingProgress);
+</script>

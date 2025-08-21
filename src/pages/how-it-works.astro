@@ -1,0 +1,398 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeroSection from '../components/sections/PageHeroSection.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import StandardButton from '../components/ui/StandardButton.astro';
+import StandardIcon from '../components/ui/StandardIcon.astro';
+import StandardBadge from '../components/ui/StandardBadge.astro';
+import { workflowData } from '../data/workflowData';
+import CTASection from '../components/sections/CTASection.astro';
+import CookieBanner from '../components/ui/CookieBanner.astro';
+import { designSystem } from '../data/designSystem';
+
+// SEO Metadata
+const title = "How It Works | AI-Powered Financial Advisor Platform | Investipal";
+const description = "Discover how Investipal's AI-powered platform streamlines your entire workflow from client onboarding to portfolio management. 90% automation, 10-minute processes.";
+const canonical = "https://investipal.co/how-it-works";
+const keywords = "financial advisor software, AI automation, portfolio management, client onboarding, proposal generation, compliance automation, wealth management platform";
+
+// Page data
+const pageData = {
+  hero: {
+    title: "How It Works",
+    subtitle: "Discover how our AI-powered platform streamlines your entire workflow from client onboarding to portfolio management. 90% automation, 10-minute processes.",
+    audienceText: "Workflow Guide"
+  }
+};
+
+// Generate breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'How It Works', href: '/how-it-works' }
+];
+
+// Structured Data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": title,
+  "description": description,
+  "url": canonical,
+  "mainEntity": {
+    "@type": "HowTo",
+    "name": "How Investipal Works for Financial Advisors",
+    "description": "Complete workflow automation for financial advisors using AI-powered tools",
+    "step": workflowData.map((step, index) => ({
+      "@type": "HowToStep",
+      "position": index + 1,
+      "name": step.title,
+      "text": step.description
+    }))
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbItems.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      ...(item.href && { "item": new URL(item.href, 'https://investipal.co').toString() })
+    }))
+  }
+};
+
+const platformModules = [
+  {
+    id: "marketing",
+    title: "Marketing & Lead Generation",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>`,
+    description: "Deliver the right message at the right time with our intelligent marketing suite.",
+    features: [
+      "3-factor risk assessment embeddable on your website",
+      "Portfolio sentiment monitoring with auto-generated messaging",
+      "Custom marketing materials generated in real-time",
+      "AI-powered client communication and re-engagement"
+    ]
+  },
+  {
+    id: "sales",
+    title: "Sales & Proposal Generation",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>`,
+    description: "Time kills deals, so reclaim your time with instant portfolio analysis and proposal generation.",
+    features: [
+      "Upload client statements and extract portfolios in seconds",
+      "Portfolio comparison with advanced historical analysis",
+      "Monte Carlo modeling to show future possibilities",
+      "Tax savings optimization with confidence",
+      "Auto-generate sleek, compliant proposals ready to send"
+    ]
+  },
+  {
+    id: "onboarding",
+    title: "Client Onboarding & Compliance",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>`,
+    description: "Seamless and compliant onboarding that reduces time from weeks to minutes.",
+    features: [
+      "Build custom forms & agreements from templates",
+      "Streamlined e-signature workflows in one place",
+      "Automated AML compliance checks",
+      "Risk tolerance questionnaires with AI completion",
+      "Document generation ready-to-sign"
+    ]
+  },
+  {
+    id: "compliance",
+    title: "Compliance Automation",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>`,
+    description: "Your to-do list, automated. Stay compliant while reducing manual work.",
+    features: [
+      "Know Your Product (KYP) comparisons",
+      "Personalized Investment Policy Statements in seconds",
+      "AI-powered Regulation Best Interest documentation",
+      "Portfolio drift monitoring and alerts",
+      "Automated compliance document generation"
+    ]
+  },
+  {
+    id: "portfolios",
+    title: "Portfolio Construction & Management",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>`,
+    description: "Build perfect portfolios for every client with AI-powered personalization.",
+    features: [
+      "Model anything: public and private assets",
+      "AI-generated client-specific portfolios in seconds",
+      "Drift alerts and optimization for volatility, Sharpe, or factors",
+      "Recommend better-performing, lower-cost alternatives",
+      "Custom security builder for alternative investments"
+    ]
+  }
+];
+
+const resultsData = {
+  timeSaved: [
+    { metric: "2-3 hours", description: "saved per brokerage statement analysis" },
+    { metric: "3-5 hours", description: "saved per comparative portfolio analysis" },
+    { metric: "5+ hours", description: "saved per proposal generation" }
+  ],
+  costSavings: "70%",
+  onboardingTime: {
+    before: "4 weeks",
+    after: "1 day"
+  },
+  consolidatedTools: ["Nitrogen", "YCharts", "Morningstar", "Kwanti", "Orion", "Stratifi"]
+};
+---
+
+<Layout 
+  title={title}
+  description={description}
+  canonical={canonical}
+  keywords={keywords}
+>
+  <!-- Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  
+  <Header />
+  
+  <!-- Breadcrumb -->
+  <Breadcrumb items={breadcrumbItems} />
+
+  <main id="main">
+    <!-- Hero Section -->
+    <PageHeroSection 
+      title={pageData.hero.title}
+      subtitle={pageData.hero.subtitle}
+      audienceText={pageData.hero.audienceText}
+    >
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <StandardButton size="large">Schedule a Demo</StandardButton>
+        <a href="#workflow" class={`${designSystem.links.primary} font-semibold`}>
+          See the 4-Step Process ↓
+        </a>
+      </div>
+    </PageHeroSection>
+
+    <!-- 4-Step Workflow Section -->
+    <section id="workflow" class={`${designSystem.background.secondary} ${designSystem.spacing.section}`}>
+      <div class={designSystem.spacing.container}>
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class={`${designSystem.typography.sectionTitle} mb-4`}>
+            How Investipal Works
+          </h2>
+          <p class={`${designSystem.typography.heroSubtitle} max-w-3xl mx-auto`}>
+            Get started in minutes with our simple, streamlined workflow that transforms weeks of work into 10-minute processes.
+          </p>
+        </div>
+        
+        <div class={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ${designSystem.spacing.gridGap}`}>
+          {workflowData.map((step, index) => (
+            <div class="text-center group">
+              <div class="mb-6">
+                <!-- Step number badge -->
+                <div class={designSystem.components.iconContainer}>
+                  <span class="text-xl font-bold text-investipal-600">{index + 1}</span>
+                </div>
+              </div>
+              
+              <div class={designSystem.spacing.contentGap}>
+                <h3 class={designSystem.typography.featureTitle}>
+                  {step.title}
+                </h3>
+                <p class={designSystem.typography.body}>
+                  {step.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Modules Deep Dive -->
+    <section class={designSystem.spacing.section}>
+      <div class={designSystem.spacing.container}>
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class={`${designSystem.typography.sectionTitle} mb-4`}>
+            The Complete Advisory Operating System
+          </h2>
+          <p class={`${designSystem.typography.heroSubtitle} max-w-3xl mx-auto`}>
+            Five integrated modules that cover your entire client journey from lead generation to ongoing portfolio management.
+          </p>
+        </div>
+
+        <div class={designSystem.spacing.contentGapLarge}>
+          {platformModules.map((module, index) => (
+            <div class={`grid lg:grid-cols-2 ${designSystem.spacing.gridGap} items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+              <div class={index % 2 === 1 ? 'lg:col-start-2' : ''}>
+                <div class="flex items-center mb-6">
+                  <div class={`${designSystem.components.iconContainer} mr-4`}>
+                    <svg class="w-5 h-5 text-investipal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={module.icon}>
+                    </svg>
+                  </div>
+                  <h3 class={designSystem.typography.subsectionTitle}>
+                    {module.title}
+                  </h3>
+                </div>
+                
+                <p class={`${designSystem.typography.bodyLarge} mb-6`}>
+                  {module.description}
+                </p>
+                
+                <ul class={designSystem.spacing.contentGap}>
+                  {module.features.map((feature) => (
+                    <li class="flex items-start">
+                      <div class={`${designSystem.components.checkmark} mt-1 mr-3`}>
+                        <svg class={designSystem.components.checkmarkIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                      </div>
+                      <span class={designSystem.typography.body}>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div class={`${index % 2 === 1 ? 'lg:col-start-1' : ''} ${index % 2 === 1 ? 'lg:row-start-1' : ''}`}>
+                <div class="bg-gradient-to-br from-violet-50 to-violet-100 rounded-2xl p-8 lg:p-12">
+                  <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-24 h-24 bg-white rounded-full shadow-lg mb-6">
+                      <div class="text-violet-600">
+                        <Fragment set:html={module.icon} />
+                      </div>
+                    </div>
+                    <p class="text-gray-600 font-system_ui">
+                      Interactive demo placeholder for {module.title}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Results & ROI Section -->
+    <section class={`bg-gray-900 ${designSystem.spacing.section}`}>
+      <div class={designSystem.spacing.container}>
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class={`${designSystem.typography.sectionTitle} ${designSystem.text.inverse} mb-4`}>
+            Real Results for Real Advisors
+          </h2>
+          <p class={`${designSystem.typography.heroSubtitle} text-gray-300 max-w-3xl mx-auto`}>
+            See the measurable impact Investipal has on advisory practices across North America.
+          </p>
+        </div>
+
+        <!-- Time Savings -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          {resultsData.timeSaved.map((item) => (
+            <div class="text-center bg-gray-800 rounded-xl p-8">
+              <div class="text-4xl md:text-5xl font-bold text-violet-400 font-system_ui mb-2">
+                {item.metric}
+              </div>
+              <p class="text-gray-300 font-system_ui">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div class="text-center bg-gray-800 rounded-xl p-8">
+            <div class="text-5xl md:text-6xl font-bold text-green-400 font-system_ui mb-2">
+              {resultsData.costSavings}
+            </div>
+            <p class="text-gray-300 font-system_ui">
+              Cost savings vs. common tech stack
+            </p>
+          </div>
+          
+          <div class="text-center bg-gray-800 rounded-xl p-8">
+            <div class="text-2xl md:text-3xl font-bold text-blue-400 font-system_ui mb-2">
+              {resultsData.onboardingTime.before} → {resultsData.onboardingTime.after}
+            </div>
+            <p class="text-gray-300 font-system_ui">
+              Client onboarding time reduction
+            </p>
+          </div>
+          
+          <div class="text-center bg-gray-800 rounded-xl p-8 md:col-span-2 lg:col-span-1">
+            <div class="text-4xl md:text-5xl font-bold text-orange-400 font-system_ui mb-2">
+              95%
+            </div>
+            <p class="text-gray-300 font-system_ui">
+              Time saved on manual processes
+            </p>
+          </div>
+        </div>
+
+        <!-- Consolidated Tools -->
+        <div class="text-center">
+          <h3 class="text-2xl md:text-3xl font-bold text-white font-system_ui mb-6">
+            Replace Your Fragmented Tech Stack
+          </h3>
+          <p class="text-gray-300 font-system_ui mb-8">
+            Firms have consolidated away from these tools:
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            {resultsData.consolidatedTools.map((tool) => (
+              <span class="bg-gray-800 text-gray-300 px-4 py-2 rounded-lg font-system_ui">
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class={`${designSystem.background.primary} ${designSystem.spacing.section}`}>
+      <div class={designSystem.spacing.container}>
+        <div class="text-center mb-12">
+          <h2 class={`${designSystem.typography.sectionTitle} mb-4`}>
+            What Advisors Are Saying
+          </h2>
+        </div>
+
+        <div class={`grid lg:grid-cols-2 ${designSystem.spacing.gridGap}`}>
+          <!-- Testimonial 1 -->
+          <div class={`${designSystem.background.secondary} rounded-xl p-8`}>
+            <blockquote class={`${designSystem.typography.bodyLarge} mb-6`}>
+              "Investipal has been a game-changer for our firm. It really had become an efficiency multiplier for our assistants and back office. The streamlined data gathering and compliance processes have freed up our time, allowing us to focus on what truly matters—our clients."
+            </blockquote>
+            <div class="flex items-center">
+              <div>
+                <div class={`font-semibold ${designSystem.text.primary}`}>Matthew Sweeney</div>
+                <div class={designSystem.text.secondary}>Managing Partner at WJCM Inc.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class={`${designSystem.background.secondary} rounded-xl p-8`}>
+            <blockquote class={`${designSystem.typography.bodyLarge} mb-6`}>
+              "At ProsperPlan Wealth, we're deeply committed to integrating cutting-edge technology to transform the financial planning landscape. Investipal's innovative approach aligns perfectly with our vision, particularly in utilizing OCR technology to streamline processes."
+            </blockquote>
+            <div class="flex items-center">
+              <div>
+                <div class={`font-semibold ${designSystem.text.primary}`}>Lauren M. Williams</div>
+                <div class={designSystem.text.secondary}>CEO, ProsperPlan Wealth</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTASection />
+  </main>
+
+  <Footer />
+  <CookieBanner />
+</Layout>
+
+

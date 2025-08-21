@@ -1,0 +1,18 @@
+---
+import IntegrationPageLayout from '../../components/layouts/IntegrationPageLayout.astro';
+import { getIntegrationBySlug, getIntegrationsByCategory } from '../../data/integrationsData';
+
+const integration = getIntegrationBySlug('side-drawer');
+if (!integration) {
+  return Astro.redirect('/integrations');
+}
+
+// Get related integrations from the same category
+const relatedIntegrations = getIntegrationsByCategory(integration.category as any)
+  .filter(int => int.slug !== integration.slug);
+---
+
+<IntegrationPageLayout integration={integration} relatedIntegrations={relatedIntegrations} />
+
+
+

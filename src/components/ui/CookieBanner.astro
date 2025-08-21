@@ -1,0 +1,169 @@
+---
+export interface Props {
+  onAccept?: () => void;
+  onDecline?: () => void;
+}
+
+// Props are handled via global window functions instead of component props
+---
+
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 box-border z-[9999] p-4 shadow-lg pointer-events-auto hidden">
+  <div class="box-border max-w-screen-xl w-full mx-auto">
+    <div class="box-border flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="box-border flex-1">
+        <p class="text-gray-700 text-sm box-border leading-[20px] font-system_ui">
+          We use cookies to enhance your experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies.
+        </p>
+      </div>
+      <div class="box-border flex gap-3 pointer-events-auto">
+        <button 
+          id="cookie-decline"
+          class="text-gray-600 text-sm font-medium box-border px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors font-system_ui pointer-events-auto cursor-pointer"
+        >
+          Decline
+        </button>
+        <button 
+          id="cookie-accept"
+          class="text-white text-sm font-medium box-border px-4 py-2 bg-violet-600 border border-violet-600 rounded-lg hover:bg-violet-700 transition-colors font-system_ui pointer-events-auto cursor-pointer"
+        >
+          Accept
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Initialize cookie banner immediately and also on DOM ready
+  function initializeCookieBanner() {
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptButton = document.getElementById('cookie-accept');
+    const declineButton = document.getElementById('cookie-decline');
+    
+    // Debug: Log if elements are found
+    console.log('Cookie banner elements:', { 
+      cookieBanner: !!cookieBanner, 
+      acceptButton: !!acceptButton, 
+      declineButton: !!declineButton 
+    });
+    
+    // If elements aren't found yet, try again in a bit
+    if (!cookieBanner || !acceptButton || !declineButton) {
+      setTimeout(initializeCookieBanner, 100);
+      return;
+    }
+    
+    // Check if user has already made a choice
+    const cookieChoice = localStorage.getItem('cookie-choice');
+    if (cookieChoice) {
+      console.log('Cookie choice already made:', cookieChoice);
+      cookieBanner.style.display = 'none';
+      return;
+    }
+
+    // Ensure banner is visible if no choice has been made
+    cookieBanner.classList.remove('hidden');
+    cookieBanner.style.display = 'block';
+    
+    // Remove any existing listeners to prevent duplicates
+    const newAcceptButton = acceptButton.cloneNode(true);
+    const newDeclineButton = declineButton.cloneNode(true);
+    acceptButton.parentNode?.replaceChild(newAcceptButton, acceptButton);
+    declineButton.parentNode?.replaceChild(newDeclineButton, declineButton);
+    
+    // Add click handlers with event delegation for reliability
+    newAcceptButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('Accept button clicked');
+      localStorage.setItem('cookie-choice', 'accepted');
+      cookieBanner.style.display = 'none';
+      
+      // Call the onAccept function if provided
+      if (typeof window.handleCookieAccept === 'function') {
+        window.handleCookieAccept();
+      }
+    }, { passive: false });
+    
+    newDeclineButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('Decline button clicked');
+      localStorage.setItem('cookie-choice', 'declined');
+      cookieBanner.style.display = 'none';
+      
+      // Call the onDecline function if provided
+      if (typeof window.handleCookieDecline === 'function') {
+        window.handleCookieDecline();
+      }
+    }, { passive: false });
+
+    console.log('Cookie banner initialized successfully');
+  }
+
+  // Try to initialize immediately
+  initializeCookieBanner();
+  
+  // Also initialize when DOM is ready as fallback
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeCookieBanner);
+  } else {
+    // DOM is already ready, try again
+    setTimeout(initializeCookieBanner, 50);
+  }
+</script>
+
+<style>
+  #cookie-banner {
+    /* Ensure the banner is always on top and clickable */
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+    background: white !important;
+    border-top: 1px solid #e5e7eb !important;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  }
+
+  #cookie-banner * {
+    pointer-events: auto !important;
+  }
+
+  #cookie-accept, #cookie-decline {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    user-select: none !important;
+    touch-action: manipulation !important;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+  
+  /* Ensure hover effects work */
+  #cookie-accept:hover {
+    background-color: #6d28d9 !important;
+  }
+  
+  #cookie-decline:hover {
+    background-color: #f9fafb !important;
+  }
+
+  /* Ensure buttons are always interactive */
+  #cookie-accept:active {
+    background-color: #5b21b6 !important;
+    transform: translateY(1px);
+  }
+
+  #cookie-decline:active {
+    background-color: #f3f4f6 !important;
+    transform: translateY(1px);
+  }
+
+  /* Debug: Add a subtle outline to make the banner more visible for testing */
+  #cookie-banner:not(.hidden) {
+    outline: 1px solid rgba(124, 58, 237, 0.2);
+  }
+</style>

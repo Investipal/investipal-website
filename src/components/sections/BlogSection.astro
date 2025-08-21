@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+import BlogCard from '../blog/BlogCard.astro';
+
+// Get actual blog posts from content collection
+let recentPosts;
+try {
+  const allPosts = await getCollection('blog');
+  const publishedPosts = allPosts
+    .filter(post => !post.data.draft)
+    .sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime());
+  
+  // Show 3 most recent posts on homepage
+  recentPosts = publishedPosts.slice(0, 3).map(post => ({
+    ...post,
+    data: {
+      ...post.data,
+      readingTime: post.data.readingTime || Math.ceil((post.body?.split(/\s+/).length || 0) / 200)
+    }
+  }));
+} catch (error) {
+  console.error('Error loading blog posts for homepage:', error);
+  recentPosts = [];
+}
+---
+
+<section class="bg-gray-50 box-border">
+  <div class="box-border px-4 md:px-8">
+    <div class="box-border max-w-screen-xl w-full mx-auto">
+      <div class="box-border py-16">
+        <div class="text-center box-border mb-16">
+          <h2 class="text-black text-3xl font-semibold box-border leading-[43.2px] font-system_ui">
+            Latest insights
+          </h2>
+          <div class="box-border max-w-[600px] w-full mx-auto mt-6">
+            <p class="text-slate-600 text-lg box-border leading-[27px] font-system_ui">
+              Stay up to date with the latest trends and best practices in financial advisory.
+            </p>
+          </div>
+        </div>
+        
+        {recentPosts.length > 0 ? (
+          <div class="box-border gap-x-8 gap-y-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {recentPosts.map((post) => (
+              <BlogCard 
+                post={post} 
+                showFeaturedBadge={false}
+                size="medium"
+              />
+            ))}
+          </div>
+        ) : (
+          <div class="text-center py-12">
+            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.467-.881-6.08-2.33.031-.89.219-1.753.566-2.562A7.956 7.956 0 0112 9c2.34 0 4.467.881 6.08 2.33-.031.89-.219 1.753-.566 2.562z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Blog posts coming soon</h3>
+            <p class="text-gray-600">Check back soon for insights and industry trends.</p>
+          </div>
+        )}
+        
+        <div class="box-border text-center mt-12">
+          <a href="/blog" class="text-violet-600 text-base font-semibold box-border inline-flex items-center gap-x-2 font-system_ui">
+            <span>View all posts</span>
+            <svg class="box-border w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

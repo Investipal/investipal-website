@@ -22,3 +22,12 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Reports and temporary files
+lighthouse-*.html
+pa11y-report*.html
+audit-*.html
+*.backup
+
+# Temporary design files
+html.to.design_*

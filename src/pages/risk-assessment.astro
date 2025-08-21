@@ -1,0 +1,322 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeroSection from '../components/sections/PageHeroSection.astro';
+import CTASection from '../components/sections/CTASection.astro';
+import CookieBanner from '../components/ui/CookieBanner.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import { designSystem } from '../data/designSystem';
+
+// SEO Metadata
+const title = "Free Portfolio Risk Assessment | Investipal";
+const description = "Take our free portfolio risk assessment to see if your investments align with your risk tolerance. Get personalized insights and recommendations for better portfolio management.";
+const canonical = "https://investipal.co/risk-assessment";
+
+// Page Data
+const pageData = {
+  hero: {
+    audienceText: "Understand Your Risk",
+    title: "Is Your Investment Risk Aligned With Your Financial Goals?",
+    subtitle: "Take our free portfolio risk assessment to discover if your investments match your risk tolerance and financial objectives.",
+    ctaText: "Start Assessment",
+    ctaHref: "#risk-assessment-tool"
+  },
+  content: {
+    title: "Why Understanding Risk is the Basis for Successful Investing",
+    paragraphs: [
+      "Successful investing starts with recognizing that risk and return are directly linked. A gap between risk tolerance and actual risk exposure in a portfolio often leads to frustration, disappointment, and anxiety. While we can't eliminate investment risk, we can identify a level of risk that you're comfortable with and construct a portfolio based on that risk tolerance.",
+      "We use dynamic analytical software developed by Investipal to aid this process. This software helps us determine your personal risk tolerance using a scientific approach backed by research and award-winning technology. You may be surprised as to your true risk tolerance and how it compares to the level of risk you're currently taking.",
+      "When you aren't afraid to talk about risk, you and your financial advisor can be empowered to make better decisions."
+    ]
+  },
+  benefits: [
+    {
+      title: "Scientific Approach",
+      description: "Award-winning technology backed by research to accurately assess your risk tolerance",
+      icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+      </svg>`
+    },
+    {
+      title: "Personalized Insights",
+      description: "Get customized recommendations based on your unique risk profile and goals",
+      icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+      </svg>`
+    },
+    {
+      title: "Better Decisions",
+      description: "Empower yourself and your advisor to make informed investment choices",
+      icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>`
+    }
+  ]
+};
+
+// Generate structured data for the Risk Assessment page
+const siteUrl = Astro.site?.toString() || 'https://investipal.co';
+const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
+
+const riskAssessmentStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Portfolio Risk Assessment Tool",
+  "applicationCategory": "FinanceApplication",
+  "applicationSubCategory": "Risk Assessment Software",
+  "description": description,
+  "url": currentUrl,
+  "creator": {
+    "@type": "Organization",
+    "name": "Investipal",
+    "url": siteUrl
+  },
+  "offers": {
+    "@type": "Offer",
+    "description": "Free portfolio risk assessment tool",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "featureList": [
+    "Scientific risk tolerance assessment",
+    "Personalized portfolio analysis", 
+    "Investment recommendations",
+    "Risk-return optimization"
+  ],
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web Browser"
+};
+
+// Generate breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Risk Assessment' }
+];
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  <!-- Risk Assessment Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(riskAssessmentStructuredData)} />
+  
+  <Header />
+  <Breadcrumb items={breadcrumbItems} />
+  
+  <main id="main">
+    
+    <!-- Hero Section -->
+    <PageHeroSection 
+      audienceText={pageData.hero.audienceText}
+      title={pageData.hero.title}
+      subtitle={pageData.hero.subtitle}
+      ctaText={pageData.hero.ctaText}
+      ctaHref={pageData.hero.ctaHref}
+    />
+
+    <!-- Introduction Section -->
+    <section class="bg-white py-20">
+      <div class={designSystem.spacing.container}>
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class={designSystem.typography.sectionTitle}>
+              {pageData.content.title}
+            </h2>
+          </div>
+          
+          <div class="prose prose-lg max-w-none space-y-6">
+            {pageData.content.paragraphs.map((paragraph) => (
+              <p class={designSystem.typography.bodyLarge}>
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-gray-50">
+      <div class={designSystem.spacing.container}>
+        <div class="text-center mb-12">
+          <h2 class={designSystem.typography.sectionTitle}>
+            The Science Behind Our Assessment
+          </h2>
+          <p class={`${designSystem.typography.bodyLarge} mt-6 max-w-3xl mx-auto`}>
+            Our risk assessment tool uses proven methodologies to help you understand your true risk tolerance and optimize your investment strategy.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          {pageData.benefits.map((benefit) => (
+            <div class="text-center space-y-4">
+              <div class="inline-flex items-center justify-center w-16 h-16 bg-investipal-100 rounded-lg shadow-lg hover:scale-[1.02] transition-all duration-500 ease-out">
+                <div class="w-6 h-6 text-investipal-600" set:html={benefit.icon} />
+              </div>
+              <div>
+                <h3 class={designSystem.typography.componentTitle}>
+                  {benefit.title}
+                </h3>
+                <p class={designSystem.typography.bodySmall}>
+                  {benefit.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Risk Assessment Tool Section -->
+    <section id="risk-assessment-tool" class="bg-white py-20">
+      <div class={designSystem.spacing.container}>
+        <div class="text-center mb-12">
+          <h2 class={designSystem.typography.sectionTitle}>
+            Take Your Free Risk Assessment
+          </h2>
+          <p class={`${designSystem.typography.bodyLarge} mt-6 max-w-3xl mx-auto`}>
+            Answer a few simple questions to discover your risk tolerance and get personalized investment recommendations.
+          </p>
+        </div>
+        
+        <!-- Iframe Container -->
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden">
+            <div class="aspect-video w-full">
+              <iframe 
+                src="https://app.investipal.co/risk-assessment"
+                class="w-full h-full border-0"
+                title="Investipal Risk Assessment Tool"
+                loading="lazy"
+                allow="fullscreen"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-top-navigation"
+              ></iframe>
+            </div>
+          </div>
+          
+          <!-- Fallback Content -->
+          <div class="mt-8 text-center">
+            <p class={`${designSystem.typography.bodySmall} text-gray-600`}>
+              Having trouble loading the assessment? 
+              <a href="https://app.investipal.co/risk-assessment" target="_blank" rel="noopener noreferrer" class="text-investipal-600 hover:text-investipal-700 font-medium transition-colors">
+                Open in new window →
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Risk Assessment Matters Section -->
+    <section class="py-20 bg-gradient-to-br from-investipal-600 via-investipal-700 to-investipal-800">
+      <div class={designSystem.spacing.container}>
+        <!-- Background pattern/decoration -->
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-investipal-600/20 to-transparent"></div>
+          <div class="absolute top-0 right-0 w-96 h-96 bg-investipal-500/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+          <div class="absolute bottom-0 left-0 w-96 h-96 bg-investipal-400/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+          
+          <div class="relative max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+              <div class="w-2 h-2 bg-white rounded-full mr-3 animate-pulse"></div>
+              <span class="text-sm font-medium text-white">Risk Management</span>
+            </div>
+            
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+              Don't Let Misaligned Risk Derail Your Financial Goals
+            </h2>
+            
+            <p class="text-investipal-100 text-lg mb-8 leading-relaxed max-w-3xl mx-auto">
+              Many investors unknowingly take on too much or too little risk. Our assessment helps you find the sweet spot that aligns with your comfort level and objectives.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-10">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div class="text-3xl font-bold text-white mb-2">68%</div>
+                <div class="text-investipal-100">Of investors have risk-return misalignment</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div class="text-3xl font-bold text-white mb-2">5 min</div>
+                <div class="text-investipal-100">Average assessment completion time</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div class="text-3xl font-bold text-white mb-2">95%</div>
+                <div class="text-investipal-100">Assessment accuracy rate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTASection />
+
+  </main>
+  
+  <Footer />
+  <CookieBanner />
+</Layout>
+
+<style>
+  /* Ensure iframe is responsive and maintains proper aspect ratio */
+  .aspect-video {
+    aspect-ratio: 16 / 9;
+  }
+  
+  /* Custom scrollbar for iframe container */
+  .iframe-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .iframe-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .iframe-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+  }
+  
+  .iframe-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+</style>
+
+<script>
+  // Handle iframe loading and error states
+  document.addEventListener('DOMContentLoaded', function() {
+    const iframe = document.querySelector('iframe[title="Investipal Risk Assessment Tool"]');
+    
+    if (iframe) {
+      // Add loading state
+      const container = iframe.closest('.bg-white');
+      if (container) {
+        container.classList.add('animate-pulse');
+      }
+      
+      // Remove loading state when iframe loads
+      iframe.addEventListener('load', function() {
+        if (container) {
+          container.classList.remove('animate-pulse');
+        }
+      });
+      
+      // Handle iframe errors
+      iframe.addEventListener('error', function() {
+        console.warn('Risk assessment iframe failed to load');
+        // Could add fallback content here
+      });
+      
+      // Track iframe interaction for analytics
+      iframe.addEventListener('load', function() {
+        // Analytics tracking could be added here
+        console.log('Risk assessment tool loaded successfully');
+      });
+    }
+  });
+</script>
+
+
+

@@ -1,0 +1,62 @@
+---
+/**
+ * Automated Statement Scanner Feature Page
+ * 
+ * This page now uses the standardized FeaturePageLayout for consistency.
+ * All elements follow the design system and standardized structure.
+ */
+import FeaturePageLayout from '../../components/layouts/FeaturePageLayout.astro';
+
+// Standardized page data matching FeaturePageLayout interface
+const pageData = {
+  // Hero Section
+  audienceText: "For Advisors & Planners",
+  featureName: "Automated Statement Scanner",
+  title: "Parse & Analyze Client Account Statements in Seconds",
+  subtitle: "Scan any brokerage statement in any file format—from PDF to PNG—using OCR & AI. First 3 statements are free, then only pay for what you use.",
+  heroImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/66cf592dcb1be92d31050903_Account%20Statement%20Scanning%20for%20Financial%20Advisors%201.png",
+  heroImageAlt: "Statement Scanner Dashboard showing automated portfolio analysis",
+  
+  // Features Section (2x2 grid)
+  features: [
+    {
+      icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 22V17M4.5 7V2M2 4.5H7M2 19.5H7M13 3L11.2658 7.50886C10.9838 8.24209 10.8428 8.60871 10.6235 8.91709C10.4292 9.1904 10.1904 9.42919 9.91709 9.62353C9.60871 9.8428 9.24209 9.98381 8.50886 10.2658L4 12L8.50886 13.7342C9.24209 14.0162 9.60871 14.1572 9.91709 14.3765C10.1904 14.5708 10.4292 14.8096 10.6235 15.0829C10.8428 15.3913 10.9838 15.7579 11.2658 16.4911L13 21L14.7342 16.4911C15.0162 15.7579 15.1572 15.3913 15.3765 15.0829C15.5708 14.8096 15.8096 14.5708 16.0829 14.3765C16.3913 14.1572 16.7579 14.0162 17.4911 13.7342L22 12L17.4911 10.2658C16.7579 9.98381 16.3913 9.8428 16.0829 9.62353C15.8096 9.42919 15.5708 9.1904 15.3765 8.91709C15.1572 8.60871 15.0162 8.24209 14.7342 7.50886L13 3Z"></path>`,
+      title: "Parse Any Format",
+      description: "Let OCR & Gen-AI instantly convert PDFs, images, faxes, or just about any file format into structured, usable data."
+    },
+    {
+      icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C13.3132 2 14.6136 2.25866 15.8268 2.76121C17.0401 3.26375 18.1425 4.00035 19.0711 4.92893C19.9997 5.85752 20.7363 6.95991 21.2388 8.17317C21.7413 9.38643 22 10.6868 22 12M12 2V12M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5229 22 12M12 2C17.5228 2 22 6.47716 22 12M22 12L12 12M22 12C22 13.5781 21.6265 15.1338 20.9101 16.5399C20.1936 17.946 19.1546 19.1626 17.8779 20.0902L12 12"></path>`,
+      title: "Enrich & Analyze",
+      description: "Get a comprehensive analysis of your client's portfolio, compare it to your models, run backtests, and more. Choose the winning strategy and win the business."
+    },
+    {
+      icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 11.0857V12.0057C21.9988 14.1621 21.3005 16.2604 20.0093 17.9875C18.7182 19.7147 16.9033 20.9782 14.8354 21.5896C12.7674 22.201 10.5573 22.1276 8.53447 21.3803C6.51168 20.633 4.78465 19.2518 3.61096 17.4428C2.43727 15.6338 1.87979 13.4938 2.02168 11.342C2.16356 9.19029 2.99721 7.14205 4.39828 5.5028C5.79935 3.86354 7.69279 2.72111 9.79619 2.24587C11.8996 1.77063 14.1003 1.98806 16.07 2.86572M22 4L12 14.01L9 11.01"></path>`,
+      title: "Reduce Errors",
+      description: "Automating manual data entry means less mistakes, less NIGOs, and better productivity."
+    },
+    {
+      icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.5 3.5V2M19.4393 4.56066L20.5 3.5M20.5103 8.5H22.0103M21.9506 13C21.4489 18.0533 17.1853 22 12 22C6.47715 22 2 17.5228 2 12C2 6.81465 5.94668 2.5511 11 2.04938M12 8H16V12M15.6197 8C13.2653 11.3276 9.38636 13.5 5 13.5C3.9971 13.5 3.02072 13.3864 2.08302 13.1715"></path>`,
+      title: "Export into CSV",
+      description: "Want to export the data into another system? No problem. Simply download the structured data into a CSV."
+    }
+  ],
+  dashboardImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/66cf56bf0f86f453970dad3d_2024%2C%2018_51_39%20GMT-4%201%20(3).png",
+  dashboardImageAlt: "Portfolio Analytics Dashboard",
+  
+  // Productivity Section
+  productivityTitle: "Better operations and smarter resource utilization",
+  productivityDescription: "Free up your time to spend on higher-value activities.",
+  stats: [
+    { value: "95%", label: "Time saved" },
+    { value: "3-5", label: "Hours saved per document, on average" }
+  ],
+  
+  // SEO
+  pageTitle: "AI Statement Scanner | Investipal",
+  pageDescription: "Extract and analyze client account statements instantly with AI. Upload any brokerage statement format and get organized data in seconds, not hours."
+};
+---
+
+<FeaturePageLayout 
+  {...pageData}
+/>

@@ -1,0 +1,27 @@
+---
+// Dynamic Podcast Episode Page
+// Renders individual podcast episodes using the PodcastPageLayout
+
+import PodcastPageLayout from '../../components/layouts/PodcastPageLayout.astro';
+import { podcastEpisodes, getPodcastBySlug, getRelatedPodcasts } from '../../data/podcastData';
+
+// Generate static paths for all podcast episodes
+export async function getStaticPaths() {
+  return podcastEpisodes.map((episode) => ({
+    params: { slug: episode.slug },
+    props: { episode },
+  }));
+}
+
+// Get episode data
+const { episode } = Astro.props;
+
+if (!episode) {
+  return Astro.redirect('/404');
+}
+
+// Get related episodes (same category or shared topics, excluding current episode)
+const relatedEpisodes = getRelatedPodcasts(episode.slug, 3);
+---
+
+<PodcastPageLayout episode={episode} relatedEpisodes={relatedEpisodes} />

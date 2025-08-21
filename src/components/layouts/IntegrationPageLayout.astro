@@ -1,0 +1,347 @@
+---
+// Integration Page Layout Component
+// Standardizes the layout for all individual integration pages
+
+import Layout from '../../layouts/Layout.astro';
+import Header from '../Header.astro';
+import Footer from '../Footer.astro';
+import CTASection from '../sections/CTASection.astro';
+import CookieBanner from '../ui/CookieBanner.astro';
+import Breadcrumb from '../ui/Breadcrumb.astro';
+import StandardButton from '../ui/StandardButton.astro';
+import StandardIcon from '../ui/StandardIcon.astro';
+import StandardCheckmark from '../ui/StandardCheckmark.astro';
+import { designSystem } from '../../data/designSystem';
+import type { Integration } from '../../data/integrationsData';
+
+export interface Props {
+  integration: Integration;
+  relatedIntegrations?: Integration[];
+}
+
+const { integration, relatedIntegrations = [] } = Astro.props;
+
+// SEO Data
+const title = `${integration.name} Integration | Investipal`;
+const description = `${integration.description} Connect ${integration.name} with Investipal for seamless workflow automation.`;
+const canonical = `https://investipal.co/integrations/${integration.slug}`;
+
+// Generate structured data for the integration
+const siteUrl = Astro.site?.toString() || 'https://investipal.co';
+const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
+
+const integrationStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": integration.name,
+  "applicationCategory": integration.categoryDisplay,
+  "description": integration.description,
+  "url": currentUrl,
+  "creator": {
+    "@type": "Organization",
+    "name": integration.builtBy,
+    "url": integration.website
+  },
+  "provider": {
+    "@type": "Organization", 
+    "name": "Investipal",
+    "url": siteUrl
+  },
+  "offers": {
+    "@type": "Offer",
+    "description": "Integration available with Investipal platform",
+    "availability": "https://schema.org/InStock"
+  }
+};
+
+// Generate breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Integrations', href: '/integrations' },
+  { name: integration.name }
+];
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  <!-- Integration Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(integrationStructuredData)} />
+  
+  <Header />
+  <Breadcrumb items={breadcrumbItems} />
+  
+  <main id="main">
+    
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-gray-50 to-white py-16 md:py-20 lg:py-24">
+      <div class={designSystem.spacing.container}>
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <!-- Left Column - Integration Info -->
+          <div class="space-y-6">
+            
+            <!-- Category Badge -->
+            <div class="inline-flex items-center bg-investipal-50 rounded-full px-6 py-2">
+              <div class="bg-investipal-600 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
+                {integration.categoryDisplay}
+              </div>
+              <span class="text-investipal-700 font-medium">Integration</span>
+            </div>
+            
+            <!-- Integration Logo & Name -->
+            <div class="flex items-center space-x-4">
+              <img 
+                src={integration.logo} 
+                alt={`${integration.name} logo`}
+                class="h-16 w-auto object-contain"
+                loading="eager"
+              />
+              <div>
+                <h1 class={designSystem.typography.pageTitleGradient}>
+                  {integration.name}
+                </h1>
+                <p class="text-gray-600 mt-2">
+                  Built by {integration.builtBy}
+                </p>
+              </div>
+            </div>
+            
+            <!-- Description -->
+            <p class={designSystem.typography.heroSubtitle}>
+              {integration.description}
+            </p>
+            
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <StandardButton href="/book-a-demo">
+                Get Integration
+              </StandardButton>
+              <StandardButton variant="outline" href={integration.website} target="_blank">
+                Visit {integration.name}
+              </StandardButton>
+            </div>
+            
+          </div>
+          
+          <!-- Right Column - Integration Image -->
+          <div class="relative">
+            <img 
+              src={integration.image} 
+              alt={`${integration.name} dashboard`}
+              class="w-full rounded-lg shadow-xl"
+              loading="eager"
+            />
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    {integration.features && integration.features.length > 0 && (
+      <section class="bg-white py-20">
+        <div class={designSystem.spacing.container}>
+          <div class="text-center mb-12">
+            <h2 class={designSystem.typography.sectionTitle}>
+              What {integration.name} Offers
+            </h2>
+            <p class={`${designSystem.typography.bodyLarge} mt-6 max-w-3xl mx-auto`}>
+              Discover the powerful features that make {integration.name} an essential tool for your workflow.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {integration.features.map((feature) => (
+              <div class="flex items-start space-x-3">
+                <StandardCheckmark />
+                <p class={designSystem.typography.body}>
+                  {feature}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Benefits Section -->
+    {integration.benefits && integration.benefits.length > 0 && (
+      <section class="py-20 bg-gray-50">
+        <div class={designSystem.spacing.container}>
+          <div class="text-center mb-12">
+            <h2 class={designSystem.typography.sectionTitle}>
+              Why Use {integration.name} with Investipal?
+            </h2>
+            <p class={`${designSystem.typography.bodyLarge} mt-6 max-w-3xl mx-auto`}>
+              Experience the combined power of {integration.name} and Investipal's AI-driven platform.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            {integration.benefits.map((benefit, index) => (
+              <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-8 h-8 bg-investipal-100 rounded-lg flex items-center justify-center">
+                    <span class="text-investipal-600 font-semibold text-sm">{index + 1}</span>
+                  </div>
+                  <p class={designSystem.typography.body}>
+                    {benefit}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Setup Section -->
+    <section class="bg-white py-20">
+      <div class={designSystem.spacing.container}>
+        <div class="text-center mb-12">
+          <h2 class={designSystem.typography.sectionTitle}>
+            Quick Setup Process
+          </h2>
+          <p class={`${designSystem.typography.bodyLarge} mt-6 max-w-3xl mx-auto`}>
+            Get {integration.name} connected with Investipal in just a few simple steps.
+          </p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-3 gap-8">
+            
+            <!-- Step 1 -->
+            <div class="text-center">
+              <div class="w-16 h-16 bg-investipal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-investipal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <h3 class={designSystem.typography.componentTitle}>
+                1. Contact Our Team
+              </h3>
+              <p class={designSystem.typography.bodySmall}>
+                Schedule a demo to discuss your {integration.name} integration needs.
+              </p>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="text-center">
+              <div class="w-16 h-16 bg-investipal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-investipal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+                </svg>
+              </div>
+              <h3 class={designSystem.typography.componentTitle}>
+                2. Configure Settings
+              </h3>
+              <p class={designSystem.typography.bodySmall}>
+                Our team will help you configure the optimal settings for your workflow.
+              </p>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="text-center">
+              <div class="w-16 h-16 bg-investipal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-investipal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h3 class={designSystem.typography.componentTitle}>
+                3. Start Using
+              </h3>
+              <p class={designSystem.typography.bodySmall}>
+                Begin leveraging the combined power of both platforms immediately.
+              </p>
+            </div>
+            
+          </div>
+          
+          <div class="text-center mt-12">
+            <StandardButton href="/book-a-demo">
+              Schedule Integration Demo
+            </StandardButton>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Integrations -->
+    {relatedIntegrations.length > 0 && (
+      <section class="py-20 bg-gray-50">
+        <div class={designSystem.spacing.container}>
+          <div class="text-center mb-12">
+            <h2 class={designSystem.typography.sectionTitle}>
+              Related Integrations
+            </h2>
+            <p class={`${designSystem.typography.bodyLarge} mt-6 max-w-3xl mx-auto`}>
+              Explore other integrations in the {integration.categoryDisplay} category.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {relatedIntegrations.slice(0, 3).map((relatedIntegration) => (
+              <a 
+                href={`/integrations/${relatedIntegration.slug}`}
+                class="group block bg-white rounded-xl border border-gray-200 hover:shadow-lg hover:border-gray-300 transition-all duration-300 p-6"
+              >
+                <div class="flex items-center space-x-3 mb-4">
+                  <img 
+                    src={relatedIntegration.logo} 
+                    alt={`${relatedIntegration.name} logo`}
+                    class="h-8 w-auto object-contain"
+                    loading="lazy"
+                  />
+                  <h3 class={`${designSystem.typography.componentTitle} group-hover:text-investipal-600 transition-colors`}>
+                    {relatedIntegration.name}
+                  </h3>
+                </div>
+                
+                <p class={`${designSystem.typography.bodySmall} line-clamp-2 mb-4`}>
+                  {relatedIntegration.description}
+                </p>
+                
+                <div class="flex items-center text-investipal-600 group-hover:text-investipal-700 transition-colors">
+                  <span class="text-sm font-medium">Learn more</span>
+                  <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </div>
+              </a>
+            ))}
+          </div>
+          
+          <div class="text-center mt-8">
+            <a 
+              href="/integrations"
+              class="inline-flex items-center text-investipal-600 hover:text-investipal-700 font-medium transition-colors"
+            >
+              View all integrations
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- CTA Section -->
+    <CTASection />
+
+  </main>
+  
+  <Footer />
+  <CookieBanner />
+</Layout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
+
+
+

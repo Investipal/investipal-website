@@ -1,0 +1,15 @@
+# Ignore build output
+dist/
+node_modules/
+.astro/
+
+# Ignore problematic third-party files
+html.to.design_*/
+
+# Ignore generated files
+lighthouse-*.html
+pa11y-report.html
+audit-summary.md
+
+# Ignore large CSS files
+public/tailwind.css

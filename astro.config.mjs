@@ -1,5 +1,82 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+import tailwindcss from '@tailwindcss/vite';
+
+import sitemap from '@astrojs/sitemap';
+
+import partytown from '@astrojs/partytown';
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  integrations: [
+    mdx(), 
+    sitemap({
+      customPages: [
+        // Segment Pages
+        'https://investipal.co/segments/financial-planners',
+        'https://investipal.co/segments/wealth-managers',
+        'https://investipal.co/segments/wealth-firms', 
+        'https://investipal.co/segments/insurance',
+        // Feature Pages
+        'https://investipal.co/features/automated-statement-scanner',
+        'https://investipal.co/features/asset-allocation',
+        'https://investipal.co/features/ai-driven-engagement',
+        'https://investipal.co/features/client-acquisition',
+        'https://investipal.co/features/regulation-best-interest-generator',
+        'https://investipal.co/features/investment-policy-statements',
+        'https://investipal.co/features/risk-management',
+        'https://investipal.co/features/custom-security-builder',
+        'https://investipal.co/features/iul-annuity-modeling',
+        'https://investipal.co/features/roi-calculator',
+        'https://investipal.co/features/automated-statement-scanner-new'
+      ]
+    }),
+    partytown()
+  ],
+  site: 'https://investipal.co',
+  trailingSlash: 'never',
+  build: {
+    assets: '_astro',
+    inlineStylesheets: 'auto',
+    // Enable minification and optimization
+    minify: true
+  },
+  // Enable image optimization
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp'
+    },
+    remotePatterns: [{ protocol: "https" }]
+  },
+
+  // Enable compression
+  vite: {
+    plugins: [tailwindcss()],
+    define: {
+      // Fix cssesc module compatibility
+      'global': 'globalThis',
+      'module': '{}'
+    },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ['astro']
+          }
+        }
+      },
+      // Enable additional minification
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true
+        }
+      }
+    },
+    ssr: {
+      noExternal: ['*']
+    }
+  }
+});

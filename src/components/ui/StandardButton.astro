@@ -1,0 +1,54 @@
+---
+// Standardized Button Component - Ensures consistent styling across all pages
+export interface Props {
+  href?: string;
+  variant?: 'primary' | 'secondary' | 'white';
+  size?: 'small' | 'medium' | 'large';
+  className?: string;
+}
+
+const { 
+  href = '/book-a-demo', 
+  variant = 'primary', 
+  size = 'medium',
+  className = '' 
+} = Astro.props;
+
+const sizeClasses = {
+  small: 'px-6 py-3 text-sm',
+  medium: 'px-8 py-4 text-base',
+  large: 'px-10 py-5 text-lg'
+};
+
+const variantClasses = {
+  primary: 'bg-gradient-to-r from-investipal-600 to-investipal-700 hover:from-investipal-700 hover:to-investipal-800 text-white',
+  secondary: 'bg-white text-investipal-600 hover:bg-investipal-50 border border-investipal-200',
+  white: 'bg-white text-investipal-600 hover:bg-investipal-50'
+};
+---
+
+<!-- 
+  STANDARD BUTTON COMPONENT
+  
+  This component enforces the standardized button styling across all pages:
+  - Gradient background for primary buttons
+  - Smooth hover effects (scale-[1.02])
+  - 500ms transitions with ease-out
+  - Arrow icon with slide animation
+  - Consistent sizing options
+  
+  Usage:
+  <StandardButton>Schedule a Demo</StandardButton>
+  <StandardButton variant="secondary" size="small">Learn More</StandardButton>
+-->
+<a 
+  href={href} 
+  class={`group ${variantClasses[variant]} ${sizeClasses[size]} font-semibold rounded-xl transition-all duration-500 ease-out inline-flex items-center shadow-lg hover:shadow-xl transform hover:scale-[1.02] ${className}`}
+>
+  <span><slot /></span>
+  <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-all duration-500 ease-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+  </svg>
+</a>
+
+

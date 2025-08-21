@@ -1,0 +1,584 @@
+---
+// Table of Contents Component
+// Generates a sticky sidebar with navigation links for blog post headings
+
+export interface Props {
+  headings?: Array<{
+    depth: number;
+    slug: string;
+    text: string;
+  }>;
+  readingTime?: number;
+}
+
+const { headings = [], readingTime = 8 } = Astro.props;
+---
+
+<!-- Table of Contents Sidebar -->
+<div class="toc-sidebar">
+  <div class="toc-header">
+    <h3 class="toc-title">Table of Contents</h3>
+    <div class="reading-time-info">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <span id="estimated-reading-time">{readingTime} {readingTime === 1 ? 'min' : 'min'} read</span>
+    </div>
+  </div>
+
+  <div class="toc-progress-container">
+    <div class="toc-progress-bar" id="toc-progress"></div>
+  </div>
+
+  {headings.length > 0 && (
+    <nav class="toc-nav" aria-label="Table of Contents">
+      <ul class="toc-list">
+        {headings.map((heading) => (
+          <li class={`toc-item toc-depth-${heading.depth}`}>
+            <a 
+              href={`#${heading.slug}`}
+              class="toc-link"
+              data-heading-id={heading.slug}
+              style="color: inherit !important;"
+            >
+              {heading.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )}
+
+  <!-- Article Actions -->
+  <div class="toc-actions">
+    <button class="toc-action-btn" id="scroll-to-top" aria-label="Scroll to top">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+      </svg>
+      <span>Back to Top</span>
+    </button>
+    
+    <button class="toc-action-btn" id="share-article" aria-label="Share article">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+      </svg>
+      <span>Share</span>
+    </button>
+  </div>
+</div>
+
+<style>
+  .toc-sidebar {
+    position: fixed;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    width: min(280px, calc(100vw - 2rem));
+    max-width: 320px;
+    max-height: 70vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    z-index: 900;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toc-sidebar.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .toc-header {
+    padding: 1.5rem 1.5rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    flex-shrink: 0;
+  }
+
+  .toc-nav {
+    padding: 0 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .toc-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .reading-time-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+
+  .toc-progress-container {
+    position: relative;
+    height: 4px;
+    background: #e5e7eb;
+    border-radius: 2px;
+    margin: 0 1.5rem 1.5rem;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .toc-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed 0%, #a855f7 100%);
+    border-radius: 2px;
+    transition: width 0.2s ease;
+    width: 0%;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .toc-item {
+    margin-bottom: 0.25rem;
+  }
+
+  .toc-link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+    line-height: 1.4;
+  }
+
+  .toc-link:hover {
+    color: #7c3aed;
+    background: #f3f4f6;
+  }
+
+  .toc-link.active {
+    color: #7c3aed;
+    background: #f3f0ff;
+    border-left-color: #7c3aed;
+    font-weight: 600;
+  }
+
+  /* Heading depth styling */
+  .toc-depth-1 .toc-link {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .toc-depth-2 .toc-link {
+    padding-left: 1rem;
+  }
+
+  .toc-depth-3 .toc-link {
+    padding-left: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .toc-depth-4 .toc-link {
+    padding-left: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .toc-actions {
+    border-top: 1px solid #e5e7eb;
+    padding: 1rem 1.5rem 1.5rem;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .toc-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+  }
+
+  .toc-action-btn:hover {
+    color: #7c3aed;
+    background: #f3f4f6;
+  }
+
+  /* Mobile responsiveness - hide TOC on smaller screens */
+  @media (max-width: 1400px) {
+    .toc-sidebar {
+      display: none;
+    }
+  }
+
+  /* Medium screens - ensure TOC doesn't overflow */
+  @media (min-width: 1401px) and (max-width: 1600px) {
+    .toc-sidebar {
+      width: min(280px, calc(100vw - 3rem));
+      right: 1rem;
+    }
+  }
+
+  /* Large screens - adjust positioning */
+  @media (min-width: 1601px) {
+    .toc-sidebar {
+      right: max(1rem, calc((100vw - 1280px) / 2 - 320px));
+      width: 300px;
+    }
+  }
+
+  /* Ensure TOC doesn't go beyond viewport */
+  @media (max-height: 800px) {
+    .toc-sidebar {
+      max-height: 60vh;
+    }
+  }
+
+  /* Custom scrollbar for TOC */
+  .toc-nav::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .toc-nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .toc-nav::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 2px;
+  }
+
+  .toc-nav::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+
+  /* Dark mode styles for TOC */
+  :global(body.reading-mode) .toc-sidebar {
+    background: rgba(31, 41, 55, 0.95) !important;
+    border-color: #374151 !important;
+    color: #e5e7eb !important;
+  }
+
+  :global(body.reading-mode) .toc-title {
+    color: #ffffff !important;
+  }
+
+  :global(body.reading-mode) .reading-time-info {
+    color: #9ca3af !important;
+  }
+
+  :global(body.reading-mode) .toc-link,
+  :global(body.reading-mode) .toc-link * {
+    color: #e5e7eb !important;
+  }
+
+  :global(body.reading-mode) .toc-link:hover,
+  :global(body.reading-mode) .toc-link:hover * {
+    color: #c084fc !important;
+    background: #374151 !important;
+  }
+
+  :global(body.reading-mode) .toc-link.active,
+  :global(body.reading-mode) .toc-link.active * {
+    color: #c084fc !important;
+    background: #1f2937 !important;
+    border-left-color: #c084fc !important;
+  }
+
+  :global(body.reading-mode) .toc-list,
+  :global(body.reading-mode) .toc-item {
+    color: #e5e7eb !important;
+  }
+
+  :global(body.reading-mode) .toc-actions {
+    border-top-color: #374151 !important;
+  }
+
+  :global(body.reading-mode) .toc-action-btn {
+    color: #d1d5db !important;
+  }
+
+  :global(body.reading-mode) .toc-action-btn:hover {
+    color: #c084fc !important;
+    background: #374151 !important;
+  }
+
+  :global(body.reading-mode) .toc-progress-container {
+    background: #374151 !important;
+  }
+
+  :global(body.reading-mode) .toc-progress-bar {
+    background: linear-gradient(90deg, #c084fc 0%, #a855f7 100%) !important;
+  }
+
+  /* Force all text elements in TOC to be light in dark mode - Maximum Specificity */
+  :global(body.reading-mode) .toc-sidebar * {
+    color: #e5e7eb !important;
+  }
+
+  :global(body.reading-mode) .toc-title {
+    color: #ffffff !important;
+  }
+
+  :global(body.reading-mode) .toc-nav,
+  :global(body.reading-mode) .toc-list,
+  :global(body.reading-mode) .toc-item,
+  :global(body.reading-mode) .toc-link {
+    color: #e5e7eb !important;
+  }
+
+  :global(body.reading-mode) .toc-link:hover {
+    color: #c084fc !important;
+  }
+
+  :global(body.reading-mode) .toc-link.active {
+    color: #c084fc !important;
+  }
+
+  /* Extra aggressive targeting for all depth classes */
+  :global(body.reading-mode) .toc-depth-1,
+  :global(body.reading-mode) .toc-depth-2,
+  :global(body.reading-mode) .toc-depth-3,
+  :global(body.reading-mode) .toc-depth-4,
+  :global(body.reading-mode) .toc-depth-5,
+  :global(body.reading-mode) .toc-depth-6 {
+    color: #e5e7eb !important;
+  }
+
+  :global(body.reading-mode) .toc-depth-1 a,
+  :global(body.reading-mode) .toc-depth-2 a,
+  :global(body.reading-mode) .toc-depth-3 a,
+  :global(body.reading-mode) .toc-depth-4 a,
+  :global(body.reading-mode) .toc-depth-5 a,
+  :global(body.reading-mode) .toc-depth-6 a {
+    color: #e5e7eb !important;
+  }
+
+  /* Ultimate nuclear option - TEST VISIBILITY */
+  :global(body.reading-mode .toc-sidebar) {
+    color-scheme: dark;
+    color: #ffffff !important;
+  }
+
+  :global(body.reading-mode .toc-sidebar *) {
+    color: #ffffff !important;
+  }
+
+  :global(body.reading-mode .toc-sidebar a),
+  :global(body.reading-mode .toc-sidebar a:visited),
+  :global(body.reading-mode .toc-sidebar a:link),
+  :global(body.reading-mode .toc-sidebar a:hover),
+  :global(body.reading-mode .toc-sidebar a:active) {
+    color: #ffffff !important;
+    text-decoration: none !important;
+  }
+
+  /* Final: White text for all TOC links in dark mode */
+  :global(body.reading-mode .toc-link) {
+    color: #ffffff !important;
+    background: transparent !important;
+  }
+
+  :global(body.reading-mode .toc-link:hover) {
+    color: #c084fc !important;
+    background: rgba(192, 132, 252, 0.1) !important;
+  }
+
+  :global(body.reading-mode .toc-link.active) {
+    color: #c084fc !important;
+    background: rgba(192, 132, 252, 0.2) !important;
+  }
+</style>
+
+<script>
+  // Table of Contents functionality
+  class TableOfContents {
+    constructor() {
+      this.tocSidebar = document.querySelector('.toc-sidebar');
+      this.tocLinks = document.querySelectorAll('.toc-link');
+      this.progressBar = document.getElementById('toc-progress');
+      this.article = document.querySelector('article, .blog-article-container');
+      this.headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      this.footer = document.querySelector('footer');
+      
+      this.init();
+    }
+
+    init() {
+      if (!this.tocSidebar || !this.article) return;
+
+      this.setupIntersectionObserver();
+      this.setupScrollListeners();
+      this.setupClickHandlers();
+      this.showTocWhenReady();
+    }
+
+    setupIntersectionObserver() {
+      const options = {
+        root: null,
+        rootMargin: '-20% 0px -80% 0px',
+        threshold: 0
+      };
+
+      this.observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const id = entry.target.id;
+          const tocLink = document.querySelector(`[data-heading-id="${id}"]`);
+          
+          if (tocLink) {
+            if (entry.isIntersecting) {
+              // Remove active class from all links
+              this.tocLinks.forEach(link => link.classList.remove('active'));
+              // Add active class to current link
+              tocLink.classList.add('active');
+            }
+          }
+        });
+      }, options);
+
+      // Observe all headings with IDs
+      this.headings.forEach(heading => {
+        if (heading.id) {
+          this.observer.observe(heading);
+        }
+      });
+    }
+
+    setupScrollListeners() {
+      let ticking = false;
+
+      const updateProgress = () => {
+        if (!this.article || !this.progressBar) return;
+
+        const articleRect = this.article.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const articleHeight = this.article.offsetHeight;
+        
+        // Calculate progress based on article position
+        const progress = Math.min(
+          Math.max((windowHeight - articleRect.top) / (articleHeight + windowHeight), 0),
+          1
+        );
+
+        this.progressBar.style.width = `${progress * 100}%`;
+
+        // Check if user has scrolled past the article content
+        const articleBottom = articleRect.bottom;
+        const shouldHideToc = articleBottom < windowHeight * 0.3; // Hide when article is 70% past viewport
+
+        // Also check footer visibility
+        if (this.footer) {
+          const footerRect = this.footer.getBoundingClientRect();
+          const footerVisible = footerRect.top < windowHeight;
+          
+          if (footerVisible || shouldHideToc) {
+            this.tocSidebar.classList.remove('visible');
+          } else if (articleRect.top < windowHeight * 0.8) {
+            this.tocSidebar.classList.add('visible');
+          }
+        } else if (shouldHideToc) {
+          this.tocSidebar.classList.remove('visible');
+        } else if (articleRect.top < windowHeight * 0.8) {
+          this.tocSidebar.classList.add('visible');
+        }
+
+        ticking = false;
+      };
+
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(updateProgress);
+          ticking = true;
+        }
+      });
+
+      // Initial progress update
+      updateProgress();
+    }
+
+    setupClickHandlers() {
+      // Smooth scroll for TOC links
+      this.tocLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Scroll to top button
+      const scrollToTopBtn = document.getElementById('scroll-to-top');
+      if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+
+      // Share button
+      const shareBtn = document.getElementById('share-article');
+      if (shareBtn) {
+        shareBtn.addEventListener('click', () => {
+          if (navigator.share) {
+            navigator.share({
+              title: document.title,
+              url: window.location.href
+            });
+          } else {
+            // Fallback: copy to clipboard
+            navigator.clipboard.writeText(window.location.href).then(() => {
+              // Could show a toast notification here
+              console.log('URL copied to clipboard');
+            });
+          }
+        });
+      }
+    }
+
+    showTocWhenReady() {
+      // Show TOC after a brief delay to ensure content is loaded
+      setTimeout(() => {
+        if (this.tocSidebar) {
+          this.tocSidebar.classList.add('visible');
+        }
+      }, 500);
+    }
+  }
+
+  // Initialize TOC when DOM is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    new TableOfContents();
+  });
+</script>

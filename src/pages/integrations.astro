@@ -1,0 +1,262 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeroSection from '../components/sections/PageHeroSection.astro';
+import CTASection from '../components/sections/CTASection.astro';
+import CookieBanner from '../components/ui/CookieBanner.astro';
+import IntegrationGrid from '../components/integrations/IntegrationGrid.astro';
+import CategoryFilter from '../components/integrations/CategoryFilter.astro';
+import StandardBadge from '../components/ui/StandardBadge.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import { designSystem } from '../data/designSystem';
+import { integrationsData, getAllCategories, getIntegrationsByCategory } from '../data/integrationsData';
+
+// SEO Metadata
+const title = "Integrations | Investipal";
+const description = "Connect Investipal with your favorite tools and platforms. Seamless integrations with CRM systems, portfolio management software, and compliance tools to streamline your workflow.";
+const canonical = "https://investipal.co/integrations";
+
+// Page Data
+const pageData = {
+  hero: {
+    audienceText: "Connections",
+    title: "Integrations",
+    subtitle: "Connect your tools, connect your teams. Integration with your team's favorite tools are just a click away.",
+    ctaText: "Schedule a Demo",
+    ctaHref: "/book-a-demo"
+  }
+};
+
+// Get categories with counts
+const categories = getAllCategories();
+const categoryCounts = categories.map(({ key, value }) => ({
+  key,
+  value,
+  count: getIntegrationsByCategory(key as any).length
+}));
+
+// Generate breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Integrations' }
+];
+
+// Generate structured data for integrations
+const siteUrl = Astro.site?.toString() || 'https://investipal.co';
+const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
+
+const integrationsStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Integrations",
+  "description": description,
+  "url": currentUrl,
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": integrationsData.length,
+    "itemListElement": integrationsData.map((integration, index) => ({
+      "@type": "SoftwareApplication",
+      "position": index + 1,
+      "name": integration.name,
+      "description": integration.description,
+      "applicationCategory": integration.categoryDisplay,
+      "url": `${siteUrl}/integrations/${integration.slug}`,
+      "creator": {
+        "@type": "Organization",
+        "name": integration.builtBy
+      }
+    }))
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Investipal",
+    "url": siteUrl
+  }
+};
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  <!-- Integrations Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(integrationsStructuredData)} />
+  
+  <Header />
+  <Breadcrumb items={breadcrumbItems} />
+  
+  <main id="main">
+    
+    <!-- Hero Section -->
+    <PageHeroSection 
+      audienceText={pageData.hero.audienceText}
+      title={pageData.hero.title}
+      subtitle={pageData.hero.subtitle}
+      ctaText={pageData.hero.ctaText}
+      ctaHref={pageData.hero.ctaHref}
+    />
+
+    <!-- Integrations Section -->
+    <section class="bg-white py-20">
+      <div class={designSystem.spacing.container}>
+        
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <h2 class={designSystem.typography.sectionTitle}>
+            Available Integrations
+          </h2>
+          <p class={`${designSystem.typography.bodyLarge} mt-6 max-w-3xl mx-auto`}>
+            Seamlessly connect Investipal with the tools you already use. Our growing library of integrations helps you maintain your existing workflow while adding powerful AI capabilities.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-investipal-600 mb-2">{integrationsData.length}</div>
+            <div class="text-sm text-gray-600">Total Integrations</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-investipal-600 mb-2">{categories.length}</div>
+            <div class="text-sm text-gray-600">Categories</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-investipal-600 mb-2">100+</div>
+            <div class="text-sm text-gray-600">More Coming</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-investipal-600 mb-2">5 min</div>
+            <div class="text-sm text-gray-600">Setup Time</div>
+          </div>
+        </div>
+
+        <!-- Integrations Grid with Filter -->
+        <div class="grid lg:grid-cols-4 gap-8">
+          
+          <!-- Sidebar Filter -->
+          <div class="lg:col-span-1">
+            <CategoryFilter />
+          </div>
+          
+          <!-- Integrations Grid -->
+          <div class="lg:col-span-3">
+            <div class="mb-6">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class={designSystem.typography.componentTitle}>
+                    All Integrations
+                  </h3>
+                  <p class={`${designSystem.typography.bodySmall} text-gray-500 mt-1`}>
+                    {integrationsData.length} integrations available
+                  </p>
+                </div>
+                
+                <!-- Search Input -->
+                <div class="relative">
+                  <input 
+                    type="text" 
+                    id="integration-search"
+                    placeholder="Search integrations..."
+                    class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-investipal-500 focus:border-investipal-500 w-64"
+                  />
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Integration Cards with Category Data -->
+            <div id="integrations-container">
+              <IntegrationGrid integrations={integrationsData} showCategory={true} cardSize="medium" columns="2" />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <CTASection />
+
+  </main>
+  
+  <Footer />
+  <CookieBanner />
+</Layout>
+
+<style>
+  /* Smooth animations for integration filtering */
+  [data-integration-category] {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  [data-integration-category].filtering-out {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  
+  [data-integration-category].filtering-hidden {
+    display: none !important;
+  }
+  
+  /* Smooth grid layout transitions */
+  #integrations-container {
+    transition: all 0.4s ease;
+  }
+  
+  #integrations-container > div {
+    transition: all 0.4s ease;
+  }
+  
+  /* Enhanced hover effects for integration cards */
+  [data-integration-category]:hover {
+    transform: scale(1.02);
+  }
+  
+  [data-integration-category].filtering-out:hover {
+    transform: scale(0.95);
+  }
+</style>
+
+<script>
+  // Simplified integration page functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('Integrations page loaded');
+    
+    // Setup search functionality
+    const searchInput = document.getElementById('integration-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', handleSearch);
+    }
+    
+    function handleSearch(e) {
+      const searchTerm = e.target.value.toLowerCase();
+      const cards = document.querySelectorAll('[data-integration-category]');
+      
+      cards.forEach(card => {
+        const name = card.getAttribute('data-integration-name') || '';
+        const isVisible = name.includes(searchTerm);
+        
+        if (isVisible) {
+          card.style.display = 'block';
+          card.style.opacity = '1';
+          card.classList.remove('filtering-out', 'filtering-hidden');
+        } else {
+          card.style.opacity = '0.3';
+          card.classList.add('filtering-out');
+          setTimeout(() => {
+            if (card.classList.contains('filtering-out') && !card.getAttribute('data-integration-name').includes(e.target.value.toLowerCase())) {
+              card.style.display = 'none';
+              card.classList.add('filtering-hidden');
+            }
+          }, 200);
+        }
+      });
+    }
+  });
+</script>
+
