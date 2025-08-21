@@ -1,21 +1,87 @@
 collections:
-  - name: blog
+  blog:
+    name: "Blog Posts"
     label: "Blog Posts"
     folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "text"}
-      - {label: "Author", name: "author", widget: "string", default: "Investipal Team"}
-      - {label: "Published Date", name: "publishedDate", widget: "datetime"}
-      - {label: "Category", name: "category", widget: "select", options: ["AI & Technology", "Portfolio Management", "Client Communication", "Compliance", "Industry Trends", "Best Practices", "Process Improvement"]}
-      - {label: "Featured Image", name: "featuredImage", widget: "string"}
-      - {label: "Featured Image Alt", name: "featuredImageAlt", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "list", required: false}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false}
-      - {label: "Draft", name: "draft", widget: "boolean", default: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - name: "title"
+        label: "Title"
+        widget: "string"
+        required: true
+      - name: "excerpt"
+        label: "Excerpt"
+        widget: "text"
+        required: true
+        hint: "SEO description under 160 characters"
+      - name: "author"
+        label: "Author"
+        widget: "string"
+        required: true
+        default: "Investipal Team"
+      - name: "authorImage"
+        label: "Author Image"
+        widget: "string"
+        required: false
+      - name: "publishedDate"
+        label: "Published Date"
+        widget: "datetime"
+        required: true
+      - name: "category"
+        label: "Category"
+        widget: "select"
+        required: true
+        options:
+          - "AI & Technology"
+          - "Portfolio Management"
+          - "Client Communication"
+          - "Compliance"
+          - "Industry Trends"
+          - "Best Practices"
+          - "Process Improvement"
+      - name: "tags"
+        label: "Tags"
+        widget: "list"
+        required: false
+        default: []
+      - name: "featuredImage"
+        label: "Featured Image"
+        widget: "string"
+        required: true
+      - name: "featuredImageAlt"
+        label: "Featured Image Alt Text"
+        widget: "string"
+        required: true
+      - name: "featured"
+        label: "Featured Post"
+        widget: "boolean"
+        required: false
+        default: false
+      - name: "draft"
+        label: "Draft"
+        widget: "boolean"
+        required: false
+        default: false
+      - name: "seoDescription"
+        label: "SEO Description"
+        widget: "text"
+        required: false
+      - name: "readingTime"
+        label: "Reading Time (minutes)"
+        widget: "number"
+        required: false
+      - name: "body"
+        label: "Content"
+        widget: "markdown"
+        required: true
 
 media_folder: "public/images"
 public_folder: "/images"
+
+backend:
+  name: "github"
+  repo: "Investipal/investipal-website"
+  branch: "main"
