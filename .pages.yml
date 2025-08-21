@@ -1,0 +1,61 @@
+collections:
+  blog:
+    name: Blog Posts
+    description: Investipal blog posts about AI, portfolio management, and financial technology
+    folder: src/content/blog
+    extension: md
+    fields:
+      title:
+        type: string
+        label: Title
+        required: true
+      excerpt:
+        type: text
+        label: Excerpt
+        required: true
+        description: SEO description under 160 characters
+      author:
+        type: string
+        label: Author
+        required: true
+        default: Investipal Team
+      publishedDate:
+        type: date
+        label: Published Date
+        required: true
+      category:
+        type: select
+        label: Category
+        required: true
+        options:
+          - AI & Technology
+          - Portfolio Management
+          - Client Communication
+          - Compliance
+          - Industry Trends
+          - Best Practices
+          - Process Improvement
+      featuredImage:
+        type: string
+        label: Featured Image
+        required: true
+      featuredImageAlt:
+        type: string
+        label: Featured Image Alt Text
+        required: true
+      tags:
+        type: list
+        label: Tags
+        required: false
+      featured:
+        type: boolean
+        label: Featured Post
+        default: false
+      draft:
+        type: boolean
+        label: Draft
+        default: false
+
+media:
+  folder: public/images
+  public: /images
