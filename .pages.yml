@@ -1,20 +1,79 @@
-collections:
+media:
+  input: public/images
+  output: /images
+
+content:
   - name: blog
     label: Blog Posts
-    folder: src/content/blog
-    create: true
+    type: collection
+    path: src/content/blog
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "text"}
-      - {label: "Author", name: "author", widget: "string", default: "Investipal Team"}
-      - {label: "Published Date", name: "publishedDate", widget: "datetime"}
-      - {label: "Category", name: "category", widget: "select", options: ["AI & Technology", "Portfolio Management", "Client Communication", "Compliance", "Industry Trends", "Best Practices", "Process Improvement"]}
-      - {label: "Featured Image", name: "featuredImage", widget: "string"}
-      - {label: "Featured Image Alt", name: "featuredImageAlt", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "list", required: false}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false}
-      - {label: "Draft", name: "draft", widget: "boolean", default: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-
-media_folder: "public/images"
-public_folder: "/images"
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: excerpt
+        label: Excerpt
+        type: text
+        required: true
+        description: SEO description under 160 characters
+      - name: author
+        label: Author
+        type: string
+        required: true
+        default: Investipal Team
+      - name: authorImage
+        label: Author Image
+        type: string
+        required: false
+      - name: publishedDate
+        label: Published Date
+        type: date
+        required: true
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          - AI & Technology
+          - Portfolio Management
+          - Client Communication
+          - Compliance
+          - Industry Trends
+          - Best Practices
+          - Process Improvement
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+        required: false
+      - name: featuredImage
+        label: Featured Image
+        type: image
+        required: true
+      - name: featuredImageAlt
+        label: Featured Image Alt Text
+        type: string
+        required: true
+      - name: featured
+        label: Featured Post
+        type: boolean
+        required: false
+        default: false
+      - name: draft
+        label: Draft
+        type: boolean
+        required: false
+        default: false
+      - name: seoDescription
+        label: SEO Description
+        type: text
+        required: false
+      - name: readingTime
+        label: Reading Time (minutes)
+        type: number
+        required: false
+      - name: body
+        label: Content
+        type: rich-text
+        required: true
