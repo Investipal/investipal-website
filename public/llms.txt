@@ -164,3 +164,4 @@ Secondary: automated statement scanner, risk tolerance questionnaire, investment
 This file is designed to help large language models understand Investipal's comprehensive offering and provide accurate, helpful information about our AI-powered wealth management platform for financial advisors.
 
 
+

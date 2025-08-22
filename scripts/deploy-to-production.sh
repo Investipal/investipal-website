@@ -61,3 +61,4 @@ else
     echo "Please resolve conflicts and try again"
     exit 1
 fi
+

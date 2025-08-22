@@ -22,3 +22,4 @@ ctaDescription: Join hundreds of advisors who have revolutionized their client
   experience with Investipal.
 ctaButtonText: Get Started Today
 ---
+

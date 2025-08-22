@@ -73,12 +73,47 @@ const pages = defineCollection({
   }),
 });
 
+// Define the podcasts collection schema
+const podcasts = defineCollection({
+  type: 'content',
+  
+  // Define the schema for podcast episode frontmatter
+  schema: z.object({
+    // Required fields
+    title: z.string(),
+    excerpt: z.string().max(160, 'Excerpt should be under 160 characters for SEO'),
+    publishedDate: z.date(),
+    audioUrl: z.string().url('Must be a valid audio URL'),
+    duration: z.string(), // e.g., "45:30"
+    
+    // Optional fields
+    episodeNumber: z.number().optional(),
+    season: z.number().optional(),
+    hosts: z.array(z.string()).default([]),
+    guests: z.array(z.string()).default([]),
+    topics: z.array(z.string()).default([]),
+    coverImage: z.string().optional(),
+    coverImageAlt: z.string().optional(),
+    transcript: z.string().optional(),
+    
+    // SEO fields
+    seoDescription: z.string().optional(),
+    keywords: z.array(z.string()).default([]),
+    
+    // Status fields
+    featured: z.boolean().default(false),
+    draft: z.boolean().default(false),
+  }),
+});
+
 // Export the collections object to register all collections
 export const collections = {
   blog,
   pages,
+  podcasts,
 };
 
 // Export types for use in components
 export type BlogPost = z.infer<typeof blog.schema>;
 export type PageContent = z.infer<typeof pages.schema>;
+export type PodcastEpisode = z.infer<typeof podcasts.schema>;

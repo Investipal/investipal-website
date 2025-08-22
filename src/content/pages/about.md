@@ -22,3 +22,4 @@ The About Us page includes:
 - Team section highlighting expertise
 
 All content can be modified through the user-friendly editor interface.
+
