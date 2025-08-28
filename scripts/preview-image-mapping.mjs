@@ -44,6 +44,7 @@ function scoreMatch(slugTokens, cand) {
 const files = fs.readdirSync(blogDir).filter((f) => f.endsWith('.md'));
 const mapping = {};
 const unmatched = [];
+const usedUrls = new Set();
 
 for (const f of files) {
   const slug = f.replace(/\.md$/i, '');
@@ -51,9 +52,12 @@ for (const f of files) {
   const ranked = candidates
     .map((c) => ({ c, s: scoreMatch(slugTokens, c) }))
     .sort((a, b) => b.s - a.s);
-  const top = ranked[0];
-  if (top && top.s > 1) {
-    mapping[slug] = { url: top.c.url, filename: top.c.filename, score: top.s };
+  // pick first unused with score > 1
+  let pick = ranked.find((r) => r.s > 1 && !usedUrls.has(r.c.url));
+  if (!pick) pick = ranked.find((r) => r.s > 1); // allow reuse only if nothing unused
+  if (pick && pick.s > 1) {
+    mapping[slug] = { url: pick.c.url, filename: pick.c.filename, score: pick.s };
+    usedUrls.add(pick.c.url);
   } else {
     unmatched.push(slug);
   }
