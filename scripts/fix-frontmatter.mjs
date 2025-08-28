@@ -1,5 +1,8 @@
 #!/usr/bin/env node
-// Fix malformed frontmatter lines like: draft: false--- or draft: "false"---
+// Fix malformed frontmatter across blog posts:
+// - Ensure closing '---' is on its own line (e.g., "featuredImage: ...---" -> newline before ---)
+// - Normalize draft booleans (draft: "false" -> draft: false)
+// - Normalize tags like ["[]"] -> []
 import fs from 'fs';
 import path from 'path';
 
@@ -24,9 +27,25 @@ for (const file of files) {
   const fmMatch = content.match(/^---[\s\S]*?---/);
   if (!fmMatch) continue;
   let fm = fmMatch[0];
-  const replaced = fm
-    .replace(/draft:\s*"?false"?---/i, 'draft: false\n---')
-    .replace(/draft:\s*"?true"?---/i, 'draft: true\n---');
+
+  let replaced = fm;
+  // 1) Ensure any trailing '---' is on its own line
+  // e.g., "...__hero.png"--- -> "...__hero.png"\n---
+  replaced = replaced.replace(/([^\n])---/g, '$1\n---');
+
+  // 2) Normalize draft booleans (quoted -> boolean)
+  replaced = replaced
+    .replace(/draft:\s*"?false"?(\s*\n|\s*\r\n)/i, 'draft: false$1')
+    .replace(/draft:\s*"?true"?(\s*\n|\s*\r\n)/i, 'draft: true$1')
+    // Also catch if glued to closing ---
+    .replace(/draft:\s*"?false"?\s*\n?---/i, 'draft: false\n---')
+    .replace(/draft:\s*"?true"?\s*\n?---/i, 'draft: true\n---');
+
+  // 3) Normalize tags like ["[]"] -> [] and string "[]" -> []
+  replaced = replaced
+    .replace(/tags:\s*\[\s*"?\[\s*\]"?\s*\]/i, 'tags: []')
+    .replace(/tags:\s*"\[\s*\]"/i, 'tags: []');
+
   if (replaced !== fm) {
     content = content.replace(fm, replaced);
   }

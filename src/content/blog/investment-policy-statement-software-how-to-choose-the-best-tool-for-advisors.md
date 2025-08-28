@@ -5,7 +5,7 @@ author: "Investipal Team"
 publishedDate: "2025-07-11T16:53:41.085Z"
 updatedDate: "2025-07-11T16:54:13.608Z"
 category: "Onboarding"
-tags: ["[]"]
+tags: []
 slug: "investment-policy-statement-software-how-to-choose-the-best-tool-for-advisors"
 featuredImage: "/images/blog/investment-policy-statement-software-how-to-choose-the-best-tool-for-advisors__hero.png"
 featuredImageAlt: "Investment Policy Statement Software: How to Choose the Best Tool for Advisors"

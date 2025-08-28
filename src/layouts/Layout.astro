@@ -8,6 +8,7 @@ export interface Props {
   keywords?: string;
   ogImage?: string;
   canonical?: string;
+  structuredData?: any;
 }
 
 const { 
@@ -15,7 +16,8 @@ const {
   description = "AI built for financial advisors to help you streamline compliance, build portfolios, and stay compliant in one seamless workflow.", 
   keywords = "financial advisor software, AI wealth management, portfolio management, compliance automation, client onboarding, financial technology",
   ogImage = "https://investipal.co/og-image.jpg",
-  canonical = "https://investipal.co"
+  canonical = "https://investipal.co",
+  structuredData
 } = Astro.props;
 ---
 
@@ -62,25 +64,29 @@ const {
     <meta name="apple-mobile-web-app-title" content="Investipal" />
 
     <!-- Structured Data -->
-    <script type="application/ld+json" is:inline>
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Investipal",
-      "url": "https://investipal.co",
-      "logo": "https://investipal.co/logo.png",
-      "description": "AI built for financial advisors to help you streamline compliance, build portfolios, and stay compliant in one seamless workflow.",
-      "sameAs": [
-        "https://linkedin.com/company/investipal",
-        "https://twitter.com/investipal"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "availableLanguage": "English"
+    {structuredData ? (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />
+    ) : (
+      <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Investipal",
+        "url": "https://investipal.co",
+        "logo": "https://investipal.co/logo.png",
+        "description": "AI built for financial advisors to help you streamline compliance, build portfolios, and stay compliant in one seamless workflow.",
+        "sameAs": [
+          "https://linkedin.com/company/investipal",
+          "https://twitter.com/investipal"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "availableLanguage": "English"
+        }
       }
-    }
-    </script>
+      </script>
+    )}
 
     <!-- Optimized Font Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -140,12 +146,12 @@ const {
     <!-- Optimized JavaScript Loading -->
     <script>
       // Critical: Cookie banner functionality - must be immediately available
-      window.handleCookieAccept = function() {
+      (window as any).handleCookieAccept = function() {
         console.log('Cookies accepted globally');
         // Add analytics tracking when ready
       };
 
-      window.handleCookieDecline = function() {
+      (window as any).handleCookieDecline = function() {
         console.log('Cookies declined globally');
         // Disable analytics tracking
       };

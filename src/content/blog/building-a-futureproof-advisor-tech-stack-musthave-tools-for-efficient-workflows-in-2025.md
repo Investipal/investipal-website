@@ -5,7 +5,7 @@ author: "Investipal Team"
 publishedDate: "2025-08-25T06:49:54.840Z"
 updatedDate: "2025-08-25T06:49:54.840Z"
 category: "General"
-tags: ["[]"]
+tags: []
 slug: "building-a-futureproof-advisor-tech-stack-musthave-tools-for-efficient-workflows-in-2025"
 featuredImage: "/images/blog/building-a-futureproof-advisor-tech-stack-musthave-tools-for-efficient-workflows-in-2025__hero.png"
 featuredImageAlt: "Building a Future-Proof Advisor Tech Stack: Must-Have Tools for Efficient Workflows in 2025"

@@ -3,10 +3,10 @@ import { getCollection } from 'astro:content';
 import BlogCard from '../blog/BlogCard.astro';
 
 // Get actual blog posts from content collection
-let recentPosts;
+let recentPosts: any[];
 try {
   const allPosts = await getCollection('blog');
-  const getTime = (p) => {
+  const getTime = (p: any) => {
     const d = p.data.publishedDate || p.data.updatedDate || 0;
     const t = d instanceof Date ? d.getTime() : new Date(d || 0).getTime();
     return isNaN(t) ? 0 : t;
@@ -50,11 +50,11 @@ try {
         
         {recentPosts.length > 0 ? (
           <div class="box-border gap-x-8 gap-y-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {recentPosts.map((post) => (
+            {(recentPosts as any[]).map((post) => (
               <BlogCard 
                 post={post} 
                 showFeaturedBadge={false}
-                size="medium"
+                
               />
             ))}
           </div>

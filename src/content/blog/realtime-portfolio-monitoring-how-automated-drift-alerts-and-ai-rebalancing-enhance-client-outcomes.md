@@ -5,7 +5,7 @@ author: "Investipal Team"
 publishedDate: "2025-08-05T06:06:19.221Z"
 updatedDate: "2025-08-05T06:06:19.221Z"
 category: "Portfolio Management"
-tags: ["[]"]
+tags: []
 slug: "realtime-portfolio-monitoring-how-automated-drift-alerts-and-ai-rebalancing-enhance-client-outcomes"
 featuredImage: "/images/blog/realtime-portfolio-monitoring-how-automated-drift-alerts-and-ai-rebalancing-enhance-client-outcomes__hero.png"
 featuredImageAlt: "Real-Time Portfolio Monitoring: How Automated Drift Alerts and AI Rebalancing Enhance Client Outcomes"

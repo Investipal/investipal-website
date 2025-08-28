@@ -27,26 +27,29 @@ export async function getStaticPaths() {
     });
     
     // Create paths for each tag
-    return Array.from(allTags).map((tag) => ({
-      params: { 
-        tag: tag.toLowerCase().replace(/\s+/g, '-') 
-      },
-      props: { 
-        tag: tag,
-        posts: publishedPosts.filter(post => 
-          post.data.tags.some(postTag => 
-            postTag.toLowerCase().replace(/\s+/g, '-') === tag.toLowerCase().replace(/\s+/g, '-')
+    return Array.from(allTags).map((tag) => {
+      const tg = String(tag);
+      return {
+        params: { 
+          tag: tg.toLowerCase().replace(/\s+/g, '-') 
+        },
+        props: { 
+          tag: tg,
+          posts: publishedPosts.filter(post => 
+            post.data.tags.some(postTag => 
+              postTag.toLowerCase().replace(/\s+/g, '-') === tg.toLowerCase().replace(/\s+/g, '-')
+            )
           )
-        )
-      },
-    }));
+        },
+      };
+    });
   } catch (error) {
     console.error('Error in tag getStaticPaths:', error);
     return [];
   }
 }
 
-const { tag, posts } = Astro.props;
+const { tag, posts } = Astro.props as { tag: string; posts: any[] };
 
 // SEO Data
 const title = `${tag} Articles | Investipal Blog`;
@@ -118,9 +121,7 @@ const tagPageStructuredData = {
         <div class="text-center max-w-4xl mx-auto">
           <!-- Tag Badge -->
           <div class="inline-flex items-center mb-6">
-            <StandardBadge variant="primary" size="large">
-              #{tag}
-            </StandardBadge>
+            <StandardBadge text={`#${tag}`} variant="hero" />
           </div>
           
           <!-- Title -->

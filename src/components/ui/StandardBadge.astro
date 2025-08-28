@@ -4,7 +4,7 @@ import { designSystem } from '../../data/designSystem';
 
 export interface Props {
   text: string;
-  variant?: 'hero' | 'featured' | 'category' | 'small';
+  variant?: 'hero' | 'featured' | 'category' | 'small' | 'secondary' | 'outline';
   className?: string;
 }
 
@@ -15,7 +15,9 @@ const variantClasses = {
   hero: designSystem.components.standardBadge,
   featured: `${designSystem.components.badge} bg-investipal-100 text-investipal-800 text-sm font-medium`,
   category: `${designSystem.components.badge} text-xs font-semibold bg-investipal-600 text-white px-3 py-1`,
-  small: `${designSystem.components.badge} text-xs font-medium bg-investipal-600 text-white px-2 py-1`
+  small: `${designSystem.components.badge} text-xs font-medium bg-investipal-600 text-white px-2 py-1`,
+  secondary: `${designSystem.components.badge} bg-investipal-100 text-investipal-800 text-sm font-medium`,
+  outline: `${designSystem.components.badge} text-xs font-medium border border-investipal-300 text-investipal-700 px-3 py-1`
 };
 
 const heroInnerClasses = designSystem.components.standardBadgeInner;

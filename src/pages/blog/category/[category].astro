@@ -27,25 +27,28 @@ export async function getStaticPaths() {
     });
     
     // Create paths for each category
-    return Array.from(allCategories).map((category) => ({
-      params: { 
-        category: category.toLowerCase().replace(/\s+/g, '-') 
-      },
-      props: { 
-        category: category,
-        posts: publishedPosts.filter(post => 
-          post.data.category && 
-          post.data.category.toLowerCase().replace(/\s+/g, '-') === category.toLowerCase().replace(/\s+/g, '-')
-        )
-      },
-    }));
+    return Array.from(allCategories).map((category) => {
+      const cat = String(category);
+      return {
+        params: { 
+          category: cat.toLowerCase().replace(/\s+/g, '-') 
+        },
+        props: { 
+          category: cat,
+          posts: publishedPosts.filter(post => 
+            post.data.category && 
+            post.data.category.toLowerCase().replace(/\s+/g, '-') === cat.toLowerCase().replace(/\s+/g, '-')
+          )
+        },
+      };
+    });
   } catch (error) {
     console.error('Error in category getStaticPaths:', error);
     return [];
   }
 }
 
-const { category, posts } = Astro.props;
+const { category, posts } = Astro.props as { category: string; posts: any[] };
 
 // SEO Data
 const title = `${category} Articles | Investipal Blog`;
@@ -117,9 +120,7 @@ const categoryPageStructuredData = {
         <div class="text-center max-w-4xl mx-auto">
           <!-- Category Badge -->
           <div class="inline-flex items-center mb-6">
-            <StandardBadge variant="secondary" size="large">
-              {category}
-            </StandardBadge>
+            <StandardBadge text={category} variant="hero" />
           </div>
           
           <!-- Title -->
