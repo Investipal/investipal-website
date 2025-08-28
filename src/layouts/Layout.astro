@@ -32,6 +32,8 @@ const {
     <link rel="canonical" href={canonical} />
     <!-- Favicon: use Investipal icon (fallback to SVG if PNG missing) -->
     <link rel="icon" type="image/png" href="/images/logos/favicon_32x32.png" sizes="32x32" />
+    <link rel="shortcut icon" href="/images/logos/favicon_32x32.png" />
+    <link rel="apple-touch-icon" href="/images/logos/favicon_32x32.png" />
     <!-- Remove preload of SVG to avoid “preloaded but not used” warning and ensure PNG shows -->
     
     <!-- Open Graph / Facebook -->
@@ -94,6 +96,7 @@ const {
     
     <!-- Preload critical resources -->
     <!-- Removed SVG favicon preload to prevent overriding PNG favicon -->
+    <meta name="mobile-web-app-capable" content="yes">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
