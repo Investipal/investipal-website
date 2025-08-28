@@ -32,9 +32,8 @@ audit-*.html
 html.to.design_*
 
 # Generated images (excluded to avoid long filenames in Windows)
-public/images/blog/
-public/images/podcasts/
 
 # Temporary folders
 temp_backup_delete/
 temp_blog_delete/
+
