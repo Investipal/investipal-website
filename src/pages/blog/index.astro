@@ -56,7 +56,7 @@ const clientOtherPostsData = otherPosts.map((post) => ({
     publishedDate: (post.data.publishedDate instanceof Date) ? post.data.publishedDate.toISOString() : String(post.data.publishedDate),
     category: post.data.category,
     tags: post.data.tags || [],
-    featuredImage: post.data.featuredImage || '/images/blog/placeholder.png',
+    featuredImage: post.data.featuredImage || '/images/blog/placeholder-image.png',
     featuredImageAlt: post.data.featuredImageAlt || post.data.title,
     readingTime: post.data.readingTime || Math.ceil((post.body?.split(/\s+/).length || 0) / 200),
     authorImage: post.data.authorImage || '',

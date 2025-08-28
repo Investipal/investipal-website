@@ -70,7 +70,7 @@ function calculateReadingTime(content: string): number {
 const enhancedFrontmatter = {
   ...post.data,
   featuredImageAlt: (post.data as any).featuredImageAlt || 'Blog featured image',
-  featuredImage: post.data.featuredImage || '/images/blog/placeholder.png',
+  featuredImage: post.data.featuredImage || '/images/blog/placeholder-image.png',
   featured: (post.data as any).featured ?? false,
   readingTime: (post.data as any).readingTime || calculateReadingTime(post.body || ''),
 };
