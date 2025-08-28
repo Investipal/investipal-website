@@ -9,7 +9,8 @@ tags: ["Growth"]
 slug: "how-to-build-a-lead-generation-engine-as-a-financial-advisor"
 featuredImage: "/images/blog/how-to-build-a-lead-generation-engine-as-a-financial-advisor__hero.png"
 featuredImageAlt: "Financial advisor building lead generation engine with digital marketing strategies and client acquisition tools"
-draft: false---
+draft: false
+---
 The fastest-growing advisory firms today are using online marketing to drive a significant portion of their business. Gone are the days of relying solely on referrals. [Yet most financial advisors struggle with client acquisition and spend only 20% of their time meeting with clients!](https://www.kitces.com/blog/how-do-financial-advisors-spend-time-research-study-productivity-capacity-efficiency/#:~:text=Ultimately%2C%20the%20key%20takeaway%20from,in%20the%20actual%20process%20of) To remain competitive in financial services, you need to invest in digital growth.
 
 In this article, we cover the key pillars to consider in creating a lead generation strategy. In future articles, we will expand on each of these areas to provide greater depth and more tactical advice.

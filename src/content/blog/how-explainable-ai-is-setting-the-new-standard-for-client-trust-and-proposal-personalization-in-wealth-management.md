@@ -9,7 +9,8 @@ tags: ["General"]
 slug: "how-explainable-ai-is-setting-the-new-standard-for-client-trust-and-proposal-personalization-in-wealth-management"
 featuredImage: "/images/blog/how-explainable-ai-is-setting-the-new-standard-for-client-trust-and-proposal-personalization-in-wealth-management__hero.jpg"
 featuredImageAlt: "Explainable AI for wealth management"
-draft: false---
+draft: false
+---
 <p>Transparency, speed, and personalization are no longer just competitive advantages—they’re table stakes for financial advisors and firms who want to build trust, close clients fast, and stand out in an increasingly crowded market. Yet many advisors and RIAs still struggle with antiquated <a href="/blog/category/onboarding">onboarding</a>, disjointed proposal tools, and black-box portfolio engines that leave both clients and compliance teams skeptical. Let’s explore how explainable AI is changing this dynamic for the better—enabling client trust and true proposal personalization while allowing advisors to operate at a new level of efficiency.</p>
 
 <h2>The Daily Friction: Advisor Pain Points Holding Back Growth</h2>
