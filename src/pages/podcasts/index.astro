@@ -9,17 +9,30 @@ import CTASection from '../../components/sections/CTASection.astro';
 import CookieBanner from '../../components/ui/CookieBanner.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import StandardBadge from '../../components/ui/StandardBadge.astro';
-import { 
-  podcastEpisodes, 
-  getFeaturedPodcasts, 
-  getRecentPodcasts,
-  getAllPodcastCategories 
-} from '../../data/podcastData';
+import { getCollection } from 'astro:content';
 
-// Get episodes organized by type
-const featuredEpisodes = getFeaturedPodcasts();
-const recentEpisodes = getRecentPodcasts(12);
-const allCategories = getAllPodcastCategories();
+// Load episodes from content collection
+const entries = await getCollection('podcasts', ({ data }) => !data.draft);
+const episodes = entries
+  .map((entry) => ({
+    slug: entry.slug,
+    title: entry.data.title,
+    excerpt: entry.data.excerpt || '',
+    publishedDate: entry.data.publishedDate,
+    thumbnailImage: entry.data.coverImage || '/images/logos/generic_icon.png',
+    thumbnailAlt: entry.data.coverImageAlt || entry.data.title,
+    duration: entry.data.duration || '',
+    topics: entry.data.topics || [],
+    category: (entry.data.topics && entry.data.topics[0]) || 'General',
+    featured: entry.data.featured || false,
+  }))
+  .sort((a, b) => b.publishedDate.getTime() - a.publishedDate.getTime());
+
+const featuredEpisodes = episodes.filter((e) => e.featured);
+const effectiveFeatured = featuredEpisodes.length ? featuredEpisodes : (episodes.length ? [episodes[0]] : []);
+const recentList = episodes.filter((e) => effectiveFeatured[0] ? e.slug !== effectiveFeatured[0].slug : true);
+const recentEpisodes = episodes;
+const allCategories = [...new Set(episodes.map((e) => e.category))].sort();
 
 // Format date for display
 const formatDate = (date: Date) => {
@@ -46,7 +59,7 @@ const podcastSeriesStructuredData = {
     "logo": `${siteUrl}/images/logo.png`
   },
   "image": `${siteUrl}/images/podcast-cover.jpg`,
-  "numberOfEpisodes": podcastEpisodes.length
+  "numberOfEpisodes": episodes.length
 };
 
 // Generate breadcrumb items
@@ -110,7 +123,7 @@ const breadcrumbItems = [
               <svg class="w-5 h-5 mr-2 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
               </svg>
-              <span>{podcastEpisodes.length} Episodes</span>
+              <span>{episodes.length} Episodes</span>
             </div>
             <div class="flex items-center">
               <svg class="w-5 h-5 mr-2 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,7 +145,7 @@ const breadcrumbItems = [
         <!-- Featured Podcast + Recent Episodes Layout -->
         <div class="grid lg:grid-cols-12 gap-8">
           <!-- Featured Episode (Left Side) -->
-          {featuredEpisodes.length > 0 && featuredEpisodes[0] && (
+          {effectiveFeatured.length > 0 && effectiveFeatured[0] && (
             <div class="lg:col-span-7">
               <div class="flex items-center mb-4">
                 <StandardBadge text="Featured Episode" variant="featured" />
@@ -141,45 +154,45 @@ const breadcrumbItems = [
               <article class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
                   <!-- Featured Image -->
                   <div class="relative overflow-hidden">
-                    <a href={`/podcasts/${featuredEpisodes[0].slug}`}>
+                    <a href={`/podcasts/${effectiveFeatured[0].slug}`}>
                       <img 
-                                                src={featuredEpisodes[0].thumbnailImage} 
-                        alt={featuredEpisodes[0].thumbnailAlt}
+                        src={effectiveFeatured[0].thumbnailImage} 
+                        alt={effectiveFeatured[0].thumbnailAlt}
                         class="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </a>
                     <div class="absolute top-4 left-4">
-                      <StandardBadge text={featuredEpisodes[0].category} variant="category" />
+                      <StandardBadge text={effectiveFeatured[0].category} variant="category" />
                     </div>
-                    <div class="absolute bottom-4 right-4">
-                      <span class="inline-flex items-center bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
-                        {featuredEpisodes[0].duration}
-                      </span>
-                    </div>
+                    {effectiveFeatured[0].duration && (
+                      <div class="absolute bottom-4 right-4">
+                        <span class="inline-flex items-center bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                          {effectiveFeatured[0].duration}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 
                 <!-- Content -->
                 <div class="p-6">
                   <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-tight">
-                    <a href={`/podcasts/${featuredEpisodes[0].slug}`} class="hover:text-violet-600 transition-colors">
-                      {featuredEpisodes[0].title}
+                    <a href={`/podcasts/${effectiveFeatured[0].slug}`} class="hover:text-violet-600 transition-colors">
+                      {effectiveFeatured[0].title}
                     </a>
                   </h2>
-                  <p class="text-gray-600 leading-relaxed mb-4 line-clamp-3">
-                    {featuredEpisodes[0].guest.name}, {featuredEpisodes[0].guest.title} at {featuredEpisodes[0].guest.company}
-                  </p>
+                  <p class="text-gray-600 leading-relaxed mb-4 line-clamp-3">{effectiveFeatured[0].excerpt}</p>
                   
                   <!-- Episode Meta -->
                   <div class="flex items-center justify-between text-sm">
                     <div class="flex items-center space-x-2">
                       <div>
-                        <p class="font-medium text-gray-900">Episode {featuredEpisodes[0].episodeNumber || 'Latest'}</p>
+                        <p class="font-medium text-gray-900">Episode {effectiveFeatured[0].episodeNumber || 'Latest'}</p>
                         <p class="text-gray-500">
-                          {formatDate(featuredEpisodes[0].publishedDate)}
+                          {formatDate(effectiveFeatured[0].publishedDate)}
                         </p>
                       </div>
                     </div>
-                    <span class="text-violet-600 font-medium">{featuredEpisodes[0].duration}</span>
+                    <span class="text-violet-600 font-medium">{effectiveFeatured[0].duration}</span>
                   </div>
                 </div>
               </article>
@@ -194,7 +207,7 @@ const breadcrumbItems = [
             </div>
             
             <div class="space-y-4">
-              {recentEpisodes.slice(0, 4).map((episode) => (
+              {recentList.slice(0, 4).map((episode) => (
                 <article class="bg-white rounded-lg border border-gray-200 p-4 hover:border-violet-300 hover:shadow-md transition-all duration-200">
                   <div class="flex space-x-4">
                     <a href={`/podcasts/${episode.slug}`} class="flex-shrink-0">
@@ -215,8 +228,8 @@ const breadcrumbItems = [
                       </h4>
                       <div class="flex items-center text-xs text-gray-500 space-x-2">
                         <span>{formatDate(episode.publishedDate)}</span>
-                        <span>•</span>
-                        <span>{episode.duration}</span>
+                        {episode.duration && <span>•</span>}
+                        {episode.duration && <span>{episode.duration}</span>}
                       </div>
                     </div>
                   </div>
@@ -241,10 +254,10 @@ const breadcrumbItems = [
             data-filter="all"
             class="filter-btn px-4 py-2 text-sm font-medium bg-violet-600 text-white rounded-lg transition-all duration-200 hover:bg-violet-700"
           >
-            All Episodes ({podcastEpisodes.length})
+            All Episodes ({episodes.length})
           </button>
           {allCategories.map(category => {
-            const categoryEpisodes = podcastEpisodes.filter(episode => episode.category === category);
+            const categoryEpisodes = episodes.filter(episode => episode.category === category);
             return (
               <button 
                 data-filter={category.toLowerCase().replace(/\s+/g, '-')}
@@ -265,7 +278,7 @@ const breadcrumbItems = [
         <div class="text-center mb-8">
           <h2 class="text-2xl font-bold text-gray-900 mb-3">All Episodes</h2>
           <p class="text-gray-600">
-            {podcastEpisodes.length} episodes • Updated regularly
+            {episodes.length} episodes • Updated regularly
           </p>
         </div>
         
@@ -275,7 +288,7 @@ const breadcrumbItems = [
               <div class="relative">
                 <a href={`/podcasts/${episode.slug}`} class="episode-card-link">
                   <img 
-                                        src={episode.thumbnailImage} 
+                    src={episode.thumbnailImage} 
                     alt={episode.thumbnailAlt}
                     class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -283,11 +296,13 @@ const breadcrumbItems = [
                 <div class="absolute top-4 left-4">
                   <StandardBadge text={episode.category} variant="category" />
                 </div>
-                <div class="absolute bottom-4 right-4">
-                  <span class="inline-flex items-center bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
-                    {episode.duration}
-                  </span>
-                </div>
+                {episode.duration && (
+                  <div class="absolute bottom-4 right-4">
+                    <span class="inline-flex items-center bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                      {episode.duration}
+                    </span>
+                  </div>
+                )}
               </div>
               
               <div class="p-6">
@@ -296,9 +311,7 @@ const breadcrumbItems = [
                     {episode.title}
                   </a>
                 </h3>
-                <p class="text-gray-600 mb-4 line-clamp-2 leading-relaxed">
-                  with {episode.guest.name}, {episode.guest.title} at {episode.guest.company}
-                </p>
+                <p class="text-gray-600 mb-4 line-clamp-2 leading-relaxed">{episode.excerpt}</p>
                 
                 <div class="flex items-center justify-between text-sm">
                   <div class="flex items-center space-x-3">
@@ -315,7 +328,7 @@ const breadcrumbItems = [
         </div>
         
         <!-- Load More Button (Future Enhancement) -->
-        {podcastEpisodes.length > 12 && (
+        {episodes.length > 12 && (
           <div class="text-center mt-12">
             <button class="inline-flex items-center bg-investipal-600 hover:bg-investipal-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-500 ease-out transform hover:scale-[1.02] shadow-lg hover:shadow-xl">
               Load More Episodes

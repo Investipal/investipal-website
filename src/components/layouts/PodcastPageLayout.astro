@@ -34,14 +34,16 @@ const getSpotifyEpisodeId = (url: string) => {
   return match ? match[1] : null;
 };
 
-// Extract YouTube video ID from URL
-const getYouTubeVideoId = (url: string) => {
-  const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/);
-  return match ? match[1] : null;
+// Normalize YouTube embed src regardless of URL format
+const toYouTubeEmbedSrc = (url: string) => {
+  if (!url) return '';
+  if (/youtube\.com\/embed\//.test(url)) return url;
+  const m = url.match(/(?:v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{6,})/);
+  return m ? `https://www.youtube.com/embed/${m[1]}` : '';
 };
 
 const spotifyEpisodeId = getSpotifyEpisodeId(episode.spotifyUrl);
-const youtubeVideoId = getYouTubeVideoId(episode.youtubeUrl);
+const youtubeEmbedSrc = toYouTubeEmbedSrc(episode.youtubeUrl);
 
 // Generate structured data
 const siteUrl = Astro.site?.toString() || 'https://investipal.co';
@@ -120,15 +122,16 @@ const breadcrumbItems = [
           {episode.title}
         </h1>
 
-        <!-- Episode Description -->
+        <!-- Episode Description (fallbacks if guest not provided) -->
         <p class="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl">
-          Join us for a conversation with {episode.guest.name}, {episode.guest.title} at {episode.guest.company}.
+          {episode.guest?.name ? `Join us for a conversation with ${episode.guest.name}${episode.guest.title ? ", " + episode.guest.title : ''}${episode.guest.company ? " at " + episode.guest.company : ''}.` : episode.seoDescription}
         </p>
 
         <!-- Episode Meta Information -->
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between border-t border-b border-gray-200 py-6 mb-8">
                   <div class="flex items-center space-x-4 mb-4 sm:mb-0">
           <!-- Podcast Guest Info -->
+          {episode.guest?.name && (
           <div class="flex items-center space-x-3">
             <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -137,9 +140,12 @@ const breadcrumbItems = [
             </div>
             <div>
               <p class="font-semibold text-gray-900">Guest: {episode.guest.name}</p>
-              <p class="text-sm text-orange-600">{episode.guest.title}</p>
+              {(episode.guest.title || episode.guest.company) && (
+                <p class="text-sm text-orange-600">{episode.guest.title}{episode.guest.company ? ` at ${episode.guest.company}` : ''}</p>
+              )}
             </div>
           </div>
+          )}
         </div>
 
           <!-- Episode Details -->
@@ -189,11 +195,11 @@ const breadcrumbItems = [
           )}
           
           <!-- YouTube Player -->
-          {youtubeVideoId && (
+          {youtubeEmbedSrc && (
             <div class="w-full max-w-4xl mx-auto">
               <div class="relative aspect-video rounded-xl overflow-hidden shadow-lg">
                 <iframe 
-                  src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+                  src={youtubeEmbedSrc}
                   title={episode.title}
                   frameborder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -220,6 +226,7 @@ const breadcrumbItems = [
         </div>
 
         <!-- Guest Bio Section -->
+        {episode.guest?.name && (
         <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-8 mb-12 border border-orange-100">
           <div class="flex items-start space-x-4">
             <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
@@ -230,8 +237,10 @@ const breadcrumbItems = [
             <div>
               <h3 class="text-xl font-semibold text-gray-900 mb-2">Meet Our Podcast Guest</h3>
               <p class="text-sm text-orange-700 font-medium mb-1">{episode.guest.name}</p>
-              <p class="text-sm text-gray-600 mb-4">{episode.guest.title} at {episode.guest.company}</p>
-              <div class="text-gray-600 leading-relaxed mb-6" set:html={episode.guest.bio}></div>
+              {(episode.guest.title || episode.guest.company) && (
+                <p class="text-sm text-gray-600 mb-4">{episode.guest.title}{episode.guest.company ? ` at ${episode.guest.company}` : ''}</p>
+              )}
+              {episode.guest.bio && (<div class="text-gray-600 leading-relaxed mb-6" set:html={episode.guest.bio}></div>)}
               
               <!-- Guest Links -->
               {(episode.guest.linkedIn || episode.guest.twitter || episode.guest.website) && (
@@ -265,6 +274,7 @@ const breadcrumbItems = [
             </div>
           </div>
         </div>
+        )}
 
       </div>
     </section>

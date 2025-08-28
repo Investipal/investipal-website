@@ -16,7 +16,7 @@ const allPosts = await getCollection('blog', ({ data }) => {
 });
 
 // Filter out current post and get related posts
-const otherPosts = allPosts.filter(post => post.slug !== currentSlug);
+const otherPosts = allPosts.filter(post => post.id.replace('.md', '') !== currentSlug);
 
 // Score posts based on relevance
 const scoredPosts = otherPosts.map(post => {
@@ -86,11 +86,11 @@ const formatDate = (date: Date) => {
       <div class="related-posts-grid">
         {relatedPosts.map((post) => (
           <article class="related-post-card">
-            <a href={`/blog/${post.slug}`} class="related-post-link">
+            <a href={`/blog/${post.id.replace('.md', '')}`} class="related-post-link">
               <div class="related-post-image">
                 <img 
-                  src={post.data.featuredImage} 
-                  alt={post.data.featuredImageAlt || post.data.title}
+                  src={post.data.featuredImage || '/images/blog/placeholder.png'} 
+                  alt={(post.data as any).featuredImageAlt || post.data.title}
                   loading="lazy"
                 />
                 <div class="related-post-category">
@@ -104,11 +104,13 @@ const formatDate = (date: Date) => {
                 
                 <div class="related-post-meta">
                   <div class="related-post-author">
-                    <img 
-                      src={post.data.authorImage} 
-                      alt={post.data.author}
-                      class="related-post-author-image"
-                    />
+                    {post.data.authorImage && (
+                      <img 
+                        src={post.data.authorImage} 
+                        alt={post.data.author}
+                        class="related-post-author-image"
+                      />
+                    )}
                     <span class="related-post-author-name">{post.data.author}</span>
                   </div>
                   
@@ -116,9 +118,11 @@ const formatDate = (date: Date) => {
                     <time class="related-post-date">
                       {formatDate(post.data.publishedDate)}
                     </time>
-                    <span class="related-post-reading-time">
-                      {post.data.readingTime} min read
-                    </span>
+                    {Boolean((post.data as any).readingTime) && (
+                      <span class="related-post-reading-time">
+                        {(post.data as any).readingTime} min read
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>

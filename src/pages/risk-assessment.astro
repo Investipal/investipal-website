@@ -13,6 +13,9 @@ const title = "Free Portfolio Risk Assessment | Investipal";
 const description = "Take our free portfolio risk assessment to see if your investments align with your risk tolerance. Get personalized insights and recommendations for better portfolio management.";
 const canonical = "https://investipal.co/risk-assessment";
 
+// Embed URL (used by iframe and fallback link)
+const embedSrc = "https://app.investipal.co/embed/risk-tolerance/?API_KEY=1f80c1d7eb2a&palette%5Bbackground%5D%5Bdefault%5D=%23FFFFFF&palette%5Bprimary%5D%5Blight%5D=%23DDFDBC&palette%5Bprimary%5D%5Bmain%5D=%23754EF5&palette%5Bprimary%5D%5Bdark%5D=%2378D3CA&palette%5Bprimary%5D%5BcontrastText%5D=%23FFFFFF&palette%5Bsecondary%5D%5Blight%5D=%23DDFDBC&palette%5Bsecondary%5D%5Bmain%5D=%2378D3CA&palette%5Bsecondary%5D%5Bdark%5D=%23DDFDBC&palette%5Bsecondary%5D%5BcontrastText%5D=%23FFF&shape%5BborderRadius%5D=0px&typography%5BsimpleFont%5D=Open%20Sans";
+
 // Page Data
 const pageData = {
   hero: {
@@ -182,14 +185,14 @@ const breadcrumbItems = [
         <!-- Iframe Container -->
         <div class="max-w-4xl mx-auto">
           <div class="bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden">
-            <div class="aspect-video w-full">
-              <iframe 
-                src="https://app.investipal.co/risk-assessment"
-                class="w-full h-full border-0"
+            <div class="w-full">
+              <iframe
+                src={embedSrc}
+                width="100%"
+                height="600"
+                frameborder="0"
                 title="Investipal Risk Assessment Tool"
                 loading="lazy"
-                allow="fullscreen"
-                sandbox="allow-same-origin allow-scripts allow-forms allow-top-navigation"
               ></iframe>
             </div>
           </div>
@@ -198,7 +201,7 @@ const breadcrumbItems = [
           <div class="mt-8 text-center">
             <p class={`${designSystem.typography.bodySmall} text-gray-600`}>
               Having trouble loading the assessment? 
-              <a href="https://app.investipal.co/risk-assessment" target="_blank" rel="noopener noreferrer" class="text-investipal-600 hover:text-investipal-700 font-medium transition-colors">
+              <a href={embedSrc} target="_blank" rel="noopener noreferrer" class="text-investipal-600 hover:text-investipal-700 font-medium transition-colors">
                 Open in new window →
               </a>
             </p>
@@ -317,6 +320,12 @@ const breadcrumbItems = [
     }
   });
 </script>
+
+
+
+
+
+
 
 
 

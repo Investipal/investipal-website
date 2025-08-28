@@ -94,6 +94,38 @@ const {
     <link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+    <!-- Early sanitizer to prevent malformed href requests (e.g., inline SVG becoming href) -->
+    <script is:inline>
+      (function() {
+        function stripBadHrefLike(el) {
+          try {
+            if (!el) return;
+            var href = el.getAttribute('href');
+            if (href && (/^\s*</.test(href) || href.indexOf('<path') !== -1 || href.indexOf('<svg') !== -1)) el.removeAttribute('href');
+            var src = el.getAttribute('src');
+            if (src && (/^\s*</.test(src) || src.indexOf('<path') !== -1 || src.indexOf('<svg') !== -1)) el.removeAttribute('src');
+          } catch(_) {}
+        }
+        // Pass 1: as soon as possible
+        try {
+          var els = document.querySelectorAll('[href], [src]');
+          els.forEach(stripBadHrefLike);
+        } catch(_) {}
+        // Observe future DOM changes (HMR/hydration)
+        try {
+          var mo = new MutationObserver(function(muts){
+            muts.forEach(function(m){
+              m.addedNodes && m.addedNodes.forEach(function(n){
+                if (n && n.querySelectorAll) n.querySelectorAll('[href], [src]').forEach(stripBadHrefLike);
+                stripBadHrefLike(n);
+              });
+            });
+          });
+          mo.observe(document.documentElement, { subtree: true, childList: true });
+        } catch(_) {}
+      })();
+    </script>
   </head>
   <body class="text-zinc-800 text-base not-italic normal-nums font-normal accent-auto bg-white box-border block tracking-[normal] leading-[27.2px] list-outside list-disc min-h-full text-start indent-[0px] normal-case visible border-separate font-inter">
     <a href="#main" class="absolute text-white bg-black box-border block z-[1000] p-2 rounded-[3px] left-1.5 -top-10">Skip to main content</a>
@@ -115,12 +147,12 @@ const {
     </script>
     
     <!-- Deferred: Non-critical JavaScript -->
-    <script defer>
+    <script defer is:inline>
       // Non-critical functionality loaded after page is interactive
       document.addEventListener('DOMContentLoaded', function() {
         // Global click handler for cookie banner
         document.addEventListener('click', function(e) {
-          const target = e.target as HTMLElement;
+          const target = e.target;
           
           if (target && target.id === 'cookie-accept') {
             e.preventDefault();
@@ -141,6 +173,30 @@ const {
 
         // Additional non-critical functionality can be added here
         // Performance monitoring, analytics, etc.
+
+        // Sanitize any malformed anchor hrefs that contain inline SVG markup
+        try {
+          const anchors = document.querySelectorAll('a[href]');
+          anchors.forEach((a) => {
+            const href = a.getAttribute('href') || '';
+            if (/^\/?<\s*(path|svg)\b/i.test(href) || href.includes('<path ') || href.includes('<svg ')) {
+              a.removeAttribute('href');
+              a.addEventListener('click', (e) => e.preventDefault(), { once: true });
+            }
+          });
+          // Global guard as a fallback
+          document.addEventListener('click', (e) => {
+            const link = (e.target && (e.target.closest ? e.target.closest('a[href]') : null));
+            if (!link) return;
+            const href = link.getAttribute('href') || '';
+            if (/^\/?<\s*(path|svg)\b/i.test(href) || href.includes('<path ') || href.includes('<svg ')) {
+              e.preventDefault();
+              link.removeAttribute('href');
+            }
+          }, true);
+        } catch (err) {
+          console.warn('Anchor sanitizer failed:', err);
+        }
       });
     </script>
   </body>

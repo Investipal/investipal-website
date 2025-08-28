@@ -47,7 +47,7 @@ const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
   .filter(post => 
     post.data.category === frontmatter.category && 
-    post.id !== slug &&
+    post.id.replace('.md', '') !== slug &&
     !post.data.draft
   )
   .sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime())
@@ -132,7 +132,7 @@ const articleStructuredData = {
   description={frontmatter.seoDescription || frontmatter.excerpt}
 >
   <!-- Blog Post Structured Data -->
-  <script type="application/ld+json" set:html={JSON.stringify(articleStructuredData)} />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleStructuredData)} />
   
   <Header />
   <Breadcrumb items={breadcrumbItems} />

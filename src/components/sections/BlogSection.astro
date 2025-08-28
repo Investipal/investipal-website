@@ -6,9 +6,18 @@ import BlogCard from '../blog/BlogCard.astro';
 let recentPosts;
 try {
   const allPosts = await getCollection('blog');
-  const publishedPosts = allPosts
-    .filter(post => !post.data.draft)
-    .sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime());
+  const getTime = (p) => {
+    const d = p.data.publishedDate || p.data.updatedDate || 0;
+    const t = d instanceof Date ? d.getTime() : new Date(d || 0).getTime();
+    return isNaN(t) ? 0 : t;
+  };
+  let publishedPosts = allPosts
+    .filter((post) => !post.data.draft)
+    .sort((a, b) => getTime(b) - getTime(a));
+  // Fallback: if nothing matched (unexpected), show most recent 3 of all posts
+  if (publishedPosts.length === 0 && allPosts.length > 0) {
+    publishedPosts = [...allPosts].sort((a, b) => getTime(b) - getTime(a));
+  }
   
   // Show 3 most recent posts on homepage
   recentPosts = publishedPosts.slice(0, 3).map(post => ({

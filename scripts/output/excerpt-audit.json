@@ -1,0 +1,21 @@
+{
+  "processed": 160,
+  "updated": 3,
+  "issues": [
+    {
+      "file": "balancing-risk-and-reward-the-importance-of-asset-allocation-in-your-investment-strategy.md",
+      "old": "‍",
+      "fixed": "‍."
+    },
+    {
+      "file": "essential-financial-advisor-tools-for-any-practice.md",
+      "old": "Being a financial advisor comes with its challenges.",
+      "fixed": "Being a financial advisor comes with its."
+    },
+    {
+      "file": "optimize-your-investments-with-our-powerful-stock-portfolio-builder-tool.md",
+      "old": "Ever played \\\"The Game of Life\\\"? It's all about making the smartest life choices to win. Well, folks, the same goes for the game of.",
+      "fixed": "Ever played \"The Game of Life\"? It's all about making the smartest life choices to win. Well, folks, the same goes for the game of."
+    }
+  ]
+}
