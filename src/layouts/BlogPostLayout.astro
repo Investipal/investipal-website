@@ -268,7 +268,7 @@ const articleStructuredData = {
         {resolvedFeaturedImage && (
           <div class="mb-8">
             <img 
-              src={resolvedFeaturedImage} 
+              src={`${resolvedFeaturedImage}?v=1`} 
               alt={frontmatter.featuredImageAlt}
               class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg"
               loading="eager"

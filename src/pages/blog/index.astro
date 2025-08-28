@@ -203,7 +203,7 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
                 <div class="relative overflow-hidden">
                   <a href={`/blog/${featuredPost.id.replace('.md', '')}`}>
                     <img 
-                      src={featuredPost.data.featuredImage}
+                      src={`${featuredPost.data.featuredImage}?v=1`}
                       alt={featuredPost.data.featuredImageAlt || featuredPost.data.title}
                       class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                       onerror="this.onerror=null;this.src='/images/blog/placeholder-image.png'"
@@ -262,7 +262,7 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
                   <div class="flex space-x-4">
                     <a href={`/blog/${post.id.replace('.md', '')}`} class="flex-shrink-0">
                       <img 
-                        src={post.data.featuredImage}
+                        src={`${post.data.featuredImage}?v=1`}
                         alt={post.data.featuredImageAlt || post.data.title}
                         class="w-16 h-16 object-cover rounded-lg"
                         onerror="this.onerror=null;this.src='/images/blog/placeholder-image.png'"
