@@ -100,12 +100,17 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
   <Header />
   
   <main id="main">
-    <!-- Compact Hero Section -->
-    <section class="bg-gradient-to-br from-violet-50 via-white to-purple-50 pt-16 md:pt-20 pb-8">
+    <!-- Standard Page Hero -->
+    <section class="pt-16 md:pt-20 pb-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Compact Page Header -->
-        <div class="text-center mb-12">
-          <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div class="text-center max-w-4xl mx-auto mb-8">
+          <div class="inline-flex items-center bg-investipal-50 rounded-full px-6 py-2 mb-4">
+            <div class="bg-investipal-600 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
+              Insights
+            </div>
+            <span class="text-investipal-700 font-medium">Investipal Blog</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-investipal-600 via-investipal-700 to-investipal-800 bg-clip-text text-transparent leading-tight pb-2 mb-4">
             Latest Insights & Industry Trends
           </h1>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -176,7 +181,7 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
           <div class="lg:col-span-5">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-lg font-semibold text-gray-900">Recent Articles</h3>
-              <a href="#all-articles" class="text-sm text-violet-600 hover:text-violet-700 font-medium transition-colors">View All</a>
+              <a href="#all-articles" id="jump-to-all" class="text-sm text-violet-600 hover:text-violet-700 font-medium transition-colors">View All</a>
             </div>
             
             <div class="space-y-4">
@@ -474,7 +479,9 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
     
     // View All functionality
     if (viewAllBtn) {
-      viewAllBtn.addEventListener('click', () => {
+      viewAllBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         const remainingPosts = allOtherPostsData.slice(currentIndex);
         
         // Add all remaining posts at once
@@ -497,6 +504,15 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
             </p>
           </div>
         `;
+        document.getElementById('all-articles')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+
+    const jumpToAll = document.getElementById('jump-to-all');
+    if (jumpToAll) {
+      jumpToAll.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('all-articles')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     }
     

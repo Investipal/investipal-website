@@ -25,7 +25,7 @@ featuredImage: "/images/blog/streamlining-digital-client-onboarding-best-practic
 <p>Efficiency and compliance can co-exist, but only if we rethink the onboarding journey from the ground up—starting with automation and integration.</p>
 
 <h3>1. Frictionless Data Intake with AI-Powered Statement Scanning</h3>
-<ul><li>Investipal’s AI-powered brokerage <a href="/features/automated-statement-scanner">statement scanner</a> instantly ingests PDFs, images, even handwritten notes, parses holdings, and creates a structured portfolio - no manual entry needed.</li><li>Upload statements in any format - our OCR &amp; AI extract every position, cost basis, and asset detail with precision.</li><li>Processed data flows directly into your proposal engine and compliance tools, saving 3–5 hours per account and avoiding costly errors.</li></ul>
+<ul><li>Investipal’s AI-powered brokerage <a href="/features/automated-statement-scanner">statement scanner</a> instantly ingests PDFs, images, even handwritten notes, parses holdings, and creates a structured portfolio - no manual entry needed.</li><li>Upload statements in any format - our OCR & AI extract every position, cost basis, and asset detail with precision.</li><li>Processed data flows directly into your proposal engine and compliance tools, saving 3–5 hours per account and avoiding costly errors.</li></ul>
 <p>This leap forward means advisors start every engagement with clean, complete data that populates every downstream workflow.</p>
 
 <img src="/images/blog/streamlining-digital-client-onboarding-best-practices-for-risk-assessment-and-reg-bi-compliance__68626eae091a13a9508c4fee_pexels-photo-8413188.jpeg" alt="Patient signing healthcare agreement in doctor's office, focus on hands and document exchange." width="50%" height="auto" style="max-width: 90vw; border-radius: 10px;" />
@@ -33,7 +33,7 @@ featuredImage: "/images/blog/streamlining-digital-client-onboarding-best-practic
 <h3>2. Integrated, Real-Time Risk Assessment</h3>
 <ul><li>Deploy a robust risk tolerance questionnaire (RTQ) tailored to assess each client across capacity, behavioral biases, and current investment risk—not just a generic set of questions.</li><li>Digitally embedded RTQs reduce incomplete submissions (NIGOs) and accelerate the risk profiling stage.</li><li>With Investipal, results map directly to proposal and portfolio models, promoting compliance and faster client decision-making.</li></ul>
 
-<h3>3. Seamless Compliance: Reg BI &amp; IPS Automation</h3>
+<h3>3. Seamless Compliance: Reg BI & IPS Automation</h3>
 <ul><li>Instantly generate household and account-level Investment Policy Statements (IPS) and Regulation Best Interest (Reg BI) documentation as part of the onboarding workflow.</li><li>All client objectives, risk scores, disclosures, and investment strategy recommendations are tracked and timestamped for auditability.</li><li>No more frantic spreadsheet updates or copy-pasting into Word templates. The compliance trail is built automatically as you onboard each client.</li></ul>
 
 <h3>4. Personalized Portfolio Construction—at Scale</h3>

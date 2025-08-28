@@ -23,7 +23,7 @@ draft: false
 <p>The landscape is crowded, but not all solutions deliver what modern advisory teams need. Here’s what to look for (and why it matters):</p>
 
 <h3>1. <strong>Automated Data Intake and Portfolio Extraction</strong></h3>
-<ul><li>Process any account statement—PDFs, images, even handwritten notes—using advanced OCR &amp; AI. </li><li>Instantly extract every holding, asset type, transaction, and cost basis, building a structured portfolio in seconds.</li><li>Avoid manual entry and the typical 3–5 hours per account wasted on data gathering.</li></ul>
+<ul><li>Process any account statement—PDFs, images, even handwritten notes—using advanced OCR & AI. </li><li>Instantly extract every holding, asset type, transaction, and cost basis, building a structured portfolio in seconds.</li><li>Avoid manual entry and the typical 3–5 hours per account wasted on data gathering.</li></ul>
 <p>This is foundational—for example, <a href="/">Investipal</a> automates statement scanning for all file types and eliminates errors from re-keying, ensuring every proposal starts with a rock-solid data foundation.</p>
 
 <h3>2. <strong>Personalized Proposal Creation at Scale</strong></h3>
@@ -39,13 +39,13 @@ draft: false
 <h3>5. <strong>Compliance Documentation—Automated</strong></h3>
 <ul><li>Auto-generate IPS and Reg BI statements from the same proposal workflow—no more prepping separate templates by hand.</li><li>Monitor portfolio drift proactively, ensuring ongoing alignment with stated mandates.</li><li>Cut weeks of workflow into minutes, while reducing costly NIGOs (not-in-good-order documents) and regulatory risk.</li></ul>
 
-<h3>6. <strong>One-Click Approvals &amp; E-Signature</strong></h3>
+<h3>6. <strong>One-Click Approvals & E-Signature</strong></h3>
 <ul><li>Deliver ready-to-sign, compliance-ready digital proposals to prospects for quick conversion.</li><li>Track engagement (who opened, what was read), route for e-signature, and export directly into your CRM or document management system.</li></ul>
 
 <h3>7. <strong>Audit-Ready Transparency</strong></h3>
 <ul><li>Every AI-generated proposal, recommendation, and compliance document should have an audit trail—with clear rationale, calculation logic, and data provenance for every decision.</li><li>Full transparency ensures you (and regulators) can always explain and defend your process.</li></ul>
 
-<h3>8. <strong>End-to-End Security &amp; Data Privacy</strong></h3>
+<h3>8. <strong>End-to-End Security & Data Privacy</strong></h3>
 <ul><li>SOC2 Type II compliance is crucial—your client data must be fully encrypted, never exposed, and not used for AI re-training.</li><li>Integration with your tech stack (CRM, data warehouse, productivity tools) should never compromise compliance or security standards.</li></ul>
 
 <h2>How to Evaluate AI Proposal Solutions: A Practical Guide</h2>

@@ -20,7 +20,7 @@ featuredImage: "/images/blog/how-to-automate-sustainable-investing-esg-screening
 
 <h2>Step 1: Automated ESG Screening at Data Intake</h2>
 <p>Sustainable investing starts with knowing what’s currently in a prospect or client’s portfolio—down to every holding and its ESG risks. Investipal automates this foundational, previously tedious step.</p>
-<ul><li>Our <strong>AI-powered brokerage <a href="/features/automated-statement-scanner">statement scanner</a></strong> instantly ingests PDFs, images, even handwritten notes, parses holdings, and creates a structured portfolio—no manual entry needed.</li><li>Upload statements in any format—OCR &amp; AI extract every position, cost basis, and asset detail with precision.</li><li>Extracted data flows immediately into your ESG screening and proposal engine, letting you skip hours of manual input.</li></ul>
+<ul><li>Our <strong>AI-powered brokerage <a href="/features/automated-statement-scanner">statement scanner</a></strong> instantly ingests PDFs, images, even handwritten notes, parses holdings, and creates a structured portfolio—no manual entry needed.</li><li>Upload statements in any format—OCR & AI extract every position, cost basis, and asset detail with precision.</li><li>Extracted data flows immediately into your ESG screening and proposal engine, letting you skip hours of manual input.</li></ul>
 
 <img src="/images/blog/how-to-automate-sustainable-investing-esg-screening-ai-portfolio-optimization-compliance-reporting__687e22f3a147808ecdfd8f2d_pexels-photo-6771740.jpeg" alt="A person checks cryptocurrency values on a smartphone with a laptop and Bitcoins nearby." width="50%" height="auto" style="max-width: 90vw; border-radius: 10px;"/>
 

@@ -46,7 +46,7 @@ draft: "false"
 <h3>Fast, Frictionless Onboarding</h3>
 <ul>
 <li>Investipal’s <a href="/">AI-powered brokerage statement scanner</a> instantly ingests PDFs, images, even handwritten notes, parses holdings, and creates a structured portfolio—no manual entry needed.</li>
-<li>Upload statements in any format—our OCR &amp; AI extract every position, cost basis, and asset detail with precision.</li>
+<li>Upload statements in any format—our OCR & AI extract every position, cost basis, and asset detail with precision.</li>
 <li>Processed data flows directly into your proposal engine and compliance tools, saving 3–5 hours per account and avoiding costly errors.</li>
 </ul>
 
