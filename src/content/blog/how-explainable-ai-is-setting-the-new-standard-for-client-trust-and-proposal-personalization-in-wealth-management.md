@@ -47,3 +47,4 @@ draft: false
 <p>If your firm is ready to move past the bottlenecks and limitations of black-box tools, we’d love to show you what transparent, explainable AI-powered wealth management looks like. <a href="/">Book a demo with Investipal</a> to see how you can redefine onboarding, proposal generation, portfolio management, and compliance—delivering unmatched clarity for both your clients and your team. Automation may be table stakes, but explainability is now the new standard for trust and growth.</p>
 
 
+
