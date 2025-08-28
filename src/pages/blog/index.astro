@@ -82,12 +82,7 @@ function resolveFeaturedImage(post: any): string {
     return n.startsWith(`${normSlug}__`) || n.startsWith(`${normSlug}.`);
   });
   if (startsMatch) return `/images/blog/${startsMatch}`;
-  // 2) Try thumbnails folder
-  const thumbMatch = thumbImageFiles.find((f) => {
-    const n = normalize(f);
-    return n.startsWith(`${normSlug}__`) || n.startsWith(`${normSlug}.`);
-  });
-  if (thumbMatch) return `/images/thumbnails/${thumbMatch}`;
+  // 2) Removed thumbnails fallback to avoid blurry/duplicate images
   // 3) Fuzzy overlap score
   const slugTokens = normSlug.split('-').filter(Boolean);
   let best: {file?: string; score: number} = { score: 0 };
