@@ -50,7 +50,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
     segmentName: 'Financial Planners',
     title: 'AI-Powered Efficiency for Financial Planners',
     subtitle: 'Bridge the gap between financial planning and portfolio management with automated portfolio construction, real-time analytics, and compliance-ready proposals.',
-    heroImage: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/679d01fa9b7abc3b91d1b768_Untitled%20design%20(7).png',
+    heroImage: '/images/external/679d01fa9b7abc3b91d1b768_untitled%20design%20(7).png',
     heroImageAlt: 'Financial Planning Platform Dashboard',
 
     // Main intro section
@@ -69,7 +69,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
           { text: '<strong>Multi-factor optimization</strong> – Align portfolios with risk tolerance, income needs, and long-term goals' },
           { text: '<strong>Public and alternative assets</strong> – Seamlessly allocate across equities, ETFs, mutual funds, and alternatives' }
         ],
-        image: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/6670bcd46fdbe25cd2633108_Group%2018.svg',
+        image: '/images/external/6670bcd46fdbe25cd2633108_group%2018.svg',
         imageAlt: 'Portfolio construction dashboard',
         imagePosition: 'right'
       },
@@ -83,7 +83,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
           { text: '<strong>AI-powered statement scanning</strong> – Extract holdings from PDFs and integrate seamlessly' },
           { text: '<strong>Advanced portfolio analytics</strong> – Identify risks, gaps, tax impacts and better allocation strategies' }
         ],
-        image: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/6670c23549ff685ca6551088_Group%2020.svg',
+        image: '/images/external/6670c23549ff685ca6551088_group%2020.svg',
         imageAlt: 'Analytics dashboard showing portfolio analysis',
         imagePosition: 'left'
       },
@@ -97,7 +97,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
           { text: '<strong>Automated compliance tools</strong> – IPS, Reg BI, KYP, and real-time monitoring' },
           { text: '<strong>Client-friendly reports & disclosures</strong> – Simplify complex financial strategies for better decision-making' }
         ],
-        image: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/6785783f7aad463ffadbb7be_image.png',
+        image: '/images/external/6785783f7aad463ffadbb7be_image.png',
         imageAlt: 'Compliance and proposal generation dashboard',
         imagePosition: 'right'
       }
@@ -120,7 +120,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
     segmentName: 'Wealth Managers',
     title: 'AI-Powered Growth for Wealth Managers',
     subtitle: 'Scale your practice with AI automation that streamlines every step of your sales and portfolio process.',
-    heroImage: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/679d01fa9b7abc3b91d1b768_Untitled%20design%20(7).png',
+    heroImage: '/images/external/679d01fa9b7abc3b91d1b768_untitled%20design%20(7).png',
     heroImageAlt: 'Wealth Management Platform Dashboard',
 
     // Main intro section
@@ -139,7 +139,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
           { text: '<strong>Robust backtesting and risk monitoring</strong> to uncover hidden exposures' },
           { text: '<strong>AI-driven portfolio construction</strong>—customized for each client, including alternative assets.' }
         ],
-        image: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/66708c515646ac37490a9be8_Personalized%20portfolio%20construction.svg',
+        image: '/images/external/66708c515646ac37490a9be8_personalized%20portfolio%20construction.svg',
         imageAlt: 'Personalized portfolio construction dashboard',
         imagePosition: 'right'
       },
@@ -153,7 +153,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
           { text: '<strong>AI-driven portfolio analysis</strong> – Identify gaps, risks, and opportunities within client portfolios, compare to your model(s), and model future returns' },
           { text: '<strong>Automated proposals</strong> – Convert prospects into clients faster with customized, high-impact proposals' }
         ],
-        image: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/6670abaa94d486018a8cab6c_Group%204%20(3).svg',
+        image: '/images/external/6670abaa94d486018a8cab6c_group%204%20(3).svg',
         imageAlt: 'Automated sales process dashboard',
         imagePosition: 'left'
       },
@@ -167,7 +167,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
           { text: '<strong>AI-driven KYP workflows</strong> for compliance & due diligence' },
           { text: '<strong>Continuous monitoring & automated reporting</strong>' }
         ],
-        image: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/66708f9d65ce0074b7190ea0_AI%20Compliance%20Mgmt%20(2).svg',
+        image: '/images/external/66708f9d65ce0074b7190ea0_ai%20compliance%20mgmt%20(2).svg',
         imageAlt: 'AI compliance management dashboard',
         imagePosition: 'right'
       }
@@ -190,7 +190,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
     segmentName: 'Wealth Firms',
     title: 'An Enterprise-Ready Solution for Modern Wealth Firms',
     subtitle: 'Eliminate inefficiencies, increase advisor productivity, and drive AUM growth through automation, data intelligence, and compliance-ready workflows.',
-    heroImage: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/679d01fa9b7abc3b91d1b768_Untitled%20design%20(7).png',
+    heroImage: '/images/external/679d01fa9b7abc3b91d1b768_untitled%20design%20(7).png',
     heroImageAlt: 'Enterprise Wealth Management Platform Dashboard',
 
     // Main intro section
@@ -209,7 +209,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
           { text: '<strong>Instant analysis</strong> – Automated portfolio analysis, comparisons and Monte Carlo modelling' },
           { text: '<strong>One-click proposal generation</strong> – Ensure every advisor delivers high-converting, compliance-ready recommendations' }
         ],
-        image: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/6670abaa94d486018a8cab6c_Group%204%20(3).svg',
+        image: '/images/external/6670abaa94d486018a8cab6c_group%204%20(3).svg',
         imageAlt: 'Sales automation dashboard',
         imagePosition: 'right'
       },
@@ -223,7 +223,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
           { text: '<strong>AI-powered asset allocation</strong> – Automatically construct portfolios across equities, ETFs, mutual funds, and alternatives' },
           { text: '<strong>Automated rebalancing & risk monitoring</strong> – Maintain alignment with client goals and market conditions' }
         ],
-        image: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/6670b5d811b10734a1372edc_2024%2C%2014_50_09%20GMT-4.svg',
+        image: '/images/external/6670b5d811b10734a1372edc_2024%2c%2014_50_09%20gmt-4.svg',
         imageAlt: 'Portfolio construction at scale dashboard',
         imagePosition: 'left'
       },
@@ -237,7 +237,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
           { text: '<strong>Firm-wide KYP & portfolio monitoring</strong> – Ensure advisors meet fiduciary obligations at scale' },
           { text: '<strong>Audit-ready data tracking & reporting</strong> – Reduce manual oversight and mitigate compliance risk' }
         ],
-        image: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/667092e94a00c3fc66619dfc_AI%20Compliance%20Mgmt%20(4).svg',
+        image: '/images/external/667092e94a00c3fc66619dfc_ai%20compliance%20mgmt%20(4).svg',
         imageAlt: 'Enterprise compliance management dashboard',
         imagePosition: 'right'
       }
@@ -260,7 +260,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
     segmentName: 'Insurance',
     title: 'AI-Powered Efficiency for Insurance Advisors',
     subtitle: 'Save time, eliminate manual calculations, and present clear, data-driven insights that help clients make confident decisions.',
-    heroImage: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/679d01fa9b7abc3b91d1b768_Untitled%20design%20(7).png',
+    heroImage: '/images/external/679d01fa9b7abc3b91d1b768_untitled%20design%20(7).png',
     heroImageAlt: 'Insurance Planning Platform Dashboard',
 
     // Main intro section
@@ -279,7 +279,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
           { text: '<strong>Advanced growth forecasting</strong> – Compare multiple scenarios for better decision-making' },
           { text: '<strong>Instant proposal generation</strong> – Deliver personalized recommendations in minutes' }
         ],
-        image: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/679d4c8a1904a711c70ae837_Untitled%20design%20(11).png',
+        image: '/images/external/679d4c8a1904a711c70ae837_untitled%20design%20(11).png',
         imageAlt: 'IUL and annuity modeling dashboard',
         imagePosition: 'right'
       },
@@ -293,7 +293,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
           { text: '<strong>Visualized growth projections</strong>– Help clients understand long-term impact' },
           { text: '<strong>Side-by-side policy comparisons</strong> – Present options clearly and transparently' }
         ],
-        image: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/6785969aab7035ae2acd1bf0_Untitled%20design%20(2).png',
+        image: '/images/external/6785969aab7035ae2acd1bf0_untitled%20design%20(2).png',
         imageAlt: 'Insurance sales insights dashboard',
         imagePosition: 'left'
       },
@@ -307,7 +307,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
           { text: '<strong>Clear, client-friendly visuals</strong>– Simplify complex insurance and annuity structures' },
           { text: '<strong>Automated compliance documentation</strong> – Ensure all proposals meet regulatory requirements' }
         ],
-        image: 'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/6785783f7aad463ffadbb7be_image.png',
+        image: '/images/external/6785783f7aad463ffadbb7be_image.png',
         imageAlt: 'Insurance proposal generation dashboard',
         imagePosition: 'right'
       }
