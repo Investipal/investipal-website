@@ -54,7 +54,7 @@ Step
 
 [Investipal’s <a href="/features/automated-statement-scanner">OCR</a> technology](/blog-posts/how-to-leverage-<a href="/features/automated-statement-scanner">ocr</a>-technology-for-faster-client-account-statement-analysis) lets you scan brokerage statements and instantly pull holdings and balances into the platform, cutting manual data entry to zero.
 
-![Image](/images/blog/placeholder.png)%20(10).png)
+![Proposal builder screenshot](/images/blog/placeholder-image.png)
 
 ### Step 2: 
 
@@ -62,7 +62,7 @@ Define Client Goals & Risk Profile
 
 Within Investipal, quickly enter or update the client’s financial objectives and risk tolerance. The data is neatly organized for easy reference or future edits.
 
-![Image](/images/blog/placeholder.png)%20(11).png)
+![Define goals screenshot](/images/blog/placeholder-image.png)
 
 ### Step 3: 
 
@@ -70,7 +70,7 @@ Rapid Portfolio Comparison
 
 Cycle through your model portfolios in seconds—no more spreadsheets. Investipal runs quick comparative analyses, showing how each model aligns with your client’s unique needs.
 
-![Image](/images/blog/placeholder.png).png)
+![Model comparison screenshot](/images/blog/placeholder-image.png)
 
 ### Step 4: 
 
@@ -79,7 +79,7 @@ Automated Performance & Tax Transition Analysis
 - **Performance Projections**: In one click, run simulations to illustrate potential returns and downside risks.
 -   **Tax Impact**: Offer transparent insight on how portfolio changes may affect capital gains or other tax considerations.
 
-![Image](/images/blog/placeholder.png).png)
+![Performance projections screenshot](/images/blog/placeholder-image.png)
 
 ### Step 5: 
 
@@ -87,7 +87,7 @@ Generate Personalized Commentary with AI
 
 Rather than writing custom text, Investipal’s AI-powered commentary tool creates clear, client-friendly explanations specific to each scenario, saving you even more time.
 
-![Image](/images/blog/placeholder.png).png)
+![AI commentary screenshot](/images/blog/placeholder-image.png)
 
 ### Step 6: 
 
