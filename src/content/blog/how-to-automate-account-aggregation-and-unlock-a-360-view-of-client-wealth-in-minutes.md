@@ -9,7 +9,8 @@ tags: []
 slug: "how-to-automate-account-aggregation-and-unlock-a-360-view-of-client-wealth-in-minutes"
 featuredImage: "/images/blog/how-to-automate-account-aggregation-and-unlock-a-360-view-of-client-wealth-in-minutes__hero.png"
 featuredImageAlt: "How to Automate Account Aggregation and Unlock a 360° View of Client Wealth in Minutes"
-draft: false---
+draft: false
+---
 <p>Fragmented client data stands between most advisory firms and their growth goals. Too many teams still spend hours sorting through PDF statements, collecting held-away account balances by email, and rekeying spreadsheets—wasting valuable time and introducing risk at every step. It doesn’t have to be this way. With modern automation, you can unlock a true 360° view of client wealth in minutes, not weeks. Here’s how leading <a href="/segments/wealth-managers">wealth managers</a> are making it happen—and how you can, too, with Investipal.</p>
 
 <h2>The Operational Cost of Manual Account Aggregation</h2>

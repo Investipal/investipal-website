@@ -80,7 +80,7 @@ const imageHeight = sizeClasses[size];
     <div class="relative overflow-hidden">
       <a href={href} class="card-link">
         <img 
-          src={image} 
+          src={`${image}?v=1`} 
           alt={imageAlt}
           class={`w-full ${imageHeight} object-cover group-hover:scale-105 transition-transform duration-300`}
           loading="lazy"

@@ -9,7 +9,8 @@ tags: ["Proposals"]
 slug: "how-to-use-ai-for-personalized-investment-proposal-generation-a-practical-guide"
 featuredImage: "/images/blog/how-to-use-ai-for-personalized-investment-proposal-generation-a-practical-guide__hero.png"
 featuredImageAlt: "AI-powered investment proposal generation workflow showing automated data analysis and personalized portfolio recommendations"
-draft: false---
+draft: false
+---
 Personalized <a href="/blog/tag/investment-proposals">investment proposals</a> are the new standard for advisors who want to convert prospects, deepen client trust, and scale their business efficiently. Yet, most firms are still held back by manual data entry, fragmented workflows, and slow compliance processes that frustrate clients and leave AUM on the table. In this practical guide, we’ll break down how top-performing firms leverage <a href="/blog/tag/ai">AI</a>-powered automation to deliver tailored, compliant proposals—at scale and without the administrative drag.
 
 ## Why <a href="/blog/tag/ai">AI</a>-Driven Proposal Generation Is a Gamechanger for Advisors

@@ -9,7 +9,8 @@ tags: ["Sales", "Proposals"]
 slug: "how-to-create-professional-investment-proposals-in-under-10-minutes"
 featuredImage: "/images/blog/how-to-create-professional-investment-proposals-in-under-10-minutes__hero.png"
 featuredImageAlt: "How to create professional investment proposals in under 10 minutes"
-draft: false---
+draft: false
+---
 Most financial advisors know how labor-intensive creating professional <a href="/blog/tag/investment-proposals">investment proposals</a> can be. Gathering client data, writing detailed commentary, calculating performance scenarios, and ensuring compliance typically takes hours—sometimes days. But with modern **automated proposal generation **tools, you can produce a high-quality, compliance-ready proposal in minutes, giving you more time for strategic client interactions.
 
 ## Why 

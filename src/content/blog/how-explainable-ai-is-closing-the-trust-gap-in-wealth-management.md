@@ -9,7 +9,8 @@ tags: []
 slug: "how-explainable-ai-is-closing-the-trust-gap-in-wealth-management"
 featuredImage: "/images/blog/how-explainable-ai-is-closing-the-trust-gap-in-wealth-management__hero.jpg"
 featuredImageAlt: "Business professional analyzing data on laptop showing AI-driven wealth management transparency and trust"
-draft: false---
+draft: false
+---
 <p>The rise of <a href="/blog/tag/ai">AI</a> in wealth management is reshaping how advisors attract, retain, and serve clients—but it’s also surfaced a core challenge: trust. As client-facing automation and advanced portfolio tools become normalized, both advisors and end clients want not just fast answers, but clear, explainable ones. If your technology can’t be interrogated—or you can’t show your exact reasoning, step-by-step—confidence breaks down quickly, especially as portfolios grow more complex and regulations tighten.</p>
 
 <h2>Why Trust Breaks Down with Traditional AI</h2>
