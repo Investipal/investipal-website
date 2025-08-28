@@ -89,7 +89,7 @@ const formatDate = (date: Date) => {
             <a href={`/blog/${post.id.replace('.md', '')}`} class="related-post-link">
               <div class="related-post-image">
                 <img 
-                  src={post.data.featuredImage || '/images/blog/placeholder-image.png'} 
+                  src={`${post.data.featuredImage || '/images/blog/placeholder-image.png'}?v=1`} 
                   alt={(post.data as any).featuredImageAlt || post.data.title}
                   loading="lazy"
                   decoding="async"
