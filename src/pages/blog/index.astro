@@ -64,6 +64,16 @@ const normalize = (s: string) => s.toLowerCase().replace(/%20|\s+/g, '-').replac
 
 function resolveFeaturedImage(post: any): string {
   if (post?.data?.featuredImage) return post.data.featuredImage;
+  // 0) Use first in-body image from markdown if present and exists
+  try {
+    const body: string = String(post?.body || '');
+    const mdMatch = body.match(/!\[[^\]]*\]\((\/images\/[\w\-\/%\.]+)\)/i);
+    if (mdMatch && mdMatch[1]) {
+      const rel = mdMatch[1];
+      const abs = new URL(`../../public${rel}`, import.meta.url);
+      if (fs.existsSync(abs)) return rel;
+    }
+  } catch {}
   const slug = String(post.id || '').replace(/\.md$/i, '');
   const normSlug = normalize(slug);
   // 1) Strong prefix match: slug__* or slug.* in blog images
