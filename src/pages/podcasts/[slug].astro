@@ -1,0 +1,62 @@
+---
+// Dynamic Podcast Episode Page
+// Now sourced from the `podcasts` content collection
+
+import PodcastPageLayout from '../../components/layouts/PodcastPageLayout.astro';
+import { getCollection } from 'astro:content';
+
+function toEpisode(entry) {
+  const d = entry.data;
+  return {
+    slug: entry.slug,
+    title: d.title,
+    episodeNumber: d.episodeNumber,
+    publishedDate: d.publishedDate,
+    description: entry.body || d.excerpt || '',
+    duration: d.duration || '',
+    spotifyUrl: d.spotifyUrl || '',
+    youtubeUrl: d.youtubeUrl || '',
+    applePodcastsUrl: '',
+    thumbnailImage: d.coverImage || '/images/logos/generic_icon.png',
+    thumbnailAlt: d.coverImageAlt || d.title,
+    seoDescription: d.seoDescription || d.excerpt || d.title,
+    keywords: d.keywords || [],
+    topics: d.topics || [],
+    category: (d.topics && d.topics[0]) || 'General',
+    featured: d.featured || false,
+    guest: {
+      name: d.guestName || '',
+      title: d.guestTitle || '',
+      company: d.guestCompany || '',
+      bio: d.guestBio || '',
+      linkedIn: d.guestLinkedIn || '',
+      twitter: d.guestTwitter || '',
+      website: d.guestWebsite || ''
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  const episodes = await getCollection('podcasts', ({ data }) => !data.draft);
+  return episodes.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+if (!entry) return Astro.redirect('/404');
+
+const all = await getCollection('podcasts', ({ data }) => !data.draft);
+const episode = toEpisode(entry);
+
+// Related by shared first topic or category, newest first
+const relatedEpisodes = all
+  .filter((e) => e.slug !== entry.slug)
+  .filter((e) => {
+    const t = e.data.topics || [];
+    return episode.topics.some((x) => t.includes(x));
+  })
+  .sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime())
+  .slice(0, 3)
+  .map(toEpisode);
+---
+
+<PodcastPageLayout episode={episode} relatedEpisodes={relatedEpisodes} />

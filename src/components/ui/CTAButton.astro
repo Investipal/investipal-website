@@ -1,0 +1,52 @@
+---
+export interface Props {
+  href: string;
+  text: string;
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  disabled?: boolean;
+  class?: string;
+}
+
+const { 
+  href, 
+  text, 
+  variant = 'primary', 
+  size = 'md', 
+  disabled = false, 
+  class: className = '' 
+} = Astro.props;
+
+// Variant styles
+const variants = {
+  primary: 'bg-investipal-600 hover:bg-investipal-700 text-white border-investipal-600',
+  secondary: 'bg-investipal-100 hover:bg-investipal-200 text-investipal-700 border-investipal-100',
+  outline: 'border border-investipal-600 text-investipal-600 hover:bg-investipal-600 hover:text-white bg-transparent',
+  ghost: 'text-investipal-600 hover:bg-investipal-100 bg-transparent border-transparent'
+};
+
+// Size styles
+const sizes = {
+  sm: 'px-4 py-2 text-sm',
+  md: 'px-6 py-3 text-base',
+  lg: 'px-8 py-4 text-lg',
+  xl: 'px-10 py-5 text-xl'
+};
+
+// Base styles
+const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-investipal-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+
+// Combine styles
+const buttonClass = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
+---
+
+<a 
+  href={href}
+  class={buttonClass}
+  aria-disabled={disabled}
+  {...(disabled && { 'aria-disabled': 'true', 'tabindex': '-1' })}
+>
+  {text}
+</a>
+
+

@@ -1,0 +1,218 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeroSection from '../components/sections/PageHeroSection.astro';
+import CTASection from '../components/sections/CTASection.astro';
+import StandardButton from '../components/ui/StandardButton.astro';
+import StandardCard from '../components/ui/StandardCard.astro';
+import StandardIcon from '../components/ui/StandardIcon.astro';
+import StandardBadge from '../components/ui/StandardBadge.astro';
+import CookieBanner from '../components/ui/CookieBanner.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import { designSystem } from '../data/designSystem';
+
+// SEO Metadata
+const title = "Our Manifesto | Investipal";
+const description = "Read Investipal's manifesto on the future of wealth management. Learn how we're building AI to enhance human connection and create more personalized financial advisory relationships.";
+const canonical = "https://investipal.co/manifesto";
+
+// Page Data
+const pageData = {
+  hero: {
+    title: "Our Manifesto",
+    subtitle: "Discover our vision for the future of wealth management, where technology enhances human connection rather than replacing it.",
+    audienceText: "Join Us"
+  },
+  mission: {
+    title: "Helping Advisors Build More Personal Relationships",
+    content: `The rise of technology has dramatically transformed how we interact with one another. Conversations have shifted to be virtual, and tools that facilitate new connections have accelerated the speed of how we interact. However, this shift has often come at the expense of the quality of those interactions.
+
+Investment advisors, at their core, are financial therapists. People's relationships with their finances are deeply personal, and for good reason. Advisors must earn the trust of new clients and provide a service that makes them feel genuinely cared for. In a world increasingly dominated by digital interactions, this is no small feat.
+
+Consider your inbox today, likely flooded with generic cold emails pushing the latest software or service. To truly connect with customers and cut through the noise, firms are starting to reintroduce the human element back into relationship-building and moving away from casting a wide net to capture attention.
+
+Society as a whole is beginning to recognize the detrimental effects of our retreat from in-person interactions. The rise in depression and feelings of isolation can be directly linked to our increasing reliance on digital communication. It's becoming evident that technology must evolve to support and enhance, rather than replace, human interaction.
+
+In the investment advisory space, this shift is already underway. Advisors are no longer just looking for the latest technology for its own sake. Instead, they're looking for tools that focus more on nurturing and strengthening client relationships. This is a natural starting point due to the intimate nature of finances, but it's a precursor to a broader societal transformation.
+
+At Investipal, we've been evolving to support this shift. We've been building AI to create highly personalized investment portfolios, moving away from the one-size-fits-all approach to portfolio recommendations. And, by automating key back-office tasks, freeing up advisors so they can dedicate more time to their client interactions.
+
+The coming 5-10 years will be a technological progression that may feel like a regression to a time before cell phones. The value of genuine human connection will become increasingly important, driving a societal shift towards more personalized and meaningful interactions.
+
+The role of technology will be to support and augment this transition, enabling us all to reconnect with one another on a deeper level.
+
+Investipal is committed to leading this change, ensuring that as we innovate, we prioritize the human element in financial advisory.
+
+Join us in evolving wealth management, where technology and human connection coexist harmoniously to provide the best possible service for clients.`
+  },
+  principles: {
+    title: "Guiding Principles for Excellence",
+    subtitle: "At Investipal, our values serve as the compass that directs our actions, decisions, and interactions. These guiding principles are the foundation of our culture and define who we are as a company.",
+    items: [
+      {
+        title: "Innovation",
+        description: "We deliver innovative solutions for every type of investor, while always prioritizing simplicity and knowledge at the centre of everything we do.",
+        icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+        </svg>`
+      },
+      {
+        title: "Collaboration", 
+        description: "We work with internal and external teams, as well as with our users, to build tools that people love and can benefit from, regardless of demographic.",
+        icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+        </svg>`
+      },
+      {
+        title: "Accessibility",
+        description: "Our products are built with the everyday investor in mind, meeting accessibility requirements for every ability and skill level.",
+        icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg>`
+      },
+      {
+        title: "Continuous Learning",
+        description: "We encourage our team to stay curious, embrace new challenges, and ongoing personal development.",
+        icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+        </svg>`
+      }
+    ]
+  }
+};
+
+// Generate structured data for the Manifesto page
+const siteUrl = Astro.site?.toString() || 'https://investipal.co';
+const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
+
+const manifestoStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage", 
+  "name": "Investipal Manifesto",
+  "description": description,
+  "url": currentUrl,
+  "mainEntity": {
+    "@type": "CreativeWork",
+    "name": "Our Manifesto: The Future of Wealth Management",
+    "description": pageData.mission.content.substring(0, 200) + "...",
+    "author": {
+      "@type": "Organization",
+      "name": "Investipal",
+      "url": siteUrl
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Wealth Management Technology"
+      },
+      {
+        "@type": "Thing", 
+        "name": "Human-AI Collaboration"
+      },
+      {
+        "@type": "Thing",
+        "name": "Financial Advisory Innovation"
+      }
+    ],
+    "keywords": "manifesto, wealth management, AI technology, human connection, financial advisors, personalization"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": siteUrl
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "Our Manifesto"
+      }
+    ]
+  }
+};
+
+// Generate breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Our Manifesto' }
+];
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  <!-- Manifesto Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(manifestoStructuredData)} />
+  
+  <Header />
+  <Breadcrumb items={breadcrumbItems} />
+  
+  <main id="main">
+    
+    <!-- Hero Section - Using Standardized PageHeroSection -->
+    <PageHeroSection 
+      audienceText={pageData.hero.audienceText}
+      title={pageData.hero.title}
+      subtitle={pageData.hero.subtitle}
+    />
+
+    <!-- Mission Statement Section -->
+    <section class="bg-white py-20">
+      <div class={designSystem.spacing.container}>
+        <div class="max-w-4xl mx-auto space-y-8">
+          <div class="text-center">
+            <h2 class={designSystem.typography.sectionTitle}>
+              {pageData.mission.title}
+            </h2>
+          </div>
+          
+          <div class="prose prose-lg max-w-none">
+            {pageData.mission.content.split('\n\n').map((paragraph) => (
+              <p class={designSystem.typography.body}>
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principles Section - Using Standardized Icons -->
+    <section class="py-20 bg-gray-50">
+      <div class={designSystem.spacing.container}>
+        <div class="text-center mb-12">
+          <h2 class={designSystem.typography.sectionTitle}>
+            {pageData.principles.title}
+          </h2>
+          <p class={`${designSystem.typography.bodyLarge} mt-6 max-w-3xl mx-auto`}>
+            {pageData.principles.subtitle}
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {pageData.principles.items.map((principle) => (
+            <div class="text-center space-y-4">
+              <StandardIcon icon={principle.icon} size="large" />
+              <div>
+                <h3 class={designSystem.typography.componentTitle}>
+                  {principle.title}
+                </h3>
+                <p class={designSystem.typography.bodySmall}>
+                  {principle.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTASection />
+
+  </main>
+  <Footer />
+  <CookieBanner />
+</Layout>

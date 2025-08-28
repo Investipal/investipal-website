@@ -1,0 +1,8 @@
+---
+import SegmentPageLayout from '../../components/layouts/SegmentPageLayout.astro';
+import { segmentPages } from '../../data/segmentPagesData';
+
+const pageData = segmentPages['wealth-managers'];
+---
+
+<SegmentPageLayout {...pageData} />

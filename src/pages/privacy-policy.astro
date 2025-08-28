@@ -1,0 +1,248 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeroSection from '../components/sections/PageHeroSection.astro';
+import CookieBanner from '../components/ui/CookieBanner.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import TableOfContents from '../components/blog/TableOfContents.astro';
+import CTASection from '../components/sections/CTASection.astro';
+import { designSystem } from '../data/designSystem';
+
+// SEO Metadata
+const title = "Privacy Policy | Investipal";
+const description = "Read Investipal's Privacy Policy. Learn how we collect, use, and protect your personal information when using our AI-powered wealth management platform.";
+const canonical = "https://investipal.co/privacy-policy";
+
+// Page Data
+const pageData = {
+  hero: {
+    audienceText: "Privacy Information",
+    title: "Privacy Policy",
+    subtitle: "Learn how we collect, use, and protect your personal information. Your privacy is important to us and we are committed to protecting your data."
+  },
+  lastUpdated: "June 27, 2025"
+};
+
+// Generate table of contents headings for the standardized component
+const headings = [
+  { depth: 2, slug: "information-collection", text: "What Information Do We Collect?" },
+  { depth: 3, slug: "personal-information", text: "Personal Information You Disclose" },
+  { depth: 3, slug: "automatic-information", text: "Information Automatically Collected" },
+  { depth: 2, slug: "information-use", text: "How Do We Use Your Information?" },
+  { depth: 2, slug: "information-sharing", text: "Will Your Information Be Shared?" },
+  { depth: 2, slug: "privacy-rights", text: "What Are Your Privacy Rights?" },
+  { depth: 3, slug: "account-information", text: "Account Information" },
+  { depth: 3, slug: "cookies-technologies", text: "Cookies and Similar Technologies" },
+  { depth: 3, slug: "email-marketing", text: "Opting Out of Email Marketing" },
+  { depth: 2, slug: "contact", text: "How Can You Contact Us?" },
+  { depth: 2, slug: "data-review", text: "How Can You Review, Update, or Delete Data?" }
+];
+
+// Generate structured data for Privacy Policy
+const siteUrl = Astro.site?.toString() || 'https://investipal.co';
+const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
+
+const privacyStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy",
+  "description": description,
+  "url": currentUrl,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Investipal Inc.",
+    "url": siteUrl,
+    "email": "info@investipal.co"
+  },
+  "dateModified": "2025-06-27",
+  "inLanguage": "en-US",
+  "about": {
+    "@type": "Thing",
+    "name": "Privacy Policy"
+  }
+};
+
+// Generate breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Privacy Policy' }
+];
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  <!-- Privacy Policy Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(privacyStructuredData)} />
+  
+  <Header />
+  <Breadcrumb items={breadcrumbItems} />
+  
+  <main id="main">
+    
+    <!-- Hero Section -->
+    <PageHeroSection 
+      audienceText={pageData.hero.audienceText}
+      title={pageData.hero.title}
+      subtitle={pageData.hero.subtitle}
+    />
+
+    <!-- Privacy Policy Content -->
+    <section class="bg-white py-20">
+      <div class={designSystem.spacing.container}>
+        
+        <article class="prose prose-lg max-w-none">
+          
+          <div class="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <p class={`text-sm ${designSystem.text.secondary} mb-2`}>
+              <strong>Last Updated:</strong> {pageData.lastUpdated}
+            </p>
+            <p class={`text-sm ${designSystem.text.secondary}`}>
+              <strong>Contact:</strong> For questions about this privacy policy, contact us at 
+              <a href="mailto:info@investipal.co" class={designSystem.links.primary}>info@investipal.co</a>
+            </p>
+          </div>
+
+          <div class={designSystem.typography.body}>
+            This privacy notice for Investipal Inc. ("<strong>Investipal</strong>," "<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), describes how and why we might collect, store, use, and/or share ("<strong>process</strong>") your information when you use our services ("<strong>Services</strong>").
+          </div>
+
+          <section id="information-collection">
+            <h2 class={`${designSystem.typography.subsectionTitle} mb-6`}>1. WHAT INFORMATION DO WE COLLECT?</h2>
+            
+            <h3 id="personal-information" class={`${designSystem.typography.featureTitle} mb-4`}>Personal information you disclose to us</h3>
+            <p class={`font-semibold italic ${designSystem.text.secondary} mb-4`}>In Short: We collect personal information that you provide to us.</p>
+            
+            <p class={designSystem.typography.body}>
+              We collect personal information that you voluntarily provide to us when you register on the Services, express an interest in obtaining information about us or our products and Services, when you participate in activities on the Services, or otherwise when you contact us.
+            </p>
+
+            <div class="my-6">
+              <h4 class={`font-semibold ${designSystem.text.primary} mb-2`}>Personal Information Provided by You.</h4>
+              <p class={designSystem.typography.body}>
+                The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following: names; phone numbers; email addresses; mailing addresses; usernames; passwords; billing addresses; and other similar information.
+              </p>
+            </div>
+
+            <div class="my-6">
+              <h4 class={`font-semibold ${designSystem.text.primary} mb-2`}>Payment Data.</h4>
+              <p class={designSystem.typography.body}>
+                We may collect data necessary to process your payment if you make purchases, such as your payment instrument number, and the security code associated with your payment instrument. All payment data is stored by our payment processor and you should review its privacy policies and contact the payment processor directly to respond to your questions.
+              </p>
+            </div>
+
+            <div class="my-6">
+              <h4 class={`font-semibold ${designSystem.text.primary} mb-2`}>Social Media Login Data.</h4>
+              <p class={designSystem.typography.body}>
+                We may provide you with the option to register with us using your existing social media account details, like your Facebook, Twitter, or other social media account. If you choose to register in this way, we will collect the information described in the section called "HOW DO WE HANDLE YOUR SOCIAL LOGINS?" below.
+              </p>
+            </div>
+
+            <h3 id="automatic-information" class={`${designSystem.typography.featureTitle} mb-4`}>Information automatically collected</h3>
+            <p class={`font-semibold italic ${designSystem.text.secondary} mb-4`}>In Short: Some information — such as your Internet Protocol (IP) address and/or browser and device characteristics — is collected automatically when you visit our Website.</p>
+            
+            <p class={designSystem.typography.body}>
+              We automatically collect certain information when you visit, use, or navigate the Services. This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as your IP address, browser and device characteristics, operating system, language preferences, referring URLs, device name, country, location, information about how and when you use our Services, and other technical information. This information is primarily needed to maintain the security and operation of our Services, and for our internal analytics and reporting purposes.
+            </p>
+          </section>
+
+          <section id="information-use">
+            <h2 class={`${designSystem.typography.subsectionTitle} mb-6`}>2. HOW DO WE USE YOUR INFORMATION?</h2>
+
+            <p class={`font-semibold italic ${designSystem.text.secondary} mb-4`}>In Short: We process your information for purposes based on legitimate business interests, the fulfillment of our contract with you, compliance with our legal obligations, and/or your consent.</p>
+
+            <p class={designSystem.typography.body}>
+              We use personal information collected via our Services for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations. We indicate the specific processing grounds we rely on next to each purpose listed below.
+            </p>
+
+            <ul class="list-disc list-inside space-y-2 my-6">
+              <li class={designSystem.typography.body}>To facilitate account creation and authentication and otherwise manage user accounts</li>
+              <li class={designSystem.typography.body}>To deliver and facilitate delivery of services to the user</li>
+              <li class={designSystem.typography.body}>To respond to user inquiries/offer support to users</li>
+              <li class={designSystem.typography.body}>To send administrative information to you</li>
+              <li class={designSystem.typography.body}>To fulfill and manage your orders</li>
+              <li class={designSystem.typography.body}>To enable user-to-user communications</li>
+              <li class={designSystem.typography.body}>To request feedback</li>
+              <li class={designSystem.typography.body}>To send you marketing and promotional communications</li>
+              <li class={designSystem.typography.body}>To deliver targeted advertising to you</li>
+              <li class={designSystem.typography.body}>To protect our Services</li>
+              <li class={designSystem.typography.body}>To identify usage trends</li>
+              <li class={designSystem.typography.body}>To determine the effectiveness of our promotional campaigns</li>
+              <li class={designSystem.typography.body}>To save or protect an individual's vital interest</li>
+            </ul>
+          </section>
+
+          <section id="information-sharing">
+            <h2 class={`${designSystem.typography.subsectionTitle} mb-6`}>3. WILL YOUR INFORMATION BE SHARED WITH ANYONE?</h2>
+
+            <p class={`font-semibold italic ${designSystem.text.secondary} mb-4`}>In Short: We only share information with your consent, to comply with laws, to provide you with services, to protect your rights, or to fulfill business obligations.</p>
+
+            <p class={designSystem.typography.body}>
+              We may process or share your data that we hold based on the following legal basis: Consent, Legitimate Interests, Performance of a Contract, Legal Obligations, and Vital Interests.
+            </p>
+          </section>
+
+          <section id="privacy-rights">
+            <h2 class={`${designSystem.typography.subsectionTitle} mb-6`}>10. WHAT ARE YOUR PRIVACY RIGHTS?</h2>
+
+            <p class={`font-semibold italic ${designSystem.text.secondary} mb-4`}>In Short: You may review, change, or terminate your account at any time.</p>
+
+            <p class={designSystem.typography.body}>
+              If you are located in the EEA or UK and you believe we are unlawfully processing your personal information, you also have the right to complain to your local data protection supervisory authority.
+            </p>
+
+            <h3 id="account-information" class={`${designSystem.typography.featureTitle} mb-4`}>Account Information</h3>
+            <p class={designSystem.typography.body}>
+              If you would at any time like to review or change the information in your account or terminate your account, you can log in to your account settings and update your user account or contact us using the contact information provided.
+            </p>
+
+            <h3 id="cookies-technologies" class={`${designSystem.typography.featureTitle} mb-4`}>Cookies and similar technologies</h3>
+            <p class={designSystem.typography.body}>
+              Most Web browsers are set to accept cookies by default. If you prefer, you can usually choose to set your browser to remove cookies and to reject cookies. If you choose to remove cookies or reject cookies, this could affect certain features or services of our Services. To opt out of interest-based advertising by advertisers on our Services visit <a href="http://www.aboutads.info/choices/" class={designSystem.links.primary}>http://www.aboutads.info/choices/</a>. For further information, please see our Cookie Notice: <a href="/cookies" class={designSystem.links.primary}>/cookies</a>.
+            </p>
+
+            <h3 id="email-marketing" class={`${designSystem.typography.featureTitle} mb-4`}>Opting out of email marketing</h3>
+            <p class={designSystem.typography.body}>
+              You can unsubscribe from our marketing email list at any time by clicking on the unsubscribe link in the emails that we send or by contacting us using the details provided below. You will then be removed from the marketing email list — however, we may still communicate with you — for example, to send you service-related emails that are necessary for the administration and use of your account, to respond to service requests, or for other non-marketing purposes.
+            </p>
+          </section>
+
+          <section id="contact">
+            <h2 class={`${designSystem.typography.subsectionTitle} mb-6`}>14. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h2>
+
+            <p class={designSystem.typography.body}>
+              If you have questions or comments about this notice, you may email us at <a href="mailto:info@investipal.co" class={designSystem.links.primary}>info@investipal.co</a> or by post to:
+            </p>
+
+            <div class="my-4 p-4 bg-gray-50 rounded-lg">
+              <p class={designSystem.typography.body}>
+                <strong>Investipal Inc.</strong><br>
+                [Company Address]<br>
+                Email: <a href="mailto:info@investipal.co" class={designSystem.links.primary}>info@investipal.co</a>
+              </p>
+            </div>
+          </section>
+
+          <section id="data-review">
+            <h2 class={`${designSystem.typography.subsectionTitle} mb-6`}>15. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</h2>
+
+            <p class={designSystem.typography.body}>
+              Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it. To request to review, update, or delete your personal information, please submit a request form by clicking <a href="mailto:info@investipal.co" class={designSystem.links.primary}>here</a>.
+            </p>
+          </section>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTASection />
+
+  </main>
+
+  <!-- Standardized Table of Contents -->
+  <TableOfContents headings={headings} readingTime={12} />
+
+  <Footer />
+  <CookieBanner />
+</Layout>

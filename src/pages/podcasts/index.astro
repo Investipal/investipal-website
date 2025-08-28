@@ -1,0 +1,561 @@
+---
+// Podcast Directory Page
+// Displays all podcast episodes in a clean, organized layout
+
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/sections/CTASection.astro';
+import CookieBanner from '../../components/ui/CookieBanner.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import StandardBadge from '../../components/ui/StandardBadge.astro';
+import { getCollection } from 'astro:content';
+
+// Load episodes from content collection
+const entries = await getCollection('podcasts', ({ data }) => !data.draft);
+const episodes = entries
+  .map((entry) => ({
+    slug: entry.slug,
+    title: entry.data.title,
+    excerpt: entry.data.excerpt || '',
+    publishedDate: entry.data.publishedDate,
+    thumbnailImage: entry.data.coverImage || '/images/logos/generic_icon.png',
+    thumbnailAlt: entry.data.coverImageAlt || entry.data.title,
+    duration: entry.data.duration || '',
+    topics: entry.data.topics || [],
+    category: (entry.data.topics && entry.data.topics[0]) || 'General',
+    featured: entry.data.featured || false,
+  }))
+  .sort((a, b) => b.publishedDate.getTime() - a.publishedDate.getTime());
+
+const featuredEpisodes = episodes.filter((e) => e.featured);
+const effectiveFeatured = featuredEpisodes.length ? featuredEpisodes : (episodes.length ? [episodes[0]] : []);
+const recentList = episodes.filter((e) => effectiveFeatured[0] ? e.slug !== effectiveFeatured[0].slug : true);
+const recentEpisodes = episodes;
+const allCategories = [...new Set(episodes.map((e) => e.category))].sort();
+
+// Format date for display
+const formatDate = (date: Date) => {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  }).format(date);
+};
+
+// Generate structured data for the podcast series
+const siteUrl = Astro.site?.toString() || 'https://investipal.co';
+
+const podcastSeriesStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  "name": "The Investipal Podcast",
+  "description": "Conversations with industry leaders about investing, wealth management, financial technology, and building successful advisory practices.",
+  "url": `${siteUrl}/podcasts`,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Investipal",
+    "url": siteUrl,
+    "logo": `${siteUrl}/images/logo.png`
+  },
+  "image": `${siteUrl}/images/podcast-cover.jpg`,
+  "numberOfEpisodes": episodes.length
+};
+
+// Generate breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Podcasts' }
+];
+---
+
+<Layout 
+  title="The Investipal Podcast | Industry Conversations & Insights" 
+  description="Join us for conversations with industry leaders about investing, wealth management, financial technology, and building successful advisory practices."
+  keywords="investipal podcast, wealth management podcast, financial advisor podcast, investing conversations"
+>
+  <!-- Podcast Series Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(podcastSeriesStructuredData)} />
+  
+  <Header />
+  <Breadcrumb items={breadcrumbItems} />
+  
+  <main id="main">
+    
+        <!-- Podcast Hero Section -->
+    <section class="bg-gradient-to-b from-gray-50 to-white pt-16 md:pt-20 pb-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-violet-50 to-blue-50 rounded-2xl p-8 md:p-12">
+          <div class="text-center max-w-4xl mx-auto">
+          
+                    <!-- Podcast Badge -->
+          <StandardBadge text="The Investipal Podcast" variant="hero" />
+          
+          <!-- Main Title -->
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-violet-600 via-purple-700 to-indigo-800 bg-clip-text text-transparent leading-tight pb-2 mb-6">
+            Check Out Our Latest Conversations
+          </h1>
+          
+          <!-- Subtitle -->
+          <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+            Join us for insightful conversations with industry leaders about investing, wealth management, financial technology, and building successful advisory practices.
+          </p>
+          
+          <!-- Platform Links -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <a href="https://open.spotify.com/show/7DVgMFtOieyYVK29GltS6y" target="_blank" rel="noopener" class="group flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-colors duration-200">
+              <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.636 14.545c-.205.33-.639.436-.969.231-.266-.131-.42-.372-.42-.65v-.05c0-.191.063-.363.174-.495.111-.133.267-.225.443-.252.176-.027.355.009.506.104 2.311-1.174 3.818-3.566 3.818-6.283 0-3.866-3.134-7-7-7s-7 3.134-7 7c0 2.717 1.507 5.109 3.818 6.283.151-.095.33-.131.506-.104.176.027.332.119.443.252.111.132.174.304.174.495v.05c0 .278-.154.519-.42.65-.33.205-.764.099-.969-.231C5.474 18.298 4 15.298 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8c0 3.298-1.474 6.298-3.364 7.545z"/>
+              </svg>
+              Listen on Spotify
+            </a>
+            <a href="https://www.youtube.com/channel/UCkjQIhCIWlI-Uv-pMHPSWgA" target="_blank" rel="noopener" class="group flex items-center bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-semibold transition-colors duration-200">
+              <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              Watch on YouTube
+            </a>
+          </div>
+          
+          <!-- Stats -->
+          <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-600">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+              </svg>
+              <span>{episodes.length} Episodes</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+              </svg>
+              <span>{allCategories.length} Categories</span>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- White Transition Section -->
+    <section class="bg-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Featured Podcast + Recent Episodes Layout -->
+        <div class="grid lg:grid-cols-12 gap-8">
+          <!-- Featured Episode (Left Side) -->
+          {effectiveFeatured.length > 0 && effectiveFeatured[0] && (
+            <div class="lg:col-span-7">
+              <div class="flex items-center mb-4">
+                <StandardBadge text="Featured Episode" variant="featured" />
+              </div>
+              
+              <article class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                  <!-- Featured Image -->
+                  <div class="relative overflow-hidden">
+                    <a href={`/podcasts/${effectiveFeatured[0].slug}`}>
+                      <img 
+                        src={effectiveFeatured[0].thumbnailImage} 
+                        alt={effectiveFeatured[0].thumbnailAlt}
+                        class="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </a>
+                    <div class="absolute top-4 left-4">
+                      <StandardBadge text={effectiveFeatured[0].category} variant="category" />
+                    </div>
+                    {effectiveFeatured[0].duration && (
+                      <div class="absolute bottom-4 right-4">
+                        <span class="inline-flex items-center bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                          {effectiveFeatured[0].duration}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                
+                <!-- Content -->
+                <div class="p-6">
+                  <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-tight">
+                    <a href={`/podcasts/${effectiveFeatured[0].slug}`} class="hover:text-violet-600 transition-colors">
+                      {effectiveFeatured[0].title}
+                    </a>
+                  </h2>
+                  <p class="text-gray-600 leading-relaxed mb-4 line-clamp-3">{effectiveFeatured[0].excerpt}</p>
+                  
+                  <!-- Episode Meta -->
+                  <div class="flex items-center justify-between text-sm">
+                    <div class="flex items-center space-x-2">
+                      <div>
+                        <p class="font-medium text-gray-900">Episode {effectiveFeatured[0].episodeNumber || 'Latest'}</p>
+                        <p class="text-gray-500">
+                          {formatDate(effectiveFeatured[0].publishedDate)}
+                        </p>
+                      </div>
+                    </div>
+                    <span class="text-violet-600 font-medium">{effectiveFeatured[0].duration}</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          )}
+
+          <!-- Recent Episodes (Right Side) -->
+          <div class="lg:col-span-5">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-lg font-semibold text-gray-900">Recent Episodes</h3>
+              <button id="view-all-episodes" class="text-sm text-violet-600 hover:text-violet-700 font-medium transition-colors">View All</button>
+            </div>
+            
+            <div class="space-y-4">
+              {recentList.slice(0, 4).map((episode) => (
+                <article class="bg-white rounded-lg border border-gray-200 p-4 hover:border-violet-300 hover:shadow-md transition-all duration-200">
+                  <div class="flex space-x-4">
+                    <a href={`/podcasts/${episode.slug}`} class="flex-shrink-0">
+                      <img 
+                        src={episode.thumbnailImage} 
+                        alt={episode.thumbnailAlt}
+                        class="w-16 h-16 object-cover rounded-lg"
+                      />
+                    </a>
+                    <div class="flex-1 min-w-0">
+                      <span class="inline-block text-xs font-medium text-violet-600 mb-1">
+                        {episode.category}
+                      </span>
+                      <h4 class="text-sm font-semibold text-gray-900 leading-tight mb-1 line-clamp-2">
+                        <a href={`/podcasts/${episode.slug}`} class="hover:text-violet-600 transition-colors">
+                          {episode.title}
+                        </a>
+                      </h4>
+                      <div class="flex items-center text-xs text-gray-500 space-x-2">
+                        <span>{formatDate(episode.publishedDate)}</span>
+                        {episode.duration && <span>•</span>}
+                        {episode.duration && <span>{episode.duration}</span>}
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse by Category -->
+    <section class="bg-white py-8 border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-6">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">Browse by Category</h2>
+          <p class="text-sm text-gray-600">Explore episodes organized by topic</p>
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-3 mb-4">
+          <button 
+            data-filter="all"
+            class="filter-btn px-4 py-2 text-sm font-medium bg-violet-600 text-white rounded-lg transition-all duration-200 hover:bg-violet-700"
+          >
+            All Episodes ({episodes.length})
+          </button>
+          {allCategories.map(category => {
+            const categoryEpisodes = episodes.filter(episode => episode.category === category);
+            return (
+              <button 
+                data-filter={category.toLowerCase().replace(/\s+/g, '-')}
+                data-category={category}
+                class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700 border border-gray-300 rounded-lg hover:border-violet-300 hover:text-violet-600 transition-all duration-200"
+              >
+                {category} ({categoryEpisodes.length})
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- All Episodes Grid -->
+    <section id="all-episodes" class="py-12 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">All Episodes</h2>
+          <p class="text-gray-600">
+            {episodes.length} episodes • Updated regularly
+          </p>
+        </div>
+        
+        <div id="episodes-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {recentEpisodes.map((episode, index) => (
+            <article class="episode-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-200 hover:border-violet-300" data-category={episode.category.toLowerCase().replace(/\s+/g, '-')} data-episode-category={episode.category}>
+              <div class="relative">
+                <a href={`/podcasts/${episode.slug}`} class="episode-card-link">
+                  <img 
+                    src={episode.thumbnailImage} 
+                    alt={episode.thumbnailAlt}
+                    class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </a>
+                <div class="absolute top-4 left-4">
+                  <StandardBadge text={episode.category} variant="category" />
+                </div>
+                {episode.duration && (
+                  <div class="absolute bottom-4 right-4">
+                    <span class="inline-flex items-center bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                      {episode.duration}
+                    </span>
+                  </div>
+                )}
+              </div>
+              
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-3 line-clamp-2 leading-tight">
+                  <a href={`/podcasts/${episode.slug}`} class="episode-card-link hover:text-violet-600 transition-colors">
+                    {episode.title}
+                  </a>
+                </h3>
+                <p class="text-gray-600 mb-4 line-clamp-2 leading-relaxed">{episode.excerpt}</p>
+                
+                <div class="flex items-center justify-between text-sm">
+                  <div class="flex items-center space-x-3">
+                    <div>
+                      <p class="font-medium text-gray-900">Episode</p>
+                      <p class="text-gray-500">{formatDate(episode.publishedDate)}</p>
+                    </div>
+                  </div>
+                  <span class="text-violet-600 font-medium">{episode.duration}</span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+        
+        <!-- Load More Button (Future Enhancement) -->
+        {episodes.length > 12 && (
+          <div class="text-center mt-12">
+            <button class="inline-flex items-center bg-investipal-600 hover:bg-investipal-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-500 ease-out transform hover:scale-[1.02] shadow-lg hover:shadow-xl">
+              Load More Episodes
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Subscribe CTA Section -->
+    <section class="bg-gradient-to-r from-gray-50 to-white border-t border-b border-gray-200 py-16">
+      <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">
+          <svg class="w-8 h-8 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Never Miss an Episode
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Subscribe to The Investipal Podcast on your favorite platform and get notified when new episodes are released.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://open.spotify.com/show/7DVgMFtOieyYVK29GltS6y" target="_blank" rel="noopener" class="group flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+            <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.636 14.545c-.205.33-.639.436-.969.231-.266-.131-.42-.372-.42-.65v-.05c0-.191.063-.363.174-.495.111-.133.267-.225.443-.252.176-.027.355.009.506.104 2.311-1.174 3.818-3.566 3.818-6.283 0-3.866-3.134-7-7-7s-7 3.134-7 7c0 2.717 1.507 5.109 3.818 6.283.151-.095.33-.131.506-.104.176.027.332.119.443.252.111.132.174.304.174.495v.05c0 .278-.154.519-.42.65-.33.205-.764.099-.969-.231C5.474 18.298 4 15.298 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8c0 3.298-1.474 6.298-3.364 7.545z"/>
+            </svg>
+            Subscribe on Spotify
+          </a>
+          <a href="https://www.youtube.com/channel/UCkjQIhCIWlI-Uv-pMHPSWgA?sub_confirmation=1" target="_blank" rel="noopener" class="group flex items-center bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+            <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            Subscribe on YouTube
+          </a>
+        </div>
+        <p class="text-sm text-gray-500 mt-4">
+          Available on all major podcast platforms.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTASection />
+
+  </main>
+  
+  <Footer />
+  <CookieBanner />
+</Layout>
+
+<style>
+  /* Line clamp utility for text truncation */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Enhanced transitions for podcast pages */
+  .podcast-hover-effect {
+    transition-property: transform, opacity, filter, box-shadow, background-color, border-color, color;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+  }
+  
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation: none !important;
+    }
+  }
+</style>
+
+<script>
+  // Podcast filtering functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('Podcast index page loaded');
+    
+    // Get all episode cards and filter buttons
+    const episodeCards = document.querySelectorAll('.episode-card');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const sectionTitle = document.querySelector('#all-episodes h2');
+    const episodesGrid = document.getElementById('episodes-grid');
+    
+    // Check URL parameters for filters
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryFilter = urlParams.get('category');
+    
+    // Apply URL-based filters on page load
+    if (categoryFilter) {
+      const categoryBtn = document.querySelector(`[data-filter="${categoryFilter}"]`);
+      if (categoryBtn) {
+        // Update button states
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-violet-600', 'text-white');
+          b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+        });
+        categoryBtn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+        categoryBtn.classList.add('bg-violet-600', 'text-white');
+        
+        // Apply filter
+        filterEpisodes('category', categoryFilter);
+        
+        // Scroll to episodes section
+        setTimeout(() => {
+          document.getElementById('all-episodes').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 100);
+      }
+    }
+    
+    // Function to filter and display episodes
+    function filterEpisodes(filterType, filterValue) {
+      let visibleCount = 0;
+      
+      episodeCards.forEach(card => {
+        let shouldShow = false;
+        
+        if (filterType === 'all') {
+          shouldShow = true;
+        } else if (filterType === 'category') {
+          shouldShow = card.dataset.category === filterValue;
+        }
+        
+        if (shouldShow) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      // Update section title
+      if (sectionTitle) {
+        sectionTitle.style.opacity = '0';
+        setTimeout(() => {
+          if (filterType === 'all') {
+            sectionTitle.textContent = 'All Episodes';
+          } else if (filterType === 'category') {
+            const categoryName = document.querySelector(`[data-filter="${filterValue}"]`).dataset.category;
+            sectionTitle.textContent = `Episodes in "${categoryName}"`;
+          }
+          sectionTitle.style.opacity = '1';
+        }, 100);
+      }
+      
+      // Show no results message if needed
+      const noResultsDiv = document.getElementById('no-results-message');
+      if (visibleCount === 0) {
+        if (!noResultsDiv) {
+          episodesGrid.insertAdjacentHTML('afterend', `
+            <div id="no-results-message" class="col-span-full text-center py-12">
+              <div class="max-w-md mx-auto">
+                <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">No episodes found</h3>
+                <p class="text-gray-500">Try selecting a different category or view all episodes.</p>
+              </div>
+            </div>
+          `);
+        }
+      } else {
+        if (noResultsDiv) {
+          noResultsDiv.remove();
+        }
+      }
+    }
+    
+    // Category filter buttons event listeners
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active states
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-violet-600', 'text-white');
+          b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+        });
+        btn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+        btn.classList.add('bg-violet-600', 'text-white');
+        
+        // Filter episodes and update URL
+        const filterValue = btn.dataset.filter;
+        if (filterValue === 'all') {
+          filterEpisodes('all');
+          // Clear URL parameters
+          const url = new URL(window.location);
+          url.searchParams.delete('category');
+          window.history.pushState({}, '', url);
+        } else {
+          filterEpisodes('category', filterValue);
+          // Update URL with category parameter
+          const url = new URL(window.location);
+          url.searchParams.set('category', filterValue);
+          window.history.pushState({}, '', url);
+        }
+        
+        // Smooth scroll to episodes grid
+        setTimeout(() => {
+          document.getElementById('all-episodes').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 100);
+      });
+    });
+    
+    // View All Episodes functionality
+    const viewAllEpisodesBtn = document.getElementById('view-all-episodes');
+    if (viewAllEpisodesBtn) {
+      viewAllEpisodesBtn.addEventListener('click', () => {
+        document.getElementById('all-episodes').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    }
+  });
+</script>

@@ -1,0 +1,39 @@
+---
+// Standardized Icon Component - Ensures consistent styling across all pages
+export interface Props {
+  icon: string; // SVG content
+  size?: 'small' | 'medium' | 'large';
+  className?: string;
+}
+
+const { icon, size = 'large', className = '' } = Astro.props;
+
+const sizeClasses = {
+  small: 'w-10 h-10',
+  medium: 'w-12 h-12', 
+  large: 'w-12 h-12' // NOW MATCHES FEATURE PAGE STANDARD
+};
+
+const iconSizes = {
+  small: 'w-4 h-4',
+  medium: 'w-5 h-5',
+  large: 'w-5 h-5' // FEATURE PAGE STANDARD SIZE
+};
+---
+
+<!-- 
+  STANDARD ICON COMPONENT
+  
+  This component enforces the standardized icon styling across all pages:
+  - Light purple background (bg-investipal-100)
+  - Dark purple icon (text-investipal-600)
+  - Subtle hover effects
+  - Consistent sizing
+  
+  Usage:
+  <StandardIcon icon={iconSvg} size="large" />
+-->
+<div class={`inline-flex items-center justify-center ${sizeClasses[size]} bg-investipal-100 rounded-lg shadow-lg hover:scale-[1.02] transition-all duration-500 ease-out ${className}`}>
+  <svg class={`${iconSizes[size]} text-investipal-600`} fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={icon}>
+  </svg>
+</div>

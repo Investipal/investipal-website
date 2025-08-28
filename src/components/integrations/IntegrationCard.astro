@@ -1,0 +1,100 @@
+---
+// Standardized Integration Card Component
+// Used for displaying integration cards in grids and lists
+
+import StandardBadge from '../ui/StandardBadge.astro';
+import { designSystem } from '../../data/designSystem';
+import type { Integration } from '../../data/integrationsData';
+
+export interface Props {
+  integration: Integration;
+  showCategory?: boolean;
+  size?: 'small' | 'medium' | 'large';
+}
+
+const { 
+  integration, 
+  showCategory = true,
+  size = 'medium'
+} = Astro.props;
+
+const sizeClasses = {
+  small: 'p-4',
+  medium: 'p-6', 
+  large: 'p-8'
+};
+
+const logoSizes = {
+  small: 'h-8 w-auto',
+  medium: 'h-12 w-auto',
+  large: 'h-16 w-auto'
+};
+---
+
+<!-- 
+  STANDARDIZED INTEGRATION CARD
+  
+  Reusable card component for displaying integrations across the site.
+  Follows design system standards and includes hover effects.
+  
+  Usage:
+  <IntegrationCard integration={integrationData} showCategory={true} size="medium" />
+-->
+<a 
+  href={`/integrations/${integration.slug}`}
+  data-integration-category={integration.category}
+  data-integration-name={integration.name.toLowerCase()}
+  class={`group block bg-white rounded-xl border border-gray-200 hover:shadow-lg hover:border-gray-300 transition-all duration-300 transform hover:-translate-y-1 ${sizeClasses[size]}`}
+>
+  <!-- Header with Logo and Category -->
+  <div class="flex items-start justify-between mb-4">
+    <div class="flex-shrink-0">
+      <img 
+        src={integration.logo} 
+        alt={`${integration.name} logo`}
+        class={`${logoSizes[size]} object-contain`}
+        loading="lazy"
+      />
+    </div>
+    
+    {showCategory && (
+      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-investipal-100 text-investipal-700">
+        {integration.categoryDisplay}
+      </span>
+    )}
+  </div>
+  
+  <!-- Integration Info -->
+  <div class="space-y-3">
+    <div>
+      <h3 class={`${designSystem.typography.componentTitle} group-hover:text-investipal-600 transition-colors`}>
+        {integration.name}
+      </h3>
+      <p class={`${designSystem.typography.bodySmall} mt-1 text-gray-500`}>
+        Built by {integration.builtBy}
+      </p>
+    </div>
+    
+    <p class={`${designSystem.typography.bodySmall} line-clamp-3`}>
+      {integration.description}
+    </p>
+  </div>
+  
+  <!-- CTA Arrow -->
+  <div class="mt-4 flex items-center text-investipal-600 group-hover:text-investipal-700 transition-colors">
+    <span class="text-sm font-medium">Learn more</span>
+    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+    </svg>
+  </div>
+</a>
+
+<style>
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
+

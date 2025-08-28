@@ -1,0 +1,409 @@
+---
+// Reading Experience Enhancements
+// Adds features like reading mode toggle, font size controls, etc.
+---
+
+<!-- Reading Enhancement Controls -->
+<div class="reading-controls" id="reading-controls">
+  <button 
+    class="reading-control-btn"
+    id="font-size-toggle"
+    aria-label="Adjust font size"
+    title="Font Size"
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h4"/>
+    </svg>
+  </button>
+
+  <button 
+    class="reading-control-btn"
+    id="reading-mode-toggle"
+    aria-label="Toggle reading mode"
+    title="Reading Mode"
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+    </svg>
+  </button>
+
+  <button 
+    class="reading-control-btn"
+    id="focus-mode-toggle"
+    aria-label="Toggle focus mode"
+    title="Focus Mode"
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+    </svg>
+  </button>
+</div>
+
+<!-- Reading Progress Sidebar -->
+<div class="reading-progress-sidebar" id="reading-progress-sidebar">
+  <div class="progress-indicator">
+    <div class="progress-circle">
+      <svg class="progress-ring" width="60" height="60">
+        <circle 
+          class="progress-ring-circle"
+          stroke="#e5e7eb"
+          stroke-width="3"
+          fill="transparent"
+          r="27"
+          cx="30"
+          cy="30"
+        />
+        <circle 
+          class="progress-ring-progress"
+          stroke="#7c3aed"
+          stroke-width="3"
+          fill="transparent"
+          r="27"
+          cx="30"
+          cy="30"
+          id="progress-circle"
+        />
+      </svg>
+      <span class="progress-text" id="progress-percentage">0%</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .reading-controls {
+    position: fixed;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 940;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .reading-controls.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .reading-control-btn {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .reading-control-btn:hover {
+    background: rgba(124, 58, 237, 0.1);
+    color: #7c3aed;
+    transform: translateX(4px);
+    border-color: #7c3aed;
+  }
+
+  .reading-control-btn.active {
+    background: #7c3aed;
+    color: white;
+    border-color: #7c3aed;
+  }
+
+  .reading-progress-sidebar {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 940;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .reading-progress-sidebar.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .progress-indicator {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid #e5e7eb;
+    border-radius: 50%;
+    padding: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .progress-circle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .progress-ring {
+    transform: rotate(-90deg);
+  }
+
+  .progress-ring-circle {
+    transition: stroke-dasharray 0.3s ease;
+  }
+
+  .progress-ring-progress {
+    stroke-dasharray: 169.65; /* 2 * π * 27 */
+    stroke-dashoffset: 169.65;
+    transition: stroke-dashoffset 0.3s ease;
+    stroke-linecap: round;
+  }
+
+  .progress-text {
+    position: absolute;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #374151;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* These styles are now handled in the main BlogPostLayout */
+
+  /* Mobile responsiveness */
+  @media (max-width: 1024px) {
+    .reading-controls,
+    .reading-progress-sidebar {
+      display: none;
+    }
+  }
+
+  /* Ensure controls don't interfere with TOC */
+  @media (min-width: 1281px) {
+    .reading-controls {
+      left: 1rem;
+    }
+    
+    .reading-progress-sidebar {
+      left: 1rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .reading-controls {
+      left: calc((100vw - 1280px) / 2 - 100px);
+    }
+    
+    .reading-progress-sidebar {
+      left: calc((100vw - 1280px) / 2 - 100px);
+    }
+  }
+
+  /* Dark mode styles for Reading Enhancement Controls */
+  :global(body.reading-mode) .reading-control-btn {
+    background: rgba(31, 41, 55, 0.95) !important;
+    border-color: #374151 !important;
+    color: #d1d5db !important;
+  }
+
+  :global(body.reading-mode) .reading-control-btn:hover {
+    background: rgba(192, 132, 252, 0.1) !important;
+    color: #c084fc !important;
+    border-color: #c084fc !important;
+  }
+
+  :global(body.reading-mode) .reading-control-btn.active {
+    background: #c084fc !important;
+    color: #ffffff !important;
+    border-color: #c084fc !important;
+  }
+
+  :global(body.reading-mode) .progress-indicator {
+    background: rgba(31, 41, 55, 0.95) !important;
+    border-color: #374151 !important;
+  }
+
+  :global(body.reading-mode) .progress-text {
+    color: #e5e7eb !important;
+  }
+
+  :global(body.reading-mode) .progress-ring-progress {
+    stroke: #c084fc !important;
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  // Reading Enhancement Controls
+  class ReadingEnhancements {
+    constructor() {
+      this.controls = document.getElementById('reading-controls');
+      this.progressSidebar = document.getElementById('reading-progress-sidebar');
+      this.fontSizeBtn = document.getElementById('font-size-toggle');
+      this.readingModeBtn = document.getElementById('reading-mode-toggle');
+      this.focusModeBtn = document.getElementById('focus-mode-toggle');
+      this.progressCircle = document.getElementById('progress-circle');
+      this.progressText = document.getElementById('progress-percentage');
+      this.article = document.querySelector('article, .blog-article-container');
+      this.footer = document.querySelector('footer');
+      
+      this.fontSizeLevel = 0; // 0: normal, 1: small, 2: large, 3: xl
+      this.isReadingMode = false;
+      this.isFocusMode = false;
+      
+      this.init();
+    }
+
+    init() {
+      if (!this.controls) return;
+
+      this.setupEventListeners();
+      this.showControlsWhenReady();
+      this.setupScrollProgress();
+    }
+
+    setupEventListeners() {
+      // Font size control
+      this.fontSizeBtn?.addEventListener('click', () => {
+        this.cycleFontSize();
+      });
+
+      // Reading mode toggle
+      this.readingModeBtn?.addEventListener('click', () => {
+        this.toggleReadingMode();
+      });
+
+      // Focus mode toggle
+      this.focusModeBtn?.addEventListener('click', () => {
+        this.toggleFocusMode();
+      });
+
+      // Keyboard shortcuts
+      document.addEventListener('keydown', (e) => {
+        if (e.altKey) {
+          switch(e.key) {
+            case 'f':
+              e.preventDefault();
+              this.cycleFontSize();
+              break;
+            case 'r':
+              e.preventDefault();
+              this.toggleReadingMode();
+              break;
+            case 'd':
+              e.preventDefault();
+              this.toggleFocusMode();
+              break;
+          }
+        }
+      });
+    }
+
+    cycleFontSize() {
+      const fontClasses = ['font-size-small', 'font-size-large', 'font-size-xl'];
+      
+      // Remove current font size class
+      fontClasses.forEach(cls => document.body.classList.remove(cls));
+      
+      this.fontSizeLevel = (this.fontSizeLevel + 1) % 4;
+      
+      if (this.fontSizeLevel > 0) {
+        document.body.classList.add(fontClasses[this.fontSizeLevel - 1]);
+      }
+
+      // Update button state
+      this.fontSizeBtn.classList.toggle('active', this.fontSizeLevel > 0);
+    }
+
+    toggleReadingMode() {
+      this.isReadingMode = !this.isReadingMode;
+      document.body.classList.toggle('reading-mode', this.isReadingMode);
+      this.readingModeBtn.classList.toggle('active', this.isReadingMode);
+    }
+
+    toggleFocusMode() {
+      this.isFocusMode = !this.isFocusMode;
+      document.body.classList.toggle('focus-mode', this.isFocusMode);
+      this.focusModeBtn.classList.toggle('active', this.isFocusMode);
+    }
+
+    showControlsWhenReady() {
+      setTimeout(() => {
+        this.controls?.classList.add('visible');
+        this.progressSidebar?.classList.add('visible');
+      }, 1000);
+    }
+
+    setupScrollProgress() {
+      if (!this.progressCircle || !this.progressText) return;
+
+      const circumference = 2 * Math.PI * 27; // 27 is the radius
+      this.progressCircle.style.strokeDasharray = circumference;
+      this.progressCircle.style.strokeDashoffset = circumference;
+
+      let ticking = false;
+
+      const updateProgress = () => {
+        if (!this.article) return;
+
+        const articleRect = this.article.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const articleHeight = this.article.offsetHeight;
+        
+        const progress = Math.min(
+          Math.max((windowHeight - articleRect.top) / (articleHeight + windowHeight), 0),
+          1
+        );
+
+        const offset = circumference - (progress * circumference);
+        this.progressCircle.style.strokeDashoffset = offset;
+        this.progressText.textContent = `${Math.round(progress * 100)}%`;
+
+        // Check if user has scrolled past the article content
+        const articleBottom = articleRect.bottom;
+        const shouldHideControls = articleBottom < windowHeight * 0.3; // Hide when article is 70% past viewport
+
+        // Also check footer visibility
+        if (this.footer) {
+          const footerRect = this.footer.getBoundingClientRect();
+          const footerVisible = footerRect.top < windowHeight;
+          
+          if (footerVisible || shouldHideControls) {
+            this.controls?.classList.remove('visible');
+            this.progressSidebar?.classList.remove('visible');
+          } else if (articleRect.top < windowHeight * 0.8) {
+            this.controls?.classList.add('visible');
+            this.progressSidebar?.classList.add('visible');
+          }
+        } else if (shouldHideControls) {
+          this.controls?.classList.remove('visible');
+          this.progressSidebar?.classList.remove('visible');
+        } else if (articleRect.top < windowHeight * 0.8) {
+          this.controls?.classList.add('visible');
+          this.progressSidebar?.classList.add('visible');
+        }
+        
+        ticking = false;
+      };
+
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(updateProgress);
+          ticking = true;
+        }
+      });
+
+      updateProgress();
+    }
+  }
+
+  // Initialize Reading Enhancements
+  document.addEventListener('DOMContentLoaded', () => {
+    new ReadingEnhancements();
+  });
+</script>

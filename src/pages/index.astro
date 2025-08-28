@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import HeroSection from '../components/sections/HeroSection.astro';
+import TrustedBySection from '../components/sections/TrustedBySection.astro';
+import ProblemsSection from '../components/sections/ProblemsSection.astro';
+import SolutionSection from '../components/sections/SolutionSection.astro';
+import FeaturesSection from '../components/sections/FeaturesSection.astro';
+import WorkflowSection from '../components/sections/WorkflowSection.astro';
+import IntegrationsSection from '../components/sections/IntegrationsSection.astro';
+import BlogSection from '../components/sections/BlogSection.astro';
+import CTASection from '../components/sections/CTASection.astro';
+import Footer from '../components/Footer.astro';
+import CookieBanner from '../components/ui/CookieBanner.astro';
+
+// Organization structured data for homepage
+const siteUrl = Astro.site?.toString() || 'https://investipal.co';
+
+const organizationStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Investipal",
+  "description": "AI-powered financial advisor software with automated portfolio construction, compliance management, and client onboarding.",
+  "url": siteUrl,
+  "logo": `${siteUrl}/images/logo.png`,
+  "sameAs": [
+    "https://linkedin.com/company/investipal"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "url": `${siteUrl}/contact`
+  },
+  "offers": {
+    "@type": "Offer",
+    "description": "Financial advisor software solutions",
+    "category": "Software as a Service"
+  }
+};
+---
+
+<Layout 
+  title="AI Financial Advisor Software | Portfolio Management & Compliance | Investipal"
+  description="AI-powered financial advisor software with automated portfolio construction, compliance management, and client onboarding. Streamline your advisory practice with Investipal."
+  keywords="financial advisor software, AI portfolio management, compliance automation, wealth management software, advisor technology platform, financial planning tools"
+>
+  <!-- Organization Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(organizationStructuredData)} />
+  <Header />
+  <main id="main">
+    <HeroSection />
+    <TrustedBySection />
+    <ProblemsSection />
+    <SolutionSection />
+    <FeaturesSection />
+    <WorkflowSection />
+    <IntegrationsSection />
+    <BlogSection />
+    <CTASection />
+  </main>
+  <Footer />
+  <CookieBanner />
+</Layout>

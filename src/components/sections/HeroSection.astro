@@ -1,0 +1,114 @@
+---
+import StandardButton from '../ui/StandardButton.astro';
+
+/**
+ * HeroSection - Exact replica of the live Investipal hero section  
+ * Features: Typing effect, real hero image, CTA button, and trust indicators
+ */
+---
+
+<section class="bg-gradient-to-b from-gray-50 to-white py-8 md:py-12 lg:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+      <!-- Hero Content -->
+      <div class="text-center lg:text-left space-y-4">
+        <h1 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight font-system_ui">
+          <span class="block">AI for financial advisors</span>
+          <span class="block">streamlining <span class="typing-container whitespace-nowrap" id="typing-container">
+            <span class="typing-text text-violet-600" id="typing-text">onboarding</span><span class="cursor-blink text-violet-600">|</span>
+          </span></span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl lg:max-w-none font-system_ui">
+          Cut hours of manual work and multiple logins — onboard clients, build portfolios (including alternatives), and stay compliant in one seamless workflow, in as little as 10 minutes.
+        </p>
+        
+        <div class="pt-2">
+          <StandardButton size="large">Schedule a Demo</StandardButton>
+        </div>
+      </div>
+      
+      <!-- Hero Image - Real Investipal image from live site -->
+      <div class="relative order-first lg:order-last">
+        <img 
+          src="https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/68556380691d8adc81db4f23_Untitled%20design%20(17).png" 
+          alt="Investipal Dashboard" 
+          class="w-full h-auto max-w-md mx-auto lg:max-w-none"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Typing effect script - smoother and faster
+  const words = ['onboarding', 'data intake', 'proposals', 'compliance', 'portfolios'];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 80; // Faster typing speed
+  
+  function typeEffect() {
+    const currentWord = words[wordIndex];
+    const typingElement = document.getElementById('typing-text');
+    
+    if (!typingElement) return;
+    
+    if (isDeleting) {
+      // Deleting - faster
+      typingElement.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 50; // Faster deletion
+    } else {
+      // Typing - faster
+      typingElement.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+      typingSpeed = 80; // Faster typing
+    }
+    
+    // Handle word transitions
+    if (!isDeleting && charIndex === currentWord.length) {
+      // Shorter pause at end of word
+      typingSpeed = 1200; // Reduced pause
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      // Move to next word - faster transition
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      typingSpeed = 300; // Faster transition between words
+    }
+    
+    setTimeout(typeEffect, typingSpeed);
+  }
+  
+  // Start typing effect when page loads
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(typeEffect, 800); // Start faster
+  });
+</script>
+
+<style>
+  .cursor-blink {
+    animation: blink 0.8s infinite;
+    color: #7c3aed !important;
+  }
+  
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+  
+  .typing-container {
+    display: inline;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  .typing-text {
+    display: inline;
+    transition: all 0.1s ease;
+    color: #7c3aed !important;
+  }
+</style>
+

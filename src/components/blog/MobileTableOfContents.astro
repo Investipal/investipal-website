@@ -1,0 +1,542 @@
+---
+// Mobile Table of Contents Component
+// Collapsible TOC for mobile devices
+
+export interface Props {
+  headings?: Array<{
+    depth: number;
+    slug: string;
+    text: string;
+  }>;
+  readingTime?: number;
+}
+
+const { headings = [], readingTime = 8 } = Astro.props;
+---
+
+<!-- Mobile TOC Button & Overlay -->
+<div class="mobile-toc-container">
+  <!-- Toggle Button -->
+  <button 
+    class="mobile-toc-toggle" 
+    id="mobile-toc-toggle"
+    aria-label="Toggle table of contents"
+    aria-expanded="false"
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+    <span>Contents</span>
+  </button>
+
+  <!-- Mobile TOC Overlay -->
+  <div class="mobile-toc-overlay" id="mobile-toc-overlay">
+    <div class="mobile-toc-content">
+      <div class="mobile-toc-header">
+        <div class="mobile-toc-header-content">
+          <h3 class="mobile-toc-title">Table of Contents</h3>
+          <div class="mobile-reading-time-info">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>{readingTime} {readingTime === 1 ? 'min' : 'min'} read</span>
+          </div>
+        </div>
+        <button 
+          class="mobile-toc-close"
+          id="mobile-toc-close"
+          aria-label="Close table of contents"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-toc-progress-container">
+        <div class="mobile-toc-progress-bar" id="mobile-toc-progress"></div>
+      </div>
+
+      {headings.length > 0 && (
+        <nav class="mobile-toc-nav" aria-label="Table of Contents">
+          <ul class="mobile-toc-list">
+            {headings.map((heading) => (
+              <li class={`mobile-toc-item mobile-toc-depth-${heading.depth}`}>
+                <a 
+                  href={`#${heading.slug}`}
+                  class="mobile-toc-link"
+                  data-heading-id={heading.slug}
+                >
+                  {heading.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+    </div>
+  </div>
+</div>
+
+<style>
+  .mobile-toc-container {
+    display: none;
+  }
+
+  @media (max-width: 1279px) {
+    .mobile-toc-container {
+      display: block;
+    }
+  }
+
+  .mobile-toc-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    z-index: 950;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: rgba(124, 58, 237, 0.95);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-toc-toggle:hover {
+    background: rgba(124, 58, 237, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-toc-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 960;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-toc-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-toc-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    max-height: 70vh;
+    padding: 1.5rem;
+    overflow-y: auto;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-toc-overlay.active .mobile-toc-content {
+    transform: translateY(0);
+  }
+
+  .mobile-toc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .mobile-toc-header-content {
+    flex: 1;
+  }
+
+  .mobile-toc-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .mobile-reading-time-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+
+  .mobile-toc-close {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .mobile-toc-close:hover {
+    color: #374151;
+    background: #f3f4f6;
+  }
+
+  .mobile-toc-progress-container {
+    height: 4px;
+    background: #e5e7eb;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+
+  .mobile-toc-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed 0%, #a855f7 100%);
+    border-radius: 2px;
+    transition: width 0.2s ease;
+    width: 0%;
+  }
+
+  .mobile-toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-toc-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile-toc-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    color: #374151;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    border-left: 4px solid transparent;
+    line-height: 1.4;
+  }
+
+  .mobile-toc-link:hover {
+    color: #7c3aed;
+    background: #f3f4f6;
+  }
+
+  .mobile-toc-link.active {
+    color: #7c3aed;
+    background: #f3f0ff;
+    border-left-color: #7c3aed;
+    font-weight: 600;
+  }
+
+  /* Mobile heading depth styling */
+  .mobile-toc-depth-1 .mobile-toc-link {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .mobile-toc-depth-2 .mobile-toc-link {
+    padding-left: 1.5rem;
+  }
+
+  .mobile-toc-depth-3 .mobile-toc-link {
+    padding-left: 2rem;
+    font-size: 0.875rem;
+  }
+
+  .mobile-toc-depth-4 .mobile-toc-link {
+    padding-left: 2.5rem;
+    font-size: 0.875rem;
+  }
+
+  /* Custom scrollbar for mobile TOC */
+  .mobile-toc-content::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .mobile-toc-content::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 3px;
+  }
+
+  .mobile-toc-content::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+  }
+
+  .mobile-toc-content::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+
+  /* Dark mode styles for Mobile TOC */
+  :global(body.reading-mode) .mobile-toc-toggle {
+    background: rgba(31, 41, 55, 0.95) !important;
+    color: #e5e7eb !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-toggle:hover {
+    background: rgba(192, 132, 252, 1) !important;
+    color: #ffffff !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-content {
+    background: #1f2937 !important;
+    color: #e5e7eb !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-title {
+    color: #ffffff !important;
+  }
+
+  :global(body.reading-mode) .mobile-reading-time-info {
+    color: #9ca3af !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-close {
+    color: #d1d5db !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-close:hover {
+    color: #ffffff !important;
+    background: #374151 !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-link,
+  :global(body.reading-mode) .mobile-toc-link * {
+    color: #e5e7eb !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-link:hover,
+  :global(body.reading-mode) .mobile-toc-link:hover * {
+    color: #c084fc !important;
+    background: #374151 !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-link.active,
+  :global(body.reading-mode) .mobile-toc-link.active * {
+    color: #c084fc !important;
+    background: #1f2937 !important;
+    border-left-color: #c084fc !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-list,
+  :global(body.reading-mode) .mobile-toc-item {
+    color: #e5e7eb !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-progress-container {
+    background: #374151 !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-progress-bar {
+    background: linear-gradient(90deg, #c084fc 0%, #a855f7 100%) !important;
+  }
+
+  /* Force all text elements in Mobile TOC to be light in dark mode */
+  :global(body.reading-mode) .mobile-toc-content,
+  :global(body.reading-mode) .mobile-toc-content *:not(.mobile-toc-progress-bar) {
+    color: #e5e7eb !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-title {
+    color: #ffffff !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-link {
+    color: #e5e7eb !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-link:hover {
+    color: #c084fc !important;
+  }
+
+  :global(body.reading-mode) .mobile-toc-link.active {
+    color: #c084fc !important;
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  // Mobile Table of Contents functionality
+  class MobileTableOfContents {
+    constructor() {
+      this.toggleBtn = document.getElementById('mobile-toc-toggle');
+      this.closeBtn = document.getElementById('mobile-toc-close');
+      this.overlay = document.getElementById('mobile-toc-overlay');
+      this.tocLinks = document.querySelectorAll('.mobile-toc-link');
+      this.progressBar = document.getElementById('mobile-toc-progress');
+      this.article = document.querySelector('article, .blog-article-container');
+      this.headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      this.footer = document.querySelector('footer');
+      
+      this.init();
+    }
+
+    init() {
+      if (!this.toggleBtn || !this.overlay) return;
+
+      this.setupEventListeners();
+      this.setupIntersectionObserver();
+      this.setupScrollListeners();
+    }
+
+    setupEventListeners() {
+      // Toggle TOC
+      this.toggleBtn.addEventListener('click', () => {
+        this.showTOC();
+      });
+
+      // Close TOC
+      this.closeBtn?.addEventListener('click', () => {
+        this.hideTOC();
+      });
+
+      // Close on overlay click
+      this.overlay.addEventListener('click', (e) => {
+        if (e.target === this.overlay) {
+          this.hideTOC();
+        }
+      });
+
+      // Close on escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          this.hideTOC();
+        }
+      });
+
+      // Handle TOC link clicks
+      this.tocLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            this.hideTOC();
+            setTimeout(() => {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }, 300);
+          }
+        });
+      });
+    }
+
+    setupIntersectionObserver() {
+      const options = {
+        root: null,
+        rootMargin: '-20% 0px -80% 0px',
+        threshold: 0
+      };
+
+      this.observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const id = entry.target.id;
+          const tocLink = document.querySelector(`[data-heading-id="${id}"]`);
+          
+          if (tocLink) {
+            if (entry.isIntersecting) {
+              // Remove active class from all mobile links
+              this.tocLinks.forEach(link => link.classList.remove('active'));
+              // Add active class to current link
+              tocLink.classList.add('active');
+            }
+          }
+        });
+      }, options);
+
+      // Observe all headings with IDs
+      this.headings.forEach(heading => {
+        if (heading.id) {
+          this.observer.observe(heading);
+        }
+      });
+    }
+
+    setupScrollListeners() {
+      let ticking = false;
+
+      const updateProgress = () => {
+        if (!this.article || !this.progressBar) return;
+
+        const articleRect = this.article.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const articleHeight = this.article.offsetHeight;
+        
+        const progress = Math.min(
+          Math.max((windowHeight - articleRect.top) / (articleHeight + windowHeight), 0),
+          1
+        );
+
+        this.progressBar.style.width = `${progress * 100}%`;
+
+        // Check if user has scrolled past the article content
+        const articleBottom = articleRect.bottom;
+        const shouldHideToggle = articleBottom < windowHeight * 0.3; // Hide when article is 70% past viewport
+
+        // Also check footer visibility
+        if (this.footer) {
+          const footerRect = this.footer.getBoundingClientRect();
+          const footerVisible = footerRect.top < windowHeight;
+          
+          if (footerVisible || shouldHideToggle) {
+            this.toggleBtn.classList.remove('visible');
+          } else if (articleRect.top < windowHeight * 0.8) {
+            this.toggleBtn.classList.add('visible');
+          }
+        } else if (shouldHideToggle) {
+          this.toggleBtn.classList.remove('visible');
+        } else if (articleRect.top < windowHeight * 0.8) {
+          this.toggleBtn.classList.add('visible');
+        }
+
+        ticking = false;
+      };
+
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(updateProgress);
+          ticking = true;
+        }
+      });
+
+      updateProgress();
+    }
+
+    showTOC() {
+      this.overlay.classList.add('active');
+      this.toggleBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    hideTOC() {
+      this.overlay.classList.remove('active');
+      this.toggleBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = ''; // Restore scrolling
+    }
+  }
+
+  // Initialize Mobile TOC when DOM is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    new MobileTableOfContents();
+  });
+</script>

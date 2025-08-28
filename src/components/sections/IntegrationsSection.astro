@@ -1,0 +1,44 @@
+---
+import { integrationsData } from '../../data/integrationsData';
+---
+
+<section class="bg-white box-border">
+  <div class="box-border px-4 md:px-8">
+    <div class="box-border max-w-screen-xl w-full mx-auto">
+      <div class="box-border py-16">
+        <div class="text-center box-border mb-16">
+          <h2 class="text-black text-3xl font-semibold box-border leading-[43.2px] font-system_ui">
+            Get more value from the tools you already use
+          </h2>
+          <div class="box-border max-w-[600px] w-full mx-auto mt-6">
+            <p class="text-slate-600 text-lg box-border leading-[27px] font-system_ui">
+              Connect your tools, connect your teams. Integration with your team's favourite tools are just a click away.
+            </p>
+          </div>
+        </div>
+        
+        <div class="box-border flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          {integrationsData.map((integration) => (
+            <div class="box-border flex items-center justify-center">
+              <img 
+                src={integration.logo} 
+                alt={integration.name} 
+                class="box-border h-12 w-auto object-contain"
+                title={integration.name}
+              />
+            </div>
+          ))}
+        </div>
+        
+        <div class="box-border text-center mt-8">
+          <a 
+            href="/integrations" 
+            class="inline-block text-violet-600 hover:text-violet-700 font-medium text-lg transition-colors duration-200"
+          >
+            All integrations →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

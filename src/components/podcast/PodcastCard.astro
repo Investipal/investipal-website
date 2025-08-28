@@ -1,0 +1,51 @@
+---
+// Podcast Card Component - Uses StandardCard for consistency
+import StandardCard from '../ui/StandardCard.astro';
+import type { PodcastEpisode } from '../../data/podcastData';
+
+export interface Props {
+  episode: PodcastEpisode;
+  showFeaturedBadge?: boolean;
+}
+
+const { episode, showFeaturedBadge = false } = Astro.props;
+
+// Format date
+const formatDate = (date: Date) => {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(date);
+};
+
+// Create meta string with date and duration
+const meta = `${formatDate(episode.publishedDate)} • ${episode.duration}`;
+---
+
+<StandardCard 
+  title={episode.title}
+  excerpt={episode.description}
+  image={episode.thumbnailImage}
+  imageAlt={episode.thumbnailAlt}
+  href={`/podcasts/${episode.slug}`}
+  category={episode.category}
+  featured={episode.featured}
+  meta={meta}
+  showFeaturedBadge={showFeaturedBadge}
+  showCategoryBadge={!showFeaturedBadge}
+/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

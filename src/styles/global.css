@@ -1,0 +1,522 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Investipal Brand Colors - CSS Custom Properties for Tailwind v4 */
+@theme {
+  --color-investipal-50: #f8f9ff;
+  --color-investipal-100: #f1f3ff;
+  --color-investipal-200: #e4e8ff;
+  --color-investipal-300: #d1d7ff;
+  --color-investipal-400: #b8c0ff;
+  --color-investipal-500: #9ca5ff;
+  --color-investipal-600: #7c3aed;
+  --color-investipal-700: #6d28d9;
+  --color-investipal-800: #5b21b6;
+  --color-investipal-900: #4c1d95;
+  --color-investipal-950: #2e1065;
+
+  /* Gray Colors */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+
+  /* Typography Configuration for Tailwind v4 */
+  --typography-prose-max-width: none;
+  --typography-prose-color: theme(colors.gray.700);
+  --typography-prose-headings-color: theme(colors.gray.900);
+  --typography-prose-links-color: theme(colors.investipal.600);
+  --typography-prose-links-hover-color: theme(colors.investipal.700);
+  --typography-prose-strong-color: theme(colors.gray.900);
+  --typography-prose-code-color: theme(colors.gray.800);
+}
+
+:root {
+  /* Legacy CSS Custom Properties for compatibility */
+  --investipal-50: #f5f3ff;
+  --investipal-100: #ede9fe;
+  --investipal-200: #ddd6fe;
+  --investipal-300: #c4b5fd;
+  --investipal-400: #a78bfa;
+  --investipal-500: #8b5cf6;
+  --investipal-600: #7c3aed; /* Primary brand color */
+  --investipal-700: #6d28d9;
+  --investipal-800: #5b21b6;
+  --investipal-900: #4c1d95;
+  --investipal-950: #2e1065;
+
+  /* Semantic Colors */
+  --primary: var(--investipal-600);
+  --primary-hover: var(--investipal-700);
+  --primary-light: var(--investipal-100);
+  --primary-dark: var(--investipal-800);
+
+  /* UI Colors */
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --radius: 0.5rem;
+}
+
+/* Critical Above-the-Fold Performance Optimizations */
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* Ensure critical font loading */
+  font-display: swap;
+}
+
+/* Critical layout containment for performance */
+.header-nav, .hero-section, .main-content {
+  contain: layout style;
+}
+
+/* System font fallback for immediate text rendering */
+.font-system_ui, .font-system-ui {
+  font-family: 
+    -apple-system, 
+    BlinkMacSystemFont, 
+    'Segoe UI', 
+    Roboto, 
+    Oxygen, 
+    Ubuntu, 
+    Cantarell, 
+    'Open Sans', 
+    'Helvetica Neue', 
+    sans-serif;
+  font-display: swap;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: var(--investipal-400);
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+/* Utility classes for consistent brand usage */
+.brand-primary { color: var(--investipal-600); }
+.brand-primary-bg { background-color: var(--investipal-600); }
+.brand-primary-border { border-color: var(--investipal-600); }
+
+.brand-primary-hover { color: var(--investipal-700); }
+.brand-primary-hover-bg { background-color: var(--investipal-700); }
+.brand-primary-hover-border { border-color: var(--investipal-700); }
+
+.brand-light { color: var(--investipal-100); }
+.brand-light-bg { background-color: var(--investipal-100); }
+
+/* Common component styles */
+.btn-primary {
+  @apply bg-investipal-600 hover:bg-investipal-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply bg-investipal-100 hover:bg-investipal-200 text-investipal-700 font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
+}
+
+.link-primary {
+  @apply text-investipal-600 hover:text-investipal-700 font-medium transition-colors duration-200;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('https://fonts.gstatic.com/s/vollkorn/v29/0yb7GDoxxrvAnPhYGxksWE8eqQ.woff2') format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('https://fonts.gstatic.com/s/vollkorn/v29/0yb7GDoxxrvAnPhYGxksWE8eqQ.woff2') format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('https://fonts.gstatic.com/s/vollkorn/v29/0yb9GDoxxrvAnPhYGxkpaE0.woff2') format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('https://fonts.gstatic.com/s/vollkorn/v29/0yb9GDoxxrvAnPhYGxkpaE0.woff2') format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* GLOBAL DARK MODE HEADERS - Override everything */
+body.reading-mode h1,
+body.reading-mode h2,
+body.reading-mode h3,
+body.reading-mode h4,
+body.reading-mode h5,
+body.reading-mode h6 {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+body.reading-mode .prose h1,
+body.reading-mode .prose h2,
+body.reading-mode .prose h3,
+body.reading-mode .prose h4,
+body.reading-mode .prose h5,
+body.reading-mode .prose h6 {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Force all elements to be white in reading mode */
+.reading-mode h1,
+.reading-mode h2,
+.reading-mode h3,
+.reading-mode h4,
+.reading-mode h5,
+.reading-mode h6 {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+/* Dark mode - ALL text elements should be light */
+body.reading-mode h1,
+body.reading-mode h2,
+body.reading-mode h3 {
+  color: #ffffff !important;
+  background: none !important;
+}
+
+/* Dark mode - List items and content */
+body.reading-mode li,
+body.reading-mode p,
+body.reading-mode span,
+body.reading-mode strong,
+body.reading-mode b,
+body.reading-mode em,
+body.reading-mode i {
+  color: #e5e7eb !important;
+}
+
+/* Dark mode - All text inside prose containers */
+body.reading-mode .prose li,
+body.reading-mode .prose p,
+body.reading-mode .prose span,
+body.reading-mode .prose strong,
+body.reading-mode .prose b,
+body.reading-mode .prose-enhanced li,
+body.reading-mode .prose-enhanced p,
+body.reading-mode .prose-enhanced span,
+body.reading-mode .prose-enhanced strong,
+body.reading-mode .prose-enhanced b {
+  color: #e5e7eb !important;
+}
+
+/* Dark mode - Override all Tailwind text colors */
+body.reading-mode .text-gray-900,
+body.reading-mode .text-gray-800,
+body.reading-mode .text-gray-700,
+body.reading-mode .text-gray-600,
+body.reading-mode .text-gray-500,
+body.reading-mode .text-black {
+  color: #e5e7eb !important;
+}
+
+/* Dark mode - Universal text override */
+body.reading-mode * {
+  color: inherit !important;
+}
+
+body.reading-mode {
+  color: #e5e7eb !important;
+}
+
+/* Focus mode takes precedence over dark mode - black text for readability */
+body.reading-mode.focus-mode,
+body.focus-mode.reading-mode {
+  color: #000000 !important;
+}
+
+body.reading-mode.focus-mode *,
+body.focus-mode.reading-mode * {
+  color: #000000 !important;
+}
+
+body.reading-mode.focus-mode h1,
+body.reading-mode.focus-mode h2,
+body.reading-mode.focus-mode h3,
+body.reading-mode.focus-mode h4,
+body.reading-mode.focus-mode h5,
+body.reading-mode.focus-mode h6,
+body.focus-mode.reading-mode h1,
+body.focus-mode.reading-mode h2,
+body.focus-mode.reading-mode h3,
+body.focus-mode.reading-mode h4,
+body.focus-mode.reading-mode h5,
+body.focus-mode.reading-mode h6 {
+  color: #000000 !important;
+}
+
+body.reading-mode.focus-mode li,
+body.reading-mode.focus-mode p,
+body.reading-mode.focus-mode span,
+body.reading-mode.focus-mode strong,
+body.reading-mode.focus-mode b,
+body.focus-mode.reading-mode li,
+body.focus-mode.reading-mode p,
+body.focus-mode.reading-mode span,
+body.focus-mode.reading-mode strong,
+body.focus-mode.reading-mode b {
+  color: #000000 !important;
+}
+
+/* Comprehensive header coverage for dark + focus mode */
+body.reading-mode.focus-mode .prose h1,
+body.reading-mode.focus-mode .prose h2,
+body.reading-mode.focus-mode .prose h3,
+body.reading-mode.focus-mode .prose h4,
+body.reading-mode.focus-mode .prose h5,
+body.reading-mode.focus-mode .prose h6,
+body.reading-mode.focus-mode .prose-enhanced h1,
+body.reading-mode.focus-mode .prose-enhanced h2,
+body.reading-mode.focus-mode .prose-enhanced h3,
+body.reading-mode.focus-mode .prose-enhanced h4,
+body.reading-mode.focus-mode .prose-enhanced h5,
+body.reading-mode.focus-mode .prose-enhanced h6,
+body.focus-mode.reading-mode .prose h1,
+body.focus-mode.reading-mode .prose h2,
+body.focus-mode.reading-mode .prose h3,
+body.focus-mode.reading-mode .prose h4,
+body.focus-mode.reading-mode .prose h5,
+body.focus-mode.reading-mode .prose h6,
+body.focus-mode.reading-mode .prose-enhanced h1,
+body.focus-mode.reading-mode .prose-enhanced h2,
+body.focus-mode.reading-mode .prose-enhanced h3,
+body.focus-mode.reading-mode .prose-enhanced h4,
+body.focus-mode.reading-mode .prose-enhanced h5,
+body.focus-mode.reading-mode .prose-enhanced h6 {
+  color: #000000 !important;
+  background: none !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* Override any Tailwind text color classes in dark + focus mode */
+body.reading-mode.focus-mode .text-gray-900,
+body.reading-mode.focus-mode .text-gray-800,
+body.reading-mode.focus-mode .text-gray-700,
+body.reading-mode.focus-mode .text-gray-600,
+body.reading-mode.focus-mode .text-gray-500,
+body.focus-mode.reading-mode .text-gray-900,
+body.focus-mode.reading-mode .text-gray-800,
+body.focus-mode.reading-mode .text-gray-700,
+body.focus-mode.reading-mode .text-gray-600,
+body.focus-mode.reading-mode .text-gray-500 {
+  color: #000000 !important;
+}
+
+/* FORCE Inter font for ALL blog content - override any serif defaults */
+.prose,
+.prose-lg,
+.prose-enhanced,
+.blog-article-container,
+.blog-content-container {
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+/* BLOG CONTENT ONLY - Link styling for markdown content */
+.blog-article-container .prose-enhanced a,
+.blog-content-container .prose-enhanced a {
+  color: #2563eb !important;
+  text-decoration: underline !important;
+  -webkit-text-fill-color: #2563eb !important;
+}
+
+.blog-article-container .prose-enhanced a:hover,
+.blog-content-container .prose-enhanced a:hover {
+  color: #1d4ed8 !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
+}
+
+.blog-article-container .prose-enhanced a:visited,
+.blog-content-container .prose-enhanced a:visited {
+  color: #7c3aed !important;
+  -webkit-text-fill-color: #7c3aed !important;
+}
+
+/* Override Tailwind Typography default serif fonts - BLOG CONTENT ONLY */
+.blog-article-container .prose,
+.blog-content-container .prose,
+.blog-article-container .prose-lg,
+.blog-content-container .prose-lg,
+.blog-article-container .prose-enhanced,
+.blog-content-container .prose-enhanced {
+  --tw-prose-body: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-headings: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-lead: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-links: #2563eb !important;
+  --tw-prose-bold: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-counters: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-bullets: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-hr: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-quotes: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-quote-borders: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-captions: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-code: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-pre-code: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-pre-bg: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-th-borders: 'Inter', system-ui, sans-serif !important;
+  --tw-prose-td-borders: 'Inter', system-ui, sans-serif !important;
+}
+
+/* GLOBAL VIDEO IFRAME STYLING - FORCE FULL WIDTH */
+.prose iframe,
+.prose-lg iframe,
+.prose-enhanced iframe,
+article iframe,
+.video-wrapper iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  display: block !important;
+}
+
+.video-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+}
+
+/* NUCLEAR OPTION FOR YOUTUBE VIDEOS */
+iframe[src*="youtube.com"],
+iframe[src*="youtu.be"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  min-height: 450px !important;
+}
+
+.prose *,
+.prose-lg *,
+.prose-enhanced *,
+.blog-article-container *,
+.blog-content-container * {
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+/* Specifically override any serif fonts in blog content */
+.prose p,
+.prose li,
+.prose span,
+.prose div,
+.prose article,
+.prose-enhanced p,
+.prose-enhanced li,
+.prose-enhanced span,
+.prose-enhanced div,
+.prose-enhanced article {
+  font-family: 'Inter', system-ui, sans-serif !important;
+}

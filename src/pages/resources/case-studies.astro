@@ -1,0 +1,266 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CookieBanner from '../../components/ui/CookieBanner.astro';
+import StandardBadge from '../../components/ui/StandardBadge.astro';
+import StandardButton from '../../components/ui/StandardButton.astro';
+---
+
+<Layout title="Case Studies - Investipal">
+  <Header />
+  
+  <main class="bg-white">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-gray-50 to-white py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Success Stories from Our Clients
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Discover how financial advisors and firms are transforming their practices with Investipal's AI-powered platform
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Case Study -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-violet-50 to-blue-50 rounded-2xl p-8 md:p-12">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <StandardBadge text="Featured Case Study" variant="featured" className="mb-4" />
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                How Merrill Lynch Advisors Increased Efficiency by 80%
+              </h2>
+              <p class="text-lg text-gray-600 mb-6">
+                A team of 15 advisors at Merrill Lynch transformed their practice using Investipal's AI-powered platform, 
+                reducing manual work and improving client satisfaction.
+              </p>
+              <div class="flex items-center text-sm text-gray-500 mb-6">
+                <span>Financial Services</span>
+                <span class="mx-2">•</span>
+                <span>15 Advisors</span>
+                <span class="mx-2">•</span>
+                <span>80% Efficiency Gain</span>
+              </div>
+              <a href="/case-studies/merrill-lynch-success" class="inline-flex items-center text-violet-600 font-semibold hover:text-violet-700">
+                Read Full Case Study
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+            <div>
+              <img 
+                src="https://c.animaapp.com/medefhqzj4Kk73/assets/merrill-lynch-case-study.jpg" 
+                alt="Merrill Lynch Success Story" 
+                class="w-full h-64 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies Grid -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8">More Success Stories</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Case Study 1 -->
+          <article class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+            <img 
+              src="https://c.animaapp.com/medefhqzj4Kk73/assets/independent-advisor-case-study.jpg" 
+              alt="Independent Advisor Success" 
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span>Independent Advisor</span>
+                <span class="mx-2">•</span>
+                <span>1 Advisor</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                From 50 to 200 Clients: Scaling with AI
+              </h3>
+              <p class="text-gray-600 mb-4">
+                How one independent advisor used Investipal to scale their practice from 50 to 200 clients while maintaining personal service.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-medium text-green-600">65% Growth</span>
+                <a href="/case-studies/independent-advisor-scaling" class="text-violet-600 font-semibold hover:text-violet-700">
+                  Read More →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Study 2 -->
+          <article class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+            <img 
+              src="https://c.animaapp.com/medefhqzj4Kk73/assets/wealth-firm-case-study.jpg" 
+              alt="Wealth Firm Success" 
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span>Wealth Management Firm</span>
+                <span class="mx-2">•</span>
+                <span>25 Advisors</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Standardizing Operations Across Multiple Offices
+              </h3>
+              <p class="text-gray-600 mb-4">
+                A multi-office wealth management firm standardized their processes and improved client onboarding efficiency.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-medium text-green-600">90% Faster Onboarding</span>
+                <a href="/case-studies/wealth-firm-standardization" class="text-violet-600 font-semibold hover:text-violet-700">
+                  Read More →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Study 3 -->
+          <article class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+            <img 
+              src="https://c.animaapp.com/medefhqzj4Kk73/assets/financial-planner-case-study.jpg" 
+              alt="Financial Planner Success" 
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span>Financial Planning Practice</span>
+                <span class="mx-2">•</span>
+                <span>3 Planners</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Comprehensive Planning with AI Assistance
+              </h3>
+              <p class="text-gray-600 mb-4">
+                A financial planning practice enhanced their service offerings and client engagement using Investipal's planning tools.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-medium text-green-600">40% More Plans</span>
+                <a href="/case-studies/financial-planner-enhancement" class="text-violet-600 font-semibold hover:text-violet-700">
+                  Read More →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Study 4 -->
+          <article class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+            <img 
+              src="https://c.animaapp.com/medefhqzj4Kk73/assets/insurance-advisor-case-study.jpg" 
+              alt="Insurance Advisor Success" 
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span>Insurance Advisory</span>
+                <span class="mx-2">•</span>
+                <span>8 Advisors</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Streamlining IUL and Annuity Planning
+              </h3>
+              <p class="text-gray-600 mb-4">
+                An insurance advisory firm automated their IUL and annuity planning process, reducing errors and improving client outcomes.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-medium text-green-600">75% Time Saved</span>
+                <a href="/case-studies/insurance-advisor-automation" class="text-violet-600 font-semibold hover:text-violet-700">
+                  Read More →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Study 5 -->
+          <article class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+            <img 
+              src="https://c.animaapp.com/medefhqzj4Kk73/assets/roi-case-study.jpg" 
+              alt="ROI Success Story" 
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span>Enterprise Firm</span>
+                <span class="mx-2">•</span>
+                <span>100+ Advisors</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Measurable ROI: 300% Return on Investment
+              </h3>
+              <p class="text-gray-600 mb-4">
+                A large enterprise firm achieved significant ROI through improved efficiency, reduced compliance costs, and increased advisor productivity.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-medium text-green-600">300% ROI</span>
+                <a href="/case-studies/enterprise-roi" class="text-violet-600 font-semibold hover:text-violet-700">
+                  Read More →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Study 6 -->
+          <article class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+            <img 
+              src="https://c.animaapp.com/medefhqzj4Kk73/assets/client-satisfaction-case-study.jpg" 
+              alt="Client Satisfaction Success" 
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span>Client Experience</span>
+                <span class="mx-2">•</span>
+                <span>500+ Clients</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Improving Client Satisfaction Scores
+              </h3>
+              <p class="text-gray-600 mb-4">
+                How Investipal helped advisors improve client satisfaction scores through better communication and personalized service.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-medium text-green-600">95% Satisfaction</span>
+                <a href="/case-studies/client-satisfaction-improvement" class="text-violet-600 font-semibold hover:text-violet-700">
+                  Read More →
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 bg-violet-600">
+      <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          Ready to Write Your Success Story?
+        </h2>
+        <p class="text-xl text-violet-100 mb-8">
+          Join hundreds of advisors who've transformed their practices with Investipal
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <StandardButton variant="white">Schedule a Demo</StandardButton>
+          <a href="/contact-us" class="inline-flex items-center justify-center px-8 py-4 border border-violet-300 text-white font-semibold rounded-lg hover:bg-violet-700 transition-colors">
+            Contact Sales
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <CookieBanner />
+</Layout>
+

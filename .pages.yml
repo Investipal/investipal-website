@@ -1,0 +1,267 @@
+media:
+  input: public/images
+  output: /images
+
+# Default to staging branch for all CMS edits
+branch: staging
+
+content:
+  # Blog Posts - User-Friendly Visual Editor
+  - name: blog
+    label: Blog Posts
+    type: collection
+    path: src/content/blog
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: excerpt
+        label: Excerpt
+        type: text
+        required: true
+        description: SEO description under 160 characters
+      - name: author
+        label: Author
+        type: string
+        required: true
+        default: Investipal Team
+      - name: authorImage
+        label: Author Image
+        type: string
+        required: false
+      - name: publishedDate
+        label: Published Date
+        type: date
+        required: true
+      - name: category
+        label: Category
+        type: string
+        required: true
+        description: Choose from AI & Technology, Portfolio Management, Client Communication, Compliance, Industry Trends, Best Practices, Process Improvement
+      - name: featuredImage
+        label: Featured Image
+        type: image
+        required: true
+      - name: featuredImageAlt
+        label: Featured Image Alt Text
+        type: string
+        required: true
+      - name: featured
+        label: Featured Post
+        type: boolean
+        required: false
+        default: false
+      - name: draft
+        label: Draft
+        type: boolean
+        required: false
+        default: false
+      - name: seoDescription
+        label: SEO Description
+        type: text
+        required: false
+      - name: readingTime
+        label: Reading Time (minutes)
+        type: number
+        required: false
+      - name: body
+        label: Content
+        type: rich-text
+        required: true
+
+  # Homepage Content
+  - name: homepage-content
+    label: Homepage Content
+    type: file
+    path: src/content/pages/homepage.md
+    fields:
+      - name: title
+        label: Page Title (SEO)
+        type: string
+        required: true
+        default: "AI Financial Advisor Software | Portfolio Management & Compliance | Investipal"
+      - name: description
+        label: Meta Description (SEO)
+        type: text
+        required: true
+        description: "Description for search engines (under 160 characters)"
+        default: "AI-powered financial advisor software with automated portfolio construction, compliance management, and client onboarding."
+      - name: keywords
+        label: SEO Keywords
+        type: string
+        required: false
+        default: "financial advisor software, AI portfolio management, compliance automation"
+      - name: heroTitle
+        label: Hero Section - Main Title
+        type: string
+        required: true
+        default: "AI-Powered Financial Advisory Software"
+      - name: heroSubtitle
+        label: Hero Section - Subtitle
+        type: rich-text
+        required: true
+        default: "Transform your advisory practice with intelligent portfolio construction, automated compliance, and seamless client onboarding."
+      - name: heroCtaText
+        label: Hero Section - CTA Button Text
+        type: string
+        required: true
+        default: "Book a Demo"
+      - name: heroCtaUrl
+        label: Hero Section - CTA Button URL
+        type: string
+        required: true
+        default: "/book-a-demo"
+      - name: aboutTitle
+        label: About Section - Title
+        type: string
+        required: true
+        default: "Why Choose Investipal?"
+      - name: aboutDescription
+        label: About Section - Description
+        type: rich-text
+        required: true
+        default: "Our AI-powered platform helps financial advisors deliver better outcomes for their clients while reducing operational overhead."
+      - name: featuresTitle
+        label: Features Section - Title
+        type: string
+        required: true
+        default: "Powerful Features for Modern Advisors"
+      - name: featuresDescription
+        label: Features Section - Description
+        type: rich-text
+        required: true
+        default: "Everything you need to run a successful advisory practice in one integrated platform."
+      - name: ctaTitle
+        label: CTA Section - Title
+        type: string
+        required: true
+        default: "Ready to Transform Your Practice?"
+      - name: ctaDescription
+        label: CTA Section - Description
+        type: rich-text
+        required: true
+        default: "Join hundreds of advisors who have revolutionized their client experience with Investipal."
+      - name: ctaButtonText
+        label: CTA Section - Button Text
+        type: string
+        required: true
+        default: "Get Started Today"
+
+  # About Us Page Content
+  - name: about-content
+    label: About Us Content
+    type: file
+    path: src/content/pages/about.md
+    fields:
+      - name: title
+        label: Page Title (SEO)
+        type: string
+        required: true
+        default: "About Us | Investipal"
+      - name: description
+        label: Meta Description (SEO)
+        type: text
+        required: true
+        description: "Description for search engines"
+      - name: heroTitle
+        label: Page Hero - Title
+        type: string
+        required: true
+        default: "About Us"
+      - name: heroSubtitle
+        label: Page Hero - Subtitle
+        type: rich-text
+        required: true
+      - name: storyTitle
+        label: Our Story - Title
+        type: string
+        required: true
+        default: "Who We Are"
+      - name: storyContent
+        label: Our Story - Content
+        type: rich-text
+        required: true
+      - name: missionTitle
+        label: Mission - Title
+        type: string
+        required: true
+        default: "Our Mission"
+      - name: missionContent
+        label: Mission - Content
+        type: rich-text
+        required: true
+      - name: teamTitle
+        label: Team Section - Title
+        type: string
+        required: true
+        default: "Meet Our Team"
+      - name: teamDescription
+        label: Team Section - Description
+        type: rich-text
+        required: true
+
+  # Contact Page Content
+  - name: contact-content
+    label: Contact Us Content
+    type: file
+    path: src/content/pages/contact.md
+    fields:
+      - name: title
+        label: Page Title (SEO)
+        type: string
+        required: true
+        default: "Contact Us | Investipal"
+      - name: description
+        label: Meta Description (SEO)
+        type: text
+        required: true
+        description: "Description for search engines"
+      - name: heroTitle
+        label: Page Hero - Title
+        type: string
+        required: true
+        default: "Contact Us"
+      - name: heroSubtitle
+        label: Page Hero - Subtitle
+        type: rich-text
+        required: true
+        default: "Get in touch with our team to learn how Investipal can transform your advisory practice."
+      - name: contactInfo
+        label: Contact Information
+        type: rich-text
+        required: true
+      - name: officeHours
+        label: Office Hours
+        type: rich-text
+        required: false
+      - name: supportInfo
+        label: Support Information
+        type: rich-text
+        required: false
+
+  # Company Data (for developers)
+  - name: company-data
+    label: Company Data (Developer)
+    type: file
+    path: src/data/companyData.ts
+    format: code
+    fields:
+      - name: body
+        label: Company Data (TypeScript)
+        type: code
+        options:
+          language: typescript
+
+  # Features Data (for developers)
+  - name: features-data
+    label: Features Data (Developer)
+    type: file
+    path: src/data/featuresData.ts
+    format: code
+    fields:
+      - name: body
+        label: Features Data (TypeScript)
+        type: code
+        options:
+          language: typescript

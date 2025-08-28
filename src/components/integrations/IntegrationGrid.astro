@@ -1,0 +1,78 @@
+---
+// Integration Grid Component
+// Displays integrations in a responsive grid layout with category filtering
+
+import IntegrationCard from './IntegrationCard.astro';
+import { designSystem } from '../../data/designSystem';
+import type { Integration } from '../../data/integrationsData';
+
+export interface Props {
+  integrations: Integration[];
+  showCategory?: boolean;
+  cardSize?: 'small' | 'medium' | 'large';
+  columns?: '2' | '3' | '4';
+}
+
+const { 
+  integrations, 
+  showCategory = true,
+  cardSize = 'medium',
+  columns = '3'
+} = Astro.props;
+
+const gridClasses = {
+  '2': 'grid-cols-1 md:grid-cols-2',
+  '3': 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3', 
+  '4': 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+};
+---
+
+<!-- 
+  INTEGRATION GRID COMPONENT
+  
+  Responsive grid layout for displaying integration cards.
+  Follows established spacing and responsive patterns.
+  
+  Usage:
+  <IntegrationGrid 
+    integrations={integrationsData} 
+    showCategory={true}
+    cardSize="medium"
+    columns="3"
+  />
+-->
+<div class={`grid ${gridClasses[columns]} gap-6 lg:gap-8`}>
+  {integrations.map((integration) => (
+    <IntegrationCard 
+      integration={integration} 
+      showCategory={showCategory}
+      size={cardSize}
+    />
+  ))}
+</div>
+
+{integrations.length === 0 && (
+  <div class="text-center py-12">
+    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+      <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.467-.881-6.08-2.33.031-.89.219-1.753.566-2.562A7.956 7.956 0 0112 9c2.34 0 4.467.881 6.08 2.33-.031.89-.219 1.753-.566 2.562z"/>
+      </svg>
+    </div>
+    <h3 class={`${designSystem.typography.componentTitle} mb-2`}>
+      No integrations found
+    </h3>
+    <p class={designSystem.typography.bodySmall}>
+      Try adjusting your filters or search terms.
+    </p>
+  </div>
+)}
+
+
+
+
+
+
+
+
+
+

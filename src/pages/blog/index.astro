@@ -1,0 +1,792 @@
+---
+// Blog Directory Page (temporary for testing)
+// This will be enhanced in Step 3
+
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import BlogCard from '../../components/blog/BlogCard.astro';
+import CookieBanner from '../../components/ui/CookieBanner.astro';
+import StandardBadge from '../../components/ui/StandardBadge.astro';
+import { getCollection } from 'astro:content';
+
+// Get all published blog posts
+let allPosts;
+try {
+  allPosts = await getCollection('blog');
+  console.log('Total posts found:', allPosts.length);
+} catch (error) {
+  console.error('Error loading blog collection:', error);
+  allPosts = [];
+}
+
+// Robust sort by date (handles strings just in case)
+const getTime = (p) => {
+  const d = p.data.publishedDate || p.data.updatedDate || 0;
+  const t = d instanceof Date ? d.getTime() : new Date(d || 0).getTime();
+  return isNaN(t) ? 0 : t;
+};
+
+const publishedPosts = allPosts
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => getTime(b) - getTime(a));
+
+console.log('Published posts:', publishedPosts.length);
+
+// Calculate reading time for posts that don't have it
+const postsWithReadingTime = publishedPosts.map(post => ({
+  ...post,
+  data: {
+    ...post.data,
+    readingTime: post.data.readingTime || Math.ceil((post.body?.split(/\s+/).length || 0) / 200)
+  }
+}));
+
+// Get featured post (first featured post or most recent)
+const featuredPost = postsWithReadingTime.find(post => post.data.featured) || postsWithReadingTime[0];
+const otherPosts = postsWithReadingTime.filter(post => post.id !== featuredPost?.id);
+
+// Lightweight client-safe data for dynamic interactions
+const clientOtherPostsData = otherPosts.map((post) => ({
+  id: post.id,
+  data: {
+    title: post.data.title,
+    excerpt: post.data.excerpt,
+    author: post.data.author,
+    publishedDate: (post.data.publishedDate instanceof Date) ? post.data.publishedDate.toISOString() : String(post.data.publishedDate),
+    category: post.data.category,
+    tags: post.data.tags || [],
+    featuredImage: post.data.featuredImage || '/images/blog/placeholder.png',
+    featuredImageAlt: post.data.featuredImageAlt || post.data.title,
+    readingTime: post.data.readingTime || Math.ceil((post.body?.split(/\s+/).length || 0) / 200),
+    authorImage: post.data.authorImage || '',
+  }
+}));
+
+// Pagination settings
+const POSTS_PER_PAGE = 6;
+const totalOtherPosts = otherPosts.length;
+const initialPosts = otherPosts.slice(0, POSTS_PER_PAGE);
+const hasMorePosts = totalOtherPosts > POSTS_PER_PAGE;
+
+// Get all categories and tags for navigation (from filterable posts only)
+const allCategories = [...new Set(otherPosts.map(post => post.data.category))].sort();
+
+const allTags = new Set();
+publishedPosts.forEach(post => {
+  post.data.tags?.forEach(tag => allTags.add(tag));
+});
+
+// Calculate tag counts from the SAME posts that will be filtered (otherPosts, not all posts)
+const tagCounts = new Map();
+otherPosts.forEach(post => {
+  post.data.tags?.forEach(tag => {
+    tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+  });
+});
+
+// Get popular tags (top 8)
+const popularTags = Array.from(tagCounts.entries())
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 8)
+  .map(([tagName]) => tagName);
+
+// Format category/tag for URL
+const formatCategoryUrl = (cat: string) => cat.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
+---
+
+<Layout title="Blog | Investipal" description="Latest insights and industry trends for financial advisors">
+  <Header />
+  
+  <main id="main">
+    <!-- Compact Hero Section -->
+    <section class="bg-gradient-to-br from-violet-50 via-white to-purple-50 pt-16 md:pt-20 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Compact Page Header -->
+        <div class="text-center mb-12">
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Latest Insights & Industry Trends
+          </h1>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Stay ahead with expert insights on financial planning and technology trends
+          </p>
+        </div>
+
+        <!-- Featured Post + Recent Articles Layout -->
+        <div class="grid lg:grid-cols-12 gap-8">
+          <!-- Featured Post (Left Side) -->
+          {featuredPost && (
+            <div class="lg:col-span-7">
+              <div class="flex items-center mb-4">
+                <StandardBadge text="Featured Article" variant="featured" />
+              </div>
+              
+              <article class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                <!-- Featured Image -->
+                <div class="relative overflow-hidden">
+                  <a href={`/blog/${featuredPost.id.replace('.md', '')}`}>
+                    <img 
+                      src={featuredPost.data.featuredImage} 
+                      alt={featuredPost.data.featuredImageAlt || featuredPost.data.title}
+                      class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </a>
+                  <div class="absolute top-4 left-4">
+                    <StandardBadge text={featuredPost.data.category} variant="category" />
+                  </div>
+                </div>
+                
+                <!-- Content -->
+                <div class="p-6">
+                  <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-tight">
+                    <a href={`/blog/${featuredPost.id.replace('.md', '')}`} class="hover:text-violet-600 transition-colors">
+                      {featuredPost.data.title}
+                    </a>
+                  </h2>
+                  <p class="text-gray-600 leading-relaxed mb-4 line-clamp-3">
+                    {featuredPost.data.excerpt}
+                  </p>
+                  
+                  <!-- Author & Meta -->
+                  <div class="flex items-center justify-between text-sm">
+                    <div class="flex items-center space-x-2">
+                      {featuredPost.data.authorImage && (
+                        <img 
+                          src={featuredPost.data.authorImage} 
+                          alt={featuredPost.data.author}
+                          class="w-8 h-8 rounded-full object-cover"
+                        />
+                      )}
+                      <div>
+                        <p class="font-medium text-gray-900">{featuredPost.data.author}</p>
+                        <p class="text-gray-500">
+                          {featuredPost.data.publishedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                        </p>
+                      </div>
+                    </div>
+                    <span class="text-violet-600 font-medium">{featuredPost.data.readingTime} min read</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          )}
+
+          <!-- Recent Articles (Right Side) -->
+          <div class="lg:col-span-5">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-lg font-semibold text-gray-900">Recent Articles</h3>
+              <a href="#all-articles" class="text-sm text-violet-600 hover:text-violet-700 font-medium transition-colors">View All</a>
+            </div>
+            
+            <div class="space-y-4">
+              {initialPosts.slice(0, 4).map((post) => (
+                <article class="bg-white rounded-lg border border-gray-200 p-4 hover:border-violet-300 hover:shadow-md transition-all duration-200">
+                  <div class="flex space-x-4">
+                    <a href={`/blog/${post.id.replace('.md', '')}`} class="flex-shrink-0">
+                      <img 
+                        src={post.data.featuredImage} 
+                        alt={post.data.featuredImageAlt || post.data.title}
+                        class="w-16 h-16 object-cover rounded-lg"
+                      />
+                    </a>
+                    <div class="flex-1 min-w-0">
+                      <span class="inline-block text-xs font-medium text-violet-600 mb-1">
+                        {post.data.category}
+                      </span>
+                      <h4 class="text-sm font-semibold text-gray-900 leading-tight mb-1 line-clamp-2">
+                        <a href={`/blog/${post.id.replace('.md', '')}`} class="hover:text-violet-600 transition-colors">
+                          {post.data.title}
+                        </a>
+                      </h4>
+                      <div class="flex items-center text-xs text-gray-500 space-x-2">
+                        <span>{post.data.publishedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
+                        <span>•</span>
+                        <span>{post.data.readingTime} min</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse by Category -->
+    <section class="bg-white py-8 border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-6">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">Browse by Category</h2>
+          <p class="text-sm text-gray-600">Explore articles organized by topic</p>
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-3 mb-4">
+          <button 
+            data-filter="all"
+            class="filter-btn px-4 py-2 text-sm font-medium bg-violet-600 text-white rounded-lg transition-all duration-200 hover:bg-violet-700"
+          >
+            All Articles ({otherPosts.length})
+          </button>
+          {allCategories.map(category => {
+            const categoryPosts = otherPosts.filter(post => post.data.category === category);
+            return (
+              <button 
+                data-filter={formatCategoryUrl(category)}
+                data-category={category}
+                class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700 border border-gray-300 rounded-lg hover:border-violet-300 hover:text-violet-600 transition-all duration-200"
+              >
+                {category} ({categoryPosts.length})
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Tags Navigation -->
+    <section class="bg-white border-b border-gray-200 py-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-3">
+          <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wide">Popular Tags</h3>
+        </div>
+        <div class="flex flex-wrap justify-center gap-2">
+          {popularTags.map((tag, index) => {
+            const tagPosts = otherPosts.filter(post => post.data.tags?.includes(tag));
+            return (
+              <button 
+                key={index}
+                data-filter={formatTagUrl(tag)}
+                data-tag={tag}
+                class="tag-filter-btn px-3 py-1.5 text-xs font-medium bg-white text-gray-600 border border-gray-300 rounded-full hover:border-violet-300 hover:text-violet-600 hover:bg-violet-50 transition-all duration-200"
+              >
+                #{tag} ({tagPosts.length})
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- All Articles Grid -->
+    <section id="all-articles" class="py-12 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">All Articles</h2>
+          <p class="text-gray-600">
+            {totalOtherPosts > 0 ? `${totalOtherPosts} articles • Updated regularly` : 'All articles shown above'}
+          </p>
+        </div>
+        {initialPosts.length > 0 ? (
+          <div>
+            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              {initialPosts.map((post) => (
+                <BlogCard post={post} showFeaturedBadge={false} />
+              ))}
+            </div>
+            
+            {hasMorePosts && (
+              <div class="text-center">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <button 
+                    id="load-more-btn"
+                    class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-xl hover:from-violet-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  >
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                    Load More Articles
+                  </button>
+                  
+                  <span class="text-gray-400 hidden sm:block">or</span>
+                  
+                  <button 
+                    id="view-all-btn"
+                    class="inline-flex items-center px-6 py-3 border border-violet-300 text-violet-600 font-semibold rounded-xl hover:bg-violet-50 transition-all duration-200"
+                  >
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                    </svg>
+                    View All ({totalOtherPosts})
+                  </button>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">
+                  Showing {initialPosts.length} of {totalOtherPosts} articles
+                </p>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div class="text-center py-12">
+            <div class="max-w-md mx-auto">
+              <div class="w-20 h-20 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-10 h-10 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">You're all caught up!</h3>
+              <p class="text-gray-600">Check back soon for new insights and industry trends.</p>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <CookieBanner />
+</Layout>
+
+<script define:vars={{ 
+  clientOtherPostsData,
+  initialPostsLength: initialPosts.length, 
+  postsPerPageCount: POSTS_PER_PAGE 
+}}>
+  // Blog page functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('Blog index page loaded');
+    
+    // Helper functions (match server-side)
+    const formatTagUrl = (tag) => tag.toLowerCase().replace(/\s+/g, '-');
+    const formatCategoryUrl = (cat) => cat.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+    
+    // All posts data
+    const allOtherPostsData = clientOtherPostsData;
+    let currentIndex = initialPostsLength;
+    const postsPerPage = postsPerPageCount;
+    let currentFilter = 'all';
+    
+    // Check URL parameters for filters
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryFilter = urlParams.get('category');
+    const tagFilter = urlParams.get('tag');
+    
+    // Add CSS transitions for smooth animations
+    const articlesGrid = document.getElementById('articles-grid');
+    if (articlesGrid) {
+      articlesGrid.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    }
+    
+    const sectionTitle = document.querySelector('#all-articles h2');
+    if (sectionTitle) {
+      sectionTitle.style.transition = 'opacity 0.2s ease';
+    }
+    
+    // Apply URL-based filters on page load
+    if (categoryFilter) {
+      // Find and activate the category filter button
+      const categoryBtn = document.querySelector(`[data-filter="${categoryFilter}"]`);
+      if (categoryBtn) {
+        // Update button states
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-violet-600', 'text-white');
+          b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+        });
+        categoryBtn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+        categoryBtn.classList.add('bg-violet-600', 'text-white');
+        
+        // Apply filter
+        filterPosts('category', categoryFilter);
+        
+        // Scroll to articles section
+        setTimeout(() => {
+          document.getElementById('all-articles').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 100);
+      }
+    } else if (tagFilter) {
+      // Find and activate the tag filter button
+      const tagBtn = document.querySelector(`[data-filter="${tagFilter}"]`);
+      if (tagBtn) {
+        // Update button states
+        const tagFilterBtns = document.querySelectorAll('.tag-filter-btn');
+        tagFilterBtns.forEach(b => {
+          b.classList.remove('bg-violet-100', 'text-violet-700', 'border-violet-300');
+          b.classList.add('bg-white', 'text-gray-600', 'border-gray-300');
+        });
+        tagBtn.classList.remove('bg-white', 'text-gray-600', 'border-gray-300');
+        tagBtn.classList.add('bg-violet-100', 'text-violet-700', 'border-violet-300');
+        
+        // Apply filter
+        filterPosts('tag', tagFilter);
+        
+        // Scroll to articles section
+        setTimeout(() => {
+          document.getElementById('all-articles').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 100);
+      }
+    }
+    
+    // Load More functionality
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const viewAllBtn = document.getElementById('view-all-btn');
+    
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', async () => {
+        loadMoreBtn.disabled = true;
+        loadMoreBtn.innerHTML = `
+          <svg class="w-5 h-5 mr-2 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+          Loading...
+        `;
+        
+        // Simulate loading delay for better UX
+        setTimeout(() => {
+          const nextPosts = allOtherPostsData.slice(currentIndex, currentIndex + postsPerPage);
+          
+          nextPosts.forEach(post => {
+            const postCard = createBlogCard(post);
+            articlesGrid.insertAdjacentHTML('beforeend', postCard);
+          });
+          
+          currentIndex += nextPosts.length;
+          
+          // Update button state
+          const remainingPosts = allOtherPostsData.length - currentIndex;
+          if (remainingPosts <= 0) {
+            loadMoreBtn.style.display = 'none';
+          } else {
+            loadMoreBtn.disabled = false;
+            loadMoreBtn.innerHTML = `
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+              </svg>
+              Load More Articles
+            `;
+          }
+          
+          // Update counter
+          const counter = loadMoreBtn.nextElementSibling;
+          if (counter) {
+            counter.textContent = `Showing ${currentIndex} of ${allOtherPostsData.length} articles`;
+          }
+        }, 800);
+      });
+    }
+    
+    // View All functionality
+    if (viewAllBtn) {
+      viewAllBtn.addEventListener('click', () => {
+        const remainingPosts = allOtherPostsData.slice(currentIndex);
+        
+        // Add all remaining posts at once
+        remainingPosts.forEach(post => {
+          const postCard = createBlogCard(post);
+          articlesGrid.insertAdjacentHTML('beforeend', postCard);
+        });
+        
+        // Hide both buttons and show success message
+        loadMoreBtn.parentElement.innerHTML = `
+          <div class="text-center">
+            <div class="inline-flex items-center px-6 py-3 bg-green-100 text-green-800 rounded-xl mb-4">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              All ${allOtherPostsData.length} articles loaded!
+            </div>
+            <p class="text-sm text-gray-500">
+              You're now viewing all available articles
+            </p>
+          </div>
+        `;
+      });
+    }
+    
+    // Smooth scrolling is handled by anchor href="#all-articles"
+    
+    // Function to filter and display posts
+    function filterPosts(filterType, filterValue) {
+      console.log('Blog: Filtering posts by', filterType, ':', filterValue);
+      let filteredPosts = [];
+      
+      if (filterType === 'all') {
+        filteredPosts = allOtherPostsData;
+      } else if (filterType === 'category') {
+        filteredPosts = allOtherPostsData.filter(post => 
+          formatCategoryUrl(post.data.category) === filterValue
+        );
+      } else if (filterType === 'tag') {
+        filteredPosts = allOtherPostsData.filter(post => 
+          post.data.tags?.some(tag => 
+            formatTagUrl(tag) === filterValue
+          )
+        );
+      }
+      
+      console.log('Blog: Found', filteredPosts.length, 'posts for filter');
+      
+      // Add fade out animation
+      articlesGrid.style.opacity = '0';
+      articlesGrid.style.transform = 'translateY(20px)';
+      
+      setTimeout(() => {
+        // Clear current articles
+        articlesGrid.innerHTML = '';
+        
+        // Add filtered articles with staggered animation
+        if (filteredPosts.length > 0) {
+          filteredPosts.forEach((post, index) => {
+            const postCard = createBlogCard(post);
+            articlesGrid.insertAdjacentHTML('beforeend', postCard);
+            
+            // Add staggered entrance animation
+            const newCard = articlesGrid.lastElementChild;
+            newCard.style.opacity = '0';
+            newCard.style.transform = 'translateY(20px)';
+            newCard.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+            
+            setTimeout(() => {
+              newCard.style.opacity = '1';
+              newCard.style.transform = 'translateY(0)';
+            }, index * 100); // Stagger each card by 100ms
+          });
+          
+          // Update section title with smooth transition
+          const sectionTitle = document.querySelector('#all-articles h2');
+          sectionTitle.style.opacity = '0';
+          setTimeout(() => {
+            if (filterType === 'all') {
+              sectionTitle.textContent = 'All Articles';
+            } else if (filterType === 'category') {
+              const categoryName = document.querySelector(`[data-filter="${filterValue}"]`).dataset.category;
+              sectionTitle.textContent = `Articles in "${categoryName}"`;
+            } else if (filterType === 'tag') {
+              const tagName = document.querySelector(`[data-filter="${filterValue}"]`).dataset.tag;
+              sectionTitle.textContent = `Articles tagged "${tagName}"`;
+            }
+            sectionTitle.style.opacity = '1';
+          }, 100);
+          
+          // Hide load more buttons when filtering
+          const loadMoreSection = document.querySelector('.text-center:has(#load-more-btn)');
+          if (loadMoreSection) {
+            loadMoreSection.style.display = 'none';
+          }
+        } else {
+          articlesGrid.innerHTML = `
+            <div class="col-span-full text-center py-12">
+              <div class="max-w-md mx-auto">
+                <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.47-.881-6.08-2.33"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">No articles found</h3>
+                <p class="text-gray-600">Try selecting a different category or tag.</p>
+              </div>
+            </div>
+          `;
+        }
+        
+        // Fade in animation
+        articlesGrid.style.opacity = '1';
+        articlesGrid.style.transform = 'translateY(0)';
+      }, 150);
+    }
+    
+    // Dynamic filtering functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const tagFilterBtns = document.querySelectorAll('.tag-filter-btn');
+    
+    console.log('Blog: Found filter buttons:', filterBtns.length);
+    console.log('Blog: Found tag filter buttons:', tagFilterBtns.length);
+    
+    // Ensure blog filtering works by removing any cookie conflicts
+    setTimeout(() => {
+      // Category filter buttons
+      filterBtns.forEach(btn => {
+        // Remove any existing listeners first
+        const newBtn = btn.cloneNode(true);
+        btn.parentNode.replaceChild(newBtn, btn);
+        
+        newBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          console.log('Blog: Category filter clicked:', this.dataset.filter);
+          
+          // Update active states
+          const allFilterBtns = document.querySelectorAll('.filter-btn');
+          allFilterBtns.forEach(b => {
+            b.classList.remove('bg-violet-600', 'text-white');
+            b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+          });
+          this.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+          this.classList.add('bg-violet-600', 'text-white');
+        
+          // Clear tag filters
+          const allTagBtns = document.querySelectorAll('.tag-filter-btn');
+          allTagBtns.forEach(b => {
+            b.classList.remove('bg-violet-100', 'text-violet-700', 'border-violet-300');
+            b.classList.add('bg-white', 'text-gray-600', 'border-gray-300');
+          });
+          
+          // Filter posts and update URL
+          const filterValue = this.dataset.filter;
+          if (filterValue === 'all') {
+            filterPosts('all');
+            // Clear URL parameters
+            const url = new URL(window.location);
+            url.searchParams.delete('category');
+            url.searchParams.delete('tag');
+            window.history.pushState({}, '', url);
+          } else {
+            filterPosts('category', filterValue);
+            // Update URL with category parameter
+            const url = new URL(window.location);
+            url.searchParams.delete('tag'); // Clear tag if set
+            url.searchParams.set('category', filterValue);
+            window.history.pushState({}, '', url);
+          }
+        });
+      });
+    }, 100); // Small delay to ensure no conflicts
+    
+    // Tag filter buttons
+    tagFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active states
+        tagFilterBtns.forEach(b => {
+          b.classList.remove('bg-violet-100', 'text-violet-700', 'border-violet-300');
+          b.classList.add('bg-white', 'text-gray-600', 'border-gray-300');
+        });
+        btn.classList.remove('bg-white', 'text-gray-600', 'border-gray-300');
+        btn.classList.add('bg-violet-100', 'text-violet-700', 'border-violet-300');
+        
+        // Clear category filters
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-violet-600', 'text-white');
+          b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+        });
+        
+        // Filter posts and update URL
+        const filterValue = btn.dataset.filter;
+        filterPosts('tag', filterValue);
+        // Update URL with tag parameter
+        const url = new URL(window.location);
+        url.searchParams.delete('category'); // Clear category if set
+        url.searchParams.set('tag', filterValue);
+        window.history.pushState({}, '', url);
+      });
+    });
+  });
+  
+  // Helper function to create blog card HTML
+  function createBlogCard(post) {
+    const formatDate = (dateString) => {
+      return new Date(dateString).toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric' 
+      });
+    };
+    
+    const formatCategoryUrl = (cat) => cat.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+    
+    return `
+      <article class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-200 hover:border-violet-300">
+        <div class="relative">
+          <a href="/blog/${post.id.replace('.md', '')}" class="blog-card-link">
+            <img 
+              src="${post.data.featuredImage}" 
+              alt="${post.data.featuredImageAlt || post.data.title}"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          </a>
+          <div class="absolute top-4 left-4">
+            <div class="inline-flex items-center px-3 py-1 text-xs font-semibold bg-violet-600 text-white rounded-full">
+              ${post.data.category}
+            </div>
+          </div>
+        </div>
+        
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3 line-clamp-2 leading-tight">
+            <a href="/blog/${post.id.replace('.md', '')}" class="blog-card-link hover:text-violet-600 transition-colors">
+              ${post.data.title}
+            </a>
+          </h3>
+          <p class="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
+            ${post.data.excerpt}
+          </p>
+          
+          <div class="flex items-center justify-between text-sm">
+            <div class="flex items-center space-x-3">
+              ${post.data.authorImage ? `
+                <img 
+                  src="${post.data.authorImage}" 
+                  alt="${post.data.author}"
+                  class="w-8 h-8 rounded-full object-cover"
+                />
+              ` : ''}
+              <div>
+                <p class="font-medium text-gray-900">${post.data.author}</p>
+                <p class="text-gray-500">${formatDate(post.data.publishedDate)}</p>
+              </div>
+            </div>
+            <span class="text-violet-600 font-medium">${post.data.readingTime} min read</span>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+</script>
+
+<style>
+  /* Debug and fix tag clicking */
+  .tag-wrapper {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .tag-link {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 11;
+    display: inline-flex !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+  }
+  
+  /* Default styling for non-active tags */
+  .tag-link:not(.bg-violet-600) {
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+  }
+  
+  .tag-link:hover:not(.bg-violet-600) {
+    border-color: #8b5cf6 !important;
+    color: #7c3aed !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    transform: translateY(-1px);
+  }
+  
+  /* Keep active tag styling intact */
+  .tag-link.bg-violet-600 {
+    background: #7c3aed !important;
+    color: white !important;
+    border: 1px solid #7c3aed !important;
+  }
+  
+  /* Prevent any parent elements from capturing clicks */
+  .tag-wrapper * {
+    pointer-events: none;
+  }
+  
+  .tag-link {
+    pointer-events: auto !important;
+  }
+  
+  .tag-link * {
+    pointer-events: none !important;
+  }
+</style>

@@ -1,0 +1,227 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeroSection from '../components/sections/PageHeroSection.astro';
+import CookieBanner from '../components/ui/CookieBanner.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import TableOfContents from '../components/blog/TableOfContents.astro';
+import CTASection from '../components/sections/CTASection.astro';
+import { designSystem } from '../data/designSystem';
+
+// SEO Metadata
+const title = "Terms & Conditions | Investipal";
+const description = "Read Investipal's Terms and Conditions. Important legal information about using our AI-powered wealth management platform and website.";
+const canonical = "https://investipal.co/terms-conditions";
+
+// Page Data
+const pageData = {
+  hero: {
+    audienceText: "Legal Information",
+    title: "Terms & Conditions",
+    subtitle: "Important legal information about using Investipal's website and services. Please read these terms carefully before using our platform."
+  },
+  lastUpdated: "June 27, 2025"
+};
+
+// Generate table of contents headings for the standardized component
+const headings = [
+  { depth: 2, slug: "agreement", text: "Agreement" },
+  { depth: 2, slug: "modifications", text: "Modifications" },
+  { depth: 2, slug: "investment-advice", text: "Investment Information" },
+  { depth: 2, slug: "disclaimers", text: "Disclaimers" },
+  { depth: 2, slug: "risk-disclosure", text: "Risk Disclosure" },
+  { depth: 2, slug: "hypothetical-performance", text: "Hypothetical Performance" },
+  { depth: 2, slug: "third-party-funds", text: "Third Party Funds" },
+  { depth: 2, slug: "warranty-disclaimer", text: "Warranty Disclaimer" },
+  { depth: 2, slug: "accuracy", text: "Accuracy" },
+  { depth: 2, slug: "limitation-liability", text: "Limitation of Liability" },
+  { depth: 2, slug: "indemnification", text: "Indemnification" },
+  { depth: 2, slug: "governing-law", text: "Governing Law" }
+];
+
+// Generate structured data for Terms & Conditions
+const siteUrl = Astro.site?.toString() || 'https://investipal.co';
+const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
+
+const termsStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms & Conditions",
+  "description": description,
+  "url": currentUrl,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Investipal Inc.",
+    "url": siteUrl
+  },
+  "dateModified": "2025-06-27",
+  "inLanguage": "en-US",
+  "about": {
+    "@type": "Thing",
+    "name": "Terms of Service"
+  }
+};
+
+// Generate breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Terms & Conditions' }
+];
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  <!-- Terms & Conditions Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(termsStructuredData)} />
+  
+  <Header />
+  <Breadcrumb items={breadcrumbItems} />
+  
+  <main id="main">
+    
+    <!-- Hero Section -->
+    <PageHeroSection 
+      audienceText={pageData.hero.audienceText}
+      title={pageData.hero.title}
+      subtitle={pageData.hero.subtitle}
+    />
+
+    <!-- Terms Content -->
+    <section class="bg-white py-20">
+      <div class={designSystem.spacing.container}>
+        <article class="prose prose-lg max-w-none">
+          
+          <div class="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <p class={`text-sm ${designSystem.text.secondary} mb-2`}>
+              <strong>Last Updated:</strong> {pageData.lastUpdated}
+            </p>
+            <p class={`text-sm ${designSystem.text.secondary}`}>
+              <strong>Contact:</strong> For questions about these terms, contact us at 
+              <a href="mailto:info@investipal.co" class={designSystem.links.primary}>info@investipal.co</a>
+            </p>
+          </div>
+
+          <ol class="space-y-6 [counter-reset:item] list-none">
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              These terms and conditions are an agreement between you and Investipal Inc. ("<strong>Investipal</strong>," "<strong>we</strong>," or "<strong>our</strong>") and set forth the terms by which you may access and use investipal.co. By accessing this website (the "<strong>Site</strong>"), you acknowledge these terms and conditions of use and agree to be bound by them. If you do not agree to these terms, please discontinue accessing the Site immediately.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              We reserve the right, in our sole discretion, to modify, alter or otherwise update these terms and conditions at any time and you agree to be bound by such modifications, alterations or updates.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              This Site is only intended to provide you with general information and is neither an offer to sell nor a solicitation of an offer to purchase any security and may not be relied upon for investment purposes.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              Any commentaries and information contained in the Site should not be considered personal investment advice.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              Decisions to buy, sell, hold or trade in securities, and other investments involve risk and are best made based on the advice of qualified financial professionals. Any investment in securities or other investments involves a risk of substantial losses. Before undertaking any investment program, you should consult a qualified financial professional. Please consider carefully whether such investment is suitable for you in light of your financial condition and ability to bear financial risks. Under no circumstances shall we be liable for any loss or damage you or anyone else incurs as a result of any investment or investment activity that you or anyone else engages in based on any information or material you receive through Investipal or our services.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              Hypothetical performance results have many inherent limitations, some of which are mentioned below. No representation is being made that any account will or is likely to achieve profits or losses similar to those shown. In fact, there are frequently sharp differences between hypothetical performance results and actual results subsequently achieved by any particular investment program. One of the limitations of hypothetical performance results is that they are generally prepared with the benefit of hindsight. In addition, hypothetical investment does not involve financial risk and no hypothetical investment record can completely account for the impact of financial risk in actual investments. For example the ability to withstand losses or to adhere to a particular investment program in spite of the investment losses are material points, which can also adversely affect investment results. There are numerous other factors related to the market in general or to the implementation of any specific investment program which cannot be fully accounted for in the preparation of hypothetical performance results and all of which can adversely affect actual investment results.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              None of the material on investipal.co is to be construed as a solicitation, recommendation or offer to buy or sell any security, financial product or instrument. Any descriptions of fund terms set forth herein are only a summary of certain terms, are not intended to be complete, and are qualified in their entirety by the offering documents, subscription documents and other constituent documents of the applicable fund, which would need to be reviewed in order to receive a comprehensive set of terms and provisions. With respect to any specific third party manager or fund, Investipal (i) is not such manager or fund's marketer, adviser or agent, (ii) is not authorized to bind, or act on behalf of, them in any way or to make representations for or about them, and (iii) is not compensated by them for any such marketing activity.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              The Site is provided on an "as is" and "as available" basis, without any representations, warranties or conditions of any kind, whether expressed or implied, and including without limitation implied representations, warranties or conditions of title, non-infringement, merchantability, fitness for a particular purpose, performance, durability, availability, timeliness, accuracy, or completeness, all of which are hereby disclaimed by Investipal to the fullest extent permitted by law.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              Every effort has been made to ensure that the material contained on the site is accurate at the time of publication. However, Investipal will not under any circumstances be liable to you or any other person in any way for any loss or damages (direct, indirect, special, economic, incidental, consequential, punitive or exemplary, including without limitation loss of revenue, data, anticipated profits or lost business) in respect of use of, or inability to use, or any reliance on, the Site, any of its content or links (including without limitation any inaccuracies or viruses), or any web browser or other equipment.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              By accessing the Site, you agree to indemnify and hold harmless Investipal and its agents, suppliers and their respective directors, officers and employees from and against any and all actions, proceedings, costs, claims, liabilities, damages and expenses (including reasonable legal fees) arising from or in connection with a breach of these terms and conditions or the use of this Site.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              All of the Content on the Site we provide is the property of Investipal and/or providers of the Content under licence. "Content" means any information, mode of expression, or other material and services found on the Site including without limitation our writings, graphics and all other features. Such Content is protected by Canadian and worldwide copyright laws, trademark laws and treaty provisions. Our Content is intended for individual, non-commercial use only. Accordingly, Investipal grants you a limited, non-exclusive and non-transferable licence to download, use and display the Content for your personal and non-commercial use only, provided that the material remains intact including without limitation all copyright and proprietary notices. Except as expressly provided herein, you agree not to modify, reproduce, make derivative works of, retransmit, sell, publish, communicate, broadcast or otherwise make available any of the Content by any means including without limitation by caching, framing, or deep-linking without the prior written consent of Investipal.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              Links to other sites should not be taken as Investipal's endorsement or approval of such other sites, the third parties named therein, or their products and services, nor is any liability assumed for incompatibility, non-suitability, viral infection or other destructive/disruptive components on or from such other sites.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              The framing, mirroring, scraping or data-mining of the Site or any of its content in any form and by any method is strictly prohibited.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              Investipal cannot guarantee complete confidentiality or security for information that is transmitted electronically. By accessing the Site, you acknowledge that Investipal is not responsible for any damages or losses you may suffer as a result of your electronic transmission of confidential or sensitive information to us. Please refer to Investipal's <a href="/privacy-policy" class="text-investipal-600 hover:text-investipal-700 transition-colors">privacy policy</a> for more information.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              No consent or waiver by either party to, or of any breach or default by, the other party in its performance of its obligations under this agreement will be deemed or construed to be a consent to, or a waiver of, a continuing breach or default or any other breach or default of those or any other obligations of that party. No consent or waiver will be effective unless in writing.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              If any provision of these terms and conditions is found to be unlawful, void, or for any reason unenforceable, then that provision shall be deemed to be severed from the rest of these terms and conditions and shall not affect the validity and enforceability of any remaining provisions.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              Except where prohibited by applicable law, any controversy, claim or dispute arising out of or relating to these terms will be referred to and settled by private and confidential binding arbitration before a single arbitrator held in Toronto, Ontario in English and governed by Ontario law pursuant to the Arbitration Act 1991, (Ontario), as amended, replaced or re-enacted from time to time. Notwithstanding the foregoing, you agree that we have the right to pursue the protection of our intellectual property through the courts.
+            </li>
+
+            <li class="[counter-increment:item] before:content-[counter(item)'.'] before:font-bold before:text-investipal-600 before:mr-3">
+              These terms and conditions are governed by the laws of Ontario and the laws of Canada applicable therein, excluding any conflict of laws which would lead to the application of any other laws. Subject to the Arbitration and Actions paragraph above, you agree and hereby submit to the jurisdiction of the Federal Court of Canada and/or the courts of the Province of Ontario with respect to such matters.
+            </li>
+          </ol>
+
+          <div class="mt-12 p-6 bg-investipal-50 rounded-lg border border-investipal-200">
+            <h3 class="text-lg font-semibold text-investipal-900 mb-3">Questions About These Terms?</h3>
+            <p class="text-investipal-700 mb-4">
+              If you have any questions about these Terms & Conditions, please contact us:
+            </p>
+            <div class="space-y-2 text-sm text-investipal-600">
+              <p><strong>Email:</strong> <a href="mailto:info@investipal.co" class="text-investipal-600 hover:text-investipal-700 transition-colors">info@investipal.co</a></p>
+              <p><strong>Company:</strong> Investipal Inc.</p>
+              <p><strong>Jurisdiction:</strong> Ontario, Canada</p>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTASection />
+
+  </main>
+
+  <!-- Standardized Table of Contents -->
+  <TableOfContents headings={headings} readingTime={8} />
+  
+  <Footer />
+  <CookieBanner />
+</Layout>
+
+<style>
+  /* Custom styling for numbered list */
+  .prose ol {
+    padding-left: 0;
+  }
+  
+  .prose li {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  /* Ensure proper spacing between list items */
+  .prose ol li {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Style for the counter numbers */
+  .prose ol li::before {
+    display: inline-block;
+    min-width: 2rem;
+  }
+</style>

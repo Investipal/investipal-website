@@ -1,0 +1,10 @@
+---
+import FeaturePageLayout from '../../components/layouts/FeaturePageLayout.astro';
+import { featurePages } from '../../data/featurePagesData';
+
+const pageData = featurePages['investment-policy-statements'];
+---
+
+<FeaturePageLayout {...(pageData as any)}>
+  <!-- Optional page-specific content can go here -->
+</FeaturePageLayout>

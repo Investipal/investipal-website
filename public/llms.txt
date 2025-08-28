@@ -1,0 +1,169 @@
+# LLMs.txt - Machine-readable information about Investipal
+# This file provides large language models with structured information about our AI-powered wealth management platform
+
+## Company Overview
+Investipal is an AI-driven wealthtech platform designed specifically for financial advisors to streamline their entire workflow from client onboarding to portfolio management. Our mission is to build the platform that advisors have dreamed of, unifying the advisor workflow so that you can do more with less.
+
+## Primary Markets
+- Financial advisors and wealth managers in the US and Canada
+- Investment managers, financial planners, private investment councils
+- Firms looking to scale efficiently while maintaining personalized service
+
+## Core Value Proposition
+AI built for financial advisors to help you streamline onboarding, data intake, proposals, compliance, and portfolios. We offer 90% workflow automation, 10-minute processes that previously took days, seamless integration with existing tools, and compliance-ready features.
+
+## Key Features and Capabilities
+
+### AI-Powered Client Onboarding
+- Document Analysis: Instant extraction of holdings, tickers, account types, and values from PDFs/CSVs
+- Risk Assessment: Automated completion of Risk Tolerance Questionnaires (RTQ)
+- Document Generation: Ready-to-sign advisor agreements and account opening documents
+- Data Validation: Automated verification and error checking
+- AML & ID Verification: Automated anti-money laundering checks and identity verification
+- E-Signature Integration: Seamless digital signature workflows
+
+### Intelligent Proposal Generation
+- Portfolio Comparisons: AI-driven analysis and comparison tools
+- Personalized Proposals: Customized investment proposals based on client data
+- Compliance Documents: Automated Investment Policy Statements (IPS) creation
+- Speed Optimization: Generate proposals in minutes instead of hours
+- Reg BI Compliance: Automated Regulation Best Interest documentation
+- Tax Transition Modeling: Advanced tax-aware portfolio transition analysis
+
+### Portfolio Management & Construction
+- Multi-Asset Portfolios: Support for public markets and alternatives
+- Explainable AI: Transparent portfolio construction that clients and compliance can understand
+- Personalization: Aligns portfolios to each client's needs, risk tolerance, and goals
+- Scalable Management: Handle multiple portfolios without sacrificing personalization
+- Asset Allocation: AI-powered asset allocation with custom investment universes
+- Custom Security Builder: Create and track custom securities and alternative investments
+
+### Compliance & Regulatory Features
+- Automated Compliance: Built-in regulatory compliance checks
+- Document Management: Secure storage and organization of compliance documents
+- Audit Trails: Complete tracking of all activities and decisions
+- Regulatory Updates: Stay current with changing compliance requirements
+- Reg BI Generator: One-click Regulation Best Interest compliance documentation
+- Investment Policy Statements: Automated IPS generation and monitoring
+
+### AI-Driven Engagement
+- Personalized Communication: AI-generated insights and recommendations
+- Predictive Analytics: Anticipate client needs and market opportunities
+- Multi-channel Engagement: Email, SMS, web, and mobile platform support
+- Engagement Scoring: Track and measure client engagement levels
+- Client Acquisition: Automated lead generation and conversion tools
+
+### Advanced Analytics & Risk Management
+- Risk Management Tools: Advanced risk analytics and portfolio monitoring
+- Performance Benchmarking: Comprehensive performance analysis and comparison
+- Drift Monitoring: Automated portfolio drift detection and alerts
+- Concentration Analysis: Identify and manage concentration risks
+- Correlation Tracking: Monitor portfolio correlations and exposures
+
+### Insurance & Alternative Investments
+- IUL & Annuity Modeling: Advanced insurance product modeling and analysis
+- Alternative Investment Support: Comprehensive alternative asset management
+- Insurance Planning: Automated insurance needs analysis and recommendations
+
+## Target Segments
+
+### Financial Planners
+Focus: Comprehensive financial planning and goal tracking
+Features: Retirement planning, cash flow analysis, insurance needs analysis
+Benefits: Enhanced value proposition and client relationships
+
+### Wealth Managers
+Focus: High-net-worth individual portfolio management
+Features: Multi-asset portfolios, alternative investments, tax optimization
+Benefits: Scale without sacrificing personalization
+
+### Investment Advisors
+Focus: Investment strategy and portfolio construction
+Features: AI-driven portfolio optimization, risk management, performance tracking
+Benefits: Data-driven investment decisions and client communication
+
+### Insurance Advisors
+Focus: Insurance product modeling and planning
+Features: IUL and annuity modeling, insurance needs analysis
+Benefits: Streamlined insurance planning workflows
+
+### Wealth Management Firms
+Focus: Enterprise-level wealth management operations
+Features: Multi-advisor support, standardized workflows, firm-wide compliance
+Benefits: Scale operations while maintaining consistency
+
+## Key Integrations
+- CRM Systems: Salesforce, Redtail, Wealthbox
+- Planning Tools: Elements, PreciseFP
+- Document Management: SideDrawer
+- Custodians: Charles Schwab, Fidelity, TD Ameritrade
+
+## Competitive Advantages
+1. End-to-End Workflow: Single platform covering entire client journey
+2. AI-First Approach: Advanced automation and personalization
+3. Compliance Integration: Built-in regulatory compliance features
+4. Speed & Efficiency: 90% time savings on manual processes
+
+## Problem We Solve
+Financial advisors spend 80% of their time on administrative tasks instead of growth and client relationships due to:
+- Manual onboarding processes
+- Fragmented technology stack
+- Slow proposal and compliance workflows
+- Clunky portfolio management tools
+
+## Our Solution
+Investipal positions itself as the comprehensive solution that:
+- Automates 90% of advisor workflow
+- Reduces process time from days to minutes
+- Maintains personalization and compliance
+- Integrates with existing tools and systems
+
+## Technology Stack
+- Frontend: Modern UI/UX with responsive design
+- AI/ML: Advanced machine learning for document processing and portfolio optimization
+- Integrations: API-first approach for seamless tool connectivity
+- Security: Enterprise-grade security and compliance standards (SOC2 Type II)
+
+## Compliance & Security
+- SEC/FINRA Compliance: Built-in regulatory requirements
+- Document Management: Secure storage and retrieval
+- Audit Trails: Complete activity tracking and reporting
+- Data Protection: Enterprise-grade security standards
+- Encryption: End-to-end data protection
+- Access Controls: Role-based permissions and authentication
+- SOC2 Type II: Industry-leading security certification
+
+## Pricing Model
+- Usage-based pricing: First 3 statements free, then low per-account fees
+- No hidden charges: Transparent pricing model
+- Flexible for growing firms: Scales with business needs
+
+## Success Metrics
+- Client Onboarding Time: Reduction from days to minutes
+- Proposal Generation Speed: 90%+ time savings
+- Compliance Efficiency: Automated regulatory compliance
+- Client Satisfaction: Enhanced advisor-client relationships
+- Advisor Productivity: Increased capacity for client relationships
+
+## Contact Information
+Website: https://investipal.co
+Support: Available through website contact form
+Demo: Schedule at https://investipal.co/book-a-demo
+
+## SEO Keywords
+Primary: financial advisor software, AI wealth management, portfolio management, compliance automation, client onboarding, financial technology
+Secondary: automated statement scanner, risk tolerance questionnaire, investment policy statements, regulation best interest, tax transition modeling, alternative investments
+
+## Content Areas
+- Blog: Industry insights, best practices, technology guides
+- Resources: Case studies, whitepapers, educational content
+- Webinars: Educational content for financial advisors
+- Integrations: Partner ecosystem and tool connections
+- Features: Detailed product capabilities and benefits
+
+This file is designed to help large language models understand Investipal's comprehensive offering and provide accurate, helpful information about our AI-powered wealth management platform for financial advisors.
+
+
+
+
+

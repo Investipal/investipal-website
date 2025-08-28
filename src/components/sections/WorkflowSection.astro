@@ -1,0 +1,42 @@
+---
+import { workflowData } from '../../data/workflowData';
+---
+
+<section id="workflow" class="bg-gray-50 py-16 md:py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <div class="text-center mb-12 md:mb-16">
+      <div class="space-y-4">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 font-system_ui">
+          How it works
+        </h2>
+        <div class="max-w-3xl mx-auto">
+          <p class="text-lg md:text-xl text-gray-600 leading-relaxed font-system_ui">
+            Get started in minutes with our simple, streamlined workflow.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      {workflowData.map((step, index) => (
+        <div class="text-center group">
+          <div class="mb-6">
+            <!-- Step number badge -->
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-investipal-100 rounded-lg shadow-lg hover:scale-[1.02] transition-all duration-500 ease-out">
+              <span class="text-xl font-bold text-investipal-600">{index + 1}</span>
+            </div>
+          </div>
+          
+          <div class="space-y-3">
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-900 font-system_ui">
+              {step.title}
+            </h3>
+            <p class="text-gray-600 text-base md:text-lg leading-relaxed font-system_ui">
+              {step.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

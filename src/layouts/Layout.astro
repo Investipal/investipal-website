@@ -1,0 +1,203 @@
+---
+import '../styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
+
+export interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  canonical?: string;
+}
+
+const { 
+  title, 
+  description = "AI built for financial advisors to help you streamline compliance, build portfolios, and stay compliant in one seamless workflow.", 
+  keywords = "financial advisor software, AI wealth management, portfolio management, compliance automation, client onboarding, financial technology",
+  ogImage = "https://investipal.co/og-image.jpg",
+  canonical = "https://investipal.co"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Investipal" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Investipal" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonical} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
+    
+    <!-- View Transitions for SPA-like navigation -->
+    <ViewTransitions />
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#8b5cf6" />
+    <meta name="msapplication-TileColor" content="#8b5cf6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Investipal" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Investipal",
+      "url": "https://investipal.co",
+      "logo": "https://investipal.co/logo.png",
+      "description": "AI built for financial advisors to help you streamline compliance, build portfolios, and stay compliant in one seamless workflow.",
+      "sameAs": [
+        "https://linkedin.com/company/investipal",
+        "https://twitter.com/investipal"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+
+    <!-- Optimized Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Critical fonts for above-the-fold content -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Non-critical fonts loaded asynchronously -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;800&family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Fallback for browsers without JavaScript -->
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+    <!-- Early sanitizer to prevent malformed href requests (e.g., inline SVG becoming href) -->
+    <script is:inline>
+      (function() {
+        function stripBadHrefLike(el) {
+          try {
+            if (!el) return;
+            var href = el.getAttribute('href');
+            if (href && (/^\s*</.test(href) || href.indexOf('<path') !== -1 || href.indexOf('<svg') !== -1)) el.removeAttribute('href');
+            var src = el.getAttribute('src');
+            if (src && (/^\s*</.test(src) || src.indexOf('<path') !== -1 || src.indexOf('<svg') !== -1)) el.removeAttribute('src');
+          } catch(_) {}
+        }
+        // Pass 1: as soon as possible
+        try {
+          var els = document.querySelectorAll('[href], [src]');
+          els.forEach(stripBadHrefLike);
+        } catch(_) {}
+        // Observe future DOM changes (HMR/hydration)
+        try {
+          var mo = new MutationObserver(function(muts){
+            muts.forEach(function(m){
+              m.addedNodes && m.addedNodes.forEach(function(n){
+                if (n && n.querySelectorAll) n.querySelectorAll('[href], [src]').forEach(stripBadHrefLike);
+                stripBadHrefLike(n);
+              });
+            });
+          });
+          mo.observe(document.documentElement, { subtree: true, childList: true });
+        } catch(_) {}
+      })();
+    </script>
+  </head>
+  <body class="text-zinc-800 text-base not-italic normal-nums font-normal accent-auto bg-white box-border block tracking-[normal] leading-[27.2px] list-outside list-disc min-h-full text-start indent-[0px] normal-case visible border-separate font-inter">
+    <a href="#main" class="absolute text-white bg-black box-border block z-[1000] p-2 rounded-[3px] left-1.5 -top-10">Skip to main content</a>
+
+    <slot />
+
+    <!-- Optimized JavaScript Loading -->
+    <script>
+      // Critical: Cookie banner functionality - must be immediately available
+      window.handleCookieAccept = function() {
+        console.log('Cookies accepted globally');
+        // Add analytics tracking when ready
+      };
+
+      window.handleCookieDecline = function() {
+        console.log('Cookies declined globally');
+        // Disable analytics tracking
+      };
+    </script>
+    
+    <!-- Deferred: Non-critical JavaScript -->
+    <script defer is:inline>
+      // Non-critical functionality loaded after page is interactive
+      document.addEventListener('DOMContentLoaded', function() {
+        // Global click handler for cookie banner
+        document.addEventListener('click', function(e) {
+          const target = e.target;
+          
+          if (target && target.id === 'cookie-accept') {
+            e.preventDefault();
+            e.stopPropagation();
+            localStorage.setItem('cookie-choice', 'accepted');
+            const banner = document.getElementById('cookie-banner');
+            if (banner) banner.classList.add('hidden');
+            if (window.handleCookieAccept) window.handleCookieAccept();
+          } else if (target && target.id === 'cookie-decline') {
+            e.preventDefault();
+            e.stopPropagation();
+            localStorage.setItem('cookie-choice', 'declined');
+            const banner = document.getElementById('cookie-banner');
+            if (banner) banner.classList.add('hidden');
+            if (window.handleCookieDecline) window.handleCookieDecline();
+          }
+        }, false);
+
+        // Additional non-critical functionality can be added here
+        // Performance monitoring, analytics, etc.
+
+        // Sanitize any malformed anchor hrefs that contain inline SVG markup
+        try {
+          const anchors = document.querySelectorAll('a[href]');
+          anchors.forEach((a) => {
+            const href = a.getAttribute('href') || '';
+            if (/^\/?<\s*(path|svg)\b/i.test(href) || href.includes('<path ') || href.includes('<svg ')) {
+              a.removeAttribute('href');
+              a.addEventListener('click', (e) => e.preventDefault(), { once: true });
+            }
+          });
+          // Global guard as a fallback
+          document.addEventListener('click', (e) => {
+            const link = (e.target && (e.target.closest ? e.target.closest('a[href]') : null));
+            if (!link) return;
+            const href = link.getAttribute('href') || '';
+            if (/^\/?<\s*(path|svg)\b/i.test(href) || href.includes('<path ') || href.includes('<svg ')) {
+              e.preventDefault();
+              link.removeAttribute('href');
+            }
+          }, true);
+        } catch (err) {
+          console.warn('Anchor sanitizer failed:', err);
+        }
+      });
+    </script>
+  </body>
+</html>

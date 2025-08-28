@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeroSection from '../components/sections/PageHeroSection.astro';
+import CTASection from '../components/sections/CTASection.astro';
+import StandardButton from '../components/ui/StandardButton.astro';
+import StandardCard from '../components/ui/StandardCard.astro';
+import StandardIcon from '../components/ui/StandardIcon.astro';
+import StandardBadge from '../components/ui/StandardBadge.astro';
+import CookieBanner from '../components/ui/CookieBanner.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import { designSystem } from '../data/designSystem';
+
+// SEO Metadata
+const title = "About Us | Investipal";
+const description = "Learn about Investipal's mission to empower financial advisors with AI-powered tools. Discover our story, team, and commitment to building better investment relationships.";
+const canonical = "https://investipal.co/about-us";
+
+// Page Data
+const pageData = {
+  hero: {
+    title: "About Us",
+    subtitle: "Learn about our mission to empower financial advisors with AI-powered tools that enhance human connection and build better investment relationships.",
+    audienceText: "Our Story"
+  },
+  story: {
+    title: "Who We Are",
+    content: "Our story started on the trading floor at an investment bank. Having worked as a Quant and ETF research analyst, our co-founder, Cameron Howe, was asked by friends and advisors alike: What should I invest in? While a simple question, it warrants a complex answer as everyone has unique constraints, interests, goals. Cameron recognized the need for a tool that empowers investors of all skill levels to confidently invest on their own. And from there, Investipal was born."
+  },
+  mission: {
+    title: "Helping Advisors Build More Personal Relationships",
+    content: "Investipal believes that artificial intelligence is not a replacement for an advisor, but an enabler that lets you access a deeper level of personalization with clients that has not been possible due to scale challenges.",
+    details: "Our mission is to provide advisors with the support that enables advisors to unlock deeper levels of personalization with their clients. We're doing this by applying AI in areas best suited for it: portfolio management, onboarding and compliance - leaving you the time to grow your practice."
+  },
+  advisors: {
+    title: "Supported by our trusted advisors",
+    members: [
+      {
+        name: "Krista Carr",
+        role: "Former head of UBS Next, incubating technology across UBS's business.",
+        image: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/672e8c7ca4b90b405a96bf19_krista-carr.jpg"
+      },
+      {
+        name: "Clifton Shaller", 
+        role: "Wealth-tech executive, formerly at Nitrogen and Morningstar.",
+        image: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/672e8c85a2bcd4091b27d0a0_clifton-shaller.jpg"
+      },
+      {
+        name: "Ashley Dudzik",
+        role: "CMO at IncomeLab. Formerly at Morningstar.",
+        image: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/672e8c88bcb99594ecf0e9af_ashley-dudzik.jpg"
+      },
+      {
+        name: "Matthew Sweeney",
+        role: "Managing Partner at William Joseph Capital Management.",
+        image: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/672e8d5c47904a1224f94a15_matthew-sweeney.jpg"
+      }
+    ]
+  }
+};
+
+// Generate structured data for the About Us page
+const siteUrl = Astro.site?.toString() || 'https://investipal.co';
+const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
+
+const aboutUsStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Investipal",
+  "description": description,
+  "url": currentUrl,
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Investipal",
+    "url": siteUrl,
+    "description": pageData.mission.content,
+    "foundingLocation": {
+      "@type": "Place", 
+      "name": "Trading Floor, Investment Bank"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Cameron Howe",
+      "jobTitle": "Co-founder",
+      "description": "Former Quant and ETF research analyst"
+    },
+    "employee": pageData.advisors.members.map(advisor => ({
+      "@type": "Person",
+      "name": advisor.name,
+      "jobTitle": advisor.role,
+      "image": advisor.image
+    })),
+    "mission": pageData.mission.content
+  }
+};
+
+// Generate breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'About Us' }
+];
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  <!-- About Us Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(aboutUsStructuredData)} />
+  
+  <Header />
+  <Breadcrumb items={breadcrumbItems} />
+  
+  <main id="main">
+    
+    <!-- Hero Section - Using Standardized PageHeroSection -->
+    <PageHeroSection 
+      audienceText={pageData.hero.audienceText}
+      title={pageData.hero.title}
+      subtitle={pageData.hero.subtitle}
+    />
+
+    <!-- Story Section -->
+    <section class="bg-white py-20">
+      <div class={designSystem.spacing.container}>
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="space-y-6">
+            <h2 class={designSystem.typography.sectionTitle}>
+              {pageData.story.title}
+            </h2>
+            <p class={designSystem.typography.bodyLarge}>
+              {pageData.story.content}
+            </p>
+          </div>
+          <div class="relative">
+            <img 
+              src="https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/666872ff37bdf42ce9637d95_mission-image.jpg" 
+              alt="Investipal Mission" 
+              class="w-full h-auto rounded-lg shadow-lg"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 bg-gray-50">
+      <div class={designSystem.spacing.container}>
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+          <h2 class={designSystem.typography.sectionTitle}>
+            {pageData.mission.title}
+          </h2>
+          <p class={designSystem.typography.bodyLarge}>
+            {pageData.mission.content}
+          </p>
+          <p class={designSystem.typography.body}>
+            {pageData.mission.details}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advisory Board Section - Using Standardized Cards -->
+    <section class="bg-white py-20">
+      <div class={designSystem.spacing.container}>
+        <div class="text-center mb-12">
+          <h2 class={designSystem.typography.sectionTitle}>
+            {pageData.advisors.title}
+          </h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {pageData.advisors.members.map((advisor) => (
+            <div class="text-center space-y-4">
+              <div class="relative mx-auto w-24 h-24">
+                <img 
+                  src={advisor.image} 
+                  alt={advisor.name}
+                  class="w-full h-full object-cover rounded-full shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <h3 class={designSystem.typography.componentTitle}>
+                  {advisor.name}
+                </h3>
+                <p class={designSystem.typography.bodySmall}>
+                  {advisor.role}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTASection />
+
+  </main>
+  <Footer />
+  <CookieBanner />
+</Layout>

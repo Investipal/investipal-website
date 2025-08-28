@@ -1,0 +1,32 @@
+---
+// Standardized Checkmark Component - Ensures consistent styling across all pages
+export interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<!-- 
+  STANDARD CHECKMARK COMPONENT
+  
+  This component enforces the standardized checkmark styling across all pages:
+  - Soft green background (bg-green-100)
+  - Dark green checkmark (text-green-600)
+  - Fixed size (w-6 h-6 container, w-4 h-4 icon)
+  - No hover effects (static element)
+  
+  Usage:
+  <StandardCheckmark />
+-->
+<div class={`flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center ${className}`}>
+  <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+  </svg>
+</div>
+
+
+
+
+
+

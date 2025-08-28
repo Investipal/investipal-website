@@ -1,0 +1,50 @@
+---
+// Standardized Badge Component - Uses Design System Tokens
+import { designSystem } from '../../data/designSystem';
+
+export interface Props {
+  text: string;
+  variant?: 'hero' | 'featured' | 'category' | 'small';
+  className?: string;
+}
+
+const { text, variant = 'featured', className = '' } = Astro.props;
+
+// Variant styles using design system tokens
+const variantClasses = {
+  hero: designSystem.components.standardBadge,
+  featured: `${designSystem.components.badge} bg-investipal-100 text-investipal-800 text-sm font-medium`,
+  category: `${designSystem.components.badge} text-xs font-semibold bg-investipal-600 text-white px-3 py-1`,
+  small: `${designSystem.components.badge} text-xs font-medium bg-investipal-600 text-white px-2 py-1`
+};
+
+const heroInnerClasses = designSystem.components.standardBadgeInner;
+---
+
+<!-- 
+  STANDARD BADGE COMPONENT
+  
+  This component enforces the standardized badge styling across all pages:
+  - hero: Large badge for hero sections with inner container
+  - featured: Standard featured content badge (light purple)
+  - category: Category tags (dark purple)
+  - small: Smaller category tags
+  
+  Usage:
+  <StandardBadge text="For Wealth Managers" variant="hero" />
+  <StandardBadge text="Featured Article" variant="featured" />
+  <StandardBadge text="Technology" variant="category" />
+-->
+{variant === 'hero' ? (
+  <div class={`${variantClasses[variant]} ${className}`}>
+    <div class={heroInnerClasses}>
+      {text}
+    </div>
+  </div>
+) : (
+  <div class={`${variantClasses[variant]} ${className}`}>
+    {text}
+  </div>
+)}
+
+

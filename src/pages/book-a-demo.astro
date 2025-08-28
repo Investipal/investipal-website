@@ -1,0 +1,442 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import StandardButton from '../components/ui/StandardButton.astro';
+import CookieBanner from '../components/ui/CookieBanner.astro';
+import PageHeroSection from '../components/sections/PageHeroSection.astro';
+import TestimonialSection from '../components/sections/TestimonialSection.astro';
+
+// SEO and Meta data
+const title = "Schedule a Demo | See Investipal in Action";
+const description = "Book a personalized demo of Investipal's AI-powered wealth management platform. See how we can transform your advisory practice in just 30 minutes.";
+const canonical = "https://investipal.co/book-a-demo";
+const keywords = "investipal demo, financial advisor software demo, AI wealth management demo, advisory platform demo, schedule demo";
+
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Book a Demo', href: '/book-a-demo' }
+];
+
+// Demo Benefits Data
+const demoBenefits = [
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>`,
+    title: "See Live AI in Action",
+    description: "Watch our AI analyze real portfolio data and generate personalized investment strategies in real-time."
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>`,
+    title: "Custom ROI Analysis",
+    description: "Get a personalized analysis of how much time and money Investipal could save your specific practice."
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>`,
+    title: "Implementation Roadmap",
+    description: "Learn exactly how we'll integrate with your existing tech stack and client workflow."
+  }
+];
+
+// What to Expect Data
+const demoAgenda = [
+  {
+    time: "5 mins",
+    title: "Understanding Your Practice",
+    description: "We'll learn about your current workflow, client base, and specific challenges."
+  },
+  {
+    time: "15 mins",
+    title: "Live Platform Walkthrough",
+    description: "See Investipal's AI capabilities with your actual use cases and scenarios."
+  },
+  {
+    time: "7 mins",
+    title: "ROI & Implementation Discussion",
+    description: "Discover potential time savings, cost benefits, and next steps for your firm."
+  },
+  {
+    time: "3 mins",
+    title: "Q&A & Next Steps",
+    description: "Get answers to your specific questions and discuss implementation timeline."
+  }
+];
+
+// Demo FAQ Data
+const demoFaqData = [
+  {
+    question: "What should I prepare for the demo?",
+    answer: "Nothing! Our demo is designed to be plug-and-play. However, if you have specific use cases or challenges you'd like to discuss, feel free to bring those up during our conversation."
+  },
+  {
+    question: "How long is the demo session?",
+    answer: "The demo typically lasts 30 minutes, but we're flexible. If you need more time to explore specific features or have detailed questions, we're happy to extend the session."
+  },
+  {
+    question: "Will this be a sales pitch?",
+    answer: "Absolutely not. This is a genuine product demonstration focused on showing you how Investipal works and whether it's a good fit for your practice. There's no pressure to buy anything."
+  },
+  {
+    question: "Can multiple team members join the demo?",
+    answer: "Yes! We encourage team participation. The more stakeholders who see the demo, the better they'll understand how Investipal can benefit your entire practice."
+  },
+  {
+    question: "What happens after the demo?",
+    answer: "After the demo, we'll send you a summary of what we covered, answer any follow-up questions, and if you're interested, discuss next steps for implementation."
+  }
+];
+
+// Structured Data
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": title,
+  "description": description,
+  "url": canonical,
+  "mainEntity": {
+    "@type": "Service",
+    "name": "Investipal Demo",
+    "description": "Personalized demonstration of Investipal's AI-powered wealth management platform",
+    "provider": {
+      "@type": "Organization",
+      "name": "Investipal",
+      "url": "https://investipal.co"
+    },
+    "serviceType": "Software Demonstration",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "BusinessAudience",
+      "name": "Financial Advisors"
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbItems.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      ...(item.href && { "item": new URL(item.href, 'https://investipal.co').toString() })
+    }))
+  }
+};
+
+// FAQ Page Schema
+const faqPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": demoFaqData.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
+---
+
+<Layout title={title} description={description} canonical={canonical} keywords={keywords}>
+  <!-- Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <!-- FAQ Page Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqPageSchema)} />
+  
+  <Header />
+  <Breadcrumb items={breadcrumbItems} />
+
+  <main id="main">
+    <!-- Hero Section with Integrated Calendly - CONVERSION OPTIMIZED -->
+    <section class="bg-gradient-to-br from-white to-gray-50 py-16 md:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          
+          <!-- Left Column - Hero Content -->
+          <div>
+            <div class="mb-8">
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight font-system_ui mb-6">
+                See Investipal Transform Your Practice
+              </h1>
+              <p class="text-lg md:text-xl text-gray-600 leading-relaxed font-system_ui mb-8">
+                Book a personalized 30-minute demo and discover how our AI-powered platform can save you hours each week while delivering better client outcomes.
+              </p>
+            </div>
+
+            <!-- Demo Promise - Key Benefits -->
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <p class="text-gray-600 font-system_ui font-medium">No sales pressure - genuine product demonstration</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <p class="text-gray-600 font-system_ui font-medium">Tailored to your specific practice and use cases</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <p class="text-gray-600 font-system_ui font-medium">Get a custom ROI analysis for your firm</p>
+              </div>
+            </div>
+
+            <!-- Trust Signals -->
+            <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+              <div class="flex items-center justify-between text-center">
+                <div>
+                  <div class="text-2xl font-bold text-investipal-600 font-system_ui">$6B+</div>
+                  <div class="text-sm text-gray-600 font-system_ui">Total Client AUM</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-bold text-investipal-600 font-system_ui">90%</div>
+                  <div class="text-sm text-gray-600 font-system_ui">Time Savings</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-bold text-investipal-600 font-system_ui">SOC2</div>
+                  <div class="text-sm text-gray-600 font-system_ui">Compliant</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column - Calendly Booking Form -->
+          <div class="lg:pl-8">
+            <div class="bg-white rounded-xl shadow-xl p-8 border border-gray-200">
+              <div class="mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-system_ui mb-2">
+                  Schedule Your Demo
+                </h2>
+                <p class="text-gray-600 font-system_ui">
+                  Choose a time that works for you. No commitment required.
+                </p>
+              </div>
+              
+              <!-- Calendly Embed -->
+              <div id="calendly-container" class="rounded-lg">
+                <div class="calendly-inline-widget" data-url="https://calendly.com/d/47w-99r-fst?hide_gdpr_banner=1&primary_color=270367" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+              </div>
+              
+              <!-- Alternative Contact -->
+              <div class="mt-6 text-center pt-6 border-t border-gray-200">
+                <p class="text-sm text-gray-600 font-system_ui mb-2">
+                  Prefer to speak directly?
+                </p>
+                <a href="tel:+15551234567" class="text-investipal-600 hover:text-investipal-700 font-semibold font-system_ui transition-colors">
+                  📞 Call us at +1 (555) 123-4567
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Benefits Section - Following standard section patterns -->
+    <section class="bg-white py-16 md:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 font-system_ui">
+            What You'll See in Your Demo
+          </h2>
+          <div class="max-w-3xl mx-auto mt-6">
+            <p class="text-lg md:text-xl text-gray-600 leading-relaxed font-system_ui">
+              Get a personalized walkthrough tailored to your practice's specific needs and challenges.
+            </p>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          {demoBenefits.map((benefit) => (
+            <div class="group">
+              <div class="bg-gray-50 rounded-xl p-6 md:p-8 h-full hover:bg-gray-100 transition-colors duration-200">
+                <div class="inline-flex items-center justify-center w-12 h-12 bg-investipal-100 rounded-lg shadow-lg hover:scale-[1.02] transition-all duration-500 ease-out mb-6">
+                  <svg class="w-5 h-5 text-investipal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={benefit.icon}>
+                  </svg>
+                </div>
+                <h3 class="text-xl md:text-2xl font-semibold text-gray-900 mb-4 font-system_ui">
+                  {benefit.title}
+                </h3>
+                <p class="text-gray-600 text-base md:text-lg leading-relaxed font-system_ui">
+                  {benefit.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Agenda Section -->
+    <section class="bg-gray-50 py-16 md:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 font-system_ui">
+            Your 30-Minute Demo Agenda
+          </h2>
+          <div class="max-w-3xl mx-auto mt-6">
+            <p class="text-lg md:text-xl text-gray-600 leading-relaxed font-system_ui">
+              Here's exactly what we'll cover during your personalized demonstration.
+            </p>
+          </div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="space-y-6">
+            {demoAgenda.map((item, index) => (
+              <div class="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-gray-200">
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0">
+                    <div class="w-12 h-12 bg-investipal-100 rounded-lg flex items-center justify-center">
+                      <span class="text-investipal-600 font-bold text-sm font-system_ui">{item.time}</span>
+                    </div>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-900 mb-2 font-system_ui">
+                      {item.title}
+                    </h3>
+                    <p class="text-gray-600 text-base md:text-lg leading-relaxed font-system_ui">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <TestimonialSection />
+
+    <!-- FAQ Section - Following standard patterns -->
+    <section class="bg-white py-16 md:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 font-system_ui">
+            Demo Questions & Answers
+          </h2>
+          <div class="max-w-3xl mx-auto mt-6">
+            <p class="text-lg md:text-xl text-gray-600 leading-relaxed font-system_ui">
+              Common questions about our demo process and what to expect.
+            </p>
+          </div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="space-y-6">
+            {demoFaqData.map((faq, index) => (
+              <div class="border border-gray-200 rounded-lg">
+                <button
+                  class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors faq-toggle"
+                  data-target={`demo-faq-${index}`}
+                  aria-expanded="false"
+                >
+                  <span class="text-lg md:text-xl font-semibold text-gray-900 leading-tight pr-4 font-system_ui">
+                    {faq.question}
+                  </span>
+                  <svg class="w-5 h-5 text-gray-400 transform transition-transform faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </button>
+                <div id={`demo-faq-${index}`} class="hidden px-6 pb-4">
+                  <p class="text-lg text-gray-600 leading-relaxed font-system_ui">
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="bg-gradient-to-r from-investipal-600 to-investipal-700 py-16 md:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 font-system_ui">Ready to Transform Your Practice?</h2>
+        <p class="text-xl text-investipal-100 mb-8 max-w-3xl mx-auto font-system_ui">
+          Join hundreds of advisors who are already using AI to grow their practices more efficiently.
+        </p>
+        <div class="flex justify-center">
+          <StandardButton href="#calendly-container" variant="white">
+            Schedule Your Demo Now
+          </StandardButton>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <CookieBanner />
+</Layout>
+
+<script>
+  // FAQ Toggle Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const targetContent = document.getElementById(targetId);
+        const arrow = this.querySelector('.faq-arrow');
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        
+        // Close all other FAQs
+        faqToggles.forEach(otherToggle => {
+          if (otherToggle !== this) {
+            const otherTargetId = otherToggle.getAttribute('data-target');
+            const otherContent = document.getElementById(otherTargetId);
+            const otherArrow = otherToggle.querySelector('.faq-arrow');
+            
+            otherContent?.classList.add('hidden');
+            otherArrow?.classList.remove('rotate-180');
+            otherToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+        
+        // Toggle current FAQ
+        if (isExpanded) {
+          targetContent?.classList.add('hidden');
+          arrow?.classList.remove('rotate-180');
+          this.setAttribute('aria-expanded', 'false');
+        } else {
+          targetContent?.classList.remove('hidden');
+          arrow?.classList.add('rotate-180');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  });
+
+  // Smooth scrolling for anchor links
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .faq-arrow {
+    transition: transform 0.2s ease;
+  }
+  
+  .faq-arrow.rotate-180 {
+    transform: rotate(180deg);
+  }
+</style>

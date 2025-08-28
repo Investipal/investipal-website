@@ -1,0 +1,126 @@
+---
+// Category Filter Component
+// Provides filtering UI for integration categories
+
+import { designSystem } from '../../data/designSystem';
+import { integrationCategories, getAllCategories, integrationsData, getIntegrationsByCategory } from '../../data/integrationsData';
+
+export interface Props {
+  activeCategory?: string;
+}
+
+const { activeCategory = 'all' } = Astro.props;
+const categories = getAllCategories();
+
+// Calculate actual counts server-side
+const categoryCounts = {
+  all: integrationsData.length,
+  ...Object.fromEntries(
+    categories.map(({ key }) => [
+      key, 
+      getIntegrationsByCategory(key as keyof typeof integrationCategories).length
+    ])
+  )
+};
+---
+
+<!-- 
+  CATEGORY FILTER COMPONENT
+  
+  Interactive filter buttons for integration categories.
+  Uses JavaScript for client-side filtering.
+  
+  Usage:
+  <CategoryFilter activeCategory="all" />
+-->
+<div class="bg-white rounded-lg border border-gray-200 p-6">
+  <h3 class={`${designSystem.typography.componentTitle} mb-4`}>
+    Filter by Category
+  </h3>
+  
+  <div class="space-y-2">
+    <!-- All Categories -->
+    <button 
+      data-category="all"
+      class={`category-filter w-full text-left px-3 py-2 rounded-lg transition-colors font-medium text-sm ${
+        activeCategory === 'all' 
+          ? 'bg-investipal-100 text-investipal-700' 
+          : 'text-gray-600 hover:bg-gray-50'
+      }`}
+    >
+      All Integrations
+      <span class="float-right text-xs text-gray-400" data-count="all">{categoryCounts.all}</span>
+    </button>
+    
+    <!-- Category Buttons -->
+    {categories.map(({ key, value }) => (
+      <button 
+        data-category={key}
+        class={`category-filter w-full text-left px-3 py-2 rounded-lg transition-colors font-medium text-sm ${
+          activeCategory === key 
+            ? 'bg-investipal-100 text-investipal-700' 
+            : 'text-gray-600 hover:bg-gray-50'
+        }`}
+      >
+        {value}
+        <span class="float-right text-xs text-gray-400" data-count={key}>{categoryCounts[key] || 0}</span>
+      </button>
+    ))}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('CategoryFilter loaded');
+    
+    const categoryButtons = document.querySelectorAll('.category-filter');
+    console.log('Found category buttons:', categoryButtons.length);
+    
+    // Simple filtering function
+    function filterCards(selectedCategory) {
+      console.log('Filtering by category:', selectedCategory);
+      const integrationCards = document.querySelectorAll('[data-integration-category]');
+      console.log('Cards to filter:', integrationCards.length);
+      
+      integrationCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-integration-category');
+        
+        if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+          card.style.display = 'block';
+          card.style.opacity = '1';
+          card.classList.remove('filtering-out', 'filtering-hidden');
+        } else {
+          card.style.opacity = '0.3';
+          card.classList.add('filtering-out');
+          setTimeout(() => {
+            if (card.classList.contains('filtering-out')) {
+              card.style.display = 'none';
+              card.classList.add('filtering-hidden');
+            }
+          }, 200);
+        }
+      });
+    }
+    
+    // Setup filter buttons
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const selectedCategory = this.getAttribute('data-category');
+        console.log('Button clicked:', selectedCategory);
+        
+        // Update button states
+        categoryButtons.forEach(btn => {
+          btn.classList.remove('bg-investipal-100', 'text-investipal-700');
+          btn.classList.add('text-gray-600', 'hover:bg-gray-50');
+        });
+        
+        this.classList.add('bg-investipal-100', 'text-investipal-700');
+        this.classList.remove('text-gray-600', 'hover:bg-gray-50');
+        
+        // Filter cards
+        filterCards(selectedCategory);
+      });
+    });
+  });
+</script>
+

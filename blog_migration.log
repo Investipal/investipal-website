@@ -1,0 +1,118 @@
+2025-08-27 12:28:13,281 - INFO - Starting migration from Wealth Mgmt Site - Blog Posts (1).csv
+2025-08-27 12:28:13,281 - ERROR - Migration failed: [Errno 2] No such file or directory: 'Wealth Mgmt Site - Blog Posts (1).csv'
+2025-08-27 12:28:42,826 - INFO - Starting migration from ..\test-migration-3-posts.csv
+2025-08-27 12:28:42,827 - INFO - Processing: How to Create Professional Investment Proposals in Under 10 Minutes
+2025-08-27 12:28:43,930 - INFO - Processing: AI Portfolio Optimization: What Financial Advisors Need to Know in 2025
+2025-08-27 12:28:45,141 - INFO - Processing: How to Extract Portfolio Data from PDF Statements Using AI
+2025-08-27 12:28:45,770 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 12:32:13,966 - INFO - Starting migration from ..\test-migration-3-posts.csv
+2025-08-27 12:32:13,967 - INFO - Processing: How to Create Professional Investment Proposals in Under 10 Minutes
+2025-08-27 12:32:15,028 - INFO - Processing: AI Portfolio Optimization: What Financial Advisors Need to Know in 2025
+2025-08-27 12:32:16,236 - INFO - Processing: How to Extract Portfolio Data from PDF Statements Using AI
+2025-08-27 12:32:16,854 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 12:38:18,530 - INFO - Starting migration from test-single-post-full.csv
+2025-08-27 12:38:18,530 - ERROR - Migration failed: [Errno 2] No such file or directory: 'test-single-post-full.csv'
+2025-08-27 12:38:27,283 - INFO - Starting migration from ..\test-single-post-full.csv
+2025-08-27 12:38:27,284 - INFO - Processing: How to Create Professional Investment Proposals in Under 10 Minutes
+2025-08-27 12:38:28,369 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 12:44:19,512 - INFO - Starting migration from test-formatting-fix.csv
+2025-08-27 12:44:19,512 - ERROR - Migration failed: [Errno 2] No such file or directory: 'test-formatting-fix.csv'
+2025-08-27 12:44:28,006 - INFO - Starting migration from ..\test-formatting-fix.csv
+2025-08-27 12:44:28,007 - INFO - Processing: Test Formatting Fix
+2025-08-27 12:44:28,117 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 12:45:23,014 - INFO - Starting migration from ..\test-formatting-fix.csv
+2025-08-27 12:45:23,015 - INFO - Processing: Test Formatting Fix
+2025-08-27 12:45:23,124 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 12:46:10,085 - INFO - Starting migration from ..\test-formatting-fix.csv
+2025-08-27 12:46:10,086 - INFO - Processing: Test Formatting Fix
+2025-08-27 12:46:10,196 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 12:50:46,919 - INFO - Starting migration from ..\test-single-proposal-post.csv
+2025-08-27 12:50:46,920 - INFO - Processing: How to Create Professional Investment Proposals in Under 10 Minutes
+2025-08-27 12:50:48,292 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20\(And%20What%20To%20Do%20About%20It\: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20%5C(And%20What%20To%20Do%20About%20It%5C
+2025-08-27 12:50:48,763 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20\(And%20What%20To%20Do%20About%20It\: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20%5C(And%20What%20To%20Do%20About%20It%5C
+2025-08-27 12:50:49,182 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20\(18\: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20%5C(18%5C
+2025-08-27 12:50:49,623 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20\(19\: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20%5C(19%5C
+2025-08-27 12:50:50,054 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20\(20\: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20%5C(20%5C
+2025-08-27 12:50:50,577 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 12:51:57,032 - INFO - Starting migration from ..\test-single-proposal-post.csv
+2025-08-27 12:51:57,033 - INFO - Processing: How to Create Professional Investment Proposals in Under 10 Minutes
+2025-08-27 12:51:58,392 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20\(And%20What%20To%20Do%20About%20It\: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20%5C(And%20What%20To%20Do%20About%20It%5C
+2025-08-27 12:51:58,830 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20\(And%20What%20To%20Do%20About%20It\: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20%5C(And%20What%20To%20Do%20About%20It%5C
+2025-08-27 12:51:59,285 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20\(18\: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20%5C(18%5C
+2025-08-27 12:51:59,712 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20\(19\: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20%5C(19%5C
+2025-08-27 12:52:00,375 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20\(20\: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20%5C(20%5C
+2025-08-27 12:52:00,921 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 13:00:35,511 - INFO - Starting migration from test-single-post.csv
+2025-08-27 13:00:35,512 - ERROR - Migration failed: [Errno 2] No such file or directory: 'test-single-post.csv'
+2025-08-27 13:00:47,032 - INFO - Starting migration from ..\test-single-post.csv
+2025-08-27 13:00:47,033 - INFO - Processing: How to Create Professional Investment Proposals in Under 10 Minutes
+2025-08-27 13:00:47,034 - ERROR - Failed to process How to Create Professional Investment Proposals in Under 10 Minutes: Invalid frontmatter: Missing required field: draft
+2025-08-27 13:00:47,139 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 13:01:10,615 - INFO - Starting migration from ..\test-single-post.csv
+2025-08-27 13:01:10,615 - INFO - Processing: How to Create Professional Investment Proposals in Under 10 Minutes
+2025-08-27 13:01:10,620 - WARNING - Content validation issues for how-to-create-professional-investment-proposals-in-under-10-minutes: Contains formatting issue: missing space after bold text; Contains broken headers across lines
+2025-08-27 13:01:10,621 - INFO - [DRY RUN] Would write: src\content\blog\how-to-create-professional-investment-proposals-in-under-10-minutes.md
+2025-08-27 13:01:10,723 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 13:01:18,908 - INFO - Starting migration from ..\test-single-post.csv
+2025-08-27 13:01:18,909 - INFO - Processing: How to Create Professional Investment Proposals in Under 10 Minutes
+2025-08-27 13:01:19,021 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 13:09:15,791 - INFO - Starting migration from ..\Wealth Mgmt Site - Blog Posts - CLEANED-PILOT.csv
+2025-08-27 13:09:15,804 - INFO - Processing: How to Create Professional Investment Proposals in Under 10 Minutes
+2025-08-27 13:09:17,628 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It
+2025-08-27 13:09:18,126 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It
+2025-08-27 13:09:18,598 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20(18: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20(18
+2025-08-27 13:09:19,070 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20(19: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20(19
+2025-08-27 13:09:19,517 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20(20: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20(20
+2025-08-27 13:09:20,097 - INFO - Processing: AI Portfolio Optimization: What Financial Advisors Need to Know in 2025
+2025-08-27 13:09:21,324 - INFO - Skipping ai-portfolio-optimization-what-financial-advisors-need-to-know-in-2025 (not in only_slugs filter)
+2025-08-27 13:09:21,425 - INFO - Processing: How to Extract Portfolio Data from PDF Statements Using AI
+2025-08-27 13:09:21,941 - INFO - Skipping how-to-extract-portfolio-data-from-pdf-statements-using-ai (not in only_slugs filter)
+2025-08-27 13:09:22,043 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 13:11:39,360 - INFO - Starting migration from ..\Wealth Mgmt Site - Blog Posts - CLEANED-PILOT.csv
+2025-08-27 13:11:39,361 - INFO - Processing: How to Create Professional Investment Proposals in Under 10 Minutes
+2025-08-27 13:11:41,065 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It
+2025-08-27 13:11:41,474 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It
+2025-08-27 13:11:41,942 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20(18: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20(18
+2025-08-27 13:11:42,399 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20(19: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20(19
+2025-08-27 13:11:42,848 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20(20: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20(20
+2025-08-27 13:11:43,393 - INFO - Processing: AI Portfolio Optimization: What Financial Advisors Need to Know in 2025
+2025-08-27 13:11:44,572 - INFO - Skipping ai-portfolio-optimization-what-financial-advisors-need-to-know-in-2025 (not in only_slugs filter)
+2025-08-27 13:11:44,673 - INFO - Processing: How to Extract Portfolio Data from PDF Statements Using AI
+2025-08-27 13:11:45,180 - INFO - Skipping how-to-extract-portfolio-data-from-pdf-statements-using-ai (not in only_slugs filter)
+2025-08-27 13:11:45,288 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 13:13:31,814 - INFO - Starting migration from ..\Wealth Mgmt Site - Blog Posts - CLEANED-PILOT.csv
+2025-08-27 13:13:31,815 - INFO - Processing: How to Create Professional Investment Proposals in Under 10 Minutes
+2025-08-27 13:13:33,562 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It
+2025-08-27 13:13:33,977 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It
+2025-08-27 13:13:34,467 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20(18: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20(18
+2025-08-27 13:13:34,900 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20(19: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20(19
+2025-08-27 13:13:35,316 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20(20: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20(20
+2025-08-27 13:13:35,859 - INFO - Processing: AI Portfolio Optimization: What Financial Advisors Need to Know in 2025
+2025-08-27 13:13:37,034 - INFO - Skipping ai-portfolio-optimization-what-financial-advisors-need-to-know-in-2025 (not in only_slugs filter)
+2025-08-27 13:13:37,135 - INFO - Processing: How to Extract Portfolio Data from PDF Statements Using AI
+2025-08-27 13:13:37,643 - INFO - Skipping how-to-extract-portfolio-data-from-pdf-statements-using-ai (not in only_slugs filter)
+2025-08-27 13:13:37,745 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 13:15:12,991 - INFO - Starting migration from ..\Wealth Mgmt Site - Blog Posts - CLEANED-PILOT.csv
+2025-08-27 13:15:12,992 - INFO - Processing: How to Create Professional Investment Proposals in Under 10 Minutes
+2025-08-27 13:15:14,741 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It
+2025-08-27 13:15:15,185 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It
+2025-08-27 13:15:15,676 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20(18: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20(18
+2025-08-27 13:15:16,135 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20(19: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20(19
+2025-08-27 13:15:16,575 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20(20: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20(20
+2025-08-27 13:15:17,155 - INFO - Processing: AI Portfolio Optimization: What Financial Advisors Need to Know in 2025
+2025-08-27 13:15:18,461 - INFO - Skipping ai-portfolio-optimization-what-financial-advisors-need-to-know-in-2025 (not in only_slugs filter)
+2025-08-27 13:15:18,564 - INFO - Processing: How to Extract Portfolio Data from PDF Statements Using AI
+2025-08-27 13:15:19,108 - INFO - Skipping how-to-extract-portfolio-data-from-pdf-statements-using-ai (not in only_slugs filter)
+2025-08-27 13:15:19,210 - INFO - Migration report saved to blog_migration_report.md
+2025-08-27 13:17:41,115 - INFO - Starting migration from ..\Wealth Mgmt Site - Blog Posts - CLEANED-PILOT.csv
+2025-08-27 13:17:41,116 - INFO - Processing: How to Create Professional Investment Proposals in Under 10 Minutes
+2025-08-27 13:17:42,804 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7308908c78582288cb9b1_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It
+2025-08-27 13:17:43,254 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427017d376d221e46d672_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It
+2025-08-27 13:17:43,748 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20(18: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e4278bd19f14e8eb7677af_Incorporating%20Client%20Parameters%20(18
+2025-08-27 13:17:44,179 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20(19: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e427a1831aca86ea64f4d5_Incorporating%20Client%20Parameters%20(19
+2025-08-27 13:17:44,630 - ERROR - Failed to download image https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20(20: 403 Client Error: Forbidden for url: https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eacc8265c01acb6755f549_Incorporating%20Client%20Parameters%20(20
+2025-08-27 13:17:45,253 - INFO - Processing: AI Portfolio Optimization: What Financial Advisors Need to Know in 2025
+2025-08-27 13:17:46,474 - INFO - Skipping ai-portfolio-optimization-what-financial-advisors-need-to-know-in-2025 (not in only_slugs filter)
+2025-08-27 13:17:46,576 - INFO - Processing: How to Extract Portfolio Data from PDF Statements Using AI
+2025-08-27 13:17:47,126 - INFO - Skipping how-to-extract-portfolio-data-from-pdf-statements-using-ai (not in only_slugs filter)
+2025-08-27 13:17:47,229 - INFO - Migration report saved to blog_migration_report.md
