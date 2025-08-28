@@ -7,10 +7,9 @@ updatedDate: "2025-08-07T04:18:56.559Z"
 category: "AI"
 tags: ["[]"]
 slug: "personalization-at-scale-how-ai-automation-and-alternative-assets-are-redefining-wealth-management"
-featuredImage: "/images/blog/personalization-at-scale-how-ai-automation-and-alternative-assets-are-redefining-wealth-management__689429305b5819fb02ba2505_pexels-photo-6693636.jpeg"
+featuredImage: "/images/blog/personalization-at-scale-how-ai-automation-and-alternative-assets-are-redefining-wealth-management__hero.png"
 featuredImageAlt: "Personalization at Scale: How AI, Automation, and Alternative Assets Are Redefining Wealth Management"
-draft: "false"
----
+draft: "false"---
 <p>
 Delivering a truly personalized wealth management experience at scale has moved from buzzword to business imperative. For financial advisors, <a href="/segments/wealth-managers">wealth managers</a>, and RIA firm owners, the landscape is shifting quickly: investors—especially next-gen and sophisticated clients—now demand strategies that reflect their unique risk, goals, and values, all delivered with speed, transparency, and accountability. Meeting these expectations requires more than best intentions; it calls for the right blend of technology, process, and investment sophistication.</p>
 

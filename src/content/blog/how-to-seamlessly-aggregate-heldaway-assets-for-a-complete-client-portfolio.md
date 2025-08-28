@@ -7,10 +7,9 @@ updatedDate: 2025-05-29T15:47:50.709Z
 category: "Portfolio Management"
 tags: ["Held-Away Assets"]
 slug: "how-to-seamlessly-aggregate-heldaway-assets-for-a-complete-client-portfolio"
-featuredImage: "/images/blog/how-to-seamlessly-aggregate-heldaway-assets-for-a-complete-client-portfolio__68388144f457c15ed23aa5dc_Personalization_20at_20Scale_20The_20Next_20Frontier_20in_20Wealth_20Management_20_9_.png"
+featuredImage: "/images/blog/how-to-seamlessly-aggregate-heldaway-assets-for-a-complete-client-portfolio__hero.png"
 featuredImageAlt: "How to Seamlessly Aggregate Held-Away Assets for a Complete Client Portfolio"
-draft: false
----
+draft: false---
 <p>One of the most critical yet underutilized tactics for advisors who want to deliver truly holistic <a href="/blog/category/portfolio-management">portfolio management</a> is the seamless aggregation of held-away assets - assets that clients own outside of their primary advisory relationship. As an independent advisor, you know how elusive a complete client financial picture can be. Retirement accounts parked at old employers, legacy 401(k)s, HSAs, 529 plans, and scattered brokerage accounts often remain outside your managed universe. Yet, these assets aren't just peripheral - they're often central to the client’s financial outcomes.</p>
 
 <h2>Why Held-Away Asset Aggregation is No Longer Optional</h2>

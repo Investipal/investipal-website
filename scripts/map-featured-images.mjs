@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 // Map real images to blog posts' frontmatter.featuredImage
 // Heuristics:
-// 1) If first in-body image exists under /public, use it
-// 2) Else, find a file in /public/images/blog whose filename starts with the post slug
-// 3) Else, pick a file that contains the slug tokens
-// 4) Else, fallback to placeholder
+// 1) Prefer a file in /public/images/blog whose filename starts with the post slug
+// 2) Else, pick a file that contains the slug tokens
+// 3) Else, fallback to placeholder
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -51,18 +50,10 @@ function upsertYamlKey(yaml, key, value, eol) {
   return yaml.trimEnd() + eol + line + eol;
 }
 
-function resolveFromBody(content) {
-  const m = content.match(/!\[[^\]]*\]\((\/images\/[\w\-\/%\.]+)\)/i);
-  if (!m) return null;
-  const rel = m[1];
-  const abs = path.join(publicDir, rel.replace(/^\//, ''));
-  return fs.existsSync(abs) ? rel : null;
-}
-
-function resolveFromImages(slug) {
+function resolveFromImages(slug, usedSet) {
   const norm = normalizeSlug(slug);
   // prefix match first
-  const prefix = blogImages.find((f) => normalizeSlug(f).startsWith(norm));
+  const prefix = blogImages.find((f) => normalizeSlug(f).startsWith(norm) && !usedSet.has(f));
   if (prefix) return `/images/blog/${prefix}`;
   // token contains match
   const tokens = norm.split('-').filter(Boolean);
@@ -72,12 +63,13 @@ function resolveFromImages(slug) {
       const score = tokens.reduce((acc, t) => acc + (nf.includes(t) ? 1 : 0), 0);
       return { f, score };
     })
+    .filter((x) => x.score > 0 && !usedSet.has(x.f))
     .sort((a, b) => b.score - a.score);
-  if (scored[0] && scored[0].score > 0) return `/images/blog/${scored[0].f}`;
+  if (scored[0]) return `/images/blog/${scored[0].f}`;
   return null;
 }
 
-function processFile(filePath) {
+function processFile(filePath, usedSet) {
   const raw = fs.readFileSync(filePath, 'utf8');
   const eol = raw.includes('\r\n') ? '\r\n' : '\n';
   const bounds = frontmatterBounds(raw);
@@ -97,14 +89,15 @@ function processFile(filePath) {
     }
   }
 
-  let resolved = resolveFromBody(after);
-  if (!resolved) resolved = resolveFromImages(slug);
+  let resolved = resolveFromImages(slug, usedSet);
   if (!resolved) resolved = placeholder;
 
   const newYaml = upsertYamlKey(yaml, 'featuredImage', resolved, eol);
   const updated = before + '---' + eol + newYaml + '---' + eol + after;
   if (updated !== raw) {
     fs.writeFileSync(filePath, updated, 'utf8');
+    const fileName = resolved.startsWith('/images/blog/') ? resolved.replace('/images/blog/', '') : null;
+    if (fileName) usedSet.add(fileName);
     return { filePath, featuredImage: resolved };
   }
   return null;
@@ -112,10 +105,11 @@ function processFile(filePath) {
 
 function main() {
   const files = fs.readdirSync(blogDir).filter((f) => f.endsWith('.md'));
+  const usedSet = new Set();
   const changes = [];
   for (const f of files) {
     const p = path.join(blogDir, f);
-    const res = processFile(p);
+    const res = processFile(p, usedSet);
     if (res) changes.push(res);
   }
   console.log(JSON.stringify({ changed: changes.length, changes }, null, 2));

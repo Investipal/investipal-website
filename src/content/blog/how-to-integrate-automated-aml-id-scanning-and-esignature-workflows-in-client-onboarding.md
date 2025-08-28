@@ -7,10 +7,9 @@ updatedDate: 2025-08-14T12:41:38.388Z
 category: "Onboarding"
 tags: []
 slug: "how-to-integrate-automated-aml-id-scanning-and-esignature-workflows-in-client-onboarding"
-featuredImage: "/images/blog/how-to-integrate-automated-aml-id-scanning-and-esignature-workflows-in-client-onboarding__68906b5a4065359b47ec0b2b_pexels-photo-33243214.jpeg"
+featuredImage: "/images/blog/how-to-integrate-automated-aml-id-scanning-and-esignature-workflows-in-client-onboarding__hero.png"
 featuredImageAlt: "Streamlined client onboarding technology interface for advisor workflow automation"
-draft: false
----
+draft: false---
 <p>The manual <a href="/features/client-acquisition">client onboarding</a> process remains one of the most frustrating roadblocks for financial advisors, RIA firm owners, and wealth managers aiming to scale their practice. Between chasing down documents, verifying identity, performing AML checks, and collecting signatures, it’s easy to lose days—or even weeks—to fragmented workflows and repetitive, manual admin. In a world where compliance demands are rising and clients expect digital-first experiences, integrating automated AML, ID scanning, and e-signature workflows isn’t just a nice-to-have—it's a competitive necessity.</p>
 
 <h2>Why Automate Onboarding? Pain Points That Hold You Back</h2>

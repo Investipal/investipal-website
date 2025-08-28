@@ -7,10 +7,9 @@ updatedDate: "2025-08-11T11:13:07.930Z"
 category: "Onboarding"
 tags: ["[]"]
 slug: "leveraging-embedded-esignature-and-id-verification-to-accelerate-secure-client-onboarding-in-wealth-management"
-featuredImage: "/images/blog/leveraging-embedded-esignature-and-id-verification-to-accelerate-secure-client-onboarding-in-wealth-management__6899d043f5e72ed50e4c8dc3_pexels-photo-6667688.jpeg"
+featuredImage: "/images/blog/leveraging-embedded-esignature-and-id-verification-to-accelerate-secure-client-onboarding-in-wealth-management__hero.png"
 featuredImageAlt: "Leveraging Embedded E-Signature and ID Verification to Accelerate Secure Client Onboarding in Wealth Management"
-draft: "false"
----
+draft: "false"---
 <p><a href="/features/client-acquisition">Client onboarding</a> is the bottleneck where most friction, errors, and lost opportunities occur for advisory firms. It’s also the point where experience, compliance, and operational efficiency all need to align—without compromise. For RIAs, wealth managers, and financial planners, deploying embedded e-signature and ID verification isn’t just about keeping up with digitization; it’s about engineering a faster, more secure, and compliance-ready onboarding flow that matches the client-centric standards of the modern era.</p>
 
 <h2>The Core Problem: Manual, Fragmented Onboarding Kills Growth</h2>

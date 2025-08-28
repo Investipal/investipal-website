@@ -7,10 +7,9 @@ updatedDate: "2025-06-02T15:01:22.261Z"
 category: "Portfolio Management"
 tags: []
 slug: "how-to-set-up-automated-portfolio-drift-alerts-a-guide-for-financial-advisors"
-featuredImage: "/images/blog/how-to-set-up-automated-portfolio-drift-alerts-a-guide-for-financial-advisors__683dbcc14723b2b7d3b606eb_Automating_20Financial_20Advisory_20Practices_20How_20to_20Build_20a_20Lean_20Advisory_20Team_20_4_.png"
+featuredImage: "/images/blog/how-to-set-up-automated-portfolio-drift-alerts-a-guide-for-financial-advisors__hero.png"
 featuredImageAlt: "How to Set Up Automated Portfolio Drift Alerts: A Guide for Financial Advisors"
-draft: "false"
----
+draft: "false"---
 <p>Portfolio drift is a silent, but ever-present risk for financial advisors. In an age where clients expect not just performance, but ongoing vigilance and personalized advice, the ability to monitor and respond to allocation changes - before they spiral out of control - is now table stakes. Automated portfolio drift alerts are your early warning system, turning what was once a painstaking, manual process into a proactive value-add for your clients and practice.</p>
 
 <h2>Why Automating Portfolio Drift Monitoring Matters</h2>
