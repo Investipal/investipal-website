@@ -15,6 +15,7 @@ import ProductCTA from '../components/blog/ProductCTA.astro';
 import StandardBadge from '../components/ui/StandardBadge.astro';
 import Breadcrumb from '../components/ui/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
+import fs from 'node:fs';
 
 export interface Props {
   frontmatter: {
@@ -81,6 +82,17 @@ const breadcrumbItems = [
   { name: 'Blog', href: '/blog' },
   { name: frontmatter.title }
 ];
+
+// Safely resolve featured image: use placeholder if the referenced file is missing
+let resolvedFeaturedImage = '/images/blog/placeholder-image.png';
+try {
+  if (frontmatter?.featuredImage) {
+    const abs = new URL(`../../public${frontmatter.featuredImage}`, import.meta.url);
+    if (fs.existsSync(abs)) {
+      resolvedFeaturedImage = frontmatter.featuredImage;
+    }
+  }
+} catch {}
 
 // Generate structured data for the blog post
 const articleStructuredData = {
@@ -253,13 +265,14 @@ const articleStructuredData = {
         </div>
 
         <!-- Featured Image -->
-        {frontmatter.featuredImage && (
+        {resolvedFeaturedImage && (
           <div class="mb-8">
             <img 
-              src={frontmatter.featuredImage} 
+              src={resolvedFeaturedImage} 
               alt={frontmatter.featuredImageAlt}
               class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg"
               loading="eager"
+              onerror="this.onerror=null;this.src='/images/blog/placeholder-image.png'"
             />
           </div>
         )}
@@ -286,6 +299,23 @@ const articleStructuredData = {
     </article>
       </div>
     </section>
+
+    <!-- Defensive enhancement: ensure body images never render broken -->
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const container = document.querySelector('.blog-article-container');
+        if (!container) return;
+        const imgs = container.querySelectorAll('img');
+        imgs.forEach((img) => {
+          if (!img.getAttribute('loading')) img.setAttribute('loading', 'lazy');
+          img.setAttribute('decoding', 'async');
+          img.addEventListener('error', () => {
+            img.src = '/images/blog/placeholder-image.png';
+            img.classList.add('bg-gray-50', 'object-contain');
+          }, { once: true });
+        });
+      });
+    </script>
 
     <!-- Product CTA -->
     <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
