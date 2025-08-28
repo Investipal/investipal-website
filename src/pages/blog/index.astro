@@ -46,10 +46,17 @@ const postsWithReadingTime = publishedPosts.map(post => ({
 
 // Build a list of available blog images for heuristic matching
 const blogImagesDir = new URL('../../public/images/blog/', import.meta.url);
+const thumbImagesDir = new URL('../../public/images/thumbnails/', import.meta.url);
 let blogImageFiles: string[] = [];
+let thumbImageFiles: string[] = [];
 try {
   blogImageFiles = fs
     .readdirSync(blogImagesDir)
+    .filter((f) => /\.(png|jpe?g|webp|avif)$/i.test(f));
+} catch {}
+try {
+  thumbImageFiles = fs
+    .readdirSync(thumbImagesDir)
     .filter((f) => /\.(png|jpe?g|webp|avif)$/i.test(f));
 } catch {}
 
@@ -59,10 +66,30 @@ function resolveFeaturedImage(post: any): string {
   if (post?.data?.featuredImage) return post.data.featuredImage;
   const slug = String(post.id || '').replace(/\.md$/i, '');
   const normSlug = normalize(slug);
-  // Heuristic: choose first file whose normalized name includes the slug
-  const match = blogImageFiles.find((f) => normalize(f).includes(normSlug));
-  if (match) return `/images/blog/${match}`;
-  // Try category-based graphic in general folder
+  // 1) Strong prefix match: slug__* or slug.* in blog images
+  const startsMatch = blogImageFiles.find((f) => {
+    const n = normalize(f);
+    return n.startsWith(`${normSlug}__`) || n.startsWith(`${normSlug}.`);
+  });
+  if (startsMatch) return `/images/blog/${startsMatch}`;
+  // 2) Try thumbnails folder
+  const thumbMatch = thumbImageFiles.find((f) => {
+    const n = normalize(f);
+    return n.startsWith(`${normSlug}__`) || n.startsWith(`${normSlug}.`);
+  });
+  if (thumbMatch) return `/images/thumbnails/${thumbMatch}`;
+  // 3) Fuzzy overlap score
+  const slugTokens = normSlug.split('-').filter(Boolean);
+  let best: {file?: string; score: number} = { score: 0 };
+  for (const f of blogImageFiles) {
+    const tokens = normalize(f).split('-');
+    const score = slugTokens.filter(t => tokens.includes(t)).length;
+    if (score > best.score) best = { file: f, score };
+  }
+  if (best.file && best.score >= Math.max(2, Math.floor(slugTokens.length * 0.25))) {
+    return `/images/blog/${best.file}`;
+  }
+  // 4) Category general image
   const cat = normalize(String(post?.data?.category || ''));
   const general = new URL('../../public/images/general/', import.meta.url);
   try {
@@ -74,8 +101,11 @@ function resolveFeaturedImage(post: any): string {
 }
 
 // Get featured post (first featured post or most recent)
-const featuredPost = postsWithReadingTime.find(post => post.data.featured) || postsWithReadingTime[0];
-const otherPosts = postsWithReadingTime.filter(post => post.id !== featuredPost?.id);
+const featuredPostBase = postsWithReadingTime.find(post => post.data.featured) || postsWithReadingTime[0];
+const featuredPost = featuredPostBase ? { ...featuredPostBase, data: { ...featuredPostBase.data, featuredImage: resolveFeaturedImage(featuredPostBase) } } : undefined;
+const otherPosts = postsWithReadingTime
+  .filter(post => post.id !== featuredPost?.id)
+  .map((p) => ({ ...p, data: { ...p.data, featuredImage: resolveFeaturedImage(p) } }));
 
 // Lightweight client-safe data for dynamic interactions
 const clientOtherPostsData = otherPosts.map((post) => ({
@@ -97,10 +127,7 @@ const clientOtherPostsData = otherPosts.map((post) => ({
 // Pagination settings
 const POSTS_PER_PAGE = 6;
 const totalOtherPosts = otherPosts.length;
-const initialPosts = otherPosts.slice(0, POSTS_PER_PAGE).map((p) => ({
-  ...p,
-  data: { ...p.data, featuredImage: resolveFeaturedImage(p) }
-}));
+const initialPosts = otherPosts.slice(0, POSTS_PER_PAGE);
 const hasMorePosts = totalOtherPosts > POSTS_PER_PAGE;
 
 // Get all categories and tags for navigation (from filterable posts only)
