@@ -5,7 +5,7 @@ author: "Investipal Team"
 publishedDate: "2025-08-11T11:13:07.930Z"
 updatedDate: "2025-08-11T11:13:07.930Z"
 category: "Onboarding"
-tags: ["[]"]
+tags: []
 slug: "leveraging-embedded-esignature-and-id-verification-to-accelerate-secure-client-onboarding-in-wealth-management"
 featuredImage: "/images/blog/leveraging-embedded-esignature-and-id-verification-to-accelerate-secure-client-onboarding-in-wealth-management__hero.png"
 featuredImageAlt: "Leveraging Embedded E-Signature and ID Verification to Accelerate Secure Client Onboarding in Wealth Management"

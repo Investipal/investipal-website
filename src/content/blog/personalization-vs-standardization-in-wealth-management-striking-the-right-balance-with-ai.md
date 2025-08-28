@@ -5,11 +5,11 @@ author: "Investipal Team"
 publishedDate: "2025-08-14T12:41:37.836Z"
 updatedDate: "2025-08-14T12:41:37.836Z"
 category: "AI"
-tags: ["[]"]
+tags: []
 slug: "personalization-vs-standardization-in-wealth-management-striking-the-right-balance-with-ai"
 featuredImage: "/images/blog/personalization-vs-standardization-in-wealth-management-striking-the-right-balance-with-ai__6889a3311298f57c17b61d8b_pexels-photo-33175666.jpeg"
 featuredImageAlt: "Modern wealth management approach balancing personalized service with standardized efficient processes"
-draft: "false"
+draft: false
 ---
 <p>Financial advisors stand at a unique inflection point. Clients expect tailored advice, instant <a href="/blog/category/onboarding">onboarding</a>, precise compliance—and they want it delivered faster than ever. But how do you offer meaningful personalization at scale, while running a profitable, efficient practice? Striking the right balance between personalization and standardization isn’t just a theoretical debate: it’s the challenge at the heart of modern wealth management.</p>
 

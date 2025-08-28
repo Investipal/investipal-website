@@ -75,7 +75,7 @@ const breadcrumbItems = [
   keywords="investipal podcast, wealth management podcast, financial advisor podcast, investing conversations"
 >
   <!-- Podcast Series Structured Data -->
-  <script type="application/ld+json" set:html={JSON.stringify(podcastSeriesStructuredData)} />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(podcastSeriesStructuredData)} />
   
   <Header />
   <Breadcrumb items={breadcrumbItems} />
@@ -186,7 +186,7 @@ const breadcrumbItems = [
                   <div class="flex items-center justify-between text-sm">
                     <div class="flex items-center space-x-2">
                       <div>
-                        <p class="font-medium text-gray-900">Episode {effectiveFeatured[0].episodeNumber || 'Latest'}</p>
+                        <p class="font-medium text-gray-900">Latest Episode</p>
                         <p class="text-gray-500">
                           {formatDate(effectiveFeatured[0].publishedDate)}
                         </p>
@@ -410,7 +410,8 @@ const breadcrumbItems = [
   }
 </style>
 
-<script>
+<script is:inline>
+  // @ts-nocheck
   // Podcast filtering functionality
   document.addEventListener('DOMContentLoaded', () => {
     console.log('Podcast index page loaded');

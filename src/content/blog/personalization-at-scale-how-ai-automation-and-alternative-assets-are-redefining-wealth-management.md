@@ -5,7 +5,7 @@ author: "Investipal Team"
 publishedDate: "2025-08-07T04:18:56.559Z"
 updatedDate: "2025-08-07T04:18:56.559Z"
 category: "AI"
-tags: ["[]"]
+tags: []
 slug: "personalization-at-scale-how-ai-automation-and-alternative-assets-are-redefining-wealth-management"
 featuredImage: "/images/blog/personalization-at-scale-how-ai-automation-and-alternative-assets-are-redefining-wealth-management__hero.png"
 featuredImageAlt: "Personalization at Scale: How AI, Automation, and Alternative Assets Are Redefining Wealth Management"

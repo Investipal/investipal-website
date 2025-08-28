@@ -5,7 +5,7 @@
 import PodcastPageLayout from '../../components/layouts/PodcastPageLayout.astro';
 import { getCollection } from 'astro:content';
 
-function toEpisode(entry) {
+function toEpisode(entry: any) {
   const d = entry.data;
   return {
     slug: entry.slug,
@@ -51,8 +51,8 @@ const episode = toEpisode(entry);
 const relatedEpisodes = all
   .filter((e) => e.slug !== entry.slug)
   .filter((e) => {
-    const t = e.data.topics || [];
-    return episode.topics.some((x) => t.includes(x));
+    const t: string[] = e.data.topics || [];
+    return episode.topics.some((x: string) => t.includes(x));
   })
   .sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime())
   .slice(0, 3)
