@@ -32,7 +32,7 @@ const {
     <link rel="canonical" href={canonical} />
     <!-- Favicon: use Investipal icon (fallback to SVG if PNG missing) -->
     <link rel="icon" type="image/png" href="/images/logos/favicon_32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Remove preload of SVG to avoid “preloaded but not used” warning and ensure PNG shows -->
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -93,7 +93,7 @@ const {
     </noscript>
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml">
+    <!-- Removed SVG favicon preload to prevent overriding PNG favicon -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
