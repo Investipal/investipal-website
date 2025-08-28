@@ -7,8 +7,7 @@ updatedDate: "2025-07-21T11:22:27.620Z"
 category: "Compliance"
 tags: ["[]"]
 slug: "how-to-automate-sustainable-investing-esg-screening-ai-portfolio-optimization-compliance-reporting"
-featuredImage: "/images/blog/how-to-automate-sustainable-investing-esg-screening-ai-portfolio-optimization-compliance-reporting__6874d7b092c86f98dd44a79a_pexels-photo-18069082.jpeg"
----
+featuredImage: "/images/blog/how-to-automate-sustainable-investing-esg-screening-ai-portfolio-optimization-compliance-reporting__hero.png"---
 <p>Sustainable and ESG-driven investing is moving fast from a niche specialty to a standard expectation among high-value client segments. But if you’re an independent advisor, <a href="/segments/wealth-managers">wealth manager</a>, or RIA firm leader, the reality of offering ESG portfolios at scale remains a manual, resource-draining headache—especially when it comes to data intake, portfolio construction, screening, and compliance documentation. The good news: automation is changing this, making sustainable investing not only scalable but remarkably efficient, without losing sight of personalization or regulatory scrutiny.</p>
 
 <img src="/images/blog/how-to-automate-sustainable-investing-esg-screening-ai-portfolio-optimization-compliance-reporting__6874d7b092c86f98dd44a79a_pexels-photo-18069082.jpeg" alt="Abstract geometric object with yellow top on a minimalist grid background." width="50%" height="auto" style="max-width: 90vw; border-radius: 10px;"/>
