@@ -15,13 +15,13 @@ export const companyLogos: CompanyLogo[] = [
   },
   {
     id: 'wellington-altus',
-    src: "/images/external/68557fdc0f44e1d557a7a557_wellington%20altus%20logo.png",
+    src: "/images/external/68557fdc0f44e1d557a7a557_wellington-altus-logo.png",
     alt: 'Wellington Altus',
     className: "h-8 max-w-full"
   },
   {
     id: 'raymond-james',
-    src: "/images/external/689ca20e87c6eb62afb3f61d_raymond-james-logo%20(1).png",
+    src: "/images/external/689ca20e87c6eb62afb3f61d_raymond-james-logo-1.png",
     alt: 'Raymond James',
     className: "h-8 max-w-full"
   },
@@ -33,7 +33,7 @@ export const companyLogos: CompanyLogo[] = [
   },
   {
     id: 'company-5',
-    src: "/images/external/689f31db5221da1e6a8fb977_image%20-%20edited.png",
+    src: "/images/external/689f31db5221da1e6a8fb977_image-edited.png",
     alt: 'Company logo',
     className: "h-8 max-w-full"
   }

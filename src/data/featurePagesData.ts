@@ -62,7 +62,7 @@ export const featurePages = {
     featureName: 'Automated Statement Scanner',
     title: 'Parse & Analyze Client Account Statements in Seconds',
     subtitle: 'Let AI automatically read, extract, organize and analyze the holdings data of your clients portfolio.',
-    heroImage: '/images/external/66cf592dcb1be92d31050903_account%20statement%20scanning%20for%20financial%20advisors%201.png',
+    heroImage: '/images/external/66cf592dcb1be92d31050903_account-statement-scanning-for-financial-advisors-1.png',
     heroImageAlt: 'Automated Statement Scanner Dashboard',
 
     // Features Section (2x2 grid)
@@ -88,7 +88,7 @@ export const featurePages = {
         description: 'Download clean, organized data in CSV format for further analysis or import into your tools.'
       }
     ],
-    dashboardImage: '/images/external/66cf56bf0f86f453970dad3d_2024%2c%2018_51_39%20gmt-4%201%20(3).png',
+    dashboardImage: '/images/external/66cf56bf0f86f453970dad3d_2024-18_51_39-gmt-4-1-3.png',
     dashboardImageAlt: 'Portfolio Analytics Dashboard',
 
     // Productivity Section
@@ -111,7 +111,7 @@ export const featurePages = {
     featureName: 'Portfolio Creation',
     title: 'AI-Powered Asset Allocation, Stewarded by You',
     subtitle: 'Easily create and manage hyper-personalized portfolios across public equities and alternative assets in a matter of seconds - at scale. Transparent explanations mitigate "black box" risks.',
-    heroImage: '/images/external/672e80ad7acd7627388aeb71_33.3%25%20(1).png',
+    heroImage: '/images/external/672e80ad7acd7627388aeb71_33.3-1.png',
     heroImageAlt: 'AI-powered asset allocation dashboard showing portfolio creation interface',
 
     // Features Section (2x2 grid)
@@ -137,7 +137,7 @@ export const featurePages = {
         description: 'Stay ahead of drift with intelligent monitoring. Receive actionable alerts when portfolios need rebalancing, along with suggested adjustments that keep you aligned with mandates while minimizing unnecessary turnover.'
       }
     ],
-    dashboardImage: '/images/external/672e8161712202e983252f86_33.3%25%20(3).png',
+    dashboardImage: '/images/external/672e8161712202e983252f86_33.3-3.png',
     dashboardImageAlt: 'Asset allocation dashboard showing portfolio analytics and optimization tools',
 
     // Productivity Section
@@ -160,7 +160,7 @@ export const featurePages = {
     featureName: 'Automated Lead Nuturing', // Note: keeping the typo from live site
     title: 'Close More Leads with AI-Driven Personalized Engagement',
     subtitle: 'We all want every prospect to close today—but what if they don\'t? If you\'re relying on monthly follow-ups or generic posts, you\'re missing key chances to re-engage. Investipal bridges that gap by monitoring each prospect\'s actual portfolio and letting you know when it\'s time to step in with meaningful, data-backed insights.',
-    heroImage: '/images/external/67d2fb99697373d9bc7afaaa_screenshot%202025-03-13%20111643.png',
+    heroImage: '/images/external/67d2fb99697373d9bc7afaaa_screenshot-2025-03-13-111643.png',
     heroImageAlt: 'AI-driven engagement graph showing investment performance metrics for effective client engagement',
 
     // Features Section (2x2 grid)
@@ -186,7 +186,7 @@ export const featurePages = {
         description: 'No more lukewarm "Just checking in" emails. Let timely alerts drive a conversation around potential upgrades, missed gains, or new investment opportunities.'
       }
     ],
-    dashboardImage: '/images/external/67d2fc16d99cc77d92191a9d_screenshot%202025-03-13%20111543.png',
+    dashboardImage: '/images/external/67d2fc16d99cc77d92191a9d_screenshot-2025-03-13-111543.png',
     dashboardImageAlt: 'AI-driven engagement dashboard showing portfolio tracking and alerts',
 
     // Productivity Section
@@ -209,7 +209,7 @@ export const featurePages = {
     featureName: 'Sales Enablement Platform',
     title: 'Automate Your Client Acquisition Process with AI',
     subtitle: 'From risk assessment to portfolio analysis and personalized proposals, Investipal empowers advisors to focus on building relationships and growing their practice.',
-    heroImage: '/images/external/66e49de3e0861a7034eb995e_investment%20proposal%20generator.png',
+    heroImage: '/images/external/66e49de3e0861a7034eb995e_investment-proposal-generator.png',
     heroImageAlt: 'MacBook mockup showing investment proposal generator interface',
 
     // Features Section (2x2 grid)
@@ -235,7 +235,7 @@ export const featurePages = {
         description: 'Create personalized investment proposals instantly, giving you more time to focus on building relationships.'
       }
     ],
-    dashboardImage: '/images/external/66e49e9b47b74cbcf82ad5a2_portfolio%20comparison%20(1).png',
+    dashboardImage: '/images/external/66e49e9b47b74cbcf82ad5a2_portfolio-comparison-1.png',
     dashboardImageAlt: 'Dashboard mockup showing portfolio comparison interface',
 
     // Productivity Section
@@ -258,7 +258,7 @@ export const featurePages = {
     featureName: 'Regulation Best Interest (Reg BI) Generator',
     title: 'Generate Compliant Reg BI Documentation in 1-Click with AI',
     subtitle: 'Streamline your Reg BI compliance process and automate disclosure generation.',
-    heroImage: '/images/external/66e3394ad754f2dd7ec8ee68_reg%20bi%20(1).png',
+    heroImage: '/images/external/66e3394ad754f2dd7ec8ee68_reg-bi-1.png',
     heroImageAlt: 'Regulation Best Interest Generator dashboard showing compliance workflow and documentation generation',
 
     // Features Section (2x2 grid)
@@ -284,7 +284,7 @@ export const featurePages = {
         description: 'Stay ahead of regulatory changes with real-time updates and automated compliance checks, ensuring consistent adherence to Reg BI obligations.'
       }
     ],
-    dashboardImage: '/images/external/66e33a7b1564936bac69f8a9_risk%20profile%20(1).png',
+    dashboardImage: '/images/external/66e33a7b1564936bac69f8a9_risk-profile-1.png',
     dashboardImageAlt: 'Regulation Best Interest compliance dashboard showing risk profile and client assessment tools',
 
     // Productivity Section
@@ -307,7 +307,7 @@ export const featurePages = {
     featureName: 'Investment Policy Statement Generator',
     title: 'Generate Personalized Investment Policy Statements in 1-Click with AI',
     subtitle: 'Streamline your compliance documentation and automate drift monitoring. No manual data entry required.',
-    heroImage: '/images/external/66da118db938e0ddbcc47d8c_investment%20policy%20statement%20generator.png',
+    heroImage: '/images/external/66da118db938e0ddbcc47d8c_investment-policy-statement-generator.png',
     heroImageAlt: 'Investment Policy Statement Generator dashboard showing automated compliance documentation',
 
     // Features Section (2x2 grid)
@@ -333,7 +333,7 @@ export const featurePages = {
         description: 'Ensure consistency and alignment with automated drift alerts.'
       }
     ],
-    dashboardImage: '/images/external/66df52298b82cebf2ffd7e59_untitled%20design%20(3).png',
+    dashboardImage: '/images/external/66df52298b82cebf2ffd7e59_untitled-design-3.png',
     dashboardImageAlt: 'Investment Policy Statement dashboard showing portfolio allocation and monitoring features',
 
     // Productivity Section
@@ -356,7 +356,7 @@ export const featurePages = {
     featureName: 'Risk Insights',
     title: 'Detect, Analyze, and Mitigate Portfolio Risk in Real-Time with AI',
     subtitle: 'Uncover hidden concentration risks and correlations. Analyze asset class, geographic, and sector exposure. Stay ahead of market shifts with automated drift alerts, and optimize portfolios effortlessly using advanced rebalancing tools.',
-    heroImage: '/images/external/66e30ff444d57784dc98bf20_risk%20insights%20(3).png',
+    heroImage: '/images/external/66e30ff444d57784dc98bf20_risk-insights-3.png',
     heroImageAlt: 'Risk insights dashboard showing portfolio risk analysis and monitoring tools',
 
     // Features Section (2x2 grid)
@@ -382,7 +382,7 @@ export const featurePages = {
         description: 'Leverage advanced rebalancing tools using minimum volatility and maximum Sharpe ratio strategies. Fine-tune portfolios efficiently, balancing risk and return to meet your clients\' unique goals.'
       }
     ],
-    dashboardImage: '/images/external/66e316ea14404e1e88b824c8_untitled%20design%20(4).png',
+    dashboardImage: '/images/external/66e316ea14404e1e88b824c8_untitled-design-4.png',
     dashboardImageAlt: 'Risk management dashboard showing portfolio analysis and rebalancing tools',
 
     // Productivity Section
@@ -405,7 +405,7 @@ export const featurePages = {
     featureName: 'Custom Security Builder',
     title: 'Effortlessly Create & Manage Custom Securities at Scale',
     subtitle: 'Effortlessly create, customize, and track securities. Whether managing alternative investments, private equity, or structured products, our builder enables precise security modeling, automated structuring, and seamless performance tracking.',
-    heroImage: '/images/external/67a0f97d1cbc00d15a66b4da_screenshot%202025-02-03%20121414.png',
+    heroImage: '/images/external/67a0f97d1cbc00d15a66b4da_screenshot-2025-02-03-121414.png',
     heroImageAlt: 'Custom Security Builder interface showcasing features like modeling, proposal generation, and data optimization tools',
 
     // Features Section (2x2 grid)
@@ -431,7 +431,7 @@ export const featurePages = {
         description: 'Build structures like private equity funds, annuities, and more.'
       }
     ],
-    dashboardImage: '/images/external/67a0fa5860e896984e58e055_screenshot%202025-02-03%20121808.png',
+    dashboardImage: '/images/external/67a0fa5860e896984e58e055_screenshot-2025-02-03-121808.png',
     dashboardImageAlt: 'Visual representation of the Custom Security Builder tool showcasing features like data entry automation and proposal generation',
 
     // Productivity Section
@@ -454,7 +454,7 @@ export const featurePages = {
     featureName: 'Sales Enablement Platform',
     title: 'Automate Your IUL and Annuity Modeling Process with AI',
     subtitle: 'Investipal\'s Advanced IUL & Annuity Modeling tool simplifies policy design, premium calculations, and proposals, enabling advisors to focus on client relationships instead of manual tasks.',
-    heroImage: '/images/external/678577d2945b0c05117d13dc_screenshot%202025-01-13%20152940.png',
+    heroImage: '/images/external/678577d2945b0c05117d13dc_screenshot-2025-01-13-152940.png',
     heroImageAlt: 'IUL & Annuity Modeling dashboard showing automated policy design and calculations',
 
     // Features Section (2x2 grid)
@@ -480,7 +480,7 @@ export const featurePages = {
         description: 'Generate personalized, data-driven proposals that inspire confidence and turn prospects into long-term clients.'
       }
     ],
-    dashboardImage: '/images/external/67857da6d8c446a3445ae3d0_iul%20modeler%20(2).png',
+    dashboardImage: '/images/external/67857da6d8c446a3445ae3d0_iul-modeler-2.png',
     dashboardImageAlt: 'IUL & Annuity Modeling Dashboard showing comprehensive policy analysis and modeling tools',
 
     // Productivity Section
