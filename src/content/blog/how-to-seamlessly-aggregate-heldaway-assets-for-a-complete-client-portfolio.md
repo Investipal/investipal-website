@@ -18,7 +18,7 @@ draft: false
 <ul>
   <li><strong>Comprehensive Risk Oversight:</strong> Without insight into held-away assets, you risk making recommendations blind to overall allocation, sector concentrations, or hidden fees draining long-term results.</li>
   <li><strong>Greater Tax Efficiency:</strong> Tax-loss harvesting and withdrawal sequencing become guesswork if you don't see the client’s full investment footprint.</li>
-  <li><strong>Stronger Retention &amp; Loyalty:</strong> When clients see you taking a truly personalized approach that incorporates <em>all</em> of their assets, even indirectly, it builds stickier relationships and increased wallet share over time.</li>
+  <li><strong>Stronger Retention & Loyalty:</strong> When clients see you taking a truly personalized approach that incorporates <em>all</em> of their assets, even indirectly, it builds stickier relationships and increased wallet share over time.</li>
   <li><strong>Opportunity for Growth:</strong> Our industry shows that increased visibility into held-away assets leads to additional AUM growth, as trust and performance drive greater consolidation under your management.</li>
 </ul>
 
@@ -34,7 +34,7 @@ draft: false
 <h2>Step-By-Step: Our Approach to Seamless Held-Away Asset Aggregation</h2>
 <p>At Investipal, real transformation comes from treating aggregation as a holistic, advisor-friendly workflow - not a collection of disconnected tools. Here’s how we recommend tackling the process in a way that feels intuitive to both you and your clients:</p>
 
-<h3>1. <strong>Engage Clients with the Right Conversation &amp; Consent</strong></h3>
+<h3>1. <strong>Engage Clients with the Right Conversation & Consent</strong></h3>
 <p>Start with proactive, non-intimidating conversations. Frame aggregation as about their best interest and complete wealth care - not as an asset grab. Use digital <a href="/blog/category/onboarding">onboarding</a> that:</p>
 <ul>
   <li>Guides clients to gather data from external accounts and respects the emotional reasons behind account fragmentation.</li>
@@ -43,10 +43,10 @@ draft: false
   <li>Lets clients upload PDF statements, images, or link accounts in the way that’s easiest for them.</li>
 </ul>
 
-<h3>2. <strong>Leverage Automated Statement Scanning &amp; Data Extraction</strong></h3>
+<h3>2. <strong>Leverage Automated Statement Scanning & Data Extraction</strong></h3>
 <p>Once the data is in your hands, time to remove the manual grind. Investipal’s AI-driven <a href="/features/automated-statement-scanner">statement scanner</a> lets you upload brokerage statements or snapshots. The system instantly scans, extracts, and organizes each holding, reducing hours of tedious input down to seconds.</p>
 <ul>
-  <li>PDFs or PNGs - our OCR &amp; AI take care of it.</li>
+  <li>PDFs or PNGs - our OCR & AI take care of it.</li>
   <li>Holdings, ticker details, and cost bases are consolidated for immediate analysis.</li>
   <li>Automated enrichment cleans up tickers and classifies asset types.</li>
 </ul>
@@ -62,7 +62,7 @@ draft: false
 </ul>
 <p>By including held-away assets in Monte Carlo simulations and stress tests, you empower smarter planning and uncover opportunities for real value-add - not just compliance checkboxes.</p>
 
-<h3>4. <strong>Effortlessly Generate Proposals &amp; Compliance Documents</strong></h3>
+<h3>4. <strong>Effortlessly Generate Proposals & Compliance Documents</strong></h3>
 <p>With Investipal, you can translate this newfound transparency into custom, compliance-ready proposals in minutes - not days.</p>
 <ul>
   <li>Generate Investment Policy Statements (IPS) and Reg BI disclosures factoring in all relevant accounts.</li>

@@ -27,8 +27,8 @@ draft: "false"
 <p>Streamlining prospect-to-client conversion isn’t a ‘nice-to-have’ - it’s the foundation for future growth. Advisors need onboarding to be:</p>
 <ul>
   <li><strong>Fully digital</strong>: Clients can complete KYC, risk tolerance, and info-gathering online in minutes.</li>
-  <li><strong>Statement &amp; Data Intake Automation</strong>: Extract positions instantly from any brokerage statement, PDF, or even a phone photo - using AI-driven <a href="/features/automated-statement-scanner">OCR</a>. No manual data entry. At Investipal, we engineered our <a href="/blogs">brokers statement scanner</a> to handle <em>any</em> statement or format in seconds.</li>
-  <li><strong>Instant Portfolio Visualization &amp; Gap Analysis</strong>: Upload a statement and instantly visualize exposures, concentrations, and benchmark gaps. Get a complete picture before the first meeting.</li>
+  <li><strong>Statement & Data Intake Automation</strong>: Extract positions instantly from any brokerage statement, PDF, or even a phone photo - using AI-driven <a href="/features/automated-statement-scanner">OCR</a>. No manual data entry. At Investipal, we engineered our <a href="/blogs">brokers statement scanner</a> to handle <em>any</em> statement or format in seconds.</li>
+  <li><strong>Instant Portfolio Visualization & Gap Analysis</strong>: Upload a statement and instantly visualize exposures, concentrations, and benchmark gaps. Get a complete picture before the first meeting.</li>
 </ul>
 
 <h3>2. AI-Driven Portfolio Optimization - Including Alternatives</h3>
@@ -54,7 +54,7 @@ draft: "false"
   <li><strong>Truly Unified Workflow</strong>: Onboarding, risk, proposals, portfolio modeling, alts, and compliance - handled end to end in one platform. No manual re-keying. No broken integrations.</li>
   <li><strong>AI Power, Built for Humans</strong>: Our engine is transparent. You see (and can explain) every output, helping you win trust and pass even the toughest compliance reviews.</li>
   <li><strong>Real-World Automations</strong>: In practice, Investipal users are seeing onboarding timelines collapse from weeks to minutes, and proposal generation drop from days to under 10 minutes.</li>
-  <li><strong>Security &amp; Data Privacy First</strong>: We’re SOC2 Type II certified. Data is encrypted and never used for model training. </li>
+  <li><strong>Security & Data Privacy First</strong>: We’re SOC2 Type II certified. Data is encrypted and never used for model training. </li>
 </ul>
 
 <h2>How Investipal Solves the Biggest Advisory Pain Points</h2>

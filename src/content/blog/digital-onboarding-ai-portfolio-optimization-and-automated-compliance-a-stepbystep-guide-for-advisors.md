@@ -31,7 +31,7 @@ featuredImage: "/images/blog/digital-onboarding-ai-portfolio-optimization-and-au
 <p>The onboarding bottleneck is the #1 source of friction—especially when handling held-away assets, manual statement uploads, and compliance documentation. Modernizing your onboarding process doesn’t just impress new clients; it sets the foundation for all downstream automation.</p>
 
 <h3>Redefining Document Intake with AI-Powered Brokerage Statement Scanning</h3>
-<ul><li>Investipal’s AI-powered brokerage statement scanner instantly ingests PDFs, images, even handwritten notes, parses holdings, and creates a structured portfolio – no manual entry needed.</li><li>Upload statements in any format – our OCR &amp; AI extract every position, cost basis, and asset detail with precision.</li><li>Processed data flows directly into your proposal engine and compliance tools, saving 3–5 hours per account and avoiding costly errors.</li></ul>
+<ul><li>Investipal’s AI-powered brokerage statement scanner instantly ingests PDFs, images, even handwritten notes, parses holdings, and creates a structured portfolio – no manual entry needed.</li><li>Upload statements in any format – our OCR & AI extract every position, cost basis, and asset detail with precision.</li><li>Processed data flows directly into your proposal engine and compliance tools, saving 3–5 hours per account and avoiding costly errors.</li></ul>
 
 <h3>Seamless Account Aggregation and Risk Profiling</h3>
 <ul><li>Sync all client assets—including outside accounts (IRAs, 401ks, taxable, and more)—for a holistic wealth picture from Day 1.</li><li>Automated risk tolerance questionnaires (RTQ) combine risk capacity, behavioral, and current portfolio risk into a single, auditable score.</li><li>Immediate X-Ray analysis highlights portfolio gaps, concentrations, and discrepancies for targeted conversation starters.</li></ul>
@@ -65,7 +65,7 @@ featuredImage: "/images/blog/digital-onboarding-ai-portfolio-optimization-and-au
 
 <p>Regulatory oversight is only growing. NIGO paperwork, manual Reg BI implementation, and ad hoc documentation can cripple advisor productivity and leave firms exposed at audit time.</p>
 
-<h3>Instant IPS &amp; Regulation Best Interest (Reg BI) Document Generation</h3>
+<h3>Instant IPS & Regulation Best Interest (Reg BI) Document Generation</h3>
 <ul><li>Leverage onboarding data to generate compliant, personalized IPS and Reg BI statements in one click—per household or per account.</li><li>Guardrails, mandates, and disclosures flow directly from your firm’s investment philosophy and regulatory requirements; no manual intervention.</li><li>Built-in audit trail and version control simplifies exam readiness and lowers procedural risk.</li></ul>
 
 <h3>Automated KYP and Continuous Monitoring</h3>
