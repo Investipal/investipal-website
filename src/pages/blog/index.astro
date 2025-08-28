@@ -9,6 +9,8 @@ import BlogCard from '../../components/blog/BlogCard.astro';
 import CookieBanner from '../../components/ui/CookieBanner.astro';
 import StandardBadge from '../../components/ui/StandardBadge.astro';
 import { getCollection } from 'astro:content';
+import fs from 'node:fs';
+import path from 'node:path';
 
 // Get all published blog posts
 let allPosts;
@@ -42,6 +44,35 @@ const postsWithReadingTime = publishedPosts.map(post => ({
   }
 }));
 
+// Build a list of available blog images for heuristic matching
+const blogImagesDir = new URL('../../public/images/blog/', import.meta.url);
+let blogImageFiles: string[] = [];
+try {
+  blogImageFiles = fs
+    .readdirSync(blogImagesDir)
+    .filter((f) => /\.(png|jpe?g|webp|avif)$/i.test(f));
+} catch {}
+
+const normalize = (s: string) => s.toLowerCase().replace(/%20|\s+/g, '-').replace(/[^a-z0-9-]/g, '-');
+
+function resolveFeaturedImage(post: any): string {
+  if (post?.data?.featuredImage) return post.data.featuredImage;
+  const slug = String(post.id || '').replace(/\.md$/i, '');
+  const normSlug = normalize(slug);
+  // Heuristic: choose first file whose normalized name includes the slug
+  const match = blogImageFiles.find((f) => normalize(f).includes(normSlug));
+  if (match) return `/images/blog/${match}`;
+  // Try category-based graphic in general folder
+  const cat = normalize(String(post?.data?.category || ''));
+  const general = new URL('../../public/images/general/', import.meta.url);
+  try {
+    const generalFiles = fs.readdirSync(general);
+    const catMatch = generalFiles.find((f) => normalize(f).includes(cat));
+    if (catMatch) return `/images/general/${catMatch}`;
+  } catch {}
+  return '/images/blog/placeholder-image.png';
+}
+
 // Get featured post (first featured post or most recent)
 const featuredPost = postsWithReadingTime.find(post => post.data.featured) || postsWithReadingTime[0];
 const otherPosts = postsWithReadingTime.filter(post => post.id !== featuredPost?.id);
@@ -56,7 +87,7 @@ const clientOtherPostsData = otherPosts.map((post) => ({
     publishedDate: (post.data.publishedDate instanceof Date) ? post.data.publishedDate.toISOString() : String(post.data.publishedDate),
     category: post.data.category,
     tags: post.data.tags || [],
-    featuredImage: post.data.featuredImage || '/images/blog/placeholder-image.png',
+    featuredImage: resolveFeaturedImage(post),
     featuredImageAlt: post.data.featuredImageAlt || post.data.title,
     readingTime: post.data.readingTime || Math.ceil((post.body?.split(/\s+/).length || 0) / 200),
     authorImage: post.data.authorImage || '',
@@ -66,7 +97,10 @@ const clientOtherPostsData = otherPosts.map((post) => ({
 // Pagination settings
 const POSTS_PER_PAGE = 6;
 const totalOtherPosts = otherPosts.length;
-const initialPosts = otherPosts.slice(0, POSTS_PER_PAGE);
+const initialPosts = otherPosts.slice(0, POSTS_PER_PAGE).map((p) => ({
+  ...p,
+  data: { ...p.data, featuredImage: resolveFeaturedImage(p) }
+}));
 const hasMorePosts = totalOtherPosts > POSTS_PER_PAGE;
 
 // Get all categories and tags for navigation (from filterable posts only)
