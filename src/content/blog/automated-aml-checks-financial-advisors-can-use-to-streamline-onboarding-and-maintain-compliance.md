@@ -7,7 +7,7 @@ updatedDate: "2025-07-11T17:49:14.634Z"
 category: "Compliance"
 tags: []
 slug: "automated-aml-checks-financial-advisors-can-use-to-streamline-onboarding-and-maintain-compliance"
-featuredImage: "/images/blog/automated-aml-checks-financial-advisors-can-use-to-streamline-onboarding-and-maintain-compliance__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/68714e980b1ea2b008534ae8_5%20Common%20Bottlenecks%20in%20Financial%20Advisor%20Sales%20and%20How%20to%20Fix%20Them%20(15).png"
 featuredImageAlt: "Automated AML Checks Financial Advisors Can Use to Streamline Onboarding and Maintain Compliance"
 draft: false
 ---

@@ -7,7 +7,7 @@ updatedDate: "2025-06-27T14:47:53.333Z"
 category: "General"
 tags: ["Technology"]
 slug: "the-high-cost-of-disconnected-systems-in-wealth-management"
-featuredImage: "/images/blog/the-high-cost-of-disconnected-systems-in__67a1310b81816bc426faaa36_The_20High_20Cost_20of_20.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67a1310b81816bc426faaa36_The%20High%20Cost%20of%20Disconnected%20Systems%20in%20Wealth%20Management.png"
 featuredImageAlt: "The High Cost of Disconnected Systems in Wealth Management"
 draft: false
 ---

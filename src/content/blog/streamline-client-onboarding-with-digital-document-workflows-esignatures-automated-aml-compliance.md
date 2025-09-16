@@ -7,7 +7,7 @@ updatedDate: 2025-07-07T18:54:44.429Z
 category: "Compliance"
 tags: ["Onboarding"]
 slug: "streamline-client-onboarding-with-digital-document-workflows-esignatures-automated-aml-compliance"
-featuredImage: "/images/blog/streamline-client-onboarding-with-digital-document-workflows-esignatures-automated-aml-compliance__686c17dbbf8b221abca87965_Personalization_20at_20Scale_20The_20Next_20Frontier_20in_20Wealth_20Management_20_16_.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/686c17dbbf8b221abca87965_Personalization%20at%20Scale%20The%20Next%20Frontier%20in%20Wealth%20Management%20(16).png"
 featuredImageAlt: "Streamline Client Onboarding with Digital Document Workflows, E-Signatures & Automated AML Compliance"
 draft: false
 ---

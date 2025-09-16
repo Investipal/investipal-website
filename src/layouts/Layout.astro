@@ -9,6 +9,7 @@ export interface Props {
   ogImage?: string;
   canonical?: string;
   structuredData?: any;
+  preloadImages?: string[];
 }
 
 const { 
@@ -17,7 +18,8 @@ const {
   keywords = "financial advisor software, AI wealth management, portfolio management, compliance automation, client onboarding, financial technology",
   ogImage = "https://investipal.co/og-image.jpg",
   canonical = "https://investipal.co",
-  structuredData
+  structuredData,
+  preloadImages = []
 } = Astro.props;
 ---
 
@@ -105,6 +107,9 @@ const {
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    {preloadImages.map((src) => (
+      <link rel="preload" as="image" href={src} />
+    ))}
 
     <!-- Early sanitizer to prevent malformed href requests (e.g., inline SVG becoming href) -->
     <script is:inline>

@@ -89,7 +89,7 @@ const {
     <!-- Hero Image -->
     {heroImage && (
       <div class="text-center">
-        <img src={heroImage} alt={heroImageAlt || title} class="w-full max-w-6xl mx-auto" loading="eager">
+        <img src={heroImage} alt={heroImageAlt || title} class="w-full max-w-6xl mx-auto" loading="eager" fetchpriority="high" decoding="async">
       </div>
     )}
   </div>

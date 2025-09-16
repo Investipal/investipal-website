@@ -83,13 +83,22 @@ const breadcrumbItems = [
   { name: frontmatter.title }
 ];
 
-// Safely resolve featured image: use placeholder if the referenced file is missing
+// Safely resolve featured image: prefer explicit frontmatter (external or local),
+// otherwise fall back to placeholder. This mirrors the listing page behavior.
 let resolvedFeaturedImage = '/images/blog/placeholder-image.png';
 try {
-  if (frontmatter?.featuredImage) {
-    const abs = new URL(`../../public${frontmatter.featuredImage}`, import.meta.url);
-    if (fs.existsSync(abs)) {
-      resolvedFeaturedImage = frontmatter.featuredImage;
+  const explicit = String(frontmatter?.featuredImage || '').trim();
+  if (explicit) {
+    if (/^https?:\/\//i.test(explicit)) {
+      // External URL – use as-is
+      resolvedFeaturedImage = explicit;
+    } else {
+      // Local path – verify it exists under /public
+      const relPath = explicit.startsWith('/') ? explicit : `/${explicit}`;
+      const abs = new URL(`../../public${relPath}`, import.meta.url);
+      if (fs.existsSync(abs)) {
+        resolvedFeaturedImage = relPath;
+      }
     }
   }
 } catch {}
@@ -145,13 +154,80 @@ const articleStructuredData = {
 >
   <!-- Blog Post Structured Data -->
   <script type="application/ld+json" is:inline set:html={JSON.stringify(articleStructuredData)} />
+  {import.meta.env.DEV && (
+    <script is:inline>
+      // Ensure any "Book a Demo" links inside article or hero use relative path in dev so any port works
+      document.addEventListener('DOMContentLoaded', () => {
+        const selector = 'a[href*="book-a-demo"], a:contains("Book a Demo"), a:contains("Schedule a Demo")';
+        const anchors = Array.from(document.querySelectorAll('a'));
+        anchors.forEach(a => {
+          const text = (a.textContent || '').toLowerCase();
+          if (a.href.includes('book-a-demo') || text.includes('book a demo') || text.includes('schedule a demo')) {
+            a.href = '/book-a-demo';
+          }
+        });
+      });
+    </script>
+  )}
+
+  <!-- Intelligent internal linking for all blog posts -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Feature pages
+      const featureRules = [
+        { match: /(onboarding|client intake|account opening|kyc|kyc verification)/i, href: '/features/client-acquisition' },
+        { match: /(statement scanner|pdf scanner|ocr|brokerage statements|held-away)/i, href: '/features/automated-statement-scanner' },
+        { match: /(investment policy statement|ips)/i, href: '/features/investment-policy-statements' },
+        { match: /(risk management|drawdown|stress test|volatility)/i, href: '/features/risk-management' },
+        { match: /(custom security|direct indexing|custom indexing)/i, href: '/features/custom-security-builder' },
+        { match: /(asset allocation|portfolio construction)/i, href: '/features/asset-allocation' },
+        { match: /(engagement|drip|email sequences)/i, href: '/features/ai-driven-engagement' },
+        { match: /(roi calculator|business case)/i, href: '/features/roi-calculator' }
+      ];
+
+      // Blog posts
+      const blogRules = [
+        { match: /(regulation best interest|reg bi)/i, href: '/blog/understanding-regulation-best-interest-reg-bi-essential-guide-for-financial-advisors' },
+        { match: /nigo|not in good order/i, href: '/blog/understanding-nigos-why-theyre-costing-your-firm-and-how-to-reduce-them' },
+        { match: /(investment policy statement|ips)/i, href: '/blog/why-every-financial-advisor-needs-an-investment-policy-statement-ips' },
+        { match: /(ocr|statement scanning|brokerage statements)/i, href: '/blog/using-ocr-technology-to-automate-account-statement-scanning-for-financial-advisors' },
+        { match: /(customer acquisition costs|cac)/i, href: '/blog/why-customer-acquisition-costs-are-rising-for-financial-advisors-and-what-to-do-about-it' },
+        { match: /(behavioral analytics)/i, href: '/blog/the-rise-of-aidriven-behavioral-analytics-unlocking-deeper-insights-for-modern-investment-strategies' },
+        { match: /(proposal generation)/i, href: '/blog/the-ultimate-guide-to-financial-advisor-proposal-generation-software-in-2025' },
+        { match: /(wealthtech platforms)/i, href: '/blog/ultimate-guide-to-wealthtech-platforms-compare-digital-onboarding-ai-portfolio-construction-and-compliance-automation' },
+        { match: /(360[- ]degree view|complete view of investments)/i, href: '/blog/why-financial-advisors-need-a-360-degree-view-of-client-investments' },
+        { match: /(portfolio recommendations|documentation)/i, href: '/blog/why-documenting-portfolio-recommendations-is-essential-for-financial-advisors' },
+        { match: /(kyc verification|id scanning)/i, href: '/blog/how-to-automate-id-scanning-and-kyc-verification-in-financial-advisor-workflows' },
+        { match: /(automate onboarding|onboarding workflow)/i, href: '/blog/4-steps-to-automate-your-client-onboarding-workflow-and-win-more-clients' },
+        { match: /(tech tools for advisory|essential tech tools)/i, href: '/blog/4-tech-tools-every-advisory-practice-needs-digital-onboarding-ai-portfolio-optimization-automated-proposals-compliance-automation' },
+        { match: /(ai-powered statement scanning tools)/i, href: '/blog/top-5-aipowered-brokerage-statement-scanning-tools-to-automate-advisor-onboarding' }
+      ];
+
+      const container = document.querySelector('.blog-article-container');
+      if (!container) return;
+      const anchors = Array.from(container.querySelectorAll('a')) as HTMLAnchorElement[];
+
+      anchors.forEach(a => {
+        const text = (a.textContent || '').trim().toLowerCase();
+        // Skip absolute external links
+        if (/^https?:\/\//i.test(a.getAttribute('href') || '')) return;
+        for (const rule of [...featureRules, ...blogRules]) {
+          if (rule.match.test(text)) {
+            a.setAttribute('href', rule.href);
+            a.setAttribute('rel', 'noopener');
+            break;
+          }
+        }
+      });
+    });
+  </script>
   
   <Header />
   <Breadcrumb items={breadcrumbItems} />
   
   <main id="main">
     <!-- Blog Post Hero Section -->
-    <section class="relative bg-gradient-to-b from-gray-50 to-white pb-12 md:pb-16 pt-16 md:pt-20">
+    <section class="blog-hero relative bg-gradient-to-b from-gray-50 to-white pb-12 md:pb-16 pt-16 md:pt-20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Category Badge -->
@@ -194,7 +270,7 @@ const articleStructuredData = {
           </div>
 
           <!-- Article Details -->
-          <div class="flex items-center space-x-6 text-sm text-gray-500">
+          <div class="author-meta flex items-center space-x-6 text-sm text-gray-500">
             <div class="flex items-center space-x-1">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -279,6 +355,24 @@ const articleStructuredData = {
       </div>
     </section>
 
+    <!-- Inline Related Reading (top of article) -->
+    {relatedPosts.length > 0 && (
+      <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="text-sm font-semibold text-gray-700 mb-2">Related reading</p>
+          <ul class="list-disc pl-5 space-y-1">
+            {relatedPosts.slice(0, 3).map((p) => (
+              <li>
+                <a href={`/blog/${p.id.replace('.md','')}`} class="text-violet-700 hover:text-violet-800">
+                  {p.data.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )}
+
     <!-- Article Content with TOC -->
     <section class="blog-layout-section">
       <!-- Table of Contents (Desktop Only) -->
@@ -343,7 +437,7 @@ const articleStructuredData = {
 
     <!-- Author Bio Section -->
     <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-      <div class="bg-gray-50 rounded-xl p-8">
+      <div class="author-card bg-gray-50 rounded-xl p-8">
         <div class="flex items-start space-x-4">
           {frontmatter.authorImage && (
             <img 

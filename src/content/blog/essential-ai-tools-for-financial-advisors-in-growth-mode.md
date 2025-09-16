@@ -7,7 +7,7 @@ updatedDate: 2025-04-04T18:23:44.481Z
 category: "AI"
 tags: ["AI"]
 slug: "essential-ai-tools-for-financial-advisors-in-growth-mode"
-featuredImage: "/images/blog/essential-ai-tools-for-financial-advisors-in-growth-mode__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67f023330e7c0ffc04b11763_Essential%20AI%20Tools%20for%20Financial%20Advisors%20in%20Growth%20Mode%20main.png"
 featuredImageAlt: "Essential AI Tools for Financial Advisors in Growth Mode"
 draft: false
 ---

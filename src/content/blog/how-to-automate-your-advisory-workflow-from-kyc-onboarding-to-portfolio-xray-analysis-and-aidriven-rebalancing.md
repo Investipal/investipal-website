@@ -7,7 +7,7 @@ updatedDate: 2025-07-15T14:05:57.034Z
 category: "Onboarding"
 tags: ["Digital Onboarding"]
 slug: "how-to-automate-your-advisory-workflow-from-kyc-onboarding-to-portfolio-xray-analysis-and-aidriven-rebalancing"
-featuredImage: "/images/blog/how-to-automate-your-advisory-workflow-from-kyc-onboarding-to-portfolio-xray-analysis-and-aidriven-rebalancing__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6876603e5c41b518f10aced5_Scale%20Your%20Advisory%20Practice%20with%20AI-Driven%20Tax%20Optimization%20and%20Proposals%20(14).png"
 featuredImageAlt: "How to Automate Your Advisory Workflow: From KYC Onboarding to Portfolio X-Ray Analysis and AI-Driven Rebalancing"
 draft: false
 ---

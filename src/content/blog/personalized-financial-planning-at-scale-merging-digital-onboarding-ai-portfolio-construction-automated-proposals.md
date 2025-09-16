@@ -7,7 +7,7 @@ updatedDate: 2025-07-03T08:38:17.683Z
 category: "Onboarding"
 tags: []
 slug: "personalized-financial-planning-at-scale-merging-digital-onboarding-ai-portfolio-construction-automated-proposals"
-featuredImage: "/images/blog/personalized-financial-planning-at-scale-merging-digital-onboarding-ai-portfolio-construction-automated-proposals__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6866417996447fd98ccbde7d_pexels-photo-159888.jpeg"
 ---
 <p>The financial advisory landscape is changing fast. Clients today expect tailored advice and timely action, but manual processes, fragmented tech stacks, and compliance demands often slow advisors down. Scaling personalized financial planning—while keeping quality, accuracy, and regulatory standards high—has been a major challenge for independent advisors and fast-growing RIA firms. But it doesn't have to be.</p>
 
@@ -25,7 +25,7 @@ featuredImage: "/images/blog/personalized-financial-planning-at-scale-merging-di
 <h3>1. Instant, Error-Free Digital Onboarding</h3>
 <ul><li>Our <strong>AI-powered brokerage <a href="/features/automated-statement-scanner">statement scanner</a></strong> instantly ingests PDFs, images, even handwritten notes, parses holdings, and creates a structured portfolio—no manual entry needed.</li><li>Upload statements in any format—our OCR & AI extract every position, cost basis, and asset detail with precision.</li><li>Processed data flows directly into your proposal engine and compliance tools, saving 3–5 hours per account and avoiding costly errors.</li></ul>
 
-<img src="/images/blog/personalized-financial-planning-at-scale-merging-digital-onboarding-ai-portfolio-construction-automated-proposals__6866417996447fd98ccbde8f_pexels-photo-5816298.jpeg" width="50%" height="auto" style="max-width: 90vw; border-radius: 10px;" alt="A close-up of businesspeople analyzing financial data and charts during a meeting.">
+<img src="/images/inline/personalized-financial-planning-at-scale-merging-digital-onboarding-ai-portfolio-construction-automated-proposals-0-6794ea48ca.webp" width="50%" height="auto" style="max-width: 90vw; border-radius: 10px;" alt="A close-up of businesspeople analyzing financial data and charts during a meeting.">
 
 <ul><li>Embedded <strong>Risk Tolerance Questionnaire (RTQ)</strong> means your prospects and clients can self-complete compliant, multi-factor risk assessments online or in the office, with their scores flowing automatically into portfolio recommendation logic.</li></ul>
 <p>All this reduces onboarding time from days—or even weeks—to minutes.</p>
@@ -33,14 +33,14 @@ featuredImage: "/images/blog/personalized-financial-planning-at-scale-merging-di
 <h3>2. AI-Driven Portfolio Construction—Truly Personalized, Instantly</h3>
 <ul><li>Forget ‘model-of-the-month’ allocations. With Investipal, you can train our engine on your own investment universe—public equities, ETFs, mutual funds, alts, even custom private structures.</li><li>AI builds a tailored portfolio for every client in seconds, optimizing across risk, tax, income, and household priorities—not just for their account, but for the entire household.</li><li>Our process is fully transparent: you see exactly how allocation decisions are made, risk metrics like Sharpe ratio or correlations, and can adjust any parameter before implementation.</li></ul>
 
-<img src="/images/blog/personalized-financial-planning-at-scale-merging-digital-onboarding-ai-portfolio-construction-automated-proposals__68380bf03dbc534482f73146_pexels-photo-7567566.jpeg" width="50%" height="auto" style="max-width: 90vw; border-radius: 10px;" alt="A businessman in a suit holds a tablet displaying the text 'INVESTMENTS'.">
+<img src="/images/inline/personalized-financial-planning-at-scale-merging-digital-onboarding-ai-portfolio-construction-automated-proposals-1-bb231dacd9.webp" width="50%" height="auto" style="max-width: 90vw; border-radius: 10px;" alt="A businessman in a suit holds a tablet displaying the text 'INVESTMENTS'.">
 
 <ul><li>Backtest, stress test, and compare portfolios to client benchmarks or models on the fly.</li><li>Automatically incorporate held-away assets for a true total picture of client wealth and exposures—essential for holistic advice.</li><li>Stay ahead of risk with drift monitoring and instant alerts when portfolios deviate from client mandates.</li></ul>
 
 <h3>3. Automated Proposal Generation—Win Business and Satisfy Compliance, Fast</h3>
 <ul><li>Turn raw onboarding and analysis into stunning, personalized proposals—custom-branded, and ready in under 10 minutes.</li><li><strong>Integrate proposal creation with compliance</strong>: our system generates Investment Policy Statements (IPS) and Reg BI disclosures automatically, aligned to the recommendations and client goals discussed.</li><li>Compare client portfolios to your proposed strategies using robust, side-by-side analysis covering over 20 risk and performance metrics.</li></ul>
 
-<img src="/images/blog/personalized-financial-planning-at-scale-merging-digital-onboarding-ai-portfolio-construction-automated-proposals__6866417996447fd98ccbdeac_pexels-photo-6829522.jpeg" width="50%" height="auto" style="max-width: 90vw; border-radius: 10px;" alt="Focused image of hands analyzing business graphs and charts in a folder, highlighting data insights.">
+<img src="/images/inline/personalized-financial-planning-at-scale-merging-digital-onboarding-ai-portfolio-construction-automated-proposals-2-72e7158370.webp" width="50%" height="auto" style="max-width: 90vw; border-radius: 10px;" alt="Focused image of hands analyzing business graphs and charts in a folder, highlighting data insights.">
 
 <ul><li>No more separate tools for analytics, compliance, and presentations—save time, reduce errors, and boost conversions with a seamless workflow.</li></ul>
 
@@ -55,4 +55,4 @@ featuredImage: "/images/blog/personalized-financial-planning-at-scale-merging-di
 <h2>Integrated, Not Fragmented: The Future of Financial Planning</h2>
 <p>Gone are the days of stringing together point solutions, juggling spreadsheets, and living in fear of audits. Today’s most successful advisors leverage unified automation platforms to scale advice, drive AUM growth, and personalize every interaction—without sacrificing the human touch that clients value.</p>
 
-<p>Ready to see how automation, AI portfolio construction, and seamless compliance can transform your client experience? <a href="/blogs">Book a personalized Investipal demo</a> and discover how we help your firm deliver personalized financial planning at scale, with less effort and more impact.</p>
+<p>Ready to see how automation, AI portfolio construction, and seamless compliance can transform your client experience? <a href="/blog">Book a personalized Investipal demo</a> and discover how we help your firm deliver personalized financial planning at scale, with less effort and more impact.</p>

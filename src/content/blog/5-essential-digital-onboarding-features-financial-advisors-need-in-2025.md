@@ -7,7 +7,7 @@ updatedDate: "2025-06-02T15:01:36.773Z"
 category: "Onboarding"
 tags: []
 slug: "5-essential-digital-onboarding-features-financial-advisors-need-in-2025"
-featuredImage: "/images/blog/5-essential-digital-onboarding-features-financial-advisors-need-in-2025__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/683dbc99b12278e395f97c8d_Automating%20the%20Sales%20Journey%20From%20Client%20Intake%20to%20Proposals%20%26%20Compliance%20in%20One%20Platform%20(6).png"
 featuredImageAlt: "5 Essential Digital Onboarding Features Financial Advisors Need in 2025"
 draft: false
 ---

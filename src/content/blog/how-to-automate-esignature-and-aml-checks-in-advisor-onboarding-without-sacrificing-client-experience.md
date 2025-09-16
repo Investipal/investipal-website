@@ -7,7 +7,7 @@ updatedDate: "2025-08-11T17:14:25.364Z"
 category: "Onboarding"
 tags: []
 slug: "how-to-automate-esignature-and-aml-checks-in-advisor-onboarding-without-sacrificing-client-experience"
-featuredImage: "/images/blog/how-to-automate-esignature-and-aml-checks-in-advisor-onboarding-without-sacrificing-client-experience__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689a2142338bd53b44297f40_Why%20Wealth%20Managers%20Spend%2080%25%20of%20Their%20Time%20on%20Admin%20Instead%20of%20Growth%20(13).png"
 featuredImageAlt: "How to Automate E-Signature and AML Checks in Advisor Onboarding Without Sacrificing Client Experience"
 draft: false
 ---

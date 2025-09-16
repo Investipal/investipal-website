@@ -8,6 +8,8 @@ import StandardBadge from '../components/ui/StandardBadge.astro';
 import StandardIcon from '../components/ui/StandardIcon.astro';
 import CookieBanner from '../components/ui/CookieBanner.astro';
 import { designSystem } from '../data/designSystem';
+import PageHeroSection from '../components/sections/PageHeroSection.astro';
+import CTASection from '../components/sections/CTASection.astro';
 
 // SEO and Meta data
 const title = "Webinars | Educational Content for Financial Advisors | Investipal";
@@ -95,7 +97,7 @@ const structuredData = {
 };
 ---
 
-<Layout title={title} description={description} canonical={canonical} keywords={keywords}>
+<Layout title={title} description={description} canonical={canonical} keywords={keywords} preloadImages={["https://img.youtube.com/vi/CqlNgbpjB_Y/maxresdefault.jpg"]}>
   <!-- Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   
@@ -103,25 +105,19 @@ const structuredData = {
   <Breadcrumb items={breadcrumbItems} />
 
   <main id="main">
-    <!-- Hero Section -->
-    <section class="py-16 md:py-20 lg:py-24 bg-white">
-      <div class={designSystem.spacing.container}>
-        <div class="text-center max-w-4xl mx-auto">
-          <h1 class={`${designSystem.typography.heroTitle} mb-8`}>
-            Educational Webinars for Financial Advisors
-          </h1>
-          <p class={`${designSystem.typography.heroSubtitle} mb-12`}>
-            Join industry experts and learn how to leverage AI and automation to grow your advisory practice, improve client outcomes, and stay ahead of the competition.
-          </p>
-        </div>
-      </div>
-    </section>
+    <!-- Standardized Hero (design system) -->
+    <PageHeroSection
+      title="Educational Webinars for Financial Advisors"
+      subtitle="Join industry experts and learn how to leverage AI and automation to grow your advisory practice, improve client outcomes, and stay ahead of the competition."
+      ctaText="Subscribe to Webinars"
+      ctaHref="#newsletter"
+    />
 
     <!-- Featured Webinar -->
     <section class="py-20 md:py-24 lg:py-28 bg-gray-50">
       <div class={designSystem.spacing.container}>
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-          <div class="p-12 lg:p-16">
+          <div class="p-8 md:p-12 lg:p-16">
             
             <!-- Badge and Partner Logo -->
             <div class="flex items-center justify-between mb-8">
@@ -144,26 +140,34 @@ const structuredData = {
             </div>
 
             <!-- Title and Overview -->
-            <h2 class={`${designSystem.typography.sectionTitle} mb-8`}>
+            <h2 class={`${designSystem.typography.sectionTitle} mb-6`}>
               {featuredWebinar.title}
             </h2>
             
-            <p class={`${designSystem.typography.bodyLarge} mb-12`}>
+            <p class={`${designSystem.typography.bodyLarge} mb-8`}>
               {featuredWebinar.overview}
             </p>
 
-            <!-- Video Embed -->
-            <div class="mb-16">
-              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg">
-                <iframe
-                  src={featuredWebinar.youtubeEmbedLink}
-                  title={featuredWebinar.title}
-                  class="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
+            <!-- Video Poster (click to play in modal) -->
+            {(() => {
+              const src = String(featuredWebinar.youtubeEmbedLink || '');
+              const after = src.split('/embed/')[1] || '';
+              const youtubeId = after.split('?')[0] || '';
+              const thumb = youtubeId ? `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg` : '';
+              return (
+                <div class="mb-12">
+                  <button type="button" class="group relative w-full aspect-video rounded-xl overflow-hidden shadow-lg focus:outline-none" data-open-webinar>
+                    <img src={thumb} alt={featuredWebinar.title} class="w-full h-full object-cover" loading="lazy" />
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <span class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/90 group-hover:bg-white shadow-md transition">
+                        <svg class="w-8 h-8 text-investipal-700" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+              );
+            })()}
 
             <!-- Key Points -->
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 mb-16">
@@ -269,7 +273,7 @@ const structuredData = {
     )}
 
     <!-- Newsletter Signup -->
-    <section class={`${designSystem.spacing.section} ${designSystem.background.secondary}`}>
+    <section id="newsletter" class={`${designSystem.spacing.section} ${designSystem.background.secondary}`}>
       <div class={designSystem.spacing.container}>
         <div class="max-w-3xl mx-auto text-center">
           <h2 class={`${designSystem.typography.sectionTitle} mb-4`}>
@@ -295,22 +299,8 @@ const structuredData = {
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class={`${designSystem.spacing.section} ${designSystem.background.primary}`}>
-      <div class={designSystem.spacing.container}>
-        <div class="text-center max-w-3xl mx-auto">
-          <h2 class={`${designSystem.typography.sectionTitle} ${designSystem.text.inverse} mb-6`}>
-            See Investipal in Action
-          </h2>
-          <p class={`${designSystem.typography.bodyLarge} text-investipal-100 mb-8`}>
-            Curious how Investipal can help accelerate your firm's growth? Chat with one of our solution experts.
-          </p>
-          <StandardButton href="/book-a-demo" variant="white">
-            Schedule a Demo
-          </StandardButton>
-        </div>
-      </div>
-    </section>
+    <!-- CTA Section (Design System) -->
+    <CTASection />
   </main>
 
   <Footer />
@@ -318,42 +308,68 @@ const structuredData = {
 </Layout>
 
 <script>
-  // Newsletter form handling
+  // Newsletter form handling and webinar modal
   document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('[data-form="newsletter"]');
-    
+    const openBtn = document.querySelector('[data-open-webinar]');
+
     if (form) {
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        
         const formData = new FormData(form);
         const email = formData.get('email');
-        
         try {
-          // Here you would typically send to your backend or newsletter service
-          // For now, we'll simulate a successful submission
           await new Promise(resolve => setTimeout(resolve, 1000));
-          
-          // Show success feedback
           const button = form.querySelector('button[type="submit"]');
           const originalText = button?.textContent;
-          
           if (button) {
             button.textContent = 'Subscribed!';
             button.classList.add('bg-green-600', 'hover:bg-green-700');
-            
             setTimeout(() => {
               button.textContent = originalText;
               button.classList.remove('bg-green-600', 'hover:bg-green-700');
               form.reset();
             }, 2000);
           }
-          
         } catch (error) {
           console.error('Newsletter subscription error:', error);
-          // Handle error state
         }
       });
     }
+
+    function ensureModal() {
+      let modal = document.getElementById('webinar-modal');
+      if (modal) return modal;
+      modal = document.createElement('div');
+      modal.id = 'webinar-modal';
+      modal.className = 'fixed inset-0 z-50 hidden';
+      modal.innerHTML = `
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative max-w-5xl mx-auto mt-20 bg-white rounded-xl shadow-2xl overflow-hidden">
+          <div class="aspect-video">
+            <iframe id="webinar-iframe" class="w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <button type="button" class="absolute top-3 right-3 p-2 rounded-full bg-white shadow" data-close-webinar aria-label="Close">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>`;
+      document.body.appendChild(modal);
+      return modal;
+    }
+
+    function openModal() {
+      const modal = ensureModal();
+      const iframe = modal.querySelector('#webinar-iframe');
+      iframe.src = '${featuredWebinar.youtubeEmbedLink}'.replace('autoplay=0','autoplay=1');
+      modal.classList.remove('hidden');
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal || (e.target).closest('[data-close-webinar]')) {
+          iframe.src = '';
+          modal.classList.add('hidden');
+        }
+      }, { once: true });
+    }
+
+    openBtn?.addEventListener('click', openModal);
   });
 </script>

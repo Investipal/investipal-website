@@ -7,7 +7,7 @@ updatedDate: 2025-08-14T12:42:43.876Z
 category: "Portfolio Management"
 tags: []
 slug: "optimizing-tax-transition-modeling-how-to-move-client-portfolios-efficiently-and-compliantly-in-2025"
-featuredImage: "/images/blog/optimizing-tax-transition-modeling-how-to-move-client-portfolios-efficiently-and-compliantly-in-2025__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/683aba2fd7c8ad0732b906f3_pexels-photo-265087.jpeg"
 featuredImageAlt: "Tax transition modeling dashboard showing efficient portfolio optimization and compliance for 2025 wealth management"
 draft: false
 ---

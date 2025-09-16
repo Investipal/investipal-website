@@ -7,7 +7,7 @@ updatedDate: "2025-08-11T11:13:07.930Z"
 category: "Onboarding"
 tags: []
 slug: "leveraging-embedded-esignature-and-id-verification-to-accelerate-secure-client-onboarding-in-wealth-management"
-featuredImage: "/images/blog/leveraging-embedded-esignature-and-id-verification-to-accelerate-secure-client-onboarding-in-wealth-management__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6899d043f5e72ed50e4c8dc3_pexels-photo-6667688.jpeg"
 featuredImageAlt: "Leveraging Embedded E-Signature and ID Verification to Accelerate Secure Client Onboarding in Wealth Management"
 draft: false
 ---
@@ -51,7 +51,7 @@ draft: false
 <ul><li><strong>Are digital signatures legally enforceable for client agreements?</strong> Yes, with proper audit trails, e-signatures hold the same weight as wet signatures (ESIGN Act and UETA compliant).</li><li><strong>What ID verification options are supported?</strong> Investipal enables embedded KBA, government ID upload, and document validation to meet KYC and AML mandates.</li><li><strong>How much time can we save?</strong> You can expect onboarding times to drop by 41% or more with complete, paperless, digital onboarding—not accounting for the hours eliminated in compliance, proposal, and manual portfolio entry downstream.</li><li><strong>Is client data protected?</strong> All onboarding data is SOC2 Type II managed, encrypted, and never used for AI model training.</li></ul>
 
 <h2>Next Steps: Experience Onboarding as It Should Be</h2>
-<p>If your team is ready to move beyond manual checks, missing signatures, and weeks-long onboarding, see Investipal in action. Upload any client statement, run through the embedded digital workflow, and watch proposals, compliance docs, and funding prep in minutes—not weeks. <a href="/blogs" rel="nofollow">Book a demo</a> to compress onboarding, strengthen compliance, and win clients with a better experience.</p>
+<p>If your team is ready to move beyond manual checks, missing signatures, and weeks-long onboarding, see Investipal in action. Upload any client statement, run through the embedded digital workflow, and watch proposals, compliance docs, and funding prep in minutes—not weeks. <a href="/blog" rel="nofollow">Book a demo</a> to compress onboarding, strengthen compliance, and win clients with a better experience.</p>
 
 <h3>Further Capabilities to Explore</h3>
 <ul><li>AI-driven brokerage statement intake, supporting handwritten and scanned file types.</li><li>Automated portfolio comparisons, risk analytics, and fee exposure surface analysis.</li><li>One-click IPS and Reg BI document creation, complete with continuous drift monitoring.</li></ul>

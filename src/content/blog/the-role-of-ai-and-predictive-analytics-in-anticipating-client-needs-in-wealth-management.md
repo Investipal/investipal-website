@@ -7,7 +7,7 @@ updatedDate: 2025-08-20T04:54:44.178Z
 category: "AI"
 tags: []
 slug: "the-role-of-ai-and-predictive-analytics-in-anticipating-client-needs-in-wealth-management"
-featuredImage: "/images/blog/the-role-of-ai-and-predictive-analytics-in-anticipating-client-needs-in-wealth-management__hero.jpg"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/68a55513095e5105f1bb809a_pexels-photo-7567591.jpeg"
 featuredImageAlt: "The Role of AI and Predictive Analytics in Anticipating Client Needs in Wealth Management"
 draft: false
 ---

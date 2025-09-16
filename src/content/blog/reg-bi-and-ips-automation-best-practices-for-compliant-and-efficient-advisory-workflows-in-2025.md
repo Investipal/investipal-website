@@ -7,7 +7,7 @@ updatedDate: 2025-08-14T12:42:43.521Z
 category: "Compliance"
 tags: ["Automation"]
 slug: "reg-bi-and-ips-automation-best-practices-for-compliant-and-efficient-advisory-workflows-in-2025"
-featuredImage: "/images/blog/reg-bi-and-ips-automation-best-practices-for-compliant-and-efficient-advisory-workflows-in-2025-img-0-de4d5472.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689dd9c33d86dc2927d35f53_6883b877081bfae982e32309_Why%2520Wealth%2520Managers%2520Spend%252080%2525%2520of%2520Their%2520Time%2520on%2520Admin%2520Instead%2520of%2520Growth%2520(11).png"
 featuredImageAlt: "Automated compliance dashboard for financial advisors showing Reg BI and IPS streamlined workflows"
 draft: false
 ---

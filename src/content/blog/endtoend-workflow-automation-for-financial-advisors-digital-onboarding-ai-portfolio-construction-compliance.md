@@ -7,7 +7,7 @@ updatedDate: "2025-06-12T14:59:01.467Z"
 category: "Compliance"
 tags: []
 slug: "endtoend-workflow-automation-for-financial-advisors-digital-onboarding-ai-portfolio-construction-compliance"
-featuredImage: "/images/blog/endtoend-workflow-automation-for-financial-advisors-digital-onboarding-ai-portfolio-construction-compliance__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/684aead905cfd25582b535be_The%20Biggest%20Bottlenecks%20in%20Wealth%20Management%20Sales%E2%80%94and%20How%20Automation%20Solves%20Them%20(7).png"
 featuredImageAlt: "End-to-End Workflow Automation for Financial Advisors: Digital Onboarding, AI Portfolio Construction & Compliance"
 draft: false
 ---
