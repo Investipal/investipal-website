@@ -7,7 +7,7 @@ updatedDate: 2025-08-14T12:41:38.041Z
 category: "Onboarding"
 tags: ["Automation"]
 slug: "how-to-build-a-seamless-advisor-workflow-from-digital-onboarding-to-automated-proposal-generation"
-featuredImage: "/images/blog/how-to-build-a-seamless-advisor-workflow-from-digital-onboarding-to-automated-proposal-generation-img-0-badca9f9.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689dd9814b7a947e01f7d313_68921026fcf25b32d4cc76da_How%2520Personalized%2520Portfolio%2520Construction%2520Is%2520Reshaping%2520Wealth%2520Management%2520(14).png"
 featuredImageAlt: "Digital transformation workflow for financial advisors showing end-to-end automation process"
 draft: false
 ---

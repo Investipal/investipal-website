@@ -7,7 +7,7 @@ updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Personalization"]
 slug: "how-personalized-portfolio-construction-is-reshaping-wealth-management"
-featuredImage: "/images/blog/how-personalized-portfolio-construction-is-reshaping-wealth-management__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/679a8493d540672bf1db95f3_How%20Personalized%20Portfolio%20Construction%20Is%20Reshaping%20Wealth%20Management%20(1).png"
 featuredImageAlt: "How Personalized Portfolio Construction Is Reshaping Wealth Management"
 draft: false
 ---

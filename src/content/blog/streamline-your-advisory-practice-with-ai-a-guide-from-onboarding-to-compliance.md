@@ -7,7 +7,7 @@ updatedDate: 2025-06-17T12:47:03.611Z
 category: "Compliance"
 tags: ["Practice Management"]
 slug: "streamline-your-advisory-practice-with-ai-a-guide-from-onboarding-to-compliance"
-featuredImage: "/images/blog/streamline-your-advisory-practice-with-ai-a-guide-from-onboarding-to-compliance__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/685163c12ec19b343da06727_Automating%20Financial%20Advisory%20Practices%20How%20to%20Build%20a%20Lean%20Advisory%20Team%20(6).png"
 featuredImageAlt: "Streamline Your Advisory Practice with AI: A Guide from Onboarding to Compliance"
 draft: false
 ---

@@ -7,7 +7,7 @@ updatedDate: "2025-08-14T12:41:37.932Z"
 category: "Portfolio Management"
 tags: []
 slug: "advisor-tech-stack-optimization-streamlining-prospecttoportfolio-workflows-for-maximum-efficiency-in-2025"
-featuredImage: "/images/blog/advisor-tech-stack-optimization-streamlining-prospecttoportfolio-workflows-for-maximum-efficiency-in-2025-img-0-b505f264.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689dd9814b7a947e01f7d310_6888d199c760859f3d73239a_Personalization%2520at%2520Scale%2520The%2520Next%2520Frontier%2520in%2520Wealth%2520Management%2520(19).png"
 featuredImageAlt: "Advisor tech stack optimization showing streamlined prospect-to-portfolio workflows for maximum efficiency"
 draft: false
 ---

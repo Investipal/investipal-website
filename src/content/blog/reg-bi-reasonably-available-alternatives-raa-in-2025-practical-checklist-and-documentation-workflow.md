@@ -7,7 +7,7 @@ updatedDate: "2025-08-14T12:40:41.325Z"
 category: "AI"
 tags: []
 slug: "reg-bi-reasonably-available-alternatives-raa-in-2025-practical-checklist-and-documentation-workflow"
-featuredImage: "/images/blog/reg-bi-reasonably-available-alternatives-raa-in-2025-practical-checklist-and-documentation-workflow__689accb50ebb54970777c48b_pexels-photo-164527.jpeg"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689accb50ebb54970777c48b_pexels-photo-164527.jpeg"
 featuredImageAlt: "Professional workspace with compliance documents showing Reg BI RAA practical checklist implementation"
 draft: false
 ---

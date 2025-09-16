@@ -7,7 +7,7 @@ updatedDate: 2025-06-28T15:59:12.000Z
 category: "AI"
 tags: ["Innovation"]
 slug: "ai-is-revolutionizing-financial-advisory"
-featuredImage: "/images/blog/ai-is-revolutionizing-financial-advisory.jpg"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/666872ff37bdf42ce9637de6_blog-main-01.jpg"
 featuredImageAlt: "AI technology transforming financial advisory services with data visualization and automation"
 draft: false
 ---

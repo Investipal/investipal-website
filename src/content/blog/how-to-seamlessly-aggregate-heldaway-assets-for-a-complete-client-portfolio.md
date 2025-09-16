@@ -7,7 +7,7 @@ updatedDate: 2025-05-29T15:47:50.709Z
 category: "Portfolio Management"
 tags: ["Held-Away Assets"]
 slug: "how-to-seamlessly-aggregate-heldaway-assets-for-a-complete-client-portfolio"
-featuredImage: "/images/blog/how-to-seamlessly-aggregate-heldaway-assets-for-a-complete-client-portfolio__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/683881445e2a3ff38cd133a1_Personalization%20at%20Scale%20The%20Next%20Frontier%20in%20Wealth%20Management%20(10).png"
 featuredImageAlt: "How to Seamlessly Aggregate Held-Away Assets for a Complete Client Portfolio"
 draft: false
 ---

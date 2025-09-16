@@ -7,7 +7,7 @@ updatedDate: 2025-08-14T12:40:40.000Z
 category: "AI"
 tags: ["Proposals"]
 slug: "how-to-use-ai-for-personalized-investment-proposal-generation-a-practical-guide"
-featuredImage: "/images/blog/how-to-use-ai-for-personalized-investment-proposal-generation-a-practical-guide__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689dd948fb9196c898015466_689b4978dff1f277030aad9a_Automating%2520the%2520Sales%2520Journey%2520From%2520Client%2520Intake%2520to%2520Proposals%2520%2526%2520Compliance%2520in%2520One%2520Platform%2520(10).png"
 featuredImageAlt: "AI-powered investment proposal generation workflow showing automated data analysis and personalized portfolio recommendations"
 draft: false
 ---

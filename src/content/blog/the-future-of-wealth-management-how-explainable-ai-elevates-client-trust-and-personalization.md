@@ -7,7 +7,7 @@ updatedDate: 2025-08-14T12:40:40.911Z
 category: "AI"
 tags: []
 slug: "the-future-of-wealth-management-how-explainable-ai-elevates-client-trust-and-personalization"
-featuredImage: "/images/blog/the-future-of-wealth-management-how-explainable-ai-elevates-client-trust-and-personalization__689c31560b54b8ae6b4df67b_pexels-photo-8386440.jpeg"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689c31560b54b8ae6b4df67b_pexels-photo-8386440.jpeg"
 featuredImageAlt: "Modern financial technology workspace showing explainable AI elevating client trust and personalization"
 draft: false
 ---

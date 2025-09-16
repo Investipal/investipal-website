@@ -7,7 +7,7 @@ updatedDate: 2025-08-14T12:41:37.959Z
 category: "AI"
 tags: ["AI"]
 slug: "ai-adoption-in-wealth-management-separating-hype-from-practical-value"
-featuredImage: "/images/blog/ai-adoption-in-wealth-management-separating-hype-from-practical-value__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689dd9814b7a947e01f7d31b_688b9306cde1a5933c019b5f_AI%2520Adoption%2520in%2520Wealth%2520Management%2520Separating%2520Hype%2520from%2520Practical%2520Value.png"
 featuredImageAlt: "Financial technology comparison showing real AI benefits for wealth management firms"
 draft: false
 ---

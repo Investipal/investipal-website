@@ -7,7 +7,7 @@ updatedDate: 2025-08-14T12:40:40.867Z
 category: "AI"
 tags: []
 slug: "how-explainable-ai-is-closing-the-trust-gap-in-wealth-management"
-featuredImage: "/images/blog/how-explainable-ai-is-closing-the-trust-gap-in-wealth-management__hero.jpg"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689d91cfed4da7853f72b7e4_pexels-photo-6153354.jpeg"
 featuredImageAlt: "Business professional analyzing data on laptop showing AI-driven wealth management transparency and trust"
 draft: false
 ---

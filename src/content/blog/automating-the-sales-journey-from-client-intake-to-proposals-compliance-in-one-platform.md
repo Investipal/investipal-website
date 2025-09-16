@@ -7,7 +7,7 @@ updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Compliance"
 tags: ["Sales"]
 slug: "automating-the-sales-journey-from-client-intake-to-proposals-compliance-in-one-platform"
-featuredImage: "/images/blog/automating-the-sales-journey-from-client-intake-to-proposals-compliance-in-one-platform__hero.jpg"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67aba36dd3bc848c05339dff_Automating%20the%20Sales%20Journey%20From%20Client%20Intake%20to%20Proposals%20%26%20Compliance%20in%20One%20Platform%20(1).png"
 featuredImageAlt: "Automating the Sales Journey: From Client Intake to Proposals & Compliance in One Platform"
 draft: false
 ---

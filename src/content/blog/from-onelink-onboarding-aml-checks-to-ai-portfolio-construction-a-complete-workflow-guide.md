@@ -7,7 +7,7 @@ updatedDate: "2025-07-08T12:15:03.851Z"
 category: "Onboarding"
 tags: []
 slug: "from-onelink-onboarding-aml-checks-to-ai-portfolio-construction-a-complete-workflow-guide"
-featuredImage: "/images/blog/from-onelink-onboarding-aml-checks-to-ai-portfolio-construction-a-complete-workflow-guide__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/686d0988dc8c8308d4377813_The%20Biggest%20Bottlenecks%20in%20Wealth%20Management%20Sales%E2%80%94and%20How%20Automation%20Solves%20Them%20(9).png"
 featuredImageAlt: "From One-Link Onboarding & AML Checks to AI Portfolio Construction: A Complete Workflow Guide"
 draft: false
 ---

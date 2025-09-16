@@ -7,7 +7,7 @@ updatedDate: 2025-03-31T17:18:09Z
 category: "General"
 tags: ["Sales", "Proposals"]
 slug: "how-to-create-professional-investment-proposals-in-under-10-minutes"
-featuredImage: "/images/blog/how-to-create-professional-investment-proposals-in-under-10-minutes__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eace4dd43c407327a094ec_Automating%20the%20Sales%20Journey%20From%20Client%20Intake%20to%20Proposals%20%26%20Compliance%20in%20One%20Platform%20(3).png"
 featuredImageAlt: "How to create professional investment proposals in under 10 minutes"
 draft: false
 ---
@@ -54,7 +54,7 @@ Step
 
 [Investipal’s <a href="/features/automated-statement-scanner">OCR</a> technology](/blog-posts/how-to-leverage-<a href="/features/automated-statement-scanner">ocr</a>-technology-for-faster-client-account-statement-analysis) lets you scan brokerage statements and instantly pull holdings and balances into the platform, cutting manual data entry to zero.
 
-![Proposal builder screenshot](/images/blog/placeholder-image.png)
+![Proposal builder screenshot](/images/inline/how-to-create-professional-investment-proposals-in-under-10-minutes-0-f7dd326b17.webp)
 
 ### Step 2: 
 
@@ -62,7 +62,7 @@ Define Client Goals & Risk Profile
 
 Within Investipal, quickly enter or update the client’s financial objectives and risk tolerance. The data is neatly organized for easy reference or future edits.
 
-![Define goals screenshot](/images/blog/placeholder-image.png)
+![Define goals screenshot](/images/inline/how-to-create-professional-investment-proposals-in-under-10-minutes-0-f7dd326b17.webp)
 
 ### Step 3: 
 
@@ -70,7 +70,7 @@ Rapid Portfolio Comparison
 
 Cycle through your model portfolios in seconds—no more spreadsheets. Investipal runs quick comparative analyses, showing how each model aligns with your client’s unique needs.
 
-![Model comparison screenshot](/images/blog/placeholder-image.png)
+![Model comparison screenshot](/images/inline/how-to-create-professional-investment-proposals-in-under-10-minutes-0-f7dd326b17.webp)
 
 ### Step 4: 
 
@@ -79,7 +79,7 @@ Automated Performance & Tax Transition Analysis
 - **Performance Projections**: In one click, run simulations to illustrate potential returns and downside risks.
 -   **Tax Impact**: Offer transparent insight on how portfolio changes may affect capital gains or other tax considerations.
 
-![Performance projections screenshot](/images/blog/placeholder-image.png)
+![Performance projections screenshot](/images/inline/how-to-create-professional-investment-proposals-in-under-10-minutes-0-f7dd326b17.webp)
 
 ### Step 5: 
 
@@ -87,7 +87,7 @@ Generate Personalized Commentary with AI
 
 Rather than writing custom text, Investipal’s AI-powered commentary tool creates clear, client-friendly explanations specific to each scenario, saving you even more time.
 
-![AI commentary screenshot](/images/blog/placeholder-image.png)
+![AI commentary screenshot](/images/inline/how-to-create-professional-investment-proposals-in-under-10-minutes-0-f7dd326b17.webp)
 
 ### Step 6: 
 
@@ -95,7 +95,7 @@ Enforce Compliance with Standardized Proposal Templates
 
 Investipal templates and locked proposal sections ensure every proposal meets compliance requirements. Fee disclosures and risk language remain consistent—no more manual auditing.
 
-![Image](/images/blog/67d33ff9b13b3e48365fb523_PRIVATE_20WEALTH_20MANAGEMENT.png)
+![Image](/images/inline/how-to-create-professional-investment-proposals-in-under-10-minutes-5-57844b8c1b.webp)
 
 ### Step 7: 
 

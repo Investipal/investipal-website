@@ -7,7 +7,7 @@ updatedDate: 2025-08-18T06:20:48.314Z
 category: "AI"
 tags: []
 slug: "aipowered-investment-proposal-generation-features-to-look-for-and-how-to-evaluate-solutions"
-featuredImage: "/images/blog/aipowered-investment-proposal-generation-features-to-look-for-and-how-to-evaluate-solutions__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/68a2c6404c5755bc853ce0fd_pexels-photo-6771900.jpeg"
 featuredImageAlt: "AI-Powered Investment Proposal Generation: Features to Look For and How to Evaluate Solutions"
 draft: false
 ---
