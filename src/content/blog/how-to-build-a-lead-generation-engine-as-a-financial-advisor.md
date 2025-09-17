@@ -89,13 +89,13 @@ Content is king. But where do you start? And what do you do if creativity isn't 
 
 Luckily, you don't have to do much heavy lifting. This is because your clients come to you for expertise in areas like investing and financial planning. While these concepts can be confusing or overwhelming, they are relatively old, straightforward, and unchanging - and you already know them. This means that all of the content you could want to create probably already exists. Your job is to package it up into new formats to make it entertaining and accessible.
 
-To make it even easier, <a href="/blog/tag/ai">AI</a>-driven content marketing platforms like [Jasper <a href="/blog/tag/ai">AI</a>](https://www.jasper.<a href="/blog/tag/ai">ai</a>/) and [Surfer SEO](https://surferseo.com/) can help you create and distribute this content much faster and much more personalized than ever before.
+To make it even easier, <a href="/blog/ai">AI</a>-driven content marketing platforms like [Jasper <a href="/blog/ai">AI</a>](https://www.jasper.<a href="/blog/ai">ai</a>/) and [Surfer SEO](https://surferseo.com/) can help you create and distribute this content much faster and much more personalized than ever before.
 
 ### Blogging
 
 One of the oldest forms of content marketing on the internet, blogging is a great way to build your reputation as a thought leader, enhance the visibility of your website (tying into SEO), and demonstrate your expertise in the eyes of potential clients. Sharing information that tackles essential financial planning subjects, for example, helps keep your readers hooked and reinforces your role as an authoritative resource.
 
-Blogging can take up a lot of time, but it does not have to. You can still engage with regular, compelling articles by leaving thoughtful comments on other content pieces or leveraging blog post idea generators to let <a href="/blog/tag/ai">AI</a> do the heavy lifting. By crafting a planned approach to content creation, pinpointing topics ahead of time, and employing calendar tools to schedule when each post goes live, blogging becomes an efficient component woven seamlessly into your overall marketing strategy.
+Blogging can take up a lot of time, but it does not have to. You can still engage with regular, compelling articles by leaving thoughtful comments on other content pieces or leveraging blog post idea generators to let <a href="/blog/ai">AI</a> do the heavy lifting. By crafting a planned approach to content creation, pinpointing topics ahead of time, and employing calendar tools to schedule when each post goes live, blogging becomes an efficient component woven seamlessly into your overall marketing strategy.
 
 ### Podcasts and Videos
 

@@ -23,12 +23,13 @@ function extractExternalLinks(html) {
 }
 
 async function checkUrl(url) {
-  const headers = { 'User-Agent': 'Mozilla/5.0 (compatible; InvestipalBot/1.0)' };
+  const headers = { 'User-Agent': 'Mozilla/5.0 (compatible; InvestipalBot/1.0; +https://investipal.co/robots.txt)' };
   try {
     let res = await fetch(url, { method: 'HEAD', redirect: 'follow', headers });
     if (res.ok) return { ok: true, status: res.status, method: 'HEAD' };
     // Fallback to GET for servers that block HEAD or need UA
-    if (!res.ok && [403, 405, 500, 502, 503, 504].includes(res.status)) {
+    // Some providers return 404/429 to HEAD even when GET is 200
+    if (!res.ok && [403, 404, 405, 429, 500, 502, 503, 504].includes(res.status)) {
       try {
         res = await fetch(url, { method: 'GET', redirect: 'follow', headers });
         return { ok: res.ok, status: res.status, method: 'GET' };

@@ -12,7 +12,7 @@ featuredImageAlt: "Paperless Compliance: How Automated AML and ID Verification A
 draft: false
 ---
 <p>
-Wealth management firms are no strangers to complexity, but nothing stifles growth and client trust quite like slow, paper-driven <a href="/blog/category/onboarding">onboarding</a> and compliance. The traditional approach—prone to manual errors, endless paperwork, and regulatory risk—is simply no longer viable. As regulations like AML (Anti-Money Laundering) and KYC (Know Your Customer) intensify and clients demand instant digital experiences, the need to modernize is clear. The good news: automated AML and digital ID verification are changing the game for forward-thinking advisors, RIAs, and <a href="/segments/wealth-managers">wealth managers</a>.
+Wealth management firms are no strangers to complexity, but nothing stifles growth and client trust quite like slow, paper-driven <a href="/blog/onboarding">onboarding</a> and compliance. The traditional approach—prone to manual errors, endless paperwork, and regulatory risk—is simply no longer viable. As regulations like AML (Anti-Money Laundering) and KYC (Know Your Customer) intensify and clients demand instant digital experiences, the need to modernize is clear. The good news: automated AML and digital ID verification are changing the game for forward-thinking advisors, RIAs, and <a href="/segments/wealth-managers">wealth managers</a>.
 </p>
 
 <h2>The Real Cost of Manual Onboarding and Compliance</h2>

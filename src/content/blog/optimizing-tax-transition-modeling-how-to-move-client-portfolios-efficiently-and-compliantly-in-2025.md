@@ -17,7 +17,7 @@ draft: false
 <p>Manual tax transition analysis—spreadsheet juggling, prospectus scanning, and hours lost to manual analysis—simply can’t keep up with the demands of today’s clients. Clients expect real-time, tax-aware advice; regulators expect airtight documentation. Yet most firms still struggle with:</p>
 <ul>
   <li>Manually extracting data from PDFs, statements, and screenshots—prone to errors and wasted hours.</li>
-  <li>Fragmented toolsets for <a href="/blog/category/onboarding">onboarding</a>, modeling, proposals, and compliance—leading to rekeying errors and slow response times.</li>
+  <li>Fragmented toolsets for <a href="/blog/onboarding">onboarding</a>, modeling, proposals, and compliance—leading to rekeying errors and slow response times.</li>
   <li>Lack of visibility into tax consequences and transition costs—hindering decisions and risking compliance gaps.</li>
   <li>Difficulty modeling both public securities and alternatives within one workflow.</li>
 </ul>
