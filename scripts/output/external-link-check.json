@@ -1,37 +1,7 @@
 {
-  "scanned": 160,
-  "links": 162,
+  "scanned": 187,
+  "links": 151,
   "failures": [
-    {
-      "file": "5-common-bottlenecks-in-financial-advisor-sales-and-how-to-fix-them.md",
-      "url": "https://blog.hubspot.com/sales/how-sales-reps-spend-time",
-      "status": 404,
-      "method": "HEAD"
-    },
-    {
-      "file": "5-financial-advisor-lead-generation-strategies-that-actually-work.md",
-      "url": "https://www.cfainstitute.org/-/media/documents/survey/investment-risk-profiling.ashx",
-      "status": 404,
-      "method": "HEAD"
-    },
-    {
-      "file": "5-financial-advisor-lead-generation-strategies-that-actually-work.md",
-      "url": "https://www.notion.so/Financial-advisor-lead-generation-strategies-that-work-fab6a24cd72243e1bba29fe9b49cc35c?pvs=21",
-      "status": 404,
-      "method": "HEAD"
-    },
-    {
-      "file": "5-financial-advisor-lead-generation-strategies-that-actually-work.md",
-      "url": "https://www.notion.so/Financial-advisor-lead-generation-strategies-that-work-fab6a24cd72243e1bba29fe9b49cc35c?pvs=21",
-      "status": 404,
-      "method": "HEAD"
-    },
-    {
-      "file": "ai-driven-portfolio-optimization-how-transparent-explainable-ai-is-shaping-the-future-of-wealth-management.md",
-      "url": "https://www.cigniti.com/blog/explainable-ai-wealth-management-strategic-imperative/",
-      "status": 404,
-      "method": "HEAD"
-    },
     {
       "file": "ai-driven-portfolio-optimization-how-transparent-explainable-ai-is-shaping-the-future-of-wealth-management.md",
       "url": "https://www.pwc.com/gx/en/issues/c-suite-insights/the-leadership-agenda/ai-and-wealth-management-a-new-era.html",
@@ -41,21 +11,9 @@
     },
     {
       "file": "essential-financial-advisor-tools-for-any-practice.md",
-      "url": "https://www.salesforce.com/ca/products/financial-services-cloud/overview/",
-      "status": 404,
-      "method": "HEAD"
-    },
-    {
-      "file": "essential-financial-advisor-tools-for-any-practice.md",
       "url": "https://www.semrush.com/www.morningstar.com",
       "status": 404,
-      "method": "HEAD"
-    },
-    {
-      "file": "essential-steps-to-integrate-aml-and-id-verification-in-digital-advisor-onboarding-workflows.md",
-      "url": "https://www.finra.org/rules-guidance/key-topics/anti-money-laundering",
-      "status": 404,
-      "method": "HEAD"
+      "method": "GET"
     },
     {
       "file": "how-ai-is-changing-investment-policy-statements.md",
@@ -63,24 +21,6 @@
       "status": 0,
       "method": "GET",
       "error": "fetch failed"
-    },
-    {
-      "file": "how-ai-is-unlocking-personalization-at-scale-in-wealth-management.md",
-      "url": "https://scfsecurities.com/how-we-think/the-rising-necessity-of-personalized-wealth-management/",
-      "status": 404,
-      "method": "GET"
-    },
-    {
-      "file": "how-embedded-esignatures-and-id-scanning-streamline-aml-compliance-in-advisor-onboarding.md",
-      "url": "https://www.finra.org/rules-guidance/key-topics/anti-money-laundering",
-      "status": 404,
-      "method": "HEAD"
-    },
-    {
-      "file": "how-financial-advisors-can-grow-aum-with-technology-and-personalization.md",
-      "url": "https://www.lpl.com/join-lpl/why-choose-lpl/news-and-insights/how-advisors-create-differentiation-with-holistic-financial-planning.html?utm_source=chatgpt.com",
-      "status": 403,
-      "method": "GET"
     },
     {
       "file": "how-personalized-portfolio-construction-is-reshaping-wealth-management.md",
@@ -94,24 +34,6 @@
       "url": "https://www.salesforce.com/news/press-releases/2023/04/financial-advisor-client-relationships/",
       "status": 404,
       "method": "GET"
-    },
-    {
-      "file": "how-technology-is-revolutionizing-financial-advisory-firms-in-2025.md",
-      "url": "https://www.investopedia.com/affluent-millennial-investing-survey-7506694",
-      "status": 404,
-      "method": "HEAD"
-    },
-    {
-      "file": "how-to-extract-account-statement-portfolio-holdings-from-pdfs-using-ai.md",
-      "url": "https://www.notion.so/How-to-Extract-Account-Statement-Portfolio-Holdings-from-PDF-Using-AI-40d55b356e804aa9b89e73d874788281?pvs=21",
-      "status": 404,
-      "method": "HEAD"
-    },
-    {
-      "file": "morningstar-office-is-shutting-down-your-90-day-transition-plan.md",
-      "url": "https://www.notion.so/Morningstar-Office-Is-Shutting-Down-Your-90-Day-Transition-Plan-1a767ec2d69f80478352d1f69f1915ff?pvs=21",
-      "status": 404,
-      "method": "HEAD"
     },
     {
       "file": "the-advisor-shortage-is-here--how-technology-can-help-rias-scale-without-adding-headcount.md",
@@ -144,7 +66,6 @@
   ],
   "byStatus": {
     "0": 7,
-    "403": 1,
-    "404": 14
+    "404": 2
   }
 }

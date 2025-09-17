@@ -205,7 +205,7 @@ const articleStructuredData = {
 
       const container = document.querySelector('.blog-article-container');
       if (!container) return;
-      const anchors = Array.from(container.querySelectorAll('a')) as HTMLAnchorElement[];
+      const anchors = Array.from(container.querySelectorAll('a'));
 
       anchors.forEach(a => {
         const text = (a.textContent || '').trim().toLowerCase();
@@ -1582,7 +1582,7 @@ const articleStructuredData = {
       1
     );
     
-    let progressBar = document.querySelector('.reading-progress');
+    let progressBar = document.querySelector('.reading-progress') as HTMLElement | null;
     if (!progressBar) {
       progressBar = document.createElement('div');
       progressBar.className = 'reading-progress';

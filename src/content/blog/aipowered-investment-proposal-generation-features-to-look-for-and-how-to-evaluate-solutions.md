@@ -11,7 +11,7 @@ featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/68a2
 featuredImageAlt: "AI-Powered Investment Proposal Generation: Features to Look For and How to Evaluate Solutions"
 draft: false
 ---
-<p><a href="/blog/tag/investment-proposals">Investment proposal</a> generation is the heartbeat of every advisory business. Yet for many firms, the process remains painfully slow—fraught with manual data entry, repetitive document prep, and compliance-driven headaches. In today's competitive environment, your prospects and clients expect quick turnaround, tailored solutions, and zero errors. The right <a href="/blog/tag/ai">AI</a>-powered platform lets you deliver all three—without sacrificing compliance, efficiency, or the human touch that defines your advisory brand.</p>
+<p><a href="/blog/investment-proposals">Investment proposal</a> generation is the heartbeat of every advisory business. Yet for many firms, the process remains painfully slow—fraught with manual data entry, repetitive document prep, and compliance-driven headaches. In today's competitive environment, your prospects and clients expect quick turnaround, tailored solutions, and zero errors. The right <a href="/blog/ai">AI</a>-powered platform lets you deliver all three—without sacrificing compliance, efficiency, or the human touch that defines your advisory brand.</p>
 
 <h2>What Modern Advisors Demand from Proposal Generation</h2>
 <p>Financial advisors, <a href="/segments/wealth-managers">wealth managers</a>, and RIA firm owners are keenly aware of the pain points stifling their growth:</p>

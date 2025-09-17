@@ -1,7 +1,26 @@
 {
   "routes": [
-    { "route": "/images/*", "headers": { "cache-control": "public, max-age=60, must-revalidate" } }
+    { "route": "/images/*", "headers": { "cache-control": "public, max-age=60, must-revalidate" } },
+    { "route": "/faq", "statusCode": 301, "redirect": "/contact-us" },
+    { "route": "/book-demo", "statusCode": 301, "redirect": "/book-a-demo" },
+    { "route": "/book-demo/*", "statusCode": 301, "redirect": "/book-a-demo" },
+    { "route": "/blog-posts/*", "statusCode": 301, "redirect": "/blog/:splat" },
+    { "route": "/blog/category/*", "statusCode": 301, "redirect": "/blog" },
+    { "route": "/blog/tag/*", "statusCode": 301, "redirect": "/blog" }
   ],
+  "globalHeaders": {
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()"
+  },
+  "responseOverrides": {
+    "/": {
+      "headers": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.calendly.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-src https://assets.calendly.com;"
+      }
+    }
+  },
   "mimeTypes": {
     ".avif": "image/avif",
     ".webp": "image/webp"

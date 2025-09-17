@@ -45,7 +45,7 @@ draft: false
 </ul>
 
 <h3>Step 3: Activate Real-Time Monitoring</h3>
-<p>Continuous vigilance is key. Modern solutions like <a href="https://investipal.co" target="_blank">Investipal</a> allow for quick scanning of all client portfolios - across all accounts, including those held away - so you’re never caught off guard.</p>
+<p>Continuous vigilance is key. Modern solutions like <a href="" target="_blank">Investipal</a> allow for quick scanning of all client portfolios - across all accounts, including those held away - so you’re never caught off guard.</p>
 <ul>
   <li>Automate the sync and analysis of brokerage statements - even PDFs or images - using AI-driven extraction (no more tedious manual entries).</li>
   <li>Set granular alert delivery.</li>
@@ -87,4 +87,4 @@ draft: false
 <p>Staying on top of portfolio drift isn’t just about automation for its own sake. It’s about underpinning your advice with rigor, timely reactions, and transparency - across any number of clients or complex portfolios. Clients may not notice when nothing goes awry, but they certainly will if a portfolio quietly shifts off course, and their outcomes suffer.</p>
 <p>By embedding automated drift alerts into your workflow, you reinforce your value as a vigilant, modern advisor - freeing you from tedious, repetitive monitoring to focus on what really counts: meaningful client relationships and growth.</p>
 
-<p>If you’d like to see how Investipal empowers advisory teams to automate drift alerts, eliminate manual portfolio checks, and scale a compliance-ready practice, <a href="https://investipal.co" target="_blank">schedule a demo with us today</a>. Let’s modernize wealth management, together!</p>
+<p>If you’d like to see how Investipal empowers advisory teams to automate drift alerts, eliminate manual portfolio checks, and scale a compliance-ready practice, <a href="" target="_blank">schedule a demo with us today</a>. Let’s modernize wealth management, together!</p>

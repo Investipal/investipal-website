@@ -12,7 +12,7 @@ featuredImageAlt: "Essential Steps to Integrate AML and ID Verification in Digit
 draft: false
 ---
 <p>
-Integrating <a rel="noopener noreferrer" target="_blank" href="https://www.finra.org/rules-guidance/key-topics/anti-money-laundering">AML</a> (Anti-Money Laundering) and ID verification into a digital <a href="/blog/category/onboarding">onboarding</a> workflow is now mission-critical for RIAs, financial advisors, <a href="/segments/wealth-managers">wealth managers</a>, and operations leaders looking to keep both compliance teams and prospects happy. The reality is simple: prospects expect a fast, frictionless digital onboarding experience—while regulators demand ironclad KYC and AML controls at every step. Legacy processes, fragmented tech, and manual compliance checks put everyone at risk, create unnecessary drag, and inhibit growth.
+Integrating AML (Anti-Money Laundering) and ID verification into a digital <a href="/blog/onboarding">onboarding</a> workflow is now mission-critical for RIAs, financial advisors, <a href="/segments/wealth-managers">wealth managers</a>, and operations leaders looking to keep both compliance teams and prospects happy. The reality is simple: prospects expect a fast, frictionless digital onboarding experience—while regulators demand ironclad KYC and AML controls at every step. Legacy processes, fragmented tech, and manual compliance checks put everyone at risk, create unnecessary drag, and inhibit growth.
 </p>
 
 <h2>Why Streamlining AML and ID Verification Makes or Breaks Digital Onboarding</h2>
@@ -49,4 +49,4 @@ Integrating <a rel="noopener noreferrer" target="_blank" href="https://www.finra
 
 <h2>Ready to Experience Seamless AML and ID Verification?</h2>
 <p>If you’re tired of clunky onboarding, disconnected compliance tools, and lost prospects, it’s time to modernize. Investipal’s automated digital onboarding brings AML, ID verification, compliance, and client experience together for a unified, audit-ready workflow. Deliver better value to clients. Protect your firm. Get more business over the finish line—faster than ever.</p>
-<p style="font-weight:bold;">Ready to see how your onboarding stands up? <a href="/book-demo" style="color:#0072CE;">Book a live Investipal demo</a> and explore the power of unified automation for onboarding, proposal, compliance, and portfolio workflows.</p>
+<p style="font-weight:bold;">Ready to see how your onboarding stands up? <a href="/book-a-demo" style="color:#0072CE;">Book a live Investipal demo</a> and explore the power of unified automation for onboarding, proposal, compliance, and portfolio workflows.</p>

@@ -13,7 +13,7 @@ const { activeCategory = 'all' } = Astro.props;
 const categories = getAllCategories();
 
 // Calculate actual counts server-side
-const categoryCounts = {
+const categoryCounts: Record<string, number> = {
   all: integrationsData.length,
   ...Object.fromEntries(
     categories.map(({ key }) => [
@@ -73,16 +73,16 @@ const categoryCounts = {
   document.addEventListener('DOMContentLoaded', function() {
     console.log('CategoryFilter loaded');
     
-    const categoryButtons = document.querySelectorAll('.category-filter');
+    const categoryButtons = document.querySelectorAll<HTMLButtonElement>('.category-filter');
     console.log('Found category buttons:', categoryButtons.length);
     
     // Simple filtering function
-    function filterCards(selectedCategory) {
+    function filterCards(selectedCategory: string) {
       console.log('Filtering by category:', selectedCategory);
-      const integrationCards = document.querySelectorAll('[data-integration-category]');
+      const integrationCards = document.querySelectorAll<HTMLElement>('[data-integration-category]');
       console.log('Cards to filter:', integrationCards.length);
       
-      integrationCards.forEach(card => {
+      integrationCards.forEach((card) => {
         const cardCategory = card.getAttribute('data-integration-category');
         
         if (selectedCategory === 'all' || cardCategory === selectedCategory) {
@@ -103,19 +103,20 @@ const categoryCounts = {
     }
     
     // Setup filter buttons
-    categoryButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const selectedCategory = this.getAttribute('data-category');
+    categoryButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        const current = event.currentTarget as HTMLButtonElement;
+        const selectedCategory = current.getAttribute('data-category') || 'all';
         console.log('Button clicked:', selectedCategory);
         
         // Update button states
-        categoryButtons.forEach(btn => {
+        categoryButtons.forEach((btn) => {
           btn.classList.remove('bg-investipal-100', 'text-investipal-700');
           btn.classList.add('text-gray-600', 'hover:bg-gray-50');
         });
         
-        this.classList.add('bg-investipal-100', 'text-investipal-700');
-        this.classList.remove('text-gray-600', 'hover:bg-gray-50');
+        current.classList.add('bg-investipal-100', 'text-investipal-700');
+        current.classList.remove('text-gray-600', 'hover:bg-gray-50');
         
         // Filter cards
         filterCards(selectedCategory);

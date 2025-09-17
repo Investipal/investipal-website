@@ -11,9 +11,9 @@ featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689d
 featuredImageAlt: "AI-powered investment proposal generation workflow showing automated data analysis and personalized portfolio recommendations"
 draft: false
 ---
-Personalized <a href="/blog/tag/investment-proposals">investment proposals</a> are the new standard for advisors who want to convert prospects, deepen client trust, and scale their business efficiently. Yet, most firms are still held back by manual data entry, fragmented workflows, and slow compliance processes that frustrate clients and leave AUM on the table. In this practical guide, we’ll break down how top-performing firms leverage <a href="/blog/tag/ai">AI</a>-powered automation to deliver tailored, compliant proposals—at scale and without the administrative drag.
+Personalized <a href="/blog/investment-proposals">investment proposals</a> are the new standard for advisors who want to convert prospects, deepen client trust, and scale their business efficiently. Yet, most firms are still held back by manual data entry, fragmented workflows, and slow compliance processes that frustrate clients and leave AUM on the table. In this practical guide, we’ll break down how top-performing firms leverage <a href="/blog/ai">AI</a>-powered automation to deliver tailored, compliant proposals—at scale and without the administrative drag.
 
-## Why <a href="/blog/tag/ai">AI</a>-Driven Proposal Generation Is a Gamechanger for Advisors
+## Why <a href="/blog/ai">AI</a>-Driven Proposal Generation Is a Gamechanger for Advisors
 
 Financial advisors, <a href="/segments/wealth-managers">wealth managers</a>, and RIA firm owners know the pain points all too well:
 

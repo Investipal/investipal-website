@@ -64,7 +64,13 @@ const featuredWebinar = {
 
 // Additional webinar topics (sample data)
 // No upcoming webinars currently
-const upcomingWebinars = [];
+const upcomingWebinars: Array<{
+  date: string;
+  title: string;
+  description: string;
+  speakers: string[];
+  registrationUrl: string;
+}> = [];
 
 // Structured Data
 const structuredData = {
@@ -316,19 +322,20 @@ const structuredData = {
     if (form) {
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        const formData = new FormData(form);
+        const formEl = form as HTMLFormElement;
+        const formData = new FormData(formEl);
         const email = formData.get('email');
         try {
           await new Promise(resolve => setTimeout(resolve, 1000));
           const button = form.querySelector('button[type="submit"]');
-          const originalText = button?.textContent;
+          const originalText = button?.textContent ?? 'Subscribe';
           if (button) {
-            button.textContent = 'Subscribed!';
+            (button as HTMLButtonElement).textContent = 'Subscribed!';
             button.classList.add('bg-green-600', 'hover:bg-green-700');
             setTimeout(() => {
-              button.textContent = originalText;
+              (button as HTMLButtonElement).textContent = originalText;
               button.classList.remove('bg-green-600', 'hover:bg-green-700');
-              form.reset();
+              formEl.reset();
             }, 2000);
           }
         } catch (error) {
@@ -359,12 +366,14 @@ const structuredData = {
 
     function openModal() {
       const modal = ensureModal();
-      const iframe = modal.querySelector('#webinar-iframe');
-      iframe.src = '${featuredWebinar.youtubeEmbedLink}'.replace('autoplay=0','autoplay=1');
+      const iframe = modal.querySelector<HTMLIFrameElement>('#webinar-iframe');
+      if (iframe) {
+        iframe.src = '${featuredWebinar.youtubeEmbedLink}'.replace('autoplay=0','autoplay=1');
+      }
       modal.classList.remove('hidden');
       modal.addEventListener('click', (e) => {
-        if (e.target === modal || (e.target).closest('[data-close-webinar]')) {
-          iframe.src = '';
+        if (e.target === modal || (e.target as Element).closest('[data-close-webinar]')) {
+          if (iframe) iframe.src = '';
           modal.classList.add('hidden');
         }
       }, { once: true });

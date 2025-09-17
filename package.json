@@ -7,13 +7,15 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "audit": "node audit-script.js",
+    "audit": "node audit-script.cjs",
     "audit:lighthouse": "lighthouse http://localhost:4321 --output html --output-path lighthouse-report.html --chrome-flags=\"--headless\"",
     "audit:pa11y": "pa11y http://localhost:4321",
     "audit:check": "astro check",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "type-check": "astro check"
+    "type-check": "astro check",
+    "fix:blog-links": "node --experimental-modules scripts/fix-blog-links.mjs",
+    "crawl:blog": "npx linkinator http://localhost:4324/blog --recurse --concurrency 6 --timeout 20000 --skip 'mailto:,tel:,facebook.com/sharer,twitter.com/intent' --format json > reports/crawl_blog.json"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
