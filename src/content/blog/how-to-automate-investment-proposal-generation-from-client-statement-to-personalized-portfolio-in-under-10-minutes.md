@@ -23,7 +23,7 @@ draft: false
 <p><strong>Key benefit:</strong> You save 3–5 hours per statement, and manual entry errors are eliminated. The data is ready seconds after upload.</p>
 
 <h3>2. Instantly Visualize and Analyze the Prospect’s Portfolio</h3>
-<ul><li>All holdings, allocations, exposures, and risk factors flow from the statement into Investipal’s <a href=https://www.investipal.co/ target=_blank>portfolio analytics engine</a>.</li><li>Run a complete X-Ray: concentration risks, sector/geography breakdowns, correlations, cost structures, tax exposure, and over 20 other risk indicators—no spreadsheet work needed.</li><li>Compare the current portfolio with your recommended model or investment universe, including both public and alternative assets.</li><li>Backtest, stress-test, and identify actionable improvements—like lower fees or reduced volatility—at a glance.</li></ul>
+<ul><li>All holdings, allocations, exposures, and risk factors flow from the statement into Investipal’s <a href="/book-a-demo" target=_blank>portfolio analytics engine</a>.</li><li>Run a complete X-Ray: concentration risks, sector/geography breakdowns, correlations, cost structures, tax exposure, and over 20 other risk indicators—no spreadsheet work needed.</li><li>Compare the current portfolio with your recommended model or investment universe, including both public and alternative assets.</li><li>Backtest, stress-test, and identify actionable improvements—like lower fees or reduced volatility—at a glance.</li></ul>
 <p><strong>Key benefit:</strong> You surface meaningful, personalized insights that demonstrate real value, with zero manual computation.</p>
 
 <h3>3. Create a Hyper-Personalized, Compliance-Ready Proposal—Automatically</h3>
@@ -47,4 +47,4 @@ draft: false
 
 <h2>Take the Next Step</h2>
 <p>Ready to see this workflow in action? Process your first 3 statements free—no upfront commitments. Experience firsthand how automation transforms your prospecting, onboarding, and compliance workflows—and delivers a meaningful edge in client experience and AUM growth.</p>
-<p><a href=https://www.investipal.co/book-demo>Book a Demo with Investipal</a> and discover how you can go from client statement to personalized portfolio proposal—in under 10 minutes, every time.</p>
+<p><a href="/book-a-demo">Book a Demo with Investipal</a> and discover how you can go from client statement to personalized portfolio proposal—in under 10 minutes, every time.</p>

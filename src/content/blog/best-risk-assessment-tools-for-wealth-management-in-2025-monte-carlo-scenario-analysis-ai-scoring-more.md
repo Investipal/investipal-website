@@ -61,4 +61,4 @@ draft: false
 <h2>Your Next Step: See True Risk Assessment Automation in Action</h2>
 <p>The demands on wealth management and RIA firms are only increasing. Manual workflows can’t keep up with client expectations, regulatory scrutiny, or the complexity of modern portfolios. Automation isn’t just a time-saver—it’s the foundation of delivering better outcomes, faster, and at scale.</p>
 <p>If you’re ready to see how seamless risk assessment, portfolio construction, proposal generation, and compliance can be—with no more manual re-entry or fragmented workflows—book a personalized Investipal demo today. We’ll show you exactly how we’re helping top advisors and RIA firms turn portfolio risk into a client growth advantage, not a compliance bottleneck.</p>
-<p><a href=https://www.investipal.co/blogs>Book your Investipal demo</a> and unlock the future of wealth management risk assessment for your practice.</p>
+<p><a href="/book-a-demo">Book your Investipal demo</a> and unlock the future of wealth management risk assessment for your practice.</p>

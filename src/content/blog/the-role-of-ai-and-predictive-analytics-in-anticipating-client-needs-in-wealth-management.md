@@ -20,19 +20,19 @@ draft: false
 
 <h3>1. Eliminating Manual Data Entry and Onboarding Friction</h3>
 <ul><li>With advanced AI, advisors can upload any brokerage statement (PDF, CSV, even images with handwritten notes) and have every holding, asset type, and position automatically extracted—no manual entry needed.</li><li>Structured data flows instantly into all downstream processes: proposals, risk analyses, compliance documentation, and portfolio construction.</li><li>This automation collapses onboarding cycles from weeks to minutes, delights clients with fast, digital-first experiences, and frees up your team for higher-impact work.</li></ul>
-<p>For more detail, see our Brokerage <a href="/features/automated-statement-scanner">Statement Scanner</a>: <a href="/">/</a></p>
+<p>For more detail, see our Brokerage <a href="/features/automated-statement-scanner">Statement Scanner</a>: <a href="/book-a-demo">/</a></p>
 
 <h3>2. Powering Proactive, Predictive Client Service</h3>
 <ul><li>Predictive analytics monitor accounts in real-time, detecting emerging risk exposure, identifying drift from model allocations, and flagging patterns that may signal client dissatisfaction or risk aversion (such as increased cash positions or changed investment behavior).</li><li>Instead of waiting for quarterly reviews or reacting after the fact, advisors get actionable notifications with explanations, enabling them to engage clients with meaningful advice exactly when it matters most.</li><li>Portfolio comparison and future-state modeling illustrate potential outcomes—essential for demonstrating the value of proposed changes, whether to reduce costs, boost returns, or align tightly with client goals.</li></ul>
-<p>Learn more about our real-time risk management and drift alert tools: <a href="/">/</a></p>
+<p>Learn more about our real-time risk management and drift alert tools: <a href="/book-a-demo">/</a></p>
 
 <h3>3. Personalization—At Scale</h3>
 <ul><li>AI portfolio construction and proposal engines draw from your unique investment universe to build portfolios tailored to each client’s risk profile, tax situation, and household goals—in minutes, not days.</li><li>Complex mandates (public and private assets, alternatives, multi-goal households) are no longer a scaling bottleneck—each proposal, allocation, and risk analysis is personalized, explained, and audit-ready.</li><li>Automated recommendations help surface lower-cost, better-performing alternatives and instantly demonstrate the rationale behind every investment choice.</li></ul>
-<p>See more about our personalized portfolio tools: <a href="/">/</a></p>
+<p>See more about our personalized portfolio tools: <a href="/book-a-demo">/</a></p>
 
 <h3>4. Effortless Compliance & Documentation</h3>
 <ul><li>Regulations aren’t getting any easier. Our compliance suite automates IPS, Reg BI, and KYP document generation, ensuring every proposal and household is aligned to your fiduciary obligations—without manual effort.</li><li>Monitoring portfolio drift, tracking risk exposures, and maintaining standardized documentation takes seconds, not hours. Advisors stay audit-ready while focusing on what matters most: delivering value to clients.</li><li>Full e-signature workflows and centralized document collection support a seamless digital experience for both advisors and clients.</li></ul>
-<p>More on compliance automation: <a href="/">/</a></p>
+<p>More on compliance automation: <a href="/book-a-demo">/</a></p>
 
 <h2>What Advisory Teams Achieve with AI Automation</h2>
 <ul><li><strong>Faster client conversion cycles</strong>—from first intake to signed proposal and funded account in under 10 minutes.</li><li><strong>Significant time savings</strong>—onboarding and compliance reduced by over 90%.</li><li><strong>Consistent, scalable personalization</strong>—so every client gets bespoke portfolios and actionable advice, regardless of complexity.</li><li><strong>Risk reduction and data accuracy</strong>—automated ingestion and documentation eliminate errors and manual lapses.</li><li><strong>Increase in advisor productivity and AUM growth</strong>—less time on busywork, more on client acquisition and deepening relationships.</li></ul>
@@ -41,4 +41,4 @@ draft: false
 <p>Client expectations for speed, transparency, and expertise are only increasing. Manual, fragmented processes are no longer sustainable—or competitive. With Investipal, you can harness the full power of AI and predictive analytics to eliminate bottlenecks, anticipate every need, and consistently deliver the proactive, insightful service that sets leading advisors apart.</p>
 
 <h2>Ready to Experience Automated, Predictive Wealth Management?</h2>
-<p>Let’s show you how onboarding, risk management, proposals, and compliance all come together in one seamless workflow. <a href="/">Book a personalized Investipal demo</a> and see how you can accelerate growth, scale personalization, and deliver the experience your clients expect—today.</p>
+<p>Let’s show you how onboarding, risk management, proposals, and compliance all come together in one seamless workflow. <a href="/book-a-demo">Book a personalized Investipal demo</a> and see how you can accelerate growth, scale personalization, and deliver the experience your clients expect—today.</p>

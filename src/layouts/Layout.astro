@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { ViewTransitions } from 'astro:transitions';
+import Analytics from '../components/integrations/Analytics.astro';
 
 export interface Props {
   title: string;
@@ -110,6 +111,8 @@ const {
     {preloadImages.map((src) => (
       <link rel="preload" as="image" href={src} />
     ))}
+
+    <Analytics />
 
     <!-- Early sanitizer to prevent malformed href requests (e.g., inline SVG becoming href) -->
     <script is:inline>

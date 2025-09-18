@@ -53,7 +53,7 @@ featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67be
     <tr>
       <td style="padding: 8px; border-bottom: 1px solid #ccc;">Risk Assessments</td>
       <td style="padding: 8px; border-bottom: 1px solid #ccc;">❌ Basic questionnaire</td>
-      <td style="padding: 8px; border-bottom: 1px solid #ccc;">✅ 3-factor <a href="/features/risk-management">risk assessment</a> for deeper insights</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ccc;">✅ 3-factor <a href="/risk-assessment">risk assessment</a> for deeper insights</td>
     </tr>
 
     <tr>

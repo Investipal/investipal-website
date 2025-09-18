@@ -88,4 +88,4 @@ draft: false
 <h2>Summary: The Competitive Edge of Automated Compliance</h2>
 <p>Manual compliance is an anchor. By shifting to a seamless, AI-driven system, you eliminate documentation friction, achieve continuous audit readiness, and open up capacity to convert and manage more high-value households. For firms itching to scale—without letting regulatory risk eat margin or morale—the automation opportunity is now.</p>
 
-<p>Ready to future-proof your onboarding, proposal, and compliance workflows? <a href=https://www.investipal.co/blogs target=_blank>Book a demo with our team</a> and see how you can produce IPS, Reg BI, and compliance documentation in minutes, not weeks—so you can focus on building deeper client relationships while growing your AUM faster.</p>
+<p>Ready to future-proof your onboarding, proposal, and compliance workflows? <a href="/book-a-demo" target=_blank>Book a demo with our team</a> and see how you can produce IPS, Reg BI, and compliance documentation in minutes, not weeks—so you can focus on building deeper client relationships while growing your AUM faster.</p>

@@ -55,4 +55,4 @@ featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6866
 <h2>Integrated, Not Fragmented: The Future of Financial Planning</h2>
 <p>Gone are the days of stringing together point solutions, juggling spreadsheets, and living in fear of audits. Today’s most successful advisors leverage unified automation platforms to scale advice, drive AUM growth, and personalize every interaction—without sacrificing the human touch that clients value.</p>
 
-<p>Ready to see how automation, AI portfolio construction, and seamless compliance can transform your client experience? <a href="/blog">Book a personalized Investipal demo</a> and discover how we help your firm deliver personalized financial planning at scale, with less effort and more impact.</p>
+<p>Ready to see how automation, AI portfolio construction, and seamless compliance can transform your client experience? <a href="/book-a-demo">Book a personalized Investipal demo</a> and discover how we help your firm deliver personalized financial planning at scale, with less effort and more impact.</p>

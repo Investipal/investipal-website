@@ -95,4 +95,4 @@ featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6874
 <h2>Ready to See Real Efficiency Gains?</h2>
 
 <p>Digital onboarding, AI portfolio optimization, and automated compliance aren’t just buzzwords—they’re the difference between scaling your practice and being left behind.</p>
-<p>If you’re ready to eliminate manual bottlenecks and reclaim your time for what matters most—advising clients and building your business—<a href="/blog">book a demo with Investipal today</a> and experience purpose-built automation for modern advisors and RIAs.</p>
+<p>If you’re ready to eliminate manual bottlenecks and reclaim your time for what matters most—advising clients and building your business—<a href="/book-a-demo">book a demo with Investipal today</a> and experience purpose-built automation for modern advisors and RIAs.</p>

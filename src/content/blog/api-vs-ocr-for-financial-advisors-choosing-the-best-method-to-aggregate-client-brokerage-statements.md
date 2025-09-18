@@ -64,4 +64,4 @@ featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/687f
 
 <h2>Final Thoughts: Making Your Statement Work for You</h2>
 <p>Your job is to manage relationships and optimize financial outcomes, not to chase paperwork or decipher faxed account statements. By leveraging the best of both API and next-gen OCR technology, you empower your advisory team to deliver value at every turn—without ever being sidelined by onboarding bottlenecks or fragmented compliance tools.</p>
-<p>Ready to transform your onboarding and proposal workflow—while eliminating manual data entry for good? <a href="/blog">Book a demo with Investipal now</a> and see how hybrid automation accelerates conversion, de-risks compliance, and personalizes every client touchpoint at scale.</p>
+<p>Ready to transform your onboarding and proposal workflow—while eliminating manual data entry for good? <a href="/book-a-demo">Book a demo with Investipal now</a> and see how hybrid automation accelerates conversion, de-risks compliance, and personalizes every client touchpoint at scale.</p>

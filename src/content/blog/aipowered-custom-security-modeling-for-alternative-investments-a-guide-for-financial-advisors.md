@@ -70,4 +70,4 @@ featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/683a
 </p>
 <p>AI-powered custom security modeling at Investipal eliminates those bottlenecks. You automate onboarding, ensure compliant documentation, analyze and monitor risk in real time, and deliver client-facing proposals that stand out in a competitive market.
 </p>
-<p>Ready to see how your team can streamline complex alternative portfolios from onboarding to proposal to compliance—no silos, no manual errors, and no operational drag? <a href="/blog" target="_blank">Book a personalized demo</a> to see Investipal’s Custom Security Builder and end-to-end wealth management automation in action. Give your clients—and your team—the edge they deserve.</p>
+<p>Ready to see how your team can streamline complex alternative portfolios from onboarding to proposal to compliance—no silos, no manual errors, and no operational drag? <a href="/book-a-demo" target="_blank">Book a personalized demo</a> to see Investipal’s Custom Security Builder and end-to-end wealth management automation in action. Give your clients—and your team—the edge they deserve.</p>

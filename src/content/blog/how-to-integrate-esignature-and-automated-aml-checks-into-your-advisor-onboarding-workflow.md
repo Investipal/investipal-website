@@ -81,5 +81,5 @@ If your current onboarding workflow is still riddled with manual steps, it’s h
 
 <h2>Accelerate Onboarding, Eliminate Bottlenecks—Book a Demo</h2>
 <p>
-Want to see how seamless digital onboarding, secure e-signature, and automated AML can transform your practice? <a href=https://www.investipal.co/book-demo>Schedule a personalized Investipal demo</a> and experience compliance and onboarding—done right, from day one.
+Want to see how seamless digital onboarding, secure e-signature, and automated AML can transform your practice? <a href="/book-a-demo">Schedule a personalized Investipal demo</a> and experience compliance and onboarding—done right, from day one.
 </p>

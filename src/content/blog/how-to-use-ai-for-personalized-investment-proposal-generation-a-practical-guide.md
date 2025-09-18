@@ -30,7 +30,7 @@ With AI, you can automate these bottlenecks and create proposals that are not ju
 
 - **Upload Brokerage Statements Instantly** — Investipal's [AI-powered scanner](/features/automated-statement-scanner) ingests any statement format (PDFs, images, even handwritten notes). Holdings, tickers, account types, and values are extracted in seconds.
 - **Sync Held-Away Assets** — Combine separate accounts for a complete household picture.
-- **<a href="/features/risk-management">Risk Assessment</a> in Minutes** — Our [embeddable 3-factor risk questionnaire](/risk-assessment) quickly measures risk capacity, behavioral bias, and current portfolio risk—pinpointing misalignments with your recommended strategy.
+- **<a href="/risk-assessment">Risk Assessment</a> in Minutes** — Our [embeddable 3-factor risk questionnaire](/risk-assessment) quickly measures risk capacity, behavioral bias, and current portfolio risk—pinpointing misalignments with your recommended strategy.
 
 **Net effect:**
 - 3–5 hours saved per client intake

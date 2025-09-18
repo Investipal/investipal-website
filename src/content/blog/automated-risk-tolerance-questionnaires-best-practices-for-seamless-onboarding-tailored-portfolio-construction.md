@@ -49,4 +49,4 @@ draft: false
 
 <h2>Ready to Transform Your Onboarding Experience?</h2>
 <p>Advisors and firms using Investipal see onboarding times shrink from days to minutes, with instant compliance-ready documentation and dynamic, personalized portfolio construction. Leave behind the legacy of fragmented tools and move to a seamless, scalable—yet deeply personal—risk management process.</p>
-<p><a href="/blog">Book a demo with our team</a> to see how automated risk tolerance, onboarding, and end-to-end portfolio and compliance automation can accelerate your growth, improve compliance, and delight your clients—every time.</p>
+<p><a href="/book-a-demo">Book a demo with our team</a> to see how automated risk tolerance, onboarding, and end-to-end portfolio and compliance automation can accelerate your growth, improve compliance, and delight your clients—every time.</p>

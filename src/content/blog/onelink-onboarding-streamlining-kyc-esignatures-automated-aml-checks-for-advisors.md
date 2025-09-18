@@ -61,4 +61,4 @@ featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/686c
 <ul><li>Eliminate manual onboarding work and compliance headaches</li><li>Accelerate client conversions and improve your NIGO rates</li><li>Deliver an onboarding process your clients want to tell others about</li></ul>
 <p><a href="/book-a-demo">Book a demo</a> with our experts to see how Investipal's one-link onboarding, automated compliance, and integrated portfolio tools dramatically simplify new account opening—while giving you time back to focus on growing your business.</p>
 
-<p><a href="/blog" style="color:#1677a5; text-decoration:underline;">Book your Investipal demo now</a> and experience a new standard in advisor onboarding.</p>
+<p><a href="/book-a-demo" style="color:#1677a5; text-decoration:underline;">Book your Investipal demo now</a> and experience a new standard in advisor onboarding.</p>

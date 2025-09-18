@@ -27,7 +27,7 @@ draft: false
 <p>Streamlining prospect-to-client conversion isn’t a ‘nice-to-have’ - it’s the foundation for future growth. Advisors need onboarding to be:</p>
 <ul>
   <li><strong>Fully digital</strong>: Clients can complete KYC, risk tolerance, and info-gathering online in minutes.</li>
-  <li><strong>Statement & Data Intake Automation</strong>: Extract positions instantly from any brokerage statement, PDF, or even a phone photo - using AI-driven <a href="/features/automated-statement-scanner">OCR</a>. No manual data entry. At Investipal, we engineered our <a href="/blog">brokers statement scanner</a> to handle <em>any</em> statement or format in seconds.</li>
+  <li><strong>Statement & Data Intake Automation</strong>: Extract positions instantly from any brokerage statement, PDF, or even a phone photo - using AI-driven <a href="/features/automated-statement-scanner">OCR</a>. No manual data entry. At Investipal, we engineered our <a href="/book-a-demo">brokers statement scanner</a> to handle <em>any</em> statement or format in seconds.</li>
   <li><strong>Instant Portfolio Visualization & Gap Analysis</strong>: Upload a statement and instantly visualize exposures, concentrations, and benchmark gaps. Get a complete picture before the first meeting.</li>
 </ul>
 
@@ -78,4 +78,4 @@ draft: false
 <h2>See Investipal in Action</h2>
 <p>If you’re ready to stop losing prospects to slow onboarding, start winning business with highly personalized proposals, and want to end the compliance paper trail forever, it’s time to see how advisory software should work in 2025. Book a personalized Investipal demo today and experience the power of truly automated onboarding, AI-driven portfolio management, and compliance workflows that let you grow faster and safer than ever before.</p>
 
-<p><a href="/blog">Book your Investipal demo now</a> and discover what your business can become when every workflow just works.</p>
+<p><a href="/book-a-demo">Book your Investipal demo now</a> and discover what your business can become when every workflow just works.</p>

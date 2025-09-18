@@ -48,4 +48,4 @@ draft: false
 
 <h2>Ready to Upgrade? See How Investipal Can Transform Your Practice</h2>
 <p>If fragmented tools, slow onboarding, and disconnected compliance are holding your firm back, it’s time to explore an integrated approach. Investipal unifies digital onboarding, automated risk assessments, portfolio personalization, and compliance in a powerful, advisor-centric workflow. Free yourself from manual data entry and disjointed tech. Deliver a superior client experience-every time.</p>
-<p><a href=https://www.investipal.co/ target=_blank>Book a demo with Investipal today</a> and see how seamless, instant digital risk assessment can revolutionize your advisory practice.</p>
+<p><a href="/book-a-demo" target=_blank>Book a demo with Investipal today</a> and see how seamless, instant digital risk assessment can revolutionize your advisory practice.</p>

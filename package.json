@@ -15,7 +15,9 @@
     "format:check": "prettier --check .",
     "type-check": "astro check",
     "fix:blog-links": "node --experimental-modules scripts/fix-blog-links.mjs",
-    "crawl:blog": "npx linkinator http://localhost:4324/blog --recurse --concurrency 6 --timeout 20000 --skip 'mailto:,tel:,facebook.com/sharer,twitter.com/intent' --format json > reports/crawl_blog.json"
+    "crawl:blog": "npx linkinator http://localhost:4324/blog --recurse --concurrency 6 --timeout 20000 --skip 'mailto:,tel:,facebook.com/sharer,twitter.com/intent' --format json > reports/crawl_blog.json",
+    "audit:semantic": "node --experimental-modules scripts/semantic-link-audit.mjs",
+    "fix:semantic-links": "node --experimental-modules scripts/semantic-link-fix.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

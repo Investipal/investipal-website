@@ -9,6 +9,7 @@ import StandardIcon from '../components/ui/StandardIcon.astro';
 import StandardBadge from '../components/ui/StandardBadge.astro';
 import { workflowData } from '../data/workflowData';
 import CTASection from '../components/sections/CTASection.astro';
+import TestimonialAuthor from '../components/ui/TestimonialAuthor.astro';
 import CookieBanner from '../components/ui/CookieBanner.astro';
 import { designSystem } from '../data/designSystem';
 
@@ -68,6 +69,8 @@ const platformModules = [
     title: "Marketing & Lead Generation",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>`,
     description: "Deliver the right message at the right time with our intelligent marketing suite.",
+    image: "/images/product/marketing-leadgen.png",
+    imageAlt: "Investipal product screenshot – Market Sense and Ticker Impact",
     features: [
       "3-factor risk assessment embeddable on your website",
       "Portfolio sentiment monitoring with auto-generated messaging",
@@ -254,18 +257,31 @@ const resultsData = {
               </div>
               
               <div class={`${index % 2 === 1 ? 'lg:col-start-1' : ''} ${index % 2 === 1 ? 'lg:row-start-1' : ''}`}>
-                <div class="bg-gradient-to-br from-violet-50 to-violet-100 rounded-2xl p-8 lg:p-12">
-                  <div class="text-center">
-                    <div class="inline-flex items-center justify-center w-24 h-24 bg-white rounded-full shadow-lg mb-6">
-                      <div class="text-violet-600">
-                        <Fragment set:html={module.icon} />
-                      </div>
-                    </div>
-                    <p class="text-gray-600 font-system_ui">
-                      Interactive demo placeholder for {module.title}
-                    </p>
+                {module.image ? (
+                  <div class="relative group">
+                    <img 
+                      src={module.image} 
+                      alt={module.imageAlt || module.title} 
+                      class="w-full rounded-2xl shadow-2xl border border-gray-200/50 object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="absolute inset-0 rounded-2xl ring-1 ring-black/5 pointer-events-none"></div>
                   </div>
-                </div>
+                ) : (
+                  <div class="bg-gradient-to-br from-violet-50 to-violet-100 rounded-2xl p-8 lg:p-12">
+                    <div class="text-center">
+                      <div class="inline-flex items-center justify-center w-24 h-24 bg-white rounded-full shadow-lg mb-6">
+                        <div class="text-violet-600">
+                          <Fragment set:html={module.icon} />
+                        </div>
+                      </div>
+                      <p class="text-gray-600 font-system_ui">
+                        Interactive demo placeholder for {module.title}
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -363,12 +379,12 @@ const resultsData = {
             <blockquote class={`${designSystem.typography.bodyLarge} mb-6`}>
               "Investipal has been a game-changer for our firm. It really had become an efficiency multiplier for our assistants and back office. The streamlined data gathering and compliance processes have freed up our time, allowing us to focus on what truly matters—our clients."
             </blockquote>
-            <div class="flex items-center">
-              <div>
-                <div class={`font-semibold ${designSystem.text.primary}`}>Matthew Sweeney</div>
-                <div class={designSystem.text.secondary}>Managing Partner at WJCM Inc.</div>
-              </div>
-            </div>
+            <TestimonialAuthor 
+              name="Matthew Sweeney"
+              title="Managing Partner at WJCM Inc."
+              imageSrc="/images/team/matthew-sweeney.jpg"
+              size="md"
+            />
           </div>
 
           <!-- Testimonial 2 -->
@@ -376,12 +392,12 @@ const resultsData = {
             <blockquote class={`${designSystem.typography.bodyLarge} mb-6`}>
               "At ProsperPlan Wealth, we're deeply committed to integrating cutting-edge technology to transform the financial planning landscape. Investipal's innovative approach aligns perfectly with our vision, particularly in utilizing OCR technology to streamline processes."
             </blockquote>
-            <div class="flex items-center">
-              <div>
-                <div class={`font-semibold ${designSystem.text.primary}`}>Lauren M. Williams</div>
-                <div class={designSystem.text.secondary}>CEO, ProsperPlan Wealth</div>
-              </div>
-            </div>
+            <TestimonialAuthor 
+              name="Lauren M. Williams"
+              title="CEO, ProsperPlan Wealth"
+              imageSrc="/images/external/66cf4f1cdec6f9fb4a1d4554_40cb0baa-70cc-4eef-9326-255691abafee.png"
+              size="md"
+            />
           </div>
         </div>
       </div>

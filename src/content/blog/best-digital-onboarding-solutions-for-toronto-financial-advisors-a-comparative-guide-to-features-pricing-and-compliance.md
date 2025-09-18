@@ -57,4 +57,4 @@ featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/683a
 <p>Clients now expect digital onboarding that feels as seamless as opening a new bank account—all while regulators demand bulletproof documentation and every minute of advisor time is precious. Most platforms claim to solve this, but piecework apps only move the bottleneck; true transformation comes from removing manual friction end to end and embedding compliance at every step.</p>
 <p>If your firm is ready to leave paper files, re-keyed data, and last-minute compliance panics in the past—while delivering a more responsive, more personalized client experience—see how Investipal automates and elevates onboarding for Toronto-area financial advisors.</p>
 
-<p><strong>Ready to accelerate your onboarding, automate compliance, and win more clients?</strong> <a href="/blog">Book a personalized demo with the Investipal team today</a> and see the platform in action.</p>
+<p><strong>Ready to accelerate your onboarding, automate compliance, and win more clients?</strong> <a href="/book-a-demo">Book a personalized demo with the Investipal team today</a> and see the platform in action.</p>

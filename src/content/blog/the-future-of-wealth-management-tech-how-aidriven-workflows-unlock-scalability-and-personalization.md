@@ -37,4 +37,4 @@ draft: false
 
 <h2>What Does the Future Hold?</h2>
 <p>The future of wealth management belongs to those who fuse scalable automation with deep, personalized client experiences. Technology should remove barriers, not replace relationships. Advisors and RIAs who automate the busywork and focus on delivering tailored advice will win client trust, compress conversion cycles, and see higher long-term growth.</p>
-<p>If you’re ready to eliminate manual bottlenecks and build your firm around efficiency, compliance, and unmatched personalization, <a href=https://www.investipal.co/book-demo target=_blank>book a demo</a> with us today. See first-hand how AI-driven workflows are helping advisors just like you grow faster, reduce risk, and deliver real value to clients—every step of the way.</p>
+<p>If you’re ready to eliminate manual bottlenecks and build your firm around efficiency, compliance, and unmatched personalization, <a href="/book-a-demo" target=_blank>book a demo</a> with us today. See first-hand how AI-driven workflows are helping advisors just like you grow faster, reduce risk, and deliver real value to clients—every step of the way.</p>

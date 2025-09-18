@@ -30,7 +30,7 @@ draft: false
   <li><strong>Comparative Analysis Engine:</strong> Stack up the prospect’s existing portfolio versus your proposed models. Identify hidden risks, tax inefficiencies, or underperformance instantly, then highlight real value in your recommendations.</li>
   <li><strong>AI-Generated, Branded Proposals:</strong> Create investment proposals in minutes — not hours. Personalize every proposal based on automated RTQ, client goals, and portfolio metrics. An advisor's edge is their ability to tie recommendations to client objectives and context. Automation means every client sees that edge, clearly and consistently.</li>
 </ul>
-<p>For example, Investipal’s proposal builder draws directly from onboarding data and portfolio analytics, outputting high-converting, compliance-ready proposals with your branding — helping you close faster and more confidently. <a href=https://investipal.co>Learn more about streamlined proposals</a>.</p>
+<p>For example, Investipal’s proposal builder draws directly from onboarding data and portfolio analytics, outputting high-converting, compliance-ready proposals with your branding — helping you close faster and more confidently. <a href="/book-a-demo">Learn more about streamlined proposals</a>.</p>
 
 <img src=https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/68375221b7f36cdc55551fc1_pexels-photo-7979447.jpeg alt=A business advisor consults with clients in a modern office setting, fostering teamwork and cooperation. width=50% height=auto style=max-width: 90vw; border-radius: 10px;>
 
@@ -73,4 +73,4 @@ draft: false
 <p>Advisory automation is about more than technology; it’s about unlocking your full potential as a trusted partner in your clients' financial lives.</p>
 
 <h3>Ready to Transform Your Practice?</h3>
-<p>At Investipal, we've built a platform that handles the heavy lifting across onboarding, analysis, proposal generation, portfolio construction, insurance modeling, and compliance. Our approach empowers you to focus on relationships, strategy, and growth. If you’re ready to see these steps in action, <a href=https://investipal.co>book a demo with us</a> and explore how you can automate your workflow from client intake to compliance — and beyond.</p>
+<p>At Investipal, we've built a platform that handles the heavy lifting across onboarding, analysis, proposal generation, portfolio construction, insurance modeling, and compliance. Our approach empowers you to focus on relationships, strategy, and growth. If you’re ready to see these steps in action, <a href="/book-a-demo">book a demo with us</a> and explore how you can automate your workflow from client intake to compliance — and beyond.</p>
