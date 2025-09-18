@@ -54,4 +54,4 @@ draft: false
 
 <h2>Ready to See the Difference the Right AI Makes?</h2>
 <p>If your team is still wrestling with manual data entry, fragmented tools, or slow onboarding—even if you’re already using OCR technology—there’s a better way. Investipal delivers a step-change in efficiency, compliance confidence, and advisor impact, all without sacrificing the human touch that sets your firm apart. </p>
-<p><strong>Want to experience end-to-end automation for onboarding, risk, proposals, and compliance? <a href=https://www.investipal.co/blogs>Book a demo with Investipal today</a>, and see how much more productive your practice can be when AI goes beyond OCR.</strong></p>
+<p><strong>Want to experience end-to-end automation for onboarding, risk, proposals, and compliance? <a href="/book-a-demo">Book a demo with Investipal today</a>, and see how much more productive your practice can be when AI goes beyond OCR.</strong></p>

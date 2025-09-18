@@ -45,7 +45,7 @@ draft: false
 
 <h3>Fast, Frictionless Onboarding</h3>
 <ul>
-<li>Investipal’s <a href="/">AI-powered brokerage statement scanner</a> instantly ingests PDFs, images, even handwritten notes, parses holdings, and creates a structured portfolio—no manual entry needed.</li>
+<li>Investipal’s <a href="/book-a-demo">AI-powered brokerage statement scanner</a> instantly ingests PDFs, images, even handwritten notes, parses holdings, and creates a structured portfolio—no manual entry needed.</li>
 <li>Upload statements in any format—our OCR & AI extract every position, cost basis, and asset detail with precision.</li>
 <li>Processed data flows directly into your proposal engine and compliance tools, saving 3–5 hours per account and avoiding costly errors.</li>
 </ul>
@@ -92,4 +92,4 @@ draft: false
 
 <h2>The Bottom Line: A Call to Action</h2>
 <p>Goal-based investing is evolving, and a new standard is emerging—one where AI-powered personalization isn’t reserved for the ultra-wealthy, but available for everyone. Advisors who embrace this change will deliver more value, build stronger client relationships, and scale with confidence. Curious how seamless automation can transform your client experience and firm performance?</p>
-<p><strong>See Investipal’s unified automation platform in action and discover how easy true personalization can be. <a href="/">Book a demo today</a> and accelerate your practice into the next era of wealth management.</strong></p>
+<p><strong>See Investipal’s unified automation platform in action and discover how easy true personalization can be. <a href="/book-a-demo">Book a demo today</a> and accelerate your practice into the next era of wealth management.</strong></p>

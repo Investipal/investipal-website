@@ -51,4 +51,4 @@ featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6881
 
 <h2>Ready to See Hyper-Personalization in Action?</h2>
 <p>This shift isn’t theoretical; it’s already happening. Leading RIAs and independent advisors across North America are automating onboarding, compliance, and portfolio modeling—freeing themselves to deliver personal, high-value advice at scale.</p>
-<p>If you’re ready to see how real-time data and AI-powered workflows can transform your client experience—and your bottom line—<a href="/blog" target="_blank">book a demo with Investipal</a>. We’ll show you how to go from prospect to personalized proposal, from account opening to actionable compliance—faster, smarter, and with less friction than you ever thought possible.</p>
+<p>If you’re ready to see how real-time data and AI-powered workflows can transform your client experience—and your bottom line—<a href="/book-a-demo" target="_blank">book a demo with Investipal</a>. We’ll show you how to go from prospect to personalized proposal, from account opening to actionable compliance—faster, smarter, and with less friction than you ever thought possible.</p>

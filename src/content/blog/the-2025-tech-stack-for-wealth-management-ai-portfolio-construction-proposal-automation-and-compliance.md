@@ -52,4 +52,4 @@ draft: false
 
 <h2>Ready to Upgrade Your Firm’s Tech Stack?</h2>
 <p>We know how hard it is to break free from fragmented tools and manual bottlenecks. That’s exactly why we built Investipal—to help firms like yours modernize your entire workflow from prospect to proposal, to portfolio construction and compliance, in one secure, AI-powered platform.</p>
-<p>Want to see the future of wealth management in action? <a href=https://www.investipal.co/blogs target=_blank>Book a personal demo</a> and discover how you can onboard, analyze, propose, and comply—at a scale and speed your team never thought possible.</p>
+<p>Want to see the future of wealth management in action? <a href="/book-a-demo" target=_blank>Book a personal demo</a> and discover how you can onboard, analyze, propose, and comply—at a scale and speed your team never thought possible.</p>

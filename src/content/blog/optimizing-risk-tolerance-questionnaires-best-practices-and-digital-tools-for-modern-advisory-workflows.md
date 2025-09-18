@@ -79,4 +79,4 @@ draft: false
 <li>Stay audit-ready and proactively aligned with evolving client profiles—no more last-minute compliance scrambles.</li>
 </ul>
 
-<p>Ready to eliminate slow onboarding, disconnected tools, and compliance headaches? <a href=https://www.investipal.co/book-demo style=font-size:1.1rem;color:#fff;background:#2274a5;padding:10px 22px;border:none;border-radius:4px;display:inline-block;text-decoration:none;>Book a Demo with Investipal</a> and experience how our automated RTQ and onboarding tools help you deliver faster, better, and safer outcomes to every client.</p>
+<p>Ready to eliminate slow onboarding, disconnected tools, and compliance headaches? <a href="/book-a-demo" style=font-size:1.1rem;color:#fff;background:#2274a5;padding:10px 22px;border:none;border-radius:4px;display:inline-block;text-decoration:none;>Book a Demo with Investipal</a> and experience how our automated RTQ and onboarding tools help you deliver faster, better, and safer outcomes to every client.</p>

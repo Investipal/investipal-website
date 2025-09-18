@@ -324,9 +324,20 @@ const structuredData = {
         e.preventDefault();
         const formEl = form as HTMLFormElement;
         const formData = new FormData(formEl);
-        const email = formData.get('email');
+        const email = (formData.get('email') || '').toString().trim();
         try {
-          await new Promise(resolve => setTimeout(resolve, 1000));
+          const payload = { email };
+          const res = await fetch('/api/newsletter', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json', 'x-page': location.href, 'x-title': document.title },
+            body: JSON.stringify(payload),
+            keepalive: true
+          }).catch(() => null);
+          if (!res || (res.status !== 204 && res.status !== 200)) {
+            if (window.sendZapier) {
+              await (window as any).sendZapier(payload);
+            }
+          }
           const button = form.querySelector('button[type="submit"]');
           const originalText = button?.textContent ?? 'Subscribe';
           if (button) {

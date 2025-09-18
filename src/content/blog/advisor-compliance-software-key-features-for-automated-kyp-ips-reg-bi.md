@@ -36,7 +36,7 @@ featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6863
 <h3>KYP (Know Your Product) Automation</h3>
 <p>Regulators expect you to continuously monitor not only your clients, but every investment on your shelf—public and private. Manual product vetting isn’t feasible (or consistent) as your offerings grow.</p>
 <ul><li>AI-powered tools auto-classify every product, flag concentration risks, and track exposures as holdings and mandates change.</li><li>Dynamic databases update for every prospect and account—no static or stale files.</li><li>Portfolio X-ray and drift detection make it easy to spot suitability gaps, staying “audit ready” at all times.</li></ul>
-<p>For example, with <a href="/blog">Investipal</a> you can scan brokerage statements (even PDFs or images with handwritten notes), immediately parse positions, and run suitability and KYP checks before the first meeting is over.</p>
+<p>For example, with <a href="/book-a-demo">Investipal</a> you can scan brokerage statements (even PDFs or images with handwritten notes), immediately parse positions, and run suitability and KYP checks before the first meeting is over.</p>
 
 <h3>IPS (Investment Policy Statement) Generation and Monitoring</h3>
 <p>Every client needs a living, personal IPS—not a copy-paste from last year’s template. Manual workflows derail onboarding, personalization, and compliance—all at once.</p>
@@ -49,7 +49,7 @@ featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6863
 <img src="/images/inline/advisor-compliance-software-key-features-for-automated-kyp-ips-reg-bi-2-51fc204423.webp" alt="A close look at tax forms marked with scam, highlighting financial fraud risks." width="50%" height="auto" style="max-width: 90vw; border-radius: 10px;"/>
 
 <h2>What Sets Investipal Apart: Frictionless Compliance Meets Real-Time Personalization</h2>
-<p>We built <a href="/blog">Investipal</a> to end the constant struggle of wrangling multiple systems, updating compliance docs, or worrying that something’s fallen through the cracks on a busy day. Here’s how we help:</p>
+<p>We built <a href="/book-a-demo">Investipal</a> to end the constant struggle of wrangling multiple systems, updating compliance docs, or worrying that something’s fallen through the cracks on a busy day. Here’s how we help:</p>
 <ul><li>AI-powered brokerage statement scanner extracts all holdings—public, private, or alternative assets—even from tricky files or image scans. <strong>No manual entry required.</strong></li><li>Instant KYP and suitability mapping as portfolios and client goals evolve; you get alerts immediately when something drifts out of range.</li><li>Dynamic, household-level IPS and Reg BI workflows that pull from your existing client data, generate compliant docs in a click, and keep everything version-controlled—no more lost signatures or stale data.</li><li>Continuous portfolio, compliance, and risk monitoring—driven by automation, not waiting for an annual review.</li><li>SOC2 Type II compliant, with complete data encryption and secure credentialing. Your compliance stack must be as secure as your custodian. Ours is built for the enterprise from the ground up.</li></ul>
 
 <h2>Pain-Free Implementation: Integration and Training Simplified</h2>
@@ -72,4 +72,4 @@ featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6863
 <h2>Transform Compliance Into a Competitive Advantage</h2>
 <p>Compliance doesn’t have to slow you down—or be a cost center. Done right, it’s the foundation for scalable growth, deeper advisor-client relationships, and a reputation for operational excellence. When you automate compliance with a platform built to handle the unique needs of modern wealth management, you turn regulatory rigor into a market edge.</p>
 
-<p>Ready to see how you can cut your compliance headaches by 90%, win faster onboarding, and deliver a higher-touch client experience? <a href="/blog">Book a demo with Investipal</a> and discover automated KYP, IPS and Reg BI workflows—built to empower your advisory business, not slow it down.</p>
+<p>Ready to see how you can cut your compliance headaches by 90%, win faster onboarding, and deliver a higher-touch client experience? <a href="/book-a-demo">Book a demo with Investipal</a> and discover automated KYP, IPS and Reg BI workflows—built to empower your advisory business, not slow it down.</p>

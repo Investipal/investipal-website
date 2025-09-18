@@ -484,16 +484,20 @@ const articleStructuredData = {
         <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           Get the latest insights, industry trends, and best practices delivered to your inbox
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+        <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto" method="POST" data-form="newsletter">
           <input 
-            type="email" 
+            type="email"
+            name="email"
             placeholder="Enter your email" 
+            required
             class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors"
           />
-          <button class="px-8 py-3 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700 transition-colors shadow-sm">
+          <!-- honeypot -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+          <button type="submit" class="px-8 py-3 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700 transition-colors shadow-sm">
             Subscribe
           </button>
-        </div>
+        </form>
         <p class="text-sm text-gray-500 mt-4">
           No spam, unsubscribe at any time.
         </p>
@@ -507,6 +511,49 @@ const articleStructuredData = {
   <Footer />
   <CookieBanner />
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('[data-form="newsletter"]');
+    if (!form) return;
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formEl = form as HTMLFormElement;
+      const fd = new FormData(formEl);
+      const email = (fd.get('email') || '').toString().trim();
+      const trap = (fd.get('website') || '').toString().trim();
+      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      const original = btn?.textContent || 'Subscribe';
+      if (!email || trap) return; // ignore bots
+      try {
+        btn && (btn.disabled = true, btn.textContent = 'Submitting…');
+        const payload = { email };
+        // Prefer first-party API; headers carry context
+        const res = await fetch('/api/newsletter', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json', 'x-page': location.href, 'x-title': document.title },
+          body: JSON.stringify(payload),
+          keepalive: true
+        }).catch(() => null);
+        if (!res || (res.status !== 204 && res.status !== 200)) {
+          // Fallback to Zapier helper
+          if (window.sendZapier) {
+            await (window as any).sendZapier(payload);
+          }
+        }
+        if (btn) {
+          btn.textContent = 'Subscribed!';
+          btn.classList.add('bg-green-600','hover:bg-green-700');
+        }
+        formEl.reset();
+        setTimeout(() => { if (btn) { btn.textContent = original; btn.classList.remove('bg-green-600','hover:bg-green-700'); btn.disabled = false; } }, 2500);
+      } catch (err) {
+        console.error('Newsletter Zapier error', err);
+        if (btn) { btn.textContent = original; btn.disabled = false; }
+      }
+    });
+  });
+</script>
 
 
 <style>

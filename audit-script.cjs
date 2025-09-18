@@ -11,18 +11,22 @@ const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-// Pages to audit
+// Pages to audit (configurable base URL)
+const baseUrl = process.env.AUDIT_BASE_URL || 'http://localhost:4324';
 const pages = [
-  { name: 'Homepage', url: 'http://localhost:4321' },
-  { name: 'Wealth Managers', url: 'http://localhost:4321/segments/wealth-managers' },
-  { name: 'Wealth Firms', url: 'http://localhost:4321/segments/wealth-firms' },
-  { name: 'Financial Planners', url: 'http://localhost:4321/segments/financial-planners' },
-  { name: 'Insurance', url: 'http://localhost:4321/segments/insurance' },
-  { name: 'AI Engagement', url: 'http://localhost:4321/features/ai-driven-engagement' },
-  { name: 'Asset Allocation', url: 'http://localhost:4321/features/asset-allocation' },
-  { name: 'Statement Scanner', url: 'http://localhost:4321/features/automated-statement-scanner' },
-  { name: 'Client Acquisition', url: 'http://localhost:4321/features/client-acquisition' },
-  { name: 'Risk Management', url: 'http://localhost:4321/features/risk-management' }
+  { name: 'Homepage', url: `${baseUrl}` },
+  { name: 'Wealth Managers', url: `${baseUrl}/segments/wealth-managers` },
+  { name: 'Wealth Firms', url: `${baseUrl}/segments/wealth-firms` },
+  { name: 'Financial Planners', url: `${baseUrl}/segments/financial-planners` },
+  { name: 'Insurance', url: `${baseUrl}/segments/insurance` },
+  { name: 'Features Index', url: `${baseUrl}/features` },
+  { name: 'AI Engagement', url: `${baseUrl}/features/ai-driven-engagement` },
+  { name: 'Asset Allocation', url: `${baseUrl}/features/asset-allocation` },
+  { name: 'Statement Scanner', url: `${baseUrl}/features/automated-statement-scanner` },
+  { name: 'Client Acquisition', url: `${baseUrl}/features/client-acquisition` },
+  { name: 'Risk Management', url: `${baseUrl}/features/risk-management` },
+  { name: 'Book a Demo', url: `${baseUrl}/book-a-demo` },
+  { name: 'Blog Index', url: `${baseUrl}/blog` }
 ];
 
 const runCommand = (command, args) => {

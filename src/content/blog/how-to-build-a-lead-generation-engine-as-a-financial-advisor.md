@@ -69,7 +69,7 @@ A website or landing page should never be an afterthought in your marketing stra
 
 It starts with a well-structured website that provides simple navigation and easy-to-understand messaging. This is also where Search Engine Optimization (SEO) comes into play, which you can think of as the compass that directs users to your online presence. By incorporating targeted keywords, maintaining a blog with fresh content, and optimizing meta tags and descriptions, you enhance your visibility and climb the ranks in search results.
 
-As visitors come to your website, you need to convert them to either have a conversation or nurture them. Clearly outlining your services and transparently displaying your fees can significantly influence a prospective client's decision-making process here. "Lead magnets" (tools that get visitors to take action in return for something) can help to increase conversions as well. Financial calculators or [risk assessments/questionnaires](/portfolio-risk-assessment) are examples of common lead magnets, which can often increase conversions by >80%.
+As visitors come to your website, you need to convert them to either have a conversation or nurture them. Clearly outlining your services and transparently displaying your fees can significantly influence a prospective client's decision-making process here. "Lead magnets" (tools that get visitors to take action in return for something) can help to increase conversions as well. Financial calculators or [risk assessments/questionnaires](/risk-assessment) are examples of common lead magnets, which can often increase conversions by >80%.
 
 ### Social Media
 

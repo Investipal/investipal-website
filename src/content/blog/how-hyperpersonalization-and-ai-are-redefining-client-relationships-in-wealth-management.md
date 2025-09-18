@@ -49,5 +49,5 @@ AI and hyper-personalization aren’t just trends—they’re the foundation for
 If your firm is ready to break free from legacy manual workflows and deliver a differentiated, scalable client experience, it’s time to see intelligent automation and hyper-personalization in action. 
 </p>
 <p>
-We invite you to <a href=https://www.investipal.co/>book a demo with Investipal</a>—see how you can onboard clients in minutes, generate highly personalized proposals, automate compliance, and future-proof your practice with one unified workflow. Shift the balance from admin to advice, and create truly meaningful advisor-client relationships at scale.
+We invite you to <a href="/book-a-demo">book a demo with Investipal</a>—see how you can onboard clients in minutes, generate highly personalized proposals, automate compliance, and future-proof your practice with one unified workflow. Shift the balance from admin to advice, and create truly meaningful advisor-client relationships at scale.
 </p>
