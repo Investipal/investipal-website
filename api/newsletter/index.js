@@ -1,7 +1,7 @@
 const https = require('https');
 const { BlobServiceClient } = require('@azure/storage-blob');
 
-const ZAPIER_WEBHOOK_URL = process.env.ZAPIER_WEBHOOK_URL || 'https://hooks.zapier.com/hooks/standard/12151325/2cd82ddbb924442c88de7272f7a8dc24/';
+const ZAPIER_WEBHOOK_URL = process.env.ZAPIER_WEBHOOK_URL || 'https://hooks.zapier.com/hooks/catch/12151325/umco5zo/';
 const STORAGE_CONNECTION_STRING = process.env.STORAGE_CONNECTION_STRING;
 const STORAGE_CONTAINER = process.env.STORAGE_CONTAINER || 'newsletter-signups';
 

@@ -61,8 +61,8 @@
       document.addEventListener('astro:after-swap', sendPV);
 
       // Expose Zapier helper
-      window.sendZapier = async function(payload){
-        const url = 'https://hooks.zapier.com/hooks/standard/12151325/2cd82ddbb924442c88de7272f7a8dc24/';
+              window.sendZapier = async function(payload){
+                const url = 'https://hooks.zapier.com/hooks/catch/12151325/umco5zo/';
         try {
           const res = await fetch(url, {
             method: 'POST', headers: { 'content-type':'application/json' }, body: JSON.stringify(payload), keepalive: true
@@ -81,7 +81,7 @@
             try {
               const email = (payload && payload.email) ? String(payload.email) : '';
               if (!email) return;
-              let ifr = document.getElementById('zapier_iframe') as HTMLIFrameElement | null;
+              let ifr = document.getElementById('zapier_iframe');
               if (!ifr) {
                 ifr = document.createElement('iframe');
                 ifr.id = 'zapier_iframe';

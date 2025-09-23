@@ -6,8 +6,8 @@
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
-      "methods": ["post"],
-      "route": "newsletter"
+      "methods": ["post", "options"],
+      "route": "contact"
     },
     {
       "type": "http",
@@ -16,6 +16,7 @@
     }
   ]
 }
+
 
 
 
