@@ -8,9 +8,11 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@azure/storage-blob": "^12.16.0"
+    "@azure/storage-blob": "^12.16.0",
+    "resend": "^3.2.0"
   }
 }
+
 
 
 
