@@ -1,5 +1,5 @@
 // Import utilities from `astro:content`
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z, type CollectionEntry } from 'astro:content';
 
 // Define the blog collection schema
 const blog = defineCollection({
@@ -9,27 +9,21 @@ const blog = defineCollection({
   schema: z.object({
     // Required fields
     title: z.string(),
-    excerpt: z.string().max(160, 'Excerpt should be under 160 characters for SEO'),
+    excerpt: z.string(), // Removed length restriction for migrated content
     author: z.string(),
-    publishedDate: z.date(),
-    category: z.enum([
-      'AI & Technology',
-      'Portfolio Management', 
-      'Client Communication',
-      'Compliance',
-      'Industry Trends',
-      'Best Practices',
-      'Process Improvement'
-    ]),
-    featuredImage: z.string(),
-    featuredImageAlt: z.string(),
+    publishedDate: z.coerce.date(),
+    category: z.string(), // Made flexible for migrated content categories
+    featuredImage: z.string().optional(),
+    featuredImageAlt: z.string().optional(),
     
     // Optional fields with defaults
     authorImage: z.string().optional(),
-    updatedDate: z.date().optional(),
-    tags: z.array(z.string()).default([]),
+    updatedDate: z.coerce.date().optional(),
+    tags: z.union([z.array(z.string()), z.string()])
+      .transform((val) => Array.isArray(val) ? val : val.split(',').map((t) => t.trim()).filter(Boolean))
+      .default([]),
     featured: z.boolean().default(false),
-    draft: z.boolean().default(false),
+    draft: z.coerce.boolean().default(false),
     seoDescription: z.string().optional(),
     
     // Auto-calculated fields (can be overridden)
@@ -73,12 +67,59 @@ const pages = defineCollection({
   }),
 });
 
+// Define the podcasts collection schema
+const podcasts = defineCollection({
+  type: 'content',
+  
+  // Define the schema for podcast episode frontmatter
+  schema: z.object({
+    // Required fields
+    title: z.string(),
+    excerpt: z.string().max(200, 'Excerpt should be under 200 characters for SEO'),
+    publishedDate: z.coerce.date(),
+    // For migrated content we may not have direct audio URLs; make optional
+    audioUrl: z.string().url('Must be a valid audio URL').optional(),
+    duration: z.string().optional(), // e.g., "45:30"
+    
+    // Optional fields
+    episodeNumber: z.number().optional(),
+    season: z.number().optional(),
+    hosts: z.array(z.string()).default([]),
+    guests: z.array(z.string()).default([]),
+    topics: z.array(z.string()).default([]),
+    coverImage: z.string().optional(),
+    coverImageAlt: z.string().optional(),
+    transcript: z.string().optional(),
+    // Guest fields (optional, populated from Webflow when available)
+    guestName: z.string().optional(),
+    guestTitle: z.string().optional(),
+    guestCompany: z.string().optional(),
+    guestBio: z.string().optional(),
+    guestLinkedIn: z.string().url().optional(),
+    guestTwitter: z.string().url().optional(),
+    guestWebsite: z.string().url().optional(),
+    // Platform embeds
+    youtubeUrl: z.string().url().optional(),
+    spotifyUrl: z.string().url().optional(),
+    
+    // SEO fields
+    seoDescription: z.string().optional(),
+    keywords: z.array(z.string()).default([]),
+    
+    // Status fields
+    featured: z.boolean().default(false),
+    draft: z.boolean().default(false),
+  }),
+});
+
 // Export the collections object to register all collections
 export const collections = {
   blog,
   pages,
+  podcasts,
 };
 
-// Export types for use in components
-export type BlogPost = z.infer<typeof blog.schema>;
-export type PageContent = z.infer<typeof pages.schema>;
+// Export types for use in components (use CollectionEntry for strong typing)
+export type BlogPost = CollectionEntry<'blog'>;
+export type PageContent = CollectionEntry<'pages'>;
+export type PodcastEpisode = CollectionEntry<'podcasts'>;

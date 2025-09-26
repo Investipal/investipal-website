@@ -1,0 +1,184 @@
+---
+// Dynamic Tag Page
+// Shows all blog posts filtered by a specific tag
+
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import CTASection from '../../../components/sections/CTASection.astro';
+import CookieBanner from '../../../components/ui/CookieBanner.astro';
+import BlogCard from '../../../components/blog/BlogCard.astro';
+import Breadcrumb from '../../../components/ui/Breadcrumb.astro';
+import StandardBadge from '../../../components/ui/StandardBadge.astro';
+
+// Generate static paths for all unique tags
+export async function getStaticPaths() {
+  try {
+    const posts = await getCollection('blog');
+    const publishedPosts = posts.filter(post => !post.data.draft);
+    
+    // Get all unique tags
+    const allTags = new Set();
+    publishedPosts.forEach(post => {
+      post.data.tags.forEach(tag => {
+        allTags.add(tag);
+      });
+    });
+    
+    // Create paths for each tag
+    return Array.from(allTags).map((tag) => {
+      const tg = String(tag);
+      return {
+        params: { 
+          tag: tg.toLowerCase().replace(/\s+/g, '-') 
+        },
+        props: { 
+          tag: tg,
+          posts: publishedPosts.filter(post => 
+            post.data.tags.some(postTag => 
+              postTag.toLowerCase().replace(/\s+/g, '-') === tg.toLowerCase().replace(/\s+/g, '-')
+            )
+          )
+        },
+      };
+    });
+  } catch (error) {
+    console.error('Error in tag getStaticPaths:', error);
+    return [];
+  }
+}
+
+const { tag, posts } = Astro.props as { tag: string; posts: any[] };
+
+// SEO Data
+const title = `${tag} Articles | Investipal Blog`;
+const description = `Explore all ${tag.toLowerCase()} articles and insights from Investipal. Stay updated with the latest trends in financial advisory technology.`;
+const canonical = `https://investipal.co/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`;
+
+// Generate breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Blog', href: '/blog' },
+  { name: `${tag} Articles` }
+];
+
+// Sort posts by published date (newest first)
+const sortedPosts = posts.sort((a, b) => 
+  b.data.publishedDate.getTime() - a.data.publishedDate.getTime()
+);
+
+// Generate structured data for the tag page
+const siteUrl = Astro.site?.toString() || 'https://investipal.co';
+const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
+
+const tagPageStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": `${tag} Articles`,
+  "description": description,
+  "url": currentUrl,
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": sortedPosts.length,
+    "itemListElement": sortedPosts.map((post, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "BlogPosting",
+        "headline": post.data.title,
+        "description": post.data.excerpt,
+        "url": `${siteUrl}/blog/${post.id.replace('.md', '')}`,
+        "datePublished": post.data.publishedDate.toISOString(),
+        "author": {
+          "@type": "Person",
+          "name": post.data.author
+        }
+      }
+    }))
+  }
+};
+---
+
+<Layout 
+  title={title}
+  description={description}
+  canonical={canonical}
+  structuredData={tagPageStructuredData}
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-gray-50 to-white py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb -->
+        <div class="mb-8">
+          <Breadcrumb items={breadcrumbItems} />
+        </div>
+        
+        <div class="text-center max-w-4xl mx-auto">
+          <!-- Tag Badge -->
+          <div class="inline-flex items-center mb-6">
+            <StandardBadge text={`#${tag}`} variant="hero" />
+          </div>
+          
+          <!-- Title -->
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-investipal-600 via-investipal-700 to-investipal-800 bg-clip-text text-transparent leading-tight pb-2 mb-6">
+            {tag} Articles
+          </h1>
+          
+          <!-- Description -->
+          <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+            {sortedPosts.length} article{sortedPosts.length !== 1 ? 's' : ''} tagged with "{tag}"
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {sortedPosts.length > 0 ? (
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {sortedPosts.map((post) => (
+              <BlogCard 
+                post={post}
+                showFeaturedBadge={false}
+              />
+            ))}
+          </div>
+        ) : (
+          <div class="text-center py-16">
+            <div class="max-w-md mx-auto">
+              <div class="w-16 h-16 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
+                <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">No Articles Found</h3>
+              <p class="text-gray-600 mb-6">
+                We couldn't find any articles tagged with "{tag}".
+              </p>
+              <a 
+                href="/blog"
+                class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-investipal-600 hover:bg-investipal-700 transition-colors"
+              >
+                Browse All Articles
+              </a>
+            </div>
+          </div>
+        )}
+        
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTASection />
+  </main>
+
+  <Footer />
+  <CookieBanner />
+</Layout>
