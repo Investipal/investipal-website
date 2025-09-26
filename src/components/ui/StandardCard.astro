@@ -80,10 +80,13 @@ const imageHeight = sizeClasses[size];
     <div class="relative overflow-hidden">
       <a href={href} class="card-link">
         <img 
-          src={image} 
+          src={`${image}?v=1`} 
           alt={imageAlt}
           class={`w-full ${imageHeight} object-cover group-hover:scale-105 transition-transform duration-300`}
           loading="lazy"
+          decoding="async"
+          width="1200"
+          height={imageHeight === 'h-64' ? '512' : imageHeight === 'h-48' ? '384' : '320'}
         />
       </a>
       <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -92,7 +95,7 @@ const imageHeight = sizeClasses[size];
   
   <div class="p-6">
     <!-- Title -->
-    <h3 class={`${designSystem.typography.featureTitle} mb-3 line-clamp-2 group-hover:text-investipal-600 transition-colors`}>
+    <h3 class={`${designSystem.typography.featureTitle} mb-3 line-clamp-3 group-hover:text-investipal-600 transition-colors`}>
       <a href={href} class="card-title-link">
         {title}
       </a>

@@ -62,29 +62,8 @@ const featuredWebinar = {
 };
 
 // Additional webinar topics (sample data)
-const upcomingWebinars = [
-  {
-    title: "AI-Powered Portfolio Construction: The Future is Here",
-    description: "Discover how AI is revolutionizing portfolio construction and risk management for financial advisors.",
-    date: "Coming Soon",
-    speakers: ["Investipal Team"],
-    registrationUrl: "/book-a-demo"
-  },
-  {
-    title: "Compliance Automation: Staying Ahead of Regulations",
-    description: "Learn how to automate your compliance workflow while maintaining the highest standards.",
-    date: "Coming Soon", 
-    speakers: ["Investipal Compliance Team"],
-    registrationUrl: "/book-a-demo"
-  },
-  {
-    title: "From Lead to Client: Automating Your Sales Process",
-    description: "Transform your sales process with AI-powered lead qualification and client onboarding.",
-    date: "Coming Soon",
-    speakers: ["Investipal Sales Team"],
-    registrationUrl: "/book-a-demo"
-  }
-];
+// No upcoming webinars currently
+const upcomingWebinars = [];
 
 // Structured Data
 const structuredData = {
@@ -243,7 +222,8 @@ const structuredData = {
       </div>
     </section>
 
-    <!-- Upcoming Webinars -->
+    <!-- Upcoming Webinars (hidden if none available) -->
+    {upcomingWebinars && upcomingWebinars.length > 0 && (
     <section class="py-20 md:py-24 lg:py-28 bg-white">
       <div class={designSystem.spacing.container}>
         <div class="text-center mb-16">
@@ -287,6 +267,7 @@ const structuredData = {
         </div>
       </div>
     </section>
+    )}
 
     <!-- Newsletter Signup -->
     <section class={`${designSystem.spacing.section} ${designSystem.background.secondary}`}>

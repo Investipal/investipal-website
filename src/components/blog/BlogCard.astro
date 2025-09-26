@@ -42,9 +42,9 @@ const meta = metaParts.join(' • ');
 <StandardCard 
   title={post.data.title}
   excerpt={post.data.excerpt}
-  image={post.data.featuredImage}
-  imageAlt={post.data.featuredImageAlt}
-  href={`/blog/${post.id}`}
+  image={post.data.featuredImage || `/images/blog/${post.id.replace('.md','')}.png`}
+  imageAlt={post.data.featuredImageAlt || post.data.title}
+  href={`/blog/${post.id.replace('.md', '')}`}
   category={post.data.category}
   featured={post.data.featured}
   meta={meta}

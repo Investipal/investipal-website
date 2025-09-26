@@ -80,8 +80,8 @@ export interface Props {
       cookieBanner.style.display = 'none';
       
       // Call the onAccept function if provided
-      if (typeof window.handleCookieAccept === 'function') {
-        window.handleCookieAccept();
+      if (typeof (window as any).handleCookieAccept === 'function') {
+        (window as any).handleCookieAccept();
       }
     }, { passive: false });
     
@@ -93,8 +93,8 @@ export interface Props {
       cookieBanner.style.display = 'none';
       
       // Call the onDecline function if provided
-      if (typeof window.handleCookieDecline === 'function') {
-        window.handleCookieDecline();
+      if (typeof (window as any).handleCookieDecline === 'function') {
+        (window as any).handleCookieDecline();
       }
     }, { passive: false });
 

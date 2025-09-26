@@ -187,8 +187,8 @@ const faqPageSchema = {
             <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
               <div class="flex items-center justify-between text-center">
                 <div>
-                  <div class="text-2xl font-bold text-investipal-600 font-system_ui">500+</div>
-                  <div class="text-sm text-gray-600 font-system_ui">Advisory Firms</div>
+                  <div class="text-2xl font-bold text-investipal-600 font-system_ui">$6B+</div>
+                  <div class="text-sm text-gray-600 font-system_ui">Total Client AUM</div>
                 </div>
                 <div>
                   <div class="text-2xl font-bold text-investipal-600 font-system_ui">90%</div>
@@ -214,20 +214,10 @@ const faqPageSchema = {
                 </p>
               </div>
               
-              <!-- Calendly Embed Placeholder -->
-              <div id="calendly-container" class="bg-gray-50 rounded-lg p-8 border-2 border-dashed border-gray-300 text-center min-h-[500px] flex flex-col justify-center">
-                <div class="w-16 h-16 bg-investipal-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <svg class="w-8 h-8 text-investipal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                  </svg>
-                </div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2 font-system_ui">Calendly Integration</h3>
-                <p class="text-gray-600 font-system_ui mb-4">Calendar scheduling widget will be embedded here</p>
-                <div class="text-sm text-gray-500 font-system_ui space-y-1">
-                  <div>✓ Available Mon-Fri, 9 AM - 6 PM EST</div>
-                  <div>✓ 30-minute personalized sessions</div>
-                  <div>✓ Instant confirmation & calendar invite</div>
-                </div>
+              <!-- Calendly Embed -->
+              <div id="calendly-container" class="rounded-lg">
+                <div class="calendly-inline-widget" data-url="https://calendly.com/d/47w-99r-fst?hide_gdpr_banner=1&primary_color=270367" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
               </div>
               
               <!-- Alternative Contact -->

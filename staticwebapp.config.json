@@ -1,0 +1,11 @@
+{
+  "routes": [
+    { "route": "/images/*", "headers": { "cache-control": "public, max-age=60, must-revalidate" } }
+  ],
+  "mimeTypes": {
+    ".avif": "image/avif",
+    ".webp": "image/webp"
+  }
+}
+
+

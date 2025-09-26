@@ -9,6 +9,8 @@ import BlogCard from '../../components/blog/BlogCard.astro';
 import CookieBanner from '../../components/ui/CookieBanner.astro';
 import StandardBadge from '../../components/ui/StandardBadge.astro';
 import { getCollection } from 'astro:content';
+import fs from 'node:fs';
+import path from 'node:path';
 
 // Get all published blog posts
 let allPosts;
@@ -20,9 +22,16 @@ try {
   allPosts = [];
 }
 
+// Robust sort by date (handles strings just in case)
+const getTime = (p) => {
+  const d = p.data.publishedDate || p.data.updatedDate || 0;
+  const t = d instanceof Date ? d.getTime() : new Date(d || 0).getTime();
+  return isNaN(t) ? 0 : t;
+};
+
 const publishedPosts = allPosts
-  .filter(post => !post.data.draft)
-  .sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime());
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => getTime(b) - getTime(a));
 
 console.log('Published posts:', publishedPosts.length);
 
@@ -35,9 +44,90 @@ const postsWithReadingTime = publishedPosts.map(post => ({
   }
 }));
 
+// Build a list of available blog images for heuristic matching
+const blogImagesDir = new URL('../../public/images/blog/', import.meta.url);
+const thumbImagesDir = new URL('../../public/images/thumbnails/', import.meta.url);
+let blogImageFiles: string[] = [];
+let thumbImageFiles: string[] = [];
+try {
+  blogImageFiles = fs
+    .readdirSync(blogImagesDir)
+    .filter((f) => /\.(png|jpe?g|webp|avif)$/i.test(f));
+} catch {}
+try {
+  thumbImageFiles = fs
+    .readdirSync(thumbImagesDir)
+    .filter((f) => /\.(png|jpe?g|webp|avif)$/i.test(f));
+} catch {}
+
+const normalize = (s: string) => s.toLowerCase().replace(/%20|\s+/g, '-').replace(/[^a-z0-9-]/g, '-');
+
+function resolveFeaturedImage(post: any): string {
+  if (post?.data?.featuredImage) return post.data.featuredImage;
+  // 0) Use first in-body image from markdown if present and exists
+  try {
+    const body: string = String(post?.body || '');
+    const mdMatch = body.match(/!\[[^\]]*\]\((\/images\/[\w\-\/%\.]+)\)/i);
+    if (mdMatch && mdMatch[1]) {
+      const rel = mdMatch[1];
+      const abs = new URL(`../../public${rel}`, import.meta.url);
+      if (fs.existsSync(abs)) return rel;
+    }
+  } catch {}
+  const slug = String(post.id || '').replace(/\.md$/i, '');
+  const normSlug = normalize(slug);
+  // 1) Strong prefix match: slug__* or slug.* in blog images
+  const startsMatch = blogImageFiles.find((f) => {
+    const n = normalize(f);
+    return n.startsWith(`${normSlug}__`) || n.startsWith(`${normSlug}.`);
+  });
+  if (startsMatch) return `/images/blog/${startsMatch}`;
+  // 2) Removed thumbnails fallback to avoid blurry/duplicate images
+  // 3) Fuzzy overlap score
+  const slugTokens = normSlug.split('-').filter(Boolean);
+  let best: {file?: string; score: number} = { score: 0 };
+  for (const f of blogImageFiles) {
+    const tokens = normalize(f).split('-');
+    const score = slugTokens.filter(t => tokens.includes(t)).length;
+    if (score > best.score) best = { file: f, score };
+  }
+  if (best.file && best.score >= Math.max(2, Math.floor(slugTokens.length * 0.25))) {
+    return `/images/blog/${best.file}`;
+  }
+  // 4) Category general image
+  const cat = normalize(String(post?.data?.category || ''));
+  const general = new URL('../../public/images/general/', import.meta.url);
+  try {
+    const generalFiles = fs.readdirSync(general);
+    const catMatch = generalFiles.find((f) => normalize(f).includes(cat));
+    if (catMatch) return `/images/general/${catMatch}`;
+  } catch {}
+  return '/images/blog/placeholder-image.png';
+}
+
 // Get featured post (first featured post or most recent)
-const featuredPost = postsWithReadingTime.find(post => post.data.featured) || postsWithReadingTime[0];
-const otherPosts = postsWithReadingTime.filter(post => post.slug !== featuredPost?.slug);
+const featuredPostBase = postsWithReadingTime.find(post => post.data.featured) || postsWithReadingTime[0];
+const featuredPost = featuredPostBase ? { ...featuredPostBase, data: { ...featuredPostBase.data, featuredImage: resolveFeaturedImage(featuredPostBase) } } : undefined;
+const otherPosts = postsWithReadingTime
+  .filter(post => post.id !== featuredPost?.id)
+  .map((p) => ({ ...p, data: { ...p.data, featuredImage: resolveFeaturedImage(p) } }));
+
+// Lightweight client-safe data for dynamic interactions
+const clientOtherPostsData = otherPosts.map((post) => ({
+  id: post.id,
+  data: {
+    title: post.data.title,
+    excerpt: post.data.excerpt,
+    author: post.data.author,
+    publishedDate: (post.data.publishedDate instanceof Date) ? post.data.publishedDate.toISOString() : String(post.data.publishedDate),
+    category: post.data.category,
+    tags: post.data.tags || [],
+    featuredImage: resolveFeaturedImage(post),
+    featuredImageAlt: post.data.featuredImageAlt || post.data.title,
+    readingTime: post.data.readingTime || Math.ceil((post.body?.split(/\s+/).length || 0) / 200),
+    authorImage: post.data.authorImage || '',
+  }
+}));
 
 // Pagination settings
 const POSTS_PER_PAGE = 6;
@@ -76,12 +166,17 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
   <Header />
   
   <main id="main">
-    <!-- Compact Hero Section -->
-    <section class="bg-gradient-to-br from-violet-50 via-white to-purple-50 pt-16 md:pt-20 pb-8">
+    <!-- Standard Page Hero -->
+    <section class="pt-16 md:pt-20 pb-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Compact Page Header -->
-        <div class="text-center mb-12">
-          <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div class="text-center max-w-4xl mx-auto mb-8">
+          <div class="inline-flex items-center bg-investipal-50 rounded-full px-6 py-2 mb-4">
+            <div class="bg-investipal-600 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
+              Insights
+            </div>
+            <span class="text-investipal-700 font-medium">Investipal Blog</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-investipal-600 via-investipal-700 to-investipal-800 bg-clip-text text-transparent leading-tight pb-2 mb-4">
             Latest Insights & Industry Trends
           </h1>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -101,11 +196,12 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
               <article class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
                 <!-- Featured Image -->
                 <div class="relative overflow-hidden">
-                  <a href={`/blog/${featuredPost.slug}`}>
+                  <a href={`/blog/${featuredPost.id.replace('.md', '')}`}>
                     <img 
-                      src={featuredPost.data.featuredImage} 
+                      src={`${featuredPost.data.featuredImage}?v=1`}
                       alt={featuredPost.data.featuredImageAlt || featuredPost.data.title}
                       class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      onerror="this.onerror=null;this.src='/images/blog/placeholder-image.png'"
                     />
                   </a>
                   <div class="absolute top-4 left-4">
@@ -116,7 +212,7 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
                 <!-- Content -->
                 <div class="p-6">
                   <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-tight">
-                    <a href={`/blog/${featuredPost.slug}`} class="hover:text-violet-600 transition-colors">
+                    <a href={`/blog/${featuredPost.id.replace('.md', '')}`} class="hover:text-violet-600 transition-colors">
                       {featuredPost.data.title}
                     </a>
                   </h2>
@@ -152,18 +248,19 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
           <div class="lg:col-span-5">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-lg font-semibold text-gray-900">Recent Articles</h3>
-              <button id="view-all-smooth" class="text-sm text-violet-600 hover:text-violet-700 font-medium transition-colors">View All</button>
+              <a href="#all-articles" id="jump-to-all" class="text-sm text-violet-600 hover:text-violet-700 font-medium transition-colors">View All</a>
             </div>
             
             <div class="space-y-4">
               {initialPosts.slice(0, 4).map((post) => (
                 <article class="bg-white rounded-lg border border-gray-200 p-4 hover:border-violet-300 hover:shadow-md transition-all duration-200">
                   <div class="flex space-x-4">
-                    <a href={`/blog/${post.slug}`} class="flex-shrink-0">
+                    <a href={`/blog/${post.id.replace('.md', '')}`} class="flex-shrink-0">
                       <img 
-                        src={post.data.featuredImage} 
+                        src={`${post.data.featuredImage}?v=1`}
                         alt={post.data.featuredImageAlt || post.data.title}
                         class="w-16 h-16 object-cover rounded-lg"
+                        onerror="this.onerror=null;this.src='/images/blog/placeholder-image.png'"
                       />
                     </a>
                     <div class="flex-1 min-w-0">
@@ -171,7 +268,7 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
                         {post.data.category}
                       </span>
                       <h4 class="text-sm font-semibold text-gray-900 leading-tight mb-1 line-clamp-2">
-                        <a href={`/blog/${post.slug}`} class="hover:text-violet-600 transition-colors">
+                        <a href={`/blog/${post.id.replace('.md', '')}`} class="hover:text-violet-600 transition-colors">
                           {post.data.title}
                         </a>
                       </h4>
@@ -315,8 +412,7 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
 </Layout>
 
 <script define:vars={{ 
-  allPostsData: postsWithReadingTime,
-  otherPostsData: otherPosts, 
+  clientOtherPostsData,
   initialPostsLength: initialPosts.length, 
   postsPerPageCount: POSTS_PER_PAGE 
 }}>
@@ -329,8 +425,7 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
     const formatCategoryUrl = (cat) => cat.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
     
     // All posts data
-    const allPosts = allPostsData;
-    const allOtherPostsData = otherPostsData;
+    const allOtherPostsData = clientOtherPostsData;
     let currentIndex = initialPostsLength;
     const postsPerPage = postsPerPageCount;
     let currentFilter = 'all';
@@ -452,7 +547,9 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
     
     // View All functionality
     if (viewAllBtn) {
-      viewAllBtn.addEventListener('click', () => {
+      viewAllBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         const remainingPosts = allOtherPostsData.slice(currentIndex);
         
         // Add all remaining posts at once
@@ -475,19 +572,19 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
             </p>
           </div>
         `;
+        document.getElementById('all-articles')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+
+    const jumpToAll = document.getElementById('jump-to-all');
+    if (jumpToAll) {
+      jumpToAll.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('all-articles')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     }
     
-    // Smooth scrolling for "View All" button
-    const viewAllSmoothBtn = document.getElementById('view-all-smooth');
-    if (viewAllSmoothBtn) {
-      viewAllSmoothBtn.addEventListener('click', () => {
-        document.getElementById('all-articles').scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      });
-    }
+    // Smooth scrolling is handled by anchor href="#all-articles"
     
     // Function to filter and display posts
     function filterPosts(filterType, filterValue) {
@@ -681,11 +778,12 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
     return `
       <article class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-200 hover:border-violet-300">
         <div class="relative">
-          <a href="/blog/${post.slug}" class="blog-card-link">
+          <a href="/blog/${post.id.replace('.md', '')}" class="blog-card-link">
             <img 
-              src="${post.data.featuredImage}" 
+              src="${post.data.featuredImage}?v=1"
               alt="${post.data.featuredImageAlt || post.data.title}"
               class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              onerror="this.onerror=null;this.src='/images/blog/placeholder-image.png'"
             />
           </a>
           <div class="absolute top-4 left-4">
@@ -697,7 +795,7 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
         
         <div class="p-6">
           <h3 class="text-xl font-semibold text-gray-900 mb-3 line-clamp-2 leading-tight">
-            <a href="/blog/${post.slug}" class="blog-card-link hover:text-violet-600 transition-colors">
+            <a href="/blog/${post.id.replace('.md', '')}" class="blog-card-link hover:text-violet-600 transition-colors">
               ${post.data.title}
             </a>
           </h3>

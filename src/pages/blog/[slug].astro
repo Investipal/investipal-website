@@ -15,7 +15,7 @@ export async function getStaticPaths() {
     const publishedPosts = posts.filter(post => !post.data.draft);
     
     return publishedPosts.map((post) => ({
-      params: { slug: post.id },
+      params: { slug: post.id.replace('.md', '') },
       props: { post },
     }));
   } catch (error) {
@@ -25,7 +25,39 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content, headings } = await post.render();
+let { Content, headings } = await post.render();
+let useMutatedHtml = false;
+let mutatedHtml: string | null = null;
+
+// If headings array is empty (HTML body), derive from HTML h2/h3 and ensure ids
+if (!headings || headings.length === 0) {
+  const html = post.body || '';
+  const derived: Array<{ depth: number; slug: string; text: string } > = [];
+  let mutated = html;
+  function slugify(s: string) {
+    return s
+      .toLowerCase()
+      .replace(/<[^>]+>/g, '')
+      .replace(/&[^;]+;/g, '')
+      .replace(/[^a-z0-9\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-');
+  }
+  mutated = mutated.replace(/<(h[23])(\b[^>]*)>([\s\S]*?)<\/\1>/gi, (m, tag, attrs, inner) => {
+    const text = inner.replace(/<[^>]+>/g, '').trim();
+    const idMatch = attrs.match(/\bid="([^"]+)"/i);
+    const id = idMatch ? idMatch[1] : slugify(text);
+    derived.push({ depth: tag.toLowerCase() === 'h2' ? 2 : 3, slug: id, text });
+    if (idMatch) return m; // already has id
+    const space = attrs && attrs.length ? ' ' : '';
+    return `<${tag}${space}${attrs} id="${id}">${inner}</${tag}>`;
+  });
+  if (derived.length) {
+    headings = derived;
+    useMutatedHtml = true;
+    mutatedHtml = mutated;
+  }
+}
 
 // Calculate reading time if not provided
 function calculateReadingTime(content: string): number {
@@ -37,10 +69,17 @@ function calculateReadingTime(content: string): number {
 // Enhance frontmatter with calculated fields
 const enhancedFrontmatter = {
   ...post.data,
-  readingTime: post.data.readingTime || calculateReadingTime(post.body || ''),
+  featuredImageAlt: (post.data as any).featuredImageAlt || 'Blog featured image',
+  featuredImage: post.data.featuredImage || '/images/blog/placeholder-image.png',
+  featured: (post.data as any).featured ?? false,
+  readingTime: (post.data as any).readingTime || calculateReadingTime(post.body || ''),
 };
 ---
 
-<BlogPostLayout frontmatter={enhancedFrontmatter} slug={post.id} headings={headings}>
-  <Content />
+<BlogPostLayout frontmatter={enhancedFrontmatter as any} slug={post.id.replace('.md', '')} headings={headings}>
+  {useMutatedHtml && mutatedHtml ? (
+    <div set:html={mutatedHtml} />
+  ) : (
+    <Content />
+  )}
 </BlogPostLayout>
