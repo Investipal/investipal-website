@@ -1,0 +1,98 @@
+---
+
+---
+
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" method="POST" data-form="newsletter" id="newsletterForm" action="http://localhost:3000/api/website/newsletter-subscribe/">
+  <input
+    type="email"
+    name="email"
+    placeholder="Enter your email address"
+    class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-investipal-500 focus:border-investipal-500"
+  />  
+  <button
+    type="submit" id="newsletter-submit-btn"
+    class={`group px-8 py-4 text-base bg-gradient-to-r from-investipal-600 to-investipal-700 hover:from-investipal-700 hover:to-investipal-800 text-white font-semibold rounded-xl transition-all duration-500 ease-out inline-flex items-center shadow-lg hover:shadow-xl transform hover:scale-[1.02]`}
+  >
+    <span>Subscribe</span>
+    <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-all duration-500 ease-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+    </svg>
+  </button>
+</form>
+<div id="form-success" class="hidden text-green-600 text-sm">
+  Thank you! Your submission has been received!
+</div>
+<div id="form-error" class="hidden text-red-600 text-sm">
+  Oops! Something went wrong while submitting the form.
+</div>
+ 
+
+
+  <script>
+    // Client-side (fetch) submission for nicer UX
+    (function () {
+      const form = document.getElementById('newsletterForm');
+      const success = document.getElementById('form-success');
+      const error = document.getElementById('form-error');
+      const submitButton = form.querySelector('button[type="submit"]');
+
+      function disableForm() {
+        // Disable all form inputs
+        const inputs = form.querySelectorAll('input, textarea, button');
+        inputs.forEach(input => {
+          input.disabled = true;
+        });
+        
+        // Update submit button text to show loading state
+        if (submitButton) {
+          submitButton.textContent = 'Sending...';
+        }
+      }
+      
+      function enableForm() {
+        // Re-enable all form inputs
+        const inputs = form.querySelectorAll('input, textarea, button');
+        inputs.forEach(input => {
+          input.disabled = false;
+        });
+        
+        // Restore submit button text
+        if (submitButton) {
+          submitButton.textContent = 'Send Message';
+        }
+      }
+
+      form.addEventListener('submit', async (e) => {
+        // Allow native submit if user has disabled JS
+        e.preventDefault();
+        
+        // Disable form immediately on submit
+        disableForm();
+
+        const data = {
+          email: form.email.value.trim()
+        };
+
+        try {
+          const res = await fetch('http://localhost:3000/api/website/newsletter-subscribe/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+
+          const json = await res.json();
+
+          if (!res.ok) throw new Error(json?.error || 'Request failed');
+
+          form.reset();
+          success.classList.remove('hidden');
+          error.classList.add('hidden');
+        } catch (err) {
+          error.classList.remove('hidden');
+          success.classList.add('hidden');
+        }
+        // Re-enable form on error so user can try again
+        enableForm();
+      });
+    })();
+  </script>
