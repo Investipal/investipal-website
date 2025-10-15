@@ -1,5 +1,5 @@
 ---
-// Blog Post Layout Component
+  // Blog Post Layout Component
 // Provides consistent styling and structure for all blog posts
 
 import Layout from './Layout.astro';
@@ -14,6 +14,7 @@ import RelatedPosts from '../components/blog/RelatedPosts.astro';
 import ProductCTA from '../components/blog/ProductCTA.astro';
 import StandardBadge from '../components/ui/StandardBadge.astro';
 import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import Newsletter from "../components/integrations/Newsletter.astro";
 import { getCollection } from 'astro:content';
 import fs from 'node:fs';
 
@@ -484,6 +485,7 @@ const articleStructuredData = {
         <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           Get the latest insights, industry trends, and best practices delivered to your inbox
         </p>
+<<<<<<< HEAD
         <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto" method="POST" data-form="newsletter">
           <input 
             type="email"
@@ -498,6 +500,9 @@ const articleStructuredData = {
             Subscribe
           </button>
         </form>
+=======
+       <Newsletter />
+>>>>>>> 9badc61f3c370b68a1c2ba55a96102c63db68ba1
         <p class="text-sm text-gray-500 mt-4">
           No spam, unsubscribe at any time.
         </p>
