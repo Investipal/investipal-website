@@ -13,9 +13,14 @@ yarn-error.log*
 pnpm-debug.log*
 
 # environment variables
+<<<<<<< HEAD
 .env
 .env.production
 api/local.settings.json
+=======
+# .env
+# .env.production
+>>>>>>> 9badc61f3c370b68a1c2ba55a96102c63db68ba1
 
 # macOS-specific files
 .DS_Store
