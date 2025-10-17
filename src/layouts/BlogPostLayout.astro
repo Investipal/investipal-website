@@ -485,24 +485,7 @@ const articleStructuredData = {
         <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           Get the latest insights, industry trends, and best practices delivered to your inbox
         </p>
-<<<<<<< HEAD
-        <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto" method="POST" data-form="newsletter">
-          <input 
-            type="email"
-            name="email"
-            placeholder="Enter your email" 
-            required
-            class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors"
-          />
-          <!-- honeypot -->
-          <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
-          <button type="submit" class="px-8 py-3 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700 transition-colors shadow-sm">
-            Subscribe
-          </button>
-        </form>
-=======
-       <Newsletter />
->>>>>>> 9badc61f3c370b68a1c2ba55a96102c63db68ba1
+        <Newsletter />
         <p class="text-sm text-gray-500 mt-4">
           No spam, unsubscribe at any time.
         </p>
@@ -518,6 +501,7 @@ const articleStructuredData = {
 </Layout>
 
 <script>
+  // @ts-nocheck
   document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('[data-form="newsletter"]');
     if (!form) return;
@@ -542,8 +526,10 @@ const articleStructuredData = {
         }).catch(() => null);
         if (!res || (res.status !== 204 && res.status !== 200)) {
           // Fallback to Zapier helper
-          if (window.sendZapier) {
-            await (window as any).sendZapier(payload);
+          const w = window;
+          // @ts-ignore runtime optional helper
+          if (w && typeof (w as any).sendZapier === 'function') {
+            await (w as any).sendZapier(payload);
           }
         }
         if (btn) {
