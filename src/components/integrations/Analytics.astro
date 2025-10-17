@@ -60,6 +60,34 @@
       document.addEventListener('astro:page-load', sendPV);
       document.addEventListener('astro:after-swap', sendPV);
 
+      // Event helper
+      window.trackEvent = function(name, params = {}) {
+        try {
+          window.gtag && gtag('event', name, params);
+          window.fbq && fbq('trackCustom', name, params);
+        } catch (_) {}
+      };
+
+      // Calendly conversion: when an event is scheduled inside embedded widget
+      window.addEventListener('message', function(e) {
+        try {
+          const data = e && e.data;
+          if (!data || typeof data !== 'object') return;
+          if (data.event === 'calendly.event_scheduled') {
+            const uri = (data && data.payload && data.payload.event && data.payload.event.uri) ? data.payload.event.uri : '';
+            window.trackEvent && window.trackEvent('book_demo', {
+              method: 'calendly',
+              calendly_event_uri: uri
+            });
+            try {
+              if (window.lintrk) {
+                window.lintrk('track', { conversion_id: 22297900 });
+              }
+            } catch (_) {}
+          }
+        } catch (_) {}
+      });
+
       // Expose Zapier helper
               window.sendZapier = async function(payload){
                 const url = 'https://hooks.zapier.com/hooks/catch/12151325/umco5zo/';
