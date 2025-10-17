@@ -121,14 +121,34 @@ const podcasts = defineCollection({
   }),
 });
 
+// Solutions: programmatic SEO/ICP solution pages
+const solutions = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    icp: z.enum(['RIA', 'Solo Advisor', 'Wealth Manager', 'Wealth Firm']).default('RIA'),
+    intent: z.enum(['informational', 'commercial', 'transactional']).default('commercial'),
+    primary_kw: z.string().optional(),
+    secondary_kws: z.array(z.string()).default([]),
+    featuredImage: z.string().optional(),
+    featuredImageAlt: z.string().optional(),
+    updatedDate: z.coerce.date().optional(),
+    draft: z.coerce.boolean().default(false),
+    seoDescription: z.string().optional(),
+  }),
+});
+
 // Export the collections object to register all collections
 export const collections = {
   blog,
   pages,
   podcasts,
+  solutions,
 };
 
 // Export types for use in components (use CollectionEntry for strong typing)
 export type BlogPost = CollectionEntry<'blog'>;
 export type PageContent = CollectionEntry<'pages'>;
 export type PodcastEpisode = CollectionEntry<'podcasts'>;
+export type SolutionPage = CollectionEntry<'solutions'>;

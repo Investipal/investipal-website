@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const title = 'Solutions for RIAs and Advisors | Investipal';
+const description = 'Explore solutions tailored for RIAs, solo advisors, and wealth managers: client acquisition, risk & compliance, portfolio ops, and advisor productivity.';
+const solutions = await getCollection('solutions');
+const published = solutions.filter((s) => !(s.data as any).draft);
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <main class="max-w-5xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold mb-4">Solutions</h1>
+    <p class="text-zinc-600 mb-8">Use-case driven pages for your practice.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {published.map((s) => (
+        <a href={`/solutions/${s.slug}`} class="block border rounded-lg p-5 hover:shadow-sm transition">
+          <h2 class="text-xl font-semibold">{(s.data as any).title}</h2>
+          <p class="text-sm text-zinc-600 mt-1">{(s.data as any).description}</p>
+          <p class="text-xs text-zinc-500 mt-2">ICP: {(s.data as any).icp} · Intent: {(s.data as any).intent}</p>
+        </a>
+      ))}
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+

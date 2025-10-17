@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/sections/CTASection.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const all = await getCollection('solutions');
+  const solutions = all.filter((e) => !(e.data as any).draft);
+  return solutions.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props as { entry: any };
+const { data } = entry;
+const { Content } = await entry.render();
+
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: data.title, href: Astro.url.pathname },
+];
+
+const title = `${data.title} | Investipal`;
+const description = data.seoDescription || data.description;
+const keywords = (data.secondary_kws || []).join(', ');
+---
+
+<Layout title={title} description={description} keywords={keywords}>
+  <Header />
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <Breadcrumb items={breadcrumbItems} />
+    <article class="prose prose-zinc max-w-none">
+      <h1 class="mb-2">{data.title}</h1>
+      <p class="text-zinc-600 mb-8">{data.description}</p>
+      <Content />
+    </article>
+
+    <section class="mt-12">
+      <CTASection 
+        title="See Investipal in action"
+        subtitle="Book a 15-minute walkthrough tailored to your practice."
+        ctaText="Book a demo"
+        ctaHref="/book-a-demo"
+      />
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+
