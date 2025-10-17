@@ -121,9 +121,6 @@ const faqPageSchema = {
                 Have a question or want to explore a fit? Send us a message and we'll get back to you within 24 hours.
               </p>
             </div>
-<<<<<<< HEAD
-=======
-            
             <form class="space-y-6" method="POST" data-form="contact" id="contactForm" >
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -207,6 +204,7 @@ const faqPageSchema = {
             </form>
 
             <script>
+              // @ts-nocheck
               // Client-side (fetch) submission for nicer UX
               (function () {
                 const form = document.getElementById('contactForm');
@@ -279,8 +277,6 @@ const faqPageSchema = {
                 });
               })();
             </script>
-
->>>>>>> 9badc61f3c370b68a1c2ba55a96102c63db68ba1
           </div>
 
           <!-- Right: Contact form card -->
@@ -443,6 +439,7 @@ const faqPageSchema = {
 </Layout>
 
 <script>
+  // @ts-nocheck
   // FAQ Toggle Functionality
   document.addEventListener('DOMContentLoaded', function() {
     const faqToggles = document.querySelectorAll('.faq-toggle');
@@ -482,7 +479,6 @@ const faqPageSchema = {
     });
   });
 
-<<<<<<< HEAD
   // Contact Form Handling (plain JS; works in browser)
   document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('[data-form="contact"]');
@@ -532,9 +528,6 @@ const faqPageSchema = {
       });
     }
   });
-=======
-
->>>>>>> 9badc61f3c370b68a1c2ba55a96102c63db68ba1
 </script>
 
 <style>

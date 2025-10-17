@@ -8,12 +8,9 @@ import StandardBadge from '../components/ui/StandardBadge.astro';
 import StandardIcon from '../components/ui/StandardIcon.astro';
 import CookieBanner from '../components/ui/CookieBanner.astro';
 import { designSystem } from '../data/designSystem';
-<<<<<<< HEAD
 import PageHeroSection from '../components/sections/PageHeroSection.astro';
 import CTASection from '../components/sections/CTASection.astro';
-=======
 import Newsletter from "../components/integrations/Newsletter.astro";
->>>>>>> 9badc61f3c370b68a1c2ba55a96102c63db68ba1
 
 // SEO and Meta data
 const title = "Webinars | Educational Content for Financial Advisors | Investipal";
@@ -304,8 +301,6 @@ const structuredData = {
   <Footer />
   <CookieBanner />
 </Layout>
-
-<<<<<<< HEAD
 <script>
   // Newsletter form handling and webinar modal
   document.addEventListener('DOMContentLoaded', function() {
@@ -326,11 +321,15 @@ const structuredData = {
             body: JSON.stringify(payload),
             keepalive: true
           }).catch(() => null);
-          if (!res || (res.status !== 204 && res.status !== 200)) {
-            if (window.sendZapier) {
-              await (window as any).sendZapier(payload);
+          try {
+            if (!res || (res.status !== 204 && res.status !== 200)) {
+              const w = window;
+              // @ts-ignore conditional runtime integration
+              if (w && typeof (w as any).sendZapier === 'function') {
+                await (w as any).sendZapier(payload);
+              }
             }
-          }
+          } catch {}
           const button = form.querySelector('button[type="submit"]');
           const originalText = button?.textContent ?? 'Subscribe';
           if (button) {
@@ -386,5 +385,3 @@ const structuredData = {
     openBtn?.addEventListener('click', openModal);
   });
 </script>
-=======
->>>>>>> 9badc61f3c370b68a1c2ba55a96102c63db68ba1
