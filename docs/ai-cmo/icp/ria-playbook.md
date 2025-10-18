@@ -14,6 +14,19 @@
 - "We already have tools" → Gaps across intake → proposal → compliance
 - "AI is a black box" → Explainable workflows, advisor-in-control review
 
+## Triggers
+- New household onboarding surge or RFP timeline
+- Compliance remediation or audit prep
+- Pursuing held-away assets consolidation
+
+## Alternatives (Status Quo)
+- Patchwork of intake, re-keying, proposal tools, and manual IPS/Reg BI
+- Separate vendors per step; brittle integrations
+
+## Dealbreakers
+- Explainability and auditability; embedded disclosures
+- Integration with core CRM/planning; SSO
+
 ## Proof & Social Proof Needs
 - Time benchmarks (proposal in minutes)
 - Side-by-side comparisons (current vs. proposed)

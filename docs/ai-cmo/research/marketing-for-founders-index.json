@@ -1,0 +1,227 @@
+{
+  "source": "https://github.com/EdoStra/Marketing-for-Founders?tab=readme-ov-file",
+  "generatedAt": "2025-10-18",
+  "sections": [
+    {
+      "section": "Places to Launch",
+      "takeaways": [
+        "Launch platforms and directories drive early awareness and backlinks.",
+        "Time your launch with a narrative and network activation.",
+        "Pick venues aligned to audience; avoid shotgun submissions."
+      ],
+      "mustReads": [
+        "https://socialgrowthlab.notion.site/Engaging-your-network-for-a-Product-Hunt-Launch-fc37ed8746ba46ee914bc24e46d92dbd",
+        "https://www.markepear.dev/blog/dev-tool-hacker-news-launch",
+        "https://betalist.com/"
+      ]
+    },
+    {
+      "section": "Social Media (Founder-led)",
+      "takeaways": [
+        "Building in public compounds trust and reach.",
+        "Use systems for LinkedIn/Twitter to sustain cadence.",
+        "Social listening uncovers BOFU conversations to join."
+      ],
+      "mustReads": [
+        "https://www.mrrunlocked.com/p/founder-led-linkedin-guide",
+        "https://www.failory.com/blog/building-in-public",
+        "https://www.mrrunlocked.com/p/social-listening-guide"
+      ]
+    },
+    {
+      "section": "Sales & Cold Outreach",
+      "takeaways": [
+        "Start with an early customer profile; iterate fast.",
+        "Trigger-based lists, short relevance, clear CTA.",
+        "Outbound is a learning loop for ICP and messaging."
+      ],
+      "mustReads": [
+        "https://knowledge.gtmstrategist.com/p/the-gtm-outreach-playbook-from-triggers-to-demos",
+        "https://www.za-zu.com/handbook/intro",
+        "https://posthog.com/founders/startup-sales-strategy"
+      ]
+    },
+    {
+      "section": "SEO",
+      "takeaways": [
+        "Use-case/intent clusters outperform generic blogs.",
+        "Programmatic SEO works when pages are useful and linked.",
+        "Backlinks from PR/tools accelerate indexing and trust."
+      ],
+      "mustReads": [
+        "https://www.mrrunlocked.com/p/the-saas-seo-guide",
+        "https://playbooks.hypergrowthpartners.com/p/use-case-led-seo-a-strategy-for-organic",
+        "https://playbooks.hypergrowthpartners.com/p/ai-powered-programmatic-seo"
+      ]
+    },
+    {
+      "section": "LLM SEO / AEO / GEO",
+      "takeaways": [
+        "Optimize entities, evidence, and authority to win AI answers.",
+        "Track presence in AI engines and iterate proof assets.",
+        "AEO can drive earlier returns than classic SEO."
+      ],
+      "mustReads": [
+        "https://www.lennysnewsletter.com/p/the-ultimate-guide-to-aeo-ethan-smith",
+        "https://knowledge.gtmstrategist.com/p/how-to-win-the-new-seo-game-ai-search",
+        "https://vercel.com/blog/how-were-adapting-seo-for-llms-and-ai-search"
+      ]
+    },
+    {
+      "section": "Reddit",
+      "takeaways": [
+        "Lead with story and outcomes; link sparingly.",
+        "Follow subreddit rules; earn karma before promotion.",
+        "Use social listening to find relevant threads."
+      ],
+      "mustReads": [
+        "https://redreach.ai/reddit-marketing-guide",
+        "https://marketingexamples.com/content/reddit",
+        "https://readfoundertofounder.com/p/how-i-used-reddit-to-get-our-first-1-000-customers"
+      ]
+    },
+    {
+      "section": "Email Marketing",
+      "takeaways": [
+        "Lifecycle flows (onboarding, activation, expansion) are early ROI.",
+        "Behavior-based triggers outperform batch campaigns.",
+        "Design emails to get replies early; strong signal channel."
+      ],
+      "mustReads": [
+        "https://userlist.com/blog/saas-email-marketing-strategies/",
+        "https://posthog.com/blog/how-we-built-email-onboarding",
+        "https://saasplaybook.co/"
+      ]
+    },
+    {
+      "section": "Content Marketing",
+      "takeaways": [
+        "Opinionated, useful content with a distribution checklist wins.",
+        "Repurpose across social, email, communities.",
+        "PR and thought leadership unlock backlinks and trust."
+      ],
+      "mustReads": [
+        "https://newsletter.mkt1.co/p/mkt1-content-strategy-part-1",
+        "https://marketingexamples.com/content/sharing",
+        "https://1millionarr.substack.com/p/getting-pr-for-your-saas"
+      ]
+    },
+    {
+      "section": "Ads",
+      "takeaways": [
+        "Use ads as an accelerant after message-market fit.",
+        "Start with retargeting/BOFU audiences; test creative-offer-message.",
+        "Avoid broad prospecting spend too early."
+      ],
+      "mustReads": [
+        "https://knowledge.gtmstrategist.com/p/the-no-fluff-linkedin-ads-playbook",
+        "https://www.mrrunlocked.com/p/google-ads-guide",
+        "https://posthog.com/founders/dev-marketing-paid-ads"
+      ]
+    },
+    {
+      "section": "Influencers",
+      "takeaways": [
+        "Partner where your audience already learns; align narrative and proof.",
+        "Short-form video can compress awareness cycles.",
+        "Measure by attributed demand, not vanity metrics."
+      ],
+      "mustReads": [
+        "https://playbooks.hypergrowthpartners.com/p/how-clerk-partners-with-youtubes",
+        "https://knowledge.gtmstrategist.com/p/should-influencers-be-part-of-your",
+        "https://knowledge.gtmstrategist.com/p/5-pillars-of-successful-influencer-marketing-campaigns"
+      ]
+    },
+    {
+      "section": "Affiliates & Referrals",
+      "takeaways": [
+        "Low-risk, pay-on-conversion channel for bootstrapped teams.",
+        "Simple, transparent terms and fast payouts win.",
+        "Seed with customers and aligned creators."
+      ],
+      "mustReads": [
+        "https://thegrowthmind.substack.com/p/10-steps-for-a-great-referral-program",
+        "https://www.mrrunlocked.com/p/your-ultimate-guide-to-affiliate-referrals",
+        "https://web.archive.org/web/20250523213447/https://www.growthunhinged.com/p/your-guide-to-b2b-referrals"
+      ]
+    },
+    {
+      "section": "Free-Tool Marketing",
+      "takeaways": [
+        "Micro-tools earn links, PR, and intent capture.",
+        "Scope small; ship fast; add lead capture.",
+        "Bundle tools on a hub page for topical authority."
+      ],
+      "mustReads": [
+        "https://www.marketingideas.com/p/mini-tools-are-10x-more-powerful",
+        "https://www.failory.com/blog/side-project-marketing",
+        "https://dmytrokrasun.com/posts/building-free-tools-for-marketing-seo/"
+      ]
+    },
+    {
+      "section": "Landing Pages / Positioning",
+      "takeaways": [
+        "Clarity on who/what/why-better above the fold.",
+        "Use outcomes and social proof prominently.",
+        "Align pricing/value metrics with adoption path."
+      ],
+      "mustReads": [
+        "https://newsletter.mkt1.co/p/homepage-copy",
+        "https://www.lennysnewsletter.com/p/positioning",
+        "https://web.archive.org/web/20250814043847/https://www.growthunhinged.com/p/how-to-optimize-your-pricing-page"
+      ]
+    },
+    {
+      "section": "Pricing",
+      "takeaways": [
+        "Choose value metrics that track customer outcomes.",
+        "Test packages and trials; consider reverse trials.",
+        "Make the pricing conversation part of discovery."
+      ],
+      "mustReads": [
+        "https://knowledge.gtmstrategist.com/p/pricing-from-wtf-to-willingness-to-pay",
+        "https://web.archive.org/web/20250814071651/https://www.growthunhinged.com/p/your-guide-to-reverse-trials",
+        "https://www.mrrunlocked.com/p/the-ultimate-b2b-saas-pricing-guide"
+      ]
+    },
+    {
+      "section": "CRO",
+      "takeaways": [
+        "Message-offer-proof beats button color tests.",
+        "Small UX changes can yield outsized gains.",
+        "Always test; learn from experiments across sites."
+      ],
+      "mustReads": [
+        "https://www.marketingideas.com/p/the-most-powerful-cta",
+        "https://marketingexamples.com/landing-page/blinkist",
+        "https://web.archive.org/web/20250821014350/https://www.growthunhinged.com/p/surprising-lessons-website-conversion"
+      ]
+    },
+    {
+      "section": "Idea Validation & User Research",
+      "takeaways": [
+        "Validate pain with 10–20 conversations before you build.",
+        "Use structured scripts and JTBD to uncover jobs and moments.",
+        "Cold email/DM can validate demand quickly."
+      ],
+      "mustReads": [
+        "https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/",
+        "https://deployempathy.substack.com/p/customer-interview-script-discovery-phase-i-e-before-you-ve-built-anything-415336",
+        "https://marketingexamples.com/sales/jason-cohen"
+      ]
+    },
+    {
+      "section": "Other",
+      "takeaways": [
+        "Developer ecosystems reward authenticity and examples.",
+        "Quick wins lists help prioritize early motion.",
+        "Study how breakout products got their first 1,000 users."
+      ],
+      "mustReads": [
+        "https://posthog.com/founders/first-1000-users",
+        "https://newsletter.posthog.com/p/40-things-weve-learned-about-marketing",
+        "https://www.markepear.dev/blog/developer-marketing-guide"
+      ]
+    }
+  ]
+}
