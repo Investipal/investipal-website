@@ -64,3 +64,8 @@ This 1‑pager distills the most actionable concepts from the Marketing‑for‑
 Compiled from the full index of links in Marketing‑for‑Founders. Use this as a quick operating lens; pull the cited guides when you need depth.
 
 
+
+
+
+
+

@@ -48,3 +48,8 @@ uvx --from git+https://github.com/stickerdaniel/linkedin-mcp-server linkedin-mcp
 ## Troubleshooting
 - Use `--no-headless` and `--no-lazy-init` for debugging login flows.
 - Ensure ChromeDriver version matches your Chrome if developing locally.
+
+
+
+
+

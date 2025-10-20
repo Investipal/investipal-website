@@ -13,3 +13,8 @@
 - Outcome: Household onboarding + proposals in minutes; embedded compliance
 - Proof: Side-by-side comparisons; IPS/Reg BI readiness; integrations
 - Why-Better: AI-first ingestion + explainable workflows; fewer tools, lower ops drag
+
+
+
+
+

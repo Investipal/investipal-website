@@ -130,9 +130,9 @@ inner: bg-investipal-600 text-white px-3 py-1 rounded-full
 ```css
 /* ✅ STANDARD: Smooth interactions */
 transition-all duration-500 ease-out
-hover:scale-[1.02] (subtle scaling only)
+:hover:scale-[1.02] (subtle scaling only)
 /* ❌ NEVER: Jarring animations */
-hover:scale-105 or higher (too aggressive)
+:hover:scale-105 or higher (too aggressive)
 ```
 
 #### **🔍 Pre-Flight Design Checklist:**
@@ -229,8 +229,8 @@ max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
 
 /* Grid Gaps */
 gap-8 lg:gap-12 (standard)
-gap-12 lg:gap-16 (large grids)
-```
+
+``` 
 
 #### **🔍 SEO Structure Requirements:**
 
@@ -345,4 +345,15 @@ All design tokens are defined in `src/data/designSystem.ts`:
 
 - [Astro Documentation](https://docs.astro.build/)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Design System Guidelines](./DESIGN_SYSTEM.md)
+- [Design System Guidelines](./docs/project/DESIGN_SYSTEM.md)
+
+---
+
+## 📚 Repository Navigation
+- `docs/README.md` — Documentation index
+- `docs/ai-cmo/README.md` — AI CMO docs index
+- `scripts/README.md` — Scripts index
+- `reports/README.md` — Reports index
+- `reports/audits/README.md` — Consolidated audits index
+- `src/README.md` — Source overview
+- `api/README.md` — API functions

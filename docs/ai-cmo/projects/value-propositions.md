@@ -25,3 +25,8 @@ Proof anchors
 ## Why Now & Why Better
 - Status quo (spreadsheets + point tools) is slow, error-prone, and fragmented
 - AI-first ingestion + embedded compliance unify intake→proposal→docs in one flow
+
+
+
+
+

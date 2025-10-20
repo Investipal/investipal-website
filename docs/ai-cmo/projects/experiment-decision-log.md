@@ -18,3 +18,8 @@ Use this log to capture hypotheses, outcomes, and decisions. Keep entries concis
 
 ## Entries
 - (Add newest on top)
+
+
+
+
+

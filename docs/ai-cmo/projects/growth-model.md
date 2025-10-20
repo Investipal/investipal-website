@@ -19,3 +19,8 @@ Micro tools → Backlinks/Mentions → AEO inclusion → BOFU paid → Demos
 
 ## Cadence
 - Weekly experiments; monthly channel deep dives; quarterly loop audit
+
+
+
+
+

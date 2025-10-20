@@ -75,3 +75,8 @@ Source: `docs/ai-cmo/research/demand-curve-growth-marketing-course.pdf`
 - Prioritize activation email flows; add guided first-success action.
 - Build 1–2 micro tools for backlinks and qualified discovery.
 - Launch retargeting + BOFU search after landing conversion is proven.
+
+
+
+
+

@@ -147,6 +147,15 @@ Based on Lighthouse reports, consider these optimizations:
 
 The Investipal website is in excellent shape with strong foundations for performance, accessibility, and SEO! 🎉
 
+---
+
+## 📂 Canonical Links to Consolidated Audits
+Prefer these canonical paths (original timestamped folders remain for backward compatibility):
+
+- `reports/audits/2025-09-16T12-58-17-488Z/`
+- `reports/audits/2025-09-16T21-23-25-155Z/`
+- `reports/audits/2025-09-17T12-02-07-791Z/`
+
 
 
 
