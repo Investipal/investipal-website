@@ -28,5 +28,3 @@ Prospects bounce when onboarding drags. Manual forms, PDF statement re-keying, a
 ## Call to action
 
 [Book a demo](/book-a-demo) to see this workflow on your data.
-
-
