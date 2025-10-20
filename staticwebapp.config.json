@@ -1,11 +1,6 @@
 {
   "routes": [
     {
-      "route": "/*/",
-      "redirect": "/:splat",
-      "statusCode": 301
-    },
-    {
       "route": "/blogs",
       "redirect": "/blog",
       "statusCode": 301
