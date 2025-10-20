@@ -7,7 +7,7 @@ primary_kw: client acquisition for ria
 secondary_kws:
   - ria marketing ai
   - advisor lead generation
-seoDescription: Boost RIA client acquisition with AI: automate intake, scan brokerage statements, and generate compliance-ready proposals.
+seoDescription: "Boost RIA client acquisition with AI: automate intake, scan brokerage statements, and generate compliance-ready proposals."
 ---
 
 ## Pain and status quo

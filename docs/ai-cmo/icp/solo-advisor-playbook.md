@@ -7,6 +7,7 @@
 ## Jobs-To-Be-Done
 - Reclaim hours/week through automation
 - Generate proposals and IPS quickly without extra staff
+- Guide onboarding & account opening with minimal back-and-forth
 
 ## Objections
 - "I don’t have time to switch" → Start with statement scanning + proposals only
@@ -31,4 +32,4 @@
 
 ## CTAs
 - Primary: 3‑minute tour
-- Secondary: Proposal template download
+- Secondary: Proposal template download; Onboarding checklist

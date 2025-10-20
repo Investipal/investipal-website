@@ -21,3 +21,4 @@ Prioritized by ICP fit, SERP feasibility, and conversion proximity. Map each to 
 Notes
 - Each item should internally link to its core feature, one adjacent feature, and /book-a-demo.
 - Use claims-policy and style-guide for language; add disclaimers as applicable.
+- Use datasets from `./keywords/keyword-universe.csv` and `./keywords/clusters.csv` to prioritize.

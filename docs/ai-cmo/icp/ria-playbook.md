@@ -9,6 +9,7 @@
 - Convert prospects faster with clear value proofs
 - Build personalized portfolios with household-level context
 - Produce IPS/Reg BI docs alongside proposals
+- Streamline onboarding & account opening with guided e‑sign and custodian workflows
 
 ## Objections
 - "We already have tools" → Gaps across intake → proposal → compliance
@@ -34,4 +35,4 @@
 
 ## CTAs
 - Primary: Book a 15‑minute walkthrough
-- Secondary: Download proposal/IPS checklist
+- Secondary: Download proposal/IPS checklist; Onboarding checklist
