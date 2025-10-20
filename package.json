@@ -8,7 +8,6 @@
     "build:report": "astro build && node scripts/url-parity-audit.mjs --prod https://investipal.co/sitemap-index.xml --staging dist/sitemap-index.xml --out reports",
     "preview": "astro preview",
     "astro": "astro",
-    "audit": "node audit-script.cjs",
     "audit:lighthouse": "lighthouse http://localhost:4321 --output html --output-path lighthouse-report.html --chrome-flags=\"--headless\"",
     "audit:pa11y": "pa11y http://localhost:4321",
     "audit:check": "astro check",
