@@ -6,7 +6,7 @@
       "statusCode": 301
     },
     {
-      "route": "/webinars/*",
+      "route": "/webinars/:splat",
       "redirect": "/webinars",
       "statusCode": 301
     },
@@ -17,7 +17,7 @@
       "redirect": "/contact-us"
     },
     {
-      "route": "/blog-posts/*",
+      "route": "/blog-posts/:splat",
       "statusCode": 301,
       "redirect": "/blog/:splat"
     }
