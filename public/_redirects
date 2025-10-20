@@ -271,3 +271,54 @@
 /blog-posts/the-evolution-of-goalbased-investing-how-ai-is-making-personalization-the-new-standard-in-wealth-management /blog/the-evolution-of-goalbased-investing-how-ai-is-making-personalization-the-new-standard-in-wealth-management 301
 /blog-posts/paperless-compliance-how-automated-aml-and-id-verification-are-transforming-wealth-management-onboarding /blog/paperless-compliance-how-automated-aml-and-id-verification-are-transforming-wealth-management-onboarding 301
 /blog-posts/building-a-futureproof-advisor-tech-stack-musthave-tools-for-efficient-workflows-in-2025 /blog/building-a-futureproof-advisor-tech-stack-musthave-tools-for-efficient-workflows-in-2025 301
+
+# Generic fallbacks for legacy Webflow URLs
+# Blog index and base
+/blogs /blog 301
+/blogs/* /blog 301
+/blog-posts /blog 301
+/blog-posts/:slug /blog/:slug 301
+
+# Categories to new blog categories
+/category /blog 301
+/category/:slug /blog/category/:slug 301
+
+# Webinars (singular and item pages) to webinars index
+/webinars/:splat /webinars 301
+/webinar/:splat /webinars 301
+
+# Policies and legal
+/cookie-policy /cookies 301
+
+# Marketing/comparison legacy pages
+/morningstar-vs-investipal /blog 301
+/nitrogen-vs-investipal /blog 301
+
+# Reviews and FAQ
+/reviews /about-us 301
+/faq /contact-us 301
+
+# Pricing and confirmations
+/pricing /book-a-demo 301
+/confirmation /book-a-demo 301
+
+# Ecommerce and auth (not used on new site)
+/order-confirmation / 301
+/checkout / 301
+/paypal-checkout / 301
+/user-account / 301
+/access-denied / 301
+/update-password / 301
+/reset-password / 301
+/sign-up / 301
+/log-in / 301
+
+# Legacy home variants
+/old-home / 301
+
+# Integrations - remove deprecated item
+/integrations/aquaflow /integrations 301
+
+# Segments
+/segments/everyday-investors /segments/wealth-managers 301
+/segments /segments/wealth-managers 301

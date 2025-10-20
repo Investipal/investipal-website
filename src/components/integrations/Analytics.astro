@@ -1,0 +1,145 @@
+---
+// Centralized analytics loader. Runs only in production.
+---
+
+{import.meta.env.PROD && (
+  <>
+    <script is:inline>
+      // GA4
+      (function(){
+        const s=document.createElement('script');
+        s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id=G-014V3P0Q5S';
+        document.head.appendChild(s);
+      })();
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);} window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config','G-014V3P0Q5S',{send_page_view:false});
+
+      // Meta Pixel
+      !(function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)})(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      window.fbq && (fbq('init','441701525215850'), fbq('track','PageView'));
+
+      // LinkedIn Insight
+      window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+      window._linkedin_data_partner_ids.push('6117284');
+      (function(){var s=document.getElementsByTagName('script')[0];var b=document.createElement('script');
+      b.type='text/javascript';b.async=true;b.src='https://snap.licdn.com/li.lms-analytics/insight.min.js';
+      s.parentNode.insertBefore(b,s);}());
+
+      // Microsoft Clarity
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t,y);})(window,document,'clarity','script','qpwp23ed9g');
+
+      // Apollo tracker
+      (function(){var n=Math.random().toString(36).substring(7),o=document.createElement('script');
+      o.src='https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache='+n;o.async=1;o.defer=1;
+      o.onload=function(){window.trackingFunctions && window.trackingFunctions.onLoad && window.trackingFunctions.onLoad({appId:'6834c2f4933d3200210ef4c8'})};
+      document.head.appendChild(o);}());
+
+      // ReB2B
+      (function(){var reb2b=window.reb2b=window.reb2b||[];if(reb2b.invoked) return;reb2b.invoked=true;
+      reb2b.methods=['identify','collect'];reb2b.factory=function(m){return function(){var a=[m].concat([].slice.call(arguments));reb2b.push(a);return reb2b;}};
+      for(var i=0;i<reb2b.methods.length;i++){var k=reb2b.methods[i];reb2b[k]=reb2b.factory(k);}reb2b.load=function(key){var s=document.createElement('script');
+      s.type='text/javascript';s.async=true;s.src='https://s3-us-west-2.amazonaws.com/b2bjsstore/b/'+key+'/reb2b.js.gz';var f=document.getElementsByTagName('script')[0];f.parentNode.insertBefore(s,f)};
+      reb2b.SNIPPET_VERSION='1.0.1';reb2b.load('X0NW1GHKL0O4');}());
+
+      // SEOJuice
+      (function(){var s=document.createElement('script');s.src='https://cdn.seojuice.io/suggestions.v1.js';s.defer=1;document.head.appendChild(s);}());
+
+      // SPA pageviews
+      function sendPV(){try{
+        window.gtag && gtag('event','page_view',{page_location:location.href,page_path:location.pathname,page_title:document.title});
+        window.fbq && fbq('track','PageView');
+      }catch(e){}
+      }
+      document.addEventListener('astro:page-load', sendPV);
+      document.addEventListener('astro:after-swap', sendPV);
+
+      // Event helper
+      window.trackEvent = function(name, params = {}) {
+        try {
+          window.gtag && gtag('event', name, params);
+          window.fbq && fbq('trackCustom', name, params);
+        } catch (_) {}
+      };
+
+      // Calendly conversion: when an event is scheduled inside embedded widget
+      window.addEventListener('message', function(e) {
+        try {
+          const data = e && e.data;
+          if (!data || typeof data !== 'object') return;
+          if (data.event === 'calendly.event_scheduled') {
+            const uri = (data && data.payload && data.payload.event && data.payload.event.uri) ? data.payload.event.uri : '';
+            window.trackEvent && window.trackEvent('book_demo', {
+              method: 'calendly',
+              calendly_event_uri: uri
+            });
+            try {
+              if (window.lintrk) {
+                window.lintrk('track', { conversion_id: 22297900 });
+              }
+            } catch (_) {}
+          }
+        } catch (_) {}
+      });
+
+      // Expose Zapier helper
+              window.sendZapier = async function(payload){
+                const url = 'https://hooks.zapier.com/hooks/catch/12151325/umco5zo/';
+        try {
+          const res = await fetch(url, {
+            method: 'POST', headers: { 'content-type':'application/json' }, body: JSON.stringify(payload), keepalive: true
+          });
+          if (!res.ok) throw new Error('Zapier non-200: '+res.status);
+        } catch(e) {
+          // Fallback 1: fire-and-forget fetch with URL-encoded body
+          try {
+            const email = (payload && payload.email) ? String(payload.email) : '';
+            const body = new URLSearchParams();
+            if (email) body.set('email', email);
+            await fetch(url, { method: 'POST', mode: 'no-cors', body });
+            return;
+          } catch(err1) {
+            // Fallback 2: hidden iframe form POST to bypass CORS completely
+            try {
+              const email = (payload && payload.email) ? String(payload.email) : '';
+              if (!email) return;
+              let ifr = document.getElementById('zapier_iframe');
+              if (!ifr) {
+                ifr = document.createElement('iframe');
+                ifr.id = 'zapier_iframe';
+                ifr.name = 'zapier_iframe';
+                ifr.style.display = 'none';
+                document.body.appendChild(ifr);
+              }
+              const form = document.createElement('form');
+              form.action = url;
+              form.method = 'POST';
+              form.target = 'zapier_iframe';
+              form.style.display = 'none';
+              const input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = 'email';
+              input.value = email;
+              form.appendChild(input);
+              document.body.appendChild(form);
+              form.submit();
+              form.remove();
+            } catch(err2) {
+              console.warn('Zapier webhook failed', e, err1, err2);
+            }
+          }
+        }
+      };
+    </script>
+    <noscript><img height="1" width="1" style="display:none" alt="" src="https://px.ads.linkedin.com/collect/?pid=6117284&fmt=gif" /></noscript>
+    <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=441701525215850&ev=PageView&noscript=1" /></noscript>
+  </>
+)}
+
+

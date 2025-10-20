@@ -13,7 +13,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 // Get all published blog posts
-let allPosts;
+let allPosts: any[];
 try {
   allPosts = await getCollection('blog');
   console.log('Total posts found:', allPosts.length);
@@ -23,7 +23,7 @@ try {
 }
 
 // Robust sort by date (handles strings just in case)
-const getTime = (p) => {
+const getTime = (p: any) => {
   const d = p.data.publishedDate || p.data.updatedDate || 0;
   const t = d instanceof Date ? d.getTime() : new Date(d || 0).getTime();
   return isNaN(t) ? 0 : t;
@@ -63,37 +63,53 @@ try {
 const normalize = (s: string) => s.toLowerCase().replace(/%20|\s+/g, '-').replace(/[^a-z0-9-]/g, '-');
 
 function resolveFeaturedImage(post: any): string {
-  if (post?.data?.featuredImage) return post.data.featuredImage;
-  // 0) Use first in-body image from markdown if present and exists
+  // 0) Prefer explicit featuredImage when present
+  try {
+    const explicit = String(post?.data?.featuredImage || '').trim();
+    if (explicit) {
+      // External URL: use as-is
+      if (/^https?:\/\//i.test(explicit)) return explicit;
+      // Local path: verify existence
+      const relPath = explicit.startsWith('/') ? explicit : `/${explicit}`;
+      const absPath = new URL(`../../public${relPath}`, import.meta.url);
+      if (fs.existsSync(absPath)) return relPath;
+      // fall through to heuristics if missing
+    }
+  } catch {}
+
+  // 1) Use first in-body local image from markdown if present and exists
   try {
     const body: string = String(post?.body || '');
-    const mdMatch = body.match(/!\[[^\]]*\]\((\/images\/[\w\-\/%\.]+)\)/i);
+    const mdMatch = body.match(/!\[[^\]]*\]\((\/images\/[\w\-\/%.]+)\)/i);
     if (mdMatch && mdMatch[1]) {
       const rel = mdMatch[1];
       const abs = new URL(`../../public${rel}`, import.meta.url);
       if (fs.existsSync(abs)) return rel;
     }
   } catch {}
+
+  // 2) Try local blog image by slug prefix (match original filenames)
   const slug = String(post.id || '').replace(/\.md$/i, '');
-  const normSlug = normalize(slug);
-  // 1) Strong prefix match: slug__* or slug.* in blog images
+  const lowerSlug = slug.toLowerCase();
   const startsMatch = blogImageFiles.find((f) => {
-    const n = normalize(f);
-    return n.startsWith(`${normSlug}__`) || n.startsWith(`${normSlug}.`);
+    const lf = f.toLowerCase();
+    return lf.startsWith(`${lowerSlug}__`) || lf.startsWith(`${lowerSlug}.`);
   });
   if (startsMatch) return `/images/blog/${startsMatch}`;
-  // 2) Removed thumbnails fallback to avoid blurry/duplicate images
-  // 3) Fuzzy overlap score
+
+  // 3) Fuzzy overlap score on local images
+  const normSlug = normalize(slug);
   const slugTokens = normSlug.split('-').filter(Boolean);
-  let best: {file?: string; score: number} = { score: 0 };
+  let best: { file?: string; score: number } = { score: 0 };
   for (const f of blogImageFiles) {
     const tokens = normalize(f).split('-');
-    const score = slugTokens.filter(t => tokens.includes(t)).length;
+    const score = slugTokens.filter((t) => tokens.includes(t)).length;
     if (score > best.score) best = { file: f, score };
   }
   if (best.file && best.score >= Math.max(2, Math.floor(slugTokens.length * 0.25))) {
     return `/images/blog/${best.file}`;
   }
+
   // 4) Category general image
   const cat = normalize(String(post?.data?.category || ''));
   const general = new URL('../../public/images/general/', import.meta.url);
@@ -102,7 +118,9 @@ function resolveFeaturedImage(post: any): string {
     const catMatch = generalFiles.find((f) => normalize(f).includes(cat));
     if (catMatch) return `/images/general/${catMatch}`;
   } catch {}
-  return '/images/blog/placeholder-image.png';
+
+  // 5) Final fallback
+  return '/images/blog/placeholder.svg';
 }
 
 // Get featured post (first featured post or most recent)
@@ -138,15 +156,15 @@ const hasMorePosts = totalOtherPosts > POSTS_PER_PAGE;
 // Get all categories and tags for navigation (from filterable posts only)
 const allCategories = [...new Set(otherPosts.map(post => post.data.category))].sort();
 
-const allTags = new Set();
+const allTags = new Set<string>();
 publishedPosts.forEach(post => {
-  post.data.tags?.forEach(tag => allTags.add(tag));
+  post.data.tags?.forEach((tag: string) => allTags.add(tag));
 });
 
 // Calculate tag counts from the SAME posts that will be filtered (otherPosts, not all posts)
-const tagCounts = new Map();
+const tagCounts = new Map<string, number>();
 otherPosts.forEach(post => {
-  post.data.tags?.forEach(tag => {
+  post.data.tags?.forEach((tag: string) => {
     tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
   });
 });
@@ -198,10 +216,10 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
                 <div class="relative overflow-hidden">
                   <a href={`/blog/${featuredPost.id.replace('.md', '')}`}>
                     <img 
-                      src={`${featuredPost.data.featuredImage}?v=1`}
+                      src={featuredPost.data.featuredImage}
                       alt={featuredPost.data.featuredImageAlt || featuredPost.data.title}
-                      class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      onerror="this.onerror=null;this.src='/images/blog/placeholder-image.png'"
+                      class="w-full h-48 object-cover group-hover:scale-105 transition-all duration-700 ease-out"
+                      onerror="this.onerror=null;this.src='/images/blog/placeholder.svg'"
                     />
                   </a>
                   <div class="absolute top-4 left-4">
@@ -257,10 +275,10 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
                   <div class="flex space-x-4">
                     <a href={`/blog/${post.id.replace('.md', '')}`} class="flex-shrink-0">
                       <img 
-                        src={`${post.data.featuredImage}?v=1`}
+                        src={post.data.featuredImage}
                         alt={post.data.featuredImageAlt || post.data.title}
                         class="w-16 h-16 object-cover rounded-lg"
-                        onerror="this.onerror=null;this.src='/images/blog/placeholder-image.png'"
+                        onerror="this.onerror=null;this.src='/images/blog/placeholder.svg'"
                       />
                     </a>
                     <div class="flex-1 min-w-0">
@@ -329,7 +347,6 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
             const tagPosts = otherPosts.filter(post => post.data.tags?.includes(tag));
             return (
               <button 
-                key={index}
                 data-filter={formatTagUrl(tag)}
                 data-tag={tag}
                 class="tag-filter-btn px-3 py-1.5 text-xs font-medium bg-white text-gray-600 border border-gray-300 rounded-full hover:border-violet-300 hover:text-violet-600 hover:bg-violet-50 transition-all duration-200"
@@ -780,10 +797,10 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
         <div class="relative">
           <a href="/blog/${post.id.replace('.md', '')}" class="blog-card-link">
             <img 
-              src="${post.data.featuredImage}?v=1"
+              src="${post.data.featuredImage}"
               alt="${post.data.featuredImageAlt || post.data.title}"
-              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              onerror="this.onerror=null;this.src='/images/blog/placeholder-image.png'"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-all duration-700 ease-out"
+              onerror="this.onerror=null;this.src='/images/blog/placeholder.svg'"
             />
           </a>
           <div class="absolute top-4 left-4">

@@ -220,15 +220,7 @@ const faqPageSchema = {
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
               </div>
               
-              <!-- Alternative Contact -->
-              <div class="mt-6 text-center pt-6 border-t border-gray-200">
-                <p class="text-sm text-gray-600 font-system_ui mb-2">
-                  Prefer to speak directly?
-                </p>
-                <a href="tel:+15551234567" class="text-investipal-600 hover:text-investipal-700 font-semibold font-system_ui transition-colors">
-                  📞 Call us at +1 (555) 123-4567
-                </a>
-              </div>
+              <!-- Alternative Contact removed: no phone support -->
             </div>
           </div>
         </div>
@@ -378,25 +370,26 @@ const faqPageSchema = {
 <script>
   // FAQ Toggle Functionality
   document.addEventListener('DOMContentLoaded', function() {
-    const faqToggles = document.querySelectorAll('.faq-toggle');
+    const faqToggles = document.querySelectorAll<HTMLButtonElement>('.faq-toggle');
     
-    faqToggles.forEach(toggle => {
-      toggle.addEventListener('click', function() {
-        const targetId = this.getAttribute('data-target');
+    faqToggles.forEach((toggle) => {
+      toggle.addEventListener('click', (event) => {
+        const current = event.currentTarget as HTMLButtonElement;
+        const targetId = current.getAttribute('data-target') || '';
         const targetContent = document.getElementById(targetId);
-        const arrow = this.querySelector('.faq-arrow');
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        const arrow = current.querySelector('.faq-arrow');
+        const isExpanded = current.getAttribute('aria-expanded') === 'true';
         
         // Close all other FAQs
-        faqToggles.forEach(otherToggle => {
-          if (otherToggle !== this) {
-            const otherTargetId = otherToggle.getAttribute('data-target');
+        faqToggles.forEach((otherToggle) => {
+          if (otherToggle !== current) {
+            const otherTargetId = otherToggle.getAttribute('data-target') || '';
             const otherContent = document.getElementById(otherTargetId);
             const otherArrow = otherToggle.querySelector('.faq-arrow');
             
             otherContent?.classList.add('hidden');
             otherArrow?.classList.remove('rotate-180');
-            otherToggle.setAttribute('aria-expanded', 'false');
+            (otherToggle as HTMLButtonElement).setAttribute('aria-expanded', 'false');
           }
         });
         
@@ -404,11 +397,11 @@ const faqPageSchema = {
         if (isExpanded) {
           targetContent?.classList.add('hidden');
           arrow?.classList.remove('rotate-180');
-          this.setAttribute('aria-expanded', 'false');
+          current.setAttribute('aria-expanded', 'false');
         } else {
           targetContent?.classList.remove('hidden');
           arrow?.classList.add('rotate-180');
-          this.setAttribute('aria-expanded', 'true');
+          current.setAttribute('aria-expanded', 'true');
         }
       });
     });
@@ -416,10 +409,11 @@ const faqPageSchema = {
 
   // Smooth scrolling for anchor links
   document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href') || '';
+        const target = document.querySelector(href);
         if (target) {
           target.scrollIntoView({
             behavior: 'smooth',

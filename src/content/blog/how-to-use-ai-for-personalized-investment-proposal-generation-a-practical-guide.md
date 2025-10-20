@@ -7,13 +7,13 @@ updatedDate: 2025-08-14T12:40:40.000Z
 category: "AI"
 tags: ["Proposals"]
 slug: "how-to-use-ai-for-personalized-investment-proposal-generation-a-practical-guide"
-featuredImage: "/images/blog/how-to-use-ai-for-personalized-investment-proposal-generation-a-practical-guide__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689dd948fb9196c898015466_689b4978dff1f277030aad9a_Automating%2520the%2520Sales%2520Journey%2520From%2520Client%2520Intake%2520to%2520Proposals%2520%2526%2520Compliance%2520in%2520One%2520Platform%2520(10).png"
 featuredImageAlt: "AI-powered investment proposal generation workflow showing automated data analysis and personalized portfolio recommendations"
 draft: false
 ---
-Personalized <a href="/blog/tag/investment-proposals">investment proposals</a> are the new standard for advisors who want to convert prospects, deepen client trust, and scale their business efficiently. Yet, most firms are still held back by manual data entry, fragmented workflows, and slow compliance processes that frustrate clients and leave AUM on the table. In this practical guide, we’ll break down how top-performing firms leverage <a href="/blog/tag/ai">AI</a>-powered automation to deliver tailored, compliant proposals—at scale and without the administrative drag.
+Personalized <a href="/blog/investment-proposals">investment proposals</a> are the new standard for advisors who want to convert prospects, deepen client trust, and scale their business efficiently. Yet, most firms are still held back by manual data entry, fragmented workflows, and slow compliance processes that frustrate clients and leave AUM on the table. In this practical guide, we’ll break down how top-performing firms leverage <a href="/blog/ai">AI</a>-powered automation to deliver tailored, compliant proposals—at scale and without the administrative drag.
 
-## Why <a href="/blog/tag/ai">AI</a>-Driven Proposal Generation Is a Gamechanger for Advisors
+## Why <a href="/blog/ai">AI</a>-Driven Proposal Generation Is a Gamechanger for Advisors
 
 Financial advisors, <a href="/segments/wealth-managers">wealth managers</a>, and RIA firm owners know the pain points all too well:
 
@@ -30,7 +30,7 @@ With AI, you can automate these bottlenecks and create proposals that are not ju
 
 - **Upload Brokerage Statements Instantly** — Investipal's [AI-powered scanner](/features/automated-statement-scanner) ingests any statement format (PDFs, images, even handwritten notes). Holdings, tickers, account types, and values are extracted in seconds.
 - **Sync Held-Away Assets** — Combine separate accounts for a complete household picture.
-- **<a href="/features/risk-management">Risk Assessment</a> in Minutes** — Our [embeddable 3-factor risk questionnaire](/risk-assessment) quickly measures risk capacity, behavioral bias, and current portfolio risk—pinpointing misalignments with your recommended strategy.
+- **<a href="/risk-assessment">Risk Assessment</a> in Minutes** — Our [embeddable 3-factor risk questionnaire](/risk-assessment) quickly measures risk capacity, behavioral bias, and current portfolio risk—pinpointing misalignments with your recommended strategy.
 
 **Net effect:**
 - 3–5 hours saved per client intake

@@ -28,7 +28,6 @@ export const footerData: FooterSection[] = [
       { id: 'manifesto', title: 'Manifesto', href: '/manifesto' },
       { id: 'blog', title: 'Blog', href: '/blog' },
       { id: 'podcasts', title: 'Podcasts', href: '/podcasts' },
-      { id: 'faq', title: 'FAQ', href: '/faq' },
       { id: 'contact', title: 'Contact us', href: '/contact-us' }
     ]
   }

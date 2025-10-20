@@ -55,7 +55,8 @@ Allow: /
 User-agent: Anthropic-AI
 Allow: /
 
-# Sitemap location
+# Sitemap locations
+Sitemap: https://investipal.co/sitemap-index.xml
 Sitemap: https://investipal.co/sitemap.xml
 
 # LLMs.txt location

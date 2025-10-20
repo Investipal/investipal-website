@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "scannedFiles": 187,
+    "totalLinks": 1055,
+    "misrouted": 0,
+    "demoMisroutes": 0,
+    "byIntent": {
+      "demo": 0,
+      "contact": 0,
+      "risk": 0,
+      "integrations": 0,
+      "webinars": 0,
+      "blog": 0
+    }
+  },
+  "results": []
+}
