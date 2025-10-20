@@ -7,7 +7,7 @@ updatedDate: "2025-08-05T06:06:19.221Z"
 category: "Portfolio Management"
 tags: []
 slug: "realtime-portfolio-monitoring-how-automated-drift-alerts-and-ai-rebalancing-enhance-client-outcomes"
-featuredImage: "/images/blog/realtime-portfolio-monitoring-how-automated-drift-alerts-and-ai-rebalancing-enhance-client-outcomes__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6864dd7b2a65cdb3dd2ea6eb_pexels-photo-6770610.jpeg"
 featuredImageAlt: "Real-Time Portfolio Monitoring: How Automated Drift Alerts and AI Rebalancing Enhance Client Outcomes"
 draft: false
 ---
@@ -46,6 +46,6 @@ draft: false
 <ul><li>Focus on strategic planning and deeper client engagement</li><li>Grow your book of business without adding headcount</li><li>Provide high-touch personalization at enterprise scale</li></ul>
 
 <h2>Experience the Difference—Book Your Investipal Demo</h2>
-<p>If you’re ready to trade in spreadsheets, disconnected systems, and lagging client service for a seamless, automated portfolio management experience, it’s time to see Investipal in action. <a href="/blogs" target="_blank">Book a personalized demo</a> and discover:</p>
+<p>If you’re ready to trade in spreadsheets, disconnected systems, and lagging client service for a seamless, automated portfolio management experience, it’s time to see Investipal in action. <a href="/book-a-demo" target="_blank">Book a personalized demo</a> and discover:</p>
 <ul><li>Real-time portfolio monitoring and drift alerts—built for advisors, not engineers</li><li>Optimized, AI-powered rebalancing that aligns with your investment universe and IPS requirements</li><li>End-to-end compliance support, always audit-ready</li><li>One unified workflow from onboarding to ongoing management</li></ul>
 <p><strong>Your clients deserve better—and so do you. Experience how Investipal can help you scale, comply, and deliver higher-value outcomes today.</strong></p>

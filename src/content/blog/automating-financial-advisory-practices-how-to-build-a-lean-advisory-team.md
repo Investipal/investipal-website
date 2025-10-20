@@ -7,7 +7,7 @@ updatedDate: "2025-06-27T14:47:53.333Z"
 category: "AI"
 tags: ["Automation"]
 slug: "automating-financial-advisory-practices-how-to-build-a-lean-advisory-team"
-featuredImage: "/images/blog/automating-financial-advisory-practices-how-to-build-a-lean-advisory-team__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/676ad7f76f2bdcaefd113063_Automating%20Financial%20Advisory%20Practices%20How%20to%20Build%20a%20Lean%20Advisory%20Team%20(3).png"
 featuredImageAlt: "Automating Financial Advisory Practices: How to Build a Lean Advisory Team"
 draft: false
 ---

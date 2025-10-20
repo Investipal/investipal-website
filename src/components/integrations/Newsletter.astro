@@ -34,13 +34,16 @@
       const form = document.getElementById('newsletterForm');
       const success = document.getElementById('form-success');
       const error = document.getElementById('form-error');
-      const submitButton = form.querySelector('button[type="submit"]');
+      const submitButton = form ? form.querySelector('button[type="submit"]') : null;
 
       function disableForm() {
         // Disable all form inputs
+        if (!form) return;
         const inputs = form.querySelectorAll('input, textarea, button');
-        inputs.forEach(input => {
-          input.disabled = true;
+        inputs.forEach((el) => {
+          if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement || el instanceof HTMLButtonElement) {
+            el.disabled = true;
+          }
         });
         
         // Update submit button text to show loading state
@@ -51,9 +54,12 @@
       
       function enableForm() {
         // Re-enable all form inputs
+        if (!form) return;
         const inputs = form.querySelectorAll('input, textarea, button');
-        inputs.forEach(input => {
-          input.disabled = false;
+        inputs.forEach((el) => {
+          if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement || el instanceof HTMLButtonElement) {
+            el.disabled = false;
+          }
         });
         
         // Restore submit button text
@@ -62,6 +68,7 @@
         }
       }
 
+      if (!form) return;
       form.addEventListener('submit', async (e) => {
         // Allow native submit if user has disabled JS
         e.preventDefault();
@@ -69,9 +76,9 @@
         // Disable form immediately on submit
         disableForm();
 
-        const data = {
-          email: form.email.value.trim()
-        };
+        const emailInput = form.querySelector('input[name="email"]');
+        const emailValue = (emailInput && emailInput instanceof HTMLInputElement) ? emailInput.value.trim() : '';
+        const data = { email: emailValue };
 
         try {
           const res = await fetch('https://app.investipal.co/api/website/newsletter-subscribe/', {
@@ -84,12 +91,13 @@
 
           if (!res.ok) throw new Error(json?.error || 'Request failed');
 
-          form.reset();
-          success.classList.remove('hidden');
-          error.classList.add('hidden');
+          if (form instanceof HTMLFormElement) { form.reset(); }
+          if (success) success.classList.remove('hidden');
+          if (error) error.classList.add('hidden');
+          try { window.trackEvent && window.trackEvent('subscribe_newsletter', { method: 'in_app_form' }); } catch (_) {}
         } catch (err) {
-          error.classList.remove('hidden');
-          success.classList.add('hidden');
+          if (error) error.classList.remove('hidden');
+          if (success) success.classList.add('hidden');
         }
         // Re-enable form on error so user can try again
         enableForm();

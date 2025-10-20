@@ -7,7 +7,7 @@ updatedDate: "2025-06-27T14:47:53.333Z"
 category: "AI"
 tags: ["AI"]
 slug: "personalization-at-scale-the-next-frontier-in-wealth-management"
-featuredImage: "/images/blog/personalization-at-scale-the-next-frontier-in-wealth-management__hero.jpg"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/678ebda814f9416704596e79_Personalization%20at%20Scale%20The%20Next%20Frontier%20in%20Wealth%20Management.png"
 featuredImageAlt: "Personalization at Scale: The Next Frontier in Wealth Management"
 draft: false
 ---

@@ -1,1177 +1,1177 @@
 {
   "processed": 195,
-  "changed": 35,
-  "downloads": 35,
+  "changed": 160,
+  "downloads": 160,
   "files": [
     {
       "file": "4-steps-to-automate-your-client-onboarding-workflow-and-win-more-clients.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "4-tech-tools-every-advisory-practice-needs-digital-onboarding-ai-portfolio-optimization-automated-proposals-compliance-automation.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "5-common-bottlenecks-in-financial-advisor-sales-and-how-to-fix-them.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "5-essential-digital-onboarding-features-financial-advisors-need-in-2025.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "5-financial-advisor-lead-generation-strategies-that-actually-work.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "5-proven-strategies-for-financial-advisors-to-shorten-sales-cycles-and-boost-close-rates.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "a-5point-checklist-for-evaluating-brokerage-statement-scanning-software.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "accelerating-advisor-onboarding-with-brokerage-statement-scanning-software-and-risk-assessment-tools.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "advisor-compliance-software-key-features-for-automated-kyp-ips-reg-bi.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "advisor-tech-stack-optimization-streamlining-prospecttoportfolio-workflows-for-maximum-efficiency-in-2025.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "ai-adoption-in-wealth-management-separating-hype-from-practical-value.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "ai-driven-portfolio-optimization-how-transparent-explainable-ai-is-shaping-the-future-of-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "ai-is-revolutionizing-financial-advisory.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "ai-portfolio-optimization-what-financial-advisors-need-to-know-in-2025.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "ai-tools-for-portfolio-management-what-they-are-how-they-work--and-where-investipal-fits-in.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "aibased-portfolio-optimization-platforms-how-to-choose-the-right-solution-for-your-advisory-practice.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "aipowered-continuous-compliance-monitoring-for-financial-advisors-realtime-risk-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "aipowered-custom-security-modeling-for-alternative-investments-a-guide-for-financial-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "aipowered-investment-proposal-generation-features-to-look-for-and-how-to-evaluate-solutions.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "anticipating-client-needs-with-ai-a-guide-to-ai-powered-analytics-in-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "api-vs-ocr-for-financial-advisors-choosing-the-best-method-to-aggregate-client-brokerage-statements.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "automated-aml-checks-financial-advisors-can-use-to-streamline-onboarding-and-maintain-compliance.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "automated-risk-tolerance-questionnaires-best-practices-for-seamless-onboarding-tailored-portfolio-construction.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "automated-tax-transition-modeling-simplifying-client-portfolio-migrations-for-financial-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "automating-comparative-portfolio-analyses-for-financial-advisors-save-time-and-optimize-client-portfolios.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "automating-financial-advisory-practices-how-to-build-a-lean-advisory-team-2.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "automating-financial-advisory-practices-how-to-build-a-lean-advisory-team.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "automating-the-sales-journey-from-client-intake-to-proposals-compliance-in-one-platform.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "balancing-risk-and-reward-the-importance-of-asset-allocation-in-your-investment-strategy.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "best-advisory-software-for-digital-onboarding-aidriven-portfolio-optimization-compliance-automation.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "best-digital-onboarding-solutions-for-toronto-financial-advisors-a-comparative-guide-to-features-pricing-and-compliance.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "building-a-future-proof-ria-technology-investments-that-pay-dividends.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "building-a-futureproof-advisor-tech-stack-musthave-tools-for-efficient-workflows-in-2025.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "choosing-the-right-esignature-platform-for-advisory-firms-security-compliance-and-integration-guide.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "cloudnative-wealth-management-platforms-streamlining-onboarding-portfolio-construction-and-compliance-at-scale.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "couch-potato-investing-is-dead.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "digital-onboarding-ai-portfolio-optimization-and-automated-compliance-a-stepbystep-guide-for-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "digital-onboarding-reduce-errors-save-time-and-cut-costs-in-your-advisory-practice.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "dynamic-multi-objective-optimization-in-wealth-management-balancing-risk-return-and-client-goals.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "endtoend-workflow-automation-for-financial-advisors-digital-onboarding-ai-portfolio-construction-compliance.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "essential-ai-tools-for-financial-advisors-in-growth-mode.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "essential-financial-advisor-tools-for-any-practice.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "essential-steps-to-integrate-aml-and-id-verification-in-digital-advisor-onboarding-workflows.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "from-manual-to-magical-automating-data-entry-and-analysis-in-financial-advisory.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "from-onelink-onboarding-aml-checks-to-ai-portfolio-construction-a-complete-workflow-guide.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "growth-fundamentals-for-financial-advisors-laying-the-foundation-for-success.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-ai-is-changing-investment-policy-statements.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-ai-is-transforming-portfolio-optimization-the-rise-of-explainable-ai-in-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-ai-is-unlocking-personalization-at-scale-in-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-ai-powered-brokerage-statement-scanning-is-transforming-compliance-trade-monitoring.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-aidriven-risk-profiling-portfolio-optimization-and-proposal-automation-are-transforming-financial-planning.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-artificial-intelligence-speeds-data-gathering-and-portfolio-analysis-for-financial-advisory-firms.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-embedded-esignatures-and-id-scanning-streamline-aml-compliance-in-advisor-onboarding.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-explainable-ai-is-closing-the-trust-gap-in-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-explainable-ai-is-setting-the-new-standard-for-client-trust-and-proposal-personalization-in-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-financial-advisors-can-automate-ips-reg-bi-disclosures-to-streamline-compliance.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-financial-advisors-can-better-communicate-their-value-to-prospects-using-data.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-financial-advisors-can-convert-more-leads-with-real-time-portfolio-tracking-on-demand-marketing.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-financial-advisors-can-grow-aum-with-technology-and-personalization.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-financial-advisors-can-use-tax-season-to-attract-clients-and-optimize-portfolios.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-fragmented-tech-stacks-are-holding-back-your-wealth-management-firm.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-investipals-ai-simplifies-reg-bi-compliance-for-financial-advisors-and-broker-dealers.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-personalized-portfolio-construction-is-reshaping-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-tax-transition-analysis-helps-advisors-move-client-portfolios-with-confidence.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-technology-is-revolutionizing-financial-advisory-firms-in-2025.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-analyze-client-brokerage-statements-faster-with-ai.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-automate-account-aggregation-and-unlock-a-360-view-of-client-wealth-in-minutes.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-automate-client-onboarding-for-financial-advisors-a-stepbystep-workflow-for-2025.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-automate-data-entry-for-financial-advisors-the-complete-guide-for-2025.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-automate-esignature-and-aml-checks-in-advisor-onboarding-without-sacrificing-client-experience.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-automate-proposal-generation-and-shorten-sales-cycles-for-financial-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-automate-sales-and-compliance-for-rias-maximize-efficiency-with-a-streamlined-process.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-automate-sustainable-investing-esg-screening-ai-portfolio-optimization-compliance-reporting.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-automate-your-advisory-workflow-from-client-intake-to-compliance.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-automate-your-advisory-workflow-from-kyc-onboarding-to-portfolio-xray-analysis-and-aidriven-rebalancing.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-build-a-compliant-frictionless-aml-workflow-in-digital-onboarding-tools-traps-and-best-practices.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-build-a-compliant-investment-policy-statement-in-minutes.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-build-a-lead-generation-engine-as-a-financial-advisor.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-build-a-seamless-advisor-workflow-from-digital-onboarding-to-automated-proposal-generation.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-choose-ai-risk-assessment-tools-for-your-advisory-practice.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-convert-brokerage-statement-pdfs-to-excel-using-investipals-ocr-scanner.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-create-an-investment-policy-statement-ips-in-minutes.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-create-professional-investment-proposals-in-under-10-minutes.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-efficiently-incorporate-alternative-investments-into-client-portfolios-tools-best-practices-and-compliance-considerations.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-extract-account-statement-portfolio-holdings-from-pdfs-using-ai.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-extract-and-analyze-data-from-brokerage-statements-using-ai-a-practical-guide-for-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-extract-portfolio-data-from-pdf-statements-using-ai.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-factor-financial-planning-into-an-investment-proposal.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-integrate-automated-aml-id-scanning-and-esignature-workflows-in-client-onboarding.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-leverage-ocr-technology-for-faster-client-account-statement-analysis.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-manage-client-portfolios-during-market-volatility--7-tools-for-financial-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-model-tax-impact-when-recommending-a-new-portfolio.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-seamlessly-aggregate-heldaway-assets-for-a-complete-client-portfolio.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-set-up-automated-portfolio-drift-alerts-a-guide-for-financial-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-turn-a-clients-statement-into-a-complete-investment-proposal-in-under-5-minutes.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-to-use-ai-for-personalized-investment-proposal-generation-a-practical-guide.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "how-top-advisors-prove-their-worth-without-overloading-clients-with-data.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "humancentered-ai-in-wealth-management-how-advisors-can-combine-automation-with-personalized-client-engagement.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "improving-risk-tolerance-questionnaires-for-better-financial-planning.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "integrating-private-and-alternative-assets-using-ai-driven-portfolio-optimization-for-diversified-portfolios.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "investment-policy-statement-software-5-critical-features-every-financial-advisor-needs.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "investment-policy-statement-software-how-to-choose-the-best-tool-for-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "investment-policy-statement-templates-vs-automation-choosing-the-best-approach-for-your-advisory-firm.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "investment-proposal-software-what-growing-financial-advisor-firms-need-to-know.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "is-your-clients-portfolio-too-concentrated-how-to-spot-red-flags-using-investipals-tools.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "leveraging-embedded-esignature-and-id-verification-to-accelerate-secure-client-onboarding-in-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "maximizing-returns-an-in-depth-look-at-expanding-your-investment-portfolio-beyond-boglehead-principles.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "modernizing-advisor-workflows-from-onelink-onboarding-to-aidriven-portfolio-construction.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "morningstar-office-is-shutting-down--what-now.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "morningstar-office-is-shutting-down-your-90-day-transition-plan.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "next-gen-proposal-generation-for-financial-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "nurturing-leads-with-real-time-data-what-happens-when-they-dont-close-today.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "ocr-for-financial-statements-the-complete-guide-for-wealth-managers.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "onelink-onboarding-streamlining-kyc-esignatures-automated-aml-checks-for-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "optimize-your-investments-with-our-powerful-stock-portfolio-builder-tool.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "optimizing-tax-transition-modeling-how-to-move-client-portfolios-efficiently-and-compliantly-in-2025.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "paperless-compliance-how-automated-aml-and-id-verification-are-transforming-wealth-management-onboarding.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "personalization-at-scale-how-ai-automation-and-alternative-assets-are-redefining-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "personalization-at-scale-the-next-frontier-in-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "personalization-vs-standardization-in-wealth-management-striking-the-right-balance-with-ai.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "personalized-financial-planning-at-scale-merging-digital-onboarding-ai-portfolio-construction-automated-proposals.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "proactive-client-communication-strategies-for-financial-advisors-achieve-clearer-faster-and-more-personalized-conversations.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "protecting-client-data-in-2025-best-practices-in-encryption-blockchain-and-ai-security.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "q1-product-updates-win-more-business-automate-your-back-office.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "q2-product-updates-automated-data-extraction-analysis-simplified-workflows-and-more.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "q3-product-updates-ai-document-scanning-creation-ai-portfolio-construction-and-more.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "quantifying-the-roi-of-ai-automation-for-advisors-onboarding-portfolio-optimization-compliance.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "realtime-portfolio-monitoring-how-automated-drift-alerts-and-ai-rebalancing-enhance-client-outcomes.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "reg-bi-and-ips-automation-best-practices-for-compliant-and-efficient-advisory-workflows-in-2025.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "reg-bi-reasonably-available-alternatives-raa-in-2025-practical-checklist-and-documentation-workflow.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "regulation-best-interest-reg-bi-what-financial-advisors-and-broker-dealers-need-to-know.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "scale-your-advisory-practice-with-ai-driven-tax-optimization-and-proposals.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "stepbystep-guide-generate-personalized-investment-proposals-in-minutes-with-ai.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "streamline-client-onboarding-with-digital-document-workflows-esignatures-automated-aml-compliance.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "streamline-your-advisory-practice-with-ai-a-guide-from-onboarding-to-compliance.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "streamlining-digital-client-onboarding-best-practices-for-risk-assessment-and-reg-bi-compliance.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "the-advisor-shortage-is-here--how-technology-can-help-rias-scale-without-adding-headcount.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "the-biggest-bottlenecks-in-wealth-management-sales--and-how-automation-solves-them.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "the-evolution-of-goalbased-investing-how-ai-is-making-personalization-the-new-standard-in-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "the-evolution-of-hyperpersonalized-portfolios-how-ai-and-realtime-data-are-redefining-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "the-financial-advisors-guide-to-win-clients-in-hours-instead-of-weeks.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "the-future-of-wealth-management-how-explainable-ai-elevates-client-trust-and-personalization.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "the-high-cost-of-disconnected-systems-in-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "the-new-standard-for-wealth-management-how-ai-is-enabling-realtime-personalized-advice.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "the-role-of-ai-and-predictive-analytics-in-anticipating-client-needs-in-wealth-management.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "the-role-of-explainable-ai-in-enhancing-regulatory-compliance-and-client-trust.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "the-ultimate-guide-to-financial-advisor-proposal-generation-software-in-2025.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "top-5-aipowered-brokerage-statement-scanning-tools-to-automate-advisor-onboarding.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "ultimate-guide-to-wealth-management-software-for-financial-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "ultimate-guide-to-wealthtech-platforms-compare-digital-onboarding-ai-portfolio-construction-and-compliance-automation.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "understanding-nigos-why-theyre-costing-your-firm-and-how-to-reduce-them.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "understanding-regulation-best-interest-reg-bi-essential-guide-for-financial-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "using-ocr-technology-to-automate-account-statement-scanning-for-financial-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "why-customer-acquisition-costs-are-rising-for-financial-advisors-and-what-to-do-about-it.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "why-documenting-portfolio-recommendations-is-essential-for-financial-advisors.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "why-every-financial-advisor-needs-an-investment-policy-statement-ips.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "why-financial-advisors-need-a-360-degree-view-of-client-investments.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "why-human-connection-still-wins-in-financial-advice----and-how-ai-can-strengthen-it.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "why-total-stock-market-funds-are-worth-considering.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "why-wealth-managers-spend-80-of-their-time-on-admin-instead-of-growth.md",
       "collection": "blog",
-      "changed": false,
-      "downloads": 0
+      "changed": true,
+      "downloads": 1
     },
     {
       "file": "agentic-ai-tech-gaps-and-whats-next-for-advisors-with-f2s-doug-fritz.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "are-we-in-a-private-equity-bubble-with-jared-dillian.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "building-a-7-figure-advisory-practice-through-community-with-derrick-kinney.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "building-wealth-early-lessons-from-a-top-financial-advisor.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "financial-literacy-for-kids-and-teens-with-liz-frazier.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "fixing-the-advisor-tech-stack-workflows-ai-and-better-data-with-andrew-ladwig.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "from-zero-to-billion-marketing-lessons-for-financial-advisors-with-jeremiah-desmarais.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "good-financial-planning-depends-on-good-data.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "how-financial-advisors-can-scale-trust-build-better-connections-with-diana-cabrices.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "how-to-build-wealth-in-todays-world.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "how-to-evaluate-alternative-investments-with-noah-damsky.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "inside-the-fintech-private-credit-booms-with-christian-faes.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "loosely-functioning-disasters-and-long-term-relationships-with-brent-beshore.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "making-financial-independence-inevitable-with-nate-hoskin.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "mastering-independence-tech-and-strategy-for-advisors-with-tim-welsh.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "passion-meets-planning-reverse-engineering-your-retirement-and-success-with-justin-castelli.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "scaling-your-advisory-practice-through-linkedin-with-ariel-lee-2.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "the-complexities-of-investing-with-peter-lazaroff.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "the-future-of-advice-ai-vr-and-what-comes-next-with-matt-reiner.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "the-future-of-financial-services-with-jamie-hopkins.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "the-future-of-wealth-management-tech-winners-losers.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "the-human-side-of-money-with-brendan-frazier.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "the-legacy-of-jim-simons-and-quant-investing-with-meb-faber.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "the-next-generation-of-wealth-management-with-paul-litchfield.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "the-rational-approach-to-wealth-management-with-cameron-passmore.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "the-retirement-strategy-every-high-earner-should-know-with-venu-reddy.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "unlocking-alternative-investments-with-the-queen-of-alternatives-shana-sissel.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "unlocking-growth-with-private-lending-alternative-assets-with-jamie-shulman.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "unlocking-liquidity-the-future-of-startup-equity-private-markets-with-dave-thornton.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "was-this-hedge-funds-performance-pure-luck-with-corey-hoffstein.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "wealth-management-nvidia-bitcoin-more-with-douglas-boneparth.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "why-crypto-is-the-future-of-money-with-tyrone-ross.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "why-financial-advisors-should-collaborate-not-compete-with-stoy-hall.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "why-most-advisor-tech-fails---and-what-comes-next-with-kabir-sethi.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     },
     {
       "file": "why-the-future-of-wealth-management-is-female-with-cary-carbonaro.md",
       "collection": "podcasts",
-      "changed": true,
-      "downloads": 1
+      "changed": false,
+      "downloads": 0
     }
   ]
 }

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { ViewTransitions } from 'astro:transitions';
+import Analytics from '../components/integrations/Analytics.astro';
 
 export interface Props {
   title: string;
@@ -9,16 +10,22 @@ export interface Props {
   ogImage?: string;
   canonical?: string;
   structuredData?: any;
+  preloadImages?: string[];
 }
 
 const { 
   title, 
   description = "AI built for financial advisors to help you streamline compliance, build portfolios, and stay compliant in one seamless workflow.", 
   keywords = "financial advisor software, AI wealth management, portfolio management, compliance automation, client onboarding, financial technology",
-  ogImage = "https://investipal.co/og-image.jpg",
-  canonical = "https://investipal.co",
-  structuredData
+  ogImage = "/images/hero_images/hero_main_large.png",
+  canonical,
+  structuredData,
+  preloadImages = []
 } = Astro.props;
+
+// Compute an absolute canonical URL if not explicitly provided by the page
+// Uses Astro.site from astro.config.mjs and the current request pathname
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toString();
 ---
 
 <!DOCTYPE html>
@@ -31,7 +38,7 @@ const {
     <meta name="keywords" content={keywords} />
     <meta name="author" content="Investipal" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href={canonical} />
+    <link rel="canonical" href={canonicalUrl} />
     <!-- Favicon: use Investipal icon (fallback to SVG if PNG missing) -->
     <link rel="icon" type="image/png" href="/images/logos/favicon_32x32.png" sizes="32x32" />
     <link rel="shortcut icon" href="/images/logos/favicon_32x32.png" />
@@ -40,7 +47,7 @@ const {
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonical} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
@@ -48,7 +55,7 @@ const {
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonical} />
+    <meta property="twitter:url" content={canonicalUrl} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImage} />
@@ -97,7 +104,7 @@ const {
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;800&family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <!-- Fallback for browsers without JavaScript -->
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Vollkorn:ital,wght@0,400;1,400;0,700;1,700&display=swap" rel="stylesheet">
     </noscript>
     
     <!-- Preload critical resources -->
@@ -105,6 +112,11 @@ const {
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    {preloadImages.map((src) => (
+      <link rel="preload" as="image" href={src} />
+    ))}
+
+    <Analytics />
 
     <!-- Early sanitizer to prevent malformed href requests (e.g., inline SVG becoming href) -->
     <script is:inline>
@@ -139,8 +151,6 @@ const {
     </script>
   </head>
   <body class="text-zinc-800 text-base not-italic normal-nums font-normal accent-auto bg-white box-border block tracking-[normal] leading-[27.2px] list-outside list-disc min-h-full text-start indent-[0px] normal-case visible border-separate font-inter">
-    <a href="#main" class="absolute text-white bg-black box-border block z-[1000] p-2 rounded-[3px] left-1.5 -top-10">Skip to main content</a>
-
     <slot />
 
     <!-- Optimized JavaScript Loading -->
