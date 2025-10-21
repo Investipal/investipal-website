@@ -233,11 +233,12 @@ const integrationsStructuredData = {
       searchInput.addEventListener('input', handleSearch);
     }
     
-    function handleSearch(e) {
-      const searchTerm = e.target.value.toLowerCase();
-      const cards = document.querySelectorAll('[data-integration-category]');
+    function handleSearch(e: Event) {
+      const target = e.target as HTMLInputElement;
+      const searchTerm = (target?.value || '').toLowerCase();
+      const cards = document.querySelectorAll<HTMLElement>('[data-integration-category]');
       
-      cards.forEach(card => {
+      cards.forEach((card) => {
         const name = card.getAttribute('data-integration-name') || '';
         const isVisible = name.includes(searchTerm);
         
@@ -249,7 +250,8 @@ const integrationsStructuredData = {
           card.style.opacity = '0.3';
           card.classList.add('filtering-out');
           setTimeout(() => {
-            if (card.classList.contains('filtering-out') && !card.getAttribute('data-integration-name').includes(e.target.value.toLowerCase())) {
+            const currentName = card.getAttribute('data-integration-name') || '';
+            if (card.classList.contains('filtering-out') && !currentName.includes(searchTerm)) {
               card.style.display = 'none';
               card.classList.add('filtering-hidden');
             }

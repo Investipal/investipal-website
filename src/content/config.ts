@@ -9,15 +9,24 @@ const blog = defineCollection({
   schema: z.object({
     // Required fields
     title: z.string(),
-    excerpt: z.string(), // Removed length restriction for migrated content
-    author: z.string(),
+    excerpt: z.preprocess((v) => (v == null ? '' : v), z.string()), // Accept null/undefined and coerce to empty for migrated content
+    // Force a global author for all posts
+    author: z.preprocess(() => 'Cameron Howe', z.string()),
+    authorTitle: z.preprocess(() => 'Author', z.string()).optional(),
+    authorBio: z.preprocess(
+      () =>
+        'Cameron Howe is an ex-quant and research analyst now turned fintech founder helping financial advisors grow their business by automating the delivery highly personalized proposals and portfolios.',
+      z.string()
+    ).optional(),
     publishedDate: z.coerce.date(),
     category: z.string(), // Made flexible for migrated content categories
     featuredImage: z.string().optional(),
     featuredImageAlt: z.string().optional(),
     
     // Optional fields with defaults
-    authorImage: z.string().optional(),
+    authorImage: z.string().default(
+      'https://cdn.prod.website-files.com/666872ff37bdf42ce9637d05/672e8c7ca4b90b405a96bf19_1698345963307.png'
+    ),
     updatedDate: z.coerce.date().optional(),
     tags: z.union([z.array(z.string()), z.string()])
       .transform((val) => Array.isArray(val) ? val : val.split(',').map((t) => t.trim()).filter(Boolean))
@@ -112,14 +121,34 @@ const podcasts = defineCollection({
   }),
 });
 
+// Solutions: programmatic SEO/ICP solution pages
+const solutions = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    icp: z.enum(['RIA', 'Solo Advisor', 'Wealth Manager', 'Wealth Firm']).default('RIA'),
+    intent: z.enum(['informational', 'commercial', 'transactional']).default('commercial'),
+    primary_kw: z.string().optional(),
+    secondary_kws: z.array(z.string()).default([]),
+    featuredImage: z.string().optional(),
+    featuredImageAlt: z.string().optional(),
+    updatedDate: z.coerce.date().optional(),
+    draft: z.coerce.boolean().default(false),
+    seoDescription: z.string().optional(),
+  }),
+});
+
 // Export the collections object to register all collections
 export const collections = {
   blog,
   pages,
   podcasts,
+  solutions,
 };
 
 // Export types for use in components (use CollectionEntry for strong typing)
 export type BlogPost = CollectionEntry<'blog'>;
 export type PageContent = CollectionEntry<'pages'>;
 export type PodcastEpisode = CollectionEntry<'podcasts'>;
+export type SolutionPage = CollectionEntry<'solutions'>;

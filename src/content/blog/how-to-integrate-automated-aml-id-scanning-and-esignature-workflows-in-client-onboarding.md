@@ -7,7 +7,7 @@ updatedDate: 2025-08-14T12:41:38.388Z
 category: "Onboarding"
 tags: []
 slug: "how-to-integrate-automated-aml-id-scanning-and-esignature-workflows-in-client-onboarding"
-featuredImage: "/images/blog/how-to-integrate-automated-aml-id-scanning-and-esignature-workflows-in-client-onboarding__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/68906b5a4065359b47ec0b2b_pexels-photo-33243214.jpeg"
 featuredImageAlt: "Streamlined client onboarding technology interface for advisor workflow automation"
 draft: false
 ---
@@ -46,4 +46,4 @@ draft: false
 
 <h2>Modernize Your Onboarding—Start Today</h2>
 <p>Standing out as a modern, efficient, and compliance-strong advisory firm starts the moment a prospect completes your onboarding. At Investipal, we arm your team with the automation needed to eliminate manual bottlenecks, strengthen compliance, and deliver the experience today’s clients demand.</p>
-<p><strong>Ready to see the transformation in action?</strong> <a href="/book-demo">Book a personalized demo with Investipal</a> to experience automated AML checks, digital ID scanning, and seamless e-signature workflows—so you can accelerate client onboarding, stay audit-ready, and focus your time where it matters most.</p>
+<p><strong>Ready to see the transformation in action?</strong> <a href="/book-a-demo">Book a personalized demo with Investipal</a> to experience automated AML checks, digital ID scanning, and seamless e-signature workflows—so you can accelerate client onboarding, stay audit-ready, and focus your time where it matters most.</p>

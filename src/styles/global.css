@@ -325,6 +325,81 @@ body.reading-mode .text-black {
   color: #e5e7eb !important;
 }
 
+/* Blog hero and author meta in reading mode */
+body.reading-mode .blog-hero h1,
+body.reading-mode .blog-hero h2,
+body.reading-mode .blog-hero p,
+body.reading-mode .blog-hero .author-meta,
+body.reading-mode .blog-hero .author-meta *,
+body.reading-mode .author-card,
+body.reading-mode .author-card * {
+  color: #e5e7eb !important;
+}
+
+body.reading-mode .author-card { background: #111827 !important; border-color: #374151 !important; }
+
+/* Ensure the hero section isn't light in reading mode */
+body.reading-mode .blog-hero { 
+  background: #111827 !important; 
+}
+body.reading-mode .blog-hero .border-gray-200 { 
+  border-color: #374151 !important; 
+}
+
+/* Do NOT alter header nav, breadcrumbs, or tag colors in reading mode */
+body.reading-mode header,
+body.reading-mode header *,
+body.reading-mode nav,
+body.reading-mode nav *,
+body.reading-mode .breadcrumbs,
+body.reading-mode .breadcrumbs *,
+body.reading-mode .standard-badge,
+body.reading-mode .standard-badge * {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+/* Breadcrumb component scope */
+body.reading-mode nav[aria-label="Breadcrumb"],
+body.reading-mode nav[aria-label="Breadcrumb"] * {
+  color: initial !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* Keep header menu links normal in reading mode */
+body.reading-mode header .text-gray-700,
+body.reading-mode header .text-gray-600,
+body.reading-mode header .text-gray-900,
+body.reading-mode header .hover\:text-gray-900:hover {
+  color: #374151 !important;
+  -webkit-text-fill-color: #374151 !important;
+}
+
+/* Badge and share icons in hero */
+body.reading-mode .standard-badge,
+body.reading-mode .standard-badge *,
+body.reading-mode .author-meta .text-gray-500,
+body.reading-mode .author-meta .text-gray-500 * {
+  color: #e5e7eb !important;
+}
+
+/* Force category/tag and featured badges to high contrast in reading mode */
+body.reading-mode .bg-investipal-100 { color: #1f2937 !important; }
+body.reading-mode .bg-investipal-600 { color: #ffffff !important; }
+
+/* Social share buttons contrast */
+body.reading-mode .blog-hero a[aria-label^="Share"],
+body.reading-mode .blog-hero .bg-gray-100 { 
+  background: #1f2937 !important; 
+  border: 1px solid #374151 !important; 
+}
+
+/* Ensure CTA button text remains visible in reading mode */
+body.reading-mode .product-cta-button { 
+  background: #ffffff !important; 
+  color: #7c3aed !important; 
+}
+
 /* Dark mode - Universal text override */
 body.reading-mode * {
   color: inherit !important;
@@ -416,6 +491,39 @@ body.focus-mode.reading-mode .text-gray-600,
 body.focus-mode.reading-mode .text-gray-500 {
   color: #000000 !important;
 }
+
+/* EXCEPTIONS: In Reading + Focus mode keep hero/author areas light-on-dark */
+body.reading-mode.focus-mode .blog-hero,
+body.focus-mode.reading-mode .blog-hero { 
+  background: #111827 !important; 
+}
+
+body.reading-mode.focus-mode .blog-hero *,
+body.focus-mode.reading-mode .blog-hero *,
+body.reading-mode.focus-mode .author-meta,
+body.focus-mode.reading-mode .author-meta,
+body.reading-mode.focus-mode .author-meta *,
+body.focus-mode.reading-mode .author-meta *,
+body.reading-mode.focus-mode .author-card,
+body.focus-mode.reading-mode .author-card,
+body.reading-mode.focus-mode .author-card *,
+body.focus-mode.reading-mode .author-card * {
+  color: #e5e7eb !important;
+  -webkit-text-fill-color: #e5e7eb !important;
+}
+
+/* Share button containers in hero under Reading + Focus */
+body.reading-mode.focus-mode .blog-hero a[aria-label^="Share"],
+body.focus-mode.reading-mode .blog-hero a[aria-label^="Share"],
+body.reading-mode.focus-mode .blog-hero .bg-gray-100,
+body.focus-mode.reading-mode .blog-hero .bg-gray-100 { 
+  background: #1f2937 !important; 
+  border: 1px solid #374151 !important; 
+}
+
+/* Badges in Reading + Focus keep proper text contrast */
+body.reading-mode.focus-mode .bg-investipal-100 { color: #1f2937 !important; }
+body.reading-mode.focus-mode .bg-investipal-600 { color: #ffffff !important; }
 
 /* FORCE Inter font for ALL blog content - override any serif defaults */
 .prose,

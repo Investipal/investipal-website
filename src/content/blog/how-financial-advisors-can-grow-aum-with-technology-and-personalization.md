@@ -7,7 +7,7 @@ updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Marketing"
 tags: ["Growth"]
 slug: "how-financial-advisors-can-grow-aum-with-technology-and-personalization"
-featuredImage: "/images/blog/how-financial-advisors-can-grow-aum-with-technology-and-personalization__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/678937e94f3aa7a7943400c0_How%20Financial%20Advisors%20Can%20Grow%20AUM%20With%20Technology%20and%20Personalization%20(2).png"
 featuredImageAlt: "How Financial Advisors Can Grow AUM With Technology and Personalization"
 draft: false
 ---

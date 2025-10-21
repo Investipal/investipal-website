@@ -7,11 +7,11 @@ updatedDate: 2025-05-29T15:47:50.709Z
 category: "Portfolio Management"
 tags: ["Held-Away Assets"]
 slug: "how-to-seamlessly-aggregate-heldaway-assets-for-a-complete-client-portfolio"
-featuredImage: "/images/blog/how-to-seamlessly-aggregate-heldaway-assets-for-a-complete-client-portfolio__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/683881445e2a3ff38cd133a1_Personalization%20at%20Scale%20The%20Next%20Frontier%20in%20Wealth%20Management%20(10).png"
 featuredImageAlt: "How to Seamlessly Aggregate Held-Away Assets for a Complete Client Portfolio"
 draft: false
 ---
-<p>One of the most critical yet underutilized tactics for advisors who want to deliver truly holistic <a href="/blog/category/portfolio-management">portfolio management</a> is the seamless aggregation of held-away assets - assets that clients own outside of their primary advisory relationship. As an independent advisor, you know how elusive a complete client financial picture can be. Retirement accounts parked at old employers, legacy 401(k)s, HSAs, 529 plans, and scattered brokerage accounts often remain outside your managed universe. Yet, these assets aren't just peripheral - they're often central to the client’s financial outcomes.</p>
+<p>One of the most critical yet underutilized tactics for advisors who want to deliver truly holistic <a href="/blog/portfolio-management">portfolio management</a> is the seamless aggregation of held-away assets - assets that clients own outside of their primary advisory relationship. As an independent advisor, you know how elusive a complete client financial picture can be. Retirement accounts parked at old employers, legacy 401(k)s, HSAs, 529 plans, and scattered brokerage accounts often remain outside your managed universe. Yet, these assets aren't just peripheral - they're often central to the client’s financial outcomes.</p>
 
 <h2>Why Held-Away Asset Aggregation is No Longer Optional</h2>
 <p>Let’s be frank: the days when advisors could provide great service without knowing the entirety of a client’s assets are rapidly fading. Today’s clients expect not just personalized advice, but seamless integration of every piece of their wealth puzzle. Advisors who deliver on this expectation achieve deep trust, uncover more effective solutions, and often capture more AUM - since incomplete advice is easy to sideline when another advisor sees the full picture.</p>
@@ -25,7 +25,7 @@ draft: false
 <h2>The Real-World Challenges: Why Advisors Struggle</h2>
 <p>Despite the strategic importance, advisors often struggle with:</p>
 <ul>
-  <li><strong>Complex <a href="/blog/category/onboarding">Onboarding</a>:</strong> Clients sometimes forget old account details, struggle with sharing statements, or are wary of privacy concerns.</li>
+  <li><strong>Complex <a href="/blog/onboarding">Onboarding</a>:</strong> Clients sometimes forget old account details, struggle with sharing statements, or are wary of privacy concerns.</li>
   <li><strong>Manual Data Entry:</strong> Transcribing brokerage PDFs or employer plan snapshots is tedious, slow, and error-prone - a recipe for frustration on both sides.</li>
   <li><strong>Fragmented Systems:</strong> Integrating held-away asset data with existing CRM, analytics, and compliance tools isn’t always straightforward.</li>
   
@@ -35,7 +35,7 @@ draft: false
 <p>At Investipal, real transformation comes from treating aggregation as a holistic, advisor-friendly workflow - not a collection of disconnected tools. Here’s how we recommend tackling the process in a way that feels intuitive to both you and your clients:</p>
 
 <h3>1. <strong>Engage Clients with the Right Conversation & Consent</strong></h3>
-<p>Start with proactive, non-intimidating conversations. Frame aggregation as about their best interest and complete wealth care - not as an asset grab. Use digital <a href="/blog/category/onboarding">onboarding</a> that:</p>
+<p>Start with proactive, non-intimidating conversations. Frame aggregation as about their best interest and complete wealth care - not as an asset grab. Use digital <a href="/blog/onboarding">onboarding</a> that:</p>
 <ul>
   <li>Guides clients to gather data from external accounts and respects the emotional reasons behind account fragmentation.</li>
   <li>Reassures them that all data access is strictly view-only until otherwise agreed.</li>
