@@ -1,16 +1,10 @@
 {
   "routes": [
     {
-      "route": "/blogs",
-      "redirect": "/blog",
-      "statusCode": 301
-    },
-    {
       "route": "/webinars/:splat",
       "redirect": "/webinars",
       "statusCode": 301
     },
-
     {
       "route": "/faq",
       "statusCode": 301,
