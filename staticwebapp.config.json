@@ -1,11 +1,47 @@
 {
   "routes": [
-    { "route": "/images/*", "headers": { "cache-control": "public, max-age=60, must-revalidate" } }
+    {
+      "route": "/blogs",
+      "redirect": "/blog",
+      "statusCode": 301
+    },
+    {
+      "route": "/webinars/:splat",
+      "redirect": "/webinars",
+      "statusCode": 301
+    },
+
+    {
+      "route": "/faq",
+      "statusCode": 301,
+      "redirect": "/contact-us"
+    },
+    {
+      "route": "/blog-posts/:splat",
+      "statusCode": 301,
+      "redirect": "/blog/:splat"
+    },
+    {
+      "route": "/sitemap.xml",
+      "redirect": "/sitemap-index.xml",
+      "statusCode": 301
+    }
   ],
+  "globalHeaders": {
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()"
+  },
+  "responseOverrides": {
+    "404": {
+      "redirect": "/404",
+      "statusCode": 404
+    }
+  },
   "mimeTypes": {
     ".avif": "image/avif",
-    ".webp": "image/webp"
+    ".webp": "image/webp",
+    ".xml": "application/xml"
   }
 }
-
-

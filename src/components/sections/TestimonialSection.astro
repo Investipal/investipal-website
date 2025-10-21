@@ -3,6 +3,7 @@
  * TestimonialSection - Reusable testimonial section for feature pages
  * Uses the standard testimonial from Lauren M. Williams, CEO of ProsperPlan Wealth
  */
+import TestimonialAuthor from '../ui/TestimonialAuthor.astro';
 ---
 
 <section class="bg-gray-50 py-20">
@@ -21,15 +22,12 @@
         "We're deeply committed to integrating cutting-edge technology to transform the financial planning and investment management landscape. Investipal's innovative approach aligns perfectly with our vision, particularly in utilizing OCR technology to streamline processes to elevate the client and advisor experience."
       </blockquote>
       <div class="flex items-center justify-center space-x-4">
-        <img 
-          src="/images/external/66cf4f1cdec6f9fb4a1d4554_40cb0baa-70cc-4eef-9326-255691abafee.png" 
-          alt="Lauren M. Williams" 
-          class="w-12 h-12 rounded-full"
+        <TestimonialAuthor 
+          name="Lauren M. Williams" 
+          title="CEO, ProsperPlan Wealth" 
+          imageSrc="/images/external/66cf4f1cdec6f9fb4a1d4554_40cb0baa-70cc-4eef-9326-255691abafee.png"
+          size="md"
         />
-        <div class="text-left">
-          <div class="font-semibold text-gray-900">Lauren M. Williams</div>
-          <div class="text-gray-600">CEO. ProsperPlan Wealth</div>
-        </div>
         <div class="border-l border-gray-300 h-12 mx-4"></div>
         <img 
           src="/images/external/66cf4f0261ec4864450a50dc_ab807587-ca5c-40f7-acd9-d52f2c716ad5.png" 

@@ -1,0 +1,24 @@
+{
+  "version": "2.0",
+  "extensions": {
+    "http": {
+      "cors": {
+        "allowedOrigins": [
+          "http://localhost:4321"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "OPTIONS"
+        ],
+        "allowedHeaders": [
+          "*"
+        ]
+      }
+    }
+  }
+}
+
+
+
+

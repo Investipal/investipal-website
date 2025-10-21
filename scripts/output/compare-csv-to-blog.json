@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "csvPosts": 187,
+    "sitePosts": 160,
+    "intersection": 160,
+    "siteOnlyCount": 0,
+    "csvOnlyCount": 27
+  },
+  "siteOnly": [],
+  "csvOnly": [
+    "5-steps-to-automate-your-advisory-workflow-from-client-intake-to-compliance",
+    "advisor-workflow-automation-how-to-build-seamless-backoffice-processes-that-scale",
+    "ai-and-behavioral-finance-how-advanced-algorithms-are-powering-truly-personalized-investment-advice",
+    "aidriven-risk-profiling-in-digital-onboarding-streamline-compliance-and-client-acquisition",
+    "best-risk-assessment-tools-for-wealth-management-in-2025-monte-carlo-scenario-analysis-ai-scoring-more",
+    "beyond-ocr-using-ai-to-scan-client-statements-assess-risk-and-automate-portfolio-optimization",
+    "comparing-digital-risk-assessment-tools-what-to-look-for-in-modern-wealth-management-solutions",
+    "comparing-wealthtech-solutions-digital-onboarding-ai-portfolio-construction-compliance-automation",
+    "how-aidriven-multiasset-portfolio-construction-is-transforming-wealth-management-in-2025",
+    "how-explainable-ai-combines-personalization-and-scalability-for-modern-wealth-managers",
+    "how-hyperpersonalization-and-ai-are-redefining-client-relationships-in-wealth-management",
+    "how-to-automate-id-scanning-and-kyc-verification-in-financial-advisor-workflows",
+    "how-to-automate-investment-proposal-generation-from-client-statement-to-personalized-portfolio-in-under-10-minutes",
+    "how-to-automate-portfolio-rebalancing-tools-strategies-and-compliance-considerations",
+    "how-to-choose-a-wealthtech-platform-digital-onboarding-ai-portfolio-optimization-compliance-automation",
+    "how-to-document-and-automate-reg-bi-compliance-across-your-entire-advisory-workflow",
+    "how-to-integrate-esignature-and-automated-aml-checks-into-your-advisor-onboarding-workflow",
+    "how-to-use-monte-carlo-simulations-for-smarter-portfolio-forecasting",
+    "integrating-aidriven-wealth-management-into-your-advisory-practice-from-onboarding-to-compliance",
+    "integrating-insurance-and-annuity-modeling-into-your-digital-portfolio-workflow",
+    "ips-vs-reg-bi-a-financial-advisors-guide-to-automated-compliance-documentation",
+    "optimizing-risk-tolerance-questionnaires-best-practices-and-digital-tools-for-modern-advisory-workflows",
+    "test",
+    "the-2025-tech-stack-for-wealth-management-ai-portfolio-construction-proposal-automation-and-compliance",
+    "the-future-of-wealth-management-tech-how-aidriven-workflows-unlock-scalability-and-personalization",
+    "the-rise-of-aidriven-behavioral-analytics-unlocking-deeper-insights-for-modern-investment-strategies",
+    "what-is-explainable-ai-in-portfolio-management-and-why-it-matters-for-financial-advisors"
+  ]
+}

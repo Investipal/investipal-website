@@ -7,7 +7,7 @@ updatedDate: 2025-08-14T12:42:43.876Z
 category: "Portfolio Management"
 tags: []
 slug: "optimizing-tax-transition-modeling-how-to-move-client-portfolios-efficiently-and-compliantly-in-2025"
-featuredImage: "/images/blog/optimizing-tax-transition-modeling-how-to-move-client-portfolios-efficiently-and-compliantly-in-2025__hero.png"
+featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/683aba2fd7c8ad0732b906f3_pexels-photo-265087.jpeg"
 featuredImageAlt: "Tax transition modeling dashboard showing efficient portfolio optimization and compliance for 2025 wealth management"
 draft: false
 ---
@@ -17,7 +17,7 @@ draft: false
 <p>Manual tax transition analysis—spreadsheet juggling, prospectus scanning, and hours lost to manual analysis—simply can’t keep up with the demands of today’s clients. Clients expect real-time, tax-aware advice; regulators expect airtight documentation. Yet most firms still struggle with:</p>
 <ul>
   <li>Manually extracting data from PDFs, statements, and screenshots—prone to errors and wasted hours.</li>
-  <li>Fragmented toolsets for <a href="/blog/category/onboarding">onboarding</a>, modeling, proposals, and compliance—leading to rekeying errors and slow response times.</li>
+  <li>Fragmented toolsets for <a href="/blog/onboarding">onboarding</a>, modeling, proposals, and compliance—leading to rekeying errors and slow response times.</li>
   <li>Lack of visibility into tax consequences and transition costs—hindering decisions and risking compliance gaps.</li>
   <li>Difficulty modeling both public securities and alternatives within one workflow.</li>
 </ul>
@@ -29,7 +29,7 @@ draft: false
 
 <h3>1. Intake & Data Extraction – Get Every Detail, Fast</h3>
 <ul>
-  <li>Use <a href="/">Investipal’s AI-powered brokerage statement scanner</a> to instantly ingest any format—PDFs, images, even handwritten notes. Our AI parses every holding, cost basis, and asset class accurately.</li>
+  <li>Use <a href="/book-a-demo">Investipal’s AI-powered brokerage statement scanner</a> to instantly ingest any format—PDFs, images, even handwritten notes. Our AI parses every holding, cost basis, and asset class accurately.</li>
   <li>No manual entry: Extracted data is structured and ready for immediate tax scenario analysis, proposal generation, compliance, and visualization.</li>
   <li>Eliminate data gaps and avoid NIGO (not-in-good-order) paperwork. Clients love the speed, and your team avoids 3–5 hours of manual processing per account.</li>
 </ul>
@@ -82,4 +82,4 @@ draft: false
 <h2>The Bottom Line: Win Back Time and Scale Better Outcomes</h2>
 <p>Optimizing tax transitions in 2025 means delivering better after-tax client outcomes, raising compliance standards, and massively improving advisor productivity. Manual workflows are no longer defensible—nor are fragmented toolkits that introduce error, delay, and risk. By focusing your workflow around automation, analytics, and compliance—in one unified platform—your team can deliver advisory value at a completely new scale.</p>
 
-<p>If you’re ready to see how Investipal can automate your tax transition modeling, streamline onboarding, and accelerate proposal and compliance workflows—all while delivering a seamlessly personalized client experience—<a href="/">book a demo today</a>.</p>
+<p>If you’re ready to see how Investipal can automate your tax transition modeling, streamline onboarding, and accelerate proposal and compliance workflows—all while delivering a seamlessly personalized client experience—<a href="/book-a-demo">book a demo today</a>.</p>

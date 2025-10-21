@@ -1,0 +1,40 @@
+---
+export interface Props {
+  name: string;
+  title: string;
+  imageSrc: string;
+  imageAlt?: string;
+  size?: 'sm' | 'md' | 'lg';
+}
+
+const {
+  name,
+  title,
+  imageSrc,
+  imageAlt = name,
+  size = 'md'
+} = Astro.props as Props;
+
+const sizeClasses = size === 'sm'
+  ? { img: 'w-10 h-10', name: 'text-sm', title: 'text-sm' }
+  : size === 'lg'
+  ? { img: 'w-16 h-16', name: 'text-xl', title: 'text-base' }
+  : { img: 'w-12 h-12', name: 'text-base', title: 'text-sm' };
+---
+
+<div class="flex items-center space-x-4">
+  <img 
+    src={imageSrc}
+    alt={imageAlt}
+    class={`${sizeClasses.img} rounded-full object-cover shadow-sm flex-shrink-0`}
+    loading="lazy"
+    decoding="async"
+  />
+  <div class="text-left">
+    <div class={`font-semibold text-gray-900 ${sizeClasses.name}`}>{name}</div>
+    <div class={`text-gray-600 ${sizeClasses.title}`}>{title}</div>
+  </div>
+  
+</div>
+
+
