@@ -20,6 +20,11 @@
       "route": "/blog-posts/:splat",
       "statusCode": 301,
       "redirect": "/blog/:splat"
+    },
+    {
+      "route": "/sitemap.xml",
+      "redirect": "/sitemap-index.xml",
+      "statusCode": 301
     }
   ],
   "globalHeaders": {
@@ -36,6 +41,7 @@
   },
   "mimeTypes": {
     ".avif": "image/avif",
-    ".webp": "image/webp"
+    ".webp": "image/webp",
+    ".xml": "application/xml"
   }
 }
