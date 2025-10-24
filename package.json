@@ -9,7 +9,23 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+<<<<<<< HEAD
     "verify:posts": "node scripts/seo/verify-posts.mjs"
+=======
+    "audit:lighthouse": "lighthouse http://localhost:4321 --output html --output-path lighthouse-report.html --chrome-flags=\"--headless\"",
+    "audit:pa11y": "pa11y http://localhost:4321",
+    "audit:check": "astro check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "astro check",
+    "fix:blog-links": "node --experimental-modules scripts/fix-blog-links.mjs",
+    "crawl:blog": "npx linkinator http://localhost:4324/blog --recurse --concurrency 6 --timeout 20000 --skip 'mailto:,tel:,facebook.com/sharer,twitter.com/intent' --format json > reports/crawl_blog.json",
+    "audit:semantic": "node --experimental-modules scripts/semantic-link-audit.mjs",
+    "fix:semantic-links": "node --experimental-modules scripts/semantic-link-fix.mjs",
+    "audit:parity": "node scripts/url-parity-audit.mjs --prod https://investipal.co/sitemap-index.xml --staging dist/sitemap-index.xml --out reports",
+    "audit:redirects": "node scripts/redirect-check.mjs --map redirect_map.csv",
+    "redirects:port": "node scripts/port-astro-redirects-to-swa.mjs"
+>>>>>>> efa3e5a8b6c54552d41f95a64416cc09a17e8e91
   },
   "dependencies": {
     "@astrojs/mdx": "^1.1.5",

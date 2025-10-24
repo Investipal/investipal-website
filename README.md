@@ -28,6 +28,7 @@ A modern, responsive website for Investipal built with Astro and Tailwind CSS.
 
 ### **Component Structure**
 
+
 ```
 src/components/
 ├── sections/           # Reusable page sections
