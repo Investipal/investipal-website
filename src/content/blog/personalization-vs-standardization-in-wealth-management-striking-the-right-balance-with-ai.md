@@ -6,7 +6,7 @@ publishedDate: "2025-08-14T12:41:37.836Z"
 updatedDate: "2025-08-14T12:41:37.836Z"
 category: "AI"
 tags: []
-slug: "personalization-vs-standardization-in-wealth-management-striking-the-right-balance-with-ai"
+urlPath: "personalization-vs-standardization-in-wealth-management-striking-the-right-balance-with-ai"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6889a3311298f57c17b61d8b_pexels-photo-33175666.jpeg"
 featuredImageAlt: "Modern wealth management approach balancing personalized service with standardized efficient processes"
 draft: false

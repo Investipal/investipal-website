@@ -6,7 +6,7 @@ publishedDate: "2025-07-14T10:10:57.331Z"
 updatedDate: "2025-07-14T10:10:57.331Z"
 category: "Compliance"
 tags: []
-slug: "digital-onboarding-ai-portfolio-optimization-and-automated-compliance-a-stepbystep-guide-for-advisors"
+urlPath: "digital-onboarding-ai-portfolio-optimization-and-automated-compliance-a-stepbystep-guide-for-advisors"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6874d7b092c86f98dd44a783_pexels-photo-5717765.jpeg"
 ---
 

@@ -6,7 +6,7 @@ publishedDate: 2025-07-22T07:57:47.305Z
 updatedDate: 2025-07-22T07:57:47.305Z
 category: "Onboarding"
 tags: []
-slug: "api-vs-ocr-for-financial-advisors-choosing-the-best-method-to-aggregate-client-brokerage-statements"
+urlPath: "api-vs-ocr-for-financial-advisors-choosing-the-best-method-to-aggregate-client-brokerage-statements"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/687f447a0c74574e63d55b08_pexels-photo-14751274.jpeg"
 ---
 <p>When it comes to scaling a modern, compliant, and highly responsive advisory practice, the way you aggregate and process client brokerage statements is a non-negotiable detail. The debate between using API <a href="/integrations">integrations</a> or <a href="/features/automated-statement-scanner">OCR</a> (Optical Character Recognition) technology is more than technical—it's a foundational choice that directly impacts onboarding speed, compliance, advisory productivity, and the client experience. As teams at Investipal, we encounter this decision in advisory workflows every day. Here’s a direct, practical guide for financial advisors and RIA leaders navigating this crucial crossroad.</p>

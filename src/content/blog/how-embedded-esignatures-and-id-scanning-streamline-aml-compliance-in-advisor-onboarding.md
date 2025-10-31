@@ -6,7 +6,7 @@ publishedDate: 2025-07-09T05:40:35.478Z
 updatedDate: 2025-07-09T05:40:35.478Z
 category: "Compliance"
 tags: []
-slug: "how-embedded-esignatures-and-id-scanning-streamline-aml-compliance-in-advisor-onboarding"
+urlPath: "how-embedded-esignatures-and-id-scanning-streamline-aml-compliance-in-advisor-onboarding"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/686e00d3b4cd5391f309beba_pexels-photo-6721914.jpeg"
 ---
 <p>Financial advisors and wealth management firms know that AML (Anti-Money Laundering) compliance isn’t just about ticking regulatory boxes—it's about protecting the business, protecting clients, and moving new accounts from prospect to active with confidence and efficiency. Yet, too often, <a href="/blog/onboarding">onboarding</a> still relies on fragmented workflows, manual paperwork, and legacy KYC gaps that create friction, delays, and—most dangerously—opportunities for error or audit risk.</p>

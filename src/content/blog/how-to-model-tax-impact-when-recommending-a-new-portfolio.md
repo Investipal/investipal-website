@@ -6,7 +6,7 @@ publishedDate: "2025-06-27T14:47:53.333Z"
 updatedDate: "2025-04-24T20:35:57.551Z"
 category: "Portfolio Management"
 tags: []
-slug: "how-to-model-tax-impact-when-recommending-a-new-portfolio"
+urlPath: "how-to-model-tax-impact-when-recommending-a-new-portfolio"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67ffd62799054ed357128798_Scale%20Your%20Advisory%20Practice%20with%20AI-Driven%20Tax%20Optimization%20and%20Proposals%20(6).png"
 featuredImageAlt: "How to Model Tax Impact When Recommending a New Portfolio"
 draft: false

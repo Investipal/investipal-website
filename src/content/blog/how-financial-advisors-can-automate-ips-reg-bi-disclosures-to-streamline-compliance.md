@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-06-18T17:46:56.902Z
 category: "Compliance"
 tags: ["Compliance"]
-slug: "how-financial-advisors-can-automate-ips-reg-bi-disclosures-to-streamline-compliance"
+urlPath: "how-financial-advisors-can-automate-ips-reg-bi-disclosures-to-streamline-compliance"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6852fabddc2329da7584f3b0_Personalization%20at%20Scale%20The%20Next%20Frontier%20in%20Wealth%20Management%20(13).png"
 featuredImageAlt: "How Financial Advisors Can Automate IPS & Reg BI Disclosures to Streamline Compliance"
 draft: false

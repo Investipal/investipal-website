@@ -6,7 +6,7 @@ publishedDate: "2024-06-12T00:25:39.679Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "General"
 tags: ["Product"]
-slug: "q1-product-updates-win-more-business-automate-your-back-office"
+urlPath: "q1-product-updates-win-more-business-automate-your-back-office"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e2051248325483218a45c7_Q1%20PRODUCT%20UPDATES.png"
 featuredImageAlt: "Q1 Product Updates: Win More Business & Automate Your Back-Office"
 draft: false

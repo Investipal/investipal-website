@@ -6,7 +6,7 @@ publishedDate: 2025-07-17T08:46:05.749Z
 updatedDate: 2025-07-17T08:46:05.749Z
 category: "Compliance"
 tags: []
-slug: "cloudnative-wealth-management-platforms-streamlining-onboarding-portfolio-construction-and-compliance-at-scale"
+urlPath: "cloudnative-wealth-management-platforms-streamlining-onboarding-portfolio-construction-and-compliance-at-scale"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6866417996447fd98ccbde7d_pexels-photo-159888.jpeg"
 ---
 

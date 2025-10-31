@@ -6,7 +6,7 @@ publishedDate: "2024-10-01T21:11:30.614Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Practice Management"]
-slug: "automating-comparative-portfolio-analyses-for-financial-advisors-save-time-and-optimize-client-portfolios"
+urlPath: "automating-comparative-portfolio-analyses-for-financial-advisors-save-time-and-optimize-client-portfolios"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66fc6415fe828c6b5b9743c3_Automating%20Comparative%20Portfolio%20Analyses%20for%20Financial%20Advisors.png"
 featuredImageAlt: "Automating Comparative Portfolio Analyses for Financial Advisors: Save Time and Optimize Client Portfolios"
 draft: false

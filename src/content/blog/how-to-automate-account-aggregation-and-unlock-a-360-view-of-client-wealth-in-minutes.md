@@ -6,7 +6,7 @@ publishedDate: 2025-08-19T04:40:37.104Z
 updatedDate: 2025-08-19T04:40:37.104Z
 category: "Onboarding"
 tags: []
-slug: "how-to-automate-account-aggregation-and-unlock-a-360-view-of-client-wealth-in-minutes"
+urlPath: "how-to-automate-account-aggregation-and-unlock-a-360-view-of-client-wealth-in-minutes"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/683aba2fd7c8ad0732b906f3_pexels-photo-265087.jpeg"
 featuredImageAlt: "How to Automate Account Aggregation and Unlock a 360° View of Client Wealth in Minutes"
 draft: false

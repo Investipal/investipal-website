@@ -25,9 +25,18 @@ function normalizeLinks(md) {
   out = out.replaceAll('"/book-demo"', '"/book-a-demo"');
   // 2) Absolute domain -> relative
   out = out.replaceAll('(https://investipal.co/book-demo)', '(/book-a-demo)');
-  out = out.replaceAll('(https://www.investipal.co/book-demo)', '(/book-a-demo)');
-  out = out.replaceAll('("https://investipal.co/book-demo")', '("/book-a-demo")');
-  out = out.replaceAll('("https://www.investipal.co/book-demo")', '("/book-a-demo")');
+  out = out.replaceAll(
+    '(https://www.investipal.co/book-demo)',
+    '(/book-a-demo)'
+  );
+  out = out.replaceAll(
+    '("https://investipal.co/book-demo")',
+    '("/book-a-demo")'
+  );
+  out = out.replaceAll(
+    '("https://www.investipal.co/book-demo")',
+    '("/book-a-demo")'
+  );
   out = out.replaceAll('(https://investipal.co', '(');
   out = out.replaceAll('(https://www.investipal.co', '(');
   out = out.replaceAll('"https://investipal.co', '"');
@@ -58,18 +67,3 @@ function run() {
 }
 
 run();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

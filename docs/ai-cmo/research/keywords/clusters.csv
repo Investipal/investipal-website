@@ -1,0 +1,29 @@
+cluster_id,pillar,label,keywords_count,total_volume,avg_kd,intent_split
+ips_head,IPS,IPS Head,1,49500,19,informational
+ips_templates,IPS,IPS Templates,1,320,1,commercial|informational
+ips_examples,IPS,IPS Examples,1,320,,informational
+ips_personal,IPS,IPS Personal,1,30,17,commercial|informational
+ips_nonprofit,IPS,IPS Nonprofit,1,260,,commercial|informational
+stmt_head,Statements,Brokerage Statement Head,1,590,,informational|navigational|commercial
+stmt_howto,Statements,How to Read Statement,1,30,,informational
+stmt_samples,Statements,Statement Samples,2,80,,commercial|informational
+held_head,HeldAway,Held-away Head,1,140,,commercial|informational
+regbi_head,RegBI,Reg BI Head,1,590,32,informational
+regbi_form_crs,RegBI,Form CRS,1,1900,47,informational|navigational
+ria_head,RIA Software,RIA Software Head,1,210,10,navigational|commercial
+ria_compliance,RIA Software,Compliance Software,1,110,13,commercial|navigational
+ria_billing,RIA Software,Billing Software,1,90,,commercial|navigational
+ria_pm,RIA Software,Portfolio Management,1,70,32,transactional|commercial
+ria_reporting,RIA Software,Reporting Software,1,10,13,navigational|informational|commercial
+port_opt_head,Portfolio,Portfolio Optimization,1,1900,4,commercial|informational
+prop_head,Proposal,Proposal Head,1,10,,commercial
+prop_templates,Proposal,Proposal Templates,1,10,12,commercial|informational
+prop_examples,Proposal,Proposal Examples,1,260,,informational|commercial
+prop_generator,Proposal,Proposal Generator,1,320,8,transactional|commercial
+onboard_checklist,Onboarding,Onboarding Checklist,1,, ,commercial|informational
+onboard_paperwork,Onboarding,New Account Paperwork,1,, ,commercial|navigational
+onboard_opening,Onboarding,Account Opening,1,320,60,navigational|informational
+onboard_agreement,Onboarding,Advisory Agreement Template,1,70,9,informational
+onboard_custodian,Onboarding,Custodian Account Opening,1,, ,commercial|informational
+intake_risk,Intake,Risk Tolerance Questionnaire,1,590,34,informational|commercial
+tax_transition,Portfolio,Tax Transition Analysis,5,, ,commercial|informational

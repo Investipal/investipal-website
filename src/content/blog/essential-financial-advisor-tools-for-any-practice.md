@@ -6,7 +6,7 @@ publishedDate: "2024-06-12T00:27:24.552Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Marketing"
 tags: ["Growth"]
-slug: "essential-financial-advisor-tools-for-any-practice"
+urlPath: "essential-financial-advisor-tools-for-any-practice"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e2040af41e8b2a40f2e0f2_Essential%20Financial%20Advisor%20Tools%20For%20Any%20Practice%20(1).png"
 featuredImageAlt: "Essential Financial Advisor Tools For Any Practice"
 draft: false

@@ -6,7 +6,7 @@ publishedDate: "2024-06-12T00:28:04.544Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Compliance"
 tags: ["Risk"]
-slug: "understanding-regulation-best-interest-reg-bi-essential-guide-for-financial-advisors"
+urlPath: "understanding-regulation-best-interest-reg-bi-essential-guide-for-financial-advisors"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e203a7e802294a5ee76cf9_Understanding%20Regulation%20Best%20Interest%20(Reg%20BI)%20Essential%20Guide%20for%20Financial%20Advisors.png"
 featuredImageAlt: "Understanding Regulation Best Interest (Reg BI): Essential Guide for Financial Advisors"
 draft: false

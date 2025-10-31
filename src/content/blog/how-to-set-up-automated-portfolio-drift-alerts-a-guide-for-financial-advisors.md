@@ -6,7 +6,7 @@ publishedDate: "2025-06-27T14:47:53.333Z"
 updatedDate: "2025-06-02T15:01:22.261Z"
 category: "Portfolio Management"
 tags: []
-slug: "how-to-set-up-automated-portfolio-drift-alerts-a-guide-for-financial-advisors"
+urlPath: "how-to-set-up-automated-portfolio-drift-alerts-a-guide-for-financial-advisors"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/683dbcc14723b2b7d3b606eb_Automating%20Financial%20Advisory%20Practices%20How%20to%20Build%20a%20Lean%20Advisory%20Team%20(4).png"
 featuredImageAlt: "How to Set Up Automated Portfolio Drift Alerts: A Guide for Financial Advisors"
 draft: false

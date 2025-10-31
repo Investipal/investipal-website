@@ -6,7 +6,7 @@ publishedDate: "2025-06-27T14:47:53.333Z"
 updatedDate: "2025-03-27T20:02:13.479Z"
 category: "General"
 tags: []
-slug: "the-ultimate-guide-to-financial-advisor-proposal-generation-software-in-2025"
+urlPath: "the-ultimate-guide-to-financial-advisor-proposal-generation-software-in-2025"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e5acca34382f1f2068481e_Personalization%20at%20Scale%20The%20Next%20Frontier%20in%20Wealth%20Management%20(4).png"
 featuredImageAlt: "The Ultimate Guide to Financial Advisor Proposal Generation Software in 2025"
 draft: false

@@ -6,7 +6,7 @@ publishedDate: "2024-10-09T14:47:16.647Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Onboarding"
 tags: ["Automation"]
-slug: "how-to-analyze-client-brokerage-statements-faster-with-ai"
+urlPath: "how-to-analyze-client-brokerage-statements-faster-with-ai"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/670694b2c884cb39d31de27e_How%20to%20Analyze%20Client%20Brokerage%20Statements%20Faster%20with%20AI.png"
 featuredImageAlt: "How to Analyze Client Brokerage Statements Faster with AI"
 draft: false

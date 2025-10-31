@@ -6,7 +6,7 @@ publishedDate: 2025-07-28T20:29:02.606Z
 updatedDate: 2025-07-21T17:46:33.654Z
 category: "Onboarding"
 tags: ["Digital Onboarding"]
-slug: "how-to-automate-client-onboarding-for-financial-advisors-a-stepbystep-workflow-for-2025"
+urlPath: "how-to-automate-client-onboarding-for-financial-advisors-a-stepbystep-workflow-for-2025"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/687e7c8441871dd3bafa5fd7_How%20Top%20Advisors%20Prove%20Their%20Worth%20(Without%20Overloading%20Clients%20with%20Data)%20(8).png"
 featuredImageAlt: "How to Automate Client Onboarding for Financial Advisors: A Step-by-Step Workflow for 2025"
 draft: false

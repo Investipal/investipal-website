@@ -6,7 +6,7 @@ publishedDate: 2025-08-14T12:42:43.550Z
 updatedDate: 2025-08-14T12:42:43.550Z
 category: "Onboarding"
 tags: ["AI"]
-slug: "how-to-extract-and-analyze-data-from-brokerage-statements-using-ai-a-practical-guide-for-advisors"
+urlPath: "how-to-extract-and-analyze-data-from-brokerage-statements-using-ai-a-practical-guide-for-advisors"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689dd9c33d86dc2927d35f47_6882b2d7ce959d914991066b_5%2520Common%2520Bottlenecks%2520in%2520Financial%2520Advisor%2520Sales%2520and%2520How%2520to%2520Fix%2520Them%2520(17).png"
 featuredImageAlt: "AI-powered brokerage statement analysis showing data extraction and analysis workflow for financial advisors"
 draft: false

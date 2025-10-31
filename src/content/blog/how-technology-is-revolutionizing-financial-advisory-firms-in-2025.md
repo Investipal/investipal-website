@@ -6,7 +6,7 @@ publishedDate: "2025-01-07T17:11:04.703Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "General"
 tags: ["Technology"]
-slug: "how-technology-is-revolutionizing-financial-advisory-firms-in-2025"
+urlPath: "how-technology-is-revolutionizing-financial-advisory-firms-in-2025"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/677d59c310bb23160f20eb5c_How%20Technology%20is%20Revolutionizing%20Financial%20Advisory%20Firms%20in%202025.png"
 featuredImageAlt: "How Technology is Revolutionizing Financial Advisory Firms in 2025"
 draft: false

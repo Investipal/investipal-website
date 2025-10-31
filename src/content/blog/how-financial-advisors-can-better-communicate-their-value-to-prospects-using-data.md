@@ -6,7 +6,7 @@ publishedDate: "2024-10-03T15:16:02.517Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Marketing"
 tags: ["Growth"]
-slug: "how-financial-advisors-can-better-communicate-their-value-to-prospects-using-data"
+urlPath: "how-financial-advisors-can-better-communicate-their-value-to-prospects-using-data"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66feb4a0f0d0bd218aba5328_How%20Financial%20Advisors%20Can%20Better%20Communicate%20Their%20Value%20to%20Prospects%20Using%20Data%20(1).png"
 featuredImageAlt: "How Financial Advisors Can Better Communicate Their Value to Prospects Using Data"
 draft: false

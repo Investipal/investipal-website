@@ -6,7 +6,7 @@ publishedDate: "2025-06-27T14:47:53.333Z"
 updatedDate: "2025-05-06T20:25:47.030Z"
 category: "Onboarding"
 tags: []
-slug: "how-to-build-a-compliant-investment-policy-statement-in-minutes"
+urlPath: "how-to-build-a-compliant-investment-policy-statement-in-minutes"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/681a6f7612c696511687fe6c_Why%20Wealth%20Managers%20Spend%2080%25%20of%20Their%20Time%20on%20Admin%20Instead%20of%20Growth%20(7).png"
 featuredImageAlt: "How to Build a Compliant Investment Policy Statement in Minutes"
 draft: false

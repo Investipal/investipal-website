@@ -6,7 +6,7 @@ publishedDate: "2024-11-18T16:12:40.300Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Portfolio Management"]
-slug: "ai-driven-portfolio-optimization-how-transparent-explainable-ai-is-shaping-the-future-of-wealth-management"
+urlPath: "ai-driven-portfolio-optimization-how-transparent-explainable-ai-is-shaping-the-future-of-wealth-management"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/673b670ea8b85674a05de78a_AI-Driven%20Portfolio%20Optimization.png"
 featuredImageAlt: "AI-Driven Portfolio Optimization: How Transparent, Explainable AI is Shaping the Future of Wealth Management"
 draft: false

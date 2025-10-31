@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-06-13T14:36:12.882Z
 category: "Onboarding"
 tags: ["AI"]
-slug: "investment-policy-statement-software-5-critical-features-every-financial-advisor-needs"
+urlPath: "investment-policy-statement-software-5-critical-features-every-financial-advisor-needs"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/684c3682f372fa100b7deb55_Scale%20Your%20Advisory%20Practice%20with%20AI-Driven%20Tax%20Optimization%20and%20Proposals%20(9).png"
 featuredImageAlt: "Investment Policy Statement Software: 5 Critical Features Every Financial Advisor Needs"
 draft: false

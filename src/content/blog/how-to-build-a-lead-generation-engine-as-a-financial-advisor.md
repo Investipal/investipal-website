@@ -6,7 +6,7 @@ publishedDate: 2024-03-11T11:59:51.000Z
 updatedDate: 2024-06-12T00:23:36.000Z
 category: "Marketing"
 tags: ["Growth"]
-slug: "how-to-build-a-lead-generation-engine-as-a-financial-advisor"
+urlPath: "how-to-build-a-lead-generation-engine-as-a-financial-advisor"
 featuredImage: "https://uploads-ssl.webflow.com/666872ff37bdf42ce9637d77/666872ff37bdf42ce9637e23_blog-main-02.jpg"
 featuredImageAlt: "Financial advisor building lead generation engine with digital marketing strategies and client acquisition tools"
 draft: false

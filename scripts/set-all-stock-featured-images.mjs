@@ -9,7 +9,9 @@ const blogDir = path.join(root, 'src', 'content', 'blog');
 
 function readFrontmatter(raw) {
   const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
-  return m ? { block: m[0], yaml: m[1], start: m.index, end: m.index + m[0].length } : null;
+  return m
+    ? { block: m[0], yaml: m[1], start: m.index, end: m.index + m[0].length }
+    : null;
 }
 
 function getYamlValue(yaml, key) {
@@ -26,9 +28,35 @@ function upsertYamlKey(yaml, key, value, eol) {
 }
 
 function slugToKeywords(slug, title, category, tags) {
-  const pool = [title || '', category || '', ...(tags || []), slug.replace(/-/g, ' ')].join(' ');
-  const words = pool.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(Boolean);
-  const stop = new Set(['the','and','for','with','of','in','to','how','what','why','a','an','on','from','is','are']);
+  const pool = [
+    title || '',
+    category || '',
+    ...(tags || []),
+    slug.replace(/-/g, ' '),
+  ].join(' ');
+  const words = pool
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter(Boolean);
+  const stop = new Set([
+    'the',
+    'and',
+    'for',
+    'with',
+    'of',
+    'in',
+    'to',
+    'how',
+    'what',
+    'why',
+    'a',
+    'an',
+    'on',
+    'from',
+    'is',
+    'are',
+  ]);
   const uniq = [];
   for (const w of words) if (!stop.has(w) && !uniq.includes(w)) uniq.push(w);
   return uniq.slice(0, 5).join(',');
@@ -51,7 +79,12 @@ function processPost(filePath) {
   const title = getYamlValue(fm.yaml, 'title') || slug;
   const category = getYamlValue(fm.yaml, 'category') || '';
   const tagsRaw = getYamlValue(fm.yaml, 'tags');
-  const tags = tagsRaw ? tagsRaw.replace(/[\[\]\"']/g, '').split(/,\s*/).filter(Boolean) : [];
+  const tags = tagsRaw
+    ? tagsRaw
+        .replace(/[\[\]\"']/g, '')
+        .split(/,\s*/)
+        .filter(Boolean)
+    : [];
 
   const keywords = slugToKeywords(slug, title, category, tags);
   const unsplashUrl = buildUnsplashSourceUrl(keywords);
@@ -73,29 +106,3 @@ function main() {
 }
 
 main();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

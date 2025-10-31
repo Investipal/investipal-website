@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-03-13T20:35:26.283Z
 category: "Portfolio Management"
 tags: ["Automation"]
-slug: "from-manual-to-magical-automating-data-entry-and-analysis-in-financial-advisory"
+urlPath: "from-manual-to-magical-automating-data-entry-and-analysis-in-financial-advisory"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67d34185c18fadbf30019e53_How%20Financial%20Advisors%20Can%20Grow%20AUM%20With%20Technology%20and%20Personalization%20(3).png"
 featuredImageAlt: "From Manual to Magical: Automating Data Entry and Analysis in Financial Advisory"
 draft: false

@@ -6,7 +6,7 @@ publishedDate: "2024-08-21T22:27:23.607Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Compliance"
 tags: ["Compliance"]
-slug: "regulation-best-interest-reg-bi-what-financial-advisors-and-broker-dealers-need-to-know"
+urlPath: "regulation-best-interest-reg-bi-what-financial-advisors-and-broker-dealers-need-to-know"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e20068e1cf256304178bbe_Regulation%20Best%20Interest%20(Reg%20BI)%20What%20Financial%20Advisors%20and%20Broker-Dealers%20Need%20to%20Know%20(1).png"
 featuredImageAlt: "Regulation Best Interest (Reg BI): What Financial Advisors and Broker-Dealers Need to Know"
 draft: false

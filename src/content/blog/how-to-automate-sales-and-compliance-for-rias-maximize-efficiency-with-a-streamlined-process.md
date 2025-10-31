@@ -6,7 +6,7 @@ publishedDate: "2024-09-13T19:52:39.154Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Compliance"
 tags: ["Growth"]
-slug: "how-to-automate-sales-and-compliance-for-rias-maximize-efficiency-with-a-streamlined-process"
+urlPath: "how-to-automate-sales-and-compliance-for-rias-maximize-efficiency-with-a-streamlined-process"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e495b1ade3d267a3911fce_How%20to%20Automate%20Sales%20and%20Compliance%20for%20RIAs%20Maximize%20Efficiency%20with%20a%20Streamlined%20Process.png"
 featuredImageAlt: "How to Automate Sales and Compliance for RIAs: Maximize Efficiency with a Streamlined Process"
 draft: false

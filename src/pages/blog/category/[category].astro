@@ -87,7 +87,7 @@ const categoryPageStructuredData = {
         "@type": "BlogPosting",
         "headline": post.data.title,
         "description": post.data.excerpt,
-        "url": `${siteUrl}/blog/${post.id.replace('.md', '')}`,
+        "url": `${siteUrl}/blog/${post.data.urlPath || post.id.replace('.md', '')}`,
         "datePublished": post.data.publishedDate.toISOString(),
         "author": {
           "@type": "Person",

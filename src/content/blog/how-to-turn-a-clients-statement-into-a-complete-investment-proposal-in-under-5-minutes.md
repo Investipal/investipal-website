@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-06-14T18:08:51.654Z
 category: "Onboarding"
 tags: ["Proposals"]
-slug: "how-to-turn-a-clients-statement-into-a-complete-investment-proposal-in-under-5-minutes"
+urlPath: "how-to-turn-a-clients-statement-into-a-complete-investment-proposal-in-under-5-minutes"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/681933fc40004e764c4b6d9b_How%20Personalized%20Portfolio%20Construction%20Is%20Reshaping%20Wealth%20Management%20(7).png"
 featuredImageAlt: "How to Turn a Client’s Statement Into a Complete Investment Proposal in Under 5 Minutes"
 draft: false

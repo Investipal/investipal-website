@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-04-15T20:10:03.738Z
 category: "Portfolio Management"
 tags: ["AI"]
-slug: "ai-tools-for-portfolio-management-what-they-are-how-they-work--and-where-investipal-fits-in"
+urlPath: "ai-tools-for-portfolio-management-what-they-are-how-they-work--and-where-investipal-fits-in"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67febbdfe2e1409dcd03dbc6_Personalization%20at%20Scale%20The%20Next%20Frontier%20in%20Wealth%20Management%20(7).png"
 featuredImageAlt: "AI Tools for Portfolio Management: What They Are, How They Work—and Where Investipal Fits In"
 draft: false

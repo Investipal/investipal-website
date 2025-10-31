@@ -6,7 +6,7 @@ publishedDate: "2024-03-11T12:03:06.664Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Investing"]
-slug: "maximizing-returns-an-in-depth-look-at-expanding-your-investment-portfolio-beyond-boglehead-principles"
+urlPath: "maximizing-returns-an-in-depth-look-at-expanding-your-investment-portfolio-beyond-boglehead-principles"
 featuredImage: "https://uploads-ssl.webflow.com/666872ff37bdf42ce9637d77/666872ff37bdf42ce9637e64_blog-main-07.jpg"
 featuredImageAlt: "Maximizing Returns: An In-Depth Look at Expanding Your Investment Portfolio Beyond Boglehead Principles"
 draft: false

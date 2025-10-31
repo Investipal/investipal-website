@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-03-13T15:34:20.217Z
 category: "Marketing"
 tags: ["Marketing"]
-slug: "nurturing-leads-with-real-time-data-what-happens-when-they-dont-close-today"
+urlPath: "nurturing-leads-with-real-time-data-what-happens-when-they-dont-close-today"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67d2faf62c5260dc1e31017e_Scale%20Your%20Advisory%20Practice%20with%20AI-Driven%20Tax%20Optimization%20and%20Proposals%20(3).png"
 featuredImageAlt: "Nurturing Leads with Real-Time Data: What Happens When They Don’t Close Today?"
 draft: false

@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-03-10T17:58:32.261Z
 category: "Portfolio Management"
 tags: ["Lead Generation"]
-slug: "how-financial-advisors-can-convert-more-leads-with-real-time-portfolio-tracking-on-demand-marketing"
+urlPath: "how-financial-advisors-can-convert-more-leads-with-real-time-portfolio-tracking-on-demand-marketing"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c9c8dbfb24e399c43381e0_Portfolio%20Charts%20(2).png"
 featuredImageAlt: "How Financial Advisors Can Convert More Leads with Real-Time Portfolio Tracking & On-Demand Marketing"
 draft: false

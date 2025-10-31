@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-06-23T22:35:18.477Z
 category: "Onboarding"
 tags: ["Onboarding"]
-slug: "automated-tax-transition-modeling-simplifying-client-portfolio-migrations-for-financial-advisors"
+urlPath: "automated-tax-transition-modeling-simplifying-client-portfolio-migrations-for-financial-advisors"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6859d1d75f4a91cdfb866242_Automating%20the%20Sales%20Journey%20From%20Client%20Intake%20to%20Proposals%20%26%20Compliance%20in%20One%20Platform%20(8).png"
 featuredImageAlt: "Automated Tax Transition Modeling: Simplifying Client Portfolio Migrations for Financial Advisors"
 draft: false

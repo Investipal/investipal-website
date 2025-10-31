@@ -6,7 +6,7 @@ publishedDate: "2024-12-19T16:12:09.010Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "AI"
 tags: ["Automation"]
-slug: "how-to-automate-data-entry-for-financial-advisors-the-complete-guide-for-2025"
+urlPath: "how-to-automate-data-entry-for-financial-advisors-the-complete-guide-for-2025"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67644560a7208d065630a0cb_How%20to%20Automate%20Data%20Entry%20for%20Financial%20Advisors%20%20The%20Complete%20Guide%20for%202025.png"
 featuredImageAlt: "How to Automate Data Entry for Financial Advisors: The Complete Guide for 2025"
 draft: false

@@ -6,7 +6,7 @@ publishedDate: "2024-11-25T21:17:16.474Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Compliance"
 tags: ["Compliance"]
-slug: "the-role-of-explainable-ai-in-enhancing-regulatory-compliance-and-client-trust"
+urlPath: "the-role-of-explainable-ai-in-enhancing-regulatory-compliance-and-client-trust"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6744ea0a269c65c1379ee984_The%20Role%20of%20Explainable%20AI%20in%20Enhancing%20Regulatory%20Compliance%20and%20Client%20Trust%20(2).png"
 featuredImageAlt: "The Role of Explainable AI in Enhancing Regulatory Compliance and Client Trust"
 draft: false

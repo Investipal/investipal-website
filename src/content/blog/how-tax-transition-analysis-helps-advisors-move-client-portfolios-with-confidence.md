@@ -6,7 +6,7 @@ publishedDate: "2025-02-20T15:44:58.488Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Tax"]
-slug: "how-tax-transition-analysis-helps-advisors-move-client-portfolios-with-confidence"
+urlPath: "how-tax-transition-analysis-helps-advisors-move-client-portfolios-with-confidence"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67b74dcf45578b4d941d6485_How%20Personalized%20Portfolio%20Construction%20Is%20Reshaping%20Wealth%20Management%20(2).png"
 featuredImageAlt: "How Tax Transition Analysis Helps Advisors Move Client Portfolios with Confidence"
 draft: false

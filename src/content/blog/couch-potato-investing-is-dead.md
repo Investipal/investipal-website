@@ -6,7 +6,7 @@ publishedDate: "2024-03-11T12:00:43.308Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "General"
 tags: ["DigitalSecurity"]
-slug: "couch-potato-investing-is-dead"
+urlPath: "couch-potato-investing-is-dead"
 featuredImage: "https://uploads-ssl.webflow.com/666872ff37bdf42ce9637d77/666872ff37bdf42ce9637e60_blog-main-04.jpg"
 featuredImageAlt: "Couch Potato Investing Is Dead"
 draft: false

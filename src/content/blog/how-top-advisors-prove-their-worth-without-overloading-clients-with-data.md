@@ -6,7 +6,7 @@ publishedDate: "2025-02-04T17:10:29.606Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "General"
 tags: ["Sales"]
-slug: "how-top-advisors-prove-their-worth-without-overloading-clients-with-data"
+urlPath: "how-top-advisors-prove-their-worth-without-overloading-clients-with-data"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67a249e7fefcdf97e3d7a486_How%20Top%20Advisors%20Prove%20Their%20Worth%20(Without%20Overloading%20Clients%20with%20Data)%20(1).png"
 featuredImageAlt: "How Top Advisors Prove Their Worth (Without Overloading Clients with Data)"
 draft: false

@@ -6,7 +6,7 @@ publishedDate: "2025-02-05T21:26:43.502Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "General"
 tags: ["Proposals"]
-slug: "how-to-factor-financial-planning-into-an-investment-proposal"
+urlPath: "how-to-factor-financial-planning-into-an-investment-proposal"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67a3d78fd39304363a7c96dc_How%20to%20Factor%20Financial%20Planning%20Into%20an%20Investment%20Proposal%20(Without%20Relying%20on%20Fear%20Tactics).png"
 featuredImageAlt: "How to Factor Financial Planning Into an Investment Proposal"
 draft: false

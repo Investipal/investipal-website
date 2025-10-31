@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-03-28T14:34:39.734Z
 category: "General"
 tags: ["Sales"]
-slug: "next-gen-proposal-generation-for-financial-advisors"
+urlPath: "next-gen-proposal-generation-for-financial-advisors"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e425efba5caaea1fea2301_How%20Personalized%20Portfolio%20Construction%20Is%20Reshaping%20Wealth%20Management%20(5).png"
 featuredImageAlt: "Next Gen Proposal Generation for Financial Advisors"
 draft: false

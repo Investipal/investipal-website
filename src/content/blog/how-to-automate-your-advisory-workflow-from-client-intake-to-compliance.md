@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-05-28T18:48:34.694Z
 category: "Compliance"
 tags: ["Digital Onboarding"]
-slug: "how-to-automate-your-advisory-workflow-from-client-intake-to-compliance"
+urlPath: "how-to-automate-your-advisory-workflow-from-client-intake-to-compliance"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/683759dd24148ddb0b6098a5_The%20Biggest%20Bottlenecks%20in%20Wealth%20Management%20Sales%E2%80%94and%20How%20Automation%20Solves%20Them%20(5).png"
 featuredImageAlt: "How to Automate Your Advisory Workflow: From Client Intake to Compliance"
 draft: false

@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-04-03T16:06:25.132Z
 category: "Marketing"
 tags: ["Growth"]
-slug: "how-fragmented-tech-stacks-are-holding-back-your-wealth-management-firm"
+urlPath: "how-fragmented-tech-stacks-are-holding-back-your-wealth-management-firm"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eeb102db748e4efcc1eb00_5%20Common%20Bottlenecks%20in%20Financial%20Advisor%20Sales%20and%20How%20to%20Fix%20Them%20(5).png"
 featuredImageAlt: "How Fragmented Tech Stacks Are Holding Back Your Wealth Management Firm"
 draft: false

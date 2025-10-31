@@ -6,7 +6,7 @@ publishedDate: 2025-07-15T18:13:18.163Z
 updatedDate: 2025-07-09T21:46:12.244Z
 category: "Compliance"
 tags: ["Compliance"]
-slug: "aipowered-continuous-compliance-monitoring-for-financial-advisors-realtime-risk-management"
+urlPath: "aipowered-continuous-compliance-monitoring-for-financial-advisors-realtime-risk-management"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/686ee2ad46f0462c0a1cf96e_How%20Personalized%20Portfolio%20Construction%20Is%20Reshaping%20Wealth%20Management%20(9).png"
 featuredImageAlt: "AI-Powered Continuous Compliance Monitoring for Financial Advisors: Real-Time Risk Management"
 draft: false

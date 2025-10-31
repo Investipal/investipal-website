@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
-import tailwindcss from '@tailwindcss/vite';
+import tailwind from '@astrojs/tailwind';
 
 import sitemap from '@astrojs/sitemap';
 
@@ -11,6 +11,8 @@ import partytown from '@astrojs/partytown';
 export default defineConfig({
   integrations: [
     mdx(),
+    tailwind(),
+
     sitemap({
       customPages: [
         // Segment Pages
@@ -51,7 +53,6 @@ export default defineConfig({
   // Enable compression
   vite: {
     plugins: [
-      tailwindcss(),
       {
         name: 'dev-sanitize-svg-href',
         apply: 'serve',
@@ -73,11 +74,6 @@ export default defineConfig({
         },
       },
     ],
-    define: {
-      // Fix cssesc module compatibility
-      global: 'globalThis',
-      module: '{}',
-    },
     build: {
       rollupOptions: {
         output: {

@@ -6,7 +6,7 @@ publishedDate: "2025-02-19T22:43:31.557Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Tax"]
-slug: "how-financial-advisors-can-use-tax-season-to-attract-clients-and-optimize-portfolios"
+urlPath: "how-financial-advisors-can-use-tax-season-to-attract-clients-and-optimize-portfolios"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67b65e8c88ac03f57370061a_Personalization%20at%20Scale%20The%20Next%20Frontier%20in%20Wealth%20Management%20(3).png"
 featuredImageAlt: "How Financial Advisors Can Use Tax Season to Attract Clients and Optimize Portfolios"
 draft: false

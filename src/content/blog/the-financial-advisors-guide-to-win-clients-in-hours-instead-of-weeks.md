@@ -6,7 +6,7 @@ publishedDate: "2024-09-11T19:01:20.612Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Marketing"
 tags: ["Growth"]
-slug: "the-financial-advisors-guide-to-win-clients-in-hours-instead-of-weeks"
+urlPath: "the-financial-advisors-guide-to-win-clients-in-hours-instead-of-weeks"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e1fe60b6b3f0dd05847cbe_The%20Financial%20Advisor%27s%20Guide%20to%20Win%20Clients%20in%20Hours%20Instead%20of%20Weeks%20(1600%20x%201200%20px).png"
 featuredImageAlt: "The Financial Advisor's Guide to Win Clients in Hours Instead Of Weeks"
 draft: false

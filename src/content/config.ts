@@ -37,7 +37,7 @@ const blog = defineCollection({
     
     // Auto-calculated fields (can be overridden)
     readingTime: z.number().optional(),
-    slug: z.string().optional(),
+    urlPath: z.string().optional(),
   }),
 });
 

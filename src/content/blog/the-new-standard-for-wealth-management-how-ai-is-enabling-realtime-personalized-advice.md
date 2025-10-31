@@ -6,7 +6,7 @@ publishedDate: 2025-08-11T18:30:18.071Z
 updatedDate: 2025-08-11T15:13:13.926Z
 category: "AI"
 tags: ["AI"]
-slug: "the-new-standard-for-wealth-management-how-ai-is-enabling-realtime-personalized-advice"
+urlPath: "the-new-standard-for-wealth-management-how-ai-is-enabling-realtime-personalized-advice"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/68936cc195453801357544eb_5%20Common%20Bottlenecks%20in%20Financial%20Advisor%20Sales%20and%20How%20to%20Fix%20Them%20(18).png"
 featuredImageAlt: "The New Standard for Wealth Management: How AI Is Enabling Real-Time, Personalized Advice"
 draft: false

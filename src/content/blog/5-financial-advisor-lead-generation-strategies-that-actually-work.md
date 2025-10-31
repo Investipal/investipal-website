@@ -6,7 +6,7 @@ publishedDate: "2024-06-12T00:24:56.073Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Marketing"
 tags: ["Growth"]
-slug: "5-financial-advisor-lead-generation-strategies-that-actually-work"
+urlPath: "5-financial-advisor-lead-generation-strategies-that-actually-work"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e205639da16ae60225dce8_5%20Financial%20Advisor%20Lead%20Generation%20Strategies%20That%20(Actually)%20Work%20(6).png"
 featuredImageAlt: "5 Financial Advisor Lead Generation Strategies That (Actually) Work"
 draft: false

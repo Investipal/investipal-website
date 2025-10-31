@@ -6,7 +6,7 @@ publishedDate: "2024-08-16T14:09:26.931Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Onboarding"
 tags: ["Automation"]
-slug: "how-to-leverage-ocr-technology-for-faster-client-account-statement-analysis"
+urlPath: "how-to-leverage-ocr-technology-for-faster-client-account-statement-analysis"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e1ffee6ce9e2e09afcee16_How%20to%20Leverage%20OCR%20Technology%20for%20Faster%20Client%20Account%20Statement%20Analysis%20(1).png"
 featuredImageAlt: "How to Leverage OCR Technology for Faster Client Account Statement Analysis"
 draft: false

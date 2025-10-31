@@ -6,7 +6,7 @@ publishedDate: "2024-07-31T18:38:12.263Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Marketing"
 tags: ["Growth"]
-slug: "why-financial-advisors-need-a-360-degree-view-of-client-investments"
+urlPath: "why-financial-advisors-need-a-360-degree-view-of-client-investments"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e1ff280022ac03c44d73bf_Why%20Financial%20Advisors%20Need%20a%20360-Degree%20View%20of%20Client%20Investments%20(1).png"
 featuredImageAlt: "Why Financial Advisors Need a 360-Degree View of Client Investments"
 draft: false

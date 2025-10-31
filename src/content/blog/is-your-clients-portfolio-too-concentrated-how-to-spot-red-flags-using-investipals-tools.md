@@ -6,7 +6,7 @@ publishedDate: "2024-09-24T16:50:43.949Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Risk Management"]
-slug: "is-your-clients-portfolio-too-concentrated-how-to-spot-red-flags-using-investipals-tools"
+urlPath: "is-your-clients-portfolio-too-concentrated-how-to-spot-red-flags-using-investipals-tools"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66f2ec789e0917a3ad8f1f95_Is%20Your%20Client%E2%80%99s%20Portfolio%20Too%20Concentrated%20How%20to%20Spot%20Red%20Flags%20Using%20Investipal%27s%20Tools.png"
 featuredImageAlt: "Is Your Client’s Portfolio Too Concentrated? How to Spot Red Flags Using Investipal's Tools"
 draft: false

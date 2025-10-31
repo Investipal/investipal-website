@@ -6,7 +6,7 @@ publishedDate: "2024-12-02T22:25:17.100Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Portfolio Construction"]
-slug: "how-ai-is-transforming-portfolio-optimization-the-rise-of-explainable-ai-in-wealth-management"
+urlPath: "how-ai-is-transforming-portfolio-optimization-the-rise-of-explainable-ai-in-wealth-management"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/674e31b67c99bdf2e7a3d206_How%20AI%20is%20Transforming%20Portfolio%20Optimization%20The%20Rise%20of%20Explainable%20AI%20in%20Wealth%20Management.png"
 featuredImageAlt: "How AI is Transforming Portfolio Optimization: The Rise of Explainable AI in Wealth Management"
 draft: false

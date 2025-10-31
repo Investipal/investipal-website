@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-02-28T16:38:12.230Z
 category: "General"
 tags: ["Practice Management"]
-slug: "morningstar-office-is-shutting-down-your-90-day-transition-plan"
+urlPath: "morningstar-office-is-shutting-down-your-90-day-transition-plan"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c1d993b4dcea2d6535e218_Why%20Wealth%20Managers%20Spend%2080%25%20of%20Their%20Time%20on%20Admin%20Instead%20of%20Growth%20(2).png"
 featuredImageAlt: "Morningstar Office Is Shutting Down: Your 90-Day Transition Plan"
 draft: false

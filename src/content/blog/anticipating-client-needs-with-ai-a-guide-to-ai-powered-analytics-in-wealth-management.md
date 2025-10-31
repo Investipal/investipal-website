@@ -6,7 +6,7 @@ publishedDate: 2025-07-28T20:29:02.606Z
 updatedDate: 2025-07-16T15:59:41.898Z
 category: "AI"
 tags: ["AI"]
-slug: "anticipating-client-needs-with-ai-a-guide-to-ai-powered-analytics-in-wealth-management"
+urlPath: "anticipating-client-needs-with-ai-a-guide-to-ai-powered-analytics-in-wealth-management"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6877cc6b6f4a1218d01c3d87_Personalization%20at%20Scale%20The%20Next%20Frontier%20in%20Wealth%20Management%20(17).png"
 featuredImageAlt: "Anticipating Client Needs with AI: A Guide to AI-Powered Analytics in Wealth Management"
 draft: false

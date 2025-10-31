@@ -6,7 +6,7 @@ publishedDate: 2025-07-28T20:29:02.606Z
 updatedDate: 2025-07-23T15:22:24.923Z
 category: "AI"
 tags: ["AI"]
-slug: "humancentered-ai-in-wealth-management-how-advisors-can-combine-automation-with-personalized-client-engagement"
+urlPath: "humancentered-ai-in-wealth-management-how-advisors-can-combine-automation-with-personalized-client-engagement"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6880fa05f7bc29445ed1e465_How%20Personalized%20Portfolio%20Construction%20Is%20Reshaping%20Wealth%20Management%20(12).png"
 featuredImageAlt: "Human-Centered AI in Wealth Management: How Advisors Can Combine Automation with Personalized Client Engagement"
 draft: false

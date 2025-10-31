@@ -6,7 +6,7 @@ publishedDate: 2025-08-26T04:42:07.610Z
 updatedDate: 2025-08-26T04:42:07.610Z
 category: "Compliance"
 tags: ["Compliance"]
-slug: "how-to-build-a-compliant-frictionless-aml-workflow-in-digital-onboarding-tools-traps-and-best-practices"
+urlPath: "how-to-build-a-compliant-frictionless-aml-workflow-in-digital-onboarding-tools-traps-and-best-practices"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/68ad3b1f6abdde603490f1d4_pexels-photo-6476186.jpeg"
 featuredImageAlt: "Digital AML compliance workflow"
 draft: false

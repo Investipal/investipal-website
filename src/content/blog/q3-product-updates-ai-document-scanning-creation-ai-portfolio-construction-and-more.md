@@ -6,7 +6,7 @@ publishedDate: "2024-10-29T20:18:45.715Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Product"]
-slug: "q3-product-updates-ai-document-scanning-creation-ai-portfolio-construction-and-more"
+urlPath: "q3-product-updates-ai-document-scanning-creation-ai-portfolio-construction-and-more"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/672141bccaa13de52807a085_Q3%20PRODUCT%20UPDATES.png"
 featuredImageAlt: "Q3 Product Updates: AI Document Scanning & Creation, AI Portfolio Construction, and More"
 draft: false

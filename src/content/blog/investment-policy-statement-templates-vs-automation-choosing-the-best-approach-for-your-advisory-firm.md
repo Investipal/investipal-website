@@ -6,7 +6,7 @@ publishedDate: 2025-07-07T20:38:01.401Z
 updatedDate: 2025-06-30T15:35:56.798Z
 category: "Compliance"
 tags: ["IPS"]
-slug: "investment-policy-statement-templates-vs-automation-choosing-the-best-approach-for-your-advisory-firm"
+urlPath: "investment-policy-statement-templates-vs-automation-choosing-the-best-approach-for-your-advisory-firm"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6862aeda6c7ef5bd9983fffd_Automating%20Financial%20Advisory%20Practices%20How%20to%20Build%20a%20Lean%20Advisory%20Team%20(7).png"
 featuredImageAlt: "Investment Policy Statement Templates vs. Automation: Choosing the Best Approach for Your Advisory Firm"
 draft: false

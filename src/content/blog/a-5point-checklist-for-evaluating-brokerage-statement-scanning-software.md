@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-06-05T21:06:43.117Z
 category: "Onboarding"
 tags: ["Onboarding"]
-slug: "a-5point-checklist-for-evaluating-brokerage-statement-scanning-software"
+urlPath: "a-5point-checklist-for-evaluating-brokerage-statement-scanning-software"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/684206e040df7ad50969f5f9_Automating%20Financial%20Advisory%20Practices%20How%20to%20Build%20a%20Lean%20Advisory%20Team%20(5).png"
 featuredImageAlt: "A 5-Point Checklist for Evaluating Brokerage Statement Scanning Software"
 draft: false

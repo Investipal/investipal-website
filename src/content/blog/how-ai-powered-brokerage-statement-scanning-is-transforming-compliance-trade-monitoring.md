@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-03-04T16:59:18.733Z
 category: "Compliance"
 tags: ["AI"]
-slug: "how-ai-powered-brokerage-statement-scanning-is-transforming-compliance-trade-monitoring"
+urlPath: "how-ai-powered-brokerage-statement-scanning-is-transforming-compliance-trade-monitoring"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c7316208e855e76344c2e9_5%20Common%20Bottlenecks%20in%20Financial%20Advisor%20Sales%20and%20How%20to%20Fix%20Them%20(2).png"
 featuredImageAlt: "How AI-Powered Brokerage Statement Scanning Is Transforming Compliance & Trade Monitoring"
 draft: false

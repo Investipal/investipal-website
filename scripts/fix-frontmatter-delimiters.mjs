@@ -17,7 +17,8 @@ function normalizeOne(fp) {
   const rest = raw.slice(afterFirst);
   const endIdxRel = rest.indexOf('---');
   if (endIdxRel === -1) return false; // malformed beyond simple fix
-  const yamlSection = rest.slice(0, endIdxRel)
+  const yamlSection = rest
+    .slice(0, endIdxRel)
     .replace(/^\r?\n/, '') // drop leading newline if present
     .replace(/\r?\n?$/, ''); // drop trailing newline if present
   const body = rest.slice(endIdxRel + 3).replace(/^\r?\n?/, '');
@@ -41,29 +42,3 @@ function main() {
 }
 
 main();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

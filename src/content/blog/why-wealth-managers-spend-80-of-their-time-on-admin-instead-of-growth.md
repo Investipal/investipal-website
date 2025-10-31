@@ -6,7 +6,7 @@ publishedDate: "2025-01-27T19:02:21.130Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Marketing"
 tags: ["Growth"]
-slug: "why-wealth-managers-spend-80-of-their-time-on-admin-instead-of-growth"
+urlPath: "why-wealth-managers-spend-80-of-their-time-on-admin-instead-of-growth"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6797d81b5787989a2e3224ef_Why%20Wealth%20Managers%20Spend%2080%25%20of%20Their%20Time%20on%20Admin%20Instead%20of%20Growth%20(1).png"
 featuredImageAlt: "Why Wealth Managers Spend 80% of Their Time on Admin Instead of Growth"
 draft: false

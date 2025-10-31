@@ -6,7 +6,7 @@ publishedDate: "2024-07-02T21:43:24.899Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Onboarding"
 tags: ["Growth"]
-slug: "using-ocr-technology-to-automate-account-statement-scanning-for-financial-advisors"
+urlPath: "using-ocr-technology-to-automate-account-statement-scanning-for-financial-advisors"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e2032df5ff6d06de2a2506_Using%20OCR%20Technology%20to%20Automate%20Brokerage%20Account%20Statement%20Scanning%20for%20Financial%20Advisors.png"
 featuredImageAlt: "Using OCR Technology to Automate Brokerage Account Statement Scanning for Financial Advisors"
 draft: false

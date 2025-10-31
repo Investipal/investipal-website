@@ -6,7 +6,7 @@ publishedDate: "2024-09-04T14:03:22.749Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Onboarding"
 tags: ["Data Gathering"]
-slug: "how-to-convert-brokerage-statement-pdfs-to-excel-using-investipals-ocr-scanner"
+urlPath: "how-to-convert-brokerage-statement-pdfs-to-excel-using-investipals-ocr-scanner"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e2002a708cdc3090c01eff_How%20to%20Convert%20Brokerage%20Statement%20PDFs%20to%20Excel%20Using%20Investipal%E2%80%99s%20OCR%20Scanner.png"
 featuredImageAlt: "How to Convert Brokerage Statement PDFs to Excel Using Investipal’s OCR Scanner"
 draft: false

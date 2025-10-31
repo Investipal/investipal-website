@@ -6,7 +6,7 @@ publishedDate: "2024-10-25T15:13:57.507Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Compliance"
 tags: ["Compliance"]
-slug: "why-every-financial-advisor-needs-an-investment-policy-statement-ips"
+urlPath: "why-every-financial-advisor-needs-an-investment-policy-statement-ips"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/671bb259f5969b05da9a5170_Why%20Every%20Financial%20Advisor%20Needs%20an%20Investment%20Policy%20Statement%20(IPS).png"
 featuredImageAlt: "Why Every Financial Advisor Needs an Investment Policy Statement (IPS)"
 draft: false

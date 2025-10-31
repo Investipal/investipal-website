@@ -6,7 +6,7 @@ publishedDate: "2024-03-11T12:00:16.883Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Analysis"]
-slug: "optimize-your-investments-with-our-powerful-stock-portfolio-builder-tool"
+urlPath: "optimize-your-investments-with-our-powerful-stock-portfolio-builder-tool"
 featuredImage: "https://uploads-ssl.webflow.com/666872ff37bdf42ce9637d77/666872ff37bdf42ce9637e23_blog-main-02.jpg"
 featuredImageAlt: "Optimize Your Investments with Our Powerful Stock Portfolio Builder Tool"
 draft: false

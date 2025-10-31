@@ -6,7 +6,7 @@ publishedDate: "2025-07-15T18:13:18.163Z"
 updatedDate: "2025-07-10T13:13:48.198Z"
 category: "Onboarding"
 tags: []
-slug: "modernizing-advisor-workflows-from-onelink-onboarding-to-aidriven-portfolio-construction"
+urlPath: "modernizing-advisor-workflows-from-onelink-onboarding-to-aidriven-portfolio-construction"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/686fbc869c5503cad7686b5a_Why%20Wealth%20Managers%20Spend%2080%25%20of%20Their%20Time%20on%20Admin%20Instead%20of%20Growth%20(8).png"
 featuredImageAlt: "Modernizing Advisor Workflows: From One-Link Onboarding to AI-Driven Portfolio Construction"
 draft: false
