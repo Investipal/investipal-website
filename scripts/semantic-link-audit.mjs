@@ -6,16 +6,56 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const BLOG_DIR = path.resolve(__dirname, '..', 'src', 'content', 'blog');
-const REPORT_PATH = path.resolve(__dirname, '..', 'reports', 'semantic-link-audit.json');
+const REPORT_PATH = path.resolve(
+  __dirname,
+  '..',
+  'reports',
+  'semantic-link-audit.json'
+);
 
-const SELF_HOSTS = new Set(['investipal.co', 'www.investipal.co', 'localhost:4324', 'localhost:4321']);
+const SELF_HOSTS = new Set([
+  'investipal.co',
+  'www.investipal.co',
+  'localhost:4324',
+  'localhost:4321',
+]);
 
 const INTENT_RULES = [
-  { id: 'demo', patterns: [/book\s+a\s+demo/i, /schedule\s+(a\s+)?demo/i, /get\s+(a\s+)?demo/i, /demo\b/i], target: '/book-a-demo' },
-  { id: 'contact', patterns: [/contact\s+us/i, /^contact$/i, /get\s+in\s+touch/i, /reach\s+out/i], target: '/contact-us' },
-  { id: 'risk', patterns: [/risk\s+assessment/i, /risk\s+profile/i, /risk\s+tolerance/i], target: '/risk-assessment' },
-  { id: 'integrations', patterns: [/integrations?/i, /connect\s+with/i], target: '/integrations' },
-  { id: 'webinars', patterns: [/webinars?/i, /watch\s+.*webinar/i], target: '/webinars' },
+  {
+    id: 'demo',
+    patterns: [
+      /book\s+a\s+demo/i,
+      /schedule\s+(a\s+)?demo/i,
+      /get\s+(a\s+)?demo/i,
+      /demo\b/i,
+    ],
+    target: '/book-a-demo',
+  },
+  {
+    id: 'contact',
+    patterns: [
+      /contact\s+us/i,
+      /^contact$/i,
+      /get\s+in\s+touch/i,
+      /reach\s+out/i,
+    ],
+    target: '/contact-us',
+  },
+  {
+    id: 'risk',
+    patterns: [/risk\s+assessment/i, /risk\s+profile/i, /risk\s+tolerance/i],
+    target: '/risk-assessment',
+  },
+  {
+    id: 'integrations',
+    patterns: [/integrations?/i, /connect\s+with/i],
+    target: '/integrations',
+  },
+  {
+    id: 'webinars',
+    patterns: [/webinars?/i, /watch\s+.*webinar/i],
+    target: '/webinars',
+  },
   { id: 'blog', patterns: [/our\s+blog/i, /^blog$/i], target: '/blog' },
 ];
 
@@ -47,10 +87,16 @@ function parseLinks(markdown) {
     links.push({ text: m[1], url: m[2], index: m.index, type: 'markdown' });
   }
   // HTML anchors: <a href="...">text</a> (allow unquoted too)
-  const htmlRe = /<a\s+[^>]*href\s*=\s*(["']?)([^"'\s>]+)\1[^>]*>([\s\S]*?)<\/a>/gi;
+  const htmlRe =
+    /<a\s+[^>]*href\s*=\s*(["']?)([^"'\s>]+)\1[^>]*>([\s\S]*?)<\/a>/gi;
   let h;
   while ((h = htmlRe.exec(markdown)) !== null) {
-    links.push({ text: h[3].replace(/<[^>]+>/g, '').trim(), url: h[2], index: h.index, type: 'html' });
+    links.push({
+      text: h[3].replace(/<[^>]+>/g, '').trim(),
+      url: h[2],
+      index: h.index,
+      type: 'html',
+    });
   }
   return links;
 }
@@ -97,7 +143,10 @@ function run() {
         if (isHomepage || mismatch) {
           misrouted++;
           if (intent.id === 'demo') demoMisroutes++;
-          const snippet = content.substring(Math.max(0, link.index - 80), Math.min(content.length, link.index + 120));
+          const snippet = content.substring(
+            Math.max(0, link.index - 80),
+            Math.min(content.length, link.index + 120)
+          );
           results.push({
             file: path.relative(path.resolve(__dirname, '..'), file),
             anchorText: link.text,
@@ -119,7 +168,7 @@ function run() {
     misrouted,
     demoMisroutes,
     byIntent: INTENT_RULES.reduce((acc, r) => {
-      acc[r.id] = results.filter(x => x.intent === r.id).length;
+      acc[r.id] = results.filter((x) => x.intent === r.id).length;
       return acc;
     }, {}),
   };
@@ -127,22 +176,9 @@ function run() {
   const report = { summary, results };
   fs.mkdirSync(path.dirname(REPORT_PATH), { recursive: true });
   fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
-  console.log(`Semantic link audit complete. Misrouted: ${misrouted} (demo: ${demoMisroutes}). Report: ${REPORT_PATH}`);
+  console.log(
+    `Semantic link audit complete. Misrouted: ${misrouted} (demo: ${demoMisroutes}). Report: ${REPORT_PATH}`
+  );
 }
 
 run();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

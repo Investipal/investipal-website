@@ -1,0 +1,64 @@
+[33mcab6419[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mstaging[m[33m)[m fix: remove large PDF from history and update .gitignore
+[33m0aa5476[m[33m ([m[1;32mcam's-branch[m[33m)[m commit
+[33m92b851b[m fixed contact us page
+[33mb4da4e6[m chriscommit
+[33m826697c[m commit
+[33m991265e[m redirects
+[33mae2ee30[m Merge branch 'staging'
+[33m1beeaef[m sitemap
+[33m7788f2a[m deploy test
+[33m462eed9[m deploy test
+[33mb619fe1[m deploy test
+[33maa05fc6[m deploy test
+[33mb877647[m cleanup
+[33mde80f17[m file cleanup
+[33m794fbfc[m Remove stale google-analytics-mcp submodule reference
+[33m78d17d3[m deploy test
+[33m32e7d5a[m deploy test
+[33me85ffae[m deploy test
+[33m2941bd8[m Merge branch 'staging' of https://github.com/Investipal/investipal-website into staging
+[33m2bf4b4c[m remove submoduels
+[33m63b7040[m chore(repo): organize files and audits
+[33md2cd638[m marketing stuff
+[33m177312f[m commit
+[33m4e8a81b[m commit
+[33m9b6983c[m commit
+[33m5fb8182[m commit
+[33m5f7b4c3[m Resolve merge conflicts
+[33m94184ea[m push
+[33m5cc1bbd[m Merge pull request #5 from Investipal/staging
+[33m1b22131[m fixed yml
+[33mdfe5fd5[m fixed yml
+[33mceff8fb[m Merge pull request #3 from Investipal/staging
+[33m2d0567b[m prod yml
+[33mb5db406[m Update README.md
+[33m2da8388[m Merge pull request #2 from Investipal/staging
+[33m8ac4e9b[m form integrations
+[33md076332[m Merge pull request #1 from Investipal/main
+[33m81aaabc[m form integrations
+[33m8ca93de[m contact form and newsletter signup
+[33me487803[m changes
+[33m0a106b0[m changes
+[33m2dea7b7[m changes
+[33m2d5c9a4[m Audit fixes: blog link normalization, redirects, security headers, OG image, footer cleanup, FAQ fixes
+[33m38b89cc[m audits
+[33m1ee501c[m fix(images): normalize /public/images/external filenames and rewrite refs; remove thumbnails fallback; fix missing hero; rebuild
+[33m49cb652[m fix(content): batch-correct malformed blog frontmatter and YAML issues
+[33m8dfcecf[m fix(staging): add cache-busting to all blog images and lower /images cache to 60s
+[33m7e0e1b6[m fix(blog): add cache-busting to blog listing and post hero images; frontmatter repaired
+[33m24d9706[m fix(content): correct malformed frontmatter separators; bust image cache on cards
+[33m0647809[m refactor(images): remove all Webflow/CDN references in src; download to /public/images/external; add guard script
+[33mfc47479[m fix(blog): eliminate repeated 'Patricks portfolio' style thumbnails by de-duplicating featuredImage across posts and remapping to unique Webflow assets
+[33m9e91597[m chore(blog): remap unresolved/duplicate featured images with stronger matching; update any missing assets
+[33m1ebfa59[m fix(content): correct YAML frontmatter delimiter in onboarding post (parsing error)
+[33md5037a0[m feat(blog): attach unique hero images from Webflow to posts; download assets and set frontmatter.featuredImage (115 updated)
+[33m20d76b7[m chore(blog): map real images to featuredImage across posts (slug/body heuristics)
+[33mafff4a7[m fix(post): prevent broken images in article pages  server-side existence check + client onerror fallback in BlogPostLayout
+[33m90e5cb8[m feat(blog): prefer first markdown in-body image if present and exists; fallback to slug/thumbnails/fuzzy/category
+[33mfb7f85e[m feat(blog): stronger image resolution (prefix slug match, thumbnails support, fuzzy scoring); ensure featured post uses resolved image
+[33mb246c49[m feat(blog): auto-resolve missing featured images by matching post slug to /images/blog files; fallback to category/general images; keep per-card onerror placeholder
+[33m67429bd[m fix(nav): render mobile menu icons as inline SVG (no encoded %3Cpath fetches); chore: add shortcut/apple-touch icon + mobile-web-app-capable; ensure PNG favicon used
+[33m0334b09[m fix(blog): add robust image onerror fallbacks; favicon now PNG only (remove SVG preload)
+[33me2781fa[m feat(blog): reliable View All; image fallbacks; standard hero styling; hide Upcoming Webinars when none; set Investipal favicon; bulk-fix malformed image links across posts
+[33mf1fb395[m fix: correct malformed image links; add lazy/async + dimensions; add Azure SWA cache headers for /images; switch placeholder to /images/blog/placeholder-image.png
+[33m325d48f[m chore: update various markdown files and configuration settings

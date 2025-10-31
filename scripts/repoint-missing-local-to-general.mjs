@@ -41,7 +41,10 @@ function existsPublic(u) {
 }
 
 function main() {
-  const images = fs.readdirSync(generalDir).filter((f) => /\.(webp|jpe?g|png)$/i.test(f)).sort();
+  const images = fs
+    .readdirSync(generalDir)
+    .filter((f) => /\.(webp|jpe?g|png)$/i.test(f))
+    .sort();
   if (images.length === 0) {
     console.error('No images found in public/images/general');
     process.exit(1);
@@ -68,29 +71,3 @@ function main() {
 }
 
 main();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

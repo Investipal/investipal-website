@@ -1,0 +1,34 @@
+keyword,pillar,cluster_id,volume,kd,cpc_usd,intent,serp_features,notes
+investment policy statement,IPS,ips_head,49500,19,4.09,informational,ai_overview|paa|organic,High-volume head
+investment policy statement template,IPS,ips_templates,320,1,11.55,commercial,organic,Template intent
+investment policy statement example,IPS,ips_examples,320,,3.50,informational,organic,
+personal investment policy statement,IPS,ips_personal,30,17,,commercial|informational,organic,
+investment policy statement for nonprofits,IPS,ips_nonprofit,260,,4.36,commercial|informational,organic,
+brokerage statement,Statements,stmt_head,590,,0.00,informational|navigational|commercial,ai_overview|paa|images|organic,Education hub
+how to read a brokerage statement,Statements,stmt_howto,30,,0.00,informational,ai_overview|paa|organic,How-to page
+sample brokerage statement pdf,Statements,stmt_samples,40,,35.12,commercial,ai_overview|organic|images,Download intent
+fidelity statement example,Statements,stmt_samples,40,,0.63,informational,organic|images,Brand-modifier
+held-away assets,HeldAway,held_head,140,,0.00,commercial|informational,organic,Definition + solutions
+regulation best interest,RegBI,regbi_head,590,32,10.67,informational,ai_overview|paa|organic,Compliance hub
+form crs,RegBI,regbi_form_crs,1900,47,61.40,informational|navigational,ai_overview|organic,High CPC
+ria software,RIA Software,ria_head,210,10,45.44,navigational|commercial,organic,Category hub
+ria compliance software,RIA Software,ria_compliance,110,13,37.96,commercial|navigational,organic,Category page
+ria billing software,RIA Software,ria_billing,90,,37.29,commercial|navigational,organic,Category page
+portfolio management software ria,RIA Software,ria_pm,70,32,14.06,transactional|commercial,organic,Category page
+ria reporting software,RIA Software,ria_reporting,10,13,74.54,navigational|informational|commercial,organic,Category page
+portfolio optimization,Portfolio,port_opt_head,1900,4,3.36,commercial|informational,organic,Education hub
+financial advisor proposal,Proposal,prop_head,10,,0.00,commercial,organic,Low vol; high intent
+financial advisor proposal template,Proposal,prop_templates,10,12,8.74,commercial|informational,organic,Download intent
+investment proposal example,Proposal,prop_examples,260,,7.55,informational|commercial,organic,Education + examples
+proposal generator,Proposal,prop_generator,320,8,25.02,transactional|commercial,organic,Software intent
+ria onboarding checklist,Onboarding,onboard_checklist,,,0.00,commercial|informational,organic,Seed — expand
+new account paperwork,Onboarding,onboard_paperwork,,,0.00,commercial|navigational,organic,Seed — expand
+account opening,Onboarding,onboard_opening,320,60,31.03,navigational|informational,organic,General term
+advisory agreement template,Onboarding,onboard_agreement,70,9,9.83,informational,organic,Template intent
+custodian account opening,Onboarding,onboard_custodian,,,0.00,commercial|informational,organic,Seed — expand
+risk tolerance questionnaire,Intake,intake_risk,590,34,5.72,informational|commercial,organic,Intake workflow
+tax transition analysis,Portfolio,tax_transition,,,,commercial|informational,organic,Seed — expand
+tax transition modeling,Portfolio,tax_transition,,,,commercial|informational,organic,Seed — expand
+tax-efficient portfolio transition,Portfolio,tax_transition,,,,commercial|informational,organic,Long-tail
+portfolio transition tax,Portfolio,tax_transition,,,,informational,organic,Definition variant
+tax-aware rebalancing,Portfolio,tax_transition,,,,informational,organic,Related workflow

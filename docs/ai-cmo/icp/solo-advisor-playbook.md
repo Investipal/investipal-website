@@ -7,10 +7,24 @@
 ## Jobs-To-Be-Done
 - Reclaim hours/week through automation
 - Generate proposals and IPS quickly without extra staff
+- Guide onboarding & account opening with minimal back-and-forth
 
 ## Objections
 - "I don’t have time to switch" → Start with statement scanning + proposals only
 - "Too complex" → Guided workflow, minimal setup
+
+## Triggers
+- Prospect requests proposal/IPS this week
+- Swamped by statement entry; backlog piling up
+- Losing prospects to slow turnaround
+
+## Alternatives (Status Quo)
+- Manual spreadsheets + multiple point tools
+- Outsourced admin with delays; vendor lock-in
+
+## Dealbreakers
+- Must be explainable; advisor-in-control
+- Minimal setup; integrates with CRM/planning
 
 ## Proof & Social Proof Needs
 - Demonstrate end-to-end on sample statements
@@ -18,4 +32,4 @@
 
 ## CTAs
 - Primary: 3‑minute tour
-- Secondary: Proposal template download
+- Secondary: Proposal template download; Onboarding checklist

@@ -218,6 +218,49 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toStri
         } catch (err) {
           console.warn('Anchor sanitizer failed:', err);
         }
+
+        // Global FAQ toggle handler (works across view transitions)
+        try {
+          document.addEventListener('click', function(e) {
+            var target = e.target as any;
+            var btn = target && (target.closest ? target.closest('.faq-toggle') : null);
+            if (!btn) return;
+            e.preventDefault();
+            try { (e as any).stopImmediatePropagation && (e as any).stopImmediatePropagation(); } catch(_) {}
+            try { e.stopPropagation(); } catch(_) {}
+
+            var targetId = btn.getAttribute('data-target') || '';
+            var content = document.getElementById(targetId);
+            var arrow = btn.querySelector('.faq-arrow');
+            var isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+            // Close other items within the nearest FAQ section/container
+            var container = btn.closest('section') || document;
+            var others = container.querySelectorAll('.faq-toggle');
+            others.forEach(function(other) {
+              if (other === btn) return;
+              var otherId = other.getAttribute('data-target') || '';
+              var otherContent = document.getElementById(otherId);
+              var otherArrow = other.querySelector('.faq-arrow');
+              otherContent && otherContent.classList.add('hidden');
+              otherArrow && otherArrow.classList.remove('rotate-180');
+              other.setAttribute('aria-expanded', 'false');
+            });
+
+            // Toggle current
+            if (isExpanded) {
+              content && content.classList.add('hidden');
+              arrow && arrow.classList.remove('rotate-180');
+              btn.setAttribute('aria-expanded', 'false');
+            } else {
+              content && content.classList.remove('hidden');
+              arrow && arrow.classList.add('rotate-180');
+              btn.setAttribute('aria-expanded', 'true');
+            }
+          }, true);
+        } catch (err) {
+          console.warn('FAQ toggle binding failed:', err);
+        }
       });
     </script>
   </body>
