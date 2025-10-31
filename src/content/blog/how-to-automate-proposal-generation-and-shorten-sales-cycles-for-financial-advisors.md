@@ -6,7 +6,7 @@ publishedDate: "2024-10-16T21:23:22.663Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "AI"
 tags: ["Automation"]
-slug: "how-to-automate-proposal-generation-and-shorten-sales-cycles-for-financial-advisors"
+urlPath: "how-to-automate-proposal-generation-and-shorten-sales-cycles-for-financial-advisors"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6711040e5fed5c6130965efb_How%20to%20Automate%20Proposal%20Generation%20and%20Shorten%20Sales%20Cycles%20for%20Financial%20Advisors.png"
 featuredImageAlt: "How to Automate Proposal Generation and Shorten Sales Cycles for Financial Advisors"
 draft: false

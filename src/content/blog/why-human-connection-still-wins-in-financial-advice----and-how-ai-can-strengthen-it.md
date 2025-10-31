@@ -6,7 +6,7 @@ publishedDate: "2025-08-14T12:40:40.700Z"
 updatedDate: "2025-08-14T12:40:40.700Z"
 category: "AI"
 tags: []
-slug: "why-human-connection-still-wins-in-financial-advice-and-how-ai-can-strengthen-it"
+urlPath: "why-human-connection-still-wins-in-financial-advice-and-how-ai-can-strengthen-it"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689dd948fb9196c89801546c_689b4bacbe36e5a873841cbe_Personalization%2520at%2520Scale%2520The%2520Next%2520Frontier%2520in%2520Wealth%2520Management%2520(20).png"
 featuredImageAlt: "Investipal dashboard showing why human connection wins in financial advice with AI support"
 draft: false

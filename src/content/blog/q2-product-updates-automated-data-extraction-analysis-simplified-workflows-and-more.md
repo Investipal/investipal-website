@@ -6,7 +6,7 @@ publishedDate: "2024-07-25T17:03:07.337Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Product"]
-slug: "q2-product-updates-automated-data-extraction-analysis-simplified-workflows-and-more"
+urlPath: "q2-product-updates-automated-data-extraction-analysis-simplified-workflows-and-more"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e201bce39a5ff4bd1c5261_Q2%20PRODUCT%20UPDATES.png"
 featuredImageAlt: "Q2 Product Updates: Automated Data Extraction & Analysis, Simplified Workflows, and More."
 draft: false

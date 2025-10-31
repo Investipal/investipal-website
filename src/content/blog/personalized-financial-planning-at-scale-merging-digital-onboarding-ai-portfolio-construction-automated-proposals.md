@@ -6,7 +6,7 @@ publishedDate: 2025-07-03T08:38:17.683Z
 updatedDate: 2025-07-03T08:38:17.683Z
 category: "Onboarding"
 tags: []
-slug: "personalized-financial-planning-at-scale-merging-digital-onboarding-ai-portfolio-construction-automated-proposals"
+urlPath: "personalized-financial-planning-at-scale-merging-digital-onboarding-ai-portfolio-construction-automated-proposals"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6866417996447fd98ccbde7d_pexels-photo-159888.jpeg"
 ---
 <p>The financial advisory landscape is changing fast. Clients today expect tailored advice and timely action, but manual processes, fragmented tech stacks, and compliance demands often slow advisors down. Scaling personalized financial planning—while keeping quality, accuracy, and regulatory standards high—has been a major challenge for independent advisors and fast-growing RIA firms. But it doesn't have to be.</p>

@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-06-09T14:46:49.162Z
 category: "Portfolio Management"
 tags: ["Risk"]
-slug: "how-to-choose-ai-risk-assessment-tools-for-your-advisory-practice"
+urlPath: "how-to-choose-ai-risk-assessment-tools-for-your-advisory-practice"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6846f3ac1b9ff78927781725_Personalization%20at%20Scale%20The%20Next%20Frontier%20in%20Wealth%20Management%20(12).png"
 featuredImageAlt: "How to Choose AI Risk Assessment Tools for Your Advisory Practice"
 draft: false

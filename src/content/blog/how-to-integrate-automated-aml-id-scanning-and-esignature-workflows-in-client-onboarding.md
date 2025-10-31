@@ -6,7 +6,7 @@ publishedDate: 2025-08-14T12:41:38.388Z
 updatedDate: 2025-08-14T12:41:38.388Z
 category: "Onboarding"
 tags: []
-slug: "how-to-integrate-automated-aml-id-scanning-and-esignature-workflows-in-client-onboarding"
+urlPath: "how-to-integrate-automated-aml-id-scanning-and-esignature-workflows-in-client-onboarding"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/68906b5a4065359b47ec0b2b_pexels-photo-33243214.jpeg"
 featuredImageAlt: "Streamlined client onboarding technology interface for advisor workflow automation"
 draft: false

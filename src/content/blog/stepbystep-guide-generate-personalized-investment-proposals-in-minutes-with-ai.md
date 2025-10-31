@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-05-30T14:35:02.427Z
 category: "AI"
 tags: ["Proposal Generation"]
-slug: "stepbystep-guide-generate-personalized-investment-proposals-in-minutes-with-ai"
+urlPath: "stepbystep-guide-generate-personalized-investment-proposals-in-minutes-with-ai"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6839be11a8362001bf41567a_5%20Common%20Bottlenecks%20in%20Financial%20Advisor%20Sales%20and%20How%20to%20Fix%20Them%20(6).png"
 featuredImageAlt: "Step-by-Step Guide: Generate Personalized Investment Proposals in Minutes with AI"
 draft: false

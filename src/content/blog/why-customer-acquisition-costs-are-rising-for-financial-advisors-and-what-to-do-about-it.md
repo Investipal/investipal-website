@@ -6,7 +6,7 @@ publishedDate: "2024-08-14T18:21:14.095Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Marketing"
 tags: ["Growth"]
-slug: "why-customer-acquisition-costs-are-rising-for-financial-advisors-and-what-to-do-about-it"
+urlPath: "why-customer-acquisition-costs-are-rising-for-financial-advisors-and-what-to-do-about-it"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e200a853b036f220d94360_Why%20Customer%20Acquisition%20Costs%20Are%20Rising%20for%20Financial%20Advisors%20(And%20What%20To%20Do%20About%20It)%20(1).png"
 featuredImageAlt: "Why Customer Acquisition Costs Are Rising for Financial Advisors (And What To Do About It)"
 draft: false

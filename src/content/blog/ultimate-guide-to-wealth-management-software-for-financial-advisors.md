@@ -6,7 +6,7 @@ publishedDate: "2024-07-05T14:05:47.520Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "General"
 tags: ["Product"]
-slug: "ultimate-guide-to-wealth-management-software-for-financial-advisors"
+urlPath: "ultimate-guide-to-wealth-management-software-for-financial-advisors"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e202ecf0fee401bab46456_Ultimate%20Guide%20to%20Wealth%20Management%20Software%20for%20Financial%20Advisors.png"
 featuredImageAlt: "Ultimate Guide to Wealth Management Software for Financial Advisors"
 draft: false

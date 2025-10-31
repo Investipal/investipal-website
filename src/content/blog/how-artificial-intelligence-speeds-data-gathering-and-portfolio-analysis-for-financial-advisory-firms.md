@@ -6,7 +6,7 @@ publishedDate: "2024-07-19T19:33:46.315Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Educational"]
-slug: "how-artificial-intelligence-speeds-data-gathering-and-portfolio-analysis-for-financial-advisory-firms"
+urlPath: "how-artificial-intelligence-speeds-data-gathering-and-portfolio-analysis-for-financial-advisory-firms"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e202554a69c901116e2ce7_How%20AI%20Speeds%20Data%20Gathering%20and%20Portfolio%20Analysis%20for%20Financial%20Advisory%20Firms.png"
 featuredImageAlt: "How Artificial Intelligence Speeds Data Gathering and Portfolio Analysis for Financial Advisory Firms"
 draft: false

@@ -6,7 +6,7 @@ publishedDate: "2024-10-11T15:09:35.625Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Compliance"
 tags: ["Compliance"]
-slug: "how-investipals-ai-simplifies-reg-bi-compliance-for-financial-advisors-and-broker-dealers"
+urlPath: "how-investipals-ai-simplifies-reg-bi-compliance-for-financial-advisors-and-broker-dealers"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67093e12514abdcf8485cc32_How%20Investipal%E2%80%99s%20AI%20Simplifies%20Reg%20BI%20Compliance%20for%20Financial%20Advisors%20and%20Broker-Dealers.png"
 featuredImageAlt: "How Investipal’s AI Simplifies Reg BI Compliance for Financial Advisors and Broker-Dealers"
 draft: false

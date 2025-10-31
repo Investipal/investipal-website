@@ -6,7 +6,7 @@ publishedDate: "2024-03-11T12:01:18.195Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Marketing"
 tags: ["BusinessGrowth"]
-slug: "why-total-stock-market-funds-are-worth-considering"
+urlPath: "why-total-stock-market-funds-are-worth-considering"
 featuredImage: "https://uploads-ssl.webflow.com/65eee4b218d3c053d69d6d92/65eef28a75f23110e2f2318d_blog-main-05.jpg"
 featuredImageAlt: "Why Total Stock Market Funds are Worth Considering"
 draft: false

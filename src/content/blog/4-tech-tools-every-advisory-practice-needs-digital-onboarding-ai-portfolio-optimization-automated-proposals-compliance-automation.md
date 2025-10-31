@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-06-10T11:55:55.299Z
 category: "Compliance"
 tags: ["Technology"]
-slug: "4-tech-tools-every-advisory-practice-needs-digital-onboarding-ai-portfolio-optimization-automated-proposals-compliance-automation"
+urlPath: "4-tech-tools-every-advisory-practice-needs-digital-onboarding-ai-portfolio-optimization-automated-proposals-compliance-automation"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/68481cc81674d93b48168aee_5%20Common%20Bottlenecks%20in%20Financial%20Advisor%20Sales%20and%20How%20to%20Fix%20Them%20(8).png"
 featuredImageAlt: "4 Tech Tools Every Advisory Practice Needs: Digital Onboarding, AI Portfolio Optimization, Automated Proposals & Compliance Automation"
 draft: false

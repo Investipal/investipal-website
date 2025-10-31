@@ -6,7 +6,7 @@ publishedDate: 2025-08-27T04:50:34.819Z
 updatedDate: 2025-08-27T04:50:34.819Z
 category: "AI"
 tags: ["General"]
-slug: "how-explainable-ai-is-setting-the-new-standard-for-client-trust-and-proposal-personalization-in-wealth-management"
+urlPath: "how-explainable-ai-is-setting-the-new-standard-for-client-trust-and-proposal-personalization-in-wealth-management"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/68ae8e9a8b4502aa96832a16_pexels-photo-7979605.jpeg"
 featuredImageAlt: "Explainable AI for wealth management"
 draft: false

@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-06-24T16:10:07.186Z
 category: "Portfolio Management"
 tags: ["AI"]
-slug: "aibased-portfolio-optimization-platforms-how-to-choose-the-right-solution-for-your-advisory-practice"
+urlPath: "aibased-portfolio-optimization-platforms-how-to-choose-the-right-solution-for-your-advisory-practice"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/685acddc9710c7cdf2d68d89_The%20Biggest%20Bottlenecks%20in%20Wealth%20Management%20Sales%E2%80%94and%20How%20Automation%20Solves%20Them%20(8).png"
 featuredImageAlt: "AI-Based Portfolio Optimization Platforms: How to Choose the Right Solution for Your Advisory Practice"
 draft: false

@@ -6,7 +6,7 @@ publishedDate: "2025-08-05T06:06:19.221Z"
 updatedDate: "2025-08-05T06:06:19.221Z"
 category: "Portfolio Management"
 tags: []
-slug: "realtime-portfolio-monitoring-how-automated-drift-alerts-and-ai-rebalancing-enhance-client-outcomes"
+urlPath: "realtime-portfolio-monitoring-how-automated-drift-alerts-and-ai-rebalancing-enhance-client-outcomes"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6864dd7b2a65cdb3dd2ea6eb_pexels-photo-6770610.jpeg"
 featuredImageAlt: "Real-Time Portfolio Monitoring: How Automated Drift Alerts and AI Rebalancing Enhance Client Outcomes"
 draft: false

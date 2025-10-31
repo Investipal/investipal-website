@@ -6,7 +6,7 @@ publishedDate: "2024-11-07T16:05:23.315Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Compliance"
 tags: ["Compliance"]
-slug: "why-documenting-portfolio-recommendations-is-essential-for-financial-advisors"
+urlPath: "why-documenting-portfolio-recommendations-is-essential-for-financial-advisors"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/672ce2247b7c0f29b640536b_Why%20Documenting%20Portfolio%20Recommendations%20is%20Essential%20for%20Financial%20Advisors.png"
 featuredImageAlt: "Why Documenting Portfolio Recommendations is Essential for Financial Advisors"
 draft: false

@@ -15,7 +15,10 @@ export async function getStaticPaths() {
     const publishedPosts = posts.filter(post => !post.data.draft);
     
     return publishedPosts.map((post) => ({
-      params: { slug: post.id.replace('.md', '') },
+      params: { 
+        slug: post.data.urlPath || post.id.replace('.md', '') 
+      },
+
       props: { post },
     }));
   } catch (error) {
@@ -76,7 +79,10 @@ const enhancedFrontmatter = {
 };
 ---
 
-<BlogPostLayout frontmatter={enhancedFrontmatter as any} slug={post.id.replace('.md', '')} headings={headings}>
+<BlogPostLayout 
+  frontmatter={enhancedFrontmatter as any} 
+  slug={post.data.urlPath || post.id.replace('.md', '')} 
+  headings={headings}>
   {useMutatedHtml && mutatedHtml ? (
     <div set:html={mutatedHtml} />
   ) : (

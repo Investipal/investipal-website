@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-07-10T13:08:22.504Z
 category: "Portfolio Management"
 tags: ["Portfolio Management"]
-slug: "how-to-manage-client-portfolios-during-market-volatility--7-tools-for-financial-advisors"
+urlPath: "how-to-manage-client-portfolios-during-market-volatility--7-tools-for-financial-advisors"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67f556b733928ead42a9866a_Automating%20Financial%20Advisory%20Practices%20How%20to%20Build%20a%20Lean%20Advisory%20Team%20(3).png"
 featuredImageAlt: "How to Manage Client Portfolios During Market Volatility—7 Tools for Financial Advisors"
 draft: false

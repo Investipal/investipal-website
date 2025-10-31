@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-06-19T15:54:01.379Z
 category: "Onboarding"
 tags: ["Onboarding"]
-slug: "accelerating-advisor-onboarding-with-brokerage-statement-scanning-software-and-risk-assessment-tools"
+urlPath: "accelerating-advisor-onboarding-with-brokerage-statement-scanning-software-and-risk-assessment-tools"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/685432065c4aa26814420869_5%20Common%20Bottlenecks%20in%20Financial%20Advisor%20Sales%20and%20How%20to%20Fix%20Them%20(10).png"
 featuredImageAlt: "Accelerating Advisor Onboarding with Brokerage Statement Scanning Software and Risk Assessment Tools"
 draft: false

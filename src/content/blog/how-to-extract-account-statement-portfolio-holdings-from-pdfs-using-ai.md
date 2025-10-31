@@ -6,7 +6,7 @@ publishedDate: "2024-07-10T18:02:22.573Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Onboarding"
 tags: ["Product"]
-slug: "how-to-extract-account-statement-portfolio-holdings-from-pdfs-using-ai"
+urlPath: "how-to-extract-account-statement-portfolio-holdings-from-pdfs-using-ai"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e202b4f89367578c9dc84e_How%20to%20Extract%20Brokerage%20Account%20Statement%20Portfolio%20Holdings%20from%20PDFs%20Using%20AI.png"
 featuredImageAlt: "How to Extract Brokerage Account Statement Portfolio Holdings from PDFs Using AI"
 draft: false

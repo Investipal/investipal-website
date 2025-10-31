@@ -6,7 +6,7 @@ publishedDate: "2024-08-07T16:11:38.752Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "General"
 tags: ["Educational"]
-slug: "understanding-nigos-why-theyre-costing-your-firm-and-how-to-reduce-them"
+urlPath: "understanding-nigos-why-theyre-costing-your-firm-and-how-to-reduce-them"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e20156ac7e64848a6c981e_Understanding%20NIGOs%20Why%20They%E2%80%99re%20Costing%20Your%20Firm%20(And%20How%20to%20Reduce%20Them)%20(1).png"
 featuredImageAlt: "Understanding NIGOs: Why They’re Costing Your Firm (And How to Reduce Them)"
 draft: false

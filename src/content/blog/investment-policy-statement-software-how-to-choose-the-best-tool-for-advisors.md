@@ -6,7 +6,7 @@ publishedDate: "2025-07-11T16:53:41.085Z"
 updatedDate: "2025-07-11T16:54:13.608Z"
 category: "Onboarding"
 tags: []
-slug: "investment-policy-statement-software-how-to-choose-the-best-tool-for-advisors"
+urlPath: "investment-policy-statement-software-how-to-choose-the-best-tool-for-advisors"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/683aba2fd7c8ad0732b906f3_pexels-photo-265087.jpeg"
 featuredImageAlt: "Investment Policy Statement Software: How to Choose the Best Tool for Advisors"
 draft: false

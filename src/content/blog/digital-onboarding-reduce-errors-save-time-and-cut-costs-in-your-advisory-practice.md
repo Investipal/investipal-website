@@ -6,7 +6,7 @@ publishedDate: 2025-07-07T20:38:01.401Z
 updatedDate: 2025-07-07T16:55:04.429Z
 category: "Onboarding"
 tags: ["Onboarding"]
-slug: "digital-onboarding-reduce-errors-save-time-and-cut-costs-in-your-advisory-practice"
+urlPath: "digital-onboarding-reduce-errors-save-time-and-cut-costs-in-your-advisory-practice"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/686bfa7f43bdab5692c1f3aa_Scale%20Your%20Advisory%20Practice%20with%20AI-Driven%20Tax%20Optimization%20and%20Proposals%20(12).png"
 featuredImageAlt: "Digital Onboarding: Reduce Errors, Save Time, and Cut Costs in Your Advisory Practice"
 draft: false

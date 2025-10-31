@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53Z
 updatedDate: 2025-03-31T17:18:09Z
 category: "General"
 tags: ["Sales", "Proposals"]
-slug: "how-to-create-professional-investment-proposals-in-under-10-minutes"
+urlPath: "how-to-create-professional-investment-proposals-in-under-10-minutes"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67eace4dd43c407327a094ec_Automating%20the%20Sales%20Journey%20From%20Client%20Intake%20to%20Proposals%20%26%20Compliance%20in%20One%20Platform%20(3).png"
 featuredImageAlt: "How to create professional investment proposals in under 10 minutes"
 draft: false

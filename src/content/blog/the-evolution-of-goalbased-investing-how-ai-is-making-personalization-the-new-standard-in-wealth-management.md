@@ -6,7 +6,7 @@ publishedDate: "2025-08-21T04:43:05.994Z"
 updatedDate: "2025-08-21T04:43:05.994Z"
 category: "AI"
 tags: []
-slug: "the-evolution-of-goalbased-investing-how-ai-is-making-personalization-the-new-standard-in-wealth-management"
+urlPath: "the-evolution-of-goalbased-investing-how-ai-is-making-personalization-the-new-standard-in-wealth-management"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/68a2c6404c5755bc853ce0fd_pexels-photo-6771900.jpeg"
 featuredImageAlt: "The Evolution of Goal-Based Investing: How AI Is Making Personalization the New Standard in Wealth Management"
 draft: false

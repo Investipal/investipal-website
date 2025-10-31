@@ -6,7 +6,7 @@ publishedDate: "2024-06-12T00:26:18.343Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Risk"]
-slug: "improving-risk-tolerance-questionnaires-for-better-financial-planning"
+urlPath: "improving-risk-tolerance-questionnaires-for-better-financial-planning"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e204c135e0dcb44836ac38_Improving%20Risk%20Tolerance%20Questionnaires%20for%20Better%20Financial%20Planning.png"
 featuredImageAlt: "Improving Risk Tolerance Questionnaires for Better Financial Planning"
 draft: false

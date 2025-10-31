@@ -6,7 +6,7 @@ publishedDate: "2025-01-24T17:05:17.670Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "AI"
 tags: ["Sales"]
-slug: "the-biggest-bottlenecks-in-wealth-management-sales--and-how-automation-solves-them"
+urlPath: "the-biggest-bottlenecks-in-wealth-management-sales--and-how-automation-solves-them"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6793c8485940b759e0272b16_The%20Biggest%20Bottlenecks%20in%20Wealth%20Management%20Sales%E2%80%94and%20How%20Automation%20Solves%20Them%20(1).png"
 featuredImageAlt: "The Biggest Bottlenecks in Wealth Management Sales—and How Automation Solves Them"
 draft: false

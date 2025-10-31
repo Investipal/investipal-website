@@ -6,7 +6,7 @@ publishedDate: "2025-01-10T18:47:14.538Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "General"
 tags: ["Sales"]
-slug: "5-common-bottlenecks-in-financial-advisor-sales-and-how-to-fix-them"
+urlPath: "5-common-bottlenecks-in-financial-advisor-sales-and-how-to-fix-them"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67816a71f42c0aa629143591_5%20Common%20Bottlenecks%20in%20Financial%20Advisor%20Sales%20and%20How%20to%20Fix%20Them.png"
 featuredImageAlt: "5 Common Bottlenecks in Financial Advisor Sales and How to Fix Them"
 draft: false

@@ -6,7 +6,7 @@ publishedDate: "2024-11-22T17:22:08.374Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Alternatives"]
-slug: "integrating-private-and-alternative-assets-using-ai-driven-portfolio-optimization-for-diversified-portfolios"
+urlPath: "integrating-private-and-alternative-assets-using-ai-driven-portfolio-optimization-for-diversified-portfolios"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6740bac76bc89d089aed8ed6_Integrating%20Private%20Assets%20into%20Portfolios%20with%20AI%20(1).png"
 featuredImageAlt: "Integrating Private and Alternative Assets Using AI-Driven Portfolio Optimization for Diversified Portfolios"
 draft: false

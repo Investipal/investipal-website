@@ -6,7 +6,7 @@ publishedDate: "2024-06-12T00:26:50.021Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Onboarding"
 tags: []
-slug: "how-ai-is-changing-investment-policy-statements"
+urlPath: "how-ai-is-changing-investment-policy-statements"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e204739a94b85ef4caa243_How%20AI%20is%20Changing%20Investment%20Policy%20Statements.png"
 featuredImageAlt: "How AI is Changing Investment Policy Statements"
 draft: false

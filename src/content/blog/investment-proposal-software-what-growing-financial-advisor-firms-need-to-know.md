@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-04-07T20:08:21.154Z
 category: "General"
 tags: ["Sales"]
-slug: "investment-proposal-software-what-growing-financial-advisor-firms-need-to-know"
+urlPath: "investment-proposal-software-what-growing-financial-advisor-firms-need-to-know"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67f430b097e194c16d9cd356_The%20Biggest%20Bottlenecks%20in%20Wealth%20Management%20Sales%E2%80%94and%20How%20Automation%20Solves%20Them%20(4).png"
 featuredImageAlt: "Investment Proposal Software: What Growing Financial Advisor Firms Need to Know"
 draft: false

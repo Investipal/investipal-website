@@ -6,7 +6,7 @@ publishedDate: "2025-08-25T06:49:54.840Z"
 updatedDate: "2025-08-25T06:49:54.840Z"
 category: "General"
 tags: []
-slug: "building-a-futureproof-advisor-tech-stack-musthave-tools-for-efficient-workflows-in-2025"
+urlPath: "building-a-futureproof-advisor-tech-stack-musthave-tools-for-efficient-workflows-in-2025"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689c31560b54b8ae6b4df67b_pexels-photo-8386440.jpeg"
 featuredImageAlt: "Building a Future-Proof Advisor Tech Stack: Must-Have Tools for Efficient Workflows in 2025"
 draft: false

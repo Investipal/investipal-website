@@ -6,7 +6,7 @@ publishedDate: 2025-06-28T16:27:00.691Z
 updatedDate: 2025-06-27T20:13:27.706Z
 category: "Compliance"
 tags: ["Onboarding"]
-slug: "quantifying-the-roi-of-ai-automation-for-advisors-onboarding-portfolio-optimization-compliance"
+urlPath: "quantifying-the-roi-of-ai-automation-for-advisors-onboarding-portfolio-optimization-compliance"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/685efb5f97ae4fbcebc460c5_Scale%20Your%20Advisory%20Practice%20with%20AI-Driven%20Tax%20Optimization%20and%20Proposals%20(10).png"
 featuredImageAlt: "Quantifying the ROI of AI Automation for Advisors: Onboarding, Portfolio Optimization & Compliance"
 draft: false

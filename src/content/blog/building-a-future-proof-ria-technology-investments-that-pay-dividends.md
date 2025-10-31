@@ -6,7 +6,7 @@ publishedDate: "2025-06-27T14:47:53.333Z"
 updatedDate: "2025-05-12T21:10:27.651Z"
 category: "General"
 tags: []
-slug: "building-a-future-proof-ria-technology-investments-that-pay-dividends"
+urlPath: "building-a-future-proof-ria-technology-investments-that-pay-dividends"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/682263a9f4bf041730fbc2a1_How%20Top%20Advisors%20Prove%20Their%20Worth%20(Without%20Overloading%20Clients%20with%20Data)%20(3).png"
 featuredImageAlt: "Building a Future‑Proof RIA: Technology Investments That Pay Dividends"
 draft: false

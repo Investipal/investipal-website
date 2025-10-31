@@ -6,7 +6,7 @@ publishedDate: "2024-10-18T17:32:01.551Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Marketing"
 tags: ["Growth"]
-slug: "growth-fundamentals-for-financial-advisors-laying-the-foundation-for-success"
+urlPath: "growth-fundamentals-for-financial-advisors-laying-the-foundation-for-success"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6712991e56af5d7a03fb1949_Growth%20Fundamentals%20for%20Financial%20Advisors%20Laying%20the%20Foundation%20for%20Success.png"
 featuredImageAlt: "Growth Fundamentals for Financial Advisors: Laying the Foundation for Success"
 draft: false

@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-06-11T14:50:43.562Z
 category: "Onboarding"
 tags: ["Onboarding"]
-slug: "top-5-aipowered-brokerage-statement-scanning-tools-to-automate-advisor-onboarding"
+urlPath: "top-5-aipowered-brokerage-statement-scanning-tools-to-automate-advisor-onboarding"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6849979000368bab1df1929b_Automating%20the%20Sales%20Journey%20From%20Client%20Intake%20to%20Proposals%20%26%20Compliance%20in%20One%20Platform%20(7).png"
 featuredImageAlt: "Top 5 AI-Powered Brokerage Statement Scanning Tools to Automate Advisor Onboarding"
 draft: false

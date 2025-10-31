@@ -6,7 +6,7 @@ publishedDate: "2024-10-22T21:31:57.395Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "AI"
 tags: ["AI"]
-slug: "how-ai-is-unlocking-personalization-at-scale-in-wealth-management"
+urlPath: "how-ai-is-unlocking-personalization-at-scale-in-wealth-management"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/671819bc2834a84d9715f750_How%20AI%20is%20Unlocking%20Personalization%20at%20Scale%20in%20Wealth%20Management%20(1).png"
 featuredImageAlt: "How AI is Unlocking Personalization at Scale in Wealth Management"
 draft: false

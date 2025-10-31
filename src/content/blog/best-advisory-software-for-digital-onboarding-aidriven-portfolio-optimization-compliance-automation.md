@@ -6,7 +6,7 @@ publishedDate: "2025-06-27T14:47:53.333Z"
 updatedDate: "2025-06-03T19:37:50.323Z"
 category: "Compliance"
 tags: []
-slug: "best-advisory-software-for-digital-onboarding-aidriven-portfolio-optimization-compliance-automation"
+urlPath: "best-advisory-software-for-digital-onboarding-aidriven-portfolio-optimization-compliance-automation"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/683f4efa9c8b40373b89de4f_The%20Biggest%20Bottlenecks%20in%20Wealth%20Management%20Sales%E2%80%94and%20How%20Automation%20Solves%20Them%20(6).png"
 featuredImageAlt: "Best Advisory Software for Digital Onboarding, AI-Driven Portfolio Optimization & Compliance Automation"
 draft: false

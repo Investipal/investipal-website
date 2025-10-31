@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-03-28T14:57:52.096Z
 category: "Onboarding"
 tags: ["Automation"]
-slug: "ocr-for-financial-statements-the-complete-guide-for-wealth-managers"
+urlPath: "ocr-for-financial-statements-the-complete-guide-for-wealth-managers"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67e6b817f1c1f94cdf114b7d_Why%20Wealth%20Managers%20Spend%2080%25%20of%20Their%20Time%20on%20Admin%20Instead%20of%20Growth%20(4).png"
 featuredImageAlt: "OCR for Financial Statements: The Complete Guide for Wealth Managers"
 draft: false

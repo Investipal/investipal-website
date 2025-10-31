@@ -6,7 +6,7 @@ publishedDate: "2024-08-28T13:26:02.899Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Compliance"
 tags: ["Compliance"]
-slug: "how-to-create-an-investment-policy-statement-ips-in-minutes"
+urlPath: "how-to-create-an-investment-policy-statement-ips-in-minutes"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e1ff893317266f4ec3043e_How%20to%20Create%20an%20Investment%20Policy%20Statement%20(IPS)%20in%20Minutes%20(2).png"
 featuredImageAlt: "How to Create an Investment Policy Statement (IPS) in Minutes"
 draft: false

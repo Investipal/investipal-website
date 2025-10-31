@@ -273,7 +273,7 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
               {initialPosts.slice(0, 4).map((post) => (
                 <article class="bg-white rounded-lg border border-gray-200 p-4 hover:border-violet-300 hover:shadow-md transition-all duration-200">
                   <div class="flex space-x-4">
-                    <a href={`/blog/${post.id.replace('.md', '')}`} class="flex-shrink-0">
+                    <a href={`/blog/${post.data.urlPath || post.id.replace('.md', '')}`} class="flex-shrink-0">
                       <img 
                         src={post.data.featuredImage}
                         alt={post.data.featuredImageAlt || post.data.title}

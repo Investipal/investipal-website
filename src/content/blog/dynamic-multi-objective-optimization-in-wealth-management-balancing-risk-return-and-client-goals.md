@@ -6,7 +6,7 @@ publishedDate: "2024-11-20T18:15:18.878Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Portfolio Construction"]
-slug: "dynamic-multi-objective-optimization-in-wealth-management-balancing-risk-return-and-client-goals"
+urlPath: "dynamic-multi-objective-optimization-in-wealth-management-balancing-risk-return-and-client-goals"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/673e25b412952d31f78bd826_Multi-Objective%20Optimization.png"
 featuredImageAlt: "Dynamic Multi-Objective Optimization in Wealth Management: Balancing Risk, Return, and Client Goals"
 draft: false

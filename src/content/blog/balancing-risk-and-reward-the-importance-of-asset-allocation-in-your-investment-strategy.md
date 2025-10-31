@@ -6,7 +6,7 @@ publishedDate: "2024-03-11T12:02:18.364Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Investing"]
-slug: "balancing-risk-and-reward-the-importance-of-asset-allocation-in-your-investment-strategy"
+urlPath: "balancing-risk-and-reward-the-importance-of-asset-allocation-in-your-investment-strategy"
 featuredImage: "https://uploads-ssl.webflow.com/666872ff37bdf42ce9637d77/666872ff37bdf42ce9637e62_blog-main-06.jpg"
 featuredImageAlt: "Balancing Risk and Reward: The Importance of Asset Allocation in Your Investment Strategy"
 draft: false

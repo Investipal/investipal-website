@@ -6,7 +6,7 @@ publishedDate: "2025-08-07T04:18:56.559Z"
 updatedDate: "2025-08-07T04:18:56.559Z"
 category: "AI"
 tags: []
-slug: "personalization-at-scale-how-ai-automation-and-alternative-assets-are-redefining-wealth-management"
+urlPath: "personalization-at-scale-how-ai-automation-and-alternative-assets-are-redefining-wealth-management"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689429305b5819fb02ba2505_pexels-photo-6693636.jpeg"
 featuredImageAlt: "Personalization at Scale: How AI, Automation, and Alternative Assets Are Redefining Wealth Management"
 draft: false

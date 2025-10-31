@@ -6,7 +6,7 @@ publishedDate: "2024-07-17T15:12:07.687Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "General"
 tags: ["Product"]
-slug: "5-proven-strategies-for-financial-advisors-to-shorten-sales-cycles-and-boost-close-rates"
+urlPath: "5-proven-strategies-for-financial-advisors-to-shorten-sales-cycles-and-boost-close-rates"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/66e202876278d6c8db9d6d35_5%20Proven%20Strategies%20for%20Financial%20Advisors%20to%20Shorten%20Sales%20Cycles%20and%20Boost%20Close%20Rates.png"
 featuredImageAlt: "5 Proven Strategies for Financial Advisors to Shorten Sales Cycles and Boost Close Rates"
 draft: false

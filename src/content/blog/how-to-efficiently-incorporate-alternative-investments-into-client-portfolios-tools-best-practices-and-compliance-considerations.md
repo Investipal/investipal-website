@@ -6,7 +6,7 @@ publishedDate: 2025-08-14T12:42:43.469Z
 updatedDate: 2025-08-14T12:42:43.469Z
 category: "Compliance"
 tags: ["Alternatives"]
-slug: "how-to-efficiently-incorporate-alternative-investments-into-client-portfolios-tools-best-practices-and-compliance-considerations"
+urlPath: "how-to-efficiently-incorporate-alternative-investments-into-client-portfolios-tools-best-practices-and-compliance-considerations"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/689dd9c33d86dc2927d35f44_6887a984ff160d2cb0197545_Automating%2520the%2520Sales%2520Journey%2520From%2520Client%2520Intake%2520to%2520Proposals%2520%2526%2520Compliance%2520in%2520One%2520Platform%2520(9).png"
 featuredImageAlt: "Financial advisor technology platform showing alternative investment integration workflow automation"
 draft: false

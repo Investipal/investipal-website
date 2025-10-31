@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-06-04T15:47:04.213Z
 category: "Compliance"
 tags: ["Technology"]
-slug: "ultimate-guide-to-wealthtech-platforms-compare-digital-onboarding-ai-portfolio-construction-and-compliance-automation"
+urlPath: "ultimate-guide-to-wealthtech-platforms-compare-digital-onboarding-ai-portfolio-construction-and-compliance-automation"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6840646c35ef118f056e2283_Scale%20Your%20Advisory%20Practice%20with%20AI-Driven%20Tax%20Optimization%20and%20Proposals%20(8).png"
 featuredImageAlt: "Ultimate Guide to Wealthtech Platforms: Compare Digital Onboarding, AI Portfolio Construction, and Compliance Automation"
 draft: false

@@ -6,7 +6,7 @@ publishedDate: 2025-07-18T08:52:36.900Z
 updatedDate: 2025-07-18T08:52:36.900Z
 category: "Onboarding"
 tags: []
-slug: "automated-risk-tolerance-questionnaires-best-practices-for-seamless-onboarding-tailored-portfolio-construction"
+urlPath: "automated-risk-tolerance-questionnaires-best-practices-for-seamless-onboarding-tailored-portfolio-construction"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/687a0b547487894fd38940ed_pexels-photo-590022.jpeg"
 draft: false
 ---

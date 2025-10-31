@@ -6,7 +6,7 @@ publishedDate: "2025-02-12T21:46:18.469Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
 category: "Portfolio Management"
 tags: ["Tax"]
-slug: "scale-your-advisory-practice-with-ai-driven-tax-optimization-and-proposals"
+urlPath: "scale-your-advisory-practice-with-ai-driven-tax-optimization-and-proposals"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67ad166f9bbd8ad39c83ec50_Scale%20Your%20Advisory%20Practice%20with%20AI-Driven%20Tax%20Optimization%20and%20Proposals%20(1).png"
 featuredImageAlt: "Scale Your Advisory Practice with AI-Driven Tax Optimization and Proposals"
 draft: false

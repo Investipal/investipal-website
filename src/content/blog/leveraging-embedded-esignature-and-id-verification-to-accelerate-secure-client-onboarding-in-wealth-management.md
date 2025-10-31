@@ -6,7 +6,7 @@ publishedDate: "2025-08-11T11:13:07.930Z"
 updatedDate: "2025-08-11T11:13:07.930Z"
 category: "Onboarding"
 tags: []
-slug: "leveraging-embedded-esignature-and-id-verification-to-accelerate-secure-client-onboarding-in-wealth-management"
+urlPath: "leveraging-embedded-esignature-and-id-verification-to-accelerate-secure-client-onboarding-in-wealth-management"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/6899d043f5e72ed50e4c8dc3_pexels-photo-6667688.jpeg"
 featuredImageAlt: "Leveraging Embedded E-Signature and ID Verification to Accelerate Secure Client Onboarding in Wealth Management"
 draft: false

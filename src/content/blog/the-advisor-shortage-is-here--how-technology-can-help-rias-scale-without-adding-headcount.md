@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-03-03T23:40:15.089Z
 category: "General"
 tags: ["Practice Management"]
-slug: "the-advisor-shortage-is-here--how-technology-can-help-rias-scale-without-adding-headcount"
+urlPath: "the-advisor-shortage-is-here--how-technology-can-help-rias-scale-without-adding-headcount"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67c63ddc92c3a5cb5526d41c_The%20High%20Cost%20of%20Disconnected%20Systems%20in%20Wealth%20Management%20(2).png"
 featuredImageAlt: "The Advisor Shortage Is Here—How Technology Can Help RIAs Scale Without Adding Headcount"
 draft: false

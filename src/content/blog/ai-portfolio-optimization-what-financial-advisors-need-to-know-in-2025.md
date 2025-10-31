@@ -6,7 +6,7 @@ publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-04-01T21:40:31.917Z
 category: "Portfolio Management"
 tags: ["AI"]
-slug: "ai-portfolio-optimization-what-financial-advisors-need-to-know-in-2025"
+urlPath: "ai-portfolio-optimization-what-financial-advisors-need-to-know-in-2025"
 featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/67ec5d47e1e09a313711aa4b_Personalization%20at%20Scale%20The%20Next%20Frontier%20in%20Wealth%20Management%20(6).png"
 featuredImageAlt: "AI Portfolio Optimization: What Financial Advisors Need to Know in 2025"
 draft: false
