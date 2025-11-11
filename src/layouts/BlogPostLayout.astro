@@ -152,6 +152,7 @@ const articleStructuredData = {
 <Layout 
   title={`${frontmatter.title} | Investipal Blog`}
   description={frontmatter.seoDescription || frontmatter.excerpt}
+  ogImage={resolvedFeaturedImage.startsWith('http') ? resolvedFeaturedImage : `${Astro.site?.toString().replace(/\/$/, '')}${resolvedFeaturedImage}`}
 >
   <!-- Blog Post Structured Data -->
   <script type="application/ld+json" is:inline set:html={JSON.stringify(articleStructuredData)} />
