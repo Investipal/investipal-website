@@ -8,7 +8,7 @@ category: "Technology"
 tags: ["riskalyze alternative", "nitrogen alternative", "advisor technology", "proposal software", "risk assessment"]
 urlPath: "investipal-vs-nitrogen-riskalyze-comparison"
 featuredImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
-featuredImageAlt: "Financial advisors comparing technology platforms and workflows"
+featuredImageAlt: "RIA advisors comparing Nitrogen and Investipal wealth management software platforms for portfolio management and client proposals"
 draft: false
 ---
 
@@ -171,17 +171,23 @@ draft: false
 
 <p id="">This means fewer failed scans, less manual cleanup, and the ability to work with prospects holding accounts at smaller custodians or international brokerages. For advisors dealing with complex held-away portfolios, Investipal's scanning accuracy reduces onboarding friction significantly.</p>
 
+<p id=""><img src="/images/product_screenshots/statement_scanner_output_v3_2025-11-11.png" alt="Investipal's statement scanner showing processing summary with 40 successful scans, detailed holdings table with tickers, shares, cost basis, and market value" /></p>
+
 <h3 id="">2. Unified Workflow for Proposals and Compliance Documentation</h3>
 
 <p id="">Nitrogen does offer IPS generation, but it requires switching to a separate module and workflow after creating proposals. This means re-entering or confirming client data and investment parameters in a different part of the platform.</p>
 
 <p id="">Investipal generates proposals, IPS, and <a href="https://www.sec.gov/rules-regulations/2019/06/regulation-best-interest" target="_blank" rel="noopener">Reg BI</a> disclosures from the same data source in one unified workflow. Once you've scanned statements and built a proposed portfolio, all compliance documentation is created simultaneously without switching modules or re-entering data. This reduces compliance lag, ensures consistency between documents, and saves time. Learn more about <a href="/features/investment-policy-statements">automated IPS generation</a> and <a href="/features/regulation-best-interest-generator">Reg BI workflows</a>.</p>
 
+<p id=""><img src="/images/product_screenshots/proposal_cover_page_v2_2025-11-11.png" alt="Investipal investment proposal cover page showing branded advisor strategy proposal with client name, date, and download options" /></p>
+
 <h3 id="">3. Complete Client Onboarding Workflows</h3>
 
 <p id="">Nitrogen does not include client onboarding capabilities such as e-signature, identity verification, or account opening workflows. After a client accepts a proposal, advisors must use separate onboarding tools to complete paperwork and open accounts.</p>
 
 <p id="">Investipal includes <a href="/features/client-acquisition">complete digital onboarding</a> workflows with e-signature, ID verification, and guided account opening. This means the transition from proposal acceptance to funded account happens within the same platform, reducing friction and improving the client experience.</p>
+
+<p id=""><img src="/images/product_screenshots/client_onboarding_portal_v3_2025-11-11.png" alt="Investipal's client-facing onboarding portal showing checklist with risk questionnaire, household details, agreements, and disclosure steps with security badges" /></p>
 
 <h3 id="">4. End-to-End Workflow Continuity</h3>
 
@@ -194,6 +200,10 @@ draft: false
 <p id="">Nitrogen's portfolio construction is optimized for traditional equities and bonds. Advisors working with HNW clients who hold private equity, real estate, annuities, or other alternative assets often find Nitrogen's modeling limited.</p>
 
 <p id="">Investipal includes a Custom Security Builder that allows advisors to model alternatives, structured products, and non-standard assets within the same portfolio optimization engine. This is especially valuable for wealth managers serving complex households.</p>
+
+<p id=""><img src="/images/product_screenshots/custom_security_builder_main_v2_2025-11-11.png" alt="Investipal Custom Security Builder for alternative investments showing annuity configuration with participation rate, floor rate, crediting method, and protection type" /></p>
+
+<p id=""><img src="/images/product_screenshots/custom_security_builder_performance_v2_2025-11-11.png" alt="Investipal's Custom Security Builder performance tab showing IRR configuration, private equity metrics (TVPI, DPI, RVPI, P/C ratio), and historical returns import from Excel" /></p>
 
 <h2 id="">Key Differentiators: Where Nitrogen Stands Out</h2>
 
