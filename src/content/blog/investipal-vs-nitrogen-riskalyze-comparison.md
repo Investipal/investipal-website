@@ -2,8 +2,8 @@
 title: "Investipal vs Nitrogen (Riskalyze): Complete Workflow Comparison for RIAs"
 excerpt: "Choosing between Nitrogen and Investipal for your advisory practice? This detailed comparison breaks down risk assessment, proposal generation, compliance automation, and end-to-end workflow capabilities to help you decide which platform fits your firm's needs."
 author: "Investipal Team"
-publishedDate: "2025-01-27T10:00:00.000Z"
-updatedDate: "2025-01-27T10:00:00.000Z"
+publishedDate: "2025-11-11T10:00:00.000Z"
+updatedDate: "2025-11-11T10:00:00.000Z"
 category: "Technology"
 tags: ["riskalyze alternative", "nitrogen alternative", "advisor technology", "proposal software", "risk assessment"]
 urlPath: "investipal-vs-nitrogen-riskalyze-comparison"
@@ -175,7 +175,7 @@ draft: false
 
 <p id="">Nitrogen does offer IPS generation, but it requires switching to a separate module and workflow after creating proposals. This means re-entering or confirming client data and investment parameters in a different part of the platform.</p>
 
-<p id="">Investipal generates proposals, IPS, and Reg BI disclosures from the same data source in one unified workflow. Once you've scanned statements and built a proposed portfolio, all compliance documentation is created simultaneously without switching modules or re-entering data. This reduces compliance lag, ensures consistency between documents, and saves time. Learn more about <a href="/features/investment-policy-statements">automated IPS generation</a> and <a href="/features/regulation-best-interest-generator">Reg BI workflows</a>.</p>
+<p id="">Investipal generates proposals, IPS, and <a href="https://www.sec.gov/rules-regulations/2019/06/regulation-best-interest" target="_blank" rel="noopener">Reg BI</a> disclosures from the same data source in one unified workflow. Once you've scanned statements and built a proposed portfolio, all compliance documentation is created simultaneously without switching modules or re-entering data. This reduces compliance lag, ensures consistency between documents, and saves time. Learn more about <a href="/features/investment-policy-statements">automated IPS generation</a> and <a href="/features/regulation-best-interest-generator">Reg BI workflows</a>.</p>
 
 <h3 id="">3. Complete Client Onboarding Workflows</h3>
 
@@ -215,7 +215,7 @@ draft: false
 
 <h2 id="">Pricing and ROI Considerations</h2>
 
-<p id="">Both platforms typically price based on the number of advisors, households, or AUM. Specific pricing is usually customized based on firm size and feature requirements.</p>
+<p id="">Both platforms typically price based on the number of advisors, households, or AUM. Specific pricing is usually customized based on firm size and feature requirements. According to <a href="https://www.kitces.com/blog/advisor-fintech-map-wealthtech-solutions/" target="_blank" rel="noopener">industry research</a>, advisor technology spending has increased significantly as firms seek to improve operational efficiency and client experience.</p>
 
 <p id=""><strong id="">Nitrogen pricing</strong> generally includes risk assessment, proposals, and client engagement features. Additional costs may arise from separate tools needed for statement aggregation, IPS generation, and portfolio management software.</p>
 
@@ -270,7 +270,7 @@ draft: false
 
 <h3 id="">What about compliance - is Investipal SEC-registered or FINRA-approved?</h3>
 
-<p id="">Investipal is a technology platform that assists advisors with documentation workflows. It is not investment advice, and all outputs require advisor review and approval. Investipal's IPS and Reg BI features help advisors generate compliant documentation, but they do not constitute legal advice. Advisors remain responsible for compliance with applicable regulations.</p>
+<p id="">Investipal is a technology platform that assists advisors with documentation workflows. It is not investment advice, and all outputs require advisor review and approval. Investipal's IPS and Reg BI features help advisors generate compliant documentation, but they do not constitute legal advice. Advisors remain responsible for compliance with <a href="https://www.sec.gov/investment-adviser-public-disclosure" target="_blank" rel="noopener">SEC regulations</a> and applicable state requirements.</p>
 
 <h3 id="">How long does it take to generate a proposal + IPS in Investipal?</h3>
 
