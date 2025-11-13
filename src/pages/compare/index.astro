@@ -1,0 +1,147 @@
+---
+/**
+ * Comparison Hub Page
+ * 
+ * Landing page for /compare showing all available competitor comparisons
+ */
+
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import CTASection from '../../components/sections/CTASection.astro';
+import CookieBanner from '../../components/ui/CookieBanner.astro';
+import { comparisonPages } from '../../data/comparisonPagesData';
+
+// SEO Meta
+const title = "Compare Investipal to Other Financial Advisor Software | Platform Comparisons";
+const description = "See how Investipal compares to Nitrogen, YCharts, Morningstar, Orion, and other financial advisor software platforms. Feature comparisons, pricing, and migration guides.";
+const keywords = "financial advisor software comparison, Investipal vs Nitrogen, portfolio management comparison, advisor platform comparison";
+
+// Generate breadcrumb
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Compare Platforms' }
+];
+
+// Get all comparison pages
+const comparisons = Object.entries(comparisonPages).map(([slug, data]) => ({
+  slug,
+  name: data.competitorName,
+  tagline: data.competitorTagline,
+  href: `/compare/${slug}`
+}));
+---
+
+<Layout title={title} description={description} keywords={keywords}>
+  <Header />
+  <Breadcrumb items={breadcrumbItems} />
+  
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-gray-50 to-white py-16 md:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <div class="inline-flex items-center bg-investipal-50 rounded-full px-4 py-2 mb-6">
+            <div class="w-2 h-2 bg-investipal-600 rounded-full mr-3"></div>
+            <span class="text-sm font-semibold text-investipal-600 tracking-wide">Platform Comparisons</span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Compare Investipal to Other Platforms
+          </h1>
+          
+          <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+            See how our comprehensive platform stacks up against point solutions and competitors. 
+            Get detailed feature comparisons, pricing information, and migration guides.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Cards -->
+    <section class="bg-white py-20 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {comparisons.map((comparison) => (
+            <a 
+              href={comparison.href}
+              class="group bg-white rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-investipal-300"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-gray-900 group-hover:text-investipal-600 transition-colors">
+                  {comparison.name}
+                </h2>
+                <svg class="w-6 h-6 text-gray-400 group-hover:text-investipal-600 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+              
+              <p class="text-gray-600 mb-4">
+                {comparison.tagline}
+              </p>
+              
+              <div class="inline-flex items-center text-investipal-600 font-semibold group-hover:underline">
+                Compare to Investipal
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Compare Section -->
+    <section class="bg-gray-50 py-20 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Why Financial Advisors Switch to Investipal
+          </h2>
+          
+          <div class="grid md:grid-cols-3 gap-8 mt-12">
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-16 h-16 bg-investipal-100 rounded-xl mb-6 shadow-lg">
+                <svg class="w-6 h-6 text-investipal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">All-in-One Platform</h3>
+              <p class="text-gray-600">Replace 3-5 tools with one comprehensive solution</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-16 h-16 bg-investipal-100 rounded-xl mb-6 shadow-lg">
+                <svg class="w-6 h-6 text-investipal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">Save Time</h3>
+              <p class="text-gray-600">Automate 90% of manual workflows and processes</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-16 h-16 bg-investipal-100 rounded-xl mb-6 shadow-lg">
+                <svg class="w-6 h-6 text-investipal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">Better Pricing</h3>
+              <p class="text-gray-600">Usage-based model saves firms 40-60% on average</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTASection />
+    
+  </main>
+  
+  <Footer />
+  <CookieBanner />
+</Layout>
+

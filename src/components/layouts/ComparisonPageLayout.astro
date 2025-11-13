@@ -1,0 +1,353 @@
+---
+/**
+ * Comparison Page Layout Component
+ * Standardizes the layout for all competitor comparison pages
+ * 
+ * Usage: Import in /src/pages/compare/[competitor]-alternative.astro
+ * Pattern: Same as FeaturePageLayout and SegmentPageLayout
+ */
+
+import Layout from '../../layouts/Layout.astro';
+import Header from '../Header.astro';
+import Footer from '../Footer.astro';
+import Breadcrumb from '../ui/Breadcrumb.astro';
+import TrustedBySection from '../sections/TrustedBySection.astro';
+import SecuritySection from '../sections/SecuritySection.astro';
+import TestimonialSection from '../sections/TestimonialSection.astro';
+import CTASection from '../sections/CTASection.astro';
+import CookieBanner from '../ui/CookieBanner.astro';
+import StandardButton from '../ui/StandardButton.astro';
+import type { ComparisonPageData } from '../../data/comparisonPagesData';
+
+export interface Props extends ComparisonPageData {}
+
+const props = Astro.props;
+
+// Generate breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Compare', href: '/compare' },
+  { name: `${props.competitorName} Alternative` }
+];
+
+// Generate structured data for SEO
+const siteUrl = Astro.site?.toString() || 'https://investipal.co';
+const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": props.pageTitle,
+  "description": props.pageDescription,
+  "url": currentUrl,
+  "mainEntity": {
+    "@type": "SoftwareApplication",
+    "name": "Investipal",
+    "applicationCategory": "FinanceApplication",
+    "description": props.heroSubtitle,
+    "offers": {
+      "@type": "AggregateOffer",
+      "description": "Professional financial advisor software solution",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbItems.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      ...(item.href && { "item": new URL(item.href, siteUrl).toString() })
+    }))
+  }
+};
+---
+
+<Layout title={props.pageTitle} description={props.pageDescription} keywords={props.keywords}>
+  <!-- Comparison Page Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  
+  <Header />
+  <Breadcrumb items={breadcrumbItems} />
+  
+  <main id="main">
+    
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-gray-50 to-white py-16 md:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto mb-12">
+          <!-- Badge -->
+          <div class="inline-flex items-center bg-investipal-50 rounded-full px-6 py-2 mb-6">
+            <span class="text-investipal-700 font-medium">Compare Platforms</span>
+          </div>
+          
+          <!-- Title with Purple Gradient -->
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-investipal-600 via-investipal-700 to-investipal-800 bg-clip-text text-transparent leading-tight pb-2 mb-6">
+            {props.heroTitle}
+          </h1>
+          
+          <!-- Subtitle -->
+          <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+            {props.heroSubtitle}
+          </p>
+          
+          <!-- CTA Button -->
+          <StandardButton href="/book-a-demo">Schedule a Demo</StandardButton>
+        </div>
+        
+        <!-- Hero Image (if provided) -->
+        {props.heroImage && (
+          <div class="text-center">
+            <img 
+              src={props.heroImage} 
+              alt={props.heroImageAlt || `${props.competitorName} alternative platform comparison`}
+              class="w-full max-w-6xl mx-auto"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Trusted By -->
+    <TrustedBySection />
+
+    <!-- Why Switch Section -->
+    <section class="bg-white py-20 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+            Why Switch from {props.competitorName}?
+          </h2>
+          <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            Get more capabilities, save time, and reduce costs with Investipal's comprehensive platform.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+          {props.whySwitchReasons.map((reason) => (
+            <div class="text-center group">
+              <!-- Standard icon with light purple background -->
+              <div class="inline-flex items-center justify-center w-16 h-16 bg-investipal-100 rounded-xl mb-6 shadow-lg group-hover:scale-[1.02] transition-all duration-500 ease-out">
+                <svg class="w-6 h-6 text-investipal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={reason.icon}>
+                </svg>
+              </div>
+              <h3 class="text-xl md:text-2xl font-semibold text-gray-900 mb-3 leading-tight">
+                {reason.title}
+              </h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                {reason.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section id="comparison-table" class="bg-gray-50 py-20 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+            Feature Comparison
+          </h2>
+          <p class="text-lg md:text-xl text-gray-600">
+            See how Investipal stacks up against {props.competitorName}
+          </p>
+        </div>
+        
+        {props.comparisonTable.categories.map((category) => (
+          <div class="mb-12 last:mb-0">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-investipal-600">
+              {category.name}
+            </h3>
+            
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+              <div class="overflow-x-auto">
+                <table class="w-full table-fixed">
+                  <thead class="bg-gray-100">
+                    <tr>
+                      <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900 w-1/2">Feature</th>
+                      <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900 w-1/4">{props.competitorName}</th>
+                      <th class="px-6 py-4 text-center text-sm font-semibold text-investipal-600 bg-investipal-50 w-1/4">Investipal</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-200">
+                    {category.features.map((feature) => (
+                      <tr class="hover:bg-gray-50 transition-colors duration-200">
+                        <td class="px-6 py-4 text-gray-900 text-base w-1/2">{feature.feature}</td>
+                        <td class="px-6 py-4 text-center w-1/4">
+                          {typeof feature.competitor === 'boolean' ? (
+                            feature.competitor ? (
+                              <svg class="w-6 h-6 text-green-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                              </svg>
+                            ) : (
+                              <svg class="w-6 h-6 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                              </svg>
+                            )
+                          ) : (
+                            <span class="text-gray-700 text-sm">{feature.competitor}</span>
+                          )}
+                        </td>
+                        <td class="px-6 py-4 text-center bg-investipal-50/30 w-1/4">
+                          <div>
+                            {typeof feature.investipal === 'boolean' ? (
+                              feature.investipal ? (
+                                <svg class="w-6 h-6 text-investipal-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                              ) : (
+                                <svg class="w-6 h-6 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                              )
+                            ) : (
+                              <span class="text-investipal-700 font-semibold text-sm">{feature.investipal}</span>
+                            )}
+                            {feature.investipalNote && (
+                              <p class="text-xs text-investipal-600 mt-1 font-medium">{feature.investipalNote}</p>
+                            )}
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        ))}
+        
+        <div class="text-center mt-12">
+          <StandardButton size="large" href="/book-a-demo">
+            See Investipal in Action
+          </StandardButton>
+        </div>
+      </div>
+    </section>
+
+    <!-- Migration Guide -->
+    <section class="bg-white py-20 md:py-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+            Switching is Easy
+          </h2>
+          <p class="text-lg md:text-xl text-gray-600">
+            Our team guides you through every step of the migration process
+          </p>
+        </div>
+        
+        <div class="space-y-8">
+          {props.migrationSteps.map((step) => (
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <!-- Standard numbered badge -->
+                <div class="w-12 h-12 bg-investipal-100 rounded-full flex items-center justify-center shadow-md hover:scale-[1.02] transition-all duration-500 ease-out">
+                  <span class="text-xl font-bold text-investipal-600">{step.stepNumber}</span>
+                </div>
+              </div>
+              <div class="ml-6 flex-1">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-2">
+                  <h3 class="text-xl md:text-2xl font-semibold text-gray-900">{step.title}</h3>
+                  <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">{step.timeEstimate}</span>
+                </div>
+                <p class="text-base text-gray-600 leading-relaxed">{step.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div class="text-center mt-12">
+          <StandardButton size="large" href="/book-a-demo">
+            Start Your Migration Today
+          </StandardButton>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section (if provided) -->
+    {props.testimonial && (
+      <section class="bg-gray-900 py-20 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <!-- Quote Icon -->
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-investipal-600 rounded-full mb-8">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            
+            <blockquote class="text-xl md:text-2xl text-white mb-8 leading-relaxed font-light">
+              "{props.testimonial.quote}"
+            </blockquote>
+            
+            <div class="flex items-center justify-center">
+              {props.testimonial.image && (
+                <img 
+                  src={props.testimonial.image} 
+                  alt={props.testimonial.author}
+                  class="w-16 h-16 rounded-full mr-4 object-cover"
+                  loading="lazy"
+                />
+              )}
+              <div class="text-left">
+                <p class="text-white font-semibold text-lg">{props.testimonial.author}</p>
+                <p class="text-gray-400 text-base">{props.testimonial.title}</p>
+                <p class="text-gray-500 text-sm">{props.testimonial.company}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Related Features (if provided) -->
+    {props.relatedFeatures && props.relatedFeatures.length > 0 && (
+      <section class="bg-gray-50 py-20 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Explore Related Features
+            </h2>
+            <p class="text-lg text-gray-600">
+              See how Investipal powers your entire advisory workflow
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {props.relatedFeatures.map((feature) => (
+              <a 
+                href={feature.href}
+                class="group bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 hover:border-investipal-300"
+              >
+                <div class="flex items-center justify-between">
+                  <h3 class="text-lg font-semibold text-gray-900 group-hover:text-investipal-600 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <svg class="w-5 h-5 text-gray-400 group-hover:text-investipal-600 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Standard Footer Sections -->
+    <SecuritySection />
+    <TestimonialSection />
+    <CTASection />
+    
+  </main>
+  
+  <Footer />
+  <CookieBanner />
+</Layout>
+
