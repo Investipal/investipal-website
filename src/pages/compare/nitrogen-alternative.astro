@@ -1,0 +1,16 @@
+---
+/**
+ * Nitrogen Alternative Comparison Page
+ * 
+ * This page compares Investipal to Nitrogen (Nitrogen Wealth)
+ * Content is managed in src/data/comparisonPagesData.ts
+ */
+
+import ComparisonPageLayout from '../../components/layouts/ComparisonPageLayout.astro';
+import { comparisonPages } from '../../data/comparisonPagesData';
+
+const pageData = comparisonPages['nitrogen-alternative'];
+---
+
+<ComparisonPageLayout {...pageData} />
+

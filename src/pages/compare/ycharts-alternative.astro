@@ -1,0 +1,9 @@
+---
+import ComparisonPageLayout from '../../components/layouts/ComparisonPageLayout.astro';
+import { comparisonPages } from '../../data/comparisonPagesData';
+
+const pageData = comparisonPages['ycharts-alternative'];
+---
+
+<ComparisonPageLayout {...pageData} />
+

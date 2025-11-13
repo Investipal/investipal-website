@@ -15,20 +15,41 @@ export const footerData: FooterSection[] = [
     id: 'product',
     title: 'Product',
     links: [
-      { id: 'risk-assessment', title: 'Risk Assessment', href: '/risk-assessment' },
-      { id: 'book-demo', title: 'Book a Demo', href: '/book-a-demo' },
-      { id: 'integrations', title: 'Integrations', href: '/integrations' }
+      { id: 'features', title: 'Features', href: '/features' },
+      { id: 'solutions', title: 'Solutions', href: '/solutions' },
+      { id: 'how-it-works', title: 'How It Works', href: '/how-it-works' },
+      { id: 'integrations', title: 'Integrations', href: '/integrations' },
+      { id: 'risk-assessment', title: 'Risk Assessment', href: '/risk-assessment' }
+    ]
+  },
+  {
+    id: 'compare',
+    title: 'Compare',
+    links: [
+      { id: 'compare-platforms', title: 'All Comparisons', href: '/compare' },
+      { id: 'nitrogen-alternative', title: 'vs Nitrogen', href: '/compare/nitrogen-alternative' },
+      { id: 'ycharts-alternative', title: 'vs YCharts', href: '/compare/ycharts-alternative' },
+      { id: 'morningstar-alternative', title: 'vs Morningstar', href: '/compare/morningstar-alternative' }
+    ]
+  },
+  {
+    id: 'resources',
+    title: 'Resources',
+    links: [
+      { id: 'blog', title: 'Blog', href: '/blog' },
+      { id: 'podcasts', title: 'Podcasts', href: '/podcasts' },
+      { id: 'webinars', title: 'Webinars', href: '/webinars' },
+      { id: 'case-studies', title: 'Case Studies', href: '/resources/case-studies' }
     ]
   },
   {
     id: 'company',
     title: 'Company',
     links: [
-      { id: 'about', title: 'About us', href: '/about-us' },
+      { id: 'about', title: 'About Us', href: '/about-us' },
       { id: 'manifesto', title: 'Manifesto', href: '/manifesto' },
-      { id: 'blog', title: 'Blog', href: '/blog' },
-      { id: 'podcasts', title: 'Podcasts', href: '/podcasts' },
-      { id: 'contact', title: 'Contact us', href: '/contact-us' }
+      { id: 'contact', title: 'Contact Us', href: '/contact-us' },
+      { id: 'book-demo', title: 'Book a Demo', href: '/book-a-demo' }
     ]
   }
 ] as const;
