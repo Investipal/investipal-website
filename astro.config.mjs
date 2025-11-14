@@ -38,6 +38,10 @@ export default defineConfig({
   ],
   site: 'https://investipal.co',
   trailingSlash: 'never',
+  redirects: {
+    '/blog-posts/[...slug]': '/blog/[...slug]',
+    '/investipal-blog/[...slug]': '/blog/[...slug]',
+  },
   build: {
     assets: '_astro',
     inlineStylesheets: 'auto',

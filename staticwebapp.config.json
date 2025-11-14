@@ -16,6 +16,11 @@
       "redirect": "/blog/:splat"
     },
     {
+      "route": "/investipal-blog/:splat",
+      "statusCode": 301,
+      "redirect": "/blog/:splat"
+    },
+    {
       "route": "/sitemap.xml",
       "redirect": "/sitemap-index.xml",
       "statusCode": 301
