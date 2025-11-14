@@ -443,52 +443,199 @@ export const featurePages = {
     ]
   },
 
-  'iul-annuity-modeling': {
+  'liquidity-optimization': {
     // SEO Meta
-    pageTitle: 'IUL & Annuity Modeling Software | Insurance Planning | Investipal',
-    pageDescription: 'Advanced IUL and annuity modeling software. Automate policy calculations, growth forecasting, and proposal generation.',
-    keywords: 'IUL modeling software, annuity calculation tools, insurance planning software, life insurance modeling, insurance advisor technology',
+    pageTitle: 'Goal-Based Portfolio Construction | Spending-Based Asset Allocation Software | Investipal',
+    pageDescription: 'Ensure clients never run out of money. Match every dollar to future spending needs with AI-powered goal-based portfolio construction. Perfect for retirement planning and multi-generational wealth.',
+    keywords: 'goal-based portfolio construction, spending-based asset allocation, retirement portfolio planning, liquidity bucketing strategy, cash flow matching, goal-based investing software, retirement income planning',
 
     // Hero Section
-    audienceText: 'For Advisors & Planners',
-    featureName: 'Sales Enablement Platform',
-    title: 'Automate Your IUL and Annuity Modeling Process with AI',
-    subtitle: 'Investipal\'s Advanced IUL & Annuity Modeling tool simplifies policy design, premium calculations, and proposals, enabling advisors to focus on client relationships instead of manual tasks.',
-    heroImage: '/images/external/678577d2945b0c05117d13dc_screenshot-2025-01-13-152940.png',
-    heroImageAlt: 'IUL & Annuity Modeling dashboard showing automated policy design and calculations',
+    audienceText: 'For Financial Advisors & Wealth Managers',
+    featureName: 'Goal-Based Portfolio Construction',
+    title: 'Ensure Clients Never Run Out of Money: Match Every Dollar to a Future Goal',
+    subtitle: 'Stop using generic asset allocation models. Build portfolios that match real spending needs across time horizons—from next year\'s expenses to multi-generational wealth transfer. Our AI engine automatically maps client goals to appropriate liquidity buckets, then optimizes remaining assets for growth while respecting risk tolerance and regulatory constraints.',
+    heroImage: '/images/product_screenshots/liquidity_optimization_results_summary_v1_2025-11-14.png',
+    heroImageAlt: 'Goal-based portfolio construction summary showing detailed portfolio analysis and metrics',
 
     // Features Section (2x2 grid)
     features: [
       {
         icon: icons.optimization,
-        title: 'Forecast Growth with Clarity',
-        description: 'Show clients the future with precise growth simulations benchmarked against market indices, making complex products easier to understand.'
+        title: 'Map Every Goal to the Right Time Horizon',
+        description: 'Enter client spending needs by year—retirement income, college tuition, home purchase, legacy gifts—or paste directly from Excel. Our engine automatically organizes goals into short-term (0-3 years), medium-term (3-10 years), and long-term (10+ years) buckets, ensuring the right assets fund each goal.'
       },
       {
-        icon: icons.document,
-        title: 'Automate Tedious Calculations',
-        description: 'Eliminate hours of manual effort with AI-driven tools for premiums, policies, and withdrawal strategies.'
+        icon: icons.analysis,
+        title: 'Smart Asset Matching by Liquidity Need',
+        description: 'The system automatically matches investment strategies to time horizons: high-liquidity assets for near-term goals, balanced approaches for medium-term needs, and growth-focused strategies for long-term objectives. No more guessing which investments belong where.'
       },
       {
-        icon: icons.shield,
-        title: 'Compare Scenarios with Ease',
-        description: 'Quickly evaluate multiple policy strategies to identify the best fit for your client.'
+        icon: icons.portfolio,
+        title: 'Automated Portfolio Optimization',
+        description: 'Our AI engine builds the optimal portfolio by funding each goal first, then maximizing growth potential with remaining assets—all while staying within risk tolerance, meeting income targets, respecting regulatory limits, and maintaining proper diversification across your model universe.'
       },
       {
         icon: icons.monitoring,
-        title: 'Create Proposals That Win',
-        description: 'Generate personalized, data-driven proposals that inspire confidence and turn prospects into long-term clients.'
+        title: 'Clear Goal-Funding Status & Alerts',
+        description: 'See exactly which goals are fully funded, underfunded, or at risk. Get detailed diagnostics showing goal coverage by time period, portfolio risk vs. target, surplus/shortfall by bucket, and complete holdings breakdown. Receive alerts when goals drift off track.'
       }
     ],
-    dashboardImage: '/images/external/67857da6d8c446a3445ae3d0_iul-modeler-2.png',
-    dashboardImageAlt: 'IUL & Annuity Modeling Dashboard showing comprehensive policy analysis and modeling tools',
+    dashboardImage: '/images/product_screenshots/liquidity_optimization_results_analysis_v1_2025-11-14.png',
+    dashboardImageAlt: 'Goal-based portfolio construction analysis showing detailed breakdown and insights',
 
     // Productivity Section
-    productivityTitle: 'Better operations and smarter resource utilization.',
-    productivityDescription: 'Free up your time to spend on higher-value activities.',
+    productivityTitle: 'Perfect for Retirement Planning, College Funding & Multi-Generational Wealth Transfer',
+    productivityDescription: 'Build portfolios that match real client goals—not generic risk scores. Show clients exactly how their money will fund their future.',
     stats: [
-      { value: '4x', label: 'Faster than traditional sales processes. Do in 1 day what used to take 4 weeks.' },
-      { value: '70%', label: 'Cost savings versus comparative tech stack' }
+      { value: '10x', label: 'Faster goal-based portfolio construction' },
+      { value: '100%', label: 'Automated goal-to-asset matching' }
+    ]
+  },
+
+  'alternatives-proposals': {
+    // SEO Meta
+    pageTitle: 'Alternative Investment Proposal Software | Create Private Equity & Hedge Fund Proposals in 5 Minutes | Investipal',
+    pageDescription: 'Win HNW clients with institutional-grade proposals that include alternatives. Generate private equity, private credit, and hedge fund proposals with automated risk scoring, fee modeling, and Reg BI compliance in 5 minutes.',
+    keywords: 'alternative investment proposals, private equity proposals, hedge fund proposals, private market allocation, alternative investment software, institutional portfolio proposals, alternatives proposal generator, private investment proposals',
+
+    // Hero Section
+    audienceText: 'For RIAs & Wealth Advisors',
+    featureName: 'Alternatives-Driven Proposals',
+    title: 'Win High-Net-Worth Clients with Institutional-Grade Alternative Investment Proposals',
+    subtitle: 'Stop losing prospects to competitors with better alternatives capabilities. Seamlessly integrate private equity, private credit, real estate, hedge funds, and custom private vehicles into client-ready proposals. Automatically incorporate risk scoring, liquidity constraints, fee modeling, and Reg BI compliance—all in 5 minutes.',
+    heroImage: '/images/product_screenshots/proposal_cover_page_v3_2025-11-14.png',
+    heroImageAlt: 'Professional investment proposal cover page with Investipal branding',
+
+    // Features Section (2x2 grid)
+    features: [
+      {
+        icon: icons.portfolio,
+        title: 'Seamless Alternatives Integration',
+        description: 'Unlike traditional proposal tools that only handle public markets, add private equity, private credit, real estate, hedge funds, interval funds, and custom private vehicles directly into proposals alongside stocks and bonds. No manual workarounds, no separate systems—just one unified proposal.'
+      },
+      {
+        icon: icons.analysis,
+        title: 'Automatic Risk & Liquidity Scoring',
+        description: 'Our engine automatically calculates risk metrics, liquidity constraints, and suitability scores for mixed public/private allocations. Ensure every proposal reflects accurate portfolio characteristics and regulatory requirements—no spreadsheet calculations needed.'
+      },
+      {
+        icon: icons.document,
+        title: 'Comprehensive Fee & Performance Modeling',
+        description: 'Model management fees, performance fees, hurdle rates, and waterfall structures. Show prospects side-by-side comparisons with their current portfolios, including detailed fee impact analysis and net return projections. Make the case for alternatives crystal clear.'
+      },
+      {
+        icon: icons.shield,
+        title: 'Compliance-Ready Documentation',
+        description: 'Generate proposals that align with Reg BI and Know Your Product (KYP) requirements. Automated suitability checks, accreditation verification, and compliance audit trails built into every proposal. Pass compliance review the first time.'
+      }
+    ],
+    dashboardImage: '/images/product_screenshots/portfolio_comparison_results_v1_2025-11-14.png',
+    dashboardImageAlt: 'Portfolio comparison showing current vs proposed portfolios with AI-powered insights',
+
+    // Productivity Section
+    productivityTitle: 'Close More HNW Clients by Offering What They Actually Want: Access to Alternatives',
+    productivityDescription: 'As HNW clients increasingly demand alternatives exposure, differentiate your practice with institutional-style proposals that showcase sophisticated portfolio construction.',
+    stats: [
+      { value: '95%', label: 'Time saved on alternatives proposals' },
+      { value: '5 min', label: 'Generate complete proposals with alternatives' }
+    ]
+  },
+
+  'alternatives-modeling': {
+    // SEO Meta
+    pageTitle: 'Alternative Investment Portfolio Management Software | Private Markets Platform | Investipal',
+    pageDescription: 'Manage complex private market portfolios without an army of analysts. Track capital calls, model cash flows, and monitor performance across 100+ private investments in one platform. Built for family offices managing $500M+.',
+    keywords: 'alternative investment modeling, private equity modeling, private credit analysis, capital call modeling, private market portfolio, institutional portfolio construction, alternatives portfolio management, private markets software',
+
+    // Hero Section
+    audienceText: 'For Family Offices & Alt-Heavy RIAs',
+    featureName: 'Alternatives Portfolio Management',
+    title: 'Manage Complex Private Market Portfolios Without an Army of Analysts',
+    subtitle: 'Already won the client? Now manage their alternatives portfolio with precision. Stop reconciling capital calls across 20 Excel files. Track private equity, private credit, real assets, venture, and hedge strategies in one platform. Model capital calls, cash flows, waterfall structures, and performance metrics—from deal-level detail to total portfolio view.',
+    heroImage: '/images/product_screenshots/client_overview_performance_v1_2025-11-14.png',
+    heroImageAlt: 'Client portfolio overview showing household asset allocation and performance tracking with benchmark comparisons',
+
+    // Features Section (2x2 grid)
+    features: [
+      {
+        icon: icons.optimization,
+        title: 'Never Miss a Capital Call Again',
+        description: 'Stop guessing when to reserve cash for capital calls. Model drawdowns, distributions, waterfall structures, and return sequencing with precision. Track commitment pacing and cash flow obligations across 100+ private investments. Get alerts before capital calls are due so you always have liquidity ready.'
+      },
+      {
+        icon: icons.portfolio,
+        title: 'Custom Private Security Builder',
+        description: 'Create custom securities for private equity funds, private credit, co-investments, evergreen structures, and fund-of-funds. Define return profiles, liquidity terms, fee structures, and correlation assumptions. Model any private investment structure—no matter how complex.'
+      },
+      {
+        icon: icons.analysis,
+        title: 'Advanced Scenario Analysis & Stress Testing',
+        description: 'Run stress tests for vintage risk, J-curve effects, correlation breakdowns, and liquidity crunches. See how private allocations perform when correlations break down or liquidity dries up. Compare alternative strategies vs. public market benchmarks to justify allocations.'
+      },
+      {
+        icon: icons.monitoring,
+        title: 'Unified Performance Reporting',
+        description: 'Calculate true portfolio performance including both public and private assets in one view. Track IRR, TVPI, DPI, RVPI, and time-weighted returns across the entire portfolio with accurate cash flow accounting and quarterly valuation updates. No more separate reporting systems.'
+      }
+    ],
+    dashboardImage: '/images/external/67a0fa5860e896984e58e055_screenshot-2025-02-03-121808.png',
+    dashboardImageAlt: 'Alternative investment portfolio management dashboard showing capital call analysis and performance metrics',
+
+    // Productivity Section
+    productivityTitle: 'Perfect for: Multi-Family Offices Managing $500M+, RIAs with 20%+ Alternatives, Endowments & Foundations',
+    productivityDescription: 'Deliver institutional-grade alternatives management without hiring a team of analysts. Track 100+ private investments simultaneously.',
+    stats: [
+      { value: '10x', label: 'Faster alternatives modeling vs. spreadsheets' },
+      { value: '100+', label: 'Private investments tracked simultaneously' }
+    ]
+  },
+
+  'annuities-insurance-modeling': {
+    // SEO Meta
+    pageTitle: 'Annuity & Insurance Modeling | FIA & IUL Analysis | Investipal',
+    pageDescription: 'Advanced annuity modeling with participation rates, cap rates, floor rates, spreads, and crediting methods. Configure premiums, payouts, COLA adjustments, and contributions for comprehensive FIA and IUL analysis.',
+    keywords: 'annuity modeling software, FIA modeling, IUL illustration, indexed annuity calculator, annuity comparison tool, participation rate calculator, cap rate modeling, annuity illustration software, annuity proposal generator, insurance modeling, retirement income planning, guaranteed income analysis, variable annuity analysis, annuity software for advisors',
+
+    // Hero Section
+    audienceText: 'For Hybrid Advisors & Insurance Professionals',
+    featureName: 'Annuities & Insurance Modeling',
+    title: 'Unify Insurance and Investment Planning in One Platform',
+    subtitle: 'Model fixed indexed annuities with comprehensive parameter controls including participation rates, cap rates, floor rates, spreads, and crediting methods. Configure premium structures, accumulation periods, payout options, and COLA adjustments to show clients complete retirement income projections.',
+    heroImage: '/images/product_screenshots/portfolio_simulation_results_v1_2025-11-14.png',
+    heroImageAlt: 'Monte Carlo portfolio simulation showing projected returns and AI-powered insights for retirement planning',
+
+    // Features Section (2x2 grid)
+    features: [
+      {
+        icon: icons.optimization,
+        title: 'Comprehensive Annuity Parameter Controls',
+        description: 'Configure participation rates, cap rates, floor rates, and spreads to model indexed annuity performance. Select crediting methods (Annual Point to Point, etc.) and set expected returns with volatility assumptions for accurate growth projections.'
+      },
+      {
+        icon: icons.analysis,
+        title: 'Flexible Premium & Payout Structures',
+        description: 'Model various premium types, amounts, and frequencies. Define accumulation years and configure payout types, periods, and rates. Include COLA adjustments to show inflation-protected income streams that reflect real client scenarios.'
+      },
+      {
+        icon: icons.portfolio,
+        title: 'Dynamic Contributions & Withdrawals',
+        description: 'Add multiple contribution schedules and withdrawal events throughout the policy lifecycle. Model how additional premiums and systematic withdrawals impact cash value growth, income availability, and long-term policy performance.'
+      },
+      {
+        icon: icons.document,
+        title: 'Integrated Portfolio Simulations',
+        description: 'Run side-by-side comparisons of annuity strategies versus portfolio-based approaches. Show clients how guaranteed income from annuities complements market-based investments, with clear visualizations of risk-adjusted returns and income certainty.'
+      }
+    ],
+    dashboardImage: '/images/product_screenshots/custom_security_builder_performance_v2_2025-11-11.png',
+    dashboardImageAlt: 'Annuity performance modeling showing IRR, TVPI, DPI, RVPI metrics and historical returns',
+
+    // Productivity Section
+    productivityTitle: 'Insurance + Investments, Unified',
+    productivityDescription: 'Stop juggling separate systems for insurance and investment planning.',
+    stats: [
+      { value: '90%', label: 'Time saved vs. manual spreadsheet calculations' },
+      { value: '5 min', label: 'To model complex annuity scenarios' }
     ]
   }
 

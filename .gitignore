@@ -43,3 +43,27 @@ temp_blog_delete/
 # Large files (over 100MB)
 docs/ai-cmo/research/courses/*.pdf
 
+# ===================================
+# Internal Documentation & Strategy
+# (NOT for public GitHub repo)
+# ===================================
+
+# All AI-CMO documentation, strategy, and research
+docs/
+
+# All reports (analytics, audits, validation)
+reports/
+
+# Google Analytics MCP server (internal tooling)
+google-analytics-mcp/
+
+# Service account keys and credentials
+ga4-service-account-key.json
+*-service-account-key.json
+
+# Internal project planning
+project.plan.md
+
+# Any .cursor directory (if exists)
+.cursor/
+
