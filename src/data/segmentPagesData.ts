@@ -529,7 +529,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
         bulletPoints: [
           { text: '<strong>AI scans both US and Canadian statements</strong> – Upload PDFs from any North American brokerage. Our AI extracts holdings, allocations, and cost basis in seconds—whether it\'s in USD or CAD' },
           { text: '<strong>Multi-currency portfolio tracking</strong> – View consolidated portfolios with automatic CAD/USD conversion. Track currency exposure and see true asset allocation across both countries' },
-          { text: '<strong>Connect 15,000+ institutions</strong> – Direct integration with major US and Canadian banks, brokerages, and custodians. Real-time syncing of checking, savings, investment, and retirement accounts' }
+          { text: '<strong>Unified data management</strong> – Manage all client holdings in one platform regardless of where accounts are custodied. No more switching between US and Canadian systems to see the full picture' }
         ],
         image: '/images/product_screenshots/statement_scanner_output_v3_2025-11-11.png',
         imageAlt: 'AI statement scanner extracting holdings from both US and Canadian brokerage statements with multi-currency support',
@@ -543,7 +543,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
         bulletPoints: [
           { text: '<strong>Unified multi-asset portfolio construction</strong> – Build portfolios with US equities, Canadian equities, ETFs from both countries, alternatives, and annuities. All in one optimization engine' },
           { text: '<strong>Account-type aware modeling</strong> – Properly handle RRSPs, TFSAs, RESPs, 401(k)s, IRAs, and taxable accounts. Understand which securities work in which account types to avoid PFIC issues' },
-          { text: '<strong>Currency risk analysis</strong> – Track CAD/USD exposure across the portfolio. Model currency hedging strategies and understand how FX movements impact returns' }
+          { text: '<strong>Currency exposure tracking</strong> – Track CAD/USD exposure across the portfolio. See true asset allocation and performance across both currencies' }
         ],
         image: '/images/product_screenshots/client_overview_performance_v1_2025-11-14.png',
         imageAlt: 'Cross-border portfolio dashboard showing unified US and Canadian holdings with multi-currency performance tracking',
@@ -553,11 +553,11 @@ export const segmentPages: Record<string, SegmentPageProps> = {
         id: 'compliance',
         sectionHeader: 'Compliance & Proposals',
         title: 'Generate Cross-Border Compliant Proposals and Documentation',
-        description: 'Your proposals and IPS documents need to address dual-country tax implications, residency considerations, and estate planning complexities. Investipal generates everything automatically—with cross-border considerations built in. No more generic templates that miss critical details.',
+        description: 'Your proposals and IPS documents need to address dual-country tax implications and account-type complexities. Investipal\'s AI helps you generate professional documentation that you can customize with cross-border considerations. No more starting from scratch.',
         bulletPoints: [
           { text: '<strong>Cross-border aware proposals</strong> – Generate professional proposals that address US-Canada tax treaty implications, currency risk, and account-type considerations. AI writes compelling narratives in minutes' },
-          { text: '<strong>IPS with dual-country compliance</strong> – Create Investment Policy Statements that document cross-border strategy, residency assumptions, and tax planning considerations. One-click generation from portfolio data' },
-          { text: '<strong>Reg BI and Canadian compliance</strong> – Automated Regulation Best Interest documentation for US clients. Track substantial presence test days for snowbirds. Document suitability across both jurisdictions' }
+          { text: '<strong>IPS generation</strong> – Create Investment Policy Statements from portfolio data. Customize to document cross-border strategy and tax planning considerations specific to your clients' },
+          { text: '<strong>Reg BI documentation</strong> – Automated Regulation Best Interest documentation for US clients. Document suitability and compliance requirements across both jurisdictions' }
         ],
         image: '/images/product_screenshots/proposal_cover_page_v3_2025-11-14.png',
         imageAlt: 'Professional branded investment proposal with cross-border portfolio analysis and dual-currency reporting',
@@ -571,7 +571,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
         bulletPoints: [
           { text: '<strong>One portal for complete onboarding</strong> – Configure your workflow once: risk assessment, statement upload (US and Canadian), AML verification, tax residency documentation, and advisory agreement signing' },
           { text: '<strong>Built-in e-signature and ID verification</strong> – Clients sign documents right in the portal. Scan driver\'s licenses (US or Canadian) and cross-check with OFAC automatically. No DocuSign, no extra logins' },
-          { text: '<strong>Residency tracking built-in</strong> – Track substantial presence test days for snowbirds. Document tax residency status. Ensure clients understand implications of spending too much time in either country' }
+          { text: '<strong>Tax status and residency documentation</strong> – Collect tax residency information and citizenship status during onboarding. Store client tax status to inform portfolio construction and account-type decisions' }
         ],
         image: '/images/product_screenshots/client_onboarding_portal_v3_2025-11-11.png',
         imageAlt: 'Client onboarding portal with cross-border workflow including dual-country documentation and compliance',
@@ -595,7 +595,7 @@ export const segmentPages: Record<string, SegmentPageProps> = {
     faqs: [
       {
         question: "How does Investipal handle multi-currency portfolios?",
-        answer: "Investipal automatically tracks holdings in both USD and CAD with real-time currency conversion. You can view consolidated portfolios in either currency, track currency exposure across accounts, and analyze how FX movements impact returns. All portfolio analytics, risk metrics, and performance reporting work seamlessly across both currencies."
+        answer: "Investipal automatically tracks holdings in both USD and CAD with real-time currency conversion. You can view consolidated portfolios in either currency and track currency exposure across accounts. All portfolio analytics, risk metrics, and performance reporting work seamlessly across both currencies."
       },
       {
         question: "Can Investipal scan statements from Canadian brokerages?",
@@ -606,32 +606,12 @@ export const segmentPages: Record<string, SegmentPageProps> = {
         answer: "Investipal recognizes all Canadian registered accounts (RRSPs, TFSAs, RESPs, RRIFs) and US retirement accounts (401(k)s, IRAs, Roth IRAs). The platform tracks which securities are held in which account types, helping you avoid PFIC issues with Canadian mutual funds in US taxable accounts. Portfolio optimization considers account-type tax implications."
       },
       {
-        question: "Does Investipal help with PFIC reporting and cross-border tax compliance?",
-        answer: "While Investipal doesn't file tax forms, it helps you identify potential PFIC issues by flagging Canadian mutual funds and ETFs held in US taxable accounts. The platform tracks which holdings may require Form 8621 reporting. For snowbirds, you can track days spent in each country to monitor substantial presence test compliance. All data exports to your tax preparer."
-      },
-      {
         question: "Can I generate proposals that address cross-border tax implications?",
         answer: "Yes. Investipal's AI can generate proposal narratives that address US-Canada tax treaty considerations, currency risk, account-type suitability, and estate planning implications. You can customize AI prompts to include specific cross-border talking points. All proposals can be branded with your firm's logo and colors."
       },
       {
-        question: "How does Investipal handle currency risk in portfolio analysis?",
-        answer: "Investipal tracks currency exposure across your entire portfolio and shows how much of your client's wealth is denominated in USD vs CAD. You can model currency hedging strategies, analyze historical currency impact on returns, and run scenarios showing how FX movements affect portfolio values. All risk analytics account for currency volatility."
-      },
-      {
-        question: "Can I track substantial presence test days for snowbird clients?",
-        answer: "Yes. Investipal includes residency tracking features where you can log days spent in the US vs Canada. The platform calculates substantial presence test compliance (183-day rule) and alerts you when clients are approaching thresholds. This helps snowbirds avoid unintentional US tax residency and maintain Canadian provincial health coverage."
-      },
-      {
-        question: "Does Investipal integrate with Canadian custodians and CRMs?",
-        answer: "Investipal integrates with major North American custodians including Canadian Imperial Bank of Commerce (CIBC), National Bank of Canada, and all major US custodians (Schwab, Fidelity, TD Ameritrade, Pershing). CRM integrations include Salesforce, Redtail, Wealthbox, and Junxure. Direct data feeds eliminate manual entry."
-      },
-      {
-        question: "How does Investipal handle estate planning for cross-border clients?",
-        answer: "Investipal's IPS generator can document estate planning considerations including US estate tax exposure for Canadian residents with US assets, deemed disposition rules in Canada, and cross-border trust structures. While Investipal doesn't provide legal advice, it helps you document the estate planning strategy in client-facing documents and track which assets are subject to which country's rules."
-      },
-      {
         question: "What makes Investipal different from other platforms for cross-border wealth?",
-        answer: "Most wealth management platforms are built for either the US or Canada—not both. Investipal is one of the only platforms that natively handles multi-currency portfolios, aggregates statements from both countries, understands both US and Canadian account types, and generates compliance documentation that addresses dual-country considerations. You get one unified platform instead of juggling separate US and Canadian tools."
+        answer: "Most wealth management platforms are built for either the US or Canada—not both. Investipal is one of the only platforms that natively handles multi-currency portfolios, aggregates statements from both countries, and understands both US and Canadian account types. You get one unified platform instead of juggling separate US and Canadian tools."
       }
     ]
   }
