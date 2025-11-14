@@ -24,7 +24,8 @@
     "fix:semantic-links": "node --experimental-modules scripts/semantic-link-fix.mjs",
     "audit:parity": "node scripts/url-parity-audit.mjs --prod https://investipal.co/sitemap-index.xml --staging dist/sitemap-index.xml --out reports",
     "audit:redirects": "node scripts/redirect-check.mjs --map redirect_map.csv",
-    "redirects:port": "node scripts/port-astro-redirects-to-swa.mjs"
+    "redirects:port": "node scripts/port-astro-redirects-to-swa.mjs",
+    "optimize:images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^1.1.5",

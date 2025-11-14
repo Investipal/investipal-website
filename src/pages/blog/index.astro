@@ -447,11 +447,6 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
     const postsPerPage = postsPerPageCount;
     let currentFilter = 'all';
     
-    // Check URL parameters for filters
-    const urlParams = new URLSearchParams(window.location.search);
-    const categoryFilter = urlParams.get('category');
-    const tagFilter = urlParams.get('tag');
-    
     // Add CSS transitions for smooth animations
     const articlesGrid = document.getElementById('articles-grid');
     if (articlesGrid) {
@@ -462,6 +457,162 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
     if (sectionTitle) {
       sectionTitle.style.transition = 'opacity 0.2s ease';
     }
+    
+    // Helper function to create blog card HTML - DEFINED BEFORE USE
+    function createBlogCard(post) {
+      const formatDate = (dateString) => {
+        return new Date(dateString).toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'short', 
+          day: 'numeric' 
+        });
+      };
+      
+      const formatCategoryUrl = (cat) => cat.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+      
+      return `
+        <article class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-200 hover:border-violet-300">
+          <div class="relative">
+            <a href="/blog/${post.id.replace('.md', '')}" class="blog-card-link">
+              <img 
+                src="${post.data.featuredImage}"
+                alt="${post.data.featuredImageAlt || post.data.title}"
+                class="w-full h-48 object-cover group-hover:scale-105 transition-all duration-700 ease-out"
+                onerror="this.onerror=null;this.src='/images/blog/placeholder.svg'"
+              />
+            </a>
+            <div class="absolute top-4 left-4">
+              <div class="inline-flex items-center px-3 py-1 text-xs font-semibold bg-violet-600 text-white rounded-full">
+                ${post.data.category}
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3 line-clamp-2 leading-tight">
+              <a href="/blog/${post.id.replace('.md', '')}" class="blog-card-link hover:text-violet-600 transition-colors">
+                ${post.data.title}
+              </a>
+            </h3>
+            <p class="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
+              ${post.data.excerpt}
+            </p>
+            
+            <div class="flex items-center justify-between text-sm">
+              <div class="flex items-center space-x-3">
+                ${post.data.authorImage ? `
+                  <img 
+                    src="${post.data.authorImage}" 
+                    alt="${post.data.author}"
+                    class="w-8 h-8 rounded-full object-cover"
+                  />
+                ` : ''}
+                <div>
+                  <p class="font-medium text-gray-900">${post.data.author}</p>
+                  <p class="text-gray-500">${formatDate(post.data.publishedDate)}</p>
+                </div>
+              </div>
+              <span class="text-violet-600 font-medium">${post.data.readingTime} min read</span>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+    
+    // Function to filter and display posts - DEFINED BEFORE USE
+    function filterPosts(filterType, filterValue) {
+      console.log('Blog: Filtering posts by', filterType, ':', filterValue);
+      let filteredPosts = [];
+      
+      if (filterType === 'all') {
+        filteredPosts = allOtherPostsData;
+      } else if (filterType === 'category') {
+        filteredPosts = allOtherPostsData.filter(post => 
+          formatCategoryUrl(post.data.category) === filterValue
+        );
+      } else if (filterType === 'tag') {
+        filteredPosts = allOtherPostsData.filter(post => 
+          post.data.tags?.some(tag => 
+            formatTagUrl(tag) === filterValue
+          )
+        );
+      }
+      
+      console.log('Blog: Found', filteredPosts.length, 'posts for filter');
+      
+      // Add fade out animation
+      articlesGrid.style.opacity = '0';
+      articlesGrid.style.transform = 'translateY(20px)';
+      
+      setTimeout(() => {
+        // Clear current articles
+        articlesGrid.innerHTML = '';
+        
+        // Add filtered articles with staggered animation
+        if (filteredPosts.length > 0) {
+          filteredPosts.forEach((post, index) => {
+            const postCard = createBlogCard(post);
+            articlesGrid.insertAdjacentHTML('beforeend', postCard);
+            
+            // Add staggered entrance animation
+            const newCard = articlesGrid.lastElementChild;
+            newCard.style.opacity = '0';
+            newCard.style.transform = 'translateY(20px)';
+            newCard.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+            
+            setTimeout(() => {
+              newCard.style.opacity = '1';
+              newCard.style.transform = 'translateY(0)';
+            }, index * 100); // Stagger each card by 100ms
+          });
+          
+          // Update section title with smooth transition
+          const sectionTitle = document.querySelector('#all-articles h2');
+          sectionTitle.style.opacity = '0';
+          setTimeout(() => {
+            if (filterType === 'all') {
+              sectionTitle.textContent = 'All Articles';
+            } else if (filterType === 'category') {
+              const categoryName = document.querySelector(`[data-filter="${filterValue}"]`)?.dataset.category || filterValue;
+              sectionTitle.textContent = `Articles in "${categoryName}"`;
+            } else if (filterType === 'tag') {
+              const tagName = document.querySelector(`[data-filter="${filterValue}"]`)?.dataset.tag || filterValue;
+              sectionTitle.textContent = `Articles tagged "${tagName}"`;
+            }
+            sectionTitle.style.opacity = '1';
+          }, 100);
+          
+          // Hide load more buttons when filtering
+          const loadMoreSection = document.querySelector('.text-center:has(#load-more-btn)');
+          if (loadMoreSection) {
+            loadMoreSection.style.display = 'none';
+          }
+        } else {
+          articlesGrid.innerHTML = `
+            <div class="col-span-full text-center py-12">
+              <div class="max-w-md mx-auto">
+                <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.47-.881-6.08-2.33"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">No articles found</h3>
+                <p class="text-gray-600">Try selecting a different category or tag.</p>
+              </div>
+            </div>
+          `;
+        }
+        
+        // Fade in animation
+        articlesGrid.style.opacity = '1';
+        articlesGrid.style.transform = 'translateY(0)';
+      }, 150);
+    }
+    
+    // Check URL parameters for filters
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryFilter = urlParams.get('category');
+    const tagFilter = urlParams.get('tag');
     
     // Apply URL-based filters on page load
     if (categoryFilter) {
@@ -603,96 +754,6 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
     
     // Smooth scrolling is handled by anchor href="#all-articles"
     
-    // Function to filter and display posts
-    function filterPosts(filterType, filterValue) {
-      console.log('Blog: Filtering posts by', filterType, ':', filterValue);
-      let filteredPosts = [];
-      
-      if (filterType === 'all') {
-        filteredPosts = allOtherPostsData;
-      } else if (filterType === 'category') {
-        filteredPosts = allOtherPostsData.filter(post => 
-          formatCategoryUrl(post.data.category) === filterValue
-        );
-      } else if (filterType === 'tag') {
-        filteredPosts = allOtherPostsData.filter(post => 
-          post.data.tags?.some(tag => 
-            formatTagUrl(tag) === filterValue
-          )
-        );
-      }
-      
-      console.log('Blog: Found', filteredPosts.length, 'posts for filter');
-      
-      // Add fade out animation
-      articlesGrid.style.opacity = '0';
-      articlesGrid.style.transform = 'translateY(20px)';
-      
-      setTimeout(() => {
-        // Clear current articles
-        articlesGrid.innerHTML = '';
-        
-        // Add filtered articles with staggered animation
-        if (filteredPosts.length > 0) {
-          filteredPosts.forEach((post, index) => {
-            const postCard = createBlogCard(post);
-            articlesGrid.insertAdjacentHTML('beforeend', postCard);
-            
-            // Add staggered entrance animation
-            const newCard = articlesGrid.lastElementChild;
-            newCard.style.opacity = '0';
-            newCard.style.transform = 'translateY(20px)';
-            newCard.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-            
-            setTimeout(() => {
-              newCard.style.opacity = '1';
-              newCard.style.transform = 'translateY(0)';
-            }, index * 100); // Stagger each card by 100ms
-          });
-          
-          // Update section title with smooth transition
-          const sectionTitle = document.querySelector('#all-articles h2');
-          sectionTitle.style.opacity = '0';
-          setTimeout(() => {
-            if (filterType === 'all') {
-              sectionTitle.textContent = 'All Articles';
-            } else if (filterType === 'category') {
-              const categoryName = document.querySelector(`[data-filter="${filterValue}"]`).dataset.category;
-              sectionTitle.textContent = `Articles in "${categoryName}"`;
-            } else if (filterType === 'tag') {
-              const tagName = document.querySelector(`[data-filter="${filterValue}"]`).dataset.tag;
-              sectionTitle.textContent = `Articles tagged "${tagName}"`;
-            }
-            sectionTitle.style.opacity = '1';
-          }, 100);
-          
-          // Hide load more buttons when filtering
-          const loadMoreSection = document.querySelector('.text-center:has(#load-more-btn)');
-          if (loadMoreSection) {
-            loadMoreSection.style.display = 'none';
-          }
-        } else {
-          articlesGrid.innerHTML = `
-            <div class="col-span-full text-center py-12">
-              <div class="max-w-md mx-auto">
-                <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.47-.881-6.08-2.33"></path>
-                  </svg>
-                </div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">No articles found</h3>
-                <p class="text-gray-600">Try selecting a different category or tag.</p>
-              </div>
-            </div>
-          `;
-        }
-        
-        // Fade in animation
-        articlesGrid.style.opacity = '1';
-        articlesGrid.style.transform = 'translateY(0)';
-      }, 150);
-    }
-    
     // Dynamic filtering functionality
     const filterBtns = document.querySelectorAll('.filter-btn');
     const tagFilterBtns = document.querySelectorAll('.tag-filter-btn');
@@ -779,67 +840,6 @@ const formatTagUrl = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
       });
     });
   });
-  
-  // Helper function to create blog card HTML
-  function createBlogCard(post) {
-    const formatDate = (dateString) => {
-      return new Date(dateString).toLocaleDateString('en-US', { 
-        year: 'numeric', 
-        month: 'short', 
-        day: 'numeric' 
-      });
-    };
-    
-    const formatCategoryUrl = (cat) => cat.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
-    
-    return `
-      <article class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-200 hover:border-violet-300">
-        <div class="relative">
-          <a href="/blog/${post.id.replace('.md', '')}" class="blog-card-link">
-            <img 
-              src="${post.data.featuredImage}"
-              alt="${post.data.featuredImageAlt || post.data.title}"
-              class="w-full h-48 object-cover group-hover:scale-105 transition-all duration-700 ease-out"
-              onerror="this.onerror=null;this.src='/images/blog/placeholder.svg'"
-            />
-          </a>
-          <div class="absolute top-4 left-4">
-            <div class="inline-flex items-center px-3 py-1 text-xs font-semibold bg-violet-600 text-white rounded-full">
-              ${post.data.category}
-            </div>
-          </div>
-        </div>
-        
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-gray-900 mb-3 line-clamp-2 leading-tight">
-            <a href="/blog/${post.id.replace('.md', '')}" class="blog-card-link hover:text-violet-600 transition-colors">
-              ${post.data.title}
-            </a>
-          </h3>
-          <p class="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
-            ${post.data.excerpt}
-          </p>
-          
-          <div class="flex items-center justify-between text-sm">
-            <div class="flex items-center space-x-3">
-              ${post.data.authorImage ? `
-                <img 
-                  src="${post.data.authorImage}" 
-                  alt="${post.data.author}"
-                  class="w-8 h-8 rounded-full object-cover"
-                />
-              ` : ''}
-              <div>
-                <p class="font-medium text-gray-900">${post.data.author}</p>
-                <p class="text-gray-500">${formatDate(post.data.publishedDate)}</p>
-              </div>
-            </div>
-            <span class="text-violet-600 font-medium">${post.data.readingTime} min read</span>
-          </div>
-        </div>
-      </article>
-    `;
-  }
 </script>
 
 <style>
