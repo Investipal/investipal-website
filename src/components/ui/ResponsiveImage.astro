@@ -1,0 +1,86 @@
+---
+/**
+ * Responsive Image Component
+ * 
+ * Automatically serves optimized images based on device size
+ * Includes WebP support with PNG/JPG fallback
+ * 
+ * Usage:
+ * <ResponsiveImage 
+ *   src="/images/product_screenshots/proposal_cover_page_v3_2025-11-14.png"
+ *   alt="Generate proposals"
+ *   width={1200}
+ *   height={675}
+ *   loading="lazy"
+ * />
+ */
+
+interface Props {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  class?: string;
+  sizes?: string;
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  loading = 'lazy',
+  fetchpriority = 'auto',
+  class: className = '',
+  sizes = '(max-width: 640px) 100vw, (max-width: 1024px) 768px, 1200px'
+} = Astro.props;
+
+// Generate responsive image sources
+const basePath = src.replace(/\.(png|jpg|jpeg)$/i, '');
+const ext = src.match(/\.(png|jpg|jpeg)$/i)?.[1] || 'png';
+
+// Check if optimized versions exist (WebP)
+const webpMobile = `${basePath}-mobile.webp`;
+const webpTablet = `${basePath}-tablet.webp`;
+const webpDesktop = `${basePath}-desktop.webp`;
+
+// Fallback to original if optimized versions don't exist
+const hasSrcset = src.includes('product_screenshots') || src.includes('external');
+---
+
+{hasSrcset ? (
+  <picture>
+    <!-- WebP versions for modern browsers -->
+    <source
+      type="image/webp"
+      srcset={`${webpMobile} 380w, ${webpTablet} 768w, ${webpDesktop} 1200w`}
+      sizes={sizes}
+    />
+    
+    <!-- Fallback to original format -->
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      loading={loading}
+      fetchpriority={fetchpriority}
+      decoding="async"
+      class={className}
+    />
+  </picture>
+) : (
+  <img
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={loading}
+    fetchpriority={fetchpriority}
+    decoding="async"
+    class={className}
+  />
+)}
+
