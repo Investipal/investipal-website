@@ -1,0 +1,9 @@
+---
+import SegmentPageLayout from '../components/layouts/SegmentPageLayout.astro';
+import { segmentPages } from '../data/segmentPagesData';
+
+const segmentData = segmentPages['cross-border-wealth'];
+---
+
+<SegmentPageLayout {...segmentData} />
+
