@@ -403,7 +403,13 @@
   }
 
   // Initialize Reading Enhancements
-  document.addEventListener('DOMContentLoaded', () => {
+  function initReadingEnhancements() {
     new ReadingEnhancements();
-  });
+  }
+  
+  // Initialize on DOMContentLoaded (full page load)
+  document.addEventListener('DOMContentLoaded', initReadingEnhancements);
+  
+  // Initialize on Astro view transitions (client-side navigation)
+  document.addEventListener('astro:page-load', initReadingEnhancements);
 </script>
