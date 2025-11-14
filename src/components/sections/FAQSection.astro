@@ -1,0 +1,157 @@
+---
+/**
+ * FAQ Section Component
+ * Displays frequently asked questions in an accordion format
+ * Includes JSON-LD structured data for SEO
+ */
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  faqs: FAQItem[];
+}
+
+const {
+  title = "Frequently Asked Questions",
+  subtitle = "Have questions? We have answers.",
+  faqs
+} = Astro.props;
+
+// Generate FAQ structured data for SEO
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
+---
+
+<!-- FAQ Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(faqStructuredData)} />
+
+<section class="bg-white py-20 md:py-24">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+        {title}
+      </h2>
+      <p class="text-lg md:text-xl text-gray-600">
+        {subtitle}
+      </p>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="space-y-4">
+      {faqs.map((faq, index) => (
+        <div class="faq-item border border-gray-200 rounded-lg overflow-hidden hover:border-investipal-300 transition-colors duration-300">
+          <button
+            class="faq-question w-full text-left px-6 py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors duration-200"
+            aria-expanded="false"
+            aria-controls={`faq-answer-${index}`}
+          >
+            <span class="text-lg font-semibold text-gray-900 pr-8">
+              {faq.question}
+            </span>
+            <svg 
+              class="faq-icon w-6 h-6 text-investipal-600 flex-shrink-0 transition-transform duration-300"
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div 
+            id={`faq-answer-${index}`}
+            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+          >
+            <div class="px-6 py-5 bg-gray-50 border-t border-gray-200">
+              <p class="text-gray-700 leading-relaxed" set:html={faq.answer}></p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+      
+      if (!question || !answer || !icon) return;
+      
+      // Remove existing listeners to prevent duplicates
+      const newQuestion = question.cloneNode(true);
+      question.parentNode.replaceChild(newQuestion, question);
+      
+      newQuestion.addEventListener('click', () => {
+        const isExpanded = newQuestion.getAttribute('aria-expanded') === 'true';
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item) {
+            const otherQuestion = otherItem.querySelector('.faq-question');
+            const otherAnswer = otherItem.querySelector('.faq-answer');
+            const otherIcon = otherItem.querySelector('.faq-icon');
+            
+            if (otherQuestion && otherAnswer && otherIcon) {
+              otherQuestion.setAttribute('aria-expanded', 'false');
+              otherAnswer.style.maxHeight = '0';
+              otherIcon.style.transform = 'rotate(0deg)';
+            }
+          }
+        });
+        
+        // Toggle current FAQ
+        if (isExpanded) {
+          newQuestion.setAttribute('aria-expanded', 'false');
+          answer.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          newQuestion.setAttribute('aria-expanded', 'true');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+  }
+
+  // Initialize on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFAQ);
+  } else {
+    initFAQ();
+  }
+  
+  // Re-initialize on Astro page transitions
+  document.addEventListener('astro:page-load', initFAQ);
+</script>
+
+<style>
+  .faq-answer {
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .faq-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+</style>
+
