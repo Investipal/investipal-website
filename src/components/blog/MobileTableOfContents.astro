@@ -536,7 +536,13 @@ const { headings = [], readingTime = 8 } = Astro.props;
   }
 
   // Initialize Mobile TOC when DOM is loaded
-  document.addEventListener('DOMContentLoaded', () => {
+  function initMobileTOC() {
     new MobileTableOfContents();
-  });
+  }
+  
+  // Initialize on DOMContentLoaded (full page load)
+  document.addEventListener('DOMContentLoaded', initMobileTOC);
+  
+  // Initialize on Astro view transitions (client-side navigation)
+  document.addEventListener('astro:page-load', initMobileTOC);
 </script>

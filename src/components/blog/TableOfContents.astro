@@ -579,7 +579,13 @@ const { headings = [], readingTime = 8 } = Astro.props;
   }
 
   // Initialize TOC when DOM is loaded
-  document.addEventListener('DOMContentLoaded', () => {
+  function initTOC() {
     new TableOfContents();
-  });
+  }
+  
+  // Initialize on DOMContentLoaded (full page load)
+  document.addEventListener('DOMContentLoaded', initTOC);
+  
+  // Initialize on Astro view transitions (client-side navigation)
+  document.addEventListener('astro:page-load', initTOC);
 </script>
