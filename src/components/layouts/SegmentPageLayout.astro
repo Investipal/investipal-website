@@ -11,6 +11,7 @@ import CookieBanner from '../ui/CookieBanner.astro';
 import Breadcrumb from '../ui/Breadcrumb.astro';
 import StandardButton from '../ui/StandardButton.astro';
 import PageHeroSection from '../sections/PageHeroSection.astro';
+import FAQSection from '../sections/FAQSection.astro';
 
 export interface Props {
   // SEO Meta
@@ -48,6 +49,12 @@ export interface Props {
     value: string;
     label: string;
   }>;
+
+  // FAQ Section
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
 }
 
 const {
@@ -62,7 +69,8 @@ const {
   mainTitle,
   mainSubtitle,
   sections,
-  productivityStats
+  productivityStats,
+  faqs
 } = Astro.props;
 
 // Generate structured data for the segment
@@ -315,6 +323,9 @@ const breadcrumbItems = [
         
       </div>
     </section>
+
+    <!-- FAQ Section -->
+    <FAQSection faqs={faqs} />
 
     <!-- Standard Footer Sections -->
     <SecuritySection />

@@ -200,50 +200,50 @@ export const featurePages = {
 
   'client-acquisition': {
     // SEO Meta
-    pageTitle: 'Client Acquisition Automation | Financial Advisor Sales | Investipal',
-    pageDescription: 'Automate your client acquisition process. Risk assessment, portfolio analysis, and proposal generation powered by AI.',
-    keywords: 'client acquisition automation, financial advisor sales software, automated proposals, risk assessment tools, prospect conversion',
+    pageTitle: 'Investment Proposal Software | AI Proposal Generator | Investipal',
+    pageDescription: 'Generate professional investment proposals in minutes with AI. Custom branding, portfolio analysis charts, and AI-powered content generation. Close deals 3x faster with personalized proposals.',
+    keywords: 'investment proposal software, financial advisor proposal generator, AI proposal writing, branded investment proposals, automated proposal generation, wealth management proposals, RIA proposal software, custom investment proposals',
 
     // Hero Section
-    audienceText: 'For Advisors & Planners',
-    featureName: 'Sales Enablement Platform',
-    title: 'Automate Your Client Acquisition Process with AI',
-    subtitle: 'From risk assessment to portfolio analysis and personalized proposals, Investipal empowers advisors to focus on building relationships and growing their practice.',
-    heroImage: '/images/external/66e49de3e0861a7034eb995e_investment-proposal-generator.png',
-    heroImageAlt: 'MacBook mockup showing investment proposal generator interface',
+    audienceText: 'For All Financial Advisors',
+    featureName: 'Investment Proposal Generator',
+    title: 'Generate Professional Investment Proposals in Under 10 Minutes',
+    subtitle: 'Create stunning, branded proposals with portfolio analysis, AI-generated content, and full customization. Run the analysis, let AI write the narrative, customize your message, and deliver a proposal that wins the business—all in one seamless workflow.',
+    heroImage: '/images/product_screenshots/proposal_cover_page_v3_2025-11-14.png',
+    heroImageAlt: 'Professional branded investment proposal cover page with custom branding and client details',
 
     // Features Section (2x2 grid)
     features: [
       {
+        icon: icons.document,
+        title: 'Fully Branded Proposals',
+        description: 'Customize every proposal with your logo, brand colors, and custom cover images. Every proposal reflects your brand and positions you as the premium choice. No design skills required—just customize the branding settings once and generate unlimited branded proposals.'
+      },
+      {
         icon: icons.speed,
-        title: 'Automated Risk Tolerance Questionnaire (RTQ)',
-        description: 'Our 3-factor risk questionnaire assesses risk capacity, behavioral characteristics and current portfolio risk to generate a risk tolerance score, and flags potential discrepancies to support strategy selection.'
+        title: 'AI Writes Your Proposal Content',
+        description: 'AI analyzes the portfolio comparison and generates compelling narratives explaining why your recommended strategy is superior. Customize the AI prompts to match your voice and messaging. Edit the output directly in the proposal—or let AI handle it entirely.'
       },
       {
         icon: icons.analysis,
-        title: 'AI Brokerage Statement Data Extraction & Analysis',
-        description: 'Leverage Optical Character Recognition (OCR) and AI to completely automate client brokerage account statements data extraction, validation and analysis.'
-      },
-      {
-        icon: icons.shield,
-        title: 'Automated Comparative Portfolio Analysis',
-        description: 'Utilize an advanced backtesting engine for a comprehensive and instant comparison of model(s) to client portfolio, enabling you to quickly identify optimal strategies, streamline decision-making, and win the business.'
+        title: 'Automatic Portfolio Analysis Charts',
+        description: 'Every proposal includes professional charts comparing current vs. recommended portfolios: asset allocation, risk metrics, historical performance, geographic exposure, and more. Charts are auto-generated from your analysis—no manual work required.'
       },
       {
         icon: icons.monitoring,
-        title: 'Automated Investment Proposal Generation',
-        description: 'Create personalized investment proposals instantly, giving you more time to focus on building relationships.'
+        title: 'Complete Workflow Integration',
+        description: 'Run portfolio comparison or goal-based analysis, generate the proposal, customize content, and deliver—all in one platform. Add compliance documentation (IPS, Reg BI) with one click. Send the proposal and onboarding link together to close deals faster.'
       }
     ],
-    dashboardImage: '/images/external/66e49e9b47b74cbcf82ad5a2_portfolio-comparison-1.png',
-    dashboardImageAlt: 'Dashboard mockup showing portfolio comparison interface',
+    dashboardImage: '/images/product_screenshots/proposal_text_editor_v1_2025-11-14.png',
+    dashboardImageAlt: 'Proposal editor showing AI-generated content with portfolio analysis charts and customizable text sections',
 
     // Productivity Section
-    productivityTitle: 'Better operations and smarter resource utilization.',
-    productivityDescription: 'Free up your time to spend on higher-value activities.',
+    productivityTitle: 'Close More Deals with Less Effort',
+    productivityDescription: 'Stop spending hours building proposals in PowerPoint. Generate professional, personalized investment proposals in minutes and focus on what matters—winning the business.',
     stats: [
-      { value: '4x', label: 'Faster than traditional sales processes. Do in 1 day what used to take 4 weeks.' },
-      { value: '70%', label: 'Cost savings versus comparative tech stack' }
+      { value: '10 min', label: 'Average time to complete a full proposal' },
+      { value: '3x', label: 'Faster close rates vs. generic presentations' }
     ]
   },
 
@@ -544,38 +544,38 @@ export const featurePages = {
   'alternatives-modeling': {
     // SEO Meta
     pageTitle: 'Alternative Investment Portfolio Management Software | Private Markets Platform | Investipal',
-    pageDescription: 'Manage complex private market portfolios without an army of analysts. Track capital calls, model cash flows, and monitor performance across 100+ private investments in one platform. Built for family offices managing $500M+.',
-    keywords: 'alternative investment modeling, private equity modeling, private credit analysis, capital call modeling, private market portfolio, institutional portfolio construction, alternatives portfolio management, private markets software',
+    pageDescription: 'Build and analyze portfolios with private market investments. Access our database of private equity, private credit, and real assets with risk/return/performance metrics—or model custom alternatives. Institutional-grade portfolio construction for family offices and RIAs.',
+    keywords: 'alternative investment modeling, private equity modeling, private credit analysis, private market portfolio, institutional portfolio construction, alternatives portfolio management, private markets software, alternatives database, private equity performance tracking',
 
     // Hero Section
     audienceText: 'For Family Offices & Alt-Heavy RIAs',
     featureName: 'Alternatives Portfolio Management',
-    title: 'Manage Complex Private Market Portfolios Without an Army of Analysts',
-    subtitle: 'Already won the client? Now manage their alternatives portfolio with precision. Stop reconciling capital calls across 20 Excel files. Track private equity, private credit, real assets, venture, and hedge strategies in one platform. Model capital calls, cash flows, waterfall structures, and performance metrics—from deal-level detail to total portfolio view.',
+    title: 'Build and Analyze Portfolios with Private Market Investments',
+    subtitle: 'Access our database of private equity, private credit, real assets, and venture investments with tracked risk/return/performance metrics. Don\'t see what you need? Model custom alternatives with our flexible security builder. Analyze portfolios across all asset classes with unified risk assessment, performance tracking, and portfolio comparison tools.',
     heroImage: '/images/product_screenshots/client_overview_performance_v1_2025-11-14.png',
     heroImageAlt: 'Client portfolio overview showing household asset allocation and performance tracking with benchmark comparisons',
 
     // Features Section (2x2 grid)
     features: [
       {
-        icon: icons.optimization,
-        title: 'Never Miss a Capital Call Again',
-        description: 'Stop guessing when to reserve cash for capital calls. Model drawdowns, distributions, waterfall structures, and return sequencing with precision. Track commitment pacing and cash flow obligations across 100+ private investments. Get alerts before capital calls are due so you always have liquidity ready.'
+        icon: icons.portfolio,
+        title: 'Database of Private Market Securities',
+        description: 'Access our comprehensive database of private equity, private credit, real assets, and venture investments. Each security includes tracked risk/return/performance metrics, correlation data, and historical returns. Search by strategy, vintage, sector, or geography to find the right alternatives for your portfolios.'
       },
       {
-        icon: icons.portfolio,
+        icon: icons.optimization,
         title: 'Custom Private Security Builder',
-        description: 'Create custom securities for private equity funds, private credit, co-investments, evergreen structures, and fund-of-funds. Define return profiles, liquidity terms, fee structures, and correlation assumptions. Model any private investment structure—no matter how complex.'
+        description: 'Model custom alternatives not in our database. Create securities for private equity funds, private credit, co-investments, evergreen structures, and fund-of-funds. Define return profiles, volatility assumptions, liquidity terms, fee structures, and correlation assumptions. Model any private investment structure.'
       },
       {
         icon: icons.analysis,
-        title: 'Advanced Scenario Analysis & Stress Testing',
-        description: 'Run stress tests for vintage risk, J-curve effects, correlation breakdowns, and liquidity crunches. See how private allocations perform when correlations break down or liquidity dries up. Compare alternative strategies vs. public market benchmarks to justify allocations.'
+        title: 'Multi-Asset Portfolio Analysis',
+        description: 'Analyze portfolios across all asset classes—equities, fixed income, alternatives, and annuities—in unified reports. Run portfolio comparison, Monte Carlo simulation, tax transition analysis, and risk assessment. See how private allocations impact overall portfolio risk/return profiles and compare alternative strategies vs. public market benchmarks.'
       },
       {
         icon: icons.monitoring,
-        title: 'Unified Performance Reporting',
-        description: 'Calculate true portfolio performance including both public and private assets in one view. Track IRR, TVPI, DPI, RVPI, and time-weighted returns across the entire portfolio with accurate cash flow accounting and quarterly valuation updates. No more separate reporting systems.'
+        title: 'Unified Performance Tracking',
+        description: 'Track portfolio performance including both public and private assets in one view. Monitor risk metrics, asset allocation, and performance attribution across all asset classes. Calculate IRR, TVPI, DPI, RVPI, and time-weighted returns with accurate performance tracking for alternatives alongside traditional investments.'
       }
     ],
     dashboardImage: '/images/external/67a0fa5860e896984e58e055_screenshot-2025-02-03-121808.png',
@@ -583,10 +583,10 @@ export const featurePages = {
 
     // Productivity Section
     productivityTitle: 'Perfect for: Multi-Family Offices Managing $500M+, RIAs with 20%+ Alternatives, Endowments & Foundations',
-    productivityDescription: 'Deliver institutional-grade alternatives management without hiring a team of analysts. Track 100+ private investments simultaneously.',
+    productivityDescription: 'Build portfolios with alternatives using our database of private market securities—or model custom alternatives. Institutional-grade portfolio construction and analysis without hiring a team of analysts.',
     stats: [
       { value: '10x', label: 'Faster alternatives modeling vs. spreadsheets' },
-      { value: '100+', label: 'Private investments tracked simultaneously' }
+      { value: '100+', label: 'Private securities in our database' }
     ]
   },
 
@@ -636,6 +636,55 @@ export const featurePages = {
     stats: [
       { value: '90%', label: 'Time saved vs. manual spreadsheet calculations' },
       { value: '5 min', label: 'To model complex annuity scenarios' }
+    ]
+  },
+
+  'client-onboarding': {
+    // SEO Meta
+    pageTitle: 'Client Onboarding Software | Automated Onboarding | Investipal',
+    pageDescription: 'Streamline client onboarding with one secure link. Automated risk assessments, statement uploads, AML checks, e-signature, and advisory agreements. Complete onboarding in days, not weeks.',
+    keywords: 'client onboarding software, automated client onboarding, financial advisor onboarding, e-signature for advisors, AML verification, risk assessment automation, advisory agreement software, client intake automation, onboarding automation',
+
+    // Hero Section
+    audienceText: 'For All Financial Advisors',
+    featureName: 'Client Onboarding',
+    title: 'Onboard Clients in Days, Not Weeks—With One Secure Link',
+    subtitle: 'Send prospects one branded portal to complete everything: risk assessment, statement upload, AML verification, disclosures, and advisory agreement signing. Built-in e-signature. Zero back-and-forth emails. Complete onboarding 10x faster.',
+    heroImage: '/images/product_screenshots/client_onboarding_portal_v3_2025-11-11.png',
+    heroImageAlt: 'Client onboarding portal showing branded interface with risk assessment, document upload, and e-signature workflow',
+
+    // Features Section (2x2 grid)
+    features: [
+      {
+        icon: icons.optimization,
+        title: 'Configure Your Perfect Onboarding Workflow',
+        description: 'Choose what you need: risk assessment questionnaires, statement uploads, client information requests, AML/ID verification (scan driver\'s license, cross-check with OFAC), disclosure forms, and advisory agreements. Configure the order and what you collect—fully customizable to your process.'
+      },
+      {
+        icon: icons.shield,
+        title: 'One Secure, Branded Portal for Clients',
+        description: 'Send prospects one link to a secure, custom-branded portal. They complete everything in one place—on their phone or desktop. No app downloads, no account creation, no confusion. Just a clean, professional experience that reflects your brand.'
+      },
+      {
+        icon: icons.document,
+        title: 'Built-In E-Signature—No Third-Party Tools',
+        description: 'E-signature is built directly into the platform. Clients sign advisory agreements, disclosures, and compliance documents right in the portal. No DocuSign, no HelloSign, no extra logins. Track signature status in real-time and get instant notifications when complete.'
+      },
+      {
+        icon: icons.monitoring,
+        title: 'Complete Workflow Integration',
+        description: 'Use as a standalone onboarding tool—or as the final step in your Investipal sales workflow. Complete data intake, run analysis, generate a personalized proposal to win the business, create an IPS instantly, then send the onboarding portal for completion. All in one seamless workflow.'
+      }
+    ],
+    dashboardImage: '/images/product_screenshots/client_documents_esign_v1_2025-11-14.png',
+    dashboardImageAlt: 'Document management dashboard showing e-signature workflow and onboarding status tracking',
+
+    // Productivity Section
+    productivityTitle: 'Close Deals Faster and Onboard More Clients',
+    productivityDescription: 'Stop chasing clients for documents and signatures. Automate your entire onboarding process and focus on growing your practice.',
+    stats: [
+      { value: '10x', label: 'Faster onboarding vs. manual processes' },
+      { value: '90%', label: 'Reduction in back-and-forth emails' }
     ]
   }
 

@@ -1,0 +1,9 @@
+---
+import FeaturePageLayout from '../../components/layouts/FeaturePageLayout.astro';
+import { featurePages } from '../../data/featurePagesData';
+
+const featureData = featurePages['client-onboarding'];
+---
+
+<FeaturePageLayout {...featureData} />
+
