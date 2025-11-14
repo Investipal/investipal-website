@@ -424,6 +424,8 @@ const breadcrumbItems = [
     
     // Function to filter and display episodes - DEFINED BEFORE USE
     function filterEpisodes(filterType, filterValue) {
+      console.log('Podcast: filterEpisodes called with', filterType, filterValue);
+      console.log('Podcast: episodeCards count:', episodeCards.length);
       let visibleCount = 0;
       
       episodeCards.forEach(card => {
@@ -450,7 +452,7 @@ const breadcrumbItems = [
           if (filterType === 'all') {
             sectionTitle.textContent = 'All Episodes';
           } else if (filterType === 'category') {
-            const categoryName = document.querySelector(`[data-filter="${filterValue}"]`).dataset.category;
+            const categoryName = document.querySelector(`[data-filter="${filterValue}"]`)?.dataset.category || filterValue;
             sectionTitle.textContent = `Episodes in "${categoryName}"`;
           }
           sectionTitle.style.opacity = '1';
