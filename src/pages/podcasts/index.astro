@@ -422,36 +422,7 @@ const breadcrumbItems = [
     const sectionTitle = document.querySelector('#all-episodes h2');
     const episodesGrid = document.getElementById('episodes-grid');
     
-    // Check URL parameters for filters
-    const urlParams = new URLSearchParams(window.location.search);
-    const categoryFilter = urlParams.get('category');
-    
-    // Apply URL-based filters on page load
-    if (categoryFilter) {
-      const categoryBtn = document.querySelector(`[data-filter="${categoryFilter}"]`);
-      if (categoryBtn) {
-        // Update button states
-        filterBtns.forEach(b => {
-          b.classList.remove('bg-violet-600', 'text-white');
-          b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
-        });
-        categoryBtn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
-        categoryBtn.classList.add('bg-violet-600', 'text-white');
-        
-        // Apply filter
-        filterEpisodes('category', categoryFilter);
-        
-        // Scroll to episodes section
-        setTimeout(() => {
-          document.getElementById('all-episodes').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }, 100);
-      }
-    }
-    
-    // Function to filter and display episodes
+    // Function to filter and display episodes - DEFINED BEFORE USE
     function filterEpisodes(filterType, filterValue) {
       let visibleCount = 0;
       
@@ -508,6 +479,34 @@ const breadcrumbItems = [
         if (noResultsDiv) {
           noResultsDiv.remove();
         }
+      }
+    }
+    
+    // Check URL parameters for filters and apply on page load
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryFilter = urlParams.get('category');
+    
+    if (categoryFilter) {
+      const categoryBtn = document.querySelector(`[data-filter="${categoryFilter}"]`);
+      if (categoryBtn) {
+        // Update button states
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-violet-600', 'text-white');
+          b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+        });
+        categoryBtn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+        categoryBtn.classList.add('bg-violet-600', 'text-white');
+        
+        // Apply filter
+        filterEpisodes('category', categoryFilter);
+        
+        // Scroll to episodes section
+        setTimeout(() => {
+          document.getElementById('all-episodes').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 100);
       }
     }
     
