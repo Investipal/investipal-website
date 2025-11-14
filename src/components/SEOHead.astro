@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  type?: 'website' | 'article';
+  publishDate?: string;
+  author?: string;
+}
+
+const { title, description, ogImage, type = 'website', publishDate, author } = Astro.props;
+
+// Get the canonical URL
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+
+// Default OG image if none provided
+const defaultOGImage = new URL('/images/general/66706bb01b3b22fe098bb313_Personalized_portfolio_construction_(1).png', Astro.site).href;
+const imageUrl = ogImage ? new URL(ogImage, Astro.site).href : defaultOGImage;
+---
+
+<!-- Basic Meta Tags -->
+<title>{title}</title>
+<meta name="description" content={description}>
+<link rel="canonical" href={canonicalURL}>
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:url" content={canonicalURL}>
+<meta property="og:type" content={type}>
+<meta property="og:image" content={imageUrl}>
+<meta property="og:site_name" content="Investipal">
+
+<!-- Article-specific Open Graph tags -->
+{type === 'article' && publishDate && (
+  <>
+    <meta property="article:published_time" content={publishDate}>
+    {author && <meta property="article:author" content={author}>}
+  </>
+)}
+
