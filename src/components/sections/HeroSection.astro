@@ -4,6 +4,7 @@ import StandardButton from '../ui/StandardButton.astro';
 /**
  * HeroSection - Exact replica of the live Investipal hero section  
  * Features: Typing effect, real hero image, CTA button, and trust indicators
+ * Optimized with resource hints and proper loading attributes
  */
 ---
 
@@ -28,14 +29,17 @@ import StandardButton from '../ui/StandardButton.astro';
         </div>
       </div>
       
-      <!-- Hero Image - Real Investipal image from live site -->
+      <!-- Hero Image - Optimized with proper attributes -->
       <div class="relative order-first lg:order-last">
         <img 
           src="/images/external/68556380691d8adc81db4f23_untitled-design-17.png" 
-          alt="Investipal Dashboard" 
+          alt="Investipal Dashboard showing AI-powered portfolio management interface" 
           class="w-full h-auto max-w-md mx-auto lg:max-w-none"
-          width="1200" height="900"
-          loading="eager" fetchpriority="high" decoding="async"
+          width="1200" 
+          height="900"
+          loading="eager" 
+          fetchpriority="high" 
+          decoding="async"
         />
       </div>
     </div>
