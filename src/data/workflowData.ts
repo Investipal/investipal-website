@@ -8,8 +8,8 @@ export interface WorkflowStep {
 export const workflowData: WorkflowStep[] = [
   {
     id: 'step-1',
-    title: 'Upload client documents',
-    description: 'Simply upload brokerage statements and other client documents to get started.',
+    title: 'Onboard Clients in Minutes',
+    description: 'Send one secure link for risk assessment, statement upload, AML checks, and e-signature. Complete onboarding in days, not weeks.',
     icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="48" height="48" rx="24" fill="#F3F4F6"/>
       <path d="M24 12L32 20H28V28H20V20H16L24 12Z" fill="#8B5CF6"/>
@@ -18,8 +18,8 @@ export const workflowData: WorkflowStep[] = [
   },
   {
     id: 'step-2',
-    title: 'AI analyzes and extracts data',
-    description: 'Our AI automatically extracts and analyzes all relevant information from the documents.',
+    title: 'Analyze Portfolios Instantly',
+    description: 'AI extracts holdings, runs portfolio comparison, goal-based analysis, or Monte Carlo simulations. Get insights in seconds, not hours.',
     icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="48" height="48" rx="24" fill="#F3F4F6"/>
       <path d="M16 20L24 28L32 20" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -29,8 +29,8 @@ export const workflowData: WorkflowStep[] = [
   },
   {
     id: 'step-3',
-    title: 'Generate personalized proposals',
-    description: 'Create customized investment proposals and compliance documents in minutes.',
+    title: 'Generate Branded Proposals',
+    description: 'AI writes the narrative, auto-generates charts, customize and deliver in under 10 minutes. Add IPS and Reg BI docs with one click.',
     icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="48" height="48" rx="24" fill="#F3F4F6"/>
       <path d="M16 16H32V32H16V16Z" stroke="#8B5CF6" stroke-width="2" fill="none"/>
@@ -41,8 +41,8 @@ export const workflowData: WorkflowStep[] = [
   },
   {
     id: 'step-4',
-    title: 'Build and manage portfolios',
-    description: 'Construct and manage personalized portfolios with AI assistance.',
+    title: 'Automate Compliance & Portfolio Management',
+    description: 'Build portfolios across all asset classes with AI optimization. Monitor drift, generate compliance docs, and manage ongoing relationships.',
     icon: `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="48" height="48" rx="24" fill="#F3F4F6"/>
       <path d="M16 32L24 16L32 32" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>

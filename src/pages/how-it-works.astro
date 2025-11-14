@@ -14,16 +14,16 @@ import CookieBanner from '../components/ui/CookieBanner.astro';
 import { designSystem } from '../data/designSystem';
 
 // SEO Metadata
-const title = "How It Works | AI-Powered Financial Advisor Platform | Investipal";
-const description = "Discover how Investipal's AI-powered platform streamlines your entire workflow from client onboarding to portfolio management. 90% automation, 10-minute processes.";
+const title = "How Investipal Works | AI Proposal Generator & Portfolio Software for Advisors";
+const description = "See how financial advisors use Investipal to onboard clients in days, generate proposals in 10 minutes, and automate compliance. Replace 6+ tools with one platform.";
 const canonical = "https://investipal.co/how-it-works";
-const keywords = "financial advisor software, AI automation, portfolio management, client onboarding, proposal generation, compliance automation, wealth management platform";
+const keywords = "financial advisor software, investment proposal software, AI automation, portfolio management, alternatives portfolio management, goal-based portfolio construction, client onboarding, proposal generation, compliance automation, IPS generator, Reg BI automation, RIA software, wealth management platform";
 
 // Page data
 const pageData = {
   hero: {
-    title: "How It Works",
-    subtitle: "Discover how our AI-powered platform streamlines your entire workflow from client onboarding to portfolio management. 90% automation, 10-minute processes.",
+    title: "From Prospect to Portfolio in One Seamless Workflow",
+    subtitle: "See how financial advisors use Investipal to close deals 3x faster, automate compliance, and manage portfolios across all asset classes—without juggling 6+ tools.",
     audienceText: "Workflow Guide"
   }
 };
@@ -66,90 +66,151 @@ const structuredData = {
 const platformModules = [
   {
     id: "marketing",
-    title: "Marketing & Lead Generation",
+    title: "Lead Nurturing & Portfolio Monitoring",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>`,
-    description: "Deliver the right message at the right time with our intelligent marketing suite.",
-    image: "/images/product_screenshots/market-sense.png",
-    imageAlt: "Investipal Market Sense screenshot",
-    features: [
-      "3-factor risk assessment embeddable on your website",
-      "Portfolio sentiment monitoring with auto-generated messaging",
-      "Custom marketing materials generated in real-time",
-      "AI-powered client communication and re-engagement"
-    ]
+    description: "Monitor prospect portfolios in real-time and re-engage with data-backed insights when performance dips or fees spike.",
+    image: "/images/product_screenshots/crm_leads_pipeline_v1_2025-11-14.png",
+    imageAlt: "CRM leads pipeline showing prospect tracking and portfolio monitoring",
+    narrativeFeatures: [
+      {
+        title: "Capture Leads with Embeddable Risk Assessment",
+        description: "Add our 3-factor risk questionnaire to your website to capture qualified leads and get instant insights into their risk tolerance.",
+        link: null
+      },
+      {
+        title: "Monitor Portfolios in Real-Time",
+        description: "Track prospect and client portfolios automatically. Get alerts when portfolios underperform or drift—giving you the perfect reason to reach out.",
+        link: null
+      },
+      {
+        title: "Re-Engage with Fresh Analysis",
+        description: "Generate updated portfolio comparisons and proposals on-demand. Every touchpoint is backed by current data and actionable recommendations.",
+        link: "/features/ai-driven-engagement"
+      }
+    ],
+    ctaText: "Learn More About Lead Nurturing",
+    ctaLink: "/features/ai-driven-engagement"
   },
   {
     id: "sales",
     title: "Sales & Proposal Generation",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>`,
-    description: "Time kills deals, so reclaim your time with instant portfolio analysis and proposal generation.",
-    image: "/images/product_screenshots/proposal-sample.png",
-    imageAlt: "Investipal proposal sample screenshot",
-    features: [
-      "Upload client statements and extract portfolios in seconds",
-      "Portfolio comparison with advanced historical analysis",
-      "Monte Carlo modeling to show future possibilities",
-      "Tax savings optimization with confidence",
-      "Auto-generate sleek, compliant proposals ready to send"
-    ]
+    description: "Generate professional, branded investment proposals in under 10 minutes with AI-powered content and automatic portfolio analysis charts.",
+    image: "/images/product_screenshots/proposal_cover_page_v3_2025-11-14.png",
+    imageAlt: "Professional branded investment proposal with custom branding and portfolio analysis",
+    narrativeFeatures: [
+      {
+        title: "AI-Powered Portfolio Analysis",
+        description: "Upload any brokerage statement and our AI extracts holdings in seconds. Run portfolio comparison, historical backtesting, or Monte Carlo simulations.",
+        link: "/features/automated-statement-scanner"
+      },
+      {
+        title: "AI Writes Your Proposals",
+        description: "Let AI generate compelling narratives explaining why your strategy is superior. Customize the prompts to match your voice or let AI handle it entirely.",
+        link: "/features/client-acquisition"
+      },
+      {
+        title: "Fully Branded & Compliant",
+        description: "Every proposal includes your logo, colors, and custom cover images. Add IPS and Reg BI documentation with one click—complete proposals in under 10 minutes.",
+        link: "/features/investment-policy-statements"
+      }
+    ],
+    ctaText: "Explore Proposal Features",
+    ctaLink: "/features/client-acquisition"
   },
   {
     id: "onboarding",
-    title: "Client Onboarding & Compliance",
+    title: "Client Onboarding",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>`,
-    description: "Seamless and compliant onboarding that reduces time from weeks to minutes.",
-    image: "/images/product_screenshots/onboarding-checklist-sample.png",
-    imageAlt: "Investipal onboarding checklist screenshot",
-    features: [
-      "Build custom forms & agreements from templates",
-      "Streamlined e-signature workflows in one place",
-      "Automated AML compliance checks",
-      "Risk tolerance questionnaires with AI completion",
-      "Document generation ready-to-sign"
-    ]
+    description: "Send prospects one secure link to complete everything: risk assessment, statement upload, AML verification, disclosures, and advisory agreement signing.",
+    image: "/images/product_screenshots/client_onboarding_portal_v3_2025-11-11.png",
+    imageAlt: "Client onboarding portal with branded interface and complete workflow",
+    narrativeFeatures: [
+      {
+        title: "One Secure Link, Complete Onboarding",
+        description: "Configure your workflow once, then send prospects one branded portal link. They complete everything on their phone or desktop—no app downloads, no confusion.",
+        link: "/features/client-onboarding"
+      },
+      {
+        title: "Built-In E-Signature",
+        description: "Clients sign advisory agreements and compliance documents right in the portal. No DocuSign, no extra logins. Track signature status in real-time.",
+        link: "/features/client-onboarding"
+      },
+      {
+        title: "Automated AML Compliance",
+        description: "Scan driver's licenses and cross-check with OFAC automatically. Complete AML verification in minutes and onboarding in days, not weeks.",
+        link: "/features/client-onboarding"
+      }
+    ],
+    ctaText: "See How Onboarding Works",
+    ctaLink: "/features/client-onboarding"
   },
   {
     id: "compliance",
     title: "Compliance Automation",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>`,
-    description: "Your to-do list, automated. Stay compliant while reducing manual work.",
-    image: "/images/product_screenshots/esign-sample.png",
-    imageAlt: "Investipal compliance automation screenshot",
-    features: [
-      "Know Your Product (KYP) comparisons",
-      "Personalized Investment Policy Statements in seconds",
-      "AI-powered Regulation Best Interest documentation",
-      "Portfolio drift monitoring and alerts",
-      "Automated compliance document generation"
-    ]
+    description: "Generate IPS and Reg BI documentation in seconds. Monitor portfolio drift and stay compliant without thinking about it.",
+    image: "/images/product_screenshots/ips_generator_output_v1_2025-11-14.png",
+    imageAlt: "IPS generator showing automated Investment Policy Statement creation",
+    narrativeFeatures: [
+      {
+        title: "One-Click IPS Generation",
+        description: "Create personalized Investment Policy Statements in seconds. Our AI analyzes the client's goals, risk tolerance, and portfolio to generate a comprehensive IPS that's ready to sign.",
+        link: "/features/investment-policy-statements"
+      },
+      {
+        title: "Automated Reg BI Documentation",
+        description: "Generate Regulation Best Interest documentation automatically. The AI explains why your recommendation is in the client's best interest and compares alternatives—everything is audit-ready.",
+        link: "/features/regulation-best-interest-generator"
+      },
+      {
+        title: "Portfolio Drift Monitoring",
+        description: "Monitor all client portfolios 24/7 for drift and compliance issues. Get automated alerts and rebalancing recommendations when portfolios need attention.",
+        link: "/features/risk-management"
+      }
+    ],
+    ctaText: "Explore Compliance Features",
+    ctaLink: "/features/investment-policy-statements"
   },
   {
     id: "portfolios",
     title: "Portfolio Construction & Management",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>`,
-    description: "Build perfect portfolios for every client with AI-powered personalization.",
-    image: "/images/product_screenshots/portfolio-management-sample.png",
-    imageAlt: "Investipal portfolio management screenshot",
-    features: [
-      "Model anything: public and private assets",
-      "AI-generated client-specific portfolios in seconds",
-      "Drift alerts and optimization for volatility, Sharpe, or factors",
-      "Recommend better-performing, lower-cost alternatives",
-      "Custom security builder for alternative investments"
-    ]
+    description: "Build personalized portfolios across all asset classes—equities, fixed income, alternatives, and annuities—with AI-powered optimization.",
+    image: "/images/product_screenshots/portfolio_comparison_results_v1_2025-11-14.png",
+    imageAlt: "Portfolio comparison showing current vs recommended portfolios with performance analysis",
+    narrativeFeatures: [
+      {
+        title: "Goal-Based Portfolio Construction",
+        description: "Match client spending needs to optimal allocations. Input their spending sequence and our AI generates a custom portfolio that balances liquid and growth assets.",
+        link: "/features/goal-based-portfolio-construction"
+      },
+      {
+        title: "Multi-Asset Portfolio Management",
+        description: "Build portfolios with equities, fixed income, alternatives, and annuities. Access our database of private securities or model custom alternatives with our security builder.",
+        link: "/features/alternatives-portfolio-management"
+      },
+      {
+        title: "AI-Powered Optimization",
+        description: "Let AI optimize portfolios for risk-adjusted returns or goal-funding. Get drift alerts and rebalancing recommendations automatically across all asset classes.",
+        link: "/features/asset-allocation"
+      }
+    ],
+    ctaText: "See Portfolio Features",
+    ctaLink: "/features/asset-allocation"
   }
 ];
 
 const resultsData = {
   timeSaved: [
-    { metric: "2-3 hours", description: "saved per brokerage statement analysis" },
-    { metric: "3-5 hours", description: "saved per comparative portfolio analysis" },
-    { metric: "5+ hours", description: "saved per proposal generation" }
+    { metric: "Seconds", description: "to extract holdings from statements with AI" },
+    { metric: "10 minutes", description: "average time to complete a full proposal" },
+    { metric: "3x faster", description: "close rates vs. generic presentations" }
   ],
   costSavings: "70%",
   onboardingTime: {
-    before: "4 weeks",
-    after: "1 day"
+    before: "Weeks",
+    after: "Days"
   },
   consolidatedTools: ["Nitrogen", "YCharts", "Morningstar", "Kwanti", "Orion", "Stratifi"]
 };
@@ -246,22 +307,45 @@ const resultsData = {
                   </h3>
                 </div>
                 
-                <p class={`${designSystem.typography.bodyLarge} mb-6`}>
+                <p class={`${designSystem.typography.bodyLarge} mb-8`}>
                   {module.description}
                 </p>
                 
-                <ul class={designSystem.spacing.contentGap}>
-                  {module.features.map((feature) => (
-                    <li class="flex items-start">
-                      <div class={`${designSystem.components.checkmark} mt-1 mr-3`}>
-                        <svg class={designSystem.components.checkmarkIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                      </div>
-                      <span class={designSystem.typography.body}>{feature}</span>
-                    </li>
+                <div class="space-y-6 mb-8">
+                  {module.narrativeFeatures.map((feature) => (
+                    <div>
+                      <h4 class="text-lg font-semibold text-gray-900 mb-2 font-system_ui">
+                        {feature.title}
+                      </h4>
+                      <p class={`${designSystem.typography.body} mb-2`}>
+                        {feature.description}
+                      </p>
+                      {feature.link && (
+                        <a 
+                          href={feature.link} 
+                          class="inline-flex items-center text-investipal-600 hover:text-investipal-700 font-medium text-sm transition-colors"
+                        >
+                          Learn more
+                          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                          </svg>
+                        </a>
+                      )}
+                    </div>
                   ))}
-                </ul>
+                </div>
+                
+                {module.ctaLink && (
+                  <a 
+                    href={module.ctaLink}
+                    class="inline-flex items-center px-6 py-3 bg-investipal-600 text-white font-semibold rounded-lg hover:bg-investipal-700 transition-colors font-system_ui"
+                  >
+                    {module.ctaText}
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                  </a>
+                )}
               </div>
               
               <div class={`${index % 2 === 1 ? 'lg:col-start-1' : ''} ${index % 2 === 1 ? 'lg:row-start-1' : ''}`}>
