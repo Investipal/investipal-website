@@ -12,7 +12,7 @@ seoDescription: "Plan your 2026 advisor tech budget with data-backed ROI calcula
 draft: false
 ---
 
-Sarah, a solo RIA managing $85M AUM, spent two hours building a client proposal last week. Meanwhile, her colleague Tom—managing $120M—generated his proposal in 8 minutes using integrated technology. The difference? Tom invested $800/month in his tech stack. Sarah spent nothing—and it's costing her $47,000 in lost productivity annually.
+The average RIA spends 40% of their time on administrative tasks—time that could be spent building client relationships and growing their practice. Research from the 2025 Schwab RIA Benchmarking Study shows that firms investing 4.2-5% of revenue in technology see 16.6% AUM growth compared to just 12.1% for firms relying on manual workflows.
 
 As you finalize your 2026 budget, technology isn't just an operational expense—it's a strategic growth lever. But with dozens of software options and limited budgets, which investments deliver real ROI? This guide breaks down the 7 technology investments that top-performing advisors are prioritizing for 2026, backed by industry benchmarks and ROI calculations you can take to your CFO.
 
@@ -145,9 +145,14 @@ Based on industry trends, ROI potential, and 2026 planning priorities, here are 
 
 **Priority level:** **Year 1 - Critical** (highest ROI, fastest payback period)
 
-**Real-world impact:** A small RIA with 3 advisors reduced proposal generation from 45 minutes to under 10 minutes by implementing integrated proposal software. This freed up 35 hours annually per advisor—enough time to take on 8 additional client relationships, generating $40,000 in incremental AUM fees. Their total technology investment was $18,000/year, delivering 161% first-year ROI with a payback period of just 4.6 months.
+**Industry benchmark:** Firms using integrated proposal automation reduce time-to-proposal by 75-80%, freeing up significant capacity for client acquisition. The time savings translate directly to either higher advisor productivity or the ability to serve more clients without additional headcount.
 
-[Investipal's proposal automation platform](/features/client-acquisition) combines statement scanning, risk assessment, portfolio optimization, and compliance documentation in a single workflow, helping advisors generate compliant proposals in under 10 minutes in typical workflows (subject to advisor review and data quality).
+**Investipal consolidates the entire proposal workflow:** Our platform combines [statement scanning](/features/automated-statement-scanner), risk assessment, portfolio optimization, and compliance documentation in a single workflow. Advisors generate compliant proposals in under 10 minutes in typical workflows (subject to advisor review and data quality).
+
+<figure>
+<img src="/images/general/investment_proposal_generator.png" alt="Investipal proposal generation dashboard showing automated workflow" width="100%" />
+<figcaption>Investipal's AI-powered proposal generator creates customized, compliance-ready proposals from client data in minutes</figcaption>
+</figure>
 
 ### 2. Integrated CRM: The Foundation of Your Tech Stack
 
@@ -332,21 +337,22 @@ Now that we've covered the seven priority investments, let's translate this into
 
 ### Budget Template: Solo Advisor ($0-$100M AUM)
 
-**Year 1 Essential Stack: $6,000-$10,000/year ($500-$833/month)**
+**Year 1 Essential Stack: $5,100-$6,600/year ($425-$550/month)**
 
 | Technology | Monthly Cost | Annual Cost | Priority |
 |------------|-------------|-------------|----------|
 | CRM (Redtail or Wealthbox Solo) | $100 | $1,200 | Critical |
-| Proposal Automation (Investipal) | $500 | $6,000 | Critical |
-| Financial Planning (MoneyGuidePro) | $200 | $2,400 | High |
-| E-signature (DocuSign) | $40 | $480 | High |
-| **Total Year 1** | **$840** | **$10,080** | - |
+| Investipal All-In-One Platform* | $250 | $3,000 | Critical |
+| Financial Planning (if not using Investipal) | $200 | $2,400 | High |
+| **Total Year 1** | **$550** | **$6,600** | - |
+
+*Investipal includes: Proposal automation, statement scanning, risk assessment, portfolio optimization, IPS/compliance generation
 
 **Expected first-year returns:**
 - Time savings: 35-50 hours = $7,000-$10,000 value
 - Capacity for 8-10 more clients = $40,000-$50,000 potential revenue
-- **ROI: 390-500%**
-- **Payback period: 2-3 months**
+- **ROI: 600-750%**
+- **Payback period: 1-2 months**
 
 **Year 2 additions:**
 - Portfolio management: $200-$400/month
@@ -355,24 +361,25 @@ Now that we've covered the seven priority investments, let's translate this into
 
 ### Budget Template: Small RIA ($100M-$500M AUM, 2-5 advisors)
 
-**Year 1 Comprehensive Stack: $24,000-$45,000/year ($2,000-$3,750/month)**
+**Year 1 Comprehensive Stack: $18,000-$30,000/year ($1,500-$2,500/month)**
 
 | Technology | Monthly Cost | Annual Cost | Priority |
 |------------|-------------|-------------|----------|
 | CRM (Wealthbox Pro) | $300 | $3,600 | Critical |
-| Proposal Automation | $800 | $9,600 | Critical |
+| Investipal All-In-One Platform* | $250 | $3,000 | Critical |
 | Portfolio Management | $1,500 | $18,000 | Critical |
-| Financial Planning (3 users) | $600 | $7,200 | Critical |
-| Digital Onboarding | $500 | $6,000 | High |
-| Compliance Tools | $400 | $4,800 | Medium |
-| **Total Year 1** | **$4,100** | **$49,200** | - |
+| Financial Planning (3 users) | $600 | $7,200 | High |
+| Digital Onboarding (if needed) | $300 | $3,600 | Medium |
+| **Total Year 1** | **$2,950** | **$35,400** | - |
+
+*Investipal includes: Proposal automation, statement scanning, risk assessment, portfolio optimization, IPS/compliance generation
 
 **Expected first-year returns:**
 - Time savings: 200+ hours = $40,000-$60,000 value
 - Capacity for 20-30 more clients = $100,000-$150,000 potential revenue
 - Reduced processing costs: $10,000-$15,000
-- **ROI: 250-350%**
-- **Payback period: 3-5 months**
+- **ROI: 400-500%**
+- **Payback period: 2-4 months**
 
 ### Budget Template: Mid-Size RIA ($500M-$2B AUM, 5-15 advisors)
 
@@ -458,36 +465,53 @@ One of the biggest challenges advisors face is managing multiple disconnected to
 
 Investipal addresses this by consolidating four technology investments into a single integrated workflow:
 
-### Traditional Tech Stack Cost:
+### Traditional Fragmented Tech Stack:
 - Statement aggregation software: $400/month
 - Risk assessment tool: $300/month  
 - Proposal generation software: $500/month
-- IPS generator: $200/month
+- IPS/compliance generator: $200/month
 - **Total: $1,400/month = $16,800/year**
 
-### Investipal Integrated Workflow:
+### Investipal All-In-One Platform: $250/month
 
-**Step 1: Upload Client Statement** 
-- [AI-powered OCR](/features/automated-statement-scanner) extracts portfolio data from 50+ custodian formats in seconds (depending on data quality)
+Our integrated workflow includes **all features** in one platform:
+
+**Step 1: Upload Client Statement**
+<figure>
+<img src="/images/general/account_statement_scanning_for_financial_advisors_1.png" alt="Investipal automated statement scanning" width="100%" />
+<figcaption>AI-powered OCR extracts portfolio data from 50+ custodian formats in seconds</figcaption>
+</figure>
+
+[AI-powered OCR](/features/automated-statement-scanner) extracts portfolio data from 50+ custodian formats in seconds (depending on data quality)
 
 **Step 2: Assess Risk Tolerance**
-- Automated risk questionnaire flows directly into portfolio recommendations
+Automated risk questionnaire flows directly into portfolio recommendations
 
-**Step 3: Generate Optimized Portfolio** 
-- [AI-driven portfolio optimization](/features/portfolio-builder) analyzes risk, cost, and tax efficiency
+**Step 3: Generate Optimized Portfolio**
+[AI-driven portfolio optimization](/features/portfolio-builder) analyzes risk, cost, and tax efficiency
 
-**Step 4: Create Proposal + IPS** 
-- Single-click generation of compliant proposal with [automated IPS documentation](/features/investment-policy-statements)
+**Step 4: Create Proposal + IPS**
+<figure>
+<img src="/images/product_screenshots/ips_generator_output_v1_2025-11-14.png" alt="Investipal IPS generation" width="100%" />
+<figcaption>Single-click generation of compliant IPS documents alongside proposals</figcaption>
+</figure>
+
+Single-click generation of compliant proposal with [automated IPS documentation](/features/investment-policy-statements)
 
 **Total time in typical workflows: Under 10 minutes** (subject to advisor review and data quality)
 
-**Single platform pricing:** [Book a demo](/book-a-demo) to discuss pricing for your firm size
+**Platform cost:** $250/month for all features—that's **83% less than using separate tools** ($1,400/month)
+
+**Annual savings:** $13,800/year by consolidating to one platform
 
 By consolidating these workflows, advisors eliminate:
 - Manual data re-entry between systems
 - Integration breakdowns and error reconciliation  
 - Tool-switching and context-shifting
 - Duplicate subscription costs
+- Multiple vendor relationships and training requirements
+
+[Book a demo](/book-a-demo) to see the complete workflow in action.
 
 Learn more about [how integrated platforms reduce tech stack fragmentation](/blog/how-fragmented-tech-stacks-are-holding-back-your-wealth-management-firm).
 
@@ -668,9 +692,6 @@ Investipal consolidates proposal generation, statement scanning, risk assessment
 - Automated IPS and Reg BI documentation
 - ROI calculation specific to your firm size
 
-### Download Free Resources
-
-**[Technology Budget Planning Worksheet](#)** - Excel template with ROI calculators for each technology category, budget templates by firm size, and implementation timeline (coming soon)
 
 ---
 
