@@ -15,47 +15,47 @@ import { cn } from '@/lib/utils';
 
 const pricingPlans = {
   individual: {
-    title: 'Individual Plan',
-    subtitle: 'Best option for solo',
-    description: 'Designers or Freelancers',
-    monthlyPrice: 25,
-    annualPrice: 19,
+    title: 'Solo Advisors',
+    subtitle: 'For independent advisors',
+    description: 'RIAs & Financial Planners',
+    monthlyPrice: 0,
+    annualPrice: 0,
     popular: true,
     features: [
-      { name: 'Real-time task syncing', included: true },
-      { name: 'Basic project analytics', included: true },
-      { name: 'Custom workflows & automation', included: true },
-      { name: 'Cross-platform integrations', included: true },
-      { name: 'Unlimited boards & views', included: false },
-      { name: 'Priority support for teams', included: false },
-      { name: 'API access (Limited)', included: false },
-      { name: 'Community support', included: false },
+      { name: 'AI-powered statement scanner', included: true },
+      { name: 'Client onboarding automation', included: true },
+      { name: 'Portfolio construction tools', included: true },
+      { name: 'Proposal generation', included: true },
+      { name: 'Reg BI compliance documentation', included: true },
+      { name: 'Alternatives modeling', included: true },
+      { name: 'Risk assessment tools', included: true },
+      { name: 'White-label branding', included: false },
     ],
     cta: {
-      text: 'Contact us for Custom CRM Integration',
-      button: 'Contact With Us',
+      text: 'Custom pricing based on AUM and advisor count',
+      button: 'Schedule a Demo',
     },
   },
   team: {
-    title: 'Power Users & Teams',
-    subtitle: 'Best option for team',
-    description: 'Agencies or Corporates',
-    monthlyPrice: 59,
-    annualPrice: 44,
+    title: 'Enterprise Firms',
+    subtitle: 'For wealth management firms',
+    description: 'RIAs & Broker-Dealers',
+    monthlyPrice: 0,
+    annualPrice: 0,
     popular: false,
     features: [
-      { name: 'Advanced task syncing with dependencies', included: true },
-      { name: 'Smart automations & conditional triggers', included: true },
-      { name: 'In-depth usage insights & analytics', included: true },
-      { name: 'Priority team collaboration tools', included: true },
-      { name: 'CRM integrations', included: true },
-      { name: 'Developer toolkit', included: true },
-      { name: 'API access (Full)', included: true },
-      { name: 'Premium support & onboarding', included: true },
+      { name: 'Everything in Solo Advisors', included: true },
+      { name: 'Multi-user collaboration', included: true },
+      { name: 'White-label branding', included: true },
+      { name: 'Custom integrations', included: true },
+      { name: 'API access', included: true },
+      { name: 'Dedicated account manager', included: true },
+      { name: 'Custom onboarding & training', included: true },
+      { name: 'Priority support (24/7)', included: true },
     ],
     cta: {
-      text: 'Connect us for Custom CRM Integration',
-      button: 'Contact With Us',
+      text: 'Contact us for enterprise pricing and volume discounts',
+      button: 'Schedule a Demo',
     },
   },
 };
@@ -97,12 +97,12 @@ export default function Pricing() {
           {/* Left side - Title and subtitle */}
           <div className="">
             <h2 className="text-center text-4xl font-medium tracking-tighter md:text-start md:text-6xl md:leading-none lg:text-7xl">
-              Power your progress with <br className="hidden md:block" />
-              Pro Access
+              Flexible pricing for <br className="hidden md:block" />
+              every practice
             </h2>
             <p className="text-muted-foreground/70 mt-3 hidden text-lg leading-relaxed md:block lg:mt-4">
-              Increase feature adoption and customer satisfaction with the right
-              Lumen plan.
+              Custom pricing based on your AUM, advisor count, and features needed.
+              Schedule a demo to discuss your specific requirements.
             </p>
           </div>
 
@@ -191,8 +191,8 @@ export default function Pricing() {
                       className="group h-10 w-full"
                       asChild
                     >
-                      <a href="/contact">
-                        Contact With Us
+                      <a href="/book-a-demo">
+                        {plan.cta.button}
                         <div className="bg-border border-input grid size-5.5 place-items-center rounded-full border">
                           <ChevronRight className="size-4 transition-transform group-hover:translate-x-0.25" />
                         </div>
