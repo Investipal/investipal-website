@@ -348,10 +348,10 @@ Now that we've covered the seven priority investments, let's translate this into
 |------------|-------------|-------------|----------|
 | CRM (Redtail or Wealthbox Solo) | $100 | $1,200 | Critical |
 | Investipal All-In-One Platform* | $250 | $3,000 | Critical |
-| Financial Planning (if not using Investipal) | $200 | $2,400 | High |
+| Financial Planning Software | $200 | $2,400 | High |
 | **Total Year 1** | **$550** | **$6,600** | - |
 
-*Investipal includes: Proposal automation, statement scanning, risk assessment, portfolio optimization, IPS/compliance generation
+*Investipal includes: Data intake/statement scanning, proposal generation, client onboarding, risk assessment, portfolio design (including alternative investments), portfolio optimization, and compliance documentation (IPS generation)
 
 **Expected first-year returns:**
 - Time savings: 35-50 hours = $7,000-$10,000 value
@@ -377,7 +377,7 @@ Now that we've covered the seven priority investments, let's translate this into
 | Digital Onboarding (if needed) | $300 | $3,600 | Medium |
 | **Total Year 1** | **$2,950** | **$35,400** | - |
 
-*Investipal includes: Proposal automation, statement scanning, risk assessment, portfolio optimization, IPS/compliance generation
+*Investipal includes: Data intake/statement scanning, proposal generation, client onboarding, risk assessment, portfolio design (including alternative investments), portfolio optimization, and compliance documentation (IPS generation)
 
 **Expected first-year returns:**
 - Time savings: 200+ hours = $40,000-$60,000 value
@@ -468,14 +468,15 @@ Not every firm should implement all seven technologies simultaneously. Here's a 
 
 One of the biggest challenges advisors face is managing multiple disconnected tools. Data re-entry, broken integrations, and tool-switching waste valuable time.
 
-Investipal addresses this by consolidating four technology investments into a single integrated workflow:
+Investipal addresses this by consolidating five technology investments into a single integrated workflow:
 
 ### Traditional Fragmented Tech Stack:
-- Statement aggregation software: $400/month
+- Statement aggregation/data intake: $400/month
 - Risk assessment tool: $300/month  
 - Proposal generation software: $500/month
+- Digital onboarding platform: $300/month
 - IPS/compliance generator: $200/month
-- **Total: $1,400/month = $16,800/year**
+- **Total: $1,700/month = $20,400/year**
 
 ### Investipal All-In-One Platform: $250/month
 
@@ -492,8 +493,8 @@ Our integrated workflow includes **all features** in one platform:
 **Step 2: Assess Risk Tolerance**
 Automated risk questionnaire flows directly into portfolio recommendations
 
-**Step 3: Generate Optimized Portfolio**
-[AI-driven portfolio optimization](/features/portfolio-builder) analyzes risk, cost, and tax efficiency
+**Step 3: Design & Optimize Portfolio**
+[AI-driven portfolio builder](/features/portfolio-builder) helps design portfolios (including alternative investments like REITs, structured products, and other alts) and analyzes risk, cost, and tax efficiency
 
 **Step 4: Create Proposal + IPS**
 <figure>
@@ -505,9 +506,9 @@ Single-click generation of compliant proposal with [automated IPS documentation]
 
 **Total time in typical workflows: Under 10 minutes** (subject to advisor review and data quality)
 
-**Platform cost:** $250/month for all features—that's **83% less than using separate tools** ($1,400/month)
+**Platform cost:** $250/month for all features—that's **85% less than using separate tools** ($1,700/month)
 
-**Annual savings:** $13,800/year by consolidating to one platform
+**Annual savings:** $17,400/year by consolidating to one platform
 
 By consolidating these workflows, advisors eliminate:
 - Manual data re-entry between systems
