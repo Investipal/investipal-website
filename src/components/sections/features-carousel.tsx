@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-import { BarChart3, Clock, Filter, Link } from 'lucide-react';
+import { BarChart3, Clock, FileText, TrendingUp } from 'lucide-react';
 import { motion } from 'motion/react';
 
 import Noise from '@/components/elements/noise';
@@ -24,52 +24,52 @@ import { cn } from '@/lib/utils';
 
 const features = [
   {
-    id: 'navigation',
-    icon: Link,
-    title: 'Navigate your work with clarity',
-    description: 'A style board that adapts with your work.',
+    id: 'onboarding',
+    icon: Clock,
+    title: 'Onboard clients in days, not weeks',
+    description: 'AI-powered statement scanning and automated workflows.',
     image: {
-      src: '/images/features-carousel/1.webp',
-      alt: 'Navigate your work with clarity',
+      src: '/images/product_screenshots/client_onboarding_portal_v3_2025-11-11.png',
+      alt: 'Client onboarding dashboard',
       width: 400,
       height: 400,
       className: 'ps-4 pt-4',
     },
   },
   {
-    id: 'tracking',
-    icon: BarChart3,
-    title: 'Issue tracking with less noise',
-    description: 'Simple, powerful, and built for clarity.',
+    id: 'proposals',
+    icon: FileText,
+    title: 'Generate proposals in under 10 minutes',
+    description: 'Complete portfolio analysis, proposals, and compliance docs.',
     image: {
-      src: '/images/features-carousel/2.webp',
-      alt: 'Issue tracking with less noise',
+      src: '/images/product_screenshots/proposal_cover_page_v3_2025-11-14.png',
+      alt: 'Investment proposal generator',
       width: 400,
       height: 400,
       className: 'pt-4',
     },
   },
   {
-    id: 'filtering',
-    icon: Filter,
-    title: 'Filtering Tasks, no more distractions',
-    description: 'Smart filters that adapt to your needs.',
+    id: 'portfolio',
+    icon: BarChart3,
+    title: 'Build portfolios across all asset classes',
+    description: 'AI-powered optimization for personalized strategies.',
     image: {
-      src: '/images/features-carousel/3.webp',
-      alt: 'Filtering Tasks',
+      src: '/images/product_screenshots/client_overview_performance_v1_2025-11-14.png',
+      alt: 'Portfolio construction dashboard',
       width: 400,
       height: 400,
       className: 'p-4',
     },
   },
   {
-    id: 'timeline',
-    icon: Clock,
-    title: 'Timeline Management, no more delays',
-    description: 'Keep track of project progress with ease.',
+    id: 'compliance',
+    icon: TrendingUp,
+    title: 'Automated compliance documentation',
+    description: 'Reg BI, IPS, and Form CRS generated automatically.',
     image: {
-      src: '/images/features-carousel/4.webp',
-      alt: 'Timeline Management',
+      src: '/images/general/compliance_v6_(1)_1.png',
+      alt: 'Compliance documentation',
       width: 400,
       height: 400,
       className: 'pt-4',

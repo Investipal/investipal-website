@@ -5,66 +5,66 @@ import { cn } from '@/lib/utils';
 const FEATURES_DATA = [
   {
     id: 1,
-    image: '/images/features-grid/1.webp',
-    imageAlt: 'Feature management interface',
-    title: 'Smart Task Management',
+    image: '/images/product_screenshots/client_onboarding_portal_v3_2025-11-11.png',
+    imageAlt: 'Client onboarding portal',
+    title: 'Client Onboarding',
     description:
-      'Organize and prioritize tasks with intelligent automation that adapts to your workflow patterns.',
+      'AI-powered statement scanning extracts portfolio data from any brokerage statement in seconds. Complete onboarding 10x faster.',
     className: 'lg:col-span-3',
     width: 423,
     height: 228,
   },
   {
     id: 2,
-    image: '/images/features-grid/2.webp',
-    imageAlt: 'Team collaboration dashboard',
-    title: 'Team Collaboration',
+    image: '/images/product_screenshots/proposal_cover_page_v3_2025-11-14.png',
+    imageAlt: 'Investment proposal generator',
+    title: 'Proposal Generation',
     description:
-      'Connect with your team seamlessly through integrated communication and shared workspaces.',
+      'Build branded investment proposals and auto-generate IPS and Reg BI documentation. Complete proposals in under 10 minutes.',
     className: 'lg:col-span-3',
     width: 435,
     height: 228,
   },
   {
     id: 3,
-    image: '/images/features-grid/3.webp',
-    imageAlt: 'Analytics and reporting',
-    title: 'Advanced Analytics',
+    image: '/images/product_screenshots/client_overview_performance_v1_2025-11-14.png',
+    imageAlt: 'Portfolio construction dashboard',
+    title: 'Portfolio Construction',
     description:
-      'Get comprehensive insights into your project performance with detailed analytics and customizable reports.',
+      'Build personalized portfolios with equities, fixed income, alternatives, and annuities. AI-powered optimization for goal-based strategies.',
     className: 'lg:col-span-4',
     width: 599,
     height: 218,
   },
   {
     id: 4,
-    image: '/images/features-grid/4.webp',
-    imageAlt: 'Project timeline view',
-    title: 'Project Timeline',
+    image: '/images/general/compliance_v6_(1)_1.png',
+    imageAlt: 'Compliance documentation',
+    title: 'Reg BI & Compliance',
     description:
-      'Visualize project progress and milestones with interactive timeline views and dependency tracking.',
+      'Automatically generate compliant documentation including Best Interest disclosures, Form CRS, and investment policy statements.',
     className: 'lg:col-span-2',
     width: 292,
     height: 215,
   },
   {
     id: 5,
-    image: '/images/features-grid/5.webp',
-    imageAlt: 'Integration capabilities',
-    title: 'Seamless Integrations',
+    image: '/images/general/risk_insights_(1).png',
+    imageAlt: 'Risk assessment tools',
+    title: 'Risk Management',
     description:
-      'Connect with your favorite tools and services to create a unified workflow ecosystem.',
+      'Comprehensive risk analysis with stress testing, scenario analysis, and Monte Carlo simulations for informed decision-making.',
     className: 'lg:col-span-3',
     width: 417,
     height: 175,
   },
   {
     id: 6,
-    image: '/images/features-grid/6.webp',
-    imageAlt: 'Mobile application',
-    title: 'Mobile Ready',
+    image: '/images/general/iul_modeler_(1).png',
+    imageAlt: 'Annuities and insurance modeling',
+    title: 'Annuities & Insurance',
     description:
-      'Access your projects anywhere with our fully responsive mobile application.',
+      'Model indexed universal life policies and annuity products with comprehensive illustrations and comparative analysis.',
     className: 'lg:col-span-3',
     width: 433,
     height: 155,
@@ -79,12 +79,10 @@ export default function FeaturesGrid() {
         {/* Section Header */}
         <div className="mx-auto max-w-5xl space-y-3 lg:space-y-4 lg:text-center">
           <h2 className="text-4xl tracking-tight lg:text-5xl">
-            Feature management that fits your workflow
+            Everything you need to serve clients efficiently
           </h2>
           <p className="text-muted-foreground text-lg leading-snug lg:text-balance">
-            Assign, prioritize, and monitor every feature with precision. Lumen
-            helps teams ship faster by bringing structure to your development
-            process, without slowing you down.
+            From onboarding to portfolio construction to compliance documentation, Investipal streamlines every step of the advisor workflow.
           </p>
         </div>
 
