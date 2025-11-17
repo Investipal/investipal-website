@@ -8,18 +8,21 @@ import Noise from '@/components/elements/noise';
 import { Button } from '@/components/ui/button';
 import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion';
 
+// Typing animation words - defined outside component to prevent re-creation
+const TYPING_WORDS = ['proposals', 'onboarding', 'data intake', 'compliance', 'portfolios'];
+
 export default function Hero() {
   const prefersReducedMotion = usePrefersReducedMotion();
   
   // Typing effect state
-  const words = ['proposals', 'onboarding', 'data intake', 'compliance', 'portfolios'];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
 
+  // Blinking cursor effect
   useEffect(() => {
-    // Blinking cursor
     const cursorInterval = setInterval(() => {
       setShowCursor(prev => !prev);
     }, 500);
@@ -27,31 +30,55 @@ export default function Hero() {
     return () => clearInterval(cursorInterval);
   }, []);
 
+  // Typing animation effect
   useEffect(() => {
-    const currentWord = words[currentWordIndex];
+    // Skip animation if user prefers reduced motion
+    if (prefersReducedMotion) {
+      setCurrentText(TYPING_WORDS[0]);
+      return;
+    }
+
+    const currentWord = TYPING_WORDS[currentWordIndex];
     
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        // Typing
-        if (currentText.length < currentWord.length) {
-          setCurrentText(currentWord.substring(0, currentText.length + 1));
-        } else {
-          // Pause at end of word
-          setTimeout(() => setIsDeleting(true), 2000);
-        }
+    let timeout: NodeJS.Timeout;
+
+    // Start typing immediately on mount
+    if (currentText === '' && !isDeleting && !isPaused) {
+      timeout = setTimeout(() => {
+        setCurrentText(currentWord[0]);
+      }, 300); // Initial delay before starting
+      return () => clearTimeout(timeout);
+    }
+
+    if (isPaused) {
+      // Pause at end of word before deleting
+      timeout = setTimeout(() => {
+        setIsPaused(false);
+        setIsDeleting(true);
+      }, 1500);
+    } else if (isDeleting) {
+      // Deleting characters
+      if (currentText.length === 0) {
+        setIsDeleting(false);
+        setCurrentWordIndex((prev) => (prev + 1) % TYPING_WORDS.length);
       } else {
-        // Deleting
-        if (currentText.length > 0) {
-          setCurrentText(currentText.substring(0, currentText.length - 1));
-        } else {
-          setIsDeleting(false);
-          setCurrentWordIndex((currentWordIndex + 1) % words.length);
-        }
+        timeout = setTimeout(() => {
+          setCurrentText(currentText.slice(0, -1));
+        }, 30);
       }
-    }, isDeleting ? 50 : 100);
+    } else {
+      // Typing characters
+      if (currentText.length === currentWord.length) {
+        setIsPaused(true);
+      } else {
+        timeout = setTimeout(() => {
+          setCurrentText(currentWord.slice(0, currentText.length + 1));
+        }, 80);
+      }
+    }
 
     return () => clearTimeout(timeout);
-  }, [currentText, isDeleting, currentWordIndex, words]);
+  }, [currentText, isDeleting, isPaused, currentWordIndex, prefersReducedMotion]);
 
   // Animation variants
   const containerVariants = {
@@ -143,11 +170,13 @@ export default function Hero() {
           variants={itemVariants}
           className="text-3xl leading-tight tracking-tight md:text-5xl lg:text-6xl"
         >
-          AI for financial advisors
-          <br className="hidden md:block" /> streamlining{' '}
-          <span className="text-primary">
-            {currentText}
-            <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>
+          <span className="block">AI for financial advisors</span>
+          <span className="block flex items-center justify-center gap-3 md:gap-4 lg:gap-5 pl-8 md:pl-12 lg:pl-16">
+            <span>streamlining</span>
+            <span className="text-primary relative inline-block w-[200px] md:w-[320px] lg:w-[380px] text-left whitespace-nowrap">
+              {currentText}
+              <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>
+            </span>
           </span>
         </motion.h1>
 
