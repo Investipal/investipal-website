@@ -22,7 +22,7 @@ const faqData = [
     id: 'what-is-investipal',
     question: 'What is Investipal?',
     answer:
-      'Investipal is AI-powered financial advisor software that automates portfolio construction, compliance documentation, and client onboarding. It's designed specifically for financial planners who want to spend less time on administrative work and more time with clients.',
+      'Investipal is AI-powered financial advisor software that automates portfolio construction, compliance documentation, and client onboarding. It\'s designed specifically for financial planners who want to spend less time on administrative work and more time with clients.',
   },
   {
     id: 'how-long-onboarding',
