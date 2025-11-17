@@ -275,6 +275,7 @@ const ACTION_BUTTONS = [
 const Navbar = ({ currentPage }: { currentPage: string }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const { isAtLeast } = useMediaQuery();
   const { isBannerVisible } = useBannerVisibility();
   const pathname = currentPage?.replace(/\/$/, '') || '';
@@ -351,67 +352,92 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
                         {item.label}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent className="">
-                        <div className="w-[280px]">
-                          {item.subitems.map((subitem) => (
-                            <div key={subitem.label} className="group relative">
-                              {subitem.href ? (
-                                <NavigationMenuLink
-                                  href={subitem.href}
-                                  className="hover:bg-accent/50 flex-row gap-3 p-3"
-                                >
-                                  <subitem.icon className="text-foreground size-5.5" />
-                                  <div className="flex flex-col gap-1">
-                                    <div className="text-sm font-medium tracking-normal">
-                                      {subitem.label}
-                                    </div>
-                                    <div className="text-muted-foreground text-xs leading-snug">
-                                      {subitem.description}
-                                    </div>
-                                  </div>
-                                </NavigationMenuLink>
-                              ) : (
-                                <div className="hover:bg-accent/50 flex cursor-pointer flex-row gap-3 rounded-md p-3">
-                                  <subitem.icon className="text-foreground size-5.5" />
-                                  <div className="flex flex-col gap-1">
-                                    <div className="flex items-center justify-between">
+                        <div 
+                          className="flex w-[620px]"
+                          onMouseLeave={() => setHoveredCategory(null)}
+                        >
+                          {/* Left column - Categories */}
+                          <div className="w-[280px] border-r pr-3">
+                            {item.subitems.map((subitem) => (
+                              <div 
+                                key={subitem.label}
+                                onMouseEnter={() => subitem.submenu && setHoveredCategory(subitem.label)}
+                              >
+                                {subitem.href ? (
+                                  <NavigationMenuLink
+                                    href={subitem.href}
+                                    className={cn(
+                                      "hover:bg-accent/50 flex-row gap-3 p-3",
+                                      hoveredCategory === subitem.label && "bg-accent/50"
+                                    )}
+                                  >
+                                    <subitem.icon className="text-foreground size-5.5" />
+                                    <div className="flex flex-col gap-1">
                                       <div className="text-sm font-medium tracking-normal">
                                         {subitem.label}
                                       </div>
-                                      {subitem.submenu && (
-                                        <svg className="size-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                        </svg>
-                                      )}
+                                      <div className="text-muted-foreground text-xs leading-snug">
+                                        {subitem.description}
+                                      </div>
                                     </div>
-                                    <div className="text-muted-foreground text-xs leading-snug">
-                                      {subitem.description}
+                                  </NavigationMenuLink>
+                                ) : (
+                                  <div className={cn(
+                                    "hover:bg-accent/50 flex cursor-default flex-row gap-3 rounded-md p-3",
+                                    hoveredCategory === subitem.label && "bg-accent/50"
+                                  )}>
+                                    <subitem.icon className="text-foreground size-5.5" />
+                                    <div className="flex flex-1 flex-col gap-1">
+                                      <div className="flex items-center justify-between">
+                                        <div className="text-sm font-medium tracking-normal">
+                                          {subitem.label}
+                                        </div>
+                                        {subitem.submenu && (
+                                          <svg className="size-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                          </svg>
+                                        )}
+                                      </div>
+                                      <div className="text-muted-foreground text-xs leading-snug">
+                                        {subitem.description}
+                                      </div>
                                     </div>
                                   </div>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                          {/* Right column - Submenu items (shows on hover) */}
+                          <div 
+                            className="w-[340px] pl-3"
+                            onMouseEnter={() => {
+                              // Keep the hovered state when mouse enters right column
+                            }}
+                          >
+                            {item.subitems.map((subitem) => (
+                              subitem.submenu && hoveredCategory === subitem.label && (
+                                <div 
+                                  key={`submenu-${subitem.label}`}
+                                  className="space-y-1"
+                                >
+                                  {subitem.submenu.map((nestedItem) => (
+                                    <NavigationMenuLink
+                                      key={nestedItem.label}
+                                      href={nestedItem.href}
+                                      className="hover:bg-accent/50 flex flex-col gap-1 rounded-md p-3"
+                                    >
+                                      <div className="text-sm font-medium">
+                                        {nestedItem.label}
+                                      </div>
+                                      <div className="text-muted-foreground text-xs leading-snug">
+                                        {nestedItem.description}
+                                      </div>
+                                    </NavigationMenuLink>
+                                  ))}
                                 </div>
-                              )}
-                              {/* Show submenu on hover - positioned to the right */}
-                              {subitem.submenu && (
-                                <div className="absolute left-full top-0 z-50 hidden w-[300px] pl-2 group-hover:block">
-                                  <div className="bg-background rounded-md border p-2 shadow-lg">
-                                    {subitem.submenu.map((nestedItem) => (
-                                      <NavigationMenuLink
-                                        key={nestedItem.label}
-                                        href={nestedItem.href}
-                                        className="hover:bg-accent/50 flex flex-col gap-1 rounded-md p-3"
-                                      >
-                                        <div className="text-sm font-medium">
-                                          {nestedItem.label}
-                                        </div>
-                                        <div className="text-muted-foreground text-xs leading-snug">
-                                          {nestedItem.description}
-                                        </div>
-                                      </NavigationMenuLink>
-                                    ))}
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                          ))}
+                              )
+                            ))}
+                          </div>
                         </div>
                       </NavigationMenuContent>
                     </>
