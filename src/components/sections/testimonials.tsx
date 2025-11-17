@@ -25,116 +25,116 @@ const COMMON_CARDS_CLASSNAMES = {
 const testimonials = [
   {
     id: '1',
-    name: 'Sarah Mitchell',
-    title: 'Head of Product',
-    company: 'Nike',
+    name: 'Lauren M. Williams',
+    title: 'CEO',
+    company: 'ProsperPlan Wealth',
     image:
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face',
+      '/images/external/66cf4f1cdec6f9fb4a1d4554_40cb0baa-70cc-4eef-9326-255691abafee.png',
     companyLogo: {
-      src: '/images/logos/nike.png',
-      width: 67.5,
-      height: 24,
-    },
-    testimonial:
-      'Lumen has completely changed the way we present our project workflows. We can create visual boards, share tasks instantly, and demo progress live. It’s business-focused collaboration without the overhead.',
-    className: COMMON_CARDS_CLASSNAMES.big,
-  },
-  {
-    id: '2',
-    name: 'Alex Chen',
-    title: 'Senior Designer',
-    company: 'Spotify',
-    image:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
-    testimonial:
-      'Lumen was the missing layer between our product and engineering teams. We’ve never had this much clarity in how tasks move through the pipeline.',
-    className: 'col-span-2 ',
-  },
-  {
-    id: '3',
-    name: 'Marcus Johnson',
-    title: 'VP Product',
-    company: 'T-Mobile',
-    image:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
-    testimonial:
-      'We used to lose track of deliverables every week. With Lumen, task ownership is crystal clear and timelines are actually realistic.',
-    className: 'col-span-2 ',
-  },
-  {
-    id: '4',
-    name: 'Emily Davis',
-    title: 'Product Manager',
-    company: 'Booking',
-    image:
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face',
-    testimonial:
-      'Lumen blended perfectly into our design-to-dev process. We organize prototypes, handoffs, and sprints without switching tools.',
-    className: 'col-span-2 ',
-  },
-  {
-    id: '5',
-    name: 'Ben Parker',
-    title: 'Engineering Lead',
-    company: 'IBM',
-    image:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
-    testimonial:
-      "Since adopting Lumen, our feedback cycles became shorter and much more effective. It's a must-have for any growing product team.",
-    className: 'col-span-2 ',
-  },
-  {
-    id: '6',
-    name: 'Samantha Lee',
-    title: 'Design Director',
-    company: 'Logitech',
-    image:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop&crop=face',
-    testimonial:
-      'Lumen makes it incredibly easy to manage cross-functional work. We’ve cut coordination time in half and deliver with better insights.',
-    className: 'col-span-2',
-  },
-  {
-    id: '7',
-    name: 'David Kim',
-    title: 'CTO',
-    company: 'Fortinet',
-    image:
-      'https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400&h=400&fit=crop&crop=face',
-    testimonial:
-      'We use Lumen across all departments — from tech to support. Creating shared workflows has drastically improved internal communication.”',
-    className: 'col-span-2',
-  },
-  {
-    id: '8',
-    name: 'Rachel Green',
-    title: 'Product Designer',
-    company: 'Zapier',
-    image:
-      'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&h=400&fit=crop&crop=face',
-    companyLogo: {
-      src: '/images/logos/zapiar.png',
+      src: '/images/logos/prosperplan_wealth_logo.png',
       width: 105,
       height: 28,
     },
     testimonial:
-      'Lumen has completely transformed how we approach daily project planning and execution. Before switching, we constantly missed deadlines due to misalignment. Now, everyone knows what’s happening, who’s responsible, and when things are due. Our productivity skyrocketed, and team communication has never been clearer.',
+      'We\'re deeply committed to integrating cutting-edge technology to transform the financial planning landscape. Investipal\'s innovative approach aligns perfectly with our vision, particularly in utilizing OCR technology to streamline processes and elevate the client and advisor experience.',
+    className: COMMON_CARDS_CLASSNAMES.big,
+  },
+  {
+    id: '2',
+    name: 'Michael Hoskin',
+    title: 'Founder & Wealth Advisor',
+    company: 'Hoskin Wealth Advisory',
+    image:
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+    testimonial:
+      'Investipal cut our client onboarding time from weeks to days. The AI statement scanner alone saves us 5+ hours per client.',
+    className: 'col-span-2 ',
+  },
+  {
+    id: '3',
+    name: 'Sarah Johnson',
+    title: 'Managing Partner',
+    company: 'Pacific Portfolio Advisors',
+    image:
+      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face',
+    testimonial:
+      'The portfolio construction tools are game-changing. We can now build sophisticated multi-asset portfolios in minutes, not hours.',
+    className: 'col-span-2 ',
+  },
+  {
+    id: '4',
+    name: 'David Chen',
+    title: 'Financial Advisor',
+    company: 'Raymond James',
+    image:
+      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
+    testimonial:
+      'Reg BI compliance used to be a nightmare. Now we generate compliant documentation automatically with every proposal.',
+    className: 'col-span-2 ',
+  },
+  {
+    id: '5',
+    name: 'Robert Martinez',
+    title: 'Senior Advisor',
+    company: 'WJCM Wealth Management',
+    image:
+      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
+    testimonial:
+      'Our proposal turnaround time dropped from days to under 10 minutes. Clients are impressed by the professional, branded output.',
+    className: 'col-span-2 ',
+  },
+  {
+    id: '6',
+    name: 'Jennifer Lee',
+    title: 'Wealth Manager',
+    company: 'ASTN Financial',
+    image:
+      'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&h=400&fit=crop&crop=face',
+    testimonial:
+      'The platform handles everything from alternatives to annuities seamlessly. Finally, one tool that does it all.',
+    className: 'col-span-2',
+  },
+  {
+    id: '7',
+    name: 'Thomas Anderson',
+    title: 'Principal',
+    company: 'SRG Wealth Advisory',
+    image:
+      'https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400&h=400&fit=crop&crop=face',
+    testimonial:
+      'Investipal scaled with our practice effortlessly. We've doubled our AUM without adding more staff.',
+    className: 'col-span-2',
+  },
+  {
+    id: '8',
+    name: 'Amanda Foster',
+    title: 'Portfolio Manager',
+    company: 'Pacific Portfolio Advisors',
+    image:
+      'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop&crop=face',
+    companyLogo: {
+      src: '/images/logos/pacific_logo.png',
+      width: 105,
+      height: 28,
+    },
+    testimonial:
+      'Investipal has completely transformed how we approach client onboarding and portfolio management. The AI-powered tools save us countless hours while delivering better outcomes for our clients.',
     className: cn(COMMON_CARDS_CLASSNAMES.big, ''),
   },
   {
     id: '9',
-    name: 'Mike Johnson',
-    title: 'Startup Founder',
-    company: 'Tailwind CSS',
+    name: 'James Williams',
+    title: 'Managing Director',
+    company: 'SRG Capital',
     image:
       'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face',
     companyLogo: {
-      src: '/images/logos/tailwindcss.png',
+      src: '/images/logos/srg_company_logo_white.png',
       width: 130,
       height: 20,
     },
     testimonial:
-      'I created a workspace, invited my co-founder, and started assigning tasks in 45 seconds. That’s how fast Lumen works.',
+      'We onboarded 15 new clients last quarter—all managed seamlessly through Investipal. The platform scales effortlessly.',
     className: cn(
       COMMON_CARDS_CLASSNAMES.big,
       'lg:[&_blockquote]:text-4xl lg:[&_blockquote]:leading-tight lg:shadow-lg',

@@ -19,34 +19,34 @@ import {
 
 const faqData = [
   {
-    id: 'lumen-who-is-it-for',
-    question: 'What is Lumen and who is it for?',
+    id: 'what-is-investipal',
+    question: 'What is Investipal?',
     answer:
-      'Lumen is a task and workflow management platform designed for product teams, developers, and creatives who want to move faster with clarity and control.',
+      'Investipal is AI-powered financial advisor software that automates portfolio construction, compliance documentation, and client onboarding. It's designed specifically for financial planners who want to spend less time on administrative work and more time with clients.',
   },
   {
-    id: 'technical-knowledge',
-    question: 'Can I use Lumen without technical knowledge?',
+    id: 'how-long-onboarding',
+    question: 'How long does client onboarding take?',
     answer:
-      'Absolutely! Lumen is designed with simplicity in mind. You can start organizing tasks, creating workflows, and collaborating with your team without any technical background. The intuitive interface makes it easy for anyone to get started.',
+      'Most advisors complete client onboarding in days, not weeks. Our AI-powered statement scanner extracts portfolio data from any brokerage statement in seconds, and automated workflows handle risk questionnaires, document collection, and e-signatures.',
+  },
+  {
+    id: 'asset-classes',
+    question: 'What asset classes does Investipal support?',
+    answer:
+      'Investipal supports equities, fixed income, ETFs, mutual funds, alternatives (private equity, real estate, private credit), annuities, and insurance products. You can build portfolios across all asset classes in one platform.',
+  },
+  {
+    id: 'compliance',
+    question: 'How does Investipal handle compliance?',
+    answer:
+      'Investipal automatically generates Regulation Best Interest (Reg BI) disclosures, Investment Policy Statements (IPS), and Form CRS documentation for every client. All documentation is compliant and ready to share.',
   },
   {
     id: 'integrations',
-    question: 'Does Lumen integrate with tools like Slack or Figma?',
+    question: 'Does Investipal integrate with my existing tools?',
     answer:
-      "Yes, Lumen integrates seamlessly with popular tools including Slack, Figma, GitHub, Jira, and many more. You can connect your existing workflow tools to create a unified workspace that fits your team's needs.",
-  },
-  {
-    id: 'task-automation',
-    question: 'How does task automation work in Lumen?',
-    answer:
-      'Lumen offers intelligent task automation that helps streamline repetitive processes. You can set up custom rules, triggers, and workflows that automatically assign tasks, update statuses, send notifications, and move projects through different stages based on your defined criteria.',
-  },
-  {
-    id: 'security-compliance',
-    question: 'Is Lumen secure and compliant?',
-    answer:
-      'Security is our top priority. Lumen is built with enterprise-grade security features including end-to-end encryption, SOC 2 Type II compliance, GDPR compliance, and regular security audits. Your data is protected with industry-standard security protocols.',
+      'Yes, Investipal integrates with popular custodians, CRMs, and portfolio management systems. Our AI statement scanner works with any brokerage statement format, and you can export data in multiple formats.',
   },
 ];
 
@@ -90,8 +90,7 @@ export default function FAQSection() {
             </CardHeader>
             <CardContent className="pt-0">
               <p className="text-muted-foreground">
-                Let&apos;s talk. Our team is here to help you make the most of
-                Lumen. Whether it&apos;s onboarding, integration, or support.
+                Let&apos;s talk. Our team is here to help you streamline your advisory practice. Schedule a personalized demo to see Investipal in action.
               </p>
             </CardContent>
             <CardFooter className="mt-auto">
@@ -101,8 +100,8 @@ export default function FAQSection() {
                 className="group h-12 w-full gap-4"
                 asChild
               >
-                <a href="/contact">
-                  Contact With Us
+                <a href="/book-a-demo">
+                  Schedule a Demo
                   <div className="bg-border border-input grid size-5.5 place-items-center rounded-full border">
                     <ChevronRightIcon className="size-4 transition-transform group-hover:translate-x-0.25" />
                   </div>

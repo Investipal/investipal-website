@@ -10,53 +10,53 @@ import { cn } from '@/lib/utils';
 
 const features = [
   {
-    id: 'security',
-    icon: Shield,
-    title: 'Manage features with clarity, not clutter',
-    description:
-      'Say goodbye to messy event logs. Lumen turns real usage data into clear, grouped feature insights, so you can track what matters, not just what happened.',
-    image: {
-      src: '/images/features-showcase/1.webp',
-      alt: 'Advanced Security',
-      width: 500,
-      height: 400,
-    },
-  },
-  {
-    id: 'performance',
+    id: 'onboarding',
     icon: Zap,
-    title: 'Instant answers to product usage questions',
+    title: 'Onboard clients 10x faster with AI',
     description:
-      'Lumen’s powerful filters make it easy to get actionable usage insights, no SQL needed.',
+      'AI-powered statement scanning extracts portfolio data from any brokerage statement in seconds. Automated risk questionnaires, document collection, and e-signature workflows complete onboarding in days, not weeks.',
     image: {
-      src: '/images/features-showcase/2.webp',
-      alt: 'Lightning Fast Performance',
+      src: '/images/product_screenshots/client_onboarding_portal_v3_2025-11-11.png',
+      alt: 'Client onboarding dashboard',
       width: 500,
       height: 400,
     },
   },
   {
-    id: 'collaboration',
-    icon: Users,
-    title: 'Segment users by feature behavior',
-    description:
-      'Slice your audience based on real feature interaction.Find champions, trial users, and at-risk accounts in seconds.',
-    image: {
-      src: '/images/features-showcase/3.webp',
-      alt: 'Team Collaboration',
-      width: 500,
-      height: 400,
-    },
-  },
-  {
-    id: 'analytics',
+    id: 'proposals',
     icon: TrendingUp,
-    title: 'Export insights, tie them to business impact',
+    title: 'Generate proposals in under 10 minutes',
     description:
-      'Send enriched usage data to your warehouse.Blend Lumen metrics with revenue, churn, or NPS to connect product behavior to outcomes.',
+      'Run portfolio comparison analysis, build branded investment proposals, and auto-generate IPS and Reg BI documentation—all in one workflow. Focus on client relationships, not paperwork.',
     image: {
-      src: '/images/features-showcase/4.webp',
-      alt: 'Smart Analytics',
+      src: '/images/product_screenshots/proposal_cover_page_v3_2025-11-14.png',
+      alt: 'Investment proposal generator',
+      width: 500,
+      height: 400,
+    },
+  },
+  {
+    id: 'portfolio',
+    icon: Shield,
+    title: 'Build portfolios across all asset classes',
+    description:
+      'Construct personalized portfolios with equities, fixed income, alternatives, and annuities. AI-powered optimization for goal-based and risk-based strategies with transparent, explainable recommendations.',
+    image: {
+      src: '/images/product_screenshots/client_overview_performance_v1_2025-11-14.png',
+      alt: 'Portfolio construction dashboard',
+      width: 500,
+      height: 400,
+    },
+  },
+  {
+    id: 'compliance',
+    icon: Users,
+    title: 'Automated compliance documentation',
+    description:
+      'Generate Regulation Best Interest disclosures, Investment Policy Statements, and Form CRS automatically. Stay compliant with confidence while saving hours per client.',
+    image: {
+      src: '/images/general/compliance_v6_(1)_1.png',
+      alt: 'Compliance documentation dashboard',
       width: 500,
       height: 400,
     },
