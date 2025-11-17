@@ -247,6 +247,13 @@ Investipal's [AI-driven portfolio optimization](/features/portfolio-builder) ana
 
 **Client experience impact:** Firms with digital onboarding see 20-30% higher client satisfaction scores and significantly lower drop-off rates during the account opening process.
 
+**Investipal's digital onboarding:** Our platform streamlines client onboarding with automated data collection, risk questionnaires, and document workflows—all integrated with proposal generation so client data flows seamlessly from onboarding through portfolio recommendations.
+
+<figure>
+<img src="/images/product_screenshots/client_onboarding_portal_v3_2025-11-11.png" alt="Investipal client onboarding portal with automated workflows" width="100%" />
+<figcaption>Investipal's client onboarding portal guides prospects through data collection, risk assessment, and documentation</figcaption>
+</figure>
+
 Read our complete guide on [automating client onboarding workflows](/blog/how-to-automate-client-onboarding-for-financial-advisors-a-stepbystep-workflow-for-2025) for step-by-step implementation.
 
 ### 5. Compliance Automation: Generate IPS and Reg BI Docs in Minutes
