@@ -2,6 +2,7 @@
 
 import { ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useState, useEffect } from 'react';
 
 import Noise from '@/components/elements/noise';
 import { Button } from '@/components/ui/button';
@@ -9,6 +10,48 @@ import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion';
 
 export default function Hero() {
   const prefersReducedMotion = usePrefersReducedMotion();
+  
+  // Typing effect state
+  const words = ['proposals', 'onboarding', 'data intake', 'compliance', 'portfolios'];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [currentText, setCurrentText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    // Blinking cursor
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+
+    return () => clearInterval(cursorInterval);
+  }, []);
+
+  useEffect(() => {
+    const currentWord = words[currentWordIndex];
+    
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        if (currentText.length < currentWord.length) {
+          setCurrentText(currentWord.substring(0, currentText.length + 1));
+        } else {
+          // Pause at end of word
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      } else {
+        // Deleting
+        if (currentText.length > 0) {
+          setCurrentText(currentText.substring(0, currentText.length - 1));
+        } else {
+          setIsDeleting(false);
+          setCurrentWordIndex((currentWordIndex + 1) % words.length);
+        }
+      }
+    }, isDeleting ? 50 : 100);
+
+    return () => clearTimeout(timeout);
+  }, [currentText, isDeleting, currentWordIndex, words]);
 
   // Animation variants
   const containerVariants = {
@@ -101,7 +144,11 @@ export default function Hero() {
           className="text-3xl leading-tight tracking-tight md:text-5xl lg:text-6xl"
         >
           AI for financial advisors
-          <br className="hidden md:block" /> streamlining <span className="text-primary">proposals</span>
+          <br className="hidden md:block" /> streamlining{' '}
+          <span className="text-primary">
+            {currentText}
+            <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>
+          </span>
         </motion.h1>
 
         <motion.p
