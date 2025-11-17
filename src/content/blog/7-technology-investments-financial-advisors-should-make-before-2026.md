@@ -75,10 +75,10 @@ A 3-advisor RIA invests in proposal automation software:
 - Total time saved: 35 hours/year
 - Hourly rate: $200
 - **Value of time saved: $7,000**
-- Software cost: $800/month = $9,600/year
-- **Net ROI: -$2,600 (negative ROI on time alone)**
+- Software cost: $450/month = $5,400/year
+- **Net ROI: $1,600 (30% ROI on time savings alone)**
 
-But wait—there's more to the story...
+But the real value comes from capacity expansion...
 
 ### Method 2: Revenue Impact ROI
 
@@ -91,7 +91,7 @@ Continuing the example above, the faster proposal process allows the firm to:
 - Fee rate: 1%
 - Annual revenue: **$40,000 in new revenue**
 
-**Combined ROI:** ($7,000 time savings + $40,000 new revenue - $9,600 cost) / $9,600 = **390% ROI**
+**Combined ROI:** ($7,000 time savings + $40,000 new revenue - $5,400 cost) / $5,400 = **770% ROI**
 
 ### Method 3: Efficiency ROI
 
@@ -141,7 +141,7 @@ Based on industry trends, ROI potential, and 2026 planning priorities, here are 
 - **Portfolio comparison tools** showing current vs proposed allocations with clear visualizations
 - **Customizable templates** that maintain your brand while automating the heavy lifting
 
-**Budget range:** $500-$1,500/month depending on firm size and features
+**Budget range:** $250-$1,200/month depending on features and firm size (note: all-in-one platforms that consolidate multiple tools often cost less than the combined pricing of separate point solutions)
 
 **Priority level:** **Year 1 - Critical** (highest ROI, fastest payback period)
 
@@ -150,8 +150,13 @@ Based on industry trends, ROI potential, and 2026 planning priorities, here are 
 **Investipal consolidates the entire proposal workflow:** Our platform combines [statement scanning](/features/automated-statement-scanner), risk assessment, portfolio optimization, and compliance documentation in a single workflow. Advisors generate compliant proposals in under 10 minutes in typical workflows (subject to advisor review and data quality).
 
 <figure>
-<img src="/images/general/investment_proposal_generator.png" alt="Investipal proposal generation dashboard showing automated workflow" width="100%" />
-<figcaption>Investipal's AI-powered proposal generator creates customized, compliance-ready proposals from client data in minutes</figcaption>
+<img src="/images/product_screenshots/proposal_cover_page_v3_2025-11-14.png" alt="Investipal proposal cover page with professional branding and client details" width="100%" />
+<figcaption>Investipal's AI-powered proposal generator creates customized, compliance-ready proposals with professional branding</figcaption>
+</figure>
+
+<figure>
+<img src="/images/product_screenshots/proposal_workflow_client_details_v1_2025-11-14.png" alt="Investipal proposal workflow showing client details and portfolio analysis" width="100%" />
+<figcaption>Complete proposal workflow from client data capture to portfolio recommendations in one platform</figcaption>
 </figure>
 
 ### 2. Integrated CRM: The Foundation of Your Tech Stack
@@ -388,7 +393,7 @@ Now that we've covered the seven priority investments, let's translate this into
 | Technology | Monthly Cost | Annual Cost | Priority |
 |------------|-------------|-------------|----------|
 | CRM (10 users) | $1,500 | $18,000 | Critical |
-| Proposal Automation | $1,500 | $18,000 | Critical |
+| Proposal & Client Acquisition Tools | $750-$1,500 | $9,000-$18,000 | Critical |
 | Portfolio Management | $4,000 | $48,000 | Critical |
 | Financial Planning (10 users) | $2,000 | $24,000 | Critical |
 | Digital Onboarding | $1,000 | $12,000 | Critical |
