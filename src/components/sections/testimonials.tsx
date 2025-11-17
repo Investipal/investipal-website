@@ -102,7 +102,7 @@ const testimonials = [
     image:
       'https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400&h=400&fit=crop&crop=face',
     testimonial:
-      'Investipal scaled with our practice effortlessly. We've doubled our AUM without adding more staff.',
+      'Investipal scaled with our practice effortlessly. We\'ve doubled our AUM without adding more staff.',
     className: 'col-span-2',
   },
   {
@@ -167,11 +167,10 @@ export default function Testimonials() {
         {/* Section Header */}
         <div className="mx-auto max-w-4xl space-y-3 lg:space-y-4 lg:text-center">
           <h2 className="text-4xl tracking-tight lg:text-5xl">
-            Trusted by modern teams
+            Trusted by leading advisory firms
           </h2>
           <p className="text-muted-foreground text-lg leading-snug lg:text-balance">
-            Join thousands of product managers, designers, and developers who
-            rely on Lumen to plan, track, and deliver value without the chaos.
+            Join hundreds of financial advisors who rely on Investipal to automate their workflow, reduce costs, and deliver exceptional client experiences.
           </p>
         </div>
 
