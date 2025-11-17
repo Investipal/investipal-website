@@ -27,7 +27,7 @@ import { cn } from '@/lib/utils';
 
 export const NAV_LINKS = [
   {
-    label: 'Features',
+    label: 'Platform',
     href: '/features',
     subitems: [
       {
@@ -173,35 +173,11 @@ export const NAV_LINKS = [
         description: 'Insurance and annuity modeling',
         icon: Shield,
       },
-    ],
-  },
-  {
-    label: 'Platform',
-    href: '#',
-    subitems: [
-      {
-        label: 'How It Works',
-        href: '/how-it-works',
-        description: 'See how Investipal works end-to-end',
-        icon: Lightbulb,
-      },
-      {
-        label: 'Integrations',
-        href: '/integrations',
-        description: 'Connect with your existing tools',
-        icon: Zap,
-      },
       {
         label: 'Cross-Border Wealth',
         href: '/cross-border-wealth',
         description: 'Multi-currency portfolio management',
         icon: TrendingUp,
-      },
-      {
-        label: 'Risk Assessment',
-        href: '/risk-assessment',
-        description: 'Comprehensive risk profiling',
-        icon: Shield,
       },
     ],
   },
@@ -238,6 +214,12 @@ export const NAV_LINKS = [
         href: '/compare',
         description: 'Compare with other platforms',
         icon: BarChart3,
+      },
+      {
+        label: 'Integrations',
+        href: '/integrations',
+        description: 'Connect with your existing tools',
+        icon: Zap,
       },
     ],
   },
@@ -352,8 +334,8 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
                         {item.label}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent className="">
-                        {item.label === 'Features' ? (
-                          // Expandable mega menu ONLY for Features - starts single column, expands on hover
+                        {item.label === 'Platform' ? (
+                          // Expandable mega menu ONLY for Platform - starts single column, expands on hover
                           <div 
                             className={cn(
                               "relative transition-all duration-200",
