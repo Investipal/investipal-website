@@ -5,11 +5,13 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
 // Import Lumen sections
 import Hero from '@/components/sections/hero';
 import Logos from '@/components/sections/logos';
+import BenefitsShowcase from '@/components/sections/benefits-showcase';
 import FeaturesCarousel from '@/components/sections/features-carousel';
 import FeaturesGrid from '@/components/sections/features-grid';
 import FeaturesShowcase from '@/components/sections/features-showcase';
 import Testimonials from '@/components/sections/testimonials';
 import FAQSection from '@/components/sections/faq-section';
+import CTASection from '@/components/sections/CTASection.astro';
 
 // Organization structured data for homepage
 const siteUrl = Astro.site?.toString() || 'https://investipal.co';
@@ -44,9 +46,12 @@ const organizationStructuredData = {
   <!-- Modern Lumen Design with Investipal Content -->
   <Hero client:load />
   <Logos client:load />
+  <BenefitsShowcase />
   <FeaturesCarousel client:load />
   <FeaturesGrid />
   <FeaturesShowcase client:load />
+  <CTASection />
   <Testimonials client:load />
   <FAQSection client:load />
+  <CTASection />
 </DefaultLayout>

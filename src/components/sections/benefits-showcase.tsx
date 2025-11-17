@@ -10,31 +10,31 @@ import {
 
 const COLUMNS_DATA = [
   {
-    image: '/images/benefits-showcase/1.webp',
-    imageAlt: 'Global Users',
-    cardTitle: '21M',
-    cardSubtitle: 'Global Users',
+    image: '/images/product_screenshots/client_onboarding_portal_v3_2025-11-11.png',
+    imageAlt: 'Client Onboarding Dashboard',
+    cardTitle: '95%',
+    cardSubtitle: 'Time Saved',
     cardContent:
-      'Achieve greater accuracy and efficiency with our advanced toolkit.',
+      'Automate client onboarding and complete the process in days instead of weeks with AI-powered workflows.',
     cardPosition: 'bottom' as const,
   },
   {
-    image: '/images/benefits-showcase/2.webp',
-    imageAlt: 'Open AI.',
-    cardTitle: 'Open AI.',
-    name: 'Grace Young',
-    title: 'CMO at Open AI.',
+    image: '/images/product_screenshots/proposal_cover_page_v3_2025-11-14.png',
+    imageAlt: 'Investipal Platform',
+    cardTitle: 'Investipal',
+    name: 'Lauren M. Williams',
+    title: 'CEO at ProsperPlan Wealth',
     cardContent:
-      'Clear task ownership, fast collaboration, and better visibility lead to better decisions and faster delivery.',
+      'Investipal\'s innovative approach aligns perfectly with our vision, particularly in utilizing OCR technology to streamline processes and elevate the client experience.',
     cardPosition: 'inside' as const,
   },
   {
-    image: '/images/benefits-showcase/3.webp',
-    imageAlt: 'Minimized Errors',
-    cardTitle: '97%',
-    cardSubtitle: 'Minimized Errors',
+    image: '/images/product_screenshots/client_overview_performance_v1_2025-11-14.png',
+    imageAlt: 'Portfolio Analytics',
+    cardTitle: '10min',
+    cardSubtitle: 'Proposal Time',
     cardContent:
-      'Achieve greater accuracy and efficiency with our advanced toolkit.',
+      'Generate comprehensive proposals with portfolio analysis and compliance documentation in under 10 minutes.',
     cardPosition: 'top' as const,
   },
 ];
@@ -45,7 +45,7 @@ export default function BenefitsShowcase() {
       <Noise />
       <div className="bigger-container">
         <h2 className="mb-12 text-center text-4xl leading-none font-medium tracking-tight lg:mb-16 lg:text-5xl">
-          See the Benefits Firsthand
+          Proven Results from Advisory Firms
         </h2>
 
         {/* Three Column Grid */}
