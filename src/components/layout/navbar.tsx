@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 
-import { BarChart3, Clock, Cpu, Filter, Link2 } from 'lucide-react';
+import { BarChart3, Clock, FileText, TrendingUp, Users } from 'lucide-react';
 
 import { ThemeToggle } from '@/components/elements/theme-toggle';
 import { useBannerVisibility } from '@/components/layout/banner';
@@ -31,34 +31,56 @@ export const NAV_LINKS = [
     href: '#',
     subitems: [
       {
-        label: 'Work with clarity',
-        href: '/#features-carousel',
-        description: 'This is a subtext that explains a part of the item',
-        icon: Link2,
+        label: 'Client Onboarding',
+        href: '/features/client-onboarding',
+        description: 'Onboard clients 10x faster with AI-powered automation',
+        icon: Clock,
       },
       {
-        label: 'Issue tracking with less noise',
-        href: '/#features-grid',
-        description: 'This is a subtext that explains a part of the item',
+        label: 'Portfolio Construction',
+        href: '/features/asset-allocation',
+        description: 'Build portfolios across all asset classes',
         icon: BarChart3,
       },
       {
-        label: 'Filtering Tasks, no more distractions',
-        href: '/#features-showcase',
-        description: 'This is a subtext that explains a part of the item',
-        icon: Filter,
+        label: 'Proposal Generation',
+        href: '/features/alternatives-proposals',
+        description: 'Generate proposals in under 10 minutes',
+        icon: FileText,
+      },
+      {
+        label: 'Compliance & Reg BI',
+        href: '/features/regulation-best-interest-generator',
+        description: 'Automated compliance documentation',
+        icon: TrendingUp,
       },
     ],
   },
-  { label: 'About', href: '/about' },
-  { label: 'Pricing', href: '/pricing' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'FAQ', href: '/faq' },
+  {
+    label: 'Solutions',
+    href: '#',
+    subitems: [
+      {
+        label: 'RIA Firms',
+        href: '/solutions/ria',
+        description: 'Enterprise solutions for RIA firms',
+        icon: Users,
+      },
+      {
+        label: 'Solo Advisors',
+        href: '/solutions/solo-advisor',
+        description: 'Streamlined tools for independent advisors',
+        icon: Users,
+      },
+    ],
+  },
+  { label: 'How It Works', href: '/how-it-works' },
+  { label: 'Resources', href: '/blog' },
 ];
 
 const ACTION_BUTTONS = [
-  { label: 'Sign in', href: '/signin', variant: 'ghost' as const },
-  { label: 'Get started', href: '/signup', variant: 'default' as const },
+  { label: 'Sign in', href: 'https://app.investipal.co/login', variant: 'ghost' as const },
+  { label: 'Book a Demo', href: '/book-a-demo', variant: 'default' as const },
 ];
 
 const Navbar = ({ currentPage }: { currentPage: string }) => {

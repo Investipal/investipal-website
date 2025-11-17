@@ -8,29 +8,38 @@ import Noise from '@/components/elements/noise';
 // Create footer sections from NAV_LINKS and add blog links
 const FOOTER_SECTIONS = [
   {
-    title: 'Navigation',
-    links: NAV_LINKS.flatMap((link) => [{ name: link.label, href: link.href }]),
-  },
-
-  {
-    title: 'Blog',
+    title: 'Product',
     links: [
-      { name: 'All Posts', href: '/blog' },
-      {
-        name: 'Agile Project Management',
-        href: '/blog/agile-project-management-tips',
-      },
-      {
-        name: 'Customer Onboarding',
-        href: '/blog/customer-onboarding-strategies',
-      },
+      { name: 'Features', href: '/features' },
+      { name: 'How It Works', href: '/how-it-works' },
+      { name: 'Integrations', href: '/integrations' },
+      { name: 'Book a Demo', href: '/book-a-demo' },
+    ],
+  },
+  {
+    title: 'Solutions',
+    links: [
+      { name: 'RIA Firms', href: '/solutions/ria' },
+      { name: 'Solo Advisors', href: '/solutions/solo-advisor' },
+      { name: 'Financial Planners', href: '/segments/financial-planners' },
+      { name: 'Wealth Managers', href: '/segments/wealth-managers' },
     ],
   },
   {
     title: 'Resources',
     links: [
-      { name: 'Terms & Conditions', href: '/terms-and-conditions' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Case Studies', href: '/resources/case-studies' },
+      { name: 'Webinars', href: '/webinars' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { name: 'About Us', href: '/about-us' },
+      { name: 'Contact', href: '/contact-us' },
       { name: 'Privacy Policy', href: '/privacy-policy' },
+      { name: 'Terms & Conditions', href: '/terms-conditions' },
     ],
   },
 ];
@@ -38,11 +47,11 @@ const FOOTER_SECTIONS = [
 const SOCIAL_LINKS = [
   {
     name: 'Follow on LinkedIn',
-    href: 'https://linkedin.com',
+    href: 'https://www.linkedin.com/company/investipal',
   },
   {
     name: 'Follow on X',
-    href: 'https://x.com',
+    href: 'https://x.com/investipal',
   },
 ];
 
@@ -122,56 +131,11 @@ const Footer = ({ currentPage }: { currentPage: string }) => {
           </div>
         </div>
 
-        <div className="mt-15 flex flex-col items-center justify-between gap-4 md:mt-20 md:flex-row">
-          <div className="flex gap-4">
-            {APP_STORE_BUTTONS.map((button, index) => (
-              <a key={index} href={button.href}>
-                {button.icon === 'apple' ? (
-                  <div className="relative">
-                    <img
-                      src="/images/apple-button.png"
-                      alt="Apple App Store"
-                      width={124}
-                      height={42.6}
-                      className="dark:hidden"
-                    />
-                    <img
-                      src="/images/apple-button-dark-mode.png"
-                      alt="Apple App Store"
-                      width={124}
-                      height={42.6}
-                      className="hidden dark:block"
-                    />
-                  </div>
-                ) : (
-                  <div className="relative">
-                    <img
-                      src="/images/google-button.png"
-                      alt="Google Play Store"
-                      width={124}
-                      height={42.6}
-                      className="dark:hidden"
-                    />
-                    <img
-                      src="/images/google-button-dark-mode.png"
-                      alt="Google Play Store"
-                      width={124}
-                      height={42.6}
-                      className="hidden dark:block"
-                    />
-                  </div>
-                )}
-              </a>
-            ))}
-          </div>
-
-          <div className="flex gap-6">
-            <a
-              href="https://www.shadcnblocks.com"
-              className="text-muted-foreground hover:text-foreground text-sm transition-colors"
-            >
-              © {new Date().getFullYear()} Shadcnblocks.com
-            </a>
+        <div className="mt-15 flex flex-col items-center justify-center gap-4 border-t pt-8 md:mt-20">
+          <div className="flex flex-wrap items-center justify-center gap-6">
+            <span className="text-muted-foreground text-sm">
+              © {new Date().getFullYear()} Investipal. All rights reserved.
+            </span>
             <a
               href="/privacy-policy"
               className="text-muted-foreground hover:text-foreground text-sm transition-colors"
@@ -179,7 +143,7 @@ const Footer = ({ currentPage }: { currentPage: string }) => {
               Privacy
             </a>
             <a
-              href="/terms-and-conditions"
+              href="/terms-conditions"
               className="text-muted-foreground hover:text-foreground text-sm transition-colors"
             >
               Terms
