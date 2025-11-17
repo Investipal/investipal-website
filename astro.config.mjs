@@ -1,18 +1,16 @@
-// @ts-nocheck
+// @ts-check
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
-import tailwind from '@astrojs/tailwind';
-
+import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
-
+import tailwindcss from '@tailwindcss/vite';
 import partytown from '@astrojs/partytown';
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     mdx(),
-    tailwind(),
-
+    react(),
     sitemap({
       customPages: [
         // Segment Pages
@@ -50,9 +48,10 @@ export default defineConfig({
     remotePatterns: [{ protocol: 'https' }],
   },
 
-  // Enable compression
+  // Enable compression and Tailwind 4
   vite: {
     plugins: [
+      tailwindcss(),
       {
         name: 'dev-sanitize-svg-href',
         apply: 'serve',

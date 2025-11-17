@@ -1,0 +1,69 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+
+// Import Lumen sections
+import Hero from '@/components/sections/hero';
+import Logos from '@/components/sections/logos';
+import FeaturesCarousel from '@/components/sections/features-carousel';
+import FeaturesGrid from '@/components/sections/features-grid';
+import FeaturesShowcase from '@/components/sections/features-showcase';
+import Testimonials from '@/components/sections/testimonials';
+import FAQSection from '@/components/sections/faq-section';
+import Pricing from '@/components/sections/pricing';
+
+// Organization structured data for homepage
+const siteUrl = Astro.site?.toString() || 'https://investipal.co';
+
+const organizationStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Investipal",
+  "description": "AI-powered financial advisor software with automated portfolio construction, compliance management, and client onboarding.",
+  "url": siteUrl,
+  "logo": `${siteUrl}/images/logo.png`,
+  "sameAs": [
+    "https://linkedin.com/company/investipal"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "url": `${siteUrl}/contact-us`
+  },
+  "offers": {
+    "@type": "Offer",
+    "description": "Financial advisor software solutions",
+    "category": "Software as a Service"
+  }
+};
+---
+
+<DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <!-- Organization Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(organizationStructuredData)} />
+  
+  <!-- Hero Section -->
+  <Hero client:load />
+  
+  <!-- Trusted By Logos -->
+  <Logos client:load />
+  
+  <!-- Features Carousel -->
+  <FeaturesCarousel client:load />
+  
+  <!-- Features Grid -->
+  <FeaturesGrid />
+  
+  <!-- Features Showcase -->
+  <FeaturesShowcase client:load />
+  
+  <!-- Testimonials -->
+  <Testimonials client:load />
+  
+  <!-- FAQ Section -->
+  <FAQSection client:load />
+  
+  <!-- Pricing -->
+  <Pricing client:load />
+</DefaultLayout>
+

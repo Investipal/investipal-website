@@ -1,9 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
 
-/* Investipal Brand Colors - CSS Custom Properties for Tailwind v4 */
-@theme {
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius: 0.625rem;
+  --text-4xxl: 2.5rem;
+  --text-6xxl: 4rem;
+
+  --display-weight: 600;
+  --text-weight: 400;
+  --font-display: var(--font-inter);
+  --font-text: var(--font-inter);
+
+  /* Investipal Brand Colors */
   --color-investipal-50: #f8f9ff;
   --color-investipal-100: #f1f3ff;
   --color-investipal-200: #e4e8ff;
@@ -16,526 +27,330 @@
   --color-investipal-900: #4c1d95;
   --color-investipal-950: #2e1065;
 
-  /* Gray Colors */
-  --color-gray-50: #f9fafb;
-  --color-gray-100: #f3f4f6;
-  --color-gray-200: #e5e7eb;
-  --color-gray-300: #d1d5db;
-  --color-gray-400: #9ca3af;
-  --color-gray-500: #6b7280;
-  --color-gray-600: #4b5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1f2937;
-  --color-gray-900: #111827;
-  --color-gray-950: #030712;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 
-  /* Typography Configuration for Tailwind v4 */
-  --typography-prose-max-width: none;
-  --typography-prose-color: theme(colors.gray.700);
-  --typography-prose-headings-color: theme(colors.gray.900);
-  --typography-prose-links-color: theme(colors.investipal.600);
-  --typography-prose-links-hover-color: theme(colors.investipal.700);
-  --typography-prose-strong-color: theme(colors.gray.900);
-  --typography-prose-code-color: theme(colors.gray.800);
-}
-
-:root {
-  /* Legacy CSS Custom Properties for compatibility */
-  --investipal-50: #f5f3ff;
-  --investipal-100: #ede9fe;
-  --investipal-200: #ddd6fe;
-  --investipal-300: #c4b5fd;
-  --investipal-400: #a78bfa;
-  --investipal-500: #8b5cf6;
-  --investipal-600: #7c3aed; /* Primary brand color */
-  --investipal-700: #6d28d9;
-  --investipal-800: #5b21b6;
-  --investipal-900: #4c1d95;
-  --investipal-950: #2e1065;
-
-  /* Semantic Colors */
-  --primary: var(--investipal-600);
-  --primary-hover: var(--investipal-700);
-  --primary-light: var(--investipal-100);
-  --primary-dark: var(--investipal-800);
-
-  /* UI Colors */
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 222.2 84% 4.9%;
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 222.2 84% 4.9%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --muted: 210 40% 96%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96%;
-  --accent-foreground: 222.2 84% 4.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --radius: 0.5rem;
-}
-
-/* Critical Above-the-Fold Performance Optimizations */
-html {
-  scroll-behavior: smooth;
-  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  /* Ensure critical font loading */
-  font-display: swap;
-}
-
-/* Critical layout containment for performance */
-.header-nav, .hero-section, .main-content {
-  contain: layout style;
-}
-
-/* System font fallback for immediate text rendering */
-.font-system_ui, .font-system-ui {
-  font-family: 
-    -apple-system, 
-    BlinkMacSystemFont, 
-    'Segoe UI', 
-    Roboto, 
-    Oxygen, 
-    Ubuntu, 
-    Cantarell, 
-    'Open Sans', 
-    'Helvetica Neue', 
-    sans-serif;
-  font-display: swap;
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: var(--investipal-400);
-    --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
   }
 }
 
-/* Utility classes for consistent brand usage */
-.brand-primary { color: var(--investipal-600); }
-.brand-primary-bg { background-color: var(--investipal-600); }
-.brand-primary-border { border-color: var(--investipal-600); }
+:root {
+  /* Lumen base colors with Investipal primary */
+  --foreground: oklch(0.041 0.002 314);
+  --background: oklch(1 0 0);
+  --card-foreground: oklch(0.132 0.024 254);
+  --card: oklch(1 0 0);
+  --popover-foreground: oklch(0.132 0.024 254);
+  --popover: oklch(1 0 0);
+  --primary: oklch(0.488 0.243 264.376); /* Investipal purple */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.585 0.132 257);
+  --secondary-foreground: oklch(0.041 0.002 314);
+  --muted: oklch(0.15 0.03 50 / 0.08);
+  --muted-foreground: oklch(0.369 0.005 300);
+  --accent: oklch(0.96 0.01 320);
+  --accent-foreground: oklch(0.08 0.02 290);
+  --destructive: oklch(0.604 0.191 22.216);
+  --border: oklch(0.98 0 0);
+  --input: oklch(0.916 0.002 300);
+  --ring: oklch(0.84 0.01 50);
 
-.brand-primary-hover { color: var(--investipal-700); }
-.brand-primary-hover-bg { background-color: var(--investipal-700); }
-.brand-primary-hover-border { border-color: var(--investipal-700); }
+  --chart-1: oklch(0.585 0.132 257);
+  --chart-2: oklch(0.741 0.088 220);
+  --chart-3: oklch(0.862 0.069 320);
+  --chart-4: oklch(0.988 0.003 260);
 
-.brand-light { color: var(--investipal-100); }
-.brand-light-bg { background-color: var(--investipal-100); }
+  --sidebar: oklch(0.9 0.01 80);
+  --sidebar-foreground: oklch(0.041 0.002 314);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.041 0.002 314);
+  --sidebar-accent: oklch(0.731 0 0);
+  --sidebar-accent-foreground: oklch(0.041 0.002 314);
+  --sidebar-border: oklch(0 0 0 / 10%);
+  --sidebar-ring: oklch(0.43 0 0);
 
-/* Common component styles */
-.btn-primary {
-  @apply bg-investipal-600 hover:bg-investipal-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
+  /* Legacy compatibility */
+  --investipal-600: #7c3aed;
+  --investipal-700: #6d28d9;
 }
 
-.btn-secondary {
-  @apply bg-investipal-100 hover:bg-investipal-200 text-investipal-700 font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
+.dark {
+  /* Dark mode colors */
+  --foreground: oklch(1 0 0);
+  --background: oklch(0.095 0.002 314);
+  --card-foreground: oklch(1 0 0);
+  --card: oklch(0.108 0 0);
+  --popover-foreground: oklch(1 0 0);
+  --popover: oklch(0.108 0 0);
+  --primary: oklch(1 0 0);
+  --primary-foreground: oklch(0.041 0.002 314);
+  --secondary: oklch(0.585 0.132 257);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.15 0.03 50 / 0.12);
+  --muted-foreground: oklch(0.691 0.005 300);
+  --accent: oklch(0.15 0.01 320);
+  --accent-foreground: oklch(0.92 0.02 290);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(0.173 0 0);
+  --input: oklch(0.298 0 0);
+  --ring: oklch(0.24 0.01 50);
+
+  --chart-1: oklch(0.388 0.127 257);
+  --chart-2: oklch(0.461 0.085 220);
+  --chart-3: oklch(0.35 0.125 320);
+  --chart-4: oklch(0.108 0 0);
+
+  --sidebar: oklch(0.1 0.01 80);
+  --sidebar-foreground: oklch(1 0 0);
+  --sidebar-primary: oklch(0.588 0.243 264.376);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.231 0 0);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.63 0 0);
 }
 
-.link-primary {
-  @apply text-investipal-600 hover:text-investipal-700 font-medium transition-colors duration-200;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-text font-weight-text;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-weight-display;
+  }
 }
 
+@layer utilities {
+  .section-padding {
+    @apply py-17 md:py-24 lg:py-28;
+  }
+}
+
+@utility font-weight-display {
+  font-weight: var(--display-weight);
+}
+
+@utility font-weight-text {
+  font-weight: var(--text-weight);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.375rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 1200px) {
+    max-width: 1112px;
+  }
+}
+
+@utility bigger-container {
+  margin-inline: auto;
+  padding-inline: 1.375rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 1200px) {
+    max-width: 1254px;
+  }
+}
+
+@utility navbar-container {
+  margin-inline: auto;
+  padding-inline: 1.375rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 1200px) {
+    max-width: 1334px;
+  }
+}
+
+/* Toggle Theme View Transitions */
+@keyframes theme-mask {
+  0% {
+    clip-path: circle(0% at var(--x, 50%) var(--y, 50%));
+  }
+  100% {
+    clip-path: circle(150% at var(--x, 50%) var(--y, 50%));
+  }
+}
+
+html.theme-transition::view-transition-old(root),
+html.theme-transition::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html.theme-transition::view-transition-old(root) {
+  z-index: 1;
+}
+
+html.theme-transition::view-transition-new(root) {
+  z-index: 2;
+  animation: theme-mask 0.5s ease-in forwards;
+}
+
+/* Handle reduced motion preference globally */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .motion-safe-only {
+    display: none !important;
+  }
+}
+
+/* Inter Font Loading */
 @font-face {
   font-family: 'Inter';
   src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
-  font-weight: 100;
+  font-weight: 100 900;
   font-style: normal;
+  font-display: swap;
 }
 
-@font-face {
-  font-family: 'Inter';
-  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
-  font-weight: 200;
-  font-style: normal;
-}
+/* ======================================
+   INVESTIPAL BLOG-SPECIFIC STYLES
+   ====================================== */
 
-@font-face {
-  font-family: 'Inter';
-  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Vollkorn';
-  src: url('https://fonts.gstatic.com/s/vollkorn/v29/0yb7GDoxxrvAnPhYGxksWE8eqQ.woff2') format("woff2");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Vollkorn';
-  src: url('https://fonts.gstatic.com/s/vollkorn/v29/0yb7GDoxxrvAnPhYGxksWE8eqQ.woff2') format("woff2");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Vollkorn';
-  src: url('https://fonts.gstatic.com/s/vollkorn/v29/0yb9GDoxxrvAnPhYGxkpaE0.woff2') format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Vollkorn';
-  src: url('https://fonts.gstatic.com/s/vollkorn/v29/0yb9GDoxxrvAnPhYGxkpaE0.woff2') format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-/* GLOBAL DARK MODE HEADERS - Override everything */
-body.reading-mode h1,
-body.reading-mode h2,
-body.reading-mode h3,
-body.reading-mode h4,
-body.reading-mode h5,
-body.reading-mode h6 {
+/* Reading Mode - Dark Background with Light Text */
+body.reading-mode h1, body.reading-mode h2, body.reading-mode h3,
+body.reading-mode h4, body.reading-mode h5, body.reading-mode h6 {
   color: #ffffff !important;
   background: none !important;
   -webkit-text-fill-color: #ffffff !important;
 }
 
-body.reading-mode .prose h1,
-body.reading-mode .prose h2,
-body.reading-mode .prose h3,
-body.reading-mode .prose h4,
-body.reading-mode .prose h5,
-body.reading-mode .prose h6 {
+body.reading-mode .prose h1, body.reading-mode .prose h2, body.reading-mode .prose h3,
+body.reading-mode .prose h4, body.reading-mode .prose h5, body.reading-mode .prose h6 {
   color: #ffffff !important;
   background: none !important;
   -webkit-text-fill-color: #ffffff !important;
 }
 
-/* Force all elements to be white in reading mode */
-.reading-mode h1,
-.reading-mode h2,
-.reading-mode h3,
-.reading-mode h4,
-.reading-mode h5,
-.reading-mode h6 {
-  color: #ffffff !important;
-  background: transparent !important;
-}
-
-/* Dark mode - ALL text elements should be light */
-body.reading-mode h1,
-body.reading-mode h2,
-body.reading-mode h3 {
-  color: #ffffff !important;
-  background: none !important;
-}
-
-/* Dark mode - List items and content */
-body.reading-mode li,
-body.reading-mode p,
-body.reading-mode span,
-body.reading-mode strong,
-body.reading-mode b,
-body.reading-mode em,
-body.reading-mode i {
+body.reading-mode li, body.reading-mode p, body.reading-mode span,
+body.reading-mode strong, body.reading-mode b, body.reading-mode em, body.reading-mode i {
   color: #e5e7eb !important;
 }
 
-/* Dark mode - All text inside prose containers */
-body.reading-mode .prose li,
-body.reading-mode .prose p,
-body.reading-mode .prose span,
-body.reading-mode .prose strong,
-body.reading-mode .prose b,
-body.reading-mode .prose-enhanced li,
-body.reading-mode .prose-enhanced p,
-body.reading-mode .prose-enhanced span,
-body.reading-mode .prose-enhanced strong,
-body.reading-mode .prose-enhanced b {
+body.reading-mode .prose li, body.reading-mode .prose p, body.reading-mode .prose span,
+body.reading-mode .prose strong, body.reading-mode .prose b {
   color: #e5e7eb !important;
-}
-
-/* Dark mode - Override all Tailwind text colors */
-body.reading-mode .text-gray-900,
-body.reading-mode .text-gray-800,
-body.reading-mode .text-gray-700,
-body.reading-mode .text-gray-600,
-body.reading-mode .text-gray-500,
-body.reading-mode .text-black {
-  color: #e5e7eb !important;
-}
-
-/* Blog hero and author meta in reading mode */
-body.reading-mode .blog-hero h1,
-body.reading-mode .blog-hero h2,
-body.reading-mode .blog-hero p,
-body.reading-mode .blog-hero .author-meta,
-body.reading-mode .blog-hero .author-meta *,
-body.reading-mode .author-card,
-body.reading-mode .author-card * {
-  color: #e5e7eb !important;
-}
-
-body.reading-mode .author-card { background: #111827 !important; border-color: #374151 !important; }
-
-/* Ensure the hero section isn't light in reading mode */
-body.reading-mode .blog-hero { 
-  background: #111827 !important; 
-}
-body.reading-mode .blog-hero .border-gray-200 { 
-  border-color: #374151 !important; 
-}
-
-/* Do NOT alter header nav, breadcrumbs, or tag colors in reading mode */
-body.reading-mode header,
-body.reading-mode header *,
-body.reading-mode nav,
-body.reading-mode nav *,
-body.reading-mode .breadcrumbs,
-body.reading-mode .breadcrumbs *,
-body.reading-mode .standard-badge,
-body.reading-mode .standard-badge * {
-  color: inherit !important;
-  -webkit-text-fill-color: inherit !important;
-}
-
-/* Breadcrumb component scope */
-body.reading-mode nav[aria-label="Breadcrumb"],
-body.reading-mode nav[aria-label="Breadcrumb"] * {
-  color: initial !important;
-  -webkit-text-fill-color: initial !important;
-}
-
-/* Keep header menu links normal in reading mode */
-body.reading-mode header .text-gray-700,
-body.reading-mode header .text-gray-600,
-body.reading-mode header .text-gray-900,
-body.reading-mode header .hover\:text-gray-900:hover {
-  color: #374151 !important;
-  -webkit-text-fill-color: #374151 !important;
-}
-
-/* Badge and share icons in hero */
-body.reading-mode .standard-badge,
-body.reading-mode .standard-badge *,
-body.reading-mode .author-meta .text-gray-500,
-body.reading-mode .author-meta .text-gray-500 * {
-  color: #e5e7eb !important;
-}
-
-/* Force category/tag and featured badges to high contrast in reading mode */
-body.reading-mode .bg-investipal-100 { color: #1f2937 !important; }
-body.reading-mode .bg-investipal-600 { color: #ffffff !important; }
-
-/* Social share buttons contrast */
-body.reading-mode .blog-hero a[aria-label^="Share"],
-body.reading-mode .blog-hero .bg-gray-100 { 
-  background: #1f2937 !important; 
-  border: 1px solid #374151 !important; 
-}
-
-/* Ensure CTA button text remains visible in reading mode */
-body.reading-mode .product-cta-button { 
-  background: #ffffff !important; 
-  color: #7c3aed !important; 
-}
-
-/* Dark mode - Universal text override */
-body.reading-mode * {
-  color: inherit !important;
 }
 
 body.reading-mode {
   color: #e5e7eb !important;
 }
 
-/* Focus mode takes precedence over dark mode - black text for readability */
-body.reading-mode.focus-mode,
-body.focus-mode.reading-mode {
+body.reading-mode .blog-hero {
+  background: #111827 !important;
+}
+
+body.reading-mode .blog-hero h1, body.reading-mode .blog-hero h2,
+body.reading-mode .blog-hero p, body.reading-mode .blog-hero .author-meta,
+body.reading-mode .blog-hero .author-meta *, body.reading-mode .author-card,
+body.reading-mode .author-card * {
+  color: #e5e7eb !important;
+}
+
+body.reading-mode .author-card {
+  background: #111827 !important;
+  border-color: #374151 !important;
+}
+
+/* Focus Mode + Reading Mode - Black text on sepia */
+body.reading-mode.focus-mode, body.focus-mode.reading-mode {
   color: #000000 !important;
 }
 
-body.reading-mode.focus-mode *,
-body.focus-mode.reading-mode * {
+body.reading-mode.focus-mode *, body.focus-mode.reading-mode * {
   color: #000000 !important;
 }
 
-body.reading-mode.focus-mode h1,
-body.reading-mode.focus-mode h2,
-body.reading-mode.focus-mode h3,
-body.reading-mode.focus-mode h4,
-body.reading-mode.focus-mode h5,
-body.reading-mode.focus-mode h6,
-body.focus-mode.reading-mode h1,
-body.focus-mode.reading-mode h2,
-body.focus-mode.reading-mode h3,
-body.focus-mode.reading-mode h4,
-body.focus-mode.reading-mode h5,
-body.focus-mode.reading-mode h6 {
-  color: #000000 !important;
-}
-
-body.reading-mode.focus-mode li,
-body.reading-mode.focus-mode p,
-body.reading-mode.focus-mode span,
-body.reading-mode.focus-mode strong,
-body.reading-mode.focus-mode b,
-body.focus-mode.reading-mode li,
-body.focus-mode.reading-mode p,
-body.focus-mode.reading-mode span,
-body.focus-mode.reading-mode strong,
-body.focus-mode.reading-mode b {
-  color: #000000 !important;
-}
-
-/* Comprehensive header coverage for dark + focus mode */
-body.reading-mode.focus-mode .prose h1,
-body.reading-mode.focus-mode .prose h2,
-body.reading-mode.focus-mode .prose h3,
-body.reading-mode.focus-mode .prose h4,
-body.reading-mode.focus-mode .prose h5,
-body.reading-mode.focus-mode .prose h6,
-body.reading-mode.focus-mode .prose-enhanced h1,
-body.reading-mode.focus-mode .prose-enhanced h2,
-body.reading-mode.focus-mode .prose-enhanced h3,
-body.reading-mode.focus-mode .prose-enhanced h4,
-body.reading-mode.focus-mode .prose-enhanced h5,
-body.reading-mode.focus-mode .prose-enhanced h6,
-body.focus-mode.reading-mode .prose h1,
-body.focus-mode.reading-mode .prose h2,
-body.focus-mode.reading-mode .prose h3,
-body.focus-mode.reading-mode .prose h4,
-body.focus-mode.reading-mode .prose h5,
-body.focus-mode.reading-mode .prose h6,
-body.focus-mode.reading-mode .prose-enhanced h1,
-body.focus-mode.reading-mode .prose-enhanced h2,
-body.focus-mode.reading-mode .prose-enhanced h3,
-body.focus-mode.reading-mode .prose-enhanced h4,
-body.focus-mode.reading-mode .prose-enhanced h5,
-body.focus-mode.reading-mode .prose-enhanced h6 {
+body.reading-mode.focus-mode h1, body.reading-mode.focus-mode h2,
+body.reading-mode.focus-mode h3, body.reading-mode.focus-mode h4,
+body.reading-mode.focus-mode h5, body.reading-mode.focus-mode h6 {
   color: #000000 !important;
   background: none !important;
   -webkit-text-fill-color: #000000 !important;
 }
 
-/* Override any Tailwind text color classes in dark + focus mode */
-body.reading-mode.focus-mode .text-gray-900,
-body.reading-mode.focus-mode .text-gray-800,
-body.reading-mode.focus-mode .text-gray-700,
-body.reading-mode.focus-mode .text-gray-600,
-body.reading-mode.focus-mode .text-gray-500,
-body.focus-mode.reading-mode .text-gray-900,
-body.focus-mode.reading-mode .text-gray-800,
-body.focus-mode.reading-mode .text-gray-700,
-body.focus-mode.reading-mode .text-gray-600,
-body.focus-mode.reading-mode .text-gray-500 {
-  color: #000000 !important;
-}
-
-/* EXCEPTIONS: In Reading + Focus mode keep hero/author areas light-on-dark */
-body.reading-mode.focus-mode .blog-hero,
-body.focus-mode.reading-mode .blog-hero { 
-  background: #111827 !important; 
-}
-
-body.reading-mode.focus-mode .blog-hero *,
-body.focus-mode.reading-mode .blog-hero *,
-body.reading-mode.focus-mode .author-meta,
-body.focus-mode.reading-mode .author-meta,
-body.reading-mode.focus-mode .author-meta *,
-body.focus-mode.reading-mode .author-meta *,
-body.reading-mode.focus-mode .author-card,
-body.focus-mode.reading-mode .author-card,
-body.reading-mode.focus-mode .author-card *,
-body.focus-mode.reading-mode .author-card * {
-  color: #e5e7eb !important;
-  -webkit-text-fill-color: #e5e7eb !important;
-}
-
-/* Share button containers in hero under Reading + Focus */
-body.reading-mode.focus-mode .blog-hero a[aria-label^="Share"],
-body.focus-mode.reading-mode .blog-hero a[aria-label^="Share"],
-body.reading-mode.focus-mode .blog-hero .bg-gray-100,
-body.focus-mode.reading-mode .blog-hero .bg-gray-100 { 
-  background: #1f2937 !important; 
-  border: 1px solid #374151 !important; 
-}
-
-/* Badges in Reading + Focus keep proper text contrast */
-body.reading-mode.focus-mode .bg-investipal-100 { color: #1f2937 !important; }
-body.reading-mode.focus-mode .bg-investipal-600 { color: #ffffff !important; }
-
-/* FORCE Inter font for ALL blog content - override any serif defaults */
-.prose,
-.prose-lg,
-.prose-enhanced,
-.blog-article-container,
-.blog-content-container {
+/* Blog Content Typography - Force Inter font */
+.prose, .prose-lg, .prose-enhanced,
+.blog-article-container, .blog-content-container {
   font-family: 'Inter', system-ui, sans-serif !important;
 }
 
-/* BLOG CONTENT ONLY - Link styling for markdown content */
+.prose *, .prose-lg *, .prose-enhanced *,
+.blog-article-container *, .blog-content-container * {
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+/* Blog Content Links */
 .blog-article-container .prose-enhanced a,
 .blog-content-container .prose-enhanced a {
   color: #2563eb !important;
@@ -555,52 +370,16 @@ body.reading-mode.focus-mode .bg-investipal-600 { color: #ffffff !important; }
   -webkit-text-fill-color: #7c3aed !important;
 }
 
-/* Override Tailwind Typography default serif fonts - BLOG CONTENT ONLY */
-.blog-article-container .prose,
-.blog-content-container .prose,
-.blog-article-container .prose-lg,
-.blog-content-container .prose-lg,
-.blog-article-container .prose-enhanced,
-.blog-content-container .prose-enhanced {
-  --tw-prose-body: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-headings: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-lead: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-links: #2563eb !important;
-  --tw-prose-bold: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-counters: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-bullets: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-hr: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-quotes: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-quote-borders: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-captions: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-code: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-pre-code: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-pre-bg: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-th-borders: 'Inter', system-ui, sans-serif !important;
-  --tw-prose-td-borders: 'Inter', system-ui, sans-serif !important;
-}
-
-/* GLOBAL VIDEO IFRAME STYLING - FORCE FULL WIDTH */
-.prose iframe,
-.prose-lg iframe,
-.prose-enhanced iframe,
-article iframe,
-.video-wrapper iframe {
+/* Video Iframe Styling - Full Width */
+.prose iframe, .prose-lg iframe, .prose-enhanced iframe,
+article iframe, .video-wrapper iframe {
   width: 100% !important;
   max-width: 100% !important;
   min-width: 100% !important;
   display: block !important;
 }
 
-.video-wrapper {
-  width: 100% !important;
-  max-width: 100% !important;
-  min-width: 100% !important;
-}
-
-/* NUCLEAR OPTION FOR YOUTUBE VIDEOS */
-iframe[src*="youtube.com"],
-iframe[src*="youtu.be"] {
+iframe[src*="youtube.com"], iframe[src*="youtu.be"] {
   width: 100% !important;
   max-width: 100% !important;
   min-width: 100% !important;
@@ -608,24 +387,15 @@ iframe[src*="youtu.be"] {
   min-height: 450px !important;
 }
 
-.prose *,
-.prose-lg *,
-.prose-enhanced *,
-.blog-article-container *,
-.blog-content-container * {
-  font-family: 'Inter', system-ui, sans-serif !important;
+/* Investipal Brand Utility Classes */
+.btn-primary {
+  @apply bg-investipal-600 hover:bg-investipal-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
 }
 
-/* Specifically override any serif fonts in blog content */
-.prose p,
-.prose li,
-.prose span,
-.prose div,
-.prose article,
-.prose-enhanced p,
-.prose-enhanced li,
-.prose-enhanced span,
-.prose-enhanced div,
-.prose-enhanced article {
-  font-family: 'Inter', system-ui, sans-serif !important;
+.btn-secondary {
+  @apply bg-investipal-100 hover:bg-investipal-200 text-investipal-700 font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
+}
+
+.link-primary {
+  @apply text-investipal-600 hover:text-investipal-700 font-medium transition-colors duration-200;
 }
