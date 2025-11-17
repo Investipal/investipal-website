@@ -31,39 +31,104 @@ export const NAV_LINKS = [
     href: '/features',
     subitems: [
       {
-        label: 'Client Onboarding',
-        href: '/features/client-onboarding',
-        description: 'Onboard clients 10x faster with AI',
+        label: 'Data Intake',
+        description: 'Streamline client data collection',
+        icon: Zap,
+        submenu: [
+          {
+            label: 'Automated Statement Scanner',
+            href: '/features/automated-statement-scanner',
+            description: 'Extract portfolio data from any statement',
+          },
+          {
+            label: 'AI-Driven Engagement',
+            href: '/features/ai-driven-engagement',
+            description: 'Intelligent client communication',
+          },
+        ],
+      },
+      {
+        label: 'Onboarding',
+        description: 'Simplify client onboarding',
         icon: Clock,
+        submenu: [
+          {
+            label: 'Client Onboarding',
+            href: '/features/client-onboarding',
+            description: 'Onboard clients 10x faster with AI',
+          },
+          {
+            label: 'Risk Assessment',
+            href: '/risk-assessment',
+            description: 'Comprehensive risk profiling',
+          },
+        ],
       },
       {
-        label: 'Portfolio Construction',
-        href: '/features/asset-allocation',
-        description: 'AI-powered asset allocation',
-        icon: BarChart3,
-      },
-      {
-        label: 'Proposal Generation',
-        href: '/features/alternatives-proposals',
-        description: 'Generate proposals in under 10 minutes',
-        icon: FileText,
-      },
-      {
-        label: 'Reg BI & Compliance',
-        href: '/features/regulation-best-interest-generator',
-        description: 'Automated compliance documentation',
+        label: 'Compliance',
+        description: 'Ensure regulatory compliance',
         icon: Shield,
+        submenu: [
+          {
+            label: 'Reg BI Generator',
+            href: '/features/regulation-best-interest-generator',
+            description: 'Automated Best Interest documentation',
+          },
+          {
+            label: 'Investment Policy Statements',
+            href: '/features/investment-policy-statements',
+            description: 'Auto-generate IPS for every client',
+          },
+        ],
+      },
+      {
+        label: 'Portfolios',
+        description: 'Core portfolio management',
+        icon: BarChart3,
+        submenu: [
+          {
+            label: 'Portfolio Construction',
+            href: '/features/asset-allocation',
+            description: 'AI-powered asset allocation',
+          },
+          {
+            label: 'Proposal Generation',
+            href: '/features/alternatives-proposals',
+            description: 'Generate proposals in under 10 minutes',
+          },
+          {
+            label: 'Risk Management',
+            href: '/features/risk-management',
+            description: 'Comprehensive risk analysis',
+          },
+        ],
       },
       {
         label: 'Alternatives & Insurance',
-        href: '/features/alternatives-modeling',
-        description: 'Model alternatives, annuities, and insurance',
+        description: 'Private markets and insurance',
         icon: TrendingUp,
+        submenu: [
+          {
+            label: 'Alternatives Modeling',
+            href: '/features/alternatives-modeling',
+            description: 'Model PE, real estate, and more',
+          },
+          {
+            label: 'Annuities & Insurance',
+            href: '/features/annuities-insurance-modeling',
+            description: 'Model IUL and annuity products',
+          },
+          {
+            label: 'Custom Security Builder',
+            href: '/features/custom-security-builder',
+            description: 'Build custom alternatives',
+          },
+        ],
       },
       {
-        label: 'View All Features →',
-        href: '/features',
-        description: 'Explore all 12 features',
+        label: 'How It Works',
+        href: '/how-it-works',
+        description: 'See our complete workflow',
         icon: Lightbulb,
       },
     ],
@@ -286,26 +351,68 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
                         {item.label}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent className="">
-                        <ul className="grid w-[263px] gap-2">
+                        <div className="w-[280px]">
                           {item.subitems.map((subitem) => (
-                            <li key={subitem.label}>
-                              <NavigationMenuLink
-                                href={subitem.href}
-                                className="hover:bg-accent/50 flex-row gap-3 p-3"
-                              >
-                                <subitem.icon className="text-foreground size-5.5" />
-                                <div className="flex flex-col gap-1">
-                                  <div className="text-sm font-medium tracking-normal">
-                                    {subitem.label}
+                            <div key={subitem.label} className="group relative">
+                              {subitem.href ? (
+                                <NavigationMenuLink
+                                  href={subitem.href}
+                                  className="hover:bg-accent/50 flex-row gap-3 p-3"
+                                >
+                                  <subitem.icon className="text-foreground size-5.5" />
+                                  <div className="flex flex-col gap-1">
+                                    <div className="text-sm font-medium tracking-normal">
+                                      {subitem.label}
+                                    </div>
+                                    <div className="text-muted-foreground text-xs leading-snug">
+                                      {subitem.description}
+                                    </div>
                                   </div>
-                                  <div className="text-muted-foreground text-xs leading-snug">
-                                    {subitem.description}
+                                </NavigationMenuLink>
+                              ) : (
+                                <div className="hover:bg-accent/50 flex cursor-pointer flex-row gap-3 rounded-md p-3">
+                                  <subitem.icon className="text-foreground size-5.5" />
+                                  <div className="flex flex-col gap-1">
+                                    <div className="flex items-center justify-between">
+                                      <div className="text-sm font-medium tracking-normal">
+                                        {subitem.label}
+                                      </div>
+                                      {subitem.submenu && (
+                                        <svg className="size-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                        </svg>
+                                      )}
+                                    </div>
+                                    <div className="text-muted-foreground text-xs leading-snug">
+                                      {subitem.description}
+                                    </div>
                                   </div>
                                 </div>
-                              </NavigationMenuLink>
-                            </li>
+                              )}
+                              {/* Show submenu on hover - positioned to the right */}
+                              {subitem.submenu && (
+                                <div className="absolute left-full top-0 z-50 hidden w-[300px] pl-2 group-hover:block">
+                                  <div className="bg-background rounded-md border p-2 shadow-lg">
+                                    {subitem.submenu.map((nestedItem) => (
+                                      <NavigationMenuLink
+                                        key={nestedItem.label}
+                                        href={nestedItem.href}
+                                        className="hover:bg-accent/50 flex flex-col gap-1 rounded-md p-3"
+                                      >
+                                        <div className="text-sm font-medium">
+                                          {nestedItem.label}
+                                        </div>
+                                        <div className="text-muted-foreground text-xs leading-snug">
+                                          {nestedItem.description}
+                                        </div>
+                                      </NavigationMenuLink>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
+                            </div>
                           ))}
-                        </ul>
+                        </div>
                       </NavigationMenuContent>
                     </>
                   ) : (
