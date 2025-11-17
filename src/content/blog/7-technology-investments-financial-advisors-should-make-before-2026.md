@@ -6,8 +6,8 @@ publishedDate: 2025-11-18T09:00:00.000Z
 category: "Technology"
 tags: ["Technology", "ROI", "Business Operations", "Advisor Tools", "Tech Stack"]
 urlPath: "7-technology-investments-financial-advisors-should-make-before-2026"
-featuredImage: "https://cdn.prod.website-files.com/666872ff37bdf42ce9637d77/677d59c310bb23160f20eb5c_How%20Technology%20is%20Revolutionizing%20Financial%20Advisory%20Firms%20in%202025.png"
-featuredImageAlt: "Technology investments for financial advisors - digital transformation and software solutions"
+featuredImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+featuredImageAlt: "Business analytics dashboard showing technology investment ROI and financial data for advisors"
 seoDescription: "Plan your 2026 advisor tech budget with data-backed ROI calculations. Industry benchmarks show 3.8-4% of revenue drives growth. See what to invest in first."
 draft: false
 ---
