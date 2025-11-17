@@ -10,10 +10,14 @@ const FOOTER_SECTIONS = [
   {
     title: 'Product',
     links: [
-      { name: 'Features', href: '/features' },
+      { name: 'All Features', href: '/features' },
+      { name: 'Portfolio Construction', href: '/features/asset-allocation' },
+      { name: 'Client Onboarding', href: '/features/client-onboarding' },
+      { name: 'Proposal Generation', href: '/features/alternatives-proposals' },
+      { name: 'Reg BI & Compliance', href: '/features/regulation-best-interest-generator' },
+      { name: 'Alternatives Modeling', href: '/features/alternatives-modeling' },
       { name: 'How It Works', href: '/how-it-works' },
       { name: 'Integrations', href: '/integrations' },
-      { name: 'Book a Demo', href: '/book-a-demo' },
     ],
   },
   {
@@ -23,6 +27,9 @@ const FOOTER_SECTIONS = [
       { name: 'Solo Advisors', href: '/solutions/solo-advisor' },
       { name: 'Financial Planners', href: '/segments/financial-planners' },
       { name: 'Wealth Managers', href: '/segments/wealth-managers' },
+      { name: 'Wealth Firms', href: '/segments/wealth-firms' },
+      { name: 'Insurance Advisors', href: '/segments/insurance' },
+      { name: 'Cross-Border Wealth', href: '/cross-border-wealth' },
     ],
   },
   {
@@ -31,13 +38,18 @@ const FOOTER_SECTIONS = [
       { name: 'Blog', href: '/blog' },
       { name: 'Case Studies', href: '/resources/case-studies' },
       { name: 'Webinars', href: '/webinars' },
+      { name: 'Podcasts', href: '/podcasts' },
+      { name: 'Compare', href: '/compare' },
+      { name: 'Risk Assessment', href: '/risk-assessment' },
     ],
   },
   {
     title: 'Company',
     links: [
       { name: 'About Us', href: '/about-us' },
+      { name: 'Manifesto', href: '/manifesto' },
       { name: 'Contact', href: '/contact-us' },
+      { name: 'Book a Demo', href: '/book-a-demo' },
       { name: 'Privacy Policy', href: '/privacy-policy' },
       { name: 'Terms & Conditions', href: '/terms-conditions' },
     ],

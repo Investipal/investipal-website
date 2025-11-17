@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 
-import { BarChart3, Clock, FileText, TrendingUp, Users } from 'lucide-react';
+import { BarChart3, Clock, FileText, TrendingUp, Users, Shield, Zap, Building2, Briefcase, BookOpen, Lightbulb } from 'lucide-react';
 
 import { ThemeToggle } from '@/components/elements/theme-toggle';
 import { useBannerVisibility } from '@/components/layout/banner';
@@ -28,19 +28,31 @@ import { cn } from '@/lib/utils';
 export const NAV_LINKS = [
   {
     label: 'Features',
-    href: '#',
+    href: '/features',
     subitems: [
       {
         label: 'Client Onboarding',
         href: '/features/client-onboarding',
-        description: 'Onboard clients 10x faster with AI-powered automation',
+        description: 'Onboard clients 10x faster with AI',
         icon: Clock,
+      },
+      {
+        label: 'Statement Scanner',
+        href: '/features/automated-statement-scanner',
+        description: 'Extract portfolio data from any statement',
+        icon: Zap,
       },
       {
         label: 'Portfolio Construction',
         href: '/features/asset-allocation',
-        description: 'Build portfolios across all asset classes',
+        description: 'AI-powered asset allocation',
         icon: BarChart3,
+      },
+      {
+        label: 'Alternatives Modeling',
+        href: '/features/alternatives-modeling',
+        description: 'Model private equity, real estate, and more',
+        icon: TrendingUp,
       },
       {
         label: 'Proposal Generation',
@@ -49,33 +61,181 @@ export const NAV_LINKS = [
         icon: FileText,
       },
       {
-        label: 'Compliance & Reg BI',
+        label: 'Reg BI & Compliance',
         href: '/features/regulation-best-interest-generator',
         description: 'Automated compliance documentation',
+        icon: Shield,
+      },
+      {
+        label: 'Investment Policy Statements',
+        href: '/features/investment-policy-statements',
+        description: 'Auto-generate IPS for every client',
+        icon: FileText,
+      },
+      {
+        label: 'Annuities & Insurance',
+        href: '/features/annuities-insurance-modeling',
+        description: 'Model IUL and annuity products',
         icon: TrendingUp,
+      },
+      {
+        label: 'Risk Management',
+        href: '/features/risk-management',
+        description: 'Comprehensive risk analysis tools',
+        icon: Shield,
+      },
+      {
+        label: 'Custom Security Builder',
+        href: '/features/custom-security-builder',
+        description: 'Build custom alternative investments',
+        icon: Lightbulb,
+      },
+      {
+        label: 'Client Acquisition',
+        href: '/features/client-acquisition',
+        description: 'Grow your practice with AI',
+        icon: Users,
+      },
+      {
+        label: 'AI-Driven Engagement',
+        href: '/features/ai-driven-engagement',
+        description: 'Intelligent client communication',
+        icon: Zap,
       },
     ],
   },
   {
     label: 'Solutions',
-    href: '#',
+    href: '/solutions',
     subitems: [
       {
         label: 'RIA Firms',
         href: '/solutions/ria',
         description: 'Enterprise solutions for RIA firms',
-        icon: Users,
+        icon: Building2,
       },
       {
         label: 'Solo Advisors',
         href: '/solutions/solo-advisor',
         description: 'Streamlined tools for independent advisors',
+        icon: Briefcase,
+      },
+      {
+        label: 'Financial Planners',
+        href: '/segments/financial-planners',
+        description: 'Tools for comprehensive financial planning',
+        icon: Users,
+      },
+      {
+        label: 'Wealth Managers',
+        href: '/segments/wealth-managers',
+        description: 'Portfolio management at scale',
+        icon: TrendingUp,
+      },
+      {
+        label: 'Wealth Firms',
+        href: '/segments/wealth-firms',
+        description: 'Enterprise wealth management',
+        icon: Building2,
+      },
+      {
+        label: 'Insurance Advisors',
+        href: '/segments/insurance',
+        description: 'Insurance and annuity modeling',
+        icon: Shield,
+      },
+    ],
+  },
+  {
+    label: 'Platform',
+    href: '#',
+    subitems: [
+      {
+        label: 'How It Works',
+        href: '/how-it-works',
+        description: 'See how Investipal works end-to-end',
+        icon: Lightbulb,
+      },
+      {
+        label: 'Integrations',
+        href: '/integrations',
+        description: 'Connect with your existing tools',
+        icon: Zap,
+      },
+      {
+        label: 'Cross-Border Wealth',
+        href: '/cross-border-wealth',
+        description: 'Multi-currency portfolio management',
+        icon: TrendingUp,
+      },
+      {
+        label: 'Risk Assessment',
+        href: '/risk-assessment',
+        description: 'Comprehensive risk profiling',
+        icon: Shield,
+      },
+    ],
+  },
+  {
+    label: 'Resources',
+    href: '/blog',
+    subitems: [
+      {
+        label: 'Blog',
+        href: '/blog',
+        description: 'Industry insights and best practices',
+        icon: BookOpen,
+      },
+      {
+        label: 'Case Studies',
+        href: '/resources/case-studies',
+        description: 'Client success stories',
+        icon: Lightbulb,
+      },
+      {
+        label: 'Webinars',
+        href: '/webinars',
+        description: 'Educational webinars and demos',
+        icon: Users,
+      },
+      {
+        label: 'Podcasts',
+        href: '/podcasts',
+        description: 'Listen to industry experts',
+        icon: BookOpen,
+      },
+      {
+        label: 'Compare',
+        href: '/compare',
+        description: 'Compare with other platforms',
+        icon: BarChart3,
+      },
+    ],
+  },
+  {
+    label: 'Company',
+    href: '#',
+    subitems: [
+      {
+        label: 'About Us',
+        href: '/about-us',
+        description: 'Our mission and team',
+        icon: Users,
+      },
+      {
+        label: 'Manifesto',
+        href: '/manifesto',
+        description: 'Our vision for the industry',
+        icon: BookOpen,
+      },
+      {
+        label: 'Contact',
+        href: '/contact-us',
+        description: 'Get in touch with our team',
         icon: Users,
       },
     ],
   },
-  { label: 'How It Works', href: '/how-it-works' },
-  { label: 'Resources', href: '/blog' },
 ];
 
 const ACTION_BUTTONS = [
