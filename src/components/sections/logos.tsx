@@ -8,52 +8,40 @@ import { cn } from '@/lib/utils';
 
 const companies = [
   {
-    name: 'Booking.com',
-    logo: '/images/logos/booking.svg',
-    className: 'dark:hidden',
-    url: 'https://booking.com',
-  },
-  {
-    name: 'Fortinet',
-    logo: '/images/logos/fortinet.svg',
-    className: 'dark:hidden',
-    url: 'https://fortinet.com',
-  },
-  {
-    name: 'IBM',
-    logo: '/images/logos/ibm.svg',
+    name: 'Pacific Portfolio',
+    logo: '/images/logos/pacific_logo.png',
     className: '',
-    url: 'https://ibm.com',
+    url: '#',
   },
   {
-    name: 'Logitech',
-    logo: '/images/logos/logitech.svg',
-    className: 'dark:hidden',
-    url: 'https://logitech.com',
-  },
-  {
-    name: 'Netflix',
-    logo: '/images/logos/netflix.svg',
+    name: 'Raymond James',
+    logo: '/images/logos/raymond_james_logo.jpg',
     className: '',
-    url: 'https://netflix.com',
+    url: '#',
   },
   {
-    name: 'Spotify',
-    logo: '/images/logos/spotify.svg',
+    name: 'Hoskin Wealth',
+    logo: '/images/logos/hoskin_wealth_logo.png',
     className: '',
-    url: 'https://spotify.com',
+    url: '#',
   },
   {
-    name: 'T-Mobile',
-    logo: '/images/logos/t-mobile.svg',
+    name: 'ProsperPlan Wealth',
+    logo: '/images/logos/prosperplan_wealth_logo.png',
     className: '',
-    url: 'https://t-mobile.com',
+    url: '#',
   },
   {
-    name: 'TIBCO',
-    logo: '/images/logos/tibc.svg',
+    name: 'WJCM',
+    logo: '/images/logos/wjcmllc_logo.jpg',
     className: '',
-    url: 'https://tibco.com',
+    url: '#',
+  },
+  {
+    name: 'ASTN',
+    logo: '/images/logos/astn_logo.png',
+    className: '',
+    url: '#',
   },
 ];
 
@@ -122,7 +110,7 @@ export default function Logos() {
     <section className="section-padding relative">
       <Noise />
       <p className="container text-center text-base">
-        Over 2+ million teams rely on Lumen to collaborate and get work done.
+        Trusted by advisory firms across North America
       </p>
 
       <div>

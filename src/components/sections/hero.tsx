@@ -100,27 +100,29 @@ export default function Hero() {
           variants={itemVariants}
           className="text-3xl leading-tight tracking-tight md:text-5xl lg:text-6xl"
         >
-          Optimize Your Workflow
-          <br className="hidden md:block" /> Accelerate Your Growth
+          AI for financial advisors
+          <br className="hidden md:block" /> streamlining <span className="text-primary">proposals</span>
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
           className="text-muted-foreground my-2 text-sm md:my-4 md:text-lg lg:my-6 lg:text-xl"
         >
-          Simplify project management and boost team productivity with our SaaS
-          platform.
+          Automate client onboarding, portfolio construction across all asset classes, and compliance documentation in one seamless platform. Most advisors complete proposals in under 10 minutes.
         </motion.p>
 
         <motion.div variants={itemVariants}>
           <Button
             size="lg"
             className="mt-2 rounded-full !pl-5.5 before:rounded-full"
+            asChild
           >
-            Start Testing
-            <div className="bg-background/15 border-background/10 grid size-5.5 place-items-center rounded-full border">
-              <ChevronRight className="size-4" />
-            </div>
+            <a href="/book-a-demo">
+              Schedule a Demo
+              <div className="bg-background/15 border-background/10 grid size-5.5 place-items-center rounded-full border">
+                <ChevronRight className="size-4" />
+              </div>
+            </a>
           </Button>
         </motion.div>
 
@@ -129,8 +131,8 @@ export default function Hero() {
           className="bg-background/45 border-background relative mt-10 justify-self-end overflow-hidden rounded-t-xl border p-2 md:mt-20 md:rounded-t-3xl md:p-4 lg:mt-25"
         >
           <img
-            src="/images/hero.webp"
-            alt="Lumina Workspace"
+            src="/images/external/68556380691d8adc81db4f23_untitled-design-17.png"
+            alt="Investipal Dashboard showing AI-powered portfolio management interface"
             width={1056}
             height={752.5}
             className="border-background/45 rounded-t-sm md:rounded-t-xl"

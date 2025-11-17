@@ -1,17 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import HeroSection from '../components/sections/HeroSection.astro';
-import TrustedBySection from '../components/sections/TrustedBySection.astro';
-import ProblemsSection from '../components/sections/ProblemsSection.astro';
-import SolutionSection from '../components/sections/SolutionSection.astro';
-import FeaturesSection from '../components/sections/FeaturesSection.astro';
-import WorkflowSection from '../components/sections/WorkflowSection.astro';
-import IntegrationsSection from '../components/sections/IntegrationsSection.astro';
-import BlogSection from '../components/sections/BlogSection.astro';
-import CTASection from '../components/sections/CTASection.astro';
-import Footer from '../components/Footer.astro';
-import CookieBanner from '../components/ui/CookieBanner.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+
+// Import Lumen sections
+import Hero from '@/components/sections/hero';
+import Logos from '@/components/sections/logos';
+import FeaturesCarousel from '@/components/sections/features-carousel';
+import FeaturesGrid from '@/components/sections/features-grid';
+import FeaturesShowcase from '@/components/sections/features-showcase';
+import Testimonials from '@/components/sections/testimonials';
+import FAQSection from '@/components/sections/faq-section';
 
 // Organization structured data for homepage
 const siteUrl = Astro.site?.toString() || 'https://investipal.co';
@@ -29,7 +27,7 @@ const organizationStructuredData = {
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
-    "url": `${siteUrl}/contact`
+    "url": `${siteUrl}/contact-us`
   },
   "offers": {
     "@type": "Offer",
@@ -39,25 +37,16 @@ const organizationStructuredData = {
 };
 ---
 
-<Layout 
-  title="Investipal: AI Financial Advisor Software | Portfolio Management"
-  description="AI-powered financial advisor software with automated portfolio construction, compliance management, and client onboarding. Streamline your advisory practice with Investipal."
-  keywords="financial advisor software, AI portfolio management, compliance automation, wealth management software, advisor technology platform, financial planning tools"
->
+<DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <!-- Organization Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(organizationStructuredData)} />
-  <Header />
-  <main id="main">
-    <HeroSection />
-    <TrustedBySection />
-    <ProblemsSection />
-    <SolutionSection />
-    <FeaturesSection />
-    <WorkflowSection />
-    <IntegrationsSection />
-    <BlogSection />
-    <CTASection />
-  </main>
-  <Footer />
-  <CookieBanner />
-</Layout>
+  
+  <!-- Modern Lumen Design with Investipal Content -->
+  <Hero client:load />
+  <Logos client:load />
+  <FeaturesCarousel client:load />
+  <FeaturesGrid />
+  <FeaturesShowcase client:load />
+  <Testimonials client:load />
+  <FAQSection client:load />
+</DefaultLayout>
