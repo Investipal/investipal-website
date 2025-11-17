@@ -45,6 +45,11 @@ export const NAV_LINKS = [
             href: '/features/ai-driven-engagement',
             description: 'Intelligent client communication',
           },
+          {
+            label: 'Risk Assessment',
+            href: '/risk-assessment',
+            description: 'Comprehensive risk profiling',
+          },
         ],
       },
       {
@@ -58,9 +63,9 @@ export const NAV_LINKS = [
             description: 'Onboard clients 10x faster with AI',
           },
           {
-            label: 'Risk Assessment',
-            href: '/risk-assessment',
-            description: 'Comprehensive risk profiling',
+            label: 'Proposal Generation',
+            href: '/features/alternatives-proposals',
+            description: 'Generate proposals in under 10 minutes',
           },
         ],
       },
@@ -90,11 +95,6 @@ export const NAV_LINKS = [
             label: 'Portfolio Construction',
             href: '/features/asset-allocation',
             description: 'AI-powered asset allocation',
-          },
-          {
-            label: 'Proposal Generation',
-            href: '/features/alternatives-proposals',
-            description: 'Generate proposals in under 10 minutes',
           },
           {
             label: 'Risk Management',
