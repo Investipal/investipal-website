@@ -185,14 +185,14 @@ Investipal's statement scanner supports 50+ custodian formats and achieves 99%+ 
 
 Modern risk assessment tools also track changes over time, alerting you when a client's risk tolerance shifts and portfolios need adjustment.
 
-### Minutes 4-7: AI Portfolio Comparison & Optimization
+### Minutes 4-7: AI Portfolio Analysis & Comparison
 
-**Technology:** AI-driven [portfolio optimization engine](https://www.investipal.co/features/asset-allocation)
+**Technology:** AI-driven [portfolio analysis engine](https://www.investipal.co/features/asset-allocation)
 
 **Process:**
-- AI analyzes current portfolio (from statement scan) against client's risk profile
+- AI instantly analyzes current portfolio (from statement scan) against client's risk profile
 - Identifies issues: excessive fees, poor diversification, concentrated risk, tax inefficiencies
-- Generates optimized portfolio recommendation aligned with risk tolerance
+- Provides data-driven insights to help advisors build optimal recommendations
 - Creates side-by-side comparison showing:
   - Current vs. proposed asset allocation
   - Fee comparison (potential savings)
@@ -202,17 +202,17 @@ Modern risk assessment tools also track changes over time, alerting you when a c
 
 **What used to take 2-3 hours now takes 3 minutes.**
 
-![AI-powered portfolio optimization showing current vs. proposed allocations](/images/product_screenshots/portfolio_comparison_results_v1_2025-11-14.png)
+![AI-powered portfolio analysis showing current vs. proposed allocations](/images/product_screenshots/portfolio_comparison_results_v1_2025-11-14.png)
 *Side-by-side portfolio comparison with risk metrics, fee analysis, and performance projections*
 
-The AI considers multiple optimization factors simultaneously:
-- **Risk-adjusted returns** (maximizing Sharpe ratio)
-- **Tax efficiency** (minimizing capital gains, optimizing asset location)
-- **Cost efficiency** (minimizing expense ratios and trading costs)
-- **Diversification** (reducing concentration risk)
-- **Goal alignment** (matching time horizon and objectives)
+The AI analyzes multiple factors to help advisors make informed decisions:
+- **Risk-adjusted returns** (Sharpe ratio, volatility analysis)
+- **Tax efficiency** (capital gains implications, asset location opportunities)
+- **Cost efficiency** (expense ratios, trading costs, fee drag)
+- **Diversification** (concentration risk, correlation analysis)
+- **Goal alignment** (time horizon, objectives, constraints)
 
-For complex clients with alternative investments, the system can model private equity, real estate, annuities, and structured products alongside traditional securities.
+The advisor remains in control—AI provides the analysis, you make the final portfolio decisions. For complex clients with alternative investments, the system can model private equity, real estate, annuities, and structured products alongside traditional securities.
 
 ### Minutes 7-9: Proposal Generation with Visualizations
 
@@ -312,19 +312,20 @@ Modern OCR doesn't just scan text—it understands financial documents:
 
 [Learn more about AI statement scanning](https://www.investipal.co/blog/how-to-extract-account-statement-portfolio-holdings-from-pdfs-using-ai)
 
-#### 2. Machine Learning Portfolio Optimization
+#### 2. AI-Powered Portfolio Analysis & Comparison
 
-AI portfolio engines analyze thousands of combinations to find optimal allocations:
-- Multi-factor optimization (risk, return, cost, tax efficiency)
+AI-driven analysis tools help advisors make better portfolio decisions faster:
+- Instant side-by-side comparison of current vs. proposed portfolios
+- Multi-factor analysis (risk, return, cost, tax efficiency)
 - Real-time market data integration
 - Support for alternative assets and complex securities
-- Explainable AI (transparent reasoning, not a "black box")
+- **Human-in-the-loop approach**: AI handles the analysis, advisors make the final decisions
 
-Unlike legacy mean-variance optimization, modern AI considers:
+The technology analyzes thousands of data points to highlight:
 - **Tax implications** of portfolio transitions
 - **Trading costs** and implementation practicality
-- **Client preferences** and constraints
-- **Market regime changes** and forward-looking views
+- **Portfolio concentration risks** and diversification opportunities
+- **Fee savings** opportunities
 
 #### 3. Natural Language Generation
 
@@ -536,11 +537,11 @@ At Investipal, we built our platform specifically to enable the complete workflo
 - Document collection workflows
 - [AML/KYC verification](https://www.investipal.co/blog/essential-steps-to-integrate-aml-and-id-verification-in-digital-advisor-onboarding-workflows)
 
-**3. [AI Portfolio Optimization](https://www.investipal.co/features/asset-allocation)**
+**3. [AI Portfolio Analysis & Construction](https://www.investipal.co/features/asset-allocation)**
 - Multi-asset class support (including [alternatives](https://www.investipal.co/features/alternatives-modeling))
-- Risk-based and [goal-based optimization](https://www.investipal.co/blog/goal-based-portfolio-construction-the-future-of-retirement-planning-for-financial-advisors)
-- Tax-aware portfolio construction
-- [Transparent, explainable AI](https://www.investipal.co/blog/ai-driven-portfolio-optimization-how-transparent-explainable-ai-is-shaping-the-future-of-wealth-management) (not a black box)
+- Risk-based and [goal-based portfolio construction](https://www.investipal.co/blog/goal-based-portfolio-construction-the-future-of-retirement-planning-for-financial-advisors)
+- Tax-aware portfolio analysis
+- Human-in-the-loop: AI analyzes, advisors decide
 
 **4. Automated Proposal Generation**
 - Professional, branded proposals
@@ -560,14 +561,6 @@ At Investipal, we built our platform specifically to enable the complete workflo
 - **No manual data transfer** between steps
 - **No switching between platforms** or tools
 - **Single source of truth** for all client information
-
-### Real Results from Real Advisors
-
-**"We've gone from 2-3 weeks to complete proposals to same-day delivery. Our close rate has nearly doubled because we can present everything while the prospect is still in the room."**  
-— Mid-sized RIA, $800M AUM
-
-**"Investipal lets me handle 5x more prospects without adding staff. The automation is so seamless that clients think we have a huge back-office team."**  
-— Independent advisor, $150M AUM
 
 ## Getting Started: Your Implementation Roadmap
 
@@ -753,12 +746,12 @@ The best platforms can process statements from any custodian (Schwab, Fidelity, 
     },
     {
       "@type": "HowToStep",
-      "name": "AI Portfolio Comparison & Optimization",
-      "text": "AI analyzes current portfolio against risk profile and generates optimized recommendations with side-by-side comparisons in 3 minutes.",
+      "name": "AI Portfolio Analysis & Comparison",
+      "text": "AI instantly analyzes current portfolio against risk profile and provides data-driven insights with side-by-side comparisons in 3 minutes.",
       "position": 3,
       "itemListElement": {
         "@type": "HowToDirection",
-        "text": "AI optimizes for risk-adjusted returns, tax efficiency, cost, diversification, and goal alignment."
+        "text": "AI analyzes risk-adjusted returns, tax efficiency, costs, diversification, and goal alignment to help advisors make informed decisions."
       }
     },
     {
