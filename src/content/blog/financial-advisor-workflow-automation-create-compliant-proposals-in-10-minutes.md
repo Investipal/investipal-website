@@ -8,7 +8,7 @@ category: "Technology"
 tags: ["workflow automation", "proposal generation", "client onboarding", "AI automation", "compliance"]
 featuredImage: "/images/blog/workflow-automation-10-minutes.jpg"
 keywords: "financial advisor workflow automation, proposal generation software, client onboarding automation, AI proposal creation, compliance automation"
-readingTime: "25 min read"
+readingTime: 25
 draft: false
 schema:
   type: "Article"
