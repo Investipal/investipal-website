@@ -6,7 +6,7 @@ author: "Investipal Team"
 publishedDate: "2025-11-20T19:30:00.000Z"
 category: "Technology"
 tags: ["workflow automation", "proposal generation", "client onboarding", "AI automation", "compliance"]
-featuredImage: "/images/blog/workflow-automation-advisor-laptop.jpg"
+featuredImage: "/images/blog/workflow-automation-advisor-laptop.jpg?v=20251120"
 keywords: "financial advisor workflow automation, proposal generation software, client onboarding automation, AI proposal creation, compliance automation"
 readingTime: 25
 draft: false
