@@ -1,6 +1,7 @@
 ---
 title: How to Automate ID Scanning and KYC Verification in Financial Advisor Workflows
 excerpt: 
+metaDescription: "Automate automate id scanning and kyc. Save hours weekly with step-by-step guide for financial advisors."
 author: Investipal Team
 publishedDate: "2025-09-15T06:21:19.000Z"
 category: General

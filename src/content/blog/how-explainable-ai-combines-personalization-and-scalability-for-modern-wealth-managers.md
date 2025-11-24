@@ -1,6 +1,7 @@
 ---
 title: How Explainable AI Combines Personalization and Scalability for Modern Wealth Managers
 excerpt: "Discover how explainable AI empowers wealth managers to deliver personalized portfolios at scale while ensuring transparency, regulatory compliance, and client trust. Learn how AI transforms efficiency and future-proofs your advisory practice."
+metaDescription: "AI-powered how explainable ai combines for advisors. Practical implementation guide with real examples."
 author: Investipal Team
 publishedDate: "2025-06-27T14:47:53.000Z"
 category: Personalization

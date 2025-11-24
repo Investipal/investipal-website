@@ -1,6 +1,7 @@
 ---
 title: What Is Explainable AI in Portfolio Management and Why It Matters for Financial Advisors
 excerpt: 
+metaDescription: "AI-powered explainable ai in portfolio management for advisors. Practical implementation guide with real examples."
 author: Investipal Team
 publishedDate: "2025-06-13T13:50:37.000Z"
 category: General

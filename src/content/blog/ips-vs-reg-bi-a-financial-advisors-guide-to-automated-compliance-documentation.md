@@ -1,6 +1,7 @@
 ---
 title: "IPS vs Reg BI: A Financial Advisor’s Guide to Automated Compliance Documentation"
 excerpt: 
+metaDescription: "Automate ips vs reg bi a financial advisor’s. Save hours weekly with step-by-step guide for financial advisors."
 author: Investipal Team
 publishedDate: "2025-06-16T10:46:11.000Z"
 category: General

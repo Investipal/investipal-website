@@ -1,6 +1,7 @@
 ---
 title: "How to Integrate E-Signature and Automated AML Checks into Your Advisor Onboarding Workflow"
 excerpt: 
+metaDescription: "Automate integrate e-signature and automated aml. Save hours weekly with step-by-step guide for financial advisors."
 author: Investipal Team
 publishedDate: "2025-09-01T06:31:58.000Z"
 category: General

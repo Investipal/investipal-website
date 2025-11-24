@@ -1,6 +1,7 @@
 ---
 title: "Beyond OCR: Using AI to Scan Client Statements, Assess Risk, and Automate Portfolio Optimization"
 excerpt: 
+metaDescription: "Automate beyond ocr using ai to scan client. Save hours weekly with step-by-step guide for financial advisors."
 author: Investipal Team
 publishedDate: "2025-06-23T11:43:20.000Z"
 category: General

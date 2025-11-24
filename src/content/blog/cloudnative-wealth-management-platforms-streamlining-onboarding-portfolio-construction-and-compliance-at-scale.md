@@ -1,6 +1,7 @@
 ---
 title: "Cloud-Native Wealth Management Platforms: Streamlining Onboarding, Portfolio Construction, and Compliance at Scale"
 excerpt: "The world of wealth management is no longer defined by endless paperwork, siloed platforms, and slow, manual processes."
+metaDescription: "Automate cloud-native wealth management. Save hours weekly with step-by-step guide for financial advisors."
 author: "Investipal Team"
 publishedDate: 2025-07-17T08:46:05.749Z
 updatedDate: 2025-07-17T08:46:05.749Z

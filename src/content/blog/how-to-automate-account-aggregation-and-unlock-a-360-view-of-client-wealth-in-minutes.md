@@ -2,6 +2,7 @@
 title: "How to Automate Account Aggregation and Unlock a 360° View of Client Wealth in Minutes"
 seoDescription: "Learn how to automate account aggregation and get a complete 360° view of client wealth in minutes. Eliminate manual data entry and streamline your advisory workflow."
 excerpt: "Fragmented client data stands between most advisory firms and their growth goals. Too many teams still spend hours sorting through PDF statements, collecting held-away account balances by email, and rekeying."
+metaDescription: "Automate automate account aggregation and unlock. Save hours weekly with step-by-step guide for financial advisors."
 author: "Investipal Team"
 publishedDate: 2025-08-19T04:40:37.104Z
 updatedDate: 2025-08-19T04:40:37.104Z

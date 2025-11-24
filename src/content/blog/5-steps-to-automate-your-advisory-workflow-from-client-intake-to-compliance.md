@@ -1,6 +1,7 @@
 ---
 title: "5 Steps to Automate Your Advisory Workflow: From Client Intake to Compliance"
 excerpt: 
+metaDescription: "Automate 5 steps to automate your advisory. Save hours weekly with step-by-step guide for financial advisors."
 author: Investipal Team
 publishedDate: "2025-05-29T18:11:14.000Z"
 category: General

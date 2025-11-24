@@ -1,6 +1,7 @@
 ---
 title: "Integrating AI-Driven Wealth Management into Your Advisory Practice: From Onboarding to Compliance"
 excerpt: 
+metaDescription: "AI-powered integrating ai-driven wealth management for advisors. Practical implementation guide with real examples."
 author: Investipal Team
 publishedDate: "2025-06-16T15:03:06.000Z"
 category: General

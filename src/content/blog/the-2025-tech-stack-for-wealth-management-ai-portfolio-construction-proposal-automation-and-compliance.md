@@ -1,6 +1,7 @@
 ---
 title: "The 2025 Tech Stack for Wealth Management: AI Portfolio Construction, Proposal Automation, and Compliance"
 excerpt: 
+metaDescription: "Automate 2025 tech stack for wealth management. Save hours weekly with step-by-step guide for financial advisors."
 author: Investipal Team
 publishedDate: "2025-06-17T07:49:10.000Z"
 category: General
