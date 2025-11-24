@@ -1,8 +1,6 @@
 ---
 title: "4 Steps to Automate Your Client Onboarding Workflow and Win More Clients"
 excerpt: "If you're an independent advisor or run a wealth management firm, you know the two biggest bottlenecks in client acquisition are onboarding paperwork and portfolio construction."
-metaDescription: "Automate client onboarding in 4 steps. Go from prospect to proposal in under 10 minutes. Reduce manual work by 95%. Step-by-step guide for advisors."
-keywords: "client onboarding automation, advisor onboarding workflow, automated client intake, financial advisor onboarding, wealth management onboarding"
 author: "Investipal Team"
 publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-05-29T19:41:25.496Z

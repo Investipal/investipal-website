@@ -1,7 +1,6 @@
 ---
 title: "How AI-Driven Multi-Asset Portfolio Construction is Transforming Wealth Management in 2025"
 excerpt: 
-metaDescription: "AI-powered how ai-driven multi-asset portfolio for advisors. Practical implementation guide with real examples."
 author: Investipal Team
 publishedDate: "2025-09-03T04:50:31.000Z"
 category: General

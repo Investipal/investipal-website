@@ -1,8 +1,6 @@
 ---
 title: "Quantifying the ROI of AI Automation for Advisors: Onboarding, Portfolio Optimization & Compliance"
 excerpt: "Advisors today know the pressure: prospects expect recommendations yesterday, clients demand personalized portfolios, and regulators want documentation."
-metaDescription: "Calculate ROI of AI automation: 95% time savings on compliance, 3-5 hrs saved per client, 70% lower tech costs. Real numbers from real advisory firms."
-keywords: "ai automation roi, advisor automation roi, wealth management automation, ai for advisors roi, automation time savings"
 author: "Investipal Team"
 publishedDate: 2025-06-28T16:27:00.691Z
 updatedDate: 2025-06-27T20:13:27.706Z

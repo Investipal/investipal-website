@@ -1,7 +1,6 @@
 ---
 title: "AI-Driven Risk Profiling in Digital Onboarding: Streamline Compliance and Client Acquisition"
 excerpt: 
-metaDescription: "Automate ai-driven risk profiling in digital. Save hours weekly with step-by-step guide for financial advisors."
 author: Investipal Team
 publishedDate: "2025-06-26T17:56:08.000Z"
 category: General

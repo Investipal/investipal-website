@@ -1,7 +1,6 @@
 ---
 title: "How to Automate Investment Proposal Generation: From Client Statement to Personalized Portfolio in Under 10 Minutes"
 excerpt: 
-metaDescription: "Automate automate investment proposal generation. Save hours weekly with step-by-step guide for financial advisors."
 author: Investipal Team
 publishedDate: "2025-09-08T06:46:29.000Z"
 category: General

@@ -1,7 +1,6 @@
 ---
 title: "How to Choose a Wealthtech Platform: Digital Onboarding, AI Portfolio Optimization & Compliance Automation"
 excerpt: 
-metaDescription: "Automate choose a wealthtech platform digital. Save hours weekly with step-by-step guide for financial advisors."
 author: Investipal Team
 publishedDate: "2025-06-02T14:26:34.000Z"
 category: General

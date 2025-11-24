@@ -1,8 +1,6 @@
 ---
 title: "How to Set Up Automated Portfolio Drift Alerts: A Guide for Financial Advisors"
 excerpt: "Portfolio drift is a silent, but ever-present risk for financial advisors. In an age where clients expect not just performance, but ongoing vigilance and personalized advice, the ability to monitor and respond to."
-metaDescription: "Set up automated drift alerts in minutes. Get notified when client portfolios deviate from targets. Step-by-step guide + best practices for proactive rebalancing."
-keywords: "portfolio drift alerts, automated rebalancing alerts, portfolio monitoring, drift detection, advisor alerts"
 author: "Investipal Team"
 publishedDate: "2025-06-27T14:47:53.333Z"
 updatedDate: "2025-06-02T15:01:22.261Z"

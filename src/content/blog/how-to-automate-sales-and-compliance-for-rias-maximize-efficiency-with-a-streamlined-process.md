@@ -1,8 +1,6 @@
 ---
 title: "How to Automate Sales and Compliance for RIAs: Maximize Efficiency with a Streamlined Process"
 excerpt: "Compliance is a constant concern for RIAs (Registered Investment Advisors) and independent advisors."
-metaDescription: "Automate RIA sales & compliance: 95% time savings, 70% cost reduction. SEC Marketing Rule, Reg BI & KYC automation. Step-by-step guide with tools."
-keywords: "automate ria compliance, sales automation advisors, reg bi automation, compliance automation, ria sales process"
 author: "Investipal Team"
 publishedDate: "2024-09-13T19:52:39.154Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

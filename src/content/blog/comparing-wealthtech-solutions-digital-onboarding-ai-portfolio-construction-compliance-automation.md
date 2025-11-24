@@ -1,7 +1,6 @@
 ---
 title: "Comparing Wealthtech Solutions: Digital Onboarding, AI Portfolio Construction & Compliance Automation"
 excerpt: 
-metaDescription: "Automate comparing wealthtech solutions digital. Save hours weekly with step-by-step guide for financial advisors."
 author: Investipal Team
 publishedDate: "2025-06-10T07:30:24.000Z"
 category: General

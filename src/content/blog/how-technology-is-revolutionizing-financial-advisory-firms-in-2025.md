@@ -1,8 +1,6 @@
 ---
 title: "How Technology is Revolutionizing Financial Advisory Firms in 2025"
 excerpt: "The financial advisory landscape is being reshaped at a pace few could have imagined a decade ago. Much like how the smartphone revolutionized how we communicate, emerging technologies are redefining how advisors."
-metaDescription: "5 tech trends reshaping advisory firms in 2025: AI automation, integrated platforms, RegTech & more. Actionable steps to future-proof your practice."
-keywords: "advisory technology 2025, financial advisor technology, advisor automation, wealth management technology trends, fintech for advisors"
 author: "Investipal Team"
 publishedDate: "2025-01-07T17:11:04.703Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

@@ -1,8 +1,6 @@
 ---
 title: "The Advisor Shortage Is Here—How Technology Can Help RIAs Scale Without Adding Headcount"
 excerpt: "A serious advisor shortage is already affecting the financial services industry. Over the next decade, nearly 110,000 financial advisors will retire , creating a massive talent gap that leaves fewer qualified."
-metaDescription: "110,000 advisors retiring by 2034. How RIAs scale without hiring: AI automation for onboarding, data entry & portfolio management. 3 bottlenecks solved."
-keywords: "advisor shortage, scale ria, wealth management automation, advisor technology, ria growth without hiring"
 author: "Investipal Team"
 publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-03-03T23:40:15.089Z

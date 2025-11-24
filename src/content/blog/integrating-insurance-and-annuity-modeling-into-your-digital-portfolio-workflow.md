@@ -1,7 +1,6 @@
 ---
 title: Integrating Insurance and Annuity Modeling into Your Digital Portfolio Workflow
 excerpt: 
-metaDescription: "Automate integrating insurance and annuity. Save hours weekly with step-by-step guide for financial advisors."
 author: Investipal Team
 publishedDate: "2025-06-25T07:34:26.000Z"
 category: General

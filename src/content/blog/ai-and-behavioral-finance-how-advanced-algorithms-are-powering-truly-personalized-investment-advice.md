@@ -1,7 +1,6 @@
 ---
 title: "AI and Behavioral Finance: How Advanced Algorithms Are Powering Truly Personalized Investment Advice"
 excerpt: 
-metaDescription: "Learn ai and behavioral finance how advanced. Practical insights & best practices for financial advisors."
 author: Investipal Team
 publishedDate: "2025-08-28T04:44:01.000Z"
 category: General

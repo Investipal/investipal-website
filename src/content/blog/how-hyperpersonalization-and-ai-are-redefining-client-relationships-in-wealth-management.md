@@ -1,7 +1,6 @@
 ---
 title: "How Hyper-Personalization and AI Are Redefining Client Relationships in Wealth Management"
 excerpt: 
-metaDescription: "AI-powered how hyper-personalization and ai are for advisors. Practical implementation guide with real examples."
 author: Investipal Team
 publishedDate: "2025-09-04T04:43:53.000Z"
 category: General

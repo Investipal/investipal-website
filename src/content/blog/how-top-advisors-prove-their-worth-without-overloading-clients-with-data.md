@@ -1,8 +1,6 @@
 ---
 title: "How Top Advisors Prove Their Worth (Without Overloading Clients with Data)"
-excerpt: "Picture this scenario: You're sitting down with a long-standing client for their quarterly portfolio review."
-metaDescription: "Show clients your value without drowning them in data. 4 key metrics that matter: risk, allocation, performance & scenarios. Client reporting that converts."
-keywords: "advisor value proposition, client reporting, portfolio review presentation, financial advisor reporting, prove advisor value"
+excerpt: "Picture this scenario: You’re sitting down with a long-standing client for their quarterly portfolio review."
 author: "Investipal Team"
 publishedDate: "2025-02-04T17:10:29.606Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

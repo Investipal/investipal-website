@@ -1,8 +1,6 @@
 ---
 title: "Why Wealth Managers Spend 80% of Their Time on Admin Instead of Growth"
 excerpt: "As a financial advisor, your value lies in building relationships and guiding clients toward their goals-not drowning in paperwork."
-metaDescription: "Advisors spend 80% of time on admin tasks. See the 5 biggest time drains and how automation cuts manual work by 80%. Reclaim your time for growth."
-keywords: "advisor time management, wealth management efficiency, advisor productivity, reduce admin time, financial advisor automation"
 author: "Investipal Team"
 publishedDate: "2025-01-27T19:02:21.130Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

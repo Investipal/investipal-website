@@ -1,7 +1,6 @@
 ---
 title: Test
 excerpt: 
-metaDescription: "Learn test. Practical insights & best practices for financial advisors."
 author: Investipal Team
 publishedDate: "2025-06-05T21:07:10.000Z"
 category: General

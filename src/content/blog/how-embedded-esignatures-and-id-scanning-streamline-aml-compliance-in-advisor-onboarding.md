@@ -1,7 +1,6 @@
 ---
 title: "How Embedded E-Signatures and ID Scanning Streamline AML Compliance in Advisor Onboarding"
 excerpt: "Financial advisors and wealth management firms know that AML (Anti-Money Laundering) compliance isn’t just about ticking regulatory boxes-it's about protecting the business, protecting clients, and moving new accounts."
-metaDescription: "Automate how embedded e-signatures and id. Save hours weekly with step-by-step guide for financial advisors."
 author: "Investipal Team"
 publishedDate: 2025-07-09T05:40:35.478Z
 updatedDate: 2025-07-09T05:40:35.478Z

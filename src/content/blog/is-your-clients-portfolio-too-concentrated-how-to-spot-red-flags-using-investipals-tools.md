@@ -1,8 +1,6 @@
 ---
-title: "Is Your Client's Portfolio Too Concentrated? How to Spot Red Flags Using Investipal's Tools"
+title: "Is Your Client’s Portfolio Too Concentrated? How to Spot Red Flags Using Investipal's Tools"
 excerpt: "The stock market today is dominated by a small group of companies, particularly in sectors like technology."
-metaDescription: "Spot portfolio concentration risk before it's too late. Use correlation matrices, sector analysis & drift alerts to identify red flags. Free checklist."
-keywords: "portfolio concentration risk, concentration analysis, portfolio diversification, correlation matrix, sector exposure"
 author: "Investipal Team"
 publishedDate: "2024-09-24T16:50:43.949Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

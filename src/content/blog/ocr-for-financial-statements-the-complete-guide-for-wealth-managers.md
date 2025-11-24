@@ -1,8 +1,6 @@
 ---
 title: "OCR for Financial Statements: The Complete Guide for Wealth Managers"
 excerpt: "Modern wealth management involves juggling complex financial documents, from brokerage statements and custodial reports to tax forms and compliance records."
-metaDescription: "OCR for wealth managers: cut data entry errors from 40% to 5%. Process statements in 20 seconds vs 1 hour. Complete guide + vendor comparison inside."
-keywords: "ocr financial statements, ocr wealth management, statement scanning, automated data extraction, financial document ocr"
 author: "Investipal Team"
 publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-03-28T14:57:52.096Z

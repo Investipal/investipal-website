@@ -1,8 +1,6 @@
 ---
 title: "Streamline Your Advisory Practice with AI: A Guide from Onboarding to Compliance"
 excerpt: "Advisory firms everywhere are confronting a new wealth management landscape-one shaped by rising client expectations, increased regulatory complexity, and rapid advances in artificial intelligence."
-metaDescription: "Complete guide to AI automation for advisors. From onboarding to compliance in one platform. Cut manual work by 95%, close clients 10x faster. See how."
-keywords: "ai for financial advisors, advisor automation, ai wealth management, streamline advisory practice, ai compliance automation"
 author: "Investipal Team"
 publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-06-17T12:47:03.611Z

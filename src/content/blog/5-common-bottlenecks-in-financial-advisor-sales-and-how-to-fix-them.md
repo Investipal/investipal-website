@@ -1,7 +1,6 @@
 ---
 title: "5 Common Bottlenecks in Financial Advisor Sales and How to Fix Them"
 excerpt: "Financial advisors face a unique set of sales challenges. Even armed with deep financial knowledge, scaling a practice and converting prospects into long-term clients can feel like an uphill battle."
-metaDescription: "Boost conversion with 5 common bottlenecks in financial. Templates, automation & strategies for advisors."
 author: "Investipal Team"
 publishedDate: "2025-01-10T18:47:14.538Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

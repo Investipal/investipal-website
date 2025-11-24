@@ -1,8 +1,6 @@
 ---
 title: "How AI is Changing Investment Policy Statements"
 excerpt: "For financial advisors and investors, creating comprehensive, customized investment policy statements is a critical yet time-consuming task."
-metaDescription: "AI-powered IPS generation: custom documents in minutes vs days. Automatic data integration, continuous updates & 90% time savings. See how it works."
-keywords: "ai investment policy statement, ips generator, automated ips, ai ips software, investment policy statement automation"
 author: "Investipal Team"
 publishedDate: "2024-06-12T00:26:50.021Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

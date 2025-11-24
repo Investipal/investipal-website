@@ -1,8 +1,6 @@
 ---
 title: "How to Migrate from Nitrogen to Investipal: Complete Step-by-Step Guide"
 excerpt: "Considering switching from Nitrogen (Riskalyze) to Investipal? This practical migration guide covers everything from exporting client data and risk scores to recreating models and documentation, with timelines, checklists, and managed migration support."
-metaDescription: "Migrate from Nitrogen to Investipal in 2-4 weeks. Step-by-step data export, model recreation & managed support. Free migration checklist + timeline."
-keywords: "migrate from nitrogen, riskalyze migration, nitrogen to investipal, switch from riskalyze, advisor platform migration"
 author: "Investipal Team"
 publishedDate: "2025-11-12T10:00:00.000Z"
 updatedDate: "2025-11-12T10:00:00.000Z"

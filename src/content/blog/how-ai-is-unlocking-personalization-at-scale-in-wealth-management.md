@@ -1,8 +1,6 @@
 ---
 title: "How AI is Unlocking Personalization at Scale in Wealth Management"
-excerpt: "Personalization is no longer optional in wealth management-it's expected. Clients demand tailored advice and strategies that reflect their specific goals, risk tolerance, and values."
-metaDescription: "70% of clients say personalization is key. See how AI delivers tailored portfolios at scale—without growing headcount. Real-time adjustments & custom advice."
-keywords: "personalization at scale, ai wealth management, personalized financial advice, ai driven wealth management, scalable personalization"
+excerpt: "Personalization is no longer optional in wealth management-it’s expected. Clients demand tailored advice and strategies that reflect their specific goals, risk tolerance, and values."
 author: "Investipal Team"
 publishedDate: "2024-10-22T21:31:57.395Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

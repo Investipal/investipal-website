@@ -1,8 +1,6 @@
 ---
 title: "How to Leverage OCR Technology for Faster Client Account Statement Analysis"
 excerpt: "Processing client account statements can be a slow, tedious process for financial advisors. Manually scanning the document, entering data, double-checking everything, and ensuring accuracy takes valuable time that could."
-metaDescription: "OCR for advisors: 95% accuracy, process statements in seconds. Eliminate manual data entry errors. How-to guide with workflow integration tips."
-keywords: "ocr statement analysis, ocr for financial advisors, statement scanning technology, automate data extraction, account statement ocr"
 author: "Investipal Team"
 publishedDate: "2024-08-16T14:09:26.931Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

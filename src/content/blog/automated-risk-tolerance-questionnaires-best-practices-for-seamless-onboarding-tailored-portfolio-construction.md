@@ -1,7 +1,6 @@
 ---
 title: "Automated Risk Tolerance Questionnaires: Best Practices for Seamless Onboarding & Tailored Portfolio Construction"
 excerpt: "For financial advisors and wealth firms , building trust begins at onboarding. Getting risk tolerance right is essential."
-metaDescription: "Automate automated risk tolerance questionnaires. Save hours weekly with step-by-step guide for financial advisors."
 author: "Investipal Team"
 publishedDate: 2025-07-18T08:52:36.900Z
 updatedDate: 2025-07-18T08:52:36.900Z

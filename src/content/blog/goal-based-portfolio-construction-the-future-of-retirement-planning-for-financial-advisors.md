@@ -1,8 +1,6 @@
 ---
 title: "Goal-Based Portfolio Construction: Connect Plans to Portfolios"
 excerpt: "Bridge the planning-to-portfolio gap with AI-powered goal-based construction. Match client spending needs to optimal allocations for retirees and pre-retirees."
-metaDescription: "Goal-based portfolio construction for advisors. Bridge the planning-to-portfolio gap with liquidity bucketing & time-horizon matching. Implementation guide."
-keywords: "goal based portfolio construction, goal based investing, retirement portfolio construction, liquidity bucketing, time horizon investing"
 author: "Investipal Team"
 publishedDate: "2025-11-15T10:00:00.000Z"
 updatedDate: "2025-11-15T10:00:00.000Z"

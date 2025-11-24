@@ -1,8 +1,6 @@
 ---
 title: "Real-Time Portfolio Monitoring: How Automated Drift Alerts and AI Rebalancing Enhance Client Outcomes"
-excerpt: "As a financial advisor, wealth manager , or RIA owner, you know manual portfolio oversight just doesn't cut it anymore."
-metaDescription: "Real-time portfolio monitoring that catches drift before clients notice. Automated alerts + AI rebalancing for proactive wealth management. See how it works."
-keywords: "real-time portfolio monitoring, portfolio drift alerts, ai rebalancing, automated portfolio management, wealth management automation"
+excerpt: "As a financial advisor, wealth manager , or RIA owner, you know manual portfolio oversight just doesn’t cut it anymore."
 author: "Investipal Team"
 publishedDate: "2025-08-05T06:06:19.221Z"
 updatedDate: "2025-08-05T06:06:19.221Z"

@@ -1,7 +1,6 @@
 ---
 title: "Personalization vs. Standardization in Wealth Management: Striking the Right Balance with AI"
 excerpt: "Financial advisors stand at a unique inflection point. Clients expect tailored advice, instant onboarding , precise compliance-and they want it delivered faster than ever."
-metaDescription: "Compare personalization vs. standardization in solutions. Features, pricing & expert recommendations for advisors."
 author: "Investipal Team"
 publishedDate: "2025-08-14T12:41:37.836Z"
 updatedDate: "2025-08-14T12:41:37.836Z"

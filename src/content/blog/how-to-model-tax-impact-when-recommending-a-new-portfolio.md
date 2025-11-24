@@ -1,8 +1,6 @@
 ---
 title: "How to Model Tax Impact When Recommending a New Portfolio"
-excerpt: "When you recommend a new portfolio, the first question on your prospect's mind is often: "What about the tax hit?" If you can't provide a clear answer, you risk losing their trust-along with their."
-metaDescription: "Show clients exact tax impact before they switch portfolios. Model capital gains, phase transitions & tax-loss harvesting. Close more deals with clarity."
-keywords: "tax transition analysis, portfolio tax impact, capital gains modeling, tax efficient portfolio transition, advisor tax tools"
+excerpt: "When you recommend a new portfolio, the first question on your prospect’s mind is often: “What about the tax hit?” If you can’t provide a clear answer, you risk losing their trust-along with their."
 author: "Investipal Team"
 publishedDate: "2025-06-27T14:47:53.333Z"
 updatedDate: "2025-04-24T20:35:57.551Z"
