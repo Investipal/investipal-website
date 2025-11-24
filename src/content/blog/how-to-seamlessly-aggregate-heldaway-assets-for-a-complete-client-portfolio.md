@@ -1,6 +1,8 @@
 ---
 title: "How to Seamlessly Aggregate Held-Away Assets for a Complete Client Portfolio"
 excerpt: "One of the most critical yet underutilized tactics for advisors who want to deliver truly holistic portfolio management is the seamless aggregation of held-away assets - assets that clients own outside of their primary."
+metaDescription: "See the complete picture of client wealth. Learn how top advisors aggregate held-away brokerage accounts in minutes—not days. Step-by-step guide + tools."
+keywords: "held-away assets, account aggregation, portfolio aggregation, held away accounts, advisor account linking"
 author: "Investipal Team"
 publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-05-29T15:47:50.709Z

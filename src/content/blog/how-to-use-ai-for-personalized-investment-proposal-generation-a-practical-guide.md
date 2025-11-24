@@ -1,6 +1,8 @@
 ---
 title: "How to Use AI for Personalized Investment Proposal Generation: A Practical Guide"
-excerpt: "Deliver personalized, compliant investment proposals in under 10 minutes with Investipal’s AI—eliminating manual entry, fragmented tools, and slow compliance workflows."
+excerpt: "Deliver personalized, compliant investment proposals in under 10 minutes with Investipal's AI—eliminating manual entry, fragmented tools, and slow compliance workflows."
+metaDescription: "Generate personalized investment proposals in under 10 minutes. See how AI automates data entry, compliance docs & portfolio analysis. Free demo available."
+keywords: "ai proposal generation, investment proposal software, automated proposals, financial advisor proposals, ai investment recommendations"
 author: "Investipal Team"
 publishedDate: 2025-08-12T13:51:46.000Z
 updatedDate: 2025-08-14T12:40:40.000Z
