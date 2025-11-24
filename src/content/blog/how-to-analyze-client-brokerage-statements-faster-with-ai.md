@@ -1,6 +1,8 @@
 ---
 title: "How to Analyze Client Brokerage Statements Faster with AI"
 excerpt: "For financial advisors, analyzing portfolio holdings is an essential part of delivering value to clients."
+metaDescription: "Analyze brokerage statements in minutes with AI. OCR + IDP extracts holdings, transactions & values automatically. Eliminate manual data entry. Try free."
+keywords: "analyze brokerage statements, ai statement analysis, idp financial advisors, brokerage statement automation, faster portfolio analysis"
 author: "Investipal Team"
 publishedDate: "2024-10-09T14:47:16.647Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

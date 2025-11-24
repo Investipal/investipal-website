@@ -1,6 +1,8 @@
 ---
 title: "How to Create Professional Investment Proposals in Under 10 Minutes"
 excerpt: "Create professional, compliance-ready investment proposals in minutes by automating data intake, portfolio comparisons, and commentary."
+metaDescription: "Create compliant investment proposals in 10 minutes. Automate data intake, portfolio comparisons & commentary. Step-by-step guide with screenshots."
+keywords: "create investment proposals, professional proposals 10 minutes, advisor proposal workflow, fast proposal generation, investment proposal template"
 author: "Investipal Team"
 publishedDate: 2025-06-27T14:47:53Z
 updatedDate: 2025-03-31T17:18:09Z
