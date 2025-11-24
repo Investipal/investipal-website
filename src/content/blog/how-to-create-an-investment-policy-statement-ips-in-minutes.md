@@ -1,6 +1,8 @@
 ---
 title: "How to Create an Investment Policy Statement (IPS) in Minutes"
 excerpt: "For financial advisors, creating an Investment Policy Statement (IPS) can be one of those time-consuming tasks that takes them away from what they do best-working with clients."
+metaDescription: "Create compliant IPS documents in minutes, not hours. AI-powered generator with step-by-step workflow. Stay Reg BI compliant automatically."
+keywords: "create ips, investment policy statement generator, ips in minutes, ips automation, ai ips generator"
 author: "Investipal Team"
 publishedDate: "2024-08-28T13:26:02.899Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

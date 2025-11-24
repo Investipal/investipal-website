@@ -1,6 +1,8 @@
 ---
 title: "Scale Your Advisory Practice with AI-Driven Tax Optimization and Proposals"
 excerpt: "Imagine being able to present a fully personalized, tax-optimized investment proposal in minutes, rather than spending countless hours juggling spreadsheets and analysis."
+metaDescription: "AI-powered tax optimization for proposals: transition analysis, tax-loss harvesting & portfolio construction in one engine. Win clients with tax savings."
+keywords: "ai tax optimization, tax optimized proposals, tax transition analysis, tax loss harvesting automation, advisor proposal tax"
 author: "Investipal Team"
 publishedDate: "2025-02-12T21:46:18.469Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

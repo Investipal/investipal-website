@@ -1,6 +1,8 @@
 ---
 title: "Step-by-Step Guide: Generate Personalized Investment Proposals in Minutes with AI"
 excerpt: "Time is the most valuable resource for financial advisors, wealth managers , and RIA firm owners. Manual onboarding, fragmented platforms, compliance headaches, and a demand for deep personalization all sap focus from."
+metaDescription: "5-step guide: AI proposals in under 10 minutes. From statement upload to compliance-ready delivery. Screenshots & workflow included. Try it free."
+keywords: "ai proposal generation, investment proposal guide, automated proposals, advisor proposal workflow, ai investment proposals"
 author: "Investipal Team"
 publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-05-30T14:35:02.427Z

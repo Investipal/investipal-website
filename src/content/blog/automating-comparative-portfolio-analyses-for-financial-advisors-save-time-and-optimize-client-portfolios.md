@@ -1,6 +1,8 @@
 ---
 title: "Automating Comparative Portfolio Analyses for Financial Advisors: Save Time and Optimize Client Portfolios"
 excerpt: "As a financial advisor, conducting a comparative analysis of your clients' portfolios against your models is crucial."
+metaDescription: "Automate portfolio comparison: 25+ risk metrics, instant backtesting & automated proposals. Turn hours of analysis into minutes. Step-by-step guide."
+keywords: "comparative portfolio analysis, portfolio comparison tool, automated portfolio analysis, portfolio comparison software, advisor portfolio tools"
 author: "Investipal Team"
 publishedDate: "2024-10-01T21:11:30.614Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

@@ -1,6 +1,8 @@
 ---
 title: "5 Essential Digital Onboarding Features Financial Advisors Need in 2025"
 excerpt: "Manual onboarding has long been the bottleneck for independent advisors and RIA firms aiming to grow faster, serve clients better, and scale without ballooning headcount."
+metaDescription: "5 must-have onboarding features for 2025: AI statement scanning, integrated RTQs, instant proposals & compliance automation. Transform weeks into minutes."
+keywords: "digital onboarding advisors, advisor onboarding automation, client onboarding features, onboarding technology 2025, digital onboarding RIA"
 author: "Investipal Team"
 publishedDate: "2025-06-27T14:47:53.333Z"
 updatedDate: "2025-06-02T15:01:36.773Z"

@@ -1,6 +1,8 @@
 ---
 title: "The Role of Explainable AI in Enhancing Regulatory Compliance and Client Trust"
 excerpt: "Regulatory compliance in wealth management is a critical responsibility. The complexity of evolving regulations requires precision, thorough documentation, and transparency at every stage."
+metaDescription: "Explainable AI for compliance: audit-ready documentation, automated regulatory updates & transparent decisions. Build client trust with clear reasoning."
+keywords: "explainable ai, ai compliance wealth management, transparent ai, regulatory compliance ai, client trust ai"
 author: "Investipal Team"
 publishedDate: "2024-11-25T21:17:16.474Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

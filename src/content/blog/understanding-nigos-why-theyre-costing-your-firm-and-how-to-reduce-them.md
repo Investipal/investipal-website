@@ -1,6 +1,8 @@
 ---
-title: "Understanding NIGOs: Why They’re Costing Your Firm (And How to Reduce Them)"
+title: "Understanding NIGOs: Why They're Costing Your Firm (And How to Reduce Them)"
 excerpt: "Precision is paramount when handling finances. As such, in financial services even minor paperwork errors can have significant consequences."
+metaDescription: "NIGOs cost 2x more to process. Learn the 1-10-100 rule, common causes & how digital onboarding cuts errors from 31% to 4%. Reduction strategies inside."
+keywords: "nigo reduction, not in good order, reduce nigos, advisor paperwork errors, onboarding errors"
 author: "Investipal Team"
 publishedDate: "2024-08-07T16:11:38.752Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

@@ -1,6 +1,8 @@
 ---
 title: "Automating Financial Advisory Practices: How to Build a Lean Advisory Team"
 excerpt: "The RIA landscape has never been more demanding. As client expectations rise and market conditions evolve, firms of all sizes face the challenge of balancing growth, efficiency, and exceptional service-all while."
+metaDescription: "Build a lean advisory team: 3-person teams managing $250M AUM. 5 strategies for automation, efficiency & scaling without headcount. Practical guide."
+keywords: "lean advisory team, advisor automation, scale ria firm, advisory practice efficiency, build lean ria"
 author: "Investipal Team"
 publishedDate: "2024-12-24T15:46:13.775Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

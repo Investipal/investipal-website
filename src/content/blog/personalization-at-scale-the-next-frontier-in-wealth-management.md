@@ -1,6 +1,8 @@
 ---
 title: "Personalization at Scale: The Next Frontier in Wealth Management"
-excerpt: "The wealth management industry is experiencing a paradigm shift. Today’s clients expect tailored solutions reflecting their unique goals, values, and tax considerations-rather than generic, one-size-fits-all portfolios."
+excerpt: "The wealth management industry is experiencing a paradigm shift. Today's clients expect tailored solutions reflecting their unique goals, values, and tax considerations-rather than generic, one-size-fits-all portfolios."
+metaDescription: "70% of clients want personalized advice. See how AI delivers custom portfolios at scale—ESG, tax optimization & alternatives. No extra headcount needed."
+keywords: "personalization at scale, personalized wealth management, ai portfolio personalization, custom portfolios, scalable personalization"
 author: "Investipal Team"
 publishedDate: "2025-01-20T21:18:36.238Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

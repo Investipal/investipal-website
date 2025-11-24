@@ -1,6 +1,8 @@
 ---
 title: "The High Cost of Disconnected Systems in Wealth Management"
 excerpt: "Every day, financial advisors jump between multiple tools for proposals, portfolio management , and compliance-each system operating in isolation."
+metaDescription: "Disconnected systems cost advisors 15+ hrs/week. See the hidden costs of fragmented tech and how unified platforms cut admin by 90%. ROI calculator inside."
+keywords: "disconnected systems wealth management, advisor tech stack, unified platform, integrated advisory platform, reduce admin time"
 author: "Investipal Team"
 publishedDate: "2025-02-03T21:12:29.123Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

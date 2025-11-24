@@ -1,6 +1,8 @@
 ---
 title: "How to Extract Brokerage Account Statement Portfolio Holdings from PDFs Using AI"
 excerpt: "Processing brokerage account statements can be a taxing task for financial advisors, especially as they accumulate."
+metaDescription: "Extract holdings from PDF statements in 5 steps using AI. 95% accuracy, supports all formats. Step-by-step guide with screenshots. Try free."
+keywords: "extract holdings pdf, brokerage statement scanner, ai statement extraction, pdf to portfolio holdings, extract portfolio data"
 author: "Investipal Team"
 publishedDate: "2024-07-10T18:02:22.573Z"
 updatedDate: "2025-06-27T14:47:53.333Z"
