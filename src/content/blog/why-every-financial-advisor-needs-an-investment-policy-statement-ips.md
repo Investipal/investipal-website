@@ -1,6 +1,8 @@
 ---
 title: "Why Every Financial Advisor Needs an Investment Policy Statement (IPS)"
-excerpt: "An Investment Policy Statement (IPS) is a critical tool for financial advisors. It serves as a guiding document that aligns the advisor and client’s expectations, laying out the client’s financial goals, investment."
+excerpt: "An Investment Policy Statement (IPS) is a critical tool for financial advisors. It serves as a guiding document that aligns the advisor and client's expectations, laying out the client's financial goals, investment."
+metaDescription: "Why IPS documents are non-negotiable for advisors. Key components, compliance benefits & risks of not having one. Plus: how to automate IPS generation."
+keywords: "investment policy statement, ips for advisors, why ips matters, ips compliance, investment policy statement importance"
 author: "Investipal Team"
 publishedDate: "2024-10-25T15:13:57.507Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

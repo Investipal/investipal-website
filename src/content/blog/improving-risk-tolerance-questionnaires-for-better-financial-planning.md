@@ -1,6 +1,8 @@
 ---
 title: "Improving Risk Tolerance Questionnaires for Better Financial Planning"
 excerpt: "Risk tolerance questionnaires are widely recognized as essential tools. These questionnaires assess a client's willingness to take risks and their ability to handle potential losses and market volatility."
+metaDescription: "Build better risk tolerance questionnaires. Learn psychometric validity, avoid common biases & integrate with portfolio construction. Research-backed guide."
+keywords: "risk tolerance questionnaire, risk assessment, risk profiling, psychometric validity, client risk tolerance"
 author: "Investipal Team"
 publishedDate: "2024-06-12T00:26:18.343Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

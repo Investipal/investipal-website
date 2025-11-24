@@ -1,6 +1,8 @@
 ---
 title: "Top 5 AI-Powered Brokerage Statement Scanning Tools to Automate Advisor Onboarding"
-excerpt: "For advisors and RIAs, client onboarding isn’t just the first impression - it’s where back-office bottlenecks, compliance risks, and operational drag can quietly erode client confidence and stall AUM growth."
+excerpt: "For advisors and RIAs, client onboarding isn't just the first impression - it's where back-office bottlenecks, compliance risks, and operational drag can quietly erode client confidence and stall AUM growth."
+metaDescription: "Compare the 5 best AI statement scanners for advisors in 2025. Extract holdings from PDFs in seconds. Features, accuracy & workflow integration compared."
+keywords: "brokerage statement scanner, ai statement scanning, automated statement parsing, ocr brokerage statements, advisor onboarding tools"
 author: "Investipal Team"
 publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-06-11T14:50:43.562Z

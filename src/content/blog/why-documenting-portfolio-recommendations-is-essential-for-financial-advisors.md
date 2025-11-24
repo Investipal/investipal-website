@@ -1,6 +1,8 @@
 ---
 title: "Why Documenting Portfolio Recommendations is Essential for Financial Advisors"
-excerpt: "Financial advisors make daily decisions that shape their clients' financial futures. From selecting asset allocations to recommending specific investments, each choice is grounded in the client’s best interest."
+excerpt: "Financial advisors make daily decisions that shape their clients' financial futures. From selecting asset allocations to recommending specific investments, each choice is grounded in the client's best interest."
+metaDescription: "Why documenting recommendations protects you and builds trust. 5 key benefits + practical tips for Reg BI compliance. Automation tools that simplify it."
+keywords: "document portfolio recommendations, advisor documentation, reg bi documentation, compliance documentation, portfolio recommendation records"
 author: "Investipal Team"
 publishedDate: "2024-11-07T16:05:23.315Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

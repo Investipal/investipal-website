@@ -1,6 +1,8 @@
 ---
 title: "The Biggest Bottlenecks in Wealth Management Sales—and How Automation Solves Them"
-excerpt: "If you’re a wealth manager , how much of your day actually goes toward meeting new prospects or nurturing existing client relationships?"
+excerpt: "If you're a wealth manager , how much of your day actually goes toward meeting new prospects or nurturing existing client relationships?"
+metaDescription: "4 sales bottlenecks killing your growth: data entry, proposals, compliance & disconnected tools. How automation saves 10-15 hours/week. Solutions inside."
+keywords: "wealth management sales, advisor sales bottlenecks, proposal automation, sales process optimization, advisor efficiency"
 author: "Investipal Team"
 publishedDate: "2025-01-24T17:05:17.670Z"
 updatedDate: "2025-06-27T14:47:53.333Z"

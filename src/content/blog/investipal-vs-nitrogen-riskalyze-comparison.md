@@ -1,6 +1,8 @@
 ---
 title: "Investipal vs Nitrogen (Riskalyze): Complete Workflow Comparison for RIAs"
 excerpt: "Choosing between Nitrogen and Investipal for your advisory practice? This detailed comparison breaks down risk assessment, proposal generation, compliance automation, and end-to-end workflow capabilities to help you decide which platform fits your firm's needs."
+metaDescription: "Nitrogen vs Investipal: Side-by-side comparison of risk assessment, proposals & compliance tools. See which platform fits your RIA. Feature table included."
+keywords: "nitrogen vs investipal, riskalyze alternative, nitrogen alternative, riskalyze comparison, risk assessment software comparison"
 author: "Investipal Team"
 publishedDate: "2025-11-11T10:00:00.000Z"
 updatedDate: "2025-11-11T10:00:00.000Z"

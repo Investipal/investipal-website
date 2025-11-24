@@ -1,6 +1,8 @@
 ---
 title: "The Ultimate Guide to Financial Advisor Proposal Generation Software in 2025"
 excerpt: "Financial advisors are under more pressure than ever. Clients expect personalized proposals, tighter regulations demand thorough disclosures, and competition is fierce."
+metaDescription: "Compare 2025's best proposal generation software for advisors. AI-powered tools that create compliant, personalized proposals in minutes. Buyer's guide inside."
+keywords: "proposal generation software, financial advisor proposals, investment proposal software, advisor proposal tools, automated proposals"
 author: "Investipal Team"
 publishedDate: "2025-06-27T14:47:53.333Z"
 updatedDate: "2025-03-27T20:02:13.479Z"
