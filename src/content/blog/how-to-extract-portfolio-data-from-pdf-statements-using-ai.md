@@ -1,6 +1,8 @@
 ---
 title: "How to Extract Portfolio Data from PDF Statements Using AI"
 excerpt: "Extracting portfolio data from PDF brokerage statements can be a major challenge for financial advisors and compliance teams."
+metaDescription: "Extract holdings from any PDF statement in seconds using AI. 95% faster than manual entry. Step-by-step guide + accuracy comparison. Try free."
+keywords: "extract portfolio data pdf, pdf statement scanner, brokerage statement ocr, ai statement extraction, pdf to portfolio data"
 author: "Investipal Team"
 publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-04-02T22:39:42.113Z

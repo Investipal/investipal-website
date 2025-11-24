@@ -1,6 +1,8 @@
 ---
 title: "Morningstar Office Is Shutting Down: Your 90-Day Transition Plan"
-excerpt: "Morningstar Office will officially sunset in early 2026 . Many advisors are scrambling to replace a system they’ve relied on for reporting, billing, and portfolio management."
+excerpt: "Morningstar Office will officially sunset in early 2026 . Many advisors are scrambling to replace a system they've relied on for reporting, billing, and portfolio management."
+metaDescription: "Morningstar Office is shutting down in 2026. Get your 90-day migration plan: data export, platform comparison, and how to consolidate tools. Don't wait."
+keywords: "morningstar office shutdown, morningstar office alternative, morningstar office replacement, black diamond alternative, advisor platform migration"
 author: "Investipal Team"
 publishedDate: 2025-06-27T14:47:53.333Z
 updatedDate: 2025-02-28T16:38:12.230Z

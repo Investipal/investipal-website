@@ -1,6 +1,8 @@
 ---
 title: "Investment Policy Statement Software: How to Choose the Best Tool for Advisors"
 excerpt: "Crafting and maintaining robust Investment Policy Statements (IPS) is at the heart of delivering fiduciary advice and building trust with clients."
+metaDescription: "Compare 2025's best IPS software for advisors. Generate compliant Investment Policy Statements in minutes. Includes feature checklist + buyer's guide."
+keywords: "investment policy statement software, ips generator, ips software for advisors, automated ips, investment policy statement template"
 author: "Investipal Team"
 publishedDate: "2025-07-11T16:53:41.085Z"
 updatedDate: "2025-07-11T16:54:13.608Z"
