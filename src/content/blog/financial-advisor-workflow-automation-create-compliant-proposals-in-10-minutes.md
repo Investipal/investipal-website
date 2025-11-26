@@ -63,7 +63,7 @@ For an advisor billing at $200/hour, those 15 hours represent **$3,000 in opport
 
 Manual workflows limit how many proposals you can realistically create per month. If each proposal takes 15 hours and you work 160 hours/month, your maximum capacity is just **10-11 proposals per month**—and that assumes you do nothing else.
 
-This capacity constraint is one of the [biggest bottlenecks in wealth management sales](https://www.investipal.co/blog/the-biggest-bottlenecks-in-wealth-management-sales--and-how-automation-solves-them) that prevents firms from scaling efficiently.
+This capacity constraint is one of the [biggest bottlenecks in wealth management sales](/blog/the-biggest-bottlenecks-in-wealth-management-sales--and-how-automation-solves-them) that prevents firms from scaling efficiently.
 
 Automated workflows that compress proposals to 10 minutes expand your capacity to **50-100+ proposals per month** with the same resources.
 
@@ -82,7 +82,7 @@ Let's break down where time is actually spent in traditional advisor workflows:
 The typical process:
 - Prospect emails PDF statements from multiple custodians
 - Advisor manually transcribes holdings, ticker symbols, quantities, cost basis, and transaction history into spreadsheets or portfolio management software
-- Data is prone to transcription errors that require reconciliation (creating [NIGOs that cost your firm](https://www.investipal.co/blog/understanding-nigos-why-theyre-costing-your-firm-and-how-to-reduce-them))
+- Data is prone to transcription errors that require reconciliation (creating [NIGOs that cost your firm](/blog/understanding-nigos-why-theyre-costing-your-firm-and-how-to-reduce-them))
 - Multi-account clients with 5-10 statements multiply this time exponentially
 
 **Time consumed: 3-5 hours per client**
@@ -93,7 +93,7 @@ Traditional approach:
 - Schedule separate meeting or send email questionnaire
 - Wait for client to complete and return (adds days)
 - Manually score responses
-- Document [risk tolerance](https://www.investipal.co/blog/automated-risk-tolerance-questionnaires-best-practices-for-seamless-onboarding-tailored-portfolio-construction) in client file
+- Document [risk tolerance](/blog/automated-risk-tolerance-questionnaires-best-practices-for-seamless-onboarding-tailored-portfolio-construction) in client file
 - Match risk profile to appropriate portfolio models
 
 **Time consumed: 30-60 minutes, plus days of waiting**
@@ -155,7 +155,7 @@ Here's how leading advisors in 2025 are compressing weeks of work into a single 
 
 **Process:**
 - Prospect shares PDF statements from any custodian (Schwab, Fidelity, Vanguard, Interactive Brokers, etc.)
-- AI-powered [automated statement scanner](https://www.investipal.co/features/automated-statement-scanner) instantly extracts:
+- AI-powered [automated statement scanner](/features/automated-statement-scanner) instantly extracts:
   - All holdings (ticker symbols, quantities, current values)
   - Cost basis and unrealized gains/losses
   - Transaction history
@@ -187,7 +187,7 @@ Modern risk assessment tools also track changes over time, alerting you when a c
 
 ### Minutes 4-7: AI Portfolio Analysis & Comparison
 
-**Technology:** AI-driven [portfolio analysis engine](https://www.investipal.co/features/asset-allocation)
+**Technology:** AI-driven [portfolio analysis engine](/features/asset-allocation)
 
 **Process:**
 - AI instantly analyzes current portfolio (from statement scan) against client's risk profile
@@ -247,12 +247,12 @@ Modern proposal tools also support:
 **Technology:** Compliance automation engine
 
 **Process:**
-- [Investment Policy Statement (IPS)](https://www.investipal.co/features/investment-policy-statements) is automatically generated based on:
+- [Investment Policy Statement (IPS)](/features/investment-policy-statements) is automatically generated based on:
   - Client objectives and constraints
   - Risk tolerance assessment
   - Recommended portfolio strategy
   - Rebalancing guidelines
-- [Reg BI documentation](https://www.investipal.co/blog/understanding-regulation-best-interest-reg-bi-essential-guide-for-financial-advisors) is created automatically:
+- [Reg BI documentation](/blog/understanding-regulation-best-interest-reg-bi-essential-guide-for-financial-advisors) is created automatically:
   - Best interest analysis
   - Reasonable alternatives considered
   - Conflict of interest disclosures
@@ -310,7 +310,7 @@ Modern OCR doesn't just scan text—it understands financial documents:
 
 **Typical accuracy: 99%+ for structured financial data**
 
-[Learn more about AI statement scanning](https://www.investipal.co/blog/how-to-extract-account-statement-portfolio-holdings-from-pdfs-using-ai)
+[Learn more about AI statement scanning](/blog/how-to-extract-account-statement-portfolio-holdings-from-pdfs-using-ai)
 
 #### 2. AI-Powered Portfolio Analysis & Comparison
 
@@ -369,7 +369,7 @@ Beyond the obvious time savings, workflow automation transforms how your firm op
 
 Being able to deliver proposals in the initial meeting (or within 24 hours) dramatically increases conversion rates. The prospect's interest is highest when they're sitting across from you. Strike while the iron is hot.
 
-This approach transforms your [client acquisition process](https://www.investipal.co/features/client-acquisition) from weeks-long campaigns to same-day closings.
+This approach transforms your [client acquisition process](/features/client-acquisition) from weeks-long campaigns to same-day closings.
 
 **Conversion rate improvements: 25-40% higher close rates** when proposals are delivered same-day vs. same-week.
 
@@ -525,21 +525,21 @@ At Investipal, we built our platform specifically to enable the complete workflo
 
 ### Integrated Workflow Components
 
-**1. [AI-Powered Statement Scanner](https://www.investipal.co/features/automated-statement-scanner)**
+**1. [AI-Powered Statement Scanner](/features/automated-statement-scanner)**
 - Supports 50+ custodian formats
 - 99%+ accuracy on data extraction
 - Processes statements in seconds
 - Automatically validates and organizes data
 
-**2. [Digital Client Onboarding](https://www.investipal.co/features/client-onboarding)**
-- [Automated risk questionnaires](https://www.investipal.co/blog/automated-risk-tolerance-questionnaires-best-practices-for-seamless-onboarding-tailored-portfolio-construction)
+**2. [Digital Client Onboarding](/features/client-onboarding)**
+- [Automated risk questionnaires](/blog/automated-risk-tolerance-questionnaires-best-practices-for-seamless-onboarding-tailored-portfolio-construction)
 - E-signature integration
 - Document collection workflows
-- [AML/KYC verification](https://www.investipal.co/blog/essential-steps-to-integrate-aml-and-id-verification-in-digital-advisor-onboarding-workflows)
+- [AML/KYC verification](/blog/essential-steps-to-integrate-aml-and-id-verification-in-digital-advisor-onboarding-workflows)
 
-**3. [AI Portfolio Analysis & Construction](https://www.investipal.co/features/asset-allocation)**
-- Multi-asset class support (including [alternatives](https://www.investipal.co/features/alternatives-modeling))
-- Risk-based and [goal-based portfolio construction](https://www.investipal.co/blog/goal-based-portfolio-construction-the-future-of-retirement-planning-for-financial-advisors)
+**3. [AI Portfolio Analysis & Construction](/features/asset-allocation)**
+- Multi-asset class support (including [alternatives](/features/alternatives-modeling))
+- Risk-based and [goal-based portfolio construction](/blog/goal-based-portfolio-construction-the-future-of-retirement-planning-for-financial-advisors)
 - Tax-aware portfolio analysis
 - Human-in-the-loop: AI analyzes, advisors decide
 
@@ -549,8 +549,8 @@ At Investipal, we built our platform specifically to enable the complete workflo
 - Side-by-side portfolio comparisons
 - Performance projections and Monte Carlo analysis
 
-**5. [Compliance Automation](https://www.investipal.co/blog/how-investipals-ai-simplifies-reg-bi-compliance-for-financial-advisors-and-broker-dealers)**
-- Auto-generated [Investment Policy Statements](https://www.investipal.co/features/investment-policy-statements)
+**5. [Compliance Automation](/blog/how-investipals-ai-simplifies-reg-bi-compliance-for-financial-advisors-and-broker-dealers)**
+- Auto-generated [Investment Policy Statements](/features/investment-policy-statements)
 - Reg BI best interest documentation
 - Complete regulatory disclosures
 - Full audit trail
@@ -650,7 +650,7 @@ See the 10-minute workflow in action. Book a personalized demo and we'll show yo
 ✅ How proposals are generated with your branding  
 ✅ How compliance documentation is created automatically  
 
-**[Book your demo today](https://www.investipal.co/book-a-demo)** and discover how workflow automation can transform your practice.
+**[Book your demo today](/book-a-demo)** and discover how workflow automation can transform your practice.
 
 ---
 
@@ -705,12 +705,12 @@ The best platforms can process statements from any custodian (Schwab, Fidelity, 
     "name": "Investipal",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.investipal.co/images/layout/logo.svg"
+      "url": "/images/layout/logo.svg"
     }
   },
   "datePublished": "2025-11-20T19:30:00.000Z",
   "dateModified": "2025-11-20T19:30:00.000Z",
-  "image": "https://www.investipal.co/images/blog/workflow-automation-10-minutes.jpg",
+  "image": "/images/blog/workflow-automation-10-minutes.jpg",
   "articleSection": "Technology",
   "keywords": "financial advisor workflow automation, proposal generation software, client onboarding automation, AI proposal creation, compliance automation"
 }
@@ -855,12 +855,12 @@ The best platforms can process statements from any custodian (Schwab, Fidelity, 
 
 **Related Articles:**
 
-- [The Ultimate Guide to Financial Advisor Proposal Generation Software in 2025](https://www.investipal.co/blog/the-ultimate-guide-to-financial-advisor-proposal-generation-software-in-2025)
-- [4 Steps to Automate Your Client Onboarding Workflow and Win More Clients](https://www.investipal.co/blog/4-steps-to-automate-your-client-onboarding-workflow-and-win-more-clients)
-- [How to Extract Account Statement Portfolio Holdings from PDFs Using AI](https://www.investipal.co/blog/how-to-extract-account-statement-portfolio-holdings-from-pdfs-using-ai)
-- [Understanding Regulation Best Interest (Reg BI): Essential Guide for Financial Advisors](https://www.investipal.co/blog/understanding-regulation-best-interest-reg-bi-essential-guide-for-financial-advisors)
-- [5 Common Bottlenecks in Financial Advisor Sales and How to Fix Them](https://www.investipal.co/blog/5-common-bottlenecks-in-financial-advisor-sales-and-how-to-fix-them)
-- [Investipal vs Nitrogen: Complete Workflow Comparison](https://www.investipal.co/blog/investipal-vs-nitrogen-riskalyze-comparison)
-- [How AI-Driven Risk Profiling is Transforming Financial Planning](https://www.investipal.co/blog/how-aidriven-risk-profiling-portfolio-optimization-and-proposal-automation-are-transforming-financial-planning)
-- [Understanding NIGOs: Why They're Costing Your Firm](https://www.investipal.co/blog/understanding-nigos-why-theyre-costing-your-firm-and-how-to-reduce-them)
+- [The Ultimate Guide to Financial Advisor Proposal Generation Software in 2025](/blog/the-ultimate-guide-to-financial-advisor-proposal-generation-software-in-2025)
+- [4 Steps to Automate Your Client Onboarding Workflow and Win More Clients](/blog/4-steps-to-automate-your-client-onboarding-workflow-and-win-more-clients)
+- [How to Extract Account Statement Portfolio Holdings from PDFs Using AI](/blog/how-to-extract-account-statement-portfolio-holdings-from-pdfs-using-ai)
+- [Understanding Regulation Best Interest (Reg BI): Essential Guide for Financial Advisors](/blog/understanding-regulation-best-interest-reg-bi-essential-guide-for-financial-advisors)
+- [5 Common Bottlenecks in Financial Advisor Sales and How to Fix Them](/blog/5-common-bottlenecks-in-financial-advisor-sales-and-how-to-fix-them)
+- [Investipal vs Nitrogen: Complete Workflow Comparison](/blog/investipal-vs-nitrogen-riskalyze-comparison)
+- [How AI-Driven Risk Profiling is Transforming Financial Planning](/blog/how-aidriven-risk-profiling-portfolio-optimization-and-proposal-automation-are-transforming-financial-planning)
+- [Understanding NIGOs: Why They're Costing Your Firm](/blog/understanding-nigos-why-theyre-costing-your-firm-and-how-to-reduce-them)
 

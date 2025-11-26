@@ -9,6 +9,15 @@ Disallow: /*.docx$
 Disallow: /*.xls$
 Disallow: /*.xlsx$
 
+# Block tracking/parameter URLs from indexing
+Disallow: /*?ref
+Disallow: /*?ref=*
+Disallow: /*?hsLang=*
+Disallow: /*?page_id=*
+Disallow: /*?utm_*
+Disallow: /*?fbclid=*
+Disallow: /*?gclid=*
+
 # AI Bot Access - Allow LLM crawlers
 User-agent: GPTBot
 Allow: /

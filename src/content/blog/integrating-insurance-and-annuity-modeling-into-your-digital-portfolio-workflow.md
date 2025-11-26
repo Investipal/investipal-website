@@ -35,7 +35,7 @@ draft: false
 
 <h3>3. Proposal Paralysis & Compliance Bottlenecks</h3>
 <ul><li>When insurance and annuity scenarios are managed outside your normal workflow, personalized proposals are slow to generate and difficult to update</li><li>Regulatory disclosures often omit key risk and suitability information for complex insurance products, putting firms at risk</li></ul>
-<p>Modern tools, like <a href=https://www.investipal.co/>Investipal</a>, auto-generate proposals that integrate insurance and annuity analytics—plus instant IPS and Reg BI documentation—minimizing errors and time to close.</p>
+<p>Modern tools, like <a href=/>Investipal</a>, auto-generate proposals that integrate insurance and annuity analytics—plus instant IPS and Reg BI documentation—minimizing errors and time to close.</p>
 
 <h2>What Should Integrated Insurance & Annuity Modeling Look Like?</h2>
 <p>Here’s what advisors should expect from a state-of-the-art digital portfolio workflow:</p>
@@ -65,4 +65,4 @@ draft: false
 
 <h2>Conclusion & Next Steps</h2>
 <p>For financial advisors, RIAs, and wealth firms, integrating insurance and annuity modeling into your digital portfolio workflow is about more than efficiency—it’s about delivering deeper personalization and protection to every client, at scale. </p>
-<p>If you’re ready to see how <strong>Investipal</strong> can transform your workflow by automating insurance and annuity modeling (alongside onboarding, portfolio construction, and compliance)—book a personalized demo today: <a href=https://www.investipal.co/>https://www.investipal.co/</a></p>
+<p>If you’re ready to see how <strong>Investipal</strong> can transform your workflow by automating insurance and annuity modeling (alongside onboarding, portfolio construction, and compliance)—book a personalized demo today: <a href=/>/</a></p>

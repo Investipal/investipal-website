@@ -11,7 +11,7 @@ urlPath: "best-portfolio-risk-software-for-financial-advisors-2025-comparison-gu
 draft: false
 ---
 
-<p>Portfolio risk software has become non-negotiable for financial advisors in 2025. With increasing regulatory scrutiny around <a href="/blog-posts/regulation-best-interest-reg-bi-what-financial-advisors-and-broker-dealers-need-to-know">Reg BI compliance</a>, volatile markets, and clients demanding more transparency than ever, advisors need robust portfolio risk management tools that go beyond basic Monte Carlo simulations.</p>
+<p>Portfolio risk software has become non-negotiable for financial advisors in 2025. With increasing regulatory scrutiny around <a href="/blog/regulation-best-interest-reg-bi-what-financial-advisors-and-broker-dealers-need-to-know">Reg BI compliance</a>, volatile markets, and clients demanding more transparency than ever, advisors need robust portfolio risk management tools that go beyond basic Monte Carlo simulations.</p>
 
 <p>But here's the problem: most advisors are still using fragmented tools—one for risk tolerance questionnaires, another for portfolio analytics, a third for compliance documentation. This creates blind spots, wastes hours on manual work, and leaves you vulnerable to compliance gaps.</p>
 
@@ -24,7 +24,7 @@ draft: false
 <ul>
 <li><strong>Real-time portfolio monitoring:</strong> Automated drift detection and alerts when client allocations deviate from targets</li>
 <li><strong>Comprehensive risk analytics:</strong> Beyond standard deviation—stress testing, drawdown analysis, concentration risk, and correlation mapping</li>
-<li><strong>Held-away asset integration:</strong> Ability to analyze <a href="/blog-posts/how-to-seamlessly-aggregate-heldaway-assets-for-a-complete-client-portfolio">held-away brokerage accounts</a> alongside custodied assets for a more complete household view</li>
+<li><strong>Held-away asset integration:</strong> Ability to analyze <a href="/blog/how-to-seamlessly-aggregate-heldaway-assets-for-a-complete-client-portfolio">held-away brokerage accounts</a> alongside custodied assets for a more complete household view</li>
 <li><strong>Compliance documentation:</strong> Automated generation of IPS, Reg BI disclosures, and audit-ready risk reports</li>
 <li><strong>Client-facing reports:</strong> Clear, jargon-free risk visualizations you can share with clients</li>
 <li><strong>Workflow integration:</strong> Seamless connection to your CRM, portfolio management, and proposal tools</li>
@@ -278,7 +278,7 @@ draft: false
 
 <h2>Why Most Advisors Are Switching to Integrated Portfolio Risk Platforms</h2>
 
-<p>The trend in 2025 is clear: advisors are moving away from point solutions toward integrated platforms that combine portfolio risk analysis with <a href="/blog-posts/how-to-use-ai-for-personalized-investment-proposal-generation-a-practical-guide">proposal generation</a>, compliance documentation, and client reporting.</p>
+<p>The trend in 2025 is clear: advisors are moving away from point solutions toward integrated platforms that combine portfolio risk analysis with <a href="/blog/how-to-use-ai-for-personalized-investment-proposal-generation-a-practical-guide">proposal generation</a>, compliance documentation, and client reporting.</p>
 
 <p>Here's why the shift is happening:</p>
 

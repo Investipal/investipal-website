@@ -24,6 +24,61 @@
       "route": "/sitemap.xml",
       "redirect": "/sitemap-index.xml",
       "statusCode": 301
+    },
+    {
+      "route": "/features/investment-policy-statements/",
+      "redirect": "/features/investment-policy-statements",
+      "statusCode": 301
+    },
+    {
+      "route": "/features/automated-statement-scanner/",
+      "redirect": "/features/automated-statement-scanner",
+      "statusCode": 301
+    },
+    {
+      "route": "/features/ai-driven-engagement/",
+      "redirect": "/features/ai-driven-engagement",
+      "statusCode": 301
+    },
+    {
+      "route": "/features/asset-allocation/",
+      "redirect": "/features/asset-allocation",
+      "statusCode": 301
+    },
+    {
+      "route": "/features/risk-management/",
+      "redirect": "/features/risk-management",
+      "statusCode": 301
+    },
+    {
+      "route": "/integrations/precisefp/",
+      "redirect": "/integrations/precisefp",
+      "statusCode": 301
+    },
+    {
+      "route": "/segments/financial-planners/",
+      "redirect": "/segments/financial-planners",
+      "statusCode": 301
+    },
+    {
+      "route": "/segments/wealth-managers/",
+      "redirect": "/segments/wealth-managers",
+      "statusCode": 301
+    },
+    {
+      "route": "/risk-assessment/",
+      "redirect": "/risk-assessment",
+      "statusCode": 301
+    },
+    {
+      "route": "/manifesto/",
+      "redirect": "/manifesto",
+      "statusCode": 301
+    },
+    {
+      "route": "/podcasts/",
+      "redirect": "/podcasts",
+      "statusCode": 301
     }
   ],
   "globalHeaders": {

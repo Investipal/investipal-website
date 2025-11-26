@@ -59,4 +59,4 @@ draft: false
 
 <h2>Ready to Accelerate Your Firm’s Growth?</h2>
 <p>If you’re serious about reducing manual workflows, delivering tailored portfolios at scale, and ensuring airtight compliance, it’s time to see Investipal in action. We’re trusted by leading advisory and wealth firms across North America—from solo RIAs to large enterprise teams.</p>
-<p><strong>Book a demo today</strong> and discover how unified onboarding, AI-powered portfolio construction, and automated compliance will help you close more clients, grow AUM, and reclaim your team’s time: <a href=https://www.investipal.co/blogs target=_blank>See Investipal in Action</a></p>
+<p><strong>Book a demo today</strong> and discover how unified onboarding, AI-powered portfolio construction, and automated compliance will help you close more clients, grow AUM, and reclaim your team’s time: <a href=/blog target=_blank>See Investipal in Action</a></p>

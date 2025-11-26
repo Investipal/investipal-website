@@ -42,6 +42,6 @@ draft: false
 <ul><li>Easily customize onboarding forms, agreements, and workflows to match your firm’s unique needs</li><li>Automate AML checks and compliance documentation from day one</li><li>Transition from reactive to proactive, using AI-driven alerts and actionable optimization suggestions</li></ul>
 
 <h2>Take the First Step: Book Your Investipal Demo</h2>
-<p>Ready to bring AI-powered multi-asset portfolio construction and automated onboarding to your practice? Whether you’re navigating solo RIA scaling, building firm-wide consistency, or just tired of manual, error-prone processes, <a href=https://www.investipal.co/>Investipal</a> is engineered to give you a decisive edge.</p>
+<p>Ready to bring AI-powered multi-asset portfolio construction and automated onboarding to your practice? Whether you’re navigating solo RIA scaling, building firm-wide consistency, or just tired of manual, error-prone processes, <a href=/>Investipal</a> is engineered to give you a decisive edge.</p>
 <p><strong>Book a personalized demo today</strong> to see exactly how you can simplify data extraction, automate proposals and compliance, deliver truly individualized portfolios (including alternatives), and future-proof your client experience in under 10 minutes—end to end.</p>
 <p>Your next-level advisory practice starts here.</p>
