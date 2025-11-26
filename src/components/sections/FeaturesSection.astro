@@ -27,9 +27,23 @@ import { featuresData } from '../../data/featuresData';
                 <h3 class="text-black text-2xl font-semibold box-border mb-4 font-system_ui">
                   {feature.title}
                 </h3>
-                <p class="text-slate-600 text-lg box-border leading-[27px] font-system_ui">
-                  {feature.description}
-                </p>
+                <div class="text-slate-600 text-lg box-border leading-[27px] font-system_ui">
+                  {feature.id === 'faster-intake' && (
+                    <p>
+                      <a href="/features/automated-statement-scanner" class="text-violet-600 hover:text-violet-700 underline">AI-powered statement scanning</a> extracts portfolio data from any brokerage statement in seconds. Automated risk questionnaires, document collection, and e-signature workflows complete <a href="/features/client-onboarding" class="text-violet-600 hover:text-violet-700 underline">onboarding</a> 10x faster.
+                    </p>
+                  )}
+                  {feature.id === 'close-business' && (
+                    <p>
+                      Run portfolio comparison analysis, build branded <a href="/features/client-acquisition" class="text-violet-600 hover:text-violet-700 underline">investment proposals</a>, and auto-generate <a href="/features/investment-policy-statements" class="text-violet-600 hover:text-violet-700 underline">IPS</a> and <a href="/features/regulation-best-interest-generator" class="text-violet-600 hover:text-violet-700 underline">Reg BI documentation</a>—all in one workflow. Most advisors complete proposals in under 10 minutes.
+                    </p>
+                  )}
+                  {feature.id === 'deliver-value' && (
+                    <p>
+                      Construct personalized portfolios with equities, fixed income, <a href="/features/alternatives-modeling" class="text-violet-600 hover:text-violet-700 underline">alternatives</a>, and <a href="/features/annuities-insurance-modeling" class="text-violet-600 hover:text-violet-700 underline">annuities</a>. <a href="/features/asset-allocation" class="text-violet-600 hover:text-violet-700 underline">AI-powered optimization</a> for goal-based and risk-based strategies. Access our database of private securities or <a href="/features/custom-security-builder" class="text-violet-600 hover:text-violet-700 underline">model custom alternatives</a>.
+                    </p>
+                  )}
+                </div>
               </div>
               <div class={`box-border ${index % 2 === 1 ? 'md:order-1' : ''}`}>
                 <img 

@@ -298,15 +298,15 @@ export const featurePages = {
 
   'investment-policy-statements': {
     // SEO Meta
-    pageTitle: 'Investment Policy Statement Generator | IPS Software | Investipal',
-    pageDescription: 'Generate Investment Policy Statements instantly with AI. Risk assessment, goal setting, and compliance monitoring automated.',
-    keywords: 'investment policy statement generator, IPS software, financial advisor compliance, automated policy statements, investment compliance tools',
+    pageTitle: 'IPS Generator for RIAs | Investment Policy Statement Software',
+    pageDescription: 'Generate compliant Investment Policy Statements in minutes with our AI-powered IPS generator. Automated risk assessment, best practices, and compliance monitoring built-in.',
+    keywords: 'investment policy statement generator, IPS software, investment policy statement example, how to create IPS, RIA compliance, fiduciary documentation, IPS best practices, automated IPS',
 
     // Hero Section
-    audienceText: 'For Advisors & Planners',
+    audienceText: 'For RIAs & Fiduciary Advisors',
     featureName: 'Investment Policy Statement Generator',
-    title: 'Generate Personalized Investment Policy Statements in 1-Click with AI',
-    subtitle: 'Streamline your compliance documentation and automate drift monitoring. No manual data entry required.',
+    title: 'Investment Policy Statement Generator for RIAs – Create Compliant IPS in Minutes',
+    subtitle: 'Generate compliant, personalized Investment Policy Statements instantly with our AI-powered IPS generator. Automated risk assessment and compliance monitoring. No manual data entry required.',
     heroImage: '/images/external/66da118db938e0ddbcc47d8c_investment-policy-statement-generator.png',
     heroImageAlt: 'Investment Policy Statement Generator dashboard showing automated compliance documentation',
 

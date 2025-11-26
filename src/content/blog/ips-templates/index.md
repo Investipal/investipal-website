@@ -1,37 +1,44 @@
 ---
-title: "Investment Policy Statement Template (Free Word/PDF)"
-excerpt: "Download IPS templates and a step-by-step guide to customize them correctly—reduce NIGOs, speed reviews, and build client trust."
+title: "How to Create an Investment Policy Statement: Complete Guide for RIAs"
+excerpt: "Learn how to create compliant Investment Policy Statements with our step-by-step guide. Includes customization checklist, common pitfalls to avoid, and workflow integration strategies."
 author: "Cameron Howe"
 publishedDate: 2025-10-20
 category: "Compliance"
 featuredImage: "/images/blog/ips-templates/cover.webp"
-featuredImageAlt: "Investment Policy Statement templates cover"
-tags: ["ips","templates","compliance"]
+featuredImageAlt: "Investment Policy Statement creation guide"
+tags: ["ips","compliance","best practices"]
 featured: false
 draft: true
-seoDescription: "Free IPS templates (Word/PDF) plus a practical checklist to customize them correctly and connect IPS to Reg BI and onboarding workflows."
+seoDescription: "Complete guide to creating Investment Policy Statements for RIAs. Includes practical checklist, common pitfalls, and how to connect IPS to Reg BI and onboarding workflows."
 ---
 
-# Investment Policy Statement Template (Free Word/PDF)
+# How to Create an Investment Policy Statement: Complete Guide for RIAs
 
-Advisors don’t lose time writing—they lose it rewriting. IPS language drifts across clients, review cycles drag, and audits surface inconsistencies you didn’t know existed. This guide gives you downloadable IPS templates and a simple, repeatable process to tailor them without creating compliance debt.
+Advisors don't lose time writing—they lose it rewriting. IPS language drifts across clients, review cycles drag, and audits surface inconsistencies you didn't know existed. This guide provides a proven, repeatable process to create compliant IPS documents without creating compliance debt.
 
 ## TL;DR
-- Download Word/PDF IPS templates (individual, nonprofit)
-- Use a 4-step checklist to customize safely (objectives → risk → bands → review cadence)
+- Follow a 4-step checklist to create IPS documents (objectives → risk → bands → review cadence)
 - Avoid common pitfalls (boilerplate conflicts, missing rebalancing rules)
 - Connect IPS to Reg BI and onboarding so docs stay consistent across the workflow
+- Use automation to generate personalized IPS in minutes, not hours
 
-## What You'll Get
-You’ll get editable Word and PDF templates you can drop into your practice today, plus a practical customization checklist and examples to guide your edits. If you already generate Reg BI and Form CRS, you’ll see how to keep the IPS consistent with those documents rather than treating it as a separate artifact.
+## What You'll Learn
+You'll learn a practical framework for creating investment policy statements that meet compliance requirements while remaining client-specific. This includes a step-by-step customization process, concrete examples, and strategies to keep IPS language aligned with Reg BI and Form CRS documents.
 
 ## What Is an IPS (and Why It Matters)
-An investment policy statement (IPS) documents client objectives, constraints, and the process for constructing and maintaining a portfolio. Done well, it anchors advice to stated goals, clarifies roles and responsibilities, and codifies rebalancing and review cadence. That clarity improves client trust and shortens review cycles because the “why” behind the portfolio is always visible.
+An investment policy statement (IPS) documents client objectives, constraints, and the process for constructing and maintaining a portfolio. Done well, it anchors advice to stated goals, clarifies roles and responsibilities, and codifies rebalancing and review cadence. That clarity improves client trust and shortens review cycles because the "why" behind the portfolio is always visible.
 
 See related background on obligations at [/learn/reg-bi](/learn/reg-bi) and how teams standardize IPS drafting in [/features/investment-policy-statements](/features/investment-policy-statements).
 
-## Free IPS Templates (Download)
-Use the templates as a starting point and customize to the client: [/downloads/ips-templates](/downloads/ips-templates). Each includes the core sections you need—objectives, constraints, asset allocation policy, rebalancing, and monitoring—so you’re never starting from a blank page.
+## Core Sections Every IPS Needs
+A complete IPS should include these essential components:
+- **Client objectives and constraints** — Time horizon, liquidity needs, tax sensitivities
+- **Risk tolerance and capacity** — Documented through questionnaires and portfolio analysis
+- **Asset allocation policy** — Target weights with ranges (bands)
+- **Rebalancing guidelines** — Frequency, triggers, and exception handling
+- **Monitoring and reporting** — Review cadence and performance evaluation criteria
+
+These sections form the foundation of a compliant, client-specific IPS that can be efficiently maintained and updated.
 
 ## How to Customize (4-Step Checklist)
 Start by clarifying objectives and constraints: time horizon, liquidity, tax sensitivities, and any special considerations. Then translate risk tolerance and risk capacity into allocation bands and guardrails that reflect how the portfolio should behave. Next, define rebalancing rules in plain language—how often you check, what bands trigger an action, and how exceptions are documented. Finally, set the monitoring cadence and reporting format so clients know what to expect and reviewers know what to look for.
@@ -73,26 +80,27 @@ Yes—Reg BI governs care, disclosure, conflicts, and compliance obligations; pa
 - External: [SEC Reg BI adopting release](https://www.sec.gov/rules/final/2019/34-86031.pdf)
 - External: [CFA Institute — Investment Policy Statement guidance](https://www.cfainstitute.org/-/media/documents/book/rf-publication/2010/rf-v2010-n2-1-pdf.ashx)
 
-## CTA
-Book a 15‑minute walkthrough to see IPS and Reg BI generation together—anchored to your onboarding and proposal workflows.
+## Ready to Automate IPS Creation?
+
+Learn how [Investipal's AI-powered IPS generator](/features/investment-policy-statements) creates compliant, personalized Investment Policy Statements in minutes—anchored to your onboarding and proposal workflows. [Schedule a demo](/book-a-demo) to see it in action.
 
 ---
 
 ## Drafting Scaffold (remove before publish)
 
 ### Metadata
-- Target keyword: investment policy statement template
-- Secondary queries: [investment policy statement example, ips template word, ips template pdf]
-- Search intent: informational/commercial
+- Target keyword: how to create investment policy statement
+- Secondary queries: [investment policy statement guide, ips creation, ips best practices]
+- Search intent: informational/educational
 - Audience/ICP: RIA / Wealth Manager (US)
 - Geo: United States (en)
 
 ### SEO Setup
-- Title tag (<= 60 chars): Investment Policy Statement Template (Free Word/PDF)
-- Meta description (<= 155 chars): Free IPS templates + how to customize correctly.
+- Title tag (<= 60 chars): How to Create an Investment Policy Statement: Complete Guide
+- Meta description (<= 155 chars): Complete guide to creating IPS documents. Includes checklist, pitfalls, and workflow integration.
 - URL slug: /blog/ips-templates
-- H1: Investment Policy Statement Template (Free Word/PDF)
-- H2s: Key Components, Customize, Pitfalls, Workflow, FAQ
+- H1: How to Create an Investment Policy Statement: Complete Guide for RIAs
+- H2s: Core Sections, Customize, Pitfalls, Workflow, FAQ
 - Schema: Article, FAQ
 - FAQs: 2–3 included
 - Internal links: ≥3 (features, learn, solutions)
