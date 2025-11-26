@@ -2,14 +2,14 @@
 title: "Best Wealth Management Software for RIAs 2025: Complete Comparison Guide"
 excerpt: "Compare the top wealth management platforms for RIAs. In-depth analysis of Investipal, Orion, Black Diamond, Envestnet Tamarac, and Addepar—features, use cases, and which solution fits your firm."
 author: "Investipal Team"
-date: 2025-11-26
-publishDate: 2025-11-26
+publishedDate: "2025-11-26T10:00:00.000Z"
 category: "Software Comparisons"
 tags: ["wealth management software", "RIA software", "portfolio management", "advisor technology", "software comparison"]
-image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=630&fit=crop"
+featuredImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=630&fit=crop"
 featured: true
 seoTitle: "Best Wealth Management Software for RIAs 2025 | Investipal vs Orion vs Black Diamond"
 seoDescription: "Comprehensive comparison of the top 5 wealth management platforms for RIAs. Compare Investipal, Orion, Black Diamond, Envestnet Tamarac, and Addepar features, use cases, and capabilities to find the right fit for your firm."
+draft: false
 ---
 
 Choosing the right wealth management software can transform your RIA's efficiency, client experience, and growth trajectory. But with dozens of platforms claiming to be "all-in-one" solutions, how do you cut through the noise and find the right fit?
