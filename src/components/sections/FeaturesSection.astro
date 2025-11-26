@@ -1,5 +1,6 @@
 ---
 import { featuresData } from '../../data/featuresData';
+import StandardButton from '../ui/StandardButton.astro';
 ---
 
 <section class="bg-white box-border">
@@ -30,17 +31,17 @@ import { featuresData } from '../../data/featuresData';
                 <div class="text-slate-600 text-lg box-border leading-[27px] font-system_ui">
                   {feature.id === 'faster-intake' && (
                     <p>
-                      <a href="/features/automated-statement-scanner" class="text-violet-600 hover:text-violet-700 underline">AI-powered statement scanning</a> extracts portfolio data from any brokerage statement in seconds. Automated risk questionnaires, document collection, and e-signature workflows complete <a href="/features/client-onboarding" class="text-violet-600 hover:text-violet-700 underline">onboarding</a> 10x faster.
+                      AI-powered statement scanning extracts portfolio data from any brokerage statement in seconds. Automated risk questionnaires, document collection, and e-signature workflows complete onboarding 10x faster.
                     </p>
                   )}
                   {feature.id === 'close-business' && (
                     <p>
-                      Run portfolio comparison analysis, build branded <a href="/features/client-acquisition" class="text-violet-600 hover:text-violet-700 underline">investment proposals</a>, and auto-generate <a href="/features/investment-policy-statements" class="text-violet-600 hover:text-violet-700 underline">IPS</a> and <a href="/features/regulation-best-interest-generator" class="text-violet-600 hover:text-violet-700 underline">Reg BI documentation</a>—all in one workflow. Most advisors complete proposals in under 10 minutes.
+                      Run portfolio comparison analysis, build branded investment proposals, and auto-generate IPS and Reg BI documentation—all in one workflow. Most advisors complete proposals in under 10 minutes.
                     </p>
                   )}
                   {feature.id === 'deliver-value' && (
                     <p>
-                      Construct personalized portfolios with equities, fixed income, <a href="/features/alternatives-modeling" class="text-violet-600 hover:text-violet-700 underline">alternatives</a>, and <a href="/features/annuities-insurance-modeling" class="text-violet-600 hover:text-violet-700 underline">annuities</a>. <a href="/features/asset-allocation" class="text-violet-600 hover:text-violet-700 underline">AI-powered optimization</a> for goal-based and risk-based strategies. Access our database of private securities or <a href="/features/custom-security-builder" class="text-violet-600 hover:text-violet-700 underline">model custom alternatives</a>.
+                      Construct personalized portfolios with equities, fixed income, alternatives, and annuities. AI-powered optimization for goal-based and risk-based strategies. Access our database of private securities or model custom alternatives.
                     </p>
                   )}
                 </div>
@@ -54,6 +55,10 @@ import { featuresData } from '../../data/featuresData';
               </div>
             </div>
           ))}
+        </div>
+        
+        <div class="text-center box-border mt-12">
+          <StandardButton href="/how-it-works">See how it works</StandardButton>
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ This guide compares the top 5 wealth management platforms for RIAs in 2025: **In
 
 | Platform | Best For | Key Strength | Unique Feature |
 |----------|---------|--------------|----------------|
-| **Investipal** | Solo & small RIAs (1-20 advisors) | AI automation + speed | Liquidity optimization, AI portfolio commentary |
+| **Investipal** | RIAs of all sizes | AI automation + speed | Liquidity optimization, AI portfolio commentary |
 | **Orion** | Mid-to-large RIAs | Comprehensive integrations | Largest CRM market share |
 | **Black Diamond** | Multi-entity firms | Data aggregation | Alternative asset servicing |
 | **Envestnet Tamarac** | Enterprise RIAs | End-to-end platform | Unified managed accounts (UMA) |
@@ -32,23 +32,24 @@ This guide compares the top 5 wealth management platforms for RIAs in 2025: **In
 
 ---
 
-## **1. Investipal: AI-Powered All-in-One for Solo & Small RIAs**
+## **1. Investipal: AI-Powered All-in-One for Growth-Focused RIAs**
 
 ### **Overview**
 
-Investipal is an all-in-one wealth management platform designed for solo and small-to-mid-sized RIAs (1-20 advisors). It automates the entire advisor workflow—from client onboarding to portfolio management, compliance, and reporting—using AI-powered tools.
+Investipal is an all-in-one wealth management platform designed for RIAs of all sizes—from solo practitioners to large multi-advisor firms. It automates the entire advisor workflow—from client onboarding to portfolio management, compliance, and reporting—using AI-powered tools.
 
 ### **Who It's For**
 
 - **Solo advisors** looking to scale without hiring staff
-- **Small RIAs** (1-20 advisors) who want simplicity + power
+- **Growing RIAs** who want simplicity + power
+- **Large firms** seeking AI-driven efficiency across 100+ advisors
 - **Advisors working with alternatives** (annuities, structured products, private equity)
 - **Retirement income planners** who need liquidity optimization
 - **Advisors who value speed** (proposals in 10 minutes, IPS in 60 seconds)
 
 ### **Key Features**
 
-#### **✅ AI-Powered Automation**
+#### **AI-Powered Automation**
 
 **AI Statement Scanning (OCR + ML)**
 - Upload any brokerage statement (Schwab, Fidelity, TD Ameritrade, etc.)
@@ -67,7 +68,7 @@ Investipal is an all-in-one wealth management platform designed for solo and sma
 
 ![Investipal AI Commentary - Personalized portfolio commentary generation](/images/product_screenshots/proposal_ai_prompt_editor_v1_2025-11-14.png)
 
-#### **✅ Liquidity Optimization**
+#### **Liquidity Optimization**
 
 - **How it works:** Input client spending needs by year → system analyzes portfolio liquidity profile
 - **Output:**
@@ -83,7 +84,7 @@ Investipal is an all-in-one wealth management platform designed for solo and sma
 
 ![Investipal Liquidity Optimization - Analyze client spending needs and portfolio liquidity](/images/product_screenshots/liquidity_optimization_results_main_v1_2025-11-14.png)
 
-#### **✅ Portfolio Management & Analysis**
+#### **Portfolio Management & Analysis**
 
 **Comparative Portfolio Analysis**
 - Compare current portfolio vs. multiple proposed models side-by-side
@@ -102,7 +103,7 @@ Investipal is an all-in-one wealth management platform designed for solo and sma
 - Advisors manually select securities and set target allocations
 - **Supported asset classes:** Equities, bonds, alternatives (private equity, real estate, hedge funds), annuities, custom securities
 
-#### **✅ Multi-Asset Portfolio Support**
+#### **Multi-Asset Portfolio Support**
 
 **Custom Securities Builder**
 - Model any non-standard security: annuities (fixed, variable, indexed), structured products, private placements
@@ -112,13 +113,15 @@ Investipal is an all-in-one wealth management platform designed for solo and sma
 - Pre-built models for private equity, real estate, hedge funds, commodities
 - Add alternatives to portfolios alongside traditional assets
 
-**Automated Rebalancing (4 Methods)**
+**Portfolio Optimization Methods (4 Options)**
 1. **Equal Weight:** Equal allocation to all holdings
 2. **Minimum Volatility:** Optimize for lowest portfolio volatility
 3. **Maximum Sharpe:** Optimize for highest risk-adjusted return
 4. **Factor-Based:** Target specific factor exposures (value, growth, quality)
 
-#### **✅ Compliance & Documentation**
+*Note: Investipal is a portfolio design and analysis platform—not a trading or execution system. You design portfolios in Investipal, then execute through your custodian.*
+
+#### **Compliance & Documentation**
 
 **60-Second IPS Generation**
 - Risk questionnaire → IPS in 60 seconds
@@ -132,7 +135,7 @@ Investipal is an all-in-one wealth management platform designed for solo and sma
 - Auto-generate Regulation Best Interest disclosures
 - Includes conflict of interest disclosures, material limitations, alternatives considered
 
-#### **✅ Client Onboarding & Proposals**
+#### **Client Onboarding & Proposals**
 
 **Client Onboarding Portal**
 - Risk assessment, statement upload (or Plaid connection), personal information forms
@@ -149,7 +152,7 @@ Investipal is an all-in-one wealth management platform designed for solo and sma
 
 ![Investipal Proposal Generation - AI-powered proposals with personalized commentary](/images/product_screenshots/proposal_cover_page_v3_2025-11-14.png)
 
-#### **✅ Integrations**
+#### **Integrations**
 
 - **CRM:** Salesforce, Wealthbox, Redtail (not a built-in CRM)
 - **Custodian:** Schwab (includes account opening), more coming soon
@@ -157,7 +160,7 @@ Investipal is an all-in-one wealth management platform designed for solo and sma
 
 ### **Investipal Pros & Cons**
 
-**✅ Pros:**
+**Pros:**
 - **Fastest proposals:** 10 minutes from scan to proposal
 - **Unique features:** Liquidity optimization, AI commentary, AI statement scanning
 - **All-in-one:** No integration headaches
@@ -165,11 +168,10 @@ Investipal is an all-in-one wealth management platform designed for solo and sma
 - **Ease of use:** Simple UI, minimal training required
 - **Speed:** IPS in 60 seconds, onboarding in 1 day
 
-**❌ Cons:**
+**Cons:**
 - **Not a CRM:** Integrates with Salesforce, Wealthbox, Redtail—but if you need a built-in CRM, you'll need a separate tool
 - **Single custodian:** Currently only Schwab integration (Fidelity, Pershing coming soon)
 - **Newer platform:** Less established than Orion/Black Diamond (founded 2020 vs. 1999)
-- **Not for enterprise:** If you're 50+ advisors with complex multi-custodian needs, look at Orion or Envestnet
 - **Limited reporting:** Performance reporting is functional but less customizable than Black Diamond
 
 ### **Investipal Use Cases**
@@ -205,19 +207,17 @@ Investipal is an all-in-one wealth management platform designed for solo and sma
 
 ### **When to Choose Investipal**
 
-**✅ Choose Investipal if:**
+**Choose Investipal if:**
 - You need liquidity optimization (retirement planning)
 - You want AI automation (commentary, scanning) to save 8-12 hours per client
 - You work with alternatives (annuities, structured products, private equity)
 - You need built-in compliance (IPS, Reg BI in 60 seconds)
 - You want all-in-one (no integration headaches)
 - You value speed (proposals in 10 minutes, onboarding in 1 day)
-- You're a solo or small RIA (1-20 advisors)
 
-**❌ Skip Investipal if:**
+**Skip Investipal if:**
 - You need a built-in CRM (use Salesforce/Wealthbox + Investipal instead)
 - You need multi-custodian support (currently Schwab only)
-- You're an enterprise RIA (100+ advisors) with complex workflows
 
 ---
 
@@ -236,45 +236,45 @@ Orion is one of the largest all-in-one platforms for RIAs, offering portfolio ac
 
 ### **Key Features**
 
-#### **✅ Portfolio Accounting**
+#### **Portfolio Accounting**
 - #1 portfolio accounting solution by market share
 - Personalized reports for any client preference
 - Get paid faster with automated billing
 
-#### **✅ Redtail CRM**
+#### **Redtail CRM**
 - Industry's #1 CRM by market share
 - Contact management, pipeline tracking, workflow automation
 - **Integration:** Seamlessly integrates with Orion portfolio accounting
 
-#### **✅ Trading & Rebalancing**
+#### **Trading & Rebalancing**
 - Tax-intelligent trading at scale
 - 85% of Orion clients use Orion Trading
 - Threshold-based rebalancing, tax-loss harvesting
 
-#### **✅ Financial Planning**
+#### **Financial Planning**
 - Behavioral finance tools (powered by Orion's acquisition of BehaviorGap)
 - Connect client goals with investment strategies
 - Integrates with portfolio data
 
-#### **✅ Compliance**
+#### **Compliance**
 - Get your firm exam-ready
 - Compliance tracking, supervisory reviews, policy management
 
-#### **✅ Client Portal**
+#### **Client Portal**
 - Create unforgettable client experiences
 - Account aggregation, document vault, secure messaging
 
-#### **✅ Risk Intelligence**
+#### **Risk Intelligence**
 - Understand risk and uncover opportunity
 - Risk tolerance questionnaires, portfolio risk scoring
 
-#### **✅ Integrations**
+#### ** Integrations**
 - **100+ integrations** (custodians, financial planning, CRM, document management, etc.)
 - **Open API:** 100% of Orion data available via API
 
 ### **Orion Pros & Cons**
 
-**✅ Pros:**
+**Pros:**
 - **Market leader:** #1 market share for CRM and portfolio accounting
 - **Comprehensive integrations:** 100+ integrations, open API
 - **Scalable:** Used by 17 of Top 20 Barron's RIAs
@@ -282,7 +282,7 @@ Orion is one of the largest all-in-one platforms for RIAs, offering portfolio ac
 - **Built-in CRM:** Redtail CRM included
 - **Strong trading:** 85% of large clients use Orion Trading
 
-**❌ Cons:**
+**Cons:**
 - **Complexity:** Steep learning curve for new users
 - **No AI automation:** No AI statement scanning, commentary, or portfolio construction
 - **No liquidity optimization:** Missing retirement income planning tools
@@ -291,14 +291,14 @@ Orion is one of the largest all-in-one platforms for RIAs, offering portfolio ac
 
 ### **When to Choose Orion**
 
-**✅ Choose Orion if:**
+**Choose Orion if:**
 - You're a mid-to-large RIA (10-100+ advisors)
 - You need a built-in CRM (Redtail)
 - You value extensive integrations (100+ options)
 - You need proven scalability (used by mega RIAs)
 - You have dedicated operations staff (to manage complexity)
 
-**❌ Skip Orion if:**
+**Skip Orion if:**
 - You're a solo advisor or small RIA (too complex)
 - You want AI automation (statement scanning, commentary)
 - You need liquidity optimization for retirement planning
@@ -321,47 +321,47 @@ Black Diamond is a comprehensive wealth management platform owned by SS&C Techno
 
 ### **Key Features**
 
-#### **✅ Data Aggregation & Accounting**
+#### ** Data Aggregation & Accounting**
 - Reconciled and reliable data from hundreds of sources
 - 99%+ reconciliation rate before market open
 - Handles complex entity structures
 
-#### **✅ Alternative Asset Servicing** ⭐
+#### ** Alternative Asset Servicing**
 - Automated collection, processing, and data integration for alternatives
 - Private equity, hedge funds, real estate, commodities
 - **Competitor advantage:** Best-in-class alternative asset support
 
-#### **✅ Portfolio Management & Reporting**
+#### ** Portfolio Management & Reporting**
 - Flexible tools to illustrate strategies across clients
 - Customizable dashboards, branded reports
 - Detailed performance attribution
 
-#### **✅ Trading & Rebalancing**
+#### **Trading & Rebalancing**
 - Monitor, rebalance, and execute trades
 - Tax-intelligent trading, threshold-based rebalancing
 
-#### **✅ CRM**
+#### ** CRM**
 - Enhance prospecting, pipeline management, onboarding
 - Relationship nurturing tools
 
-#### **✅ Business Intelligence & Research**
+#### ** Business Intelligence & Research**
 - Actionable analytics from virtually any data point
 - Advisor dashboards, firm-wide insights
 
-#### **✅ Trust & Retirement**
+#### ** Trust & Retirement**
 - Powerful accounting, reporting, payments for trust accounts
 - Unique asset valuation solutions
 
 ### **Black Diamond Pros & Cons**
 
-**✅ Pros:**
+**Pros:**
 - **Best alternative asset support:** Private equity, hedge funds, real estate
 - **Multi-entity expertise:** Handles complex structures (RIAs, family offices, trusts)
 - **Data reliability:** 99%+ reconciliation before market open
 - **Comprehensive platform:** CRM, portfolio management, trading, compliance, trust accounting
 - **SS&C backing:** $15B+ invested in R&D since 2012
 
-**❌ Cons:**
+**Cons:**
 - **Complexity:** Not designed for small firms
 - **No AI automation:** No AI statement scanning or commentary
 - **No liquidity optimization:** Missing retirement income planning tools
@@ -370,14 +370,14 @@ Black Diamond is a comprehensive wealth management platform owned by SS&C Techno
 
 ### **When to Choose Black Diamond**
 
-**✅ Choose Black Diamond if:**
+**Choose Black Diamond if:**
 - You manage alternative investments (private equity, hedge funds, real estate)
 - You're a multi-entity firm (RIAs, family offices, trusts)
 - You need best-in-class data aggregation
 - You have complex client structures
 - You have dedicated operations staff
 
-**❌ Skip Black Diamond if:**
+**Skip Black Diamond if:**
 - You're a solo advisor or small RIA
 - You don't work with alternatives
 - You want AI automation (statement scanning, commentary)
@@ -400,44 +400,44 @@ Envestnet Tamarac is an end-to-end wealth management platform for RIAs, offering
 
 ### **Key Features**
 
-#### **✅ Portfolio Management & Reporting**
+#### ** Portfolio Management & Reporting**
 - Flexible reporting, performance attribution, risk analysis
 - Custodian-agnostic platform
 
-#### **✅ CRM**
+#### ** CRM**
 - Client relationship management, pipeline tracking, workflow automation
 
-#### **✅ Trading & Rebalancing**
+#### **Trading & Rebalancing**
 - Tax-intelligent trading, automated rebalancing
 - Model management, trade order management
 
-#### **✅ Unified Managed Accounts (UMA)** ⭐
+#### ** Unified Managed Accounts (UMA)**
 - Combine multiple investment strategies in a single account
 - Tax-efficient overlay management
 - **Competitor advantage:** Best-in-class UMA capabilities
 
-#### **✅ Client Portal**
+#### **Client Portal**
 - Interactive client portal with account aggregation
 - Document vault, secure messaging, financial planning access
 
-#### **✅ Billing Solutions**
+#### ** Billing Solutions**
 - Customize fee structures, streamline invoicing, track revenue
 - Automated billing, fee schedules, invoice generation
 
-#### **✅ Proposal Tool**
+#### ** Proposal Tool**
 - Generate investment proposals for prospects
 - Customizable templates, performance projections
 
 ### **Envestnet Tamarac Pros & Cons**
 
-**✅ Pros:**
+**Pros:**
 - **End-to-end platform:** CRM, portfolio management, trading, billing, UMA
 - **Best-in-class UMA:** Unified managed accounts with tax overlay
 - **Scalable:** Designed for enterprise RIAs (20-500+ advisors)
 - **Custodian-agnostic:** Works with multiple custodians
 - **Comprehensive:** All tools in one platform
 
-**❌ Cons:**
+**Cons:**
 - **Complexity:** Requires significant training and onboarding
 - **No AI automation:** No AI statement scanning or commentary
 - **No liquidity optimization:** Missing retirement income planning tools
@@ -446,14 +446,14 @@ Envestnet Tamarac is an end-to-end wealth management platform for RIAs, offering
 
 ### **When to Choose Envestnet Tamarac**
 
-**✅ Choose Envestnet Tamarac if:**
+**Choose Envestnet Tamarac if:**
 - You're an enterprise RIA (20-500+ advisors)
 - You use unified managed accounts (UMA)
 - You want an end-to-end platform (no integrations needed)
 - You have dedicated operations and tech staff
 - You're custodian-agnostic
 
-**❌ Skip Envestnet Tamarac if:**
+**Skip Envestnet Tamarac if:**
 - You're a solo advisor or small RIA
 - You want AI automation (statement scanning, commentary)
 - You need simplicity and speed
@@ -476,37 +476,37 @@ Addepar is an open architecture, multi-product tech and data platform designed f
 
 ### **Key Features**
 
-#### **✅ Comprehensive Data Aggregation** ⭐
+#### ** Comprehensive Data Aggregation**
 - Aggregate all financial accounts (custodial, held-away, private assets)
 - Multi-currency support
 - Private equity, real estate, hedge funds, art, collectibles
 - **Competitor advantage:** Best-in-class aggregation for held-away assets
 
-#### **✅ Portfolio Reporting**
+#### ** Portfolio Reporting**
 - Instantly analyze and visualize portfolio data
 - Customizable, branded reports in minutes
 - Performance attribution, risk analysis, asset allocation
 
-#### **✅ Scenario Modeling & Forecasting** ⭐
+#### ** Scenario Modeling & Forecasting**
 - Model asset allocations (including illiquid assets)
 - Test hypothetical performance across different scenarios
 - Capital market assumptions, Monte Carlo simulation
 
-#### **✅ Trading & Rebalancing**
+#### **Trading & Rebalancing**
 - Portfolio trading powered by aggregated Addepar data
 - Rebalance on demand for select accounts or entire book of business
 
-#### **✅ Client Portal**
+#### **Client Portal**
 - Encrypted access to financial information
 - Mobile and iPad apps for secure portfolio access
 
-#### **✅ Billing & Fee Management**
+#### ** Billing & Fee Management**
 - Simplify fee calculation, production, and tracking
 - Granular fee calculations, billing summary
 
 ### **Addepar Pros & Cons**
 
-**✅ Pros:**
+**Pros:**
 - **Best aggregation:** Held-away assets, private assets, multi-currency
 - **Complex portfolio support:** Art, collectibles, private equity, real estate
 - **Scenario modeling:** Test hypothetical allocations and outcomes
@@ -514,7 +514,7 @@ Addepar is an open architecture, multi-product tech and data platform designed f
 - **Mobile access:** Stunning mobile and iPad apps
 - **Security:** Best-practice safeguards, role-based access
 
-**❌ Cons:**
+**Cons:**
 - **Highest cost:** Most expensive platform on this list
 - **Overkill for simple portfolios:** Designed for complexity
 - **No AI automation:** No AI statement scanning or commentary
@@ -523,7 +523,7 @@ Addepar is an open architecture, multi-product tech and data platform designed f
 
 ### **When to Choose Addepar**
 
-**✅ Choose Addepar if:**
+**Choose Addepar if:**
 - You're a family office or private bank
 - You manage ultra-high-net-worth clients (UHNW)
 - You need to aggregate held-away assets (real estate, private equity, art)
@@ -531,7 +531,7 @@ Addepar is an open architecture, multi-product tech and data platform designed f
 - You need complex scenario modeling
 - Cost is not a constraint
 
-**❌ Skip Addepar if:**
+**Skip Addepar if:**
 - You're a solo advisor or small RIA
 - You manage primarily stocks/bonds portfolios (overkill)
 - You want AI automation (statement scanning, commentary)
@@ -544,28 +544,28 @@ Addepar is an open architecture, multi-product tech and data platform designed f
 
 | Feature | Investipal | Orion | Black Diamond | Envestnet Tamarac | Addepar |
 |---------|-----------|-------|---------------|-------------------|---------|
-| **Portfolio Management** | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Comparative Analysis** | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Trading & Rebalancing** | ✅ (4 methods) | ✅ | ✅ | ✅ | ✅ |
-| **Risk Assessment** | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Monte Carlo Simulation** | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Financial Planning** | ❌ (integrates) | ✅ | ✅ | ✅ | ✅ |
-| **CRM** | ❌ (integrates) | ✅ Redtail | ✅ | ✅ | ❌ |
-| **Client Portal** | ❌ (coming soon) | ✅ | ✅ | ✅ | ✅ |
-| **Billing/Invoicing** | ❌ | ✅ | ✅ | ✅ | ✅ |
-| **Compliance Tools** | ✅ (IPS, Reg BI) | ✅ | ✅ | ✅ | ❌ |
-| **AI Statement Scanning** | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **AI Portfolio Commentary** | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **Liquidity Optimization** | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **60-Second IPS Generation** | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **Multi-Asset Support** | ✅ (Full) | Partial | ✅ (Best) | Partial | ✅ (Best) |
-| **Alternative Assets** | ✅ | Partial | ✅ (Best) | Partial | ✅ (Best) |
+| **Portfolio Management** | Yes | Yes | Yes | Yes | Yes |
+| **Comparative Analysis** | Yes | Yes | Yes | Yes | Yes |
+| **Trading & Rebalancing** | Design Only | Yes | Yes | Yes | Yes |
+| **Risk Assessment** | Yes | Yes | Yes | Yes | Yes |
+| **Monte Carlo Simulation** | Yes | Yes | Yes | Yes | Yes |
+| **Financial Planning** | Integrates | Yes | Yes | Yes | Yes |
+| **CRM** | Integrates | Yes (Redtail) | Yes | Yes | Integrates |
+| **Client Portal** | Coming Soon | Yes | Yes | Yes | Yes |
+| **Billing/Invoicing** | No | Yes | Yes | Yes | Yes |
+| **Compliance Tools** | Yes (IPS, Reg BI) | Yes | Yes | Yes | No |
+| **AI Statement Scanning** | Yes | No | No | No | No |
+| **AI Portfolio Commentary** | Yes | No | No | No | No |
+| **Liquidity Optimization** | Yes | No | No | No | No |
+| **60-Second IPS Generation** | Yes | No | No | No | No |
+| **Multi-Asset Support** | Full | Partial | Best | Partial | Best |
+| **Alternative Assets** | Yes | Partial | Best | Partial | Best |
 | **Custodian Integration** | Schwab | Many | Many | Many | Many |
-| **Account Aggregation** | ✅ (Plaid) | ✅ | ✅ | ✅ | ✅ (Best) |
-| **Unified Managed Accounts** | ❌ | ❌ | ❌ | ✅ | ❌ |
-| **Held-Away Assets** | ❌ | Partial | ✅ | Partial | ✅ (Best) |
-| **Multi-Currency** | ❌ | ❌ | Partial | Partial | ✅ |
-| **Mobile App** | ❌ | ❌ | ❌ | ✅ | ✅ |
+| **Account Aggregation** | Yes (Plaid) | Yes | Yes | Yes | Best |
+| **Unified Managed Accounts** | No | No | No | Yes | No |
+| **Held-Away Assets** | No | Partial | Yes | Partial | Best |
+| **Multi-Currency** | No | No | Partial | Partial | Yes |
+| **Mobile App** | No | No | No | Yes | Yes |
 
 ---
 
@@ -716,7 +716,7 @@ Here's how much time each platform can save you per client engagement:
 
 ### **Q: Which platform is best for solo advisors?**
 
-**A: Investipal.** It's designed specifically for solo and small RIAs, with AI automation that eliminates the need for operations staff. You can run an entire advisory practice—client onboarding, portfolio analysis, proposals, compliance—by yourself in a fraction of the time.
+**A: Investipal.** It works well for advisors of all sizes, but solo advisors particularly benefit from its AI automation that eliminates the need for operations staff. You can run an entire advisory practice—client onboarding, portfolio analysis, proposals, compliance—by yourself in a fraction of the time.
 
 ---
 
@@ -803,7 +803,7 @@ Use this framework to evaluate which platform fits your firm:
 | Firm Size | AUM | Best Platforms |
 |-----------|-----|----------------|
 | Solo advisor | $10M-$100M | **Investipal**, Orion |
-| Small RIA (1-10 advisors) | $50M-$500M | **Investipal**, Orion |
+| Growing RIA (1-50 advisors) | $50M-$2B | **Investipal**, Orion |
 | Mid-sized RIA (10-50 advisors) | $250M-$2B | **Orion**, Envestnet Tamarac |
 | Enterprise RIA (50-500 advisors) | $1B-$10B+ | **Envestnet Tamarac**, Orion |
 | Family office | $100M-$5B+ | **Addepar**, Black Diamond |
@@ -832,16 +832,16 @@ Use this framework to evaluate which platform fits your firm:
 
 | Priority | Investipal | Orion | Black Diamond | Envestnet | Addepar |
 |----------|-----------|-------|---------------|-----------|---------|
-| **Speed to Value** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ |
-| **AI Features** | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐ | ⭐⭐ | ⭐⭐ |
-| **Ease of Use** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
-| **Reporting** | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **Alternatives** | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **CRM** | Integrates | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Integrates |
-| **Integrations** | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ |
-| **Scalability** | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **Speed to Value** | Excellent | Good | Good | Fair | Fair |
+| **AI Features** | Excellent | Limited | Limited | Limited | Limited |
+| **Ease of Use** | Excellent | Good | Good | Good | Fair |
+| **Reporting** | Good | Very Good | Excellent | Very Good | Excellent |
+| **Alternatives** | Very Good | Good | Excellent | Good | Excellent |
+| **CRM** | Integrates | Excellent | Very Good | Very Good | Integrates |
+| **Integrations** | Good | Excellent | Very Good | Excellent | Good |
+| **Scalability** | Very Good | Excellent | Very Good | Excellent | Very Good |
 | **Complexity** | Low | High | High | High | Very High |
-| **Best For** | Small RIAs | Mid-Large RIAs | Family Offices | Enterprise | UHNW/Family Offices |
+| **Best For** | Growth-Focused RIAs | Mid-Large RIAs | Family Offices | Enterprise | UHNW/Family Offices |
 
 ---
 
@@ -859,36 +859,36 @@ Before making a final decision:
 
 ## **Final Recommendations**
 
-### **✅ Choose Investipal if:**
-- You're a **solo advisor or small RIA** (1-20 advisors)
+### **Choose Investipal if:**
+- You're an **RIA of any size** looking for AI-powered efficiency
 - You need **AI automation** (save 8-12 hours per client)
 - You specialize in **retirement income planning** (liquidity optimization)
 - You work with **alternatives** (annuities, private equity, structured products)
 - You value **speed** (proposals in 10 minutes, IPS in 60 seconds)
 - You want **all-in-one** (no integration headaches)
 
-### **✅ Choose Orion if:**
+### **Choose Orion if:**
 - You're a **mid-to-large RIA** (10-100+ advisors)
 - You need a **built-in CRM** (Redtail)
 - You value **extensive integrations** (100+ options)
 - You need **proven scalability** (used by mega RIAs)
 - You have **dedicated operations staff** (to manage complexity)
 
-### **✅ Choose Black Diamond if:**
+### **Choose Black Diamond if:**
 - You're a **multi-entity firm** (family offices, trusts, RIAs with complex structures)
 - You manage **alternative investments** (private equity, hedge funds, real estate)
 - You need **best-in-class data aggregation**
 - You have **complex client structures**
 - You have **dedicated operations staff**
 
-### **✅ Choose Envestnet Tamarac if:**
+### **Choose Envestnet Tamarac if:**
 - You're an **enterprise RIA** (20-500+ advisors)
 - You use **unified managed accounts (UMA)**
 - You want an **end-to-end platform** (no integrations needed)
 - You're **custodian-agnostic**
 - You have **dedicated operations and tech staff**
 
-### **✅ Choose Addepar if:**
+### **Choose Addepar if:**
 - You're a **family office or private bank**
 - You manage **ultra-high-net-worth clients** (UHNW)
 - You need to aggregate **held-away assets** (real estate, private equity, art)

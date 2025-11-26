@@ -9,7 +9,7 @@
 
 **Investipal** is an all-in-one wealth management platform for RIAs, providing portfolio management, client onboarding, compliance, and proposal generation in a single platform.
 
-**Target Market:** Solo and small-to-mid-sized RIAs (1-20 advisors)
+**Target Market:** RIAs of all sizes—from solo advisors to large multi-advisor firms (100+ advisors)
 
 **Key Differentiators:**
 1. AI-powered automation (statement scanning, portfolio commentary)
@@ -140,14 +140,14 @@
   - Annuities (fixed, variable, indexed)
   - Custom securities (structured products, private placements)
 
-#### **Automated Rebalancing** ⭐
-- **4 Rebalancing Methods:**
+#### **Portfolio Optimization Methods**
+- **4 Optimization Methods for Portfolio Design:**
   1. **Equal Weight:** Equal allocation to all holdings
   2. **Minimum Volatility:** Optimize for lowest portfolio volatility
   3. **Maximum Sharpe:** Optimize for highest risk-adjusted return
   4. **Factor-Based:** Target specific factor exposures (value, growth, quality, etc.)
-- **Rebalancing frequency:** Daily, weekly, monthly, quarterly (advisor configures)
-- **Threshold-based:** Rebalance when allocation drifts X% from target
+
+**Important:** Investipal is a portfolio DESIGN and ANALYSIS platform—not a trading or execution system. Advisors design portfolios in Investipal, then execute through their custodian (Schwab, etc.).
 
 #### **Custom Securities Builder** ⭐
 - **How it works:** Model any non-standard security
@@ -279,7 +279,7 @@
 ## 🎯 Product Positioning
 
 ### **Target Customer:**
-- **Firm size:** Solo advisors to 20-advisor RIAs
+- **Firm size:** RIAs of all sizes (solo to 100+ advisors)
 - **AUM:** $10M - $500M
 - **Advisor type:** Fee-only RIAs, hybrid RIAs
 - **Use cases:**
@@ -306,7 +306,7 @@
 - ✅ Want AI automation (save 30+ min/client)
 - ✅ Want all-in-one (no integration headaches)
 - ✅ Budget-conscious (vs. $10K+/year enterprise platforms)
-- ✅ Solo/small RIA (1-20 advisors)
+- ✅ RIAs of all sizes (solo to 100+ advisors)
 
 ### **When NOT to Choose Investipal:**
 - ❌ Need built-in CRM (use Salesforce/Wealthbox + Investipal)
