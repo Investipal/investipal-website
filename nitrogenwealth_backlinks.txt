@@ -1,0 +1,1229 @@
+# Nitrogen Wealth Backlink Analysis (Enriched)
+# Domain: nitrogenwealth.com
+# Generated: November 24, 2025
+# Data Source: DataForSEO
+
+================================================================================
+## EXECUTIVE SUMMARY
+================================================================================
+
+### Domain Overview
+- **First Seen:** January 16, 2019
+- **Domain Rank:** 286 (out of 1000)
+- **Server:** Cloudflare
+- **Platform Type:** Organization
+- **IP Address:** 104.26.14.99
+- **Country:** United States
+
+### Backlink Metrics
+- **Total Backlinks:** 4,507
+- **Referring Domains:** 808
+- **Referring Main Domains:** 762
+- **Referring IPs:** 655
+- **Referring Subnets:** 521
+- **Referring Pages:** 4,040
+- **Broken Backlinks:** 109
+- **Broken Pages:** 49
+
+### Spam & Quality Scores
+- **Backlinks Spam Score:** 7/100 (Low - Good)
+- **Target Spam Score:** 17/100 (Low - Good)
+
+### NoFollow Distribution
+- **Referring Domains (nofollow):** 182 (22.5%)
+- **Referring Main Domains (nofollow):** 171 (22.4%)
+- **Referring Pages (nofollow):** 656 (16.2%)
+
+### Internal/External Links on Target
+- **Internal Links Count:** 52,693
+- **External Links Count:** 7,901
+- **Crawled Pages:** 2,090
+
+================================================================================
+## LINK TYPE DISTRIBUTION
+================================================================================
+
+| Type     | Count | Percentage |
+|----------|-------|------------|
+| Anchor   | 3,534 | 78.4%      |
+| Image    | 311   | 6.9%       |
+| Redirect | 195   | 4.3%       |
+
+================================================================================
+## LINK ATTRIBUTES DISTRIBUTION
+================================================================================
+
+| Attribute   | Count | Notes                           |
+|-------------|-------|---------------------------------|
+| noopener    | 1,480 | Security attribute              |
+| noreferrer  | 1,108 | Privacy attribute               |
+| nofollow    | 655   | No PageRank passing             |
+| external    | 62    | External link indicator         |
+| ugc         | 16    | User Generated Content          |
+| sponsored   | 6     | Paid/Sponsored links            |
+
+================================================================================
+## REFERRING LINKS BY TLD
+================================================================================
+
+| TLD   | Count | Percentage |
+|-------|-------|------------|
+| .com  | 3,284 | 72.9%      |
+| .net  | 263   | 5.8%       |
+| .co   | 67    | 1.5%       |
+| .org  | 66    | 1.5%       |
+| .jobs | 42    | 0.9%       |
+| .ws   | 41    | 0.9%       |
+| .io   | 27    | 0.6%       |
+| .fyi  | 15    | 0.3%       |
+| .ai   | 14    | 0.3%       |
+| .news | 14    | 0.3%       |
+
+================================================================================
+## REFERRING LINKS BY PLATFORM TYPE
+================================================================================
+
+| Platform       | Count | Percentage |
+|----------------|-------|------------|
+| Unknown        | 1,896 | 42.1%      |
+| CMS            | 1,146 | 25.4%      |
+| Blogs          | 1,012 | 22.5%      |
+| Organization   | 945   | 21.0%      |
+| News           | 228   | 5.1%       |
+| Message Boards | 36    | 0.8%       |
+| eCommerce      | 23    | 0.5%       |
+
+================================================================================
+## SEMANTIC LOCATION OF BACKLINKS
+================================================================================
+
+| Location    | Count | Notes                              |
+|-------------|-------|------------------------------------|
+| (unspecified)| 1,416 | Location not detected             |
+| article     | 886   | Within article content (BEST)      |
+| section     | 594   | Within page section               |
+| footer      | 538   | Footer links (lower value)         |
+| nav         | 349   | Navigation links                   |
+| main        | 217   | Main content area (HIGH VALUE)     |
+| header      | 17    | Header area                        |
+| figure      | 10    | Figure/image captions             |
+| figcaption  | 6     | Image captions                    |
+| details     | 4     | Details/expandable sections       |
+
+================================================================================
+## GEOGRAPHIC DISTRIBUTION
+================================================================================
+
+| Country | Count | Percentage |
+|---------|-------|------------|
+| Unknown | 2,311 | 51.3%      |
+| US      | 1,300 | 28.8%      |
+| WW      | 151   | 3.4%       |
+| CO      | 67    | 1.5%       |
+| WS      | 41    | 0.9%       |
+| IO      | 28    | 0.6%       |
+| CA      | 16    | 0.4%       |
+| AI      | 14    | 0.3%       |
+| VC      | 12    | 0.3%       |
+| GB      | 11    | 0.2%       |
+
+================================================================================
+## TOP 100 BACKLINKS BY DOMAIN AUTHORITY
+================================================================================
+
+### 1. Google Chrome Web Store
+- **Domain:** chromewebstore.google.com
+- **Domain Rank:** 991/1000 ⭐⭐⭐⭐⭐
+- **Page Rank:** 174
+- **URL From:** https://chromewebstore.google.com/detail/riskalyze-meetings/hliaoeljaodcangokfecnbkfcagbddel
+- **URL To:** https://nitrogenwealth.com/legal
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "privacy policy"
+- **Context:** "Riskalyze Meetings has disclosed the following information regarding the collection and usage of your data. More detailed information can be found in the developer's [privacy policy]."
+- **Semantic Location:** section
+- **Platform Type:** Unknown
+- **First Seen:** August 4, 2025
+- **Spam Score:** N/A
+- **Notes:** High authority link from Google's Chrome extension store
+
+---
+
+### 2. Better Business Bureau (BBB)
+- **Domain:** www.bbb.org
+- **Domain Rank:** 752/1000 ⭐⭐⭐⭐⭐
+- **URL From:** https://www.bbb.org/us/ca/auburn/profile/financial-technology/nitrogen-riskalyze-1156-90057915
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow, noreferrer)
+- **Anchor Text:** "Visit Website"
+- **Semantic Location:** main
+- **Platform Type:** Organization
+- **Country:** US
+- **First Seen:** November 17, 2024
+- **Last Seen:** January 29, 2025
+- **Notes:** Trust signal from BBB business profile
+
+---
+
+### 3. Glassdoor.com (US)
+- **Domain:** www.glassdoor.com
+- **Domain Rank:** 732/1000 ⭐⭐⭐⭐⭐
+- **Page Rank:** 93
+- **URL From:** https://www.glassdoor.com/Overview/Working-at-Nitrogen-Wealth-EI_IE980944.11,26.htm
+- **URL To:** https://www.nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (noopener, nofollow)
+- **Anchor Text:** "www.nitrogenwealth.com"
+- **Semantic Location:** main
+- **Platform Type:** Organization
+- **Country:** US
+- **First Seen:** May 12, 2024
+- **Last Seen:** August 26, 2025
+- **Ranking Keywords:** 4 keywords in top 100
+- **Notes:** Employee reviews and company profile page
+
+---
+
+### 4. Product Hunt
+- **Domain:** www.producthunt.com
+- **Domain Rank:** 683/1000 ⭐⭐⭐⭐
+- **URL From:** https://www.producthunt.com/products/riskalyze/reviews
+- **URL To:** https://nitrogenwealth.com/?ref=producthunt
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes (noreferrer only)
+- **Anchor Text:** "Visit website"
+- **Semantic Location:** section
+- **Platform Type:** Unknown
+- **Country:** US
+- **First Seen:** December 1, 2024
+- **Last Seen:** May 14, 2025
+- **Notes:** DoFollow link from high-authority product discovery platform
+
+---
+
+### 5. CNN Money
+- **Domain:** money.cnn.com
+- **Domain Rank:** 669/1000 ⭐⭐⭐⭐
+- **URL From:** https://money.cnn.com/gallery/pf/2013/12/11/best-financial-apps/12.html
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "Riskalyze"
+- **Context:** "Company: [Riskalyze]"
+- **Platform Type:** Unknown
+- **Country:** US
+- **First Seen:** May 29, 2020
+- **Last Seen:** June 13, 2025
+- **Notes:** Featured in "15 best financial sites and apps" article - HIGH VALUE editorial link
+
+---
+
+### 6. Beehiiv Newsletter (Conneqtor)
+- **Domain:** conneqtor.beehiiv.com
+- **Domain Rank:** 663/1000 ⭐⭐⭐⭐
+- **URL From:** https://conneqtor.beehiiv.com/p/rtq
+- **URL To:** https://nitrogenwealth.com/pricing/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "Nitrogen (Riskalyze)"
+- **Context:** "$99 - [Nitrogen (Riskalyze)]"
+- **Semantic Location:** main
+- **Spam Score:** 5
+- **First Seen:** September 1, 2024
+- **Last Seen:** July 11, 2025
+- **Notes:** Industry newsletter coverage with direct pricing page link
+
+---
+
+### 7. Cision News
+- **Domain:** news.cision.com
+- **Domain Rank:** 659/1000 ⭐⭐⭐⭐
+- **URL From:** https://news.cision.com/ficomm-partners/r/autopilot--the-automated-asset-management-platform-by-cls-and-riskalyze--goes-live,c9796884
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow)
+- **Anchor Text:** "www.riskalyze.com"
+- **Context:** "and quantify the suitability of investments. Riskalyze was named one of the world's ten most innovative companies in finance, and advisors use the platform to manage $90 billion in assets. To learn more, visit [www.riskalyze.com]."
+- **Semantic Location:** article
+- **Platform Type:** News
+- **Country:** Worldwide
+- **First Seen:** October 1, 2020
+- **Notes:** Press release coverage - strong brand mention
+
+---
+
+### 8. Forbes
+- **Domain:** www.forbes.com
+- **Domain Rank:** 659/1000 ⭐⭐⭐⭐
+- **Page Rank:** 5
+- **URL From:** https://www.forbes.com/sites/tomgroenfeldt/2018/01/29/billion-dollar-broker-workstation-vs-5000-diy-financial-advisor-macbook-platform/
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow, noopener, noreferrer)
+- **Anchor Text:** "RiskAlyze"
+- **Context:** "She uses RedTail for CRM and [RiskAlyze] to evaluate clients' risk appetite."
+- **Semantic Location:** main
+- **Platform Type:** News
+- **Country:** US
+- **Spam Score:** 5
+- **First Seen:** May 6, 2023
+- **Last Seen:** January 13, 2025
+- **Ranking Keywords:** 1 keyword in top 100
+- **Notes:** HIGH VALUE editorial mention in major financial publication
+
+---
+
+### 9. Crunchbase
+- **Domain:** www.crunchbase.com
+- **Domain Rank:** 651/1000 ⭐⭐⭐⭐
+- **Page Rank:** 70
+- **URL From:** https://www.crunchbase.com/organization/riskalyze
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow, noopener, noreferrer)
+- **Anchor Text:** "nitrogenwealth.com/"
+- **Platform Type:** Organization
+- **Country:** US
+- **Spam Score:** 5
+- **First Seen:** October 19, 2024
+- **Last Seen:** November 21, 2025
+- **Ranking Keywords:** 7 in top 10, 14 in top 100
+- **Notes:** Business profile with funding information - strong trust signal
+
+---
+
+### 10. PR Newswire
+- **Domain:** www.prnewswire.com
+- **Domain Rank:** 636/1000 ⭐⭐⭐⭐
+- **Page Rank:** 49
+- **URL From:** https://www.prnewswire.com/news-releases/hightower-chooses-riskalyze-to-provide-risk-alignment-and-trading-automation-300912670.html
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow)
+- **Anchor Text:** "http://www.riskalyze.com"
+- **Platform Type:** News
+- **Country:** US
+- **First Seen:** September 16, 2019
+- **Last Seen:** August 27, 2025
+- **Notes:** Official press release coverage
+
+---
+
+### 11. iHeartRadio
+- **Domain:** www.iheart.com
+- **Domain Rank:** 620/1000 ⭐⭐⭐⭐
+- **URL From:** https://www.iheart.com/podcast/269-the-get-ready-money-podcas-49576833/episode/how-storytelling-can-improve-financial-literacy-290831389/
+- **URL To:** https://nitrogenwealth.com/press-releases/nitrogens-2025-firm-growth-survey-reveals-disconnect/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "here"
+- **Context:** "Nitrogen's 2025 Firm Growth Survey ([here])"
+- **Semantic Location:** section
+- **First Seen:** October 10, 2025
+- **Notes:** NEW - Podcast coverage linking to press release
+
+---
+
+### 12. Business Wire (redirects)
+- **Domain:** cts.businesswire.com
+- **Domain Rank:** 620/1000 ⭐⭐⭐⭐
+- **URL From:** https://cts.businesswire.com/ct/CT?id=smartlink&url=...
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Redirect
+- **DoFollow:** ✅ Yes
+- **First Seen:** November 9, 2024
+- **Notes:** Press release redirect links
+
+---
+
+### 13. The Telegraph (UK)
+- **Domain:** www.telegraph.co.uk
+- **Domain Rank:** 619/1000 ⭐⭐⭐⭐
+- **URL From:** https://www.telegraph.co.uk/finance/personalfinance/investing/10711824/What-British-investors-could-learn-from-America.html
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "riskalyze.com"
+- **Context:** "Want to measure your risk tolerance scientifically? Try [riskalyze.com], which can do this in about 10 minutes."
+- **Semantic Location:** article
+- **Platform Type:** News
+- **Country:** UK
+- **First Seen:** July 31, 2023
+- **Last Seen:** August 23, 2025
+- **Notes:** HIGH VALUE - DoFollow editorial link from major UK newspaper
+
+---
+
+### 14. Fortune
+- **Domain:** fortune.com
+- **Domain Rank:** 618/1000 ⭐⭐⭐⭐
+- **Page Rank:** 161
+- **URL From:** https://fortune.com/2021/08/26/the-ceo-of-a-one-time-unicorn-gets-arrested-for-alleged-fraud/
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes (noopener only)
+- **Anchor Text:** "Riskalyze"
+- **Context:** "Hg acquired a majority stake in [Riskalyze], a wealth management platform."
+- **Semantic Location:** article
+- **Platform Type:** News
+- **Country:** US
+- **First Seen:** July 10, 2025
+- **Last Seen:** October 12, 2025
+- **Ranking Keywords:** 2 in top 100
+- **Notes:** HIGH VALUE - DoFollow editorial link from Fortune magazine
+
+---
+
+### 15. Intuit Accountants
+- **Domain:** accountants.intuit.com
+- **Domain Rank:** 617/1000 ⭐⭐⭐⭐
+- **URL From:** https://accountants.intuit.com/taxprocenter/advisory-services/providing-calm-to-clients-through-rocky-times/
+- **URL To:** https://nitrogenwealth.com/solutions/risk-center/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "Risk Number"
+- **Context:** "My friends at Nitrogen, who contributed to my book, have developed a unique [Risk Number] for each client, on a scale of 1-100"
+- **Semantic Location:** article
+- **Platform Type:** CMS/Blogs
+- **Country:** US
+- **First Seen:** June 20, 2025
+- **Last Seen:** October 1, 2025
+- **Notes:** HIGH VALUE - DoFollow educational content link
+
+---
+
+### 16. Skool (Community Platform)
+- **Domain:** www.skool.com
+- **Domain Rank:** 610/1000 ⭐⭐⭐⭐
+- **URL From:** https://www.skool.com/ria-os/ai-notetakers-for-advisors-updated-feature-sets
+- **URL To:** https://nitrogenwealth.com/ai-meeting-center/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (noopener, noreferrer, nofollow)
+- **Anchor Text:** "Nitrogen"
+- **Country:** US
+- **First Seen:** August 20, 2025
+- **Last Seen:** November 19, 2025
+- **Notes:** RIA community discussion with feature comparison
+
+---
+
+### 17. Acast (Podcast)
+- **Domain:** shows.acast.com
+- **Domain Rank:** 605/1000 ⭐⭐⭐⭐
+- **URL From:** https://shows.acast.com/voice-from-the-hills/episodes/vfth-origin
+- **URL To:** https://nitrogenwealth.com/about/aaron-klein/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow)
+- **Anchor Text:** "Aaron Klein"
+- **Context:** "[Aaron Klein] - Riskalyze"
+- **Semantic Location:** main
+- **First Seen:** August 31, 2023
+- **Last Seen:** November 9, 2025
+- **Notes:** Podcast episode linking to CEO profile
+
+---
+
+### 18. BuiltIn
+- **Domain:** builtin.com
+- **Domain Rank:** 603/1000 ⭐⭐⭐⭐
+- **URL From:** https://builtin.com/company/riskalyze/benefits
+- **URL To:** https://nitrogenwealth.com/?utm_source=BuiltIn
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (noopener, nofollow)
+- **Anchor Text:** "View Website"
+- **Semantic Location:** main
+- **Country:** US
+- **First Seen:** January 7, 2025
+- **Last Seen:** October 1, 2025
+- **Notes:** Tech company profile on hiring platform
+
+---
+
+### 19. Bit.ly (j.mp)
+- **Domain:** j.mp
+- **Domain Rank:** 599/1000 ⭐⭐⭐⭐
+- **Page Rank:** 115
+- **Link Type:** Redirect
+- **DoFollow:** ✅ Yes
+- **First Seen:** September 11, 2021
+- **Last Seen:** October 1, 2025
+- **Notes:** Short URL redirect - indicates social sharing
+
+---
+
+### 20. Investopedia
+- **Domain:** www.investopedia.com
+- **Domain Rank:** 591/1000 ⭐⭐⭐⭐
+- **Page Rank:** 113
+- **URL From:** https://www.investopedia.com/articles/small-business/012417/riskalyze.asp
+- **URL To:** https://kb.nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes (noreferrer, noopener only)
+- **Anchor Text:** "Fiduciary Standards"
+- **Context:** "Riskalyze. \"[Fiduciary Standards].\""
+- **Semantic Location:** article
+- **Platform Type:** Organization
+- **Country:** US
+- **Spam Score:** 5
+- **First Seen:** September 28, 2022
+- **Last Seen:** June 24, 2025
+- **Ranking Keywords:** 2 in top 10, 4 in top 100
+- **Notes:** VERY HIGH VALUE - DoFollow educational content on major financial education site
+
+---
+
+### 21-30. Glassdoor International (Multiple Countries)
+Various Glassdoor international domains linking to company profile:
+- glassdoor.ca (Canada) - Domain Rank: 678
+- glassdoor.co.in (India) - Domain Rank: 667
+- glassdoor.co.uk (UK) - Domain Rank: 662
+- glassdoor.fr (France) - Domain Rank: 659
+- glassdoor.ch (Switzerland) - Domain Rank: 657
+- glassdoor.be (Belgium) - Domain Rank: 656
+- glassdoor.com.au (Australia) - Domain Rank: 654
+- glassdoor.com.mx (Mexico) - Domain Rank: 646
+- glassdoor.ie (Ireland) - Domain Rank: 643
+- glassdoor.nl (Netherlands) - Domain Rank: 642
+
+All are nofollow links to company overview pages.
+
+---
+
+### 31. Business Insider Markets
+- **Domain:** markets.businessinsider.com
+- **Domain Rank:** 625/1000 ⭐⭐⭐⭐
+- **URL From:** https://markets.businessinsider.com/news/stocks/vestwell-announces-new-joint-offering-with-riskalyze...
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow)
+- **Anchor Text:** "www.riskalyze.com"
+- **Context:** Partnership announcement article
+- **Semantic Location:** main
+- **Platform Type:** News
+- **Country:** US
+- **Spam Score:** 25
+- **First Seen:** April 2, 2023
+- **Last Seen:** June 17, 2025
+- **Ranking Keywords:** 2 in top 100
+- **Notes:** Press coverage on major business news site
+
+---
+
+### 32. Entrepreneur
+- **Domain:** www.entrepreneur.com
+- **Domain Rank:** 573/1000 ⭐⭐⭐⭐
+- **URL From:** https://www.entrepreneur.com/starting-a-business/the-simple-reason-entrepreneurs-are-embracing-the-wonky/289151
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "Riskalyze"
+- **Context:** "That's what Aaron Klein did. He's the CEO and cofounder of [Riskalyze], a financial technology firm."
+- **Semantic Location:** article
+- **Platform Type:** News
+- **Country:** US
+- **First Seen:** May 16, 2025
+- **Last Seen:** September 16, 2025
+- **Notes:** HIGH VALUE - DoFollow editorial feature on entrepreneurship
+
+---
+
+### 33. ZoomInfo
+- **Domain:** www.zoominfo.com
+- **Domain Rank:** 567/1000 ⭐⭐⭐
+- **URL From:** https://www.zoominfo.com/c/nitrogen-wealth-inc/566156417
+- **URL To:** https://www.nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow)
+- **Anchor Text:** "www.nitrogenwealth.com"
+- **Semantic Location:** main
+- **Platform Type:** Organization
+- **Country:** US
+- **Spam Score:** 5
+- **First Seen:** June 17, 2024
+- **Notes:** B2B data platform company profile
+
+---
+
+### 34. PRWeb
+- **Domain:** www.prweb.com
+- **Domain Rank:** 561/1000 ⭐⭐⭐
+- **Page Rank:** 33
+- **URL From:** https://www.prweb.com/releases/GPS_Wealth_Management_LLC_Implements_Award_winning_Risk_Alignment_Platform...
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow)
+- **Context:** Press release distribution
+- **Platform Type:** News
+- **Country:** US
+- **First Seen:** December 21, 2023
+- **Notes:** Press release coverage
+
+---
+
+### 35. Informa Connect
+- **Domain:** informaconnect.com
+- **Domain Rank:** 551/1000 ⭐⭐⭐
+- **URL From:** https://informaconnect.com/the-advisors-guide-to-getting-google-screened/
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes (noreferrer, noopener only)
+- **Anchor Text:** "click here to book a personal demo"
+- **Context:** "If you're curious how Riskalyze can help you build a better practice..."
+- **Semantic Location:** article
+- **First Seen:** July 21, 2022
+- **Last Seen:** September 17, 2025
+- **Ranking Keywords:** 11 in top 100
+- **Notes:** HIGH VALUE - DoFollow CTA link with strong editorial context
+
+---
+
+### 36. C212.net (PR Distribution)
+- **Domain:** c212.net
+- **Domain Rank:** 550/1000 ⭐⭐⭐
+- **Link Type:** Redirect
+- **DoFollow:** ✅ Yes
+- **Notes:** Press release distribution redirects
+
+---
+
+### 37. RedCircle (Podcast)
+- **Domain:** redcircle.com
+- **Domain Rank:** 546/1000 ⭐⭐⭐
+- **URL From:** https://redcircle.com/shows/fierce-fiduciary-podcast/...
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow)
+- **Anchor Text:** "https://www.riskalyze.com"
+- **Context:** "For more about Riskalyze, please visit their website..."
+- **Semantic Location:** section
+- **Country:** US
+- **Spam Score:** 5
+- **Notes:** Podcast show notes
+
+---
+
+### 38. SaaSHub
+- **Domain:** www.saashub.com
+- **Domain Rank:** 542/1000 ⭐⭐⭐
+- **URL From:** https://www.saashub.com/compare-loupe-vs-riskalyze
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow)
+- **Anchor Text:** "riskalyze.com"
+- **Semantic Location:** section
+- **Country:** US
+- **First Seen:** September 29, 2025
+- **Notes:** NEW - Software comparison site
+
+---
+
+### 39. PR Newswire UK
+- **Domain:** www.prnewswire.co.uk
+- **Domain Rank:** 538/1000 ⭐⭐⭐
+- **Page Rank:** 61
+- **URL From:** Pan Finance Magazine Award Winners article
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow)
+- **Anchor Text:** "Riskalyze"
+- **Semantic Location:** section
+- **Platform Type:** News
+- **Country:** UK
+- **Spam Score:** 5
+- **First Seen:** December 19, 2024
+- **Notes:** Award recognition press release
+
+---
+
+### 40. Rise (Job Platform)
+- **Domain:** app.joinrise.co
+- **Domain Rank:** 537/1000 ⭐⭐⭐
+- **URL From:** https://app.joinrise.co/company/nitrogen-wealth
+- **URL To:** https://www.nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "https://www.nitrogenwealth.com"
+- **Country:** Colombia
+- **First Seen:** May 26, 2025
+- **Notes:** Company profile on job platform - DoFollow
+
+---
+
+### 41. Justia Legal Jobs
+- **Domain:** www.justia.jobs
+- **Domain Rank:** 533/1000 ⭐⭐⭐
+- **URL From:** https://www.justia.jobs/employer/nitrogen-14360
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes (noreferrer, noopener only)
+- **Anchor Text:** "nitrogenwealth.com"
+- **Semantic Location:** section
+- **Country:** US
+- **First Seen:** January 3, 2025
+- **Notes:** Legal job board employer profile - DoFollow
+
+---
+
+### 42. GovTech (California)
+- **Domain:** insider.govtech.com
+- **Domain Rank:** 531/1000 ⭐⭐⭐
+- **URL From:** https://insider.govtech.com/california/news/profiling-the-2016-sacramento-region-innovation-award-winners.html
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "The Risk Number by Riskalyze"
+- **Context:** "The Risk Number by Riskalyze (Award Winner) is transforming the advisory industry..."
+- **Semantic Location:** main
+- **Platform Type:** Organization
+- **Country:** US
+- **First Seen:** July 4, 2022
+- **Notes:** Award recognition article - DoFollow editorial
+
+---
+
+### 43. DexKnows
+- **Domain:** www.dexknows.com
+- **Domain Rank:** 530/1000 ⭐⭐⭐
+- **URL From:** https://www.dexknows.com/auburn-ca/investment-advisory-service
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Image
+- **DoFollow:** ❌ No (nofollow, noopener)
+- **Alt Text:** "Icon - external link"
+- **Anchor Text:** "Visit Website"
+- **Country:** US
+- **Notes:** Local business directory listing
+
+---
+
+### 44. Craft.co
+- **Domain:** craft.co
+- **Domain Rank:** 523/1000 ⭐⭐⭐
+- **URL From:** https://craft.co/riskalyze
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow, noopener, noreferrer)
+- **Anchor Text:** "https://nitrogenwealth.com/"
+- **Semantic Location:** section
+- **Platform Type:** Organization
+- **Country:** Colombia
+- **First Seen:** March 19, 2024
+- **Notes:** Business intelligence company profile
+
+---
+
+### 45. Course Report
+- **Domain:** www.coursereport.com
+- **Domain Rank:** 520/1000 ⭐⭐⭐
+- **URL From:** https://www.coursereport.com/blog/alumni-spotlight-stephen-and-stuart-tiedemann-of-digitalcrafts
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "Riskalyze"
+- **Context:** "I'm a software engineer at [Riskalyze], a startup based out of California..."
+- **Platform Type:** Organization
+- **Country:** US
+- **Spam Score:** 15
+- **First Seen:** February 23, 2019
+- **Notes:** Alumni interview mentioning employer - DoFollow
+
+---
+
+### 46. Interactive Brokers
+- **Domain:** www.interactivebrokers.com
+- **Domain Rank:** 516/1000 ⭐⭐⭐
+- **URL From:** https://www.interactivebrokers.com/en/general/ria-compliance-center.php
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "www.riskalyze.com"
+- **Context:** Partnership integration page with discounted pricing info
+- **Semantic Location:** section
+- **Country:** US
+- **Spam Score:** 15
+- **First Seen:** February 9, 2025
+- **Ranking Keywords:** 33 in top 100
+- **Notes:** HIGH VALUE - DoFollow partnership page with strong commercial context
+
+---
+
+### 47. Kiplinger
+- **Domain:** www.kiplinger.com
+- **Domain Rank:** 515/1000 ⭐⭐⭐
+- **Page Rank:** 71
+- **URL From:** https://www.kiplinger.com/article/retirement/t023-c032-s014-successful-retirement-plans-are-built-on-5-pillars.html
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "like Riskalyze"
+- **Context:** "with the use of powerful, technological tools [like Riskalyze], financial professionals can identify their clients' risk tolerance..."
+- **Semantic Location:** section
+- **Platform Type:** Organization
+- **Country:** US
+- **First Seen:** October 11, 2023
+- **Notes:** HIGH VALUE - DoFollow editorial recommendation in retirement planning article
+
+---
+
+### 48. D&B (Dun & Bradstreet)
+- **Domain:** www.dandb.com
+- **Domain Rank:** 515/1000 ⭐⭐⭐
+- **URL From:** https://www.dandb.com/businessdirectory/riskalyzeinc.-auburn-ca-112320387.html
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "www.riskalyze.com"
+- **Semantic Location:** section
+- **Country:** US
+- **First Seen:** July 4, 2025
+- **Notes:** NEW - Business directory listing - DoFollow
+
+---
+
+### 49. ETF Trends
+- **Domain:** www.etftrends.com
+- **Domain Rank:** 510/1000 ⭐⭐⭐
+- **Page Rank:** 19
+- **URL From:** https://www.etftrends.com/etf-strategist-channel/what-is-a-risk-budget/
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow, noopener)
+- **Anchor Text:** "Riskalyze"
+- **Context:** "the FinTech industry has launched a plethora of software and tools... like [Riskalyze], Positivly, FinaMetrica..."
+- **Semantic Location:** article
+- **Platform Type:** News
+- **Country:** US
+- **First Seen:** October 17, 2021
+- **Ranking Keywords:** 3 in top 3, 6 in top 10, 11 in top 100
+- **Notes:** Industry article with tool recommendation
+
+---
+
+### 50. TheOrg
+- **Domain:** theorg.com
+- **Domain Rank:** 510/1000 ⭐⭐⭐
+- **URL From:** https://theorg.com/org/nitrogen/jobs/...
+- **URL To:** https://www.nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes (noreferrer, noopener only)
+- **Platform Type:** Organization
+- **Country:** US
+- **First Seen:** April 10, 2025
+- **Ranking Keywords:** 1 in top 100
+- **Notes:** Org chart platform job listings - DoFollow
+
+---
+
+### 51. ContactOut
+- **Domain:** contactout.com
+- **Domain Rank:** 504/1000 ⭐⭐⭐
+- **URL From:** https://contactout.com/company/riskalyze-2009276
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow)
+- **Anchor Text:** "http://www.riskalyze.com"
+- **Semantic Location:** section
+- **Platform Type:** Organization
+- **Country:** US
+- **Notes:** Contact/recruiting platform company profile
+
+---
+
+### 52. Investment News
+- **Domain:** www.investmentnews.com
+- **Domain Rank:** 497/1000 ⭐⭐⭐
+- **Page Rank:** 68
+- **URL From:** https://www.investmentnews.com/industry-news/riskalyze-growing-into-much-more-than-a-risk-assessment-tool/169851
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes (noreferrer, noopener only)
+- **Anchor Text:** "Riskalyze"
+- **Context:** "Eight years ago, [Riskalyze] was created to provide a digital, mathematical approach to client risk assessment."
+- **Semantic Location:** section
+- **Platform Type:** News
+- **Country:** US
+- **First Seen:** April 21, 2025
+- **Notes:** HIGH VALUE - DoFollow feature article in industry trade publication
+
+---
+
+### 53. Startup.jobs
+- **Domain:** startup.jobs
+- **Domain Rank:** 497/1000 ⭐⭐⭐
+- **URL From:** https://startup.jobs/sales-development-representative-nitrogen-6980503
+- **URL To:** https://www.nitrogenwealth.com/?utm_source=startup.jobs
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (noopener, noreferrer, nofollow)
+- **Anchor Text:** "Website"
+- **Platform Type:** Organization
+- **Country:** US
+- **First Seen:** August 16, 2025
+- **Notes:** NEW - Job listing platform
+
+---
+
+### 54. PitchBook
+- **Domain:** pitchbook.com
+- **Domain Rank:** 496/1000 ⭐⭐⭐
+- **URL From:** https://pitchbook.com/profiles/company/61279-12
+- **URL To:** http://www.nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow)
+- **Anchor Text:** "www.nitrogenwealth.com"
+- **Platform Type:** Message Boards
+- **Country:** US
+- **First Seen:** July 9, 2023
+- **Ranking Keywords:** 1 in top 10, 8 in top 100
+- **Notes:** Financial data platform company profile
+
+---
+
+### 55. AppAdvice
+- **Domain:** appadvice.com
+- **Domain Rank:** 495/1000 ⭐⭐⭐
+- **URL From:** https://appadvice.com/app/fi-summit/1328392206
+- **URL To:** https://nitrogenwealth.com/about
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (nofollow)
+- **Semantic Location:** section
+- **Platform Type:** Organization
+- **Country:** US
+- **Notes:** App store aggregator linking to FI Summit app
+
+---
+
+### 56. WebCatalog
+- **Domain:** webcatalog.io
+- **Domain Rank:** 494/1000 ⭐⭐⭐
+- **URL From:** https://webcatalog.io/it/apps/nitrogen
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ❌ No (noopener, nofollow)
+- **Anchor Text:** "Altre informazioni"
+- **Platform Type:** Organization
+- **Country:** Italy
+- **Notes:** Web app catalog listing
+
+---
+
+### 57. Teamwork
+- **Domain:** www.teamwork.com
+- **Domain Rank:** 493/1000 ⭐⭐⭐
+- **Page Rank:** 21
+- **URL From:** https://www.teamwork.com/blog/best-financial-advisor-tools/
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes (noreferrer, noopener only)
+- **Anchor Text:** "Nitrogen"
+- **Platform Type:** Organization
+- **Country:** US
+- **First Seen:** March 30, 2024
+- **Last Seen:** November 4, 2025
+- **Ranking Keywords:** 24 in top 100
+- **Notes:** HIGH VALUE - DoFollow listicle inclusion "7 cutting-edge tools for financial advisors"
+
+---
+
+### 58. Levels.fyi
+- **Domain:** www.levels.fyi
+- **Domain Rank:** 490/1000 ⭐⭐⭐
+- **URL From:** https://www.levels.fyi/hi-in/companies/riskalyze
+- **URL To:** https://nitrogenwealth.com/?ref=levels.fyi
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "http://www.riskalyze.com"
+- **Country:** US
+- **First Seen:** August 28, 2025
+- **Notes:** Salary comparison site company profile - DoFollow
+
+---
+
+### 59. FA Magazine
+- **Domain:** www.fa-mag.com
+- **Domain Rank:** 486/1000 ⭐⭐⭐
+- **URL From:** https://www.fa-mag.com/news/designing-a-business-growth-process-for-community-engagement-and-roi-74854.html
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes
+- **Anchor Text:** "Nitrogen"
+- **Context:** "[Nitrogen] — a comprehensive client engagement platform for wealth management firms..."
+- **Platform Type:** Unknown
+- **Country:** US
+- **Spam Score:** 50
+- **First Seen:** November 22, 2023
+- **Notes:** HIGH VALUE - DoFollow feature in Financial Advisor Magazine
+
+---
+
+### 60. SmartAsset
+- **Domain:** smartasset.com
+- **Domain Rank:** 480/1000 ⭐⭐⭐
+- **Page Rank:** 32
+- **URL From:** https://smartasset.com/advisor-resources/portfolio-visualizer
+- **URL To:** https://nitrogenwealth.com/
+- **Link Type:** Anchor
+- **DoFollow:** ✅ Yes (noreferrer, noopener only)
+- **Anchor Text:** "Nitrogen"
+- **Semantic Location:** article
+- **Platform Type:** News
+- **Country:** US
+- **First Seen:** May 6, 2025
+- **Ranking Keywords:** 4 in top 10, 25 in top 100
+- **Notes:** HIGH VALUE - DoFollow tool recommendation in portfolio visualizer guide
+
+---
+
+### 61-100. Additional Notable Backlinks
+
+| # | Domain | Rank | DoFollow | Type | Notes |
+|---|--------|------|----------|------|-------|
+| 61 | issmarketintelligence.com | 479 | ✅ | Editorial | Case study feature |
+| 62 | leadiq.com | 575 | ❌ | Profile | B2B lead database |
+| 63 | podchaser.com | 553 | ✅ | Podcast | Show notes |
+| 64 | gaebler.com | 585 | ❌ | Directory | VC database listing |
+| 65 | simplecast.com | 590 | ✅ | Podcast | Show page |
+| 66 | buzzsprout.com | 651 | ✅ | Podcast | Episode page |
+| 67 | goodpods.com | 579 | ❌ | Podcast | Episode listing |
+| 68 | castbox.fm | 580 | ❌ | Podcast | Episode page |
+| 69 | psu.edu | 580 | ✅ | Educational | Course resource list |
+| 70 | ebix.com | 581 | ✅ | Blog | Industry tools article |
+| 71 | storylane.io | 483 | ✅ | Showcase | Customer showcase |
+| 72 | snappykraken.com | 482 | ✅ | Integration | Campaign documentation |
+| 73 | remotejobs.jobboardly.com | 544 | ✅ | Jobs | Job listing |
+| 74 | echojobs.io | 608 | ❌ | Jobs | Job listing |
+| 75 | clay.earth | 499 | ✅ | Profile | Professional profile |
+| 76 | avc.com | 497 | ❌ | Blog | Comment section |
+| 77 | strictlyvc.com | 542 | ✅ | News | VC newsletter |
+| 78 | advisorengine.com | 488 | ✅ | Blog | Conference recap |
+| 79 | techimply.ae | 484 | ❌ | Directory | Software listing |
+| 80 | 24-7pressrelease.com | 484 | ❌ | PR | Press release |
+| 81 | kryptonsolid.com | 500 | ❌ | Blog | Spanish article |
+| 82 | gocollect.com | 481 | ✅ | Blog | Investment comparison |
+| 83 | crxsoso.com | 557 | ❌ | Directory | Chrome extension listing |
+| 84 | sitelike.org | 619 | ❌ | Directory | Similar sites tool |
+| 85 | eventscloud.com | 523 | ✅ | Event | Conference sponsor |
+| 86 | swoogo.com | 558 | ✅ | Event | Conference sponsor |
+| 87 | workflos-ai.oss-us-west-1.aliyuncs.com | 698 | ❌ | Directory | App store |
+| 88 | theresilientadvisor.libsyn.com | 651 | ✅ | Podcast | Episode page |
+| 89 | insidea (cloudways) | 624 | ✅ | Blog | Marketing tools article |
+| 90+ | Various Glassdoor intl. | 630-680 | ❌ | Profile | Company profiles |
+
+================================================================================
+## LINK QUALITY ANALYSIS
+================================================================================
+
+### High-Value DoFollow Editorial Links (Priority for Emulation)
+1. **The Telegraph (UK)** - Rank 619 - Financial advice article
+2. **Fortune** - Rank 618 - Business acquisition news
+3. **Investopedia** - Rank 591 - Educational content
+4. **CNN Money** - Rank 669 - Best apps listicle
+5. **Entrepreneur** - Rank 573 - Startup feature
+6. **Kiplinger** - Rank 515 - Retirement planning article
+7. **Investment News** - Rank 497 - Industry feature
+8. **FA Magazine** - Rank 486 - Industry publication
+9. **SmartAsset** - Rank 480 - Tool recommendation
+10. **ETF Trends** - Rank 510 - Risk budget article
+11. **Interactive Brokers** - Rank 516 - Partnership page
+12. **Informa Connect** - Rank 551 - Google screened guide
+
+### High-Authority Brand Mentions (NoFollow but Trust Signals)
+1. **Forbes** - Rank 659 - Editorial mention
+2. **Crunchbase** - Rank 651 - Company profile
+3. **BBB** - Rank 752 - Business verification
+4. **Glassdoor (multiple)** - Rank 630-730 - Company profiles
+5. **PitchBook** - Rank 496 - Financial data profile
+6. **ZoomInfo** - Rank 567 - B2B data profile
+7. **PR Newswire** - Rank 636 - Press releases
+
+### Partnership/Integration Links
+1. **Interactive Brokers** - Compliance center
+2. **Product Hunt** - Product listing
+3. **Chrome Web Store** - Extension listing
+
+### Podcast Coverage
+1. **iHeartRadio** - Rank 620 - DoFollow
+2. **Acast** - Rank 605
+3. **Simplecast** - Rank 590
+4. **Buzzsprout** - Rank 651
+5. **RedCircle** - Rank 546
+6. **Castbox** - Rank 580
+7. **Goodpods** - Rank 579
+
+================================================================================
+## STRATEGIC INSIGHTS FOR INVESTIPAL
+================================================================================
+
+### Link Building Opportunities to Pursue
+
+**1. Financial Publications (High Priority)**
+- Target similar editorial features in:
+  - Kiplinger
+  - Investment News
+  - FA Magazine
+  - ETF Trends
+  - SmartAsset
+  - Investopedia
+
+**2. Business Directories (Quick Wins)**
+- Ensure listings on:
+  - Crunchbase
+  - PitchBook
+  - ZoomInfo
+  - D&B
+  - Craft.co
+  - TheOrg
+
+**3. Podcast Appearances**
+- Target financial advisor podcasts for backlinks
+
+**4. Partnership Pages**
+- Pursue integration partner website features
+
+**5. Press Releases**
+- Distribute through:
+  - PR Newswire
+  - Business Wire
+  - PRWeb
+
+**6. Job Platforms**
+- List on:
+  - BuiltIn
+  - TheOrg
+  - Levels.fyi
+  - Startup.jobs
+
+**7. Tool/Software Directories**
+- Get listed on:
+  - Product Hunt
+  - SaaSHub
+  - G2
+  - Capterra
+  - Software Advice
+
+### Key Takeaways
+
+1. **Nitrogen has 808 referring domains** - Strong domain diversity
+2. **22.5% nofollow rate** - Healthy mix of follow/nofollow
+3. **7/100 spam score** - Very clean backlink profile
+4. **Strong presence in financial media** - Forbes, CNN Money, Telegraph, Kiplinger
+5. **Heavy Glassdoor presence** - 15+ international Glassdoor domains
+6. **Good podcast coverage** - Multiple podcast platforms
+7. **Strong business directory presence** - Crunchbase, PitchBook, ZoomInfo
+8. **Integration partner links** - Interactive Brokers, Chrome Store
+
+================================================================================
+## ORIGINAL REFERRING DOMAINS LIST (808 Domains)
+================================================================================
+
+1. sitejabber.com
+2. crunchbase.com
+3. trustradius.com
+4. g2.com
+5. rocketreach.co
+6. cbinsights.com
+7. theorg.com
+8. trustpilot.com
+9. zoominfo.com
+10. leadiq.com
+11. apollo.io
+12. weetechsolution.com
+13. growjo.com
+14. aitools.inc
+15. predictleads.com
+16. store.hbr.org
+17. enlyft.com
+18. tracxn.com
+19. craft.co
+20. dnb.com
+21. 6sense.com
+22. inc.com
+23. lusha.com
+24. dealroom.co
+25. harmonic.ai
+26. wealthmanagement.com
+27. getlatka.com
+28. slintel.com
+29. finra.org
+30. bnktothefuture.com
+31. wappalyzer.com
+32. theriafunds.com
+33. privcap.com
+34. gust.com
+35. f6s.com
+36. goodfirms.co
+37. saasworthy.com
+38. pitchbook.com
+39. seedtable.com
+40. ibisworld.com
+41. datalanytics.com
+42. yelp.com
+43. kuppingercole.com
+44. datanyze.com
+45. builtwith.com
+46. hginsights.com
+47. glassdoor.com
+48. owler.com
+49. linkedin.com
+50. fintech.global
+51. ventureradar.com
+52. cityfalcon.ai
+53. thefinancialconcierge.com
+54. similarweb.com
+55. betterteam.com
+56. softwareadvice.com
+57. barrons.com
+58. crustdata.com
+59. thesmbguide.com
+60. cision.com
+61. orb-intelligence.com
+62. discovercloud.com
+63. comparably.com
+64. contactout.com
+65. sec.gov
+66. clutch.co
+67. featuredcustomers.com
+68. powerlinx.com
+69. yellow.place
+70. siftery.com
+71. adapt.io
+72. itnews.africa
+73. scrapingfish.com
+74. softwareworld.co
+75. b2bsaasreviews.com
+76. 401kspecialistmag.com
+77. getapp.com
+78. buzzfile.com
+79. whois.whoisxmlapi.com
+80. demandbase.com
+81. datamakrs.com
+82. listglobal.net
+83. openhub.net
+84. sourceforge.net
+85. peerdb.co
+86. wix.com
+87. datarade.ai
+88. aitools.fyi
+89. riaadvicetech.com
+90. apkfollow.com
+91. kompas.ai
+92. marketingsource.com
+93. fintech.finance
+94. itvplus.com.ua
+95. techcrunch.com
+96. fundz.net
+97. xranks.com
+98. riaaib.org
+99. lauber-partners.ch
+100. nvestiv.com
+... (708 more domains - see original file for complete list)
+
+================================================================================
+## DATA METHODOLOGY
+================================================================================
+
+- Data collected via DataForSEO Backlinks API
+- 100 detailed backlinks retrieved (sorted by domain_from_rank descending)
+- Summary statistics include all 4,507 backlinks
+- Analysis date: November 24, 2025
+- Mode: one_per_domain (unique referring domains only)
+
+================================================================================

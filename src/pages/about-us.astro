@@ -13,8 +13,8 @@ import Breadcrumb from '../components/ui/Breadcrumb.astro';
 import { designSystem } from '../data/designSystem';
 
 // SEO Metadata
-const title = "About Investipal | AI-Powered Wealth Management Platform";
-const description = "Meet the team behind Investipal, the AI-powered platform helping financial advisors automate portfolio management, compliance, and client onboarding.";
+const title = "About Investipal | Modern Wealth Management Software Built for RIAs";
+const description = "Investipal is an all-in-one wealth management platform helping RIAs save time, stay compliant, and grow. Trusted by advisors managing $5B+ AUM. Portfolio management, AI-powered IPS builder, and automated onboarding.";
 const canonical = "https://investipal.co/about-us";
 
 // Page Data
@@ -155,6 +155,80 @@ const breadcrumbItems = [
           <p class={designSystem.typography.body}>
             {pageData.mission.details}
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Features Section -->
+    <section class="py-20 bg-white">
+      <div class={designSystem.spacing.container}>
+        <div class="text-center mb-12">
+          <h2 class={designSystem.typography.sectionTitle}>
+            Our Platform
+          </h2>
+          <p class={designSystem.typography.bodyLarge} class="mt-4 max-w-3xl mx-auto">
+            Everything you need to manage client portfolios, streamline operations, and scale your practice
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="space-y-4">
+            <h3 class={designSystem.typography.componentTitle}>
+              <a href="/features/asset-allocation" class="text-violet-600 hover:text-violet-700">Portfolio Construction</a>
+            </h3>
+            <p class={designSystem.typography.body}>
+              Build personalized portfolios with our <a href="/features/asset-allocation" class="text-violet-600 hover:text-violet-700 underline">AI-powered asset allocation</a>, <a href="/features/alternatives-modeling" class="text-violet-600 hover:text-violet-700 underline">alternatives modeling</a>, and <a href="/features/risk-management" class="text-violet-600 hover:text-violet-700 underline">risk analytics</a>.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class={designSystem.typography.componentTitle}>
+              <a href="/features/investment-policy-statements" class="text-violet-600 hover:text-violet-700">Compliance & Documentation</a>
+            </h3>
+            <p class={designSystem.typography.body}>
+              Generate <a href="/features/investment-policy-statements" class="text-violet-600 hover:text-violet-700 underline">Investment Policy Statements</a> and <a href="/features/regulation-best-interest-generator" class="text-violet-600 hover:text-violet-700 underline">Reg BI documentation</a> automatically with AI.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class={designSystem.typography.componentTitle}>
+              <a href="/features/client-acquisition" class="text-violet-600 hover:text-violet-700">Proposals & Closing</a>
+            </h3>
+            <p class={designSystem.typography.body}>
+              Create professional <a href="/features/client-acquisition" class="text-violet-600 hover:text-violet-700 underline">investment proposals</a> in under 10 minutes with automated analysis and AI-generated content.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class={designSystem.typography.componentTitle}>
+              <a href="/features/client-onboarding" class="text-violet-600 hover:text-violet-700">Client Onboarding</a>
+            </h3>
+            <p class={designSystem.typography.body}>
+              Onboard clients 10x faster with <a href="/features/automated-statement-scanner" class="text-violet-600 hover:text-violet-700 underline">AI statement scanning</a>, automated forms, and e-signature workflows.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class={designSystem.typography.componentTitle}>
+              <a href="/features/alternatives-modeling" class="text-violet-600 hover:text-violet-700">Alternative Investments</a>
+            </h3>
+            <p class={designSystem.typography.body}>
+              Model and propose <a href="/features/alternatives-modeling" class="text-violet-600 hover:text-violet-700 underline">private equity</a>, real estate, and other alternatives with our <a href="/features/custom-security-builder" class="text-violet-600 hover:text-violet-700 underline">custom security builder</a>.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class={designSystem.typography.componentTitle}>
+              <a href="/features/ai-driven-engagement" class="text-violet-600 hover:text-violet-700">Lead Nurturing</a>
+            </h3>
+            <p class={designSystem.typography.body}>
+              Re-engage prospects with <a href="/features/ai-driven-engagement" class="text-violet-600 hover:text-violet-700 underline">AI-driven portfolio monitoring</a> and personalized insights.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <StandardButton href="/features">Explore All Features</StandardButton>
         </div>
       </div>
     </section>

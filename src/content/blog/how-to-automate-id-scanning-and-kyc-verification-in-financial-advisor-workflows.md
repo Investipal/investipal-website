@@ -45,4 +45,4 @@ draft: false
 <p>Struggling to keep onboarding fast, compliant, and client-friendly? Investipal brings every step into a single, robust workflow so you can focus more on growing AUM and less on busywork.</p>
 
 <h2>Ready for Frictionless KYC and Onboarding?</h2>
-<p>If you want to experience the benefits of automated ID scanning and KYC verification-faster onboarding, fewer errors, effortless compliance-let us show you how Investipal can help. Book a personalized demo at <a href=https://www.investipal.co/>https://www.investipal.co/</a> and see how unified onboarding, compliance, and portfolio management can move your firm forward. Spend less time on paperwork and more time advising clients.</p>
+<p>If you want to experience the benefits of automated ID scanning and KYC verification-faster onboarding, fewer errors, effortless compliance-let us show you how Investipal can help. Book a personalized demo at <a href=/>/</a> and see how unified onboarding, compliance, and portfolio management can move your firm forward. Spend less time on paperwork and more time advising clients.</p>
